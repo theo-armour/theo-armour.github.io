@@ -1,20 +1,24 @@
 <!doctype html>
 <html lang='en'>
 <head>
-<title></title>
+<title>Settings</title>
 <meta charset='utf-8'>
-<meta name='author' content='Theo Armour'>
 </head>
 <body>
 
-	<p>You can move and resize windows.</p>
 	
-	<p>You can minimize and close windows.</p>	
-	
-	<p>And just below you can select a theme. The available themes are the standard ones sourced from the jQuery UI web site.</p>
+	<p>Select a theme:</p>
 
 	<select id='select1' onchange='$.elements.select1 = this.selectedIndex ; $.elements.theme = $.theme_names[ this.selectedIndex ]; $.setHash(); '>
 	</select>
+	
+	<p>Move and resize the windows.</p>
+	
+	<p>Save everything in a 'permalink':</p>
+	
+	<p><a onclick='permalink.href = "#" + $.permalink;' id='permalink' href='#' target='_blank'>Copy this Permalink</a></p>
+	
+	<p><a href='' onclick='$.resetHash();' >Reset permalink to the default</a></p>	
 
 <script>
 		var select = document.getElementById("select1");
