@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<title></title>
+<meta charset='utf-8'>
+<meta name='author' content='Theo Armour'>
+</head>
+<body>
+
+	<p>You can move and resize windows.</p>
+	
+	<p>You can minimize and close windows.</p>	
+	
+	<p>And just below you can select a theme. The available themes are the standard ones sourced from the jQuery UI web site.</p>
+
+	<select id='select1' onchange='$.elements.select1 = this.selectedIndex ; $.elements.theme = $.theme_names[ this.selectedIndex ]; $.setHash(); '>
+	</select>
+
+<script>
+		var select = document.getElementById("select1");
+		
+		$.theme_names = ["base","black-tie","blitzer","cupertino","dark-hive","dot-luv","eggplant","excite-bike","flick",
+			"hot-sneaks","humanity","le-frog","mint-choc","overcast","pepper-grinder","redmond","smoothness","south-street",
+			"start","sunny","swanky-purse","trontastic","ui-darkness","ui-lightness","vader"];
+			
+		var option;
+		for (var sel, i = 0, len = $.theme_names.length; i < len; i++) {
+			option = document.createElement( 'option' );
+			option.innerText = $.theme_names[i];
+			select.appendChild( option );
+			if ( i === Number($.elements.select1) ) option.selected = true; 
+			
+		}
+</script>
+</body>
+</html>

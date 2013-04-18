@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>jQuery UI Multiple Windows</title>
+<script>
+	var link = document.createElement("link");
+	link.setAttribute("rel", "stylesheet");
+	link.setAttribute("type", "text/css");
+	if ( location.hash === "" ) {
+		link.setAttribute("href", "http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css");
+	} else {
+		var hashes = location.hash.split("#");
+		link.setAttribute("href", "http://code.jquery.com/ui/1.10.2/themes/" + hashes[1].substr(6) + "/jquery-ui.css");
+	}
+	document.head.appendChild(link);
+</script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<style>
+	body { font: bold 12pt monospace; overflow: hidden; }
+
+	.dialog_form th {
+		text-align: left;
+	}
+
+	.dialog_form textarea, .dialog_form input[type=text] {
+		width: 320px;
+	}
+
+	#dialog_window_minimized_container {
+		position: fixed;
+		top: 0px;
+		right: 0px;
+	}
+
+	.dialog_window_minimized {
+		float: left;
+		padding: 5px 10px;
+		font-size: 12px;
+		cursor: pointer;
+		margin-right: 2px;
+		display: none;
+	}
+
+	.dialog_window_minimized .ui-icon {
+		display: inline-block !important;
+		position: relative;
+		top: 3px;
+		cursor: pointer;
+	}
+
+	.ui-dialog .ui-dialog-titlebar-minimize {
+		height: 17px;
+		width: 17px;
+		padding: 1px;
+		position: absolute;
+		right: 28px;
+		top: 8px;
+	}
+
+	.ui-dialog .ui-dialog-titlebar-minimize .ui-icon {
+		display: block;
+		margin: 1px;
+	}
+
+	.ui-dialog .ui-dialog-titlebar-minimize:hover, .ui-dialog .ui-dialog-titlebar-minimize:focus {
+		padding: 0;
+	}
+</style>
+</head>
+<body>
+<script>
+// Source: http://net.tutsplus.com/tutorials/javascript-ajax/creating-a-windows-like-interface-with-jquery-ui/
+
+	$(function() {
+		var e = $.elements = {};
+
+		var _init = $.ui.dialog.prototype._init;
+
+		$.ui.dialog.prototype._init = function() {
+			_init.apply(this, arguments);
+
+			var dialog_element = this;
+			var dialog_id = this.uiDialogTitlebar.next().attr("id");
+
+			this.uiDialogTitlebar.append('<a href="#" id="' + dialog_id + '-minbutton" class="ui-dialog-titlebar-minimize ui-state-default ui-corner-all">'+
+				'<span class="ui-icon ui-icon-newwin ui-icon-minusthick"></span></a>');
+
+			$('#dialog_window_minimized_container').append(
+				'<div class="dialog_window_minimized ui-widget ui-state-default ui-corner-all" id="' + dialog_id + '_minimized">' +
+				this.uiDialogTitlebar.find('.ui-dialog-title').text() +  '<span class="ui-icon ui-icon-newwin"></div>');
+
+			$("#" + dialog_id + "-minbutton").hover(function() {
+				$(this).addClass("ui-state-hover");
+			}, function() {
+				$(this).removeClass("ui-state-hover");
+			}).click(function() {
+				dialog_element.close();
+				$("#" + dialog_id + "_minimized").show();
+			});
+
+			$("#" + dialog_id + "_minimized").click(function() {
+				$(this).hide();
+				dialog_element.open();
+			});
+		};
+
+		function newDialog( win, fname ) {
+			$("body").append('<div class="dialog_window" id="' + win.id + '">loding...</div>');
+
+			dialog = $('#' + win.id).dialog({
+				autoOpen : true,
+				height: win.height,
+				position: "left+" + win.left + " top+" + win.top,
+				title : win.title,
+				width: win.width,
+				dragStop: function( event, ui ) {
+					win.left = ui.position.left
+					win.top = ui.position.top;
+					$.setHash();
+				},
+				resize: function( event, ui ) {
+					win.height = ui.size.height.toFixed();
+					win.width = ui.size.width.toFixed();
+					$.setHash();
+				}
+			});
+			$( "#" + win.id).load( fname );
+		}
+
+// permalinks
+		$.setHash = function() {
+			var settings = "";
+			for (var item in e) {
+				if ( item.substr(0,5) == "theme") {
+					settings += item + "=" +  e[item] + "#";
+					link.setAttribute("href", "http://code.jquery.com/ui/1.10.2/themes/" + e[item] + "/jquery-ui.css");
+				}
+				if (item.substr(0,5) == "check" || item.substr(0,2) == "Tj" || item.substr(0,6) == "select") {
+					settings += item + "=" +  e[item] +  "#";
+				} else if ( item.substr(0,6) == "window") {
+					for (var bits in e[item] ) {
+						settings += item + "." + bits + "=" + e[item][bits]  +  "#";
+					}
+				}
+			}
+			$.permalink = location.hash = settings;
+		};
+
+		$.resetHash = function () {
+			window.history.pushState( "", "", window.location.pathname);
+			$.permalink = "";
+		};
+
+// defaults
+		function getHash() {
+			if ( location.hash === "" ) {
+				e.theme = "smoothness";
+				e.select1 = 16;
+
+				e.window1 = {
+					height: window.innerHeight - 200,
+					id: "dialog_window_1",
+					left: "900",
+					title: "Hello World!",
+					top: "50",
+					width: "500"
+				};
+				e.window2 = {
+					height: "450",
+					id: "dialog_window_2",
+					left: "30",
+					title: "Bonjour Monde!",
+					top: "200",
+					width: "350"
+				};
+
+				e.TjLineWidth = 5;
+				e.TjScaleX = 1;
+				e.TjScaleY = 1;
+				e.TjScaleZ = 1;
+
+				$.permalink = "";
+			} else {
+				var item, win, hashes = location.hash.split("#");
+				for (var i = 1, len = hashes.length - 1; i < len; i++) {
+					item =  hashes[i].split("=");
+					if ( item[0].substr(0,6) === "window") {
+						if ( e[item[0].substr(0,7) ] === undefined ) {
+							win = e[ item[0].substr(0,7) ] = {};
+						}
+						win[ item[0].substr(8) ] = item[1];
+					} else {
+						if ( item[1] === "false" ) item[1] = false;
+						e[ item[0] ] = item[1];
+					}
+				}
+				$.permalink = location.hash;
+			}
+		}
+
+// Here is where all the content is created
+		getHash();
+
+		var winMin = document.body.appendChild( document.createElement( "div" ) );
+		winMin.id = "dialog_window_minimized_container";
+
+		newDialog( e.window1, "ajax/hello-world.html" );
+
+		newDialog( e.window2, "ajax/bonjour-monde.html" );
+	});
+</script>
+</body>
+</html>

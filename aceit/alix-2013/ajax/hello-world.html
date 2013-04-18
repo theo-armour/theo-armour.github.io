@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+</head>
+<body>
+	<div id="accordion">
+		<h3><a href="ajax/info.html">Info</a></h3>
+		<div>loading...</div>
+		
+		<h3><a href="ajax/specification.html">End-User Specification</a></h3>
+		<div>loading...</div>
+		
+		<h3><a href="ajax/code-specification.html">Coding Specification</a></h3>
+		<div>loading...</div>
+
+		<h3><a href="ajax/permalinks.html">Permalinks</a></h3>
+		<div>loading...</div>
+		
+		<h3><a href="ajax/settings.html">Settings</a></h3>
+		<div>loading...</div>
+		
+		<h3><a href="ajax/tbd.html">TBD</a></h3>
+		<div>loading...</div>
+		
+	</div>
+<script>
+		$( "#accordion" ).accordion({
+			active: false,
+			collapsible: true,
+			heightStyle: "content",
+			activate: function(event, ui) {
+				if ( ui.newPanel.text() == "loading..." ){
+					ui.newPanel.load(ui.newHeader.find('a').attr('href'));
+				}
+			}
+		});	
+</script>	
+</body>
+</html>
