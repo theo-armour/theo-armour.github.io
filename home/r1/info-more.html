@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title>File 3</title>
+<meta charset=utf-8>
+<meta name=author content='Theo Armour'>
+</head>
+<body>
+<script>
+
+	document.body.style.cssText = ' font: bold 12pt monospace; ';
+	var info = document.body.appendChild( document.createElement( 'div' ) );
+	info.innerHTML = '<h1>More</h1>' +
+		'<p>Even more work. Much of this work is older and/or out of date.</p>' +
+		'<p><a href="https://github.com/theo-armour" target="_blank">Source</a>.</p>' +
+		'<p>&#x2766;</p>' +
+		'<p>Open <a href="../../index-2013-10-20.html" target="_blank">Open more work in new tab/window</a></p>' +
+		'<p>Here\'s what the previous home page looks like:</p>' +		
+	'';
+	
+	var ifr = document.body.appendChild( document.createElement( 'iframe' ) );
+	ifr.style.cssText = 'height: ' + (window.innerHeight - 250) + 'px; width: 100%; ';
+	ifr.src="../../index-2013-10-20.html"	
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title>FGX Info</title>
+<meta charset=utf-8>
+<meta name=author content='Theo Armour'>
+</head>
+<body>
+<script>
+
+	document.body.style.cssText = ' font: bold 12pt monospace; ';
+	var info = document.body.appendChild( document.createElement( 'div' ) );
+	info.innerHTML = '<h1>FGX</h1>' +
+		'<p>FlightGear add-ons. </p>'+
+		'<p><a href="https://github.com/fgx/" target="_blank">Source</a>.</p>' +
+		
+		'<p><a href="http://fgx.github.io/fgx-globe/fgx-globe-r3/index.html" target="_blank">FGx Globe</a>. <a href="https://github.com/fgx/fgx-globe" target="_blank">Source.</a></p>' +
+		'<p>&#x2766;</p>' +
+		//'<p>Load local file into contents panel: <a href=JavaScript:parent.ifr.src=".html"; >Introduction</a></p>' +
+		//'<p>Load an external web page into contents panel: <a href=JavaScript:parent.ifr.src="http://jaanga.github.io/algesurf"; >jaanga algesurf</a></p>' +	
+
+		'<p>Open <a href="http://fgx.github.io" target="_blank">FGx in new tab/window</a></p>' +
+		'<p>Here\'s what the home page looks like:</p>' +		
+	'';
+	
+	var ifr = document.body.appendChild( document.createElement( 'iframe' ) );
+	ifr.style.cssText = 'height: ' + (window.innerHeight - 250) + 'px; width: 100%; ';
+	ifr.src="http://fgx.github.io"	
+</script>
+</body>
+</html>

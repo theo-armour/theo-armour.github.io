@@ -1,35 +1,44 @@
 <!doctype html>
-<html>
+<html lang=en>
 <head>
-<title>Theo Armour on GitHub</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="author" content="Theo Armour">
-<style>
-body {color: #ddd; background-color: #888; font-family: sans-serif; margin: 0 30% 20 30%; text-align: center;}
-a {color: #ccc;}
-#content {text-align: left; width: 642px; margin: auto;}
-</style>
+<title>theo armour</title>
+<meta charset=utf-8>
+<meta name=author content='Theo Armour'>
 </head>
 <body>
-<div id="content">
-<h1>Theo Armour on GitHub</h1>
-<p>
-Here are links to demo files for repositories with source code available at <a href="http://github.com/theo-armour">GitHub</a>
-</p>
+<script>
 
-<h3><a href="jaanga/index.html">Jaanga</a></h3>
-<p>
-Application and source code for <a href="http://jaanga.com" target="_blank">jaanga.com</a>
-</p>
-<h3><a href="threo.js/index.html">Threo.js</a></h3>
-<p>
-Demos and source code in support of the wonderful <a href="https://github.com/mrdoob/three.js" target="_blank">three.js</a>
-</p>
+	var css = document.body.appendChild( document.createElement('style') );
+	css.innerHTML = 'body { font: 600 12pt monospace; margin: 5px 5px 5px 20px; overflow: hidden;  }' +
+		'h1 a { text-decoration: none;} ' +
+	'';
+	
+	var info = document.body.appendChild( document.createElement( 'div' ) );
+	info.style.cssText = 'height: ' + (window.innerHeight - 50) + 'px; overflow: auto; width: 250px;';
+	info.innerHTML = '<h1>Theo Armour</h1>' +
+		'<p><i><small>designer<br>& erstwhile script kiddie</small></i></p>' +
+	'';
+	
+	info.innerHTML +='<a href=# onclick=ifr.src="home/r1/introduction.html"; >Introduction</a><br>' +
+		'<a href=# onclick=ifr.src="home/r1/license.html"; >Copyright & License</a><br>' +
+		'<br>' +
 
-<h3><a href="explayrimental/index.html">Explayrimental</a></h3>
-<p>
-Odds and ends added just for the fun of it...
-</p>
-</div>
+		'<a href=# onclick=ifr.src="home/r1/info-jaanga.html"; >jaanga.github.io</a><br>' +
+		'<a href=# onclick=ifr.src="home/r1/info-fgx.html"; >fgx.github.io</a><br>' +
+		'<a href=# onclick=ifr.src="home/r1/info-absence.html"; >absence.github.io</a><br>' +
+		'<a href=# onclick=ifr.src="home/r1/info-patterns-dev.html"; >patterns-dev.github.io</a><br>' +
+		'<a href=# onclick=ifr.src="home/r1/info-more.html"; >Wait, there\'s more</a><br>' +
+		'<br>' +
+	'';
+	
+	var ifr = document.body.appendChild( document.createElement( 'iframe' ) );
+	ifr.style.cssText = 'height: ' + (window.innerHeight - 50) + 'px; left: 300px; border: 0px solid black; position: absolute; top: 5px; width: ' + (window.innerWidth - 350) + 'px; ';
+	
+	if ( !location.hash ) {
+		ifr.src = 'home/r1/introduction.html';
+	} else {
+		ifr.src = location.hash.substr(1);
+	}
+</script>
 </body>
 </html>
