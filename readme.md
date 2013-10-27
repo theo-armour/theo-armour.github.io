@@ -1,10 +1,8 @@
----
-title: This will be used as the title-tag of the page head
----
 
-# This is a H1
+Full readme amd more here: http://theo-armour.github.io/
 
-[the clickable text](http://theo-armour.github.io)
 
-* Bullet lists are also easy to create
-* One more
+##Change Log
+2013-10-26 ~ Updated the whole presence 
+
+
