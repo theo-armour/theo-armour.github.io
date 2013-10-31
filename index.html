@@ -8,27 +8,23 @@
 <body>
 <script>
 
-	var css = document.body.appendChild( document.createElement('style') );
-	css.innerHTML = 'body { font: 600 12pt monospace; margin: 0; overflow: hidden;  }' +
-		'h1 a { text-decoration: none;} ' +
-	'';
+	document.body.style.cssText = ' font: bold 12pt monospace;  overflow: hidden;';
 	
 	var info = document.body.appendChild( document.createElement( 'div' ) );
 	info.style.cssText = 'left: 10px; position: absolute; overflow: auto; top: 0px; width: 250px;';
 	info.innerHTML = '<h1>Theo Armour</h1>' +
 		'<p><i><small>designer<br>& erstwhile script kiddie</small></i></p>' +
-	'';
-	
-	info.innerHTML +='<a href=# onclick=ifr.src="home/r1/introduction.html"; >Introduction</a><br>' +
-		'<a href=# onclick=ifr.src="home/r1/license.html"; >Copyright & License</a><br>' +
+		
+		'<p><a href=# onclick=ifr.src="home/r1/introduction.html"; >Introduction</a><br>' +
+			'<a href=# onclick=ifr.src="home/r1/license.html"; >Copyright & License</a></p>' +
 		'<br>' +
 
-		'<a href=# onclick=ifr.src="home/r1/info-jaanga.html"; >jaanga.github.io</a><br>' +
-		'<a href=# onclick=ifr.src="home/r1/info-fgx.html"; >fgx.github.io</a><br>' +
-		'<a href=# onclick=ifr.src="home/r1/info-absence.html"; >absence.github.io</a><br>' +
-		'<a href=# onclick=ifr.src="home/r1/info-patterns-dev.html"; >patterns-dev.github.io</a><br>' +
-		'<a href=# onclick=ifr.src="home/r1/info-more.html"; >Wait, there\'s more</a><br>' +
-		'<br>' +
+		'<p><a href=# onclick=ifr.src="home/r1/info-jaanga.html"; >jaanga.github.io</a></p>' +
+		'<p><a href=# onclick=ifr.src="home/r1/info-fgx.html"; >fgx.github.io</a></p>' +
+		'<p><a href=# onclick=ifr.src="home/r1/info-absence.html"; >absence.github.io</a></p>' +
+		'<p><a href=# onclick=ifr.src="home/r1/info-patterns-dev.html"; >patterns-dev.github.io</a></p>' +
+		'<p><a href=# onclick=ifr.src="home/r1/info-more.html"; >Wait, there\'s more...</a></p>' +
+
 	'';
 	
 	var ifr = document.body.appendChild( document.createElement( 'iframe' ) );
@@ -40,6 +36,7 @@
 	} else {
 		ifr.src = location.hash.substr(1);
 	}
+	
 </script>
 </body>
 </html>
