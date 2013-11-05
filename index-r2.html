@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title>Theo Armour</title>
+<meta charset=utf-8>
+<meta name=author content='Theo Armour'>
+<link rel=icon href=favicon.ico />
+</head>
+<script src=http://jaanga.github.io/libs/md/showdown.js >// https://github.com/coreyti/showdown</script>
+<body>
+	<div id=menu>
+		<h1>Theo Armour</h1>
+			<p><i><small>designer<br>& erstwhile script kiddie</small></i></p>
+					
+			<p><a href=JavaScript:displayPage("home/r2/introduction.md"); >Introduction</a></p>
+			<p><a href=JavaScript:displayPage("home/r2/license.md"); >Copyright & License</a></p>
+			<br>
+
+			<p><a href=# onclick=ifr.src="home/r1/info-jaanga.html"; >jaanga.github.io</a></p>
+			<p><a href=# onclick=ifr.src="home/r1/info-fgx.html"; >fgx.github.io</a></p>
+			<p><a href=# onclick=ifr.src="home/r1/info-absence.html"; >absence.github.io</a></p>
+			<p><a href=# onclick=ifr.src="home/r1/info-patterns-dev.html"; >patterns-dev.github.io</a></p>
+			<p><a href=# onclick=ifr.src="home/r1/info-more.html"; >Wait, there's more...</a></p>
+			<br>
+					
+			<p><a href="https://github.com/theo-armour/theo-armour.github.io" target="_blank">Source code on Gitub</a></p>
+	</div>
+<script>
+
+	var converter = new Showdown.converter();	
+	
+	var css = document.body.appendChild( document.createElement('style') );
+	css.innerHTML = 'body { font: bold 12pt monospace; margin: 0; overflow: hidden; }' +
+		'#menu { left: 10px; position: absolute; overflow: auto; top: 0px; width: 250px;}' +
+		'#dv, #ifr { height: ' + (window.innerHeight - 100) + 'px; left: 300px; border: 5px double black; overflow: hidden; position: absolute; top: 0; width: ' + (window.innerWidth - 400) + 'px; }' +
+
+			'#button { 	position: fixed; top: 20px; right: 20px; padding: 8px; color: #fff;	background-color: #555;	opacity: 0.5;} ' +
+			'#button:hover { cursor: pointer; opacity: 1; }' +
+		'';
+	
+	var dv = document.body.appendChild( document.createElement( 'div' ) );
+	// dv.style.cssText = 'height: ' + (window.innerHeight - 0) + 'px; left: 300px; border: 0px solid black; overflow: hidden; position: absolute; top: 0; width: ' + (window.innerWidth - 300) + 'px; ';
+
+	dv.id = 'dv';
+	
+	//var ifr = document.body.appendChild( document.createElement( 'iframe' ) );
+	//ifr.id = 'ifr';
+	
+	if ( !location.hash ) {
+		displayPage('home/r2/introduction.md');
+	} else {
+		displayPage( location.hash.substr(1) );
+	}
+
+	function displayPage( fname ) {
+
+		dv.innerHTML = converter.makeHtml( requestFile( fname ) );
+
+			
+		// DS.runApp.innerHTML = ''; 
+		
+		//DS.viewSource.innerHTML = '<h2>&#x261A;<br><a href="https://github.com/jaanga/gestification/blob/gh-pages/' + folder + '/index.html" target="_blank">' +
+		//'View<br><i>' + fname + '</i><br>as<br>source code<br>on GitHub<br>in <br> new tab</a></h2>';
+
+		// clearMenuHighlights( element );
+
+		location.hash = fname + '#';
+		
+		var button = document.createElement( 'div' );
+		button.id = 'button';
+		button.textContent = 'Edit this page';
+
+		button.addEventListener( 'click', function ( event ) {
+			window.open( 'https://github.com/theo-armour/theo-armour.github.com/blob/master/'  + fname );
+		}, false );
+
+		document.body.appendChild( button );
+	
+	
+	}	
+	
+	function requestFile( fname ) {
+		var xmlHttp = null;
+		xmlHttp = new XMLHttpRequest();
+		xmlHttp.open( 'GET', fname, false );
+		xmlHttp.send( null );
+		return xmlHttp.responseText;
+	}	
+</script>
+</body>
+</html>
