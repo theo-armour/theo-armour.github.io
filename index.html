@@ -2,46 +2,11 @@
 <html lang=en>
 <head>
 <title>Theo Armour</title>
+<meta http-equiv="refresh" content="0;url=home/r3/index.html"/>
 <meta charset=utf-8>
 <meta name=author content='Theo Armour'>
 <link rel=icon href=favicon.ico />
 </head>
 <body>
-
-<script>
-
-	document.body.style.cssText = ' font: bold 12pt monospace;  overflow: hidden;';
-	
-	var info = document.body.appendChild( document.createElement( 'div' ) );
-	info.style.cssText = 'left: 10px; position: absolute; overflow: auto; top: 0px; width: 250px;';
-	info.innerHTML = '<h1>Theo Armour</h1>' +
-		'<p><i><small>designer<br>& erstwhile script kiddie</small></i></p>' +
-		
-		'<p><a href=# onclick=ifr.src="home/r1/introduction.html"; >Introduction</a></p>' +
-		'<p><a href=# onclick=ifr.src="home/r1/license.html"; >Copyright & License</a></p>' +
-		'<br>' +
-
-		'<p><a href=# onclick=ifr.src="home/r1/info-jaanga.html"; >jaanga.github.io</a></p>' +
-		'<p><a href=# onclick=ifr.src="home/r1/info-fgx.html"; >fgx.github.io</a></p>' +
-		'<p><a href=# onclick=ifr.src="home/r1/info-absence.html"; >absence.github.io</a></p>' +
-		'<p><a href=# onclick=ifr.src="home/r1/info-patterns-dev.html"; >patterns-dev.github.io</a></p>' +
-		'<p><a href=# onclick=ifr.src="home/r1/info-more.html"; >Wait, there\'s more...</a></p>' +
-		'<br>' +
-		
-		'<p><a href="https://github.com/theo-armour/theo-armour.github.io" target="_blank">Source code on Gitub</a></p>' +
-
-	'';
-	
-	var ifr = document.body.appendChild( document.createElement( 'iframe' ) );
-	ifr:scrolling = "no";
-	ifr.style.cssText = 'height: ' + (window.innerHeight - 0) + 'px; left: 300px; border: 0px solid black; overflow: hidden; position: absolute; top: 0; width: ' + (window.innerWidth - 300) + 'px; ';
-	
-	if ( !location.hash ) {
-		ifr.src = 'home/r1/introduction.html';
-	} else {
-		ifr.src = location.hash.substr(1);
-	}
-	
-</script>
 </body>
 </html>

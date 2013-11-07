@@ -16,4 +16,5 @@ My contributions on GitHub include the following:
 <h2>&#x2766;</large></h2>
 			
 <a href="http://jaanga.com" target="_blank" >jaanga.com</a> ~ a web log
+
 <a href=http://theoarmour.com/p/about-theo.html target="_blank" >about theo</a> ~ a bio
