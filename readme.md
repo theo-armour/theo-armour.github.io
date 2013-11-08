@@ -10,7 +10,7 @@ My contributions to open-source repositories on GitHub include the following:
 			
 [jaanga.github.io]( http://jaanga.github.io ) ~ a GitHub repository with a number of projects. [source]( http://github.com/jaanga ).
 
-[fgx.github.io]( http://gx.github.io )  ~ addons for [FlightGear]( http://www.flightgear.org/ ) the open source flight simulator. [source]( http://github.com/fgx ).
+[fgx.github.io]( http://fgx.github.io )  ~ addons for [FlightGear]( http://www.flightgear.org/ ) the open source flight simulator. [source]( http://github.com/fgx ).
 			
 [absence.github.io]( http://absence.github.io ) ~  a summary of an important book. [source]( http://github.com/absence ).
 			
