@@ -1,12 +1,13 @@
 
-Theo Armour copyright and license
-=================================
+Theo Armour ~ Copyright Notice and License
+==========================================
  
 Copyright &copy; 2013 Theo Armour
 
-All software and documentation in this repository is available under the MIT license.
+All software and documentation in this repository is available under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
 
-The [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+### The MIT license
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

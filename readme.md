@@ -1,15 +1,73 @@
-Theo Armour
-===========
-Live site: http://theo-armour.github.io/
+Theo Armour ~ Read Me
+======================
 
-## Notes
-Most of my work is kept in repositories that are GitHub organizations - so as to make it even easier to collaborate.
+##Live Sites
+Hosted: [theo-armour.github.io]( http://theo-armour.github.io/ ) ~ Source: [github.com/theo-armour]( https://github.com/theo-armour )
 
-## Copyright, License and Credits
-copyright &copy; 2013 Theo Armour ~ All work herein is under the MIT License
+## &#x2766; GitHub Links
+Most of my work is kept in repositories that are GitHub organizations. Github organizations make it easy to collaborate. 
+My contributions to open-source repositories on GitHub include the following:
+			
+[jaanga.github.io]( http://jaanga.github.io ) ~ a GitHub repository with a number of projects. [source]( http://github.com/jaanga ).
+
+[fgx.github.io]( http://gx.github.io )  ~ addons for [FlightGear]( http://www.flightgear.org/ ) the open source flight simulator. [source]( http://github.com/fgx ).
+			
+[absence.github.io]( http://absence.github.io ) ~  a summary of an important book. [source]( http://github.com/absence ).
+			
+[patterns-dev.github.io]( http://patterns-dev.github.io ) ~ an outline of <i>A Pattern Language</i>. [source]( http://github.com/patterns-dev ).
+			
+<!--			
+<a href=JavaScript:alert('hi');parent.ifr.src="home/r1/info-more.html"; >More</a> ~ work on theo-armour.github.io
+-->
+
+## &#x2766; Outside Links
+
+Outside of GitHub, see also:
+			
+[jaanga.com]( http://jaanga.com ) ~ a web log
+
+[about theo]( http://theoarmour.com/p/about-theo.html ) -  biographical data
+
+
+## Notes 
+
+### Two links for each repository
+Most people use and think of GitHub as a wonderful repository for computer source code. 
+GitHub does, however, also provides a free and very powerful web site hosting services via their GitHub pages feature.
+This feature only works for static files - such as HTML, CSS, JavaScript, text and image files. 
+Since these are the only files types I deal with, GitHub hosting is delightful hosting solution.
+
+Thus for almost all the work I do you will see two links. One goes to the web page or app hosted by GitHub. 
+The other link points you to the source code for the page or app.
+
+### Write once, read many
+In order to be as effective and efficient as possible, the goal is to write content once and have it appear as required or as necessary in either app or source code or both.
+GitHub source repositories support the display of files in Markdown format: every Markdown file is displayed as HTML.
+
+A current effort is to use these Markdown files in both the source code repositories and web page hosting.
+So, for example, the web pages at theo-armour.github.io are written in HTML but each page calls up a Markdown file 
+that is used to populate the right-side content panel of each page.  
+
+### Intuitiveness needed
+Apps are from Venus. Code is from Mars. Much time in producing the above sites and text is being devoted 
+to the process of developing effective terminology and user experience for bridging the gap between apps and source. 
+
+This process will be discussed and dissected as the fullness of time.
+
+
+
+## Copyright Notice and License
+[ Copyright Notice and License ]( https://github.com/theo-armour/copyright-notice-and-license.md )
+
+
 
 ## Change Log
 
+2013-11-08 ~ Theo
+
+* Many edits to Read Me
+* Edits to License
+ 
 2013-11-07 ~ Theo
 
 * R3 is up
@@ -28,5 +86,3 @@ copyright &copy; 2013 Theo Armour ~ All work herein is under the MIT License
 2013-10-26 ~ Theo
 
 * Updated the whole presence 
-
-
