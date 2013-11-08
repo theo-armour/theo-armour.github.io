@@ -10,6 +10,10 @@ copyright &copy; 2013 Theo Armour ~ All work herein is under the MIT License
 
 ## Change Log
 
+2013-11-07 ~ Theo
+
+* R3 is up
+
 2013-11-03 ~ Theo
 
 * Add back airDoodle
