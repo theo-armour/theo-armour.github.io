@@ -10,6 +10,8 @@ My contributions to open-source repositories on GitHub include the following:
 			
 [jaanga.github.io]( http://jaanga.github.io ) ~ a GitHub repository with a number of projects. [source]( http://github.com/jaanga ).
 
+[aechack.github.io]( http://aechack.github.io ) ~ Team aeChack's entry, AEC Hackathon, 2013-11-8/10, Facebook HQ, Menlo Park CA. [source]( http://github.com/aechack/aeChack.github.io )
+
 [fgx.github.io]( http://fgx.github.io )  ~ addons for [FlightGear]( http://www.flightgear.org/ ) the open source flight simulator. [source]( http://github.com/fgx ).
 			
 [absence.github.io]( http://absence.github.io ) ~  a summary of an important book. [source]( http://github.com/absence ).
@@ -33,7 +35,7 @@ Outside of GitHub, see also:
 
 ### Two links for each repository
 Most people use and think of GitHub as a wonderful repository for computer source code. 
-GitHub does, however, also provides a free and very powerful web site hosting services via their GitHub pages feature.
+GitHub, however, also provides a free and very powerful web site hosting services via their GitHub pages feature.
 This feature only works for static files - such as HTML, CSS, JavaScript, text and image files. 
 Since these are the only files types I deal with, GitHub hosting is delightful hosting solution.
 
