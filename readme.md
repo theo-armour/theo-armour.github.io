@@ -2,7 +2,8 @@ Theo Armour ~ Read Me
 ======================
 
 ##Live Sites
-Hosted: [theo-armour.github.io]( http://theo-armour.github.io/ ) ~ Source: [github.com/theo-armour]( https://github.com/theo-armour )
+Hosted on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ )
+Source on GitHub: [github.com/theo-armour]( https://github.com/theo-armour )
 
 ## &#x2766; GitHub Links
 Most of my work is kept in repositories that are GitHub organizations. Github organizations make it easy to collaborate. 
