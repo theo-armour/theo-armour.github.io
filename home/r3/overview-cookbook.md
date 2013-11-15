@@ -9,8 +9,8 @@ A place for code that I have not found a better place for...
 
 ## Links
 
-Hosted pages on GitHub: <a href="http://theo-armour.github.io/" target="_blank">theo-armour.github.io</a>  
-Source code on GitHub: <a href="https://github.com/theo-armour/" target="_blank">github.com/theo-armour</a>
+Hosted pages on GitHub: <a href="http://theo-armour.github.io/cookbook/" target="_blank">theo-armour.github.io/cookbook</a>   
+Source code on GitHub: <a href="https://github.com/theo-armour/cookbook/" target="_blank">github.com/theo-armour/cookbook</a>
 
 ## Notes
 
