@@ -2,7 +2,7 @@ Theo Armour ~ Read Me
 ======================
 
 ##Live Sites
-You have two ways of viweing the data:
+You have two ways of viewing the data:
 
 Hosted pages on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ )  
 
@@ -40,7 +40,7 @@ Outside of GitHub, see also:
 
 ### Two links for each repository
 Most people use and think of GitHub as a wonderful repository for computer source code. 
-GitHub, however, also provides a free and very powerful web site hosting services via their GitHub pages feature.
+GitHub, however, also provides a free and very powerful web site hosting services via their [GitHub Pages]( http://pages.github.com/ "Thank you, GitGub!" ) feature.
 This feature only works for static files - such as HTML, CSS, JavaScript, text and image files. 
 Since these are the only files types I deal with, GitHub hosting is delightful hosting solution.
 
@@ -49,7 +49,7 @@ The other link points you to the source code for the page or app.
 
 ### Write once, read many
 In order to be as effective and efficient as possible, the goal is to write content once and have it appear as required or as necessary in either app or source code or both.
-GitHub source repositories support the display of files in Markdown format: every Markdown file is displayed as HTML.
+GitHub source repositories support the display of files in [Markdown]( http://en.wikipedia.org/wiki/Markdown ) format: every Markdown file is displayed as HTML.
 
 A current effort is to use these Markdown files in both the source code repositories and web page hosting.
 So, for example, the web pages at theo-armour.github.io are written in HTML but each page calls up a Markdown file 
