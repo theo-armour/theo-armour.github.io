@@ -16,23 +16,29 @@
 <script src=http://jaanga.github.io/libs/md/showdown.js >// https://github.com/coreyti/showdown</script>
 
 	<div id=menu >
-		<h1>Theo Armour</h1>
-			<p><i><small>designer<br>& erstwhile script kiddie</small></i></p>
+		<h1><a href=''>Theo Armour</a></h1>
+			<p><i><small>designer<br>& erstwhile skript kiddie</small></i></p>
 					
 			<p id=intro ><a href=JavaScript:displayPage("../../readme.md",intro); >Read Me on GitHub</a></p>
 			<p id=cp ><a href=JavaScript:displayPage("../../copyright-notice-and-license.md",cp); >Copyright & License</a></p>
 			<p>&raquo; <a href="https://github.com/theo-armour/theo-armour.github.io" title="Opens in new tab" target="_blank">Source code on Gitub</a></p>
 			
 			<br>
-			<h3>Repository Overviews</h3>
+			<h3>GitHub Projects</h3>
 			<p id=ja ><a href=JavaScript:displayPage("info-jaanga.md",ja); >jaanga.github.io</a></p>
 			<p id=ae ><a href=JavaScript:displayPage("info-aechack.md",ae); >aechack.github.io</a></p>
 			<p id=fg ><a href=JavaScript:displayPage("info-fgx.md",fg); >fgx.github.io</a></p>
 			<p id=ab ><a href=JavaScript:displayPage("info-absence.md",ab); >absence.github.io</a></p>
 			<p id=pa ><a href=JavaScript:displayPage("info-patterns-dev.md",pa); >patterns-dev.github.io</a></p>
-			<p id=mo ><a href=JavaScript:displayPage("info-more.md",mo);>Wait, there's more...</a></p>
+			
 			<br>
 					
+			<h3>More</h3>
+			<p id=cb ><a href=JavaScript:displayPage("overview-cookbook.md",cb) >Cookbook</a></p>
+			<p id=mo ><a href=JavaScript:displayPage("info-more.md",mo);>Wait, there's more...</a></p>
+			<br>
+						
+			<p>2013-11-15 ~ Fixing 'Edit this page'. Adding content and links.</p>
 			<p>2013-11-12 ~ Add aeChack. Move source code link.</p>
 			<p>2013-11-07 ~ Brand new web site. More work needed - especially with text and links.</p>
 	</div>
@@ -43,6 +49,7 @@
 	var css = document.body.appendChild( document.createElement('style') );
 	css.innerHTML = 'body { font: bold 12pt monospace; margin: 0; overflow: hidden; }' +
 		'h1, h2, h3, p { margin: 10px 0px; padding: 0px 20px;  }' +
+		'h1 a { color: #000; }' +
 		'p {padding: 5px 20px 5px 20px; }' +
 		'#githubio { display: block important!; }' +
 	'';	
@@ -65,7 +72,7 @@
 
 		content.innerHTML = converter.makeHtml( requestFile( fname ) );
 	
-		button.innerHTML = '<a href="https://github.com/theo-armour/theo-armour.github.io/blob/master/' + fname + 
+		button.innerHTML = '<a href="https://github.com/theo-armour/theo-armour.github.io/blob/master/home/r3/' + fname + 
 		'" onmouseover=this.style.opacity=1; style=color:#fff;text-decoration:none;	title="View the source code on GitGub" >' +
 		'Edit this page</a>';
 
