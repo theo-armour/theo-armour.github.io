@@ -2,26 +2,21 @@ Theo Armour ~ Read Me
 ======================
 
 ##Live Sites
-You have two ways of viewing the data:
+You have two ways of viewing the data:  
 
-Hosted pages on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ )  
-
-Source code on GitHub: [github.com/theo-armour]( https://github.com/theo-armour )
+* Hosted pages on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
+* Source code on GitHub: [github.com/theo-armour]( https://github.com/theo-armour "View the files as source code." )  <scan style=display:none ><< You are now probably here.</scan>
 
 ## &#x2766; Links to Some of My GitHub Projects
 Most of my work is kept in repositories that are [GitHub organization accounts]( https://github.com/blog/674-introducing-organizations "Thanks, GitHub" ). 
 [Github organization accounts]( https://help.github.com/articles/creating-a-new-organization-account--2 ) make it easy to collaborate. 
 My contributions to open-source repositories on GitHub include the following projects:
 			
-[jaanga.github.io]( http://jaanga.github.io ) ~ a GitHub repository with a number of projects. [source]( http://github.com/jaanga ).
-
-[aechack.github.io]( http://aechack.github.io ) ~ Team aeChack's entry, AEC Hackathon, 2013-11-8/10, Facebook HQ, Menlo Park CA. [source]( http://github.com/aechack/aeChack.github.io )
-
-[fgx.github.io]( http://fgx.github.io )  ~ addons for [FlightGear]( http://www.flightgear.org/ ) the open source flight simulator. [source]( http://github.com/fgx ).
-			
-[absence.github.io]( http://absence.github.io ) ~  a summary of an important book. [source]( http://github.com/absence ).
-			
-[patterns-dev.github.io]( http://patterns-dev.github.io ) ~ an outline of <i>A Pattern Language</i>. [source]( http://github.com/patterns-dev ).
+* [jaanga.github.io]( http://jaanga.github.io ) ~ a GitHub repository with a number of projects. [source]( http://github.com/jaanga ).
+* [aechack.github.io]( http://aechack.github.io ) ~ Team aeChack's entry, AEC Hackathon, 2013-11-8/10, Facebook HQ, Menlo Park CA. [source]( http://github.com/aechack/aeChack.github.io )
+* [fgx.github.io]( http://fgx.github.io )  ~ addons for [FlightGear]( http://www.flightgear.org/ ) the open source flight simulator. [source]( http://github.com/fgx ).
+* [absence.github.io]( http://absence.github.io ) ~  a summary of an important book. [source]( http://github.com/absence ).	
+* [patterns-dev.github.io]( http://patterns-dev.github.io ) ~ an outline of <i>A Pattern Language</i>. [source]( http://github.com/patterns-dev ).
 			
 <!--			
 <a href=JavaScript:alert('hi');parent.ifr.src="home/r1/info-more.html"; >More</a> ~ work on theo-armour.github.io
@@ -31,9 +26,8 @@ My contributions to open-source repositories on GitHub include the following pro
 
 Outside of GitHub, see also:
 			
-[jaanga.com]( http://jaanga.com ) ~ a web log
-
-[about theo]( http://theoarmour.com/p/about-theo.html ) -  biographical data
+* [jaanga.com]( http://jaanga.com ) ~ a web log
+* [about theo]( http://theoarmour.com/p/about-theo.html ) -  biographical data
 
 
 ## Notes 
