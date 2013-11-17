@@ -1,11 +1,17 @@
-Jaanga
-======
+Jaanga Overview
+===============
 
-<iframe src=http://jaanga.github.io	width=100% height=300px></iframe>
+<iframe src=http://jaanga.github.io	width=100% height=300px>
+There is an `iframe` here. It is not visible when viewed on github.com/theo-armour. To view, please go to theo-armour.github.io.
+</iframe>
 
-<a href="http://jaanga.github.io" target="_blank">Jaanga.github.io</a> is a GitHub organization with source code at <a href="https://github.com/jaanga" target="_blank">github.com/jaanga</a>.
-The name was chosen because it sounds jazzy, is short and search results indicate uniqueness.
-Much of my recent work is available here - including the folowing projects:
+## Concept
+<a href="http://jaanga.github.io" target="_blank">Jaanga.github.io</a> is a GitHub organization 
+with source code at <a href="https://github.com/jaanga" target="_blank">github.com/jaanga</a>.
+
+The name 'Jaanga' was chosen because it sounds jazzy, it is short and search results indicate uniqueness.
+
+Much of my recent work is available here - including the following projects:
 
 		
 * <a href="http://jaanga.github.io/gestification/" target="_blank">Gestification</a> ~ work that involves Three.js and the Leap Motion device. 
@@ -21,7 +27,15 @@ Much of my recent work is available here - including the folowing projects:
 <a href="https://github.com/jaanga/brainofrichard/tree/gh-pages" target="_blank">Source</a>.
 		
 * <a href="https://github.com/jaanga/cookbook" target="_blank">Cookbook</a> ~ various and sundry code cookbook projects and files used for presentations or in blog posts. 	
-		
-Open <a href="http://jaanga.github.io" target="_blank">jaanga.github.io</a> in new tab/window
 
-&#x2766;
+
+## Project Links
+
+You have two ways of viewing the Jaanga files:  
+
+* Code hosted on GitHub: [jaanga.github.io]( http://jaanga.github.io/home/r2/index.html "view the files as apps." )    
+* Source code on GitHub: [github.com/jaanga]( https://github.com/jaanga/jaanga.github.io/blob/master/overview-jaanga.md "View the files as source code." )  
+
+
+<br>
+<center><h2>&#x2766;</h2></center>
