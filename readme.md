@@ -72,7 +72,8 @@ Programmers and coders work with monospace fonts. So I design my sites to appear
 
 2013-12-19 ~ Theo
 
-* Rename Mr,doob;s filies to .io
+* Rename Mr.doob's filies to .io
+* Update read me files
 
 2013-11-15 ~ Theo
 
