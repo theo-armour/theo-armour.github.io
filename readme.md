@@ -1,6 +1,15 @@
 Theo Armour ~ Read Me
 ======================
 
+## Warning
+Be prepared to become confused.
+
+The web pages here are an app that is a catalog of apps that are catalogs of apps. 
+Of course, all the apps do their stuff even when they are inside another catalog. 
+Even worse: most everything can be viewed as source code or as an app. 
+
+Welcome to my world!
+
 ## GitHub Presence
 You have two ways of viewing my files here on GitHub:  
 
@@ -54,14 +63,14 @@ that is used to populate the right-side content panel of each page.
 
 ### Intuitiveness needed
 Apps are from Venus. Code is from Mars. Much time in producing the above sites and text is being devoted 
-to the process of developing effective terminology and user experience for bridging the gap between apps and source, between gitHub.io and github.com. 
+to the process of developing effective terminology and user experience for bridging the gap between apps and source, between GitHub.io and github.com. 
 
 This process will be discussed and dissected in more detail in the fullness of time.
 
 ### Fonts
-These web pages call for the use of the default monospace font as designateed by your browser. In most situations this ends us as the '[Courier]( http://en.wikipedia.org/wiki/Courier_(typeface) )' typeface.
-This is not standard practice. Most web pages call for a proprtionally spaced font. Why the unusual practice? Most of my work is aimed at coders and progammers who are interested in design.
-Programmers and coders work with monospace fonts. So I design my sites to appear in a programmatic or coderly way.
+These web pages call for the use of the default monospace font as designated by your browser. In most situations this ends us as the '[Courier]( http://en.wikipedia.org/wiki/Courier_(typeface) )' typeface.
+This is not standard practice. Most web pages call for a proportionally spaced font. Why the unusual practice? Most of my work is aimed at coders and programmers who are interested in design.
+Programmers and coders work with monospace fonts. So I design my sites to appear in a programmatic or orderly way.
 
 ## Copyright Notice and License
 [ Copyright Notice and License ]( https://github.com/theo-armour/copyright-notice-and-license.md )
@@ -72,7 +81,7 @@ Programmers and coders work with monospace fonts. So I design my sites to appear
 
 2013-12-19 ~ Theo
 
-* Rename Mr.doob's filies to .io
+* Rename Mr.doob's files to .io
 * Update read me files
 
 2013-11-15 ~ Theo
