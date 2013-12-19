@@ -18,7 +18,7 @@ Much of my recent work is available here - including the following projects:
 * <a href="http://jaanga.github.io/gestification/" target="_blank">Gestification</a> ~ work that involves Three.js and the Leap Motion device. 
 <a href="https://github.com/jaanga/gestification" target="_blank">Source</a>.
 		
-* <a href="http://jaanga.github.io/algesurf" target="_blank">algeSurf</a> ~ mathematices with a 3D perspective. 
+* <a href="http://jaanga.github.io/algesurf" target="_blank">algeSurf</a> ~ mathematics with a 3D perspective. 
 <a href="https://github.com/jaanga/algesurf" target="_blank">Source</a>.
 		
 * <a href="http://jaanga.github.io/urdacha" target="_blank">Urdacha</a> ~ entry for the Swiss Center _Urban Data Challenge_. 
