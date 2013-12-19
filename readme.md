@@ -1,14 +1,17 @@
 Theo Armour ~ Read Me
 ======================
 
-##Live Sites
-You have two ways of viewing the data:  
+## GitHub Presence
+You have two ways of viewing my files here on GitHub:  
 
-* Hosted pages on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
+* Hosted pages on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ "View the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
 * Source code on GitHub: [github.com/theo-armour]( https://github.com/theo-armour "View the files as source code." )  <scan style=display:none ><< You are now probably here.</scan>
 
 ## &#x2766; Links to Some of My GitHub Projects
-Most of my work is kept in repositories that are [GitHub organization accounts]( https://github.com/blog/674-introducing-organizations "Thanks, GitHub" ). 
+Most of my work is kept in repositories that are [GitHub organization accounts]( https://github.com/blog/674-introducing-organizations "Thanks, GitHub" ).  
+
+<input value="&#x261A; Click the menu items to see overviews for the projects." size=60 style="font:bold 12pt monospace;border-width:0;" >  
+
 [Github organization accounts]( https://help.github.com/articles/creating-a-new-organization-account--2 ) make it easy to collaborate. 
 My contributions to open-source repositories on GitHub include the following projects:
 			
@@ -66,6 +69,10 @@ Programmers and coders work with monospace fonts. So I design my sites to appear
 
 
 ## Change Log
+
+2013-12-19 ~ Theo
+
+* Rename Mr,doob;s filies to .io
 
 2013-11-15 ~ Theo
 
