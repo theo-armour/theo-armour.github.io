@@ -1,6 +1,7 @@
 Jaanga Overview
 ===============
 
+Cropped iframe view of Jaanga home page:
 <iframe src=http://jaanga.github.io	width=100% height=300px>
 There is an `iframe` here. It is not visible when viewed on github.com/theo-armour. To view, please go to theo-armour.github.io.
 </iframe>

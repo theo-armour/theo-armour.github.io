@@ -29,6 +29,9 @@ the software.
 
 
 ## Credits
+The apps I build  tend to remain at early and volatile stages. 
+Not all licensing requirements may have been fully met let alone identified. 
+It is my intention to play fair and all such requirements will either be met eventually or the feature in question will turned off.
 
 ### Three.js
 [Three.js]( http://mrdoob.github.io ) ~ copyright &copy; 2010-2013 three.js authors

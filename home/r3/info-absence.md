@@ -1,6 +1,7 @@
-Absence
-=======
+Absence Overview
+=================
 
+Cropped iframe view of the Absence home page:
 <iframe src="http://absence.github.io"	width=100% height=300px></iframe>
 
 <center><small>The above is a working sample of the home page</small></center>

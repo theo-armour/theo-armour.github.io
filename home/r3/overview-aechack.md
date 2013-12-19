@@ -1,6 +1,6 @@
 aeChack Overview
 ================
-What the aeChack home page looks like:	
+Cropped iframe view of the aeChack home page:	
 <iframe src="http://aechack.github.io" width=100% height=500px>
 There is an `iframe` here. It is not visible when viewed on github.com/theo-armour. To view, please go to theo-armour.github.io.
 </iframe>

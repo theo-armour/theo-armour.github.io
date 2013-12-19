@@ -1,5 +1,7 @@
-Patterns Dev
-============
+Patterns Dev Overview
+=====================
+
+Cropped iframe view of the Patterns Dev home page:
 <iframe src="http://patterns-dev.github.io/patterns/newpat/newpat0/new-patterns-introduction.htm"	width=100% height=300px></iframe>
 
 Relating to <i>A Pattern Language</i>
