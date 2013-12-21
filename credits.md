@@ -5,9 +5,10 @@ _ 2013-12-19 ~ first pass. More friends and links to be addded _
 
 Thank you Mr.doob for [Three.js]( http://mrdoob.github.io ) 
 
-Thank you Khronos Group for WebGL
+Thank you [Khronos Group]( http://www.khronos.org/ ) for [WebGL]( http://www.khronos.org/webgl/ )
 
-Thank you Google for the Chromebook Pixel, Nexus 5, Nevus 7, Google Docs, Google Drive, Gmail, Google Maps and WebGL
+Thank you Google for the [Chromebook Pixel]( http://www.google.com/intl/en/chrome/devices/chromebook-pixel/ ), 
+	Nexus 5, Nevus 7, Google Docs, Google Drive, Gmail, Google Maps and WebGL
 
 Thank you [GitHub]( http://github.com )
 
