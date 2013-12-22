@@ -34,8 +34,8 @@ Much of my recent work is available here - including the following projects:
 
 You have two ways of viewing the Jaanga files:  
 
-* Code hosted on GitHub: [jaanga.github.io]( http://jaanga.github.io/home/r2/index.html "view the files as apps." )    
-* Source code on GitHub: [github.com/jaanga]( https://github.com/jaanga/jaanga.github.io/blob/master/overview-jaanga.md "View the files as source code." )  
+* Code hosted on GitHub: [jaanga.github.io]( http://jaanga.github.io/ "view the files as apps." )    
+* Source code on GitHub: [github.com/jaanga]( https://github.com/jaanga/jaanga.github.io/ "View the files as source code." )  
 
 
 <br>
