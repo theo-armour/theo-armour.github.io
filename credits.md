@@ -1,7 +1,7 @@
 Credits & Thanks
 ================
 
-_ 2013-12-19 ~ first pass. More friends and links to be addded _
+_2013-12-19 ~ first pass. More friends and links to be addded_
 
 Thank you Mr.doob for [Three.js]( http://mrdoob.github.io ) 
 
@@ -18,7 +18,7 @@ Thank you DropBox
 
 Thank you Evernote
 
-Thank you Leap Motion
+Thank you [Leap Motion]( http://leapmotion.com )
 
 Thank you AutoScript
 

@@ -19,23 +19,23 @@
 	<div id=menu >
 		<h1><a href=''>Theo Armour</a></h1>
 			<p><i><small>designer<br>& erstwhile skript kiddie</small></i></p>
-					
+
 			<p id=intro ><a href=JavaScript:displayPage("../../readme.md",intro); >Read Me on GitHub</a></p>
 			<p id=cr ><a href=JavaScript:displayPage("../../credits.md",cr); >Credits and Thanks</a></p>
 			<p id=cp ><a href=JavaScript:displayPage("../../copyright-notice-and-license.md",cp); >Copyrights & Licenses</a></p>
 			<p>new tab &raquo; <a href="https://github.com/theo-armour/theo-armour.github.io" title="Opens in new tab" target="_blank">Source code</a></p>
-			
+
 			<br>
 			<h3>GitHub Projects</h3>
-			
+
 			<p><i><small>Browse the overviews or open pages in new tabs.</small></i></p>
-			
+
 			<p id=ja ><a href=JavaScript:displayPage("overview-jaanga.md",ja); >jaanga.github.io</a><br>
 				&nbsp; new tab &raquo; <a href="http://jaanga.github.io" target="_blank">Jaanga</a>
 			</p>
 			<p id=fg ><a href=JavaScript:displayPage("overview-fgx.md",fg); >fgx.github.io</a><br>
 				&nbsp; new tab &raquo; <a href="http://fgx.github.io" target="_blank">FGx</a>
-			</p>			
+			</p>
 			<p id=ae ><a href=JavaScript:displayPage("overview-aechack.md",ae); >aechack.github.io</a><br>
 				&nbsp; new tab &raquo; <a href="http://aechack.github.io" target="_blank">aeChack</a>
 			</p>
@@ -46,37 +46,43 @@
 			<p id=pa ><a href=JavaScript:displayPage("info-patterns-dev.md",pa); >patterns-dev.github.io</a><br>
 				&nbsp;new tab&raquo; <a href="http://patterns-dev.github.io" target="_blank">PatternsDev</a>
 			</p>
-			
+
 			<br>
-					
+
 			<h3>More</h3>
-			<p id=cb ><a href=JavaScript:displayPage("overview-cookbook.md",cb) >Cookbook</a></p>
-			<p id=mo ><a href=JavaScript:displayPage("info-more.md",mo);>Wait, there's more...</a></p>
+			<p id=cb ><a href=JavaScript:displayPage("overview-cookbook.md",cb) >Cookbook</a><br>
+				&nbsp;new tab &raquo; <a href="http://theo-armour.github.io/cooknook/" target="_blank">Cookbook</a>
+			</p>
+
+			<p id=mo ><a href=JavaScript:displayPage("info-more.md",mo);>Wait, there's more...</a>
+				&nbsp;new tab &raquo; <a href="http://theo-armour.github.io/home/r1/index-2013-10-20.html" target="_blank">More</a>
+			</p>
 			<br>
-			
-			<p>2013-12-19 ~ Added Thanks page</p>			
-			<p>2013-11-16 ~ Updating and adding to overview pages</p>			
+
+			<p>2014-01-21 ~ Added LRL Vector Thingy to Cookbook</p>
+			<p>2013-12-19 ~ Added Thanks page</p>
+			<p>2013-11-16 ~ Updating and adding to overview pages</p>
 			<p>2013-11-15 ~ Fixing 'Edit this page'. Adding content and links.</p>
 			<p>2013-11-12 ~ Add aeChack. Move source code link.</p>
 			<p>2013-11-07 ~ Brand new web site. More work needed - especially with text and links.</p>
 	</div>
 <script>
 
-	var converter = new Showdown.converter();	
-	
+	var converter = new Showdown.converter();
+
 	var css = document.body.appendChild( document.createElement('style') );
 	css.innerHTML = 'body { font: bold 12pt monospace; margin: 0; overflow: hidden; }' +
 		'h1, h2, h3, p { margin: 10px 0px; padding: 0px 20px;  }' +
 		'h1 a { color: #000; }' +
 		'p {padding: 5px 20px 5px 20px; }' +
 		'#githubio { display: block important!; }' +
-	'';	
-	
+	'';
+
 	menu.style.cssText = 'border: 5px double #ddd; height: 80%; left: 3%; padding: 2% 0%; position: absolute; overflow: auto; top: 5%; width: 15%;';
-	
+
 	var content = document.body.appendChild( document.createElement( 'div' ) );
 	content.style.cssText = 'border: 5px double #ddd; height: 80%; left: 23%; padding: 2%; overflow: auto; position: absolute; top: 5%; width: 65%;';
-	
+
 	var button = document.body.appendChild( document.createElement( 'div' ) );
 	button.style.cssText = 	'background-color: #555; color: #fff; position: fixed; top: 8%; right: 10%; padding: 8px; opacity: 0.5;} ';
 
@@ -89,8 +95,8 @@
 	function displayPage( fname, element ) {
 
 		content.innerHTML = converter.makeHtml( requestFile( fname ) );
-	
-		button.innerHTML = '<a href="https://github.com/theo-armour/theo-armour.github.io/blob/master/home/r3/' + fname + 
+
+		button.innerHTML = '<a href="https://github.com/theo-armour/theo-armour.github.io/blob/master/home/r3/' + fname +
 		'" onmouseover=this.style.opacity=1; style=color:#fff;text-decoration:none;	title="View the source code on GitGub" >' +
 		'Edit this page</a>';
 
@@ -106,17 +112,17 @@
 			location.hash = fname ;
 		}
 	}
-	
+
 	function requestFile( fname ) {
 		var xmlHttp = null;
 		xmlHttp = new XMLHttpRequest();
 		xmlHttp.open( 'GET', fname, false );
 		xmlHttp.send( null );
 		return xmlHttp.responseText;
-	}	
-	
+	}
+
 		ADO.init( 'rubber-duck-10.js' );
-	
+
 </script>
 </body>
 </html>
