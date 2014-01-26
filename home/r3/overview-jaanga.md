@@ -14,7 +14,7 @@ The name 'Jaanga' was chosen because it sounds jazzy, it is short and search res
 
 Much of my recent work is available here - including the following projects:
 
-* <a href="http://jaanga.github.io/terrain/" target="_blank">Terrain</a> ~ The altitude above sea level of everywhere on earth to a resultion of 90 meters supplied as PNG heightmaps.
+* <a href="http://jaanga.github.io/terrain/" target="_blank">Terrain</a> ~ The altitude above sea level of everywhere on earth to a resolution of 90 meters supplied as PNG heightmaps.
 <a href="https://github.com/jaanga/terrain" target="_blank">Source</a>.
 
 * <a href="http://jaanga.github.io/terrain-viewer/" target="_blank">Terrain Viewer</a> ~ Demo apps with source to view Terrain data in 3D.

@@ -30,7 +30,7 @@ Thank you Shoeboxed
 
 Thank you FileThis
 
-Thank you Mint
+Thank you [Mint]( http://mint.com )
 
 Thank you Microsoft for Windows 8.1
 

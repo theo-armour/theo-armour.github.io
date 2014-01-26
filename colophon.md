@@ -1,8 +1,7 @@
 Colophon
 ========
 
-Wanted
-
+The kinds of things that are wanted or needed:
 
 * Write once, read anywhere
 * Code for dummies
