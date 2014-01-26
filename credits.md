@@ -8,15 +8,15 @@ Thank you Mr.doob for [Three.js]( http://mrdoob.github.io )
 Thank you [Khronos Group]( http://www.khronos.org/ ) for [WebGL]( http://www.khronos.org/webgl/ )
 
 Thank you Google for the [Chromebook Pixel]( http://www.google.com/intl/en/chrome/devices/chromebook-pixel/ ), 
-	Nexus 5, Nevus 7, Google Docs, Google Drive, Gmail, Google Maps and WebGL
+	Nexus 5, Nexus 7, Google Groups, Google Docs, Google Drive, Gmail, Google Maps and WebGL
 
 Thank you [GitHub]( http://github.com )
 
 Thank you [Stack Overflow]( http://stackoverflow.com )
 
-Thank you DropBox
+Thank you [DropBox]( http://dropbox.com )
 
-Thank you Evernote
+Thank you [Evernote]( http://evernote.com )
 
 Thank you [Leap Motion]( http://leapmotion.com )
 
