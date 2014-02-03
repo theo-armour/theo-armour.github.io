@@ -5,7 +5,7 @@ Theo Armour ~ Read Me
 Be prepared to become confused.
 
 The web pages here are part of an app that is a catalog of apps that are catalogs of apps.
-Of course, all the apps actuall work and do their stuff even when they are inside other app catalogs.
+Of course, all the apps actually work and do their stuff even when they are inside other app catalogs.
 Even worse: most everything can be viewed as source code or as an app.
 
 Welcome to my very highly connected world! The Notes section describes these things in more detail.
@@ -46,7 +46,7 @@ Outside of GitHub, see also:
 
 ### Two links for each repository
 Most people use and think of GitHub as a wonderful repository for computer source code.
-GitHub, however, also provides a free and very powerful web site hosting services via their [GitHub Pages]( http://pages.github.com/ "Thank you, GitGub!" ) feature.
+GitHub, however, also provides a free and very powerful web site hosting services via their [GitHub Pages]( http://pages.github.com/ "Thank you, GitHub!" ) feature.
 This feature only works for static files - such as HTML, CSS, JavaScript, text and image files.
 Since these are the only files types I deal with, GitHub hosting is delightful hosting solution.
 
@@ -83,7 +83,7 @@ Programmers and coders work with monospace fonts. So I design my sites to appear
 
 2014-01-26 ~ Theo
 
-* Add terrain and Terrain Viewert
+* Add terrain and Terrain Viewer
 * Add to read me
 
 2013-12-19 ~ Theo
