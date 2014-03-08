@@ -1,8 +1,7 @@
-
 Theo Armour ~ Copyright Notice and License
 ==========================================
  
-Copyright &copy; 2013 Theo Armour
+Copyright &copy; 2014 Theo Armour
 
 All software and documentation in this repository is available under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
 
