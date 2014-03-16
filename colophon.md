@@ -12,7 +12,7 @@ The kinds of things that are wanted or needed:
 * Fully utilizes GitHub spirit/features
 
 html files are about using the apps
-moving around gothub is about looking at source code
+moving around github is about looking at source code
 seamless transitions between viewing apps and viewing source
 
 Moving around is as easy as changing TV channels.
