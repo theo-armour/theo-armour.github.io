@@ -34,12 +34,21 @@
 
 ### More
 
+<<<<<<< HEAD
 <p id=coo >
 	<a href=JavaScript:displayPage("#cookbook/readme.md#coo"); >Cookbook</a>
 </p>
 
 <p id=mor >
 	<a href=JavaScript:displayPage("#home/r3/info-more.md#mor"); >More</a>
+=======
+<p id=def >
+	<a href=JavaScript:displayPage("#cookbook/readme.md#def"); >Cookbook</a>
+</p>
+
+<p id=def >
+	<a href=JavaScript:displayPage("#home/r3/info-more.md#def"); >More</a>
+>>>>>>> 07af721ff9cca1b77a31d311b94e7b1379c2f6e4
 </p>
 
 ****

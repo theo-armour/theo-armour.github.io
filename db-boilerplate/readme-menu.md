@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [Theo Armour](../../index.html ) &raquo; [Repo]( ../index.html ) &raquo;<br>[App]( ./index.html )
+=======
+[theo-armour](../../index.html ) &raquo;<br>[Repo]( ../index.html ) &raquo;<br>[App]( ./index.html )
+>>>>>>> 07af721ff9cca1b77a31d311b94e7b1379c2f6e4
 ================================================================================================
 
 <p id=rm >
