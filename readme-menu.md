@@ -6,8 +6,8 @@
 </p>
 
 
-<p id=cr >
-	<a href=JavaScript:displayPage("#credits.md#cr"); >Credits and Thanks</a>
+<p id=pag >
+	<a href=JavaScript:displayPage("#pages/readme.md#pag"); >Pages</a>
 </p>
 
 ### Overviews
