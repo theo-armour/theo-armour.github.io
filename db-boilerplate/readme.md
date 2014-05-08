@@ -3,17 +3,17 @@ Read Me
 
 ### Live Demo
 
-xxx xxx
 <iframe src="http://theo-armour.github.io/index.html" width=100% height=500px class='overview' >
-There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io. See 'Project Links' just below.
+There is an `iframe` here. It is not visible when viewed on github.com. To view, please go to theo-armour.github.io. See 'Project Links' just below.
 </iframe>
-
+_xxx xxx_
 
 ## Concept
 
-### Mission
+### Mission 
+<!-- a statement of a rationale, applicable now as well as in the future -->
 
-###Vision
+### Vision <!--  a descriptive picture of a desired future state -->
 
 
 ## Features
@@ -26,12 +26,21 @@ There is an `iframe` here. It is not visible when viewed on github.com/fgx. To v
 
 
 ## Project Links
-
+<!--
 You have two ways of viewing the theo-armour files:
 
 * Web page hosted on GitHub: [theo-armour.github.io]( http://theo-armour.github.io/ "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
 * Source code on GitHub: [github.com/theo-armour]( https://github.com/theo-armour/ "View the files as source code." ) <scan style=display:none ><< You are now probably here.</scan>
+-->
 
+All of my scripts are [FOSS]( https://en.wikipedia.org/wiki/Free_and_open-source_software ).
+Scripts are hosted on GitHub and are viewable as web pages, as described in the 'Read Me' files and as source code.
+
+The three ways of looking at or using the scripts:
+
+1. [Live Demo]( http://theo-armour.github.io/ latest/index.html )  
+2. [Read Me]( http://theo-armour.github.io/ "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >   
+3. [Source Code]( https://github.com/theo-armour/cookbook/ "View the files as source code." ) <scan style=display:none ><< You are now probably here.</scan>  
 
 ### System Requirements
 
