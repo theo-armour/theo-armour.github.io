@@ -13,7 +13,8 @@ _xxx xxx_
 ### Mission 
 <!-- a statement of a rationale, applicable now as well as in the future -->
 
-### Vision <!--  a descriptive picture of a desired future state -->
+### Vision 
+<!--  a descriptive picture of a desired future state -->
 
 
 ## Features
