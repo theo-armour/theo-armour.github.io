@@ -1,11 +1,12 @@
 Jaanga Overview
 ===============
 
-Cropped iframe view of Jaanga home page:
-<iframe src=http://jaanga.github.io	width=100% height=300px>
+Cropped `iframe` view of Jaanga home page:
+<iframe src=http://jaanga.github.io	width=100% height=100% >
 There is an `iframe` here. It is not visible when viewed on github.com/theo-armour. To view, please go to theo-armour.github.io.
 </iframe>
 
+<!--
 ## Concept
 <a href="http://jaanga.github.io" target="_blank">Jaanga.github.io</a> is a GitHub organization
 with source code at <a href="https://github.com/jaanga" target="_blank">github.com/jaanga</a>.
@@ -45,3 +46,4 @@ You have two ways of viewing the Jaanga files:
 
 <br>
 <center><h2>&#x2766;</h2></center>
+-->

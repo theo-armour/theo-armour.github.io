@@ -1,7 +1,7 @@
 	var msg = 
 		'<hr>' +
 
-		'<h4>Update 2014-05-07</h4>' +
+		'<h4>Update 2014-05-011</h4>' +
 		'<p>Prepping for<br>' +
 		'<a href="https://www.hackerleague.org/hackathons/aec-technology-hackathon-2014/wikipages/533c59a8ce9582c42300000b" target="_blank">AEC Technology Hackathon 2014  </a></p>' +
 		'<p>The project:<br>Can human brains be made to twerk?</p>' +

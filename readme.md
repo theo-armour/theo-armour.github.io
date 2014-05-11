@@ -81,6 +81,11 @@ Programmers and coders work with monospace fonts. So I design my sites to appear
 
 ## Change Log
 
+2014-05-11 ~ Theo
+
+* Update menus: add icons / aTechathon items
+* Update boilerplate
+
 2014-01-26 ~ Theo
 
 * Add terrain and Terrain Viewer
