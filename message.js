@@ -1,8 +1,18 @@
 	var msg = 
 		'<hr>' +
 
-		'<h4>Update 2014-05-011</h4>' +
-		'<p><i>Menus and read me files are in the middle of an update. Many items not visible. Everything is available on GitHub.</i></p>' +
+		'<h4>Update 2014-07-16</h4>' +
+		'<p><a href="http://jaanga.github.io/algesurf/parametric-equations/" target="_blank">AlgeSurf PE</a> ' +
+			'Visualization of mathematic equations faster, simpler and easier. ' +
+			'Now displays parametric equations.</p>' +
+
+		'<h4>Update 2014-06-15</h4>' +
+		'<p><a href="http://soundviz.github.io/" target="_blank">SoundViz</a> A new app that translates numeric sound data in ASCII format to 3D animations viewable in your browser</p>' +
+
+		'<h4>Update 2014-06-26</h4>' +
+		'<p><a href="http://va3c.github.io/" target="_blank">vA3C</a> Second Prize Winning Entry! View Revit dnd Grasshopper models in your browser.</p>' +
+
+		'<h4>Update 2014-05-11</h4>' +
 		'<p>Prepping for<br>' +
 		'<a href="https://www.hackerleague.org/hackathons/aec-technology-hackathon-2014/wikipages/533c59a8ce9582c42300000b" target="_blank">AEC Technology Hackathon 2014  </a></p>' +
 		'<p>The project:<br>Can human brains be made to twerk?</p>' +

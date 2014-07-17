@@ -18,9 +18,14 @@
 <i class="fa fa-external-link"></i> [Jaanga read me]( http://jaanga.github.io/ )  
 <i class="fa fa-github"></i> [Jaanga source code]( https://github.com/jaanga/jaanga.github.io/ )  
 
+<i class="fa fa-external-link"></i> [SoundViz]( http://soundviz.github.io/ )  
+
+<i class="fa fa-external-link"></i> [vA3C]( http://va3c.github.io/ )  
+
 <p id=ate >
 	<a href=JavaScript:displayPage("#home/r3/overview-atechathon.md#ate"); >aTechathon Overview</a>
 </p>
+
 <i class="fa fa-tumblr-square"></i> [aTechathon on Tumblr]( http://atechathon.tumblr.com/ )  
 <i class="fa fa-external-link"></i> [aTechathon read me]( http://atechathon.github.io/ )  
 <i class="fa fa-github"></i> [aTechathon source code]( https://github.com/atechathon/atechathon.github.io/ )  
