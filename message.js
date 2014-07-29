@@ -1,6 +1,11 @@
 	var msg = 
 		'<hr>' +
 
+		'<h4>Update 2014-07-29</h4>' +
+		'<p><a href="http://va3c.github.io/viewer/va3c-viewer-html5/r3/va3c-viewer-html5-r3.html" target="_blank">vA3C Viewer R3</a> ' +
+			'Turning this viewer into a real-time 3D mash-up machine' +
+			'</p>' +
+
 		'<h4>Update 2014-07-16</h4>' +
 		'<p><a href="http://jaanga.github.io/algesurf/parametric-equations/" target="_blank">AlgeSurf PE</a> ' +
 			'Visualization of mathematic equations faster, simpler and easier. ' +
