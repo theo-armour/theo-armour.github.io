@@ -1,6 +1,11 @@
 	var msg = 
 		'<hr>' +
 
+		'<h4>Update 2014-08-27</h4>' +
+		'<p><a href="http://jaanga.github.io/cookbook/cardboard" target="_blank">Jaanga Templates for Google Cardboard</a> ' +
+			'Three.js scripts you can use to build your own demos.' +
+			'</p>' +
+
 		'<h4>Update 2014-07-29</h4>' +
 		'<p><a href="http://va3c.github.io/viewer/va3c-viewer-html5/r3/va3c-viewer-html5-r3.html" target="_blank">vA3C Viewer R3</a> ' +
 			'Turning this viewer into a real-time 3D mash-up machine' +
