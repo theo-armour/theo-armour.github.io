@@ -1,6 +1,11 @@
 	var msg = 
 		'<hr>' +
 
+		'<h4>Update 2014-09-28</h4>' +
+		'<p>Adding more <a href="http://jaanga.github.io/libs/db/" target="_blank">docBrowser</a> ' +
+			'capability to Jaanga.' +
+			'</p>' +
+
 		'<h4>Update 2014-08-27</h4>' +
 		'<p><a href="http://jaanga.github.io/cookbook/cardboard" target="_blank">Jaanga Templates for Google Cardboard</a> ' +
 			'Three.js scripts you can use to build your own demos.' +
