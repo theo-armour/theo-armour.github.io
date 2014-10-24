@@ -1,60 +1,36 @@
 [Theo Armour](./index.html )
 ============================
 
-<p id=rm >
-	<a href=JavaScript:displayPage("#readme.md#rm"); >Read Me</a>
-</p>
+<div id=rm class=menu >
+	<a href=JavaScript:displayMD("#readme.md#rm"); >Read Me</a>
+</div>
 
+<div id=pag class=menu >
+	<a href=JavaScript:displayMD("#pages/readme.md#pag"); >Pages</a>
+</div>
 
-<p id=pag >
-	<a href=JavaScript:displayPage("#pages/readme.md#pag"); >Pages</a>
-</p>
+[Cookbook]( ./cookbook/readme-reader.html )
 
-### Overviews
+[More]( ./home/r1/index-2013-10-20.html )
 
-<p id=jaa >
-	<a href=JavaScript:displayPage("#home/r3/overview-jaanga.md#jaa"); >Jaanga Overview</a>
-</p>
-<i class="fa fa-external-link"></i> [Jaanga read me]( http://jaanga.github.io/ )  
-<i class="fa fa-github"></i> [Jaanga source code]( https://github.com/jaanga/jaanga.github.io/ )  
+### GitHub Contributions
 
-<i class="fa fa-external-link"></i> [SoundViz]( http://soundviz.github.io/ )  
+<i class="fa fa-external-link"></i> [Jaanga]( http://jaanga.github.io/ )  
 
 <i class="fa fa-external-link"></i> [vA3C]( http://va3c.github.io/ )  
 
-<p id=ate >
-	<a href=JavaScript:displayPage("#home/r3/overview-atechathon.md#ate"); >aTechathon Overview</a>
-</p>
+<i class="fa fa-external-link"></i> [FGx]( http://fgx.github.io/ )  
 
-<i class="fa fa-tumblr-square"></i> [aTechathon on Tumblr]( http://atechathon.tumblr.com/ )  
-<i class="fa fa-external-link"></i> [aTechathon read me]( http://atechathon.github.io/ )  
-<i class="fa fa-github"></i> [aTechathon source code]( https://github.com/atechathon/atechathon.github.io/ )  
+<i class="fa fa-external-link"></i> [SoundViz]( http://soundviz.github.io/ )  
 
-<p id=fgx >
-	<a href=JavaScript:displayPage("#home/r3/overview-fgx.md#fgx"); >FGx</a>
-</p>
+<i class="fa fa-external-link"></i> [aTeckathon]( http://ateckathon.github.io/ )  
 
-<p id=aec >
-	<a href=JavaScript:displayPage("#home/r3/overview-aechack.md#aec"); >aeChack</a>
-</p>
+<i class="fa fa-external-link"></i> [aeChack]( http://aechack.github.io/ )  
 
-<p id=pat >
-	<a href=JavaScript:displayPage("#home/r3/info-patterns-dev.md#pat"); >Patterns</a>
-</p>
+<i class="fa fa-external-link"></i> [Patterns Dev]( http://patterns-dev.github.io/ )  
 
-<p id=abs >
-	<a href=JavaScript:displayPage("#home/r3/info-absence.md#abs"); >Absence</a>
-</p>
+<i class="fa fa-external-link"></i> [Absence]( http://absence.github.io/ )  
 
-### More
-
-<p id=coo >
-	<a href=JavaScript:displayPage("#cookbook/readme.md#coo"); >Cookbook</a>
-</p>
-
-<p id=mor >
-	<a href=JavaScript:displayPage("#home/r3/info-more.md#mor"); >More</a>
-</p>
 
 ****
 
