@@ -23,7 +23,7 @@
 
 <i class="fa fa-external-link"></i> [SoundViz]( http://soundviz.github.io/ )  
 
-<i class="fa fa-external-link"></i> [aTeckathon]( http://ateckathon.github.io/ )  
+<i class="fa fa-external-link"></i> [aTechathon]( http://atechathon.github.io/ )  
 
 <i class="fa fa-external-link"></i> [aeChack]( http://aechack.github.io/ )  
 
