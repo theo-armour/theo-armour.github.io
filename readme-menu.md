@@ -5,13 +5,16 @@
 	<a href=JavaScript:displayMD("#readme.md#rm"); >Read Me</a>
 </div>
 
+<!--
 <div id=pag class=menu >
 	<a href=JavaScript:displayMD("#pages/readme.md#pag"); >Pages</a>
 </div>
+-->
+[Pages]( ./pages/readme-reader.html )
 
 [Cookbook]( ./cookbook/readme-reader.html )
 
-[More]( ./home/r1/index-2013-10-20.html )
+[More (older)]( ./home/r1/index-2013-10-20.html )
 
 ### GitHub Contributions
 
