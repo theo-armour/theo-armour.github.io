@@ -2,6 +2,11 @@
 		'<hr>' +
 
 		'<h4>Update 2014-11-22 ~ </h4>' +
+		'<p><a href="http://va3c.github.io/viewer/va3c-hacker/latest/ target="_blank">vA3C Hacker R2</a> ' +
+			'moving faster miles an hour into the future.' +
+			'</p>' +
+
+		'<h4>Update 2014-11-22 ~ </h4>' +
 		'<p><a href="http://va3c.github.io/viewer/va3c-hacker/ target="_blank">vA3C Hacker R1</a> ' +
 			'released to the wold.' +
 			'</p>' +
