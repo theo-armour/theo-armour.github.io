@@ -8,7 +8,7 @@
 
 		'<h4>Update 2014-11-22 ~ </h4>' +
 		'<p><a href="http://va3c.github.io/viewer/va3c-hacker/ target="_blank">vA3C Hacker R1</a> ' +
-			'released to the wold.' +
+			'released to the world.' +
 			'</p>' +
 
 		'<h4>Update 2014-09-28</h4>' +
