@@ -165,6 +165,9 @@
 					child.geometry.computeFaceNormals();
 					child.geometry.computeVertexNormals();
 					child.castShadow = child.receiveShadow = true;
+					child.material.color.r = 1;
+					child.material.color.g = 0;
+					child.material.color.b = 0;
 
 				}
 
@@ -181,7 +184,18 @@
 	}
 
 	function loadFemur() {
-		material = new THREE.MeshPhongMaterial( { color: 0xffff00, emissive: 0x555555, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
+
+
+		material = new THREE.MeshPhongMaterial( { color: 0xeeeeee, emissive: 0x555555, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
+
+		THREE.ImageUtils.crossOrigin = 'anonymous';
+		var r = 'http://mrdoob.github.io/three.js/examples/textures/cube/skybox/';
+		var urls = [ r + 'px.jpg', r + 'nx.jpg', r + 'py.jpg', r + 'ny.jpg', r + 'pz.jpg', r + 'nz.jpg' ];
+
+		textureCube = THREE.ImageUtils.loadTextureCube( urls );
+		material.envMap = textureCube;
+		material.reflectivity = 0.85;
+
 
 		loader.load( fileName2 + '.obj', fileName2 + '.mtl', function ( object ) {
 
@@ -336,7 +350,7 @@
 		scene.add( lightAmbient );
 
 		lightDirectional = new THREE.DirectionalLight( 0xffffff, 0.5 );
-		lightDirectional.position.set( -200, 200, 200 );
+		lightDirectional.position.set( -200, 200, 20 );
 
 		var d = 50;
 		lightDirectional.shadowCameraLeft = -d;
