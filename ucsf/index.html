@@ -130,6 +130,8 @@
 		loader = new THREE.OBJMTLLoader();
 		loader.crossOrigin = 'anonymous';
 
+		THREE.ImageUtils.crossOrigin = '';
+
 // sky sphere
 		texture = THREE.ImageUtils.loadTexture( "http://theo-armour.github.io/ucsf/parnassus-sky-sphere.png" );
 		texture.minFilter = texture.magFilter = THREE.NearestFilter;
