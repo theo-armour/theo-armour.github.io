@@ -81,8 +81,8 @@
 
 <script>
 
-	var fileName = './models/HumanHeart';
-	var fileName2 = './models/FEMUR';
+	var fileName = 'http://theo-armour.github.io/ucsf/models/HumanHeart';
+	var fileName2 = 'http://theo-armour.github.io/ucsf/models/FEMUR';
 
 	var loader;
 	var heart, femur;
@@ -131,7 +131,7 @@
 		loader.crossOrigin = 'anonymous';
 
 // sky sphere
-		texture = THREE.ImageUtils.loadTexture( "parnassus-sky-sphere.png" );
+		texture = THREE.ImageUtils.loadTexture( "http://theo-armour.github.io/ucsf/parnassus-sky-sphere.png" );
 		texture.minFilter = texture.magFilter = THREE.NearestFilter;
 
 		geometry = new THREE.SphereGeometry( 50, 20, 20 );
