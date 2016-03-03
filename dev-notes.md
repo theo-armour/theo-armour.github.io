@@ -1,6 +1,75 @@
 Theo Armour Developer Notes
 ===
 
+## 2016-02-26
+
+Learning
+* OBJ file manipulation 
+* Fog
+* Orbit FPS extras
+* Pick and Place prep - 3D booleans
+
+>> Abantech
+* Emails
+* Follows Leap
+
+
+AlgeSurf / Imaginary - MC
+* MC gallery
+	* Equations written in standard JavaScript
+	* MC file that accepts which equation to display based on location hash
+* Email list?
+* Baez starright lines
+
+Exploratoria
+* Add Issues
+
+## FGx Globe
+* Discard non-flyers
+* Learn how to bring in OBJ files
+
+
+## Leap / Orion / Gestification R3
+* Blog post
+* Ten basic scripts
+* Add flick script
+* Add FPS infinite landscape
+* Add pick and place script
+
+
+Moving Manuals
+* Email to Richard or dialog
+* See text.file
+
+Mostapha - wait for response
+* Add OBJ to permalinks
+* Spherical lines / surfaces / placards
+
+
+Terrain ~ cartography
+* Earth SRTM, Moon Mars Globes
+* Messages requesting how to make higher resolution or faster to lo Th and Jaume
+
+
+Three.js
+* Git fork management
+* Fix shadows in source code
+
+Viewers
+* Gallery - Marching Cubes
+* Multiple random iframes in Markdown 
+* Add external text to any entry
+	* Embedded or by link as recorded in meta data or read me
+* css scaling may stop zooming by itself just like that! Not
+
+
+WikiHouse / Open Desk
+* add MM - as and when suitable
+
+
+Isaac Kendell
+Jeffrey
+
 
 2015-07-08
 
@@ -49,7 +118,7 @@ Started R4 of the Jaanga home page. Goals include:
 
 * simplify its maintenance even more,
 * eliminate confusion between choosing same item from either menu or body 
-* eat some more of my own dogfood
+* eat some more of my own dog food
 * continue github read me is also web page
 * Add details that help you choose where you want to go
 
