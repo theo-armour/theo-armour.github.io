@@ -96,7 +96,7 @@
 
 				if ( event.type === 'IssuesEvent' || event.type === 'IssueCommentEvent' ) {
 
-//					add = '<a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a><br>';
+//					add = '<a href=' + event.payload.issue.html_url + ' > ' + event.payload.issue.title + '</a><br>';
 					prefix = '<h3>Issue Event</h3>'; 
 					add = ' ' + event.type + ' <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a> ' + 
 						'<div class=issue >' +converter.makeHtml( event.payload.issue.body ) + '</div>' ;
@@ -104,7 +104,7 @@
 				} else if ( event.type === 'IssueCommentEvent' ) {
 
 					prefix = '<h3>Issue Comment</h3>'; 
-					add = ' ' + event.type + ' <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a> ';
+					add = ' ' + event.type + ' <a href=' + event.payload.issue.html_url + ' > ' + event.payload.issue.title + '</a> ';
 
 				} else if ( event.type === 'PushEvent' ){
 
