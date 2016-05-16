@@ -1,75 +1,160 @@
 Theo Armour Developer Notes
 ===
 
-## 2016-02-26
 
-Learning
-* OBJ file manipulation 
-* Fog
-* Orbit FPS extras
+## Midnight things
+* try templates using \ instead of '' +
+
+
+
+## Learning
+
+## Cookbook HTML
+* Orbit Controls FPS extras
+	* Switching controllers is probably still the best way
+	* Adding modes to orbit controls gets as tricky as switching controllers
+	Is it possible to transfer camera position and target?
+
 * Pick and Place prep - 3D booleans
 
->> Abantech
-* Emails
+* Map - traversing and updating in real-time
+* Infinite map
+
+## 3D Models
+* Better document title
+* More feedback in core
+* Bring in STL
+	* Menu and contents has issues
+* Add exploded view demos
+* Byuild cross section tool
+
+
+## Abantech
+* Admin notes / Operation dev
+* trademark stuff // use code names
 * Follows Leap
 
 
-AlgeSurf / Imaginary - MC
+## AlgeSurf / Imaginary - MC
 * MC gallery
 	* Equations written in standard JavaScript
 	* MC file that accepts which equation to display based on location hash
 * Email list?
-* Baez starright lines
+* Baez straight lines
 
-Exploratoria
-* Add Issues
+## BBN66 https://wordpress.com/stats/insights/bbn66.wordpress.com
+
+* Into Flickr ~ https://www.flickr.com/photos/bbn66
+* Update first post
+* Add BBN photos
+
+## Demo
+* femur heart UCSF on r74 << will take too much time
+
+
+## Documents
+* Add more Dirksens
+* Add Babylon
+* Add Parisi
+* Add patterns
+
+## Equirex
+* Add my pics
+* Flickr API
+	* next page
+* Add video
+
+## Exploratoria
+* Add issues not trademark
+	* Partnes: imaginary / pira / Kevin Thompson
+	* coding standards
+
 
 ## FGx Globe
-* Discard non-flyers
-* Learn how to bring in OBJ files
+* Discard non-flyers <<<
+	* Add a button to clear them
+* AC to OBJ?
+	* Just be able to read AC files then use Three.js to save
+	* Geoff: what is used to create/read/write AC files
+* List of models needed
+* Practice OBJ to JSON
+* Message Hazuki
+* Add listen to Tweets
+* Jaume's lines
+* Get Ready for Chrome Experiments submission
+
+## i colororo del buio
+* now forwarding
+* Learn how to set up cname on google domains
+* Update color script
+* Rewrite by by page
 
 
 ## Leap / Orion / Gestification R3
 * Blog post
 * Ten basic scripts
-* Add flick script
-* Add FPS infinite landscape
+* Update colors by moving hands
+	* Update vertex colors by washing somethingwith your hands
 * Add pick and place script
+* Add flick-a-thing script
+* Wearable UI
+* AR quadcopter
+* Add FPS infinite landscape
+	* On Google Maps
+
+## Ladybug Web
+* Work on Home Page Explorer Read Mr
+* Add Solar Calculator to Shadow Core
+* Work on Coding Style
+* Shadow Openet
+	* Add Loader Three.js
 
 
-Moving Manuals
-* Email to Richard or dialog
-* See text.file
+## Moving Manuals
+* Add Moving Manuals logo/app
+* Add patterns to plan
+* Continue building web site
+* Email to Richard or start a dialog
+* Email Terry
 
-Mostapha - wait for response
-* Add OBJ to permalinks
-* Spherical lines / surfaces / placards
+## OpenDesk CC
+* Ask harry questiona
 
 
-Terrain ~ cartography
+## Terrain ~ cartography
 * Earth SRTM, Moon Mars Globes
 * Messages requesting how to make higher resolution or faster to lo Th and Jaume
 
 
-Three.js
+## Three.js
 * Git fork management
 * Fix shadows in source code
 
-Viewers
+## UCSF femur heart
+* r74
+
+## Viewers
 * Gallery - Marching Cubes
-* Multiple random iframes in Markdown 
+
 * Add external text to any entry
 	* Embedded or by link as recorded in meta data or read me
 * css scaling may stop zooming by itself just like that! Not
 
 
-WikiHouse / Open Desk
+## WikiHouse / Open Desk
 * add MM - as and when suitable
 
+# Tutorials
+* finish all ten
+* contact   Isaac Kendell
 
-Isaac Kendell
+
+
 Jeffrey
 
+2016-03-13 ~ 
+
+* Multiple random iframes in Markdown << done
 
 2015-07-08
 
