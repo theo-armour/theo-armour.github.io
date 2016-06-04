@@ -12,3 +12,18 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 
 * https://api.github.com/users/theo-armour/events
+
+## Wish List
+
+* Go to top of page
+* Put scale div inside a fixed height container
+* Load all ten pages one after another
+
+## Change log
+
+### 2016-06-03
+
+* R2
+* Add hamburger menu
+* Select user from drop-down list
+* Work on prettifying display of output 

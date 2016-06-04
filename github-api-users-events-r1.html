@@ -23,7 +23,7 @@
 
 	function init() {
 
-		var css, fileName;
+		var css;
 
 		converter = new showdown.Converter( { strikethrough: true, literalMidWordUnderscores: true, simplifiedAutoLink: true, tables: true });
 
@@ -31,6 +31,7 @@
 		css.innerHTML = ' \
 			body { font: 12pt monospace;  } \
 			a { color: darkgreen; text-decoration: none; } \
+			button, input[type=button] { background-color: #eee; border: 2px #eee solid; color: #888; } \
 			img { max-width: 860px; } \
 			div.issue { border: 1px solid #aaa; box-sizing: border-box; padding: 10px; transform: scale( 0.85 );  } \
 		';
@@ -71,11 +72,15 @@
 
 			events = JSON.parse( xhr.responseText );
 
-			txt = '<h1><a href="" >GitHub user events</a> <a href=index.html#readme.md> &#x24D8; </a></h1>' + 
-				'<h1><a href=https://github.com/' + user + '>' + user + '</a> page ' +
-				'<button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button>';
+			buttons = 'page <button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button>';
+
+			txt = '<h1><a href="" >GitHub Users Events</a> <a href=index.html#readme.md> &#x24D8; </a></h1>' + 
+				'<h1><a href=https://github.com/' + user + '>' + user + '</a> ' + buttons + '</h1>';
+
+				
 
 			dates = [];
+			eventHeadings = [];
 
 			for ( var i = 0; i < events.length; i++ ) {
 
@@ -87,12 +92,21 @@
 
 					txt += '<h3>' + event.created_at.slice( 0, 10 ) + '</h3>';
 
+					eventHeadings = [];
+
+				}
+
+				if ( eventHeadings.indexOf( event.type ) === -1 ) {
+
+					eventHeadings.push( event.type )
+
+					txt += '<h3 style=margin:0; >' + event.type + '</h3>';
+
 				}
 
 				url = event.repo.name;
 
-				link = '<a href=http://' + url.replace( '/', '.github.io/' ) + ' >' + event.repo.name + '</a>';
-
+				link = '<a href=http://' + url.replace( '/', '.github.io/' ) + ' > ' + event.repo.name + '</a>';
 
 				if ( event.type === 'IssuesEvent' || event.type === 'IssueCommentEvent' ) {
 
@@ -110,7 +124,8 @@
 
 //					add = 'size: ' + event.payload.size + '<div style="margin: 0 0 0 10px;" >Message: ' + event.payload.commits[ 0 ].message + '</div>';
 					prefix = '<h3>PushEvent</h3>'; 
-					add = ' ' + event.type + ' size: ' + event.payload.size + ' - ' + event.payload.commits[ 0 ].message;
+					prefix = '';
+					add = ' ' + event.type + ' size: ' + event.payload.size + ' - ' + event.payload.commits[ 0 ].message + '<br>';
 
 				} else {
 
@@ -124,7 +139,7 @@
 
 			}
 
-			contents.innerHTML = txt;
+			contents.innerHTML = txt + '<h1>' + buttons + '</h1>';
 
 // console.log( '', events );
 
