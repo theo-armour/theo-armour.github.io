@@ -58,6 +58,7 @@ Theo Armour Developer Notes
 * Add Parisi
 * Add patterns
 
+
 ## Equirex
 * Add my pics
 * Flickr API
@@ -82,6 +83,15 @@ Theo Armour Developer Notes
 * Add listen to Tweets
 * Jaume's lines
 * Get Ready for Chrome Experiments submission
+
+
+## Github API
+
+* Add repo and orgs descriptions? date last update?
+* Add blog if user Theo
+* Add tags to issues
+* Better control over size of iframe
+
 
 ## i colororo del buio
 * now forwarding
