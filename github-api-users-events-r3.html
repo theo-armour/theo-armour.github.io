@@ -28,7 +28,18 @@
 		'#???',
 		'alavit-d',
 		'#OpenDesk',
-		'harrykeen18' 
+		'harrykeen18',
+		'#Abantech',
+		'GMelencio',
+		'jamesAbantech',
+		'#Wiredcraft',
+		'hunvreus',
+		'quentinberder',
+		'#Autodesk',
+		'jeremytammik',
+		'Autodesk'
+
+
 
 	];
 
@@ -226,7 +237,7 @@
 
 // very messy in here
 
-		var fileName, xhr, events;
+		var fileName, xhr, events, event, eventHeadings, dates, txt;
 
 		fileName = 'https://api.github.com/users/' + user + '/events?page=' + page;
 
@@ -237,17 +248,17 @@
 
 		function callback() {
 
+			dates = [];
 			events = JSON.parse( xhr.responseText );
 
 //console.log( 'events', events );
 
-			buttons = 'page <button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button> ' +
-				'<button onclick=window.scrollTo(0,0); >top</button>';
-
-			txt = '<h1>user: <a href=https://github.com/' + user + '>' + user + '</a> ' + buttons + '</h1>';
-
-			dates = [];
-			eventHeadings = [];
+			txt = 
+			'<h1>' +
+				'user: <a href=https://github.com/' + user + '>' + user + '</a> ' + 
+				'page <button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button> ' +
+//				'<button onclick=window.scrollTo(0,0); >top</button>' +
+			'</h1>';
 
 			for ( var i = 0; i < events.length; i++ ) {
 
@@ -257,7 +268,9 @@
 
 					dates.push( event.created_at.slice( 0, 10 ) )
 
-					txt += '<hr style=margin-top:70px; ><h2>' + event.created_at.slice( 0, 10 ) + '</h2>';
+					txt += 
+						'<hr style=margin-top:70px; >' +
+						'<h2>' + event.created_at.slice( 0, 10 ) + '</h2>';
 
 					eventHeadings = [];
 
@@ -271,44 +284,64 @@
 
 				}
 
-				url = event.repo.name;
-
-				link = 'Repository: <a href=http://github.com/' + event.repo.name + ' > ' + event.repo.name + '</a><br>';
-
 //console.log( 'event', event );
+
+				txt += 
+					'<div>' + ( i + 1 ) + '. ' + event.created_at.slice( 11, -1 ) + '</div>';
+					'<div>Repository: <a href=http://github.com/' + event.repo.name + ' > ' + event.repo.name + '</a></div>' +
+				'';
 
 				if ( event.type === 'IssuesEvent' /* || event.type === 'IssueCommentEventxxx' */ ) {
 
-					add = 'Title <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a>' + 
+					txt += 
+						'<div>Title <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' + 
 						'<div>Labels: ' + ( event.payload.issue.labels.length ? event.payload.issue.labels[ 0 ].name  : '' ) + '</div>' +
 						'<div class=issue >' + converter.makeHtml( event.payload.issue.body ) + '</div>' +
 					'';
 
-//console.log( 'event', event.payload.issue );
-
 				} else if ( event.type === 'IssueCommentEvent' ) {
 
-					add = 'Title: <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a>' + 
+					txt += 
+						'<div.Title: <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' + 
 						'<div>Labels: ' + ( event.payload.issue.labels.length ? event.payload.issue.labels[ 0 ].name  : '' ) + '</div>' +
 						'<div class=issue >' + converter.makeHtml( event.payload.comment.body ) + '</div>' ;
 					'';
 
 				} else if ( event.type === 'PushEvent' ){
 
-					add = ' ' + event.type + ' size: ' + event.payload.size + ' - ' + event.payload.commits[ 0 ].message + '<br>';
+//console.log( 'event', event.payload );
+
+					txt +=
+						'<div>Message: ' + ( event.payload.commits.length ? event.payload.commits[ 0 ].message : '' ) + 
+							' - Size: ' + event.payload.size + '</div>' +
+					'';
+
+				} else if ( event.type === 'PullRequestEvent' ) {
+
+console.log( 'PullRequestEvent', event );
+
+					txt +=
+						'<div>Title: ' + event.payload.pull_request.title + '</div>' +
+						'<div>Action: ' + event.payload.action + '</div>' +
+
+					'';
 
 				} else {
 
+console.log( 'non-event', event );
+
+					txt += '<div>Parsing this data still not complete...</div>';
 
 				}
 
-				txt += ( i + 1 ) + '. ' + event.created_at.slice( 11, -1 ) + '<br>' + link + add;
 
 			}
 
-			target.innerHTML += txt + '<h1>' + buttons + '</h1>';
-
-// console.log( '', events );
+			target.innerHTML = txt + 
+			'<h1>' +
+				'page <button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button> ' +
+				'<button onclick=window.scrollTo(0,0); >top</button>' +
+			'</h1>';
 
 		}
 
