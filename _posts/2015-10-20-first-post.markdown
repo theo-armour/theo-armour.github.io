@@ -1,6 +1,6 @@
 ---
 published: false
-title: First Post
+title: First Post : Second Post
 layout: post
 ---
 Hi there
