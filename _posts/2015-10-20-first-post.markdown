@@ -1,7 +1,8 @@
 ---
 published: false
-title: First Post : Second Post
+title: First Post
 layout: post
+More: Hi there
 ---
 Hi there
 
