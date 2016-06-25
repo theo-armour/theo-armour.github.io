@@ -7,20 +7,11 @@ value='You are now in a GitHub web page view - Click this button to view this re
 [Theo Armour Read Me]( index.html#readme.md )
 ===
 
-## [theo-armour.github.io]( https://theo-armour.github.io/index.html )
+## Home Page: [theo-armour.github.io]( https://theo-armour.github.io/index.html )
 
 
-* https://api.github.com/users/theo-armour/events
+## Home page source code: [GitHub API User Events R6]( https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/examples/github-api-rss/github-api-users-events/ )
 
-## Wish List
-
-* Go to top of page
-* Put the scale div inside a fixed height container
-* Load all ten pages one after another
-* Make my memberships in other orgs all public
-* Make menu and content scroll independently??
-* Add a blogging capability
-* Add scaled thumbnails to repos and orgs 
 
 ## Links of Interest
 
@@ -32,6 +23,10 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 ## Change log
 
+### 2016-06-24 ~ 
+
+* GitHub API User Events R6 as home page
+ 
 ### 2016-06-03
 
 * R2
