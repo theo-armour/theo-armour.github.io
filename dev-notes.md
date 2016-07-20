@@ -113,11 +113,8 @@ Theo Armour Developer Notes
 	* On Google Maps
 
 ## Ladybug Web
-* Work on Home Page Explorer Read Mr
-* Add Solar Calculator to Shadow Core
-* Work on Coding Style
-* Shadow Openet
-	* Add Loader Three.js
+file:///C:/Users/Theo/Dropbox/Public/git-repos/ladybug-web/dev-notes.md
+
 
 
 ## Moving Manuals
