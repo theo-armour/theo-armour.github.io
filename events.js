@@ -5,7 +5,6 @@
 	function getEvents( user, page, target ) {
 
 
-console.log( 'user', user );
 // https://developer.github.com/v3/activity/events/
 
 		var fileName, xhr, events, event, eventHeading, dates, txt;
@@ -184,6 +183,8 @@ console.log( 'non-event', event );
 
 
 	eventSet.onIssueCommentEvent = function( event ) {
+
+//console.log( 'onIssueCommentEvent', event  );
 
 		txt =
 			'<div>Title: <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' +
