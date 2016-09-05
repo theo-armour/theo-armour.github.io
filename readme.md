@@ -10,7 +10,7 @@ value='You are now in a GitHub web page view - Click this button to view this re
 ## Home Page: [theo-armour.github.io]( https://theo-armour.github.io/index.html )
 
 
-## Home page source code: [GitHub API User Events R6]( https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/examples/github-api-rss/github-api-users-events/ )
+## Home page source code: [GitHub API User Explorer]( http://jaanga.github.io/cookbook-html/templates/github-api-user-explorer/ )
 
 
 ## Links of Interest
@@ -22,6 +22,12 @@ value='You are now in a GitHub web page view - Click this button to view this re
 > Consider the process of writing the Readme for your project as the true act of creation. This is where all your brilliant ideas should be expressed. This document should stand on its own as a testament to your creativity and expressiveness. The Readme should be the single most important document in your codebase; writing it first is the proper thing to do.
 
 ## Change log
+
+### 2016-09-04
+
+* GitHub API User Explorer R1 as home page
+
+
 
 ### 2016-06-24 ~ 
 
