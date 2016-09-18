@@ -10,7 +10,7 @@ value='You are now in a GitHub web page view - Click this button to view this re
 ## Home Page: [theo-armour.github.io]( https://theo-armour.github.io/index.html )
 
 
-## Home page source code: [GitHub API User Explorer]( http://jaanga.github.io/cookbook-html/templates/github-api-user-explorer/ )
+## Home page source code: [GitHub API User Explorer2]( http://jaanga.github.io/cookbook-html/templates/github-api-user-explorer2/ )
 
 
 ## Links of Interest
@@ -23,11 +23,15 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 ## Change log
 
+
+### 2016-09-17
+
+* GitHub API User Explorer2 R1 as home page
+
+
 ### 2016-09-04
 
 * GitHub API User Explorer R1 as home page
-
-
 
 ### 2016-06-24 ~ 
 
