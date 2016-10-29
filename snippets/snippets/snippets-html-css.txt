@@ -1,0 +1,216 @@
+﻿// 
+
+It’s much easier to recover from no abstraction than the wrong abstraction
+
+Quick Tip: What Are Factory Functions in JavaScript
+https://www.sitepoint.com/factory-functions-javascript/
+
+## THINGS to look at
+
+http://www.html5rocks.com/en/tutorials/webcomponents/imports/
+http://www.w3schools.com/howto/howto_js_animate.asp
+
+
+### CHARACTERS
+http://unicode.org/emoji/charts/full-emoji-list.html 
+http://www.unicode.org/charts/
+https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
+
+☎
+©
+🔃
+🔭
+📈
+🛈  &#x2139; &#x24D8;
+
+☰ hamburger / trigram for heaven &#9776;
+
+link &#128279; 🔗
+
+home: &#x2302;
+i in circle: &#x24D8;
+recycle: &#21BB;
+Currency: &pound;  &euro;
+Arrows: &uArr;  &laquo; &raquo;
+Arrows in circle: CCW &#8634; CW &#8635;
+Dingbats &#10070; &#10087; nice: &#x2766;
+❧ ❦
+Hands: black: L &#x261A; R &#x261B; / White L &#x261C; U &#x261D; R &#x261E; D &#x261F; / V=sign &#x270C;
+
+http://fontawesome.io/icons/
+
+file:///C:/Dropbox/Public/code-cookbook/0-cookbook-general/string%20manipulation/characters-interesting.html
+- see bottom for rotating characters by degrees.
+
+
+### Colors
+
+http://www.w3schools.com/colors/colors_names.asp
+
+
+### CSS BORDERS
+
+* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+
+box model
+
+
+* { box-sizing: border-box; height: 100% vertical-align: top; }
+
+
+
+
+border-width, border-style, and border-color.
+none
+hidden
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+dotted solid double dashed
+dotted solid
+
+
+
+### CSS Center with CSS
+http://codepen.io/shshaw/full/gEiDt
+.Absolute-Center {
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+overflow
+overflow-x
+overflow-y visible|hidden|scroll|auto|no-display|no-content;
+
+h2:before { content:"❦ ";
+
+
+### CSS Random Gradient Background
+
+// height not always necessary
+	document.body.style.cssText += ' height: ' + window.innerHeight + 'px; ';
+
+	function setRandomGradientBackground() {
+
+		var col1 = Math.random().toString(16).slice(2, 8);
+		var col2 = Math.random().toString(16).slice(2, 8);
+		var col3 = Math.random().toString(16).slice(2, 8);
+		var x = ( Math.random() * window.innerWidth ).toFixed(0);
+		var y = ( Math.random() * window.innerHeight ).toFixed(0);
+
+		document.body.style.backgroundImage = 'radial-gradient( circle farthest-corner at ' + x + 'px ' + y + 'px, #' + col1 + ' 0%, #' + col2 + ' 50%, #' + col3 + ' 100%)';
+
+	}
+
+	setRandomGradientBackground();
+
+### CSS Transform Scale Origin
+
+https://www.sitepoint.com/a-primer-on-css3-transforms/
+
+	.divIframe { border: 0px solid red; height: 960px; width: 960px; transform: scale( 0.25 ); transform-origin: 0 0; }  // or  top left instead og 0 0
+
+
+### DETAILS
+
+<details>
+  <summary>Copyright 1999-2014.</summary>
+  <p> - by Refsnes Data. All Rights Reserved.</p>
+  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+
+
+### FORM
+- see also Textarea
+
+<input type="text" id="inp" onclick=this.select(); placeholder="Display name" size=20 />
+
+<button onclick="" size="400">Toggle Play/Pause</button>
+
+<input type="button" id="button" name="button1" value="Display button name" size="400" />
+
+<input type="checkbox" id="check" checked>  // checked="checked"
+var check = document.getElementById('check');
+if ( check.checked ) { doIt(); }
+
+// http://www.w3schools.com/jsref/dom_obj_fileupload.asp
+
+		<input type="file" id="fname" name="file" value="File" />
+		<input type="file" id="myFile" multiple size="50" onchange="myFunction()" >
+
+		<input type="radio" onchange="selectCity(this.id);" name="city" id="geneva">Geneva<br>
+		<input type="radio" onchange="selectCity(this.id);" name="city" id="san-francisco" checked>San Francisco<br>
+		<input type="radio" onchange="selectCity(this.id);" name="city" id="zurich">Zurich
+
+		<input title="Set the " style="width: 200px;" type="range" min="0" max="500" onchange="" step="50" value="300" >
+		<input type=number id=inpNum style=width:50px; min=0.01 max=1.0 step=0.05 value=0.5 />
+
+		'<input type="range" id="rangeinput" value="50" onmousemove="rangevalue.value=value"/> '  +
+		'<output id="rangevalue">50</output><br>' +
+
+		'<input type=range id=inpRange min=0 max=10 step=1 value=5 onmousemove=outRange.value=value; /> '  +
+		'<output id=outRange >5</output><br>' +
+
+
+	input[type=range] { -webkit-appearance: none; background-color: silver; height:20px; width: 200px; }
+	input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 28px; opacity: 0.5; width: 10px; }
+
+
+
+### FORM SELECT
+// http://www.w3schools.com/jsref/met_select_add.asp << add by code!
+
+<select onchange="" title="select the filed that the colors indicate" size=5  >
+	<option selected>aaa aaa aaa</option>
+	<option>bbb bbb</option>
+	<option>cc cc cc cc</option>
+	<option>ddddddd</option>
+	<option>eee eee eee eee</option>
+</select>
+
+
+
+### IFRAME
+
+align			Sets or returns the value of the align attribute in an iframe
+contentDocument	Returns the document object generated by a frame/iframe
+contentWindow	Returns the window object generated by a frame/iframe
+frameBorder		Sets or returns the value of the frameborder attribute in a frame/iframe
+height			Sets or returns the value of the height attribute in an iframe
+longDesc		Sets or returns the value of the longdesc attribute in a frame/iframe
+marginHeight	Sets or returns the value of the marginheight attribute in a frame/iframe
+marginWidth		Sets or returns the value of the marginwidth attribute in a frame/iframe
+name			Sets or returns the value of the name attribute in a frame/iframe
+noResize		Sets or returns the value of the noresize attribute in a frame
+scrolling		Sets or returns the value of the scrolling attribute in a frame/iframe	NOT working
+src				Sets or returns the value of the src attribute in a frame/iframe
+width			Sets or returns the value of the width attribute in an iframe
+
+http://www.w3schools.com/tags/att_iframe_sandbox.asp
+
+sandbox = 'allow-scripts' 
+
+### META
+
+<meta http-equiv="refresh" content="3" >
+<meta http-equiv="refresh" content="0;url=http://jaanga.github.com/blode/we-have-callbacks/index.html" />
+<!-- but why? -->
+<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' >
+
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' >
+
+
+### TEXTAREA
+<textarea id=textArea cols=30 rows=5 placeholder="Stuff" >
+		'Iteration system wide engenders economies of scale, cross-media technology, presentation action items and life cycle replication.'
+</textarea>
+

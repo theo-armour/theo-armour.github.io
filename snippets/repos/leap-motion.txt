@@ -1,0 +1,39 @@
+leap motion
+===
+
+JavaScript SDK Documentation
+https://developer.leapmotion.com/documentation/javascript/index.html
+
+
+## 2016-02-21
+
+
+## 2015
+zip file > extract all
+
+exe and folder - no read me
+Leap SDK folder no read me
+
+Docs folder - no read me - but at least an index.html
+
+index.html opens to 'C++ SDK Documentation'
+
+No where on the age is there any text indicating docs for any other language
+
+The only indication is a tiny downward point triangle
+
+Eventually we find it
+
+LeapSDK/docs/javascript/devguide/Project_Setup.html
+You can access the libraries remotely from Leap Motion’s servers:
+
+For production (minified):
+<script src="//js.leapmotion.com/leap-0.6.0-beta1.min.js"></script>
+
+For development:
+
+https://developer.leapmotion.com/leapjs/welcome
+Production <script src="//js.leapmotion.com/leap-0.6.0-beta2.min.js"></script>
+
+
+The contributors license seems OK

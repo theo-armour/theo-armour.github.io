@@ -1,0 +1,80 @@
+notes abantech
+===
+
+
+https://api.github.com/orgs/abantech/repos <<
+https://api.github.com/orgs/abantech/events <<
+
+email Basecamp
+project-11617413-e947937c06e6aa65eda7fbd5@basecamp.com
+
+
+leap controller
+https://github.com/Abantech/abantech.github.io/blob/master/Farside%20Integration/AutoDesk/AutoCADEndUser/scripts/EfficioIntegration/libs/Efficio.min.js#L2791-L2804
+
+
+
+2016-03-22
+
+Where is the Autodesk developer loop/RAF?
+How about some Kinect data?
+* Delete all references to Autodesk and AutoCAD as file and folder names
+	* liable to Autodesk trademark infringement call out 
+	* Liable to customer false pretenses
+* GitHub 
+	* Fill in all profile information
+
+* Create business-development repo
+	* Add PDFs
+* Create repos for James work and my work
+* Build web site that keeps up to date
+	* Nearly by itself
+
+* Github
+	* what is our primary platform of communication?
+	* Should we not eat dogfood?
+
+* Build demos
+	* Videos are not demos
+
+* Join forums
+	* Leap forum
+
+* Pivots
+	* Quadcopter / drone apps
+	* Open source game platforms
+
+* Greg: thoughts
+	* less one-on-one, more telling the world
+	* explore what your peeps are doing
+	* don't look, be seen
+	* sharing / fork edit share
+
+
+
+2015-03-28 ~
+
+Ant
+
+Patent
+
+
+Chandler Prall
+
+
+2015-03-01 ~ scrum
+
+What Greg need to figure out in five weeks is if this is a lifetime project or not
+
+You are the user interface
+You are the reality that is being augmented
+
+Me: need to create nine or so panel widgets
+
+need agendas
+
+crowdfunding << not
+
+user cases
+basic set of features
+

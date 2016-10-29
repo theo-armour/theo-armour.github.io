@@ -1,0 +1,53 @@
+github pages etc
+===
+
+	SEL.token = 'access_token=4ec0d2be31fd9a8fddbc007bcb203a839cf51544';
+
+
+
+http://git.io provides a URL shortener for your GitHub repos.
+
+#### Analytics
+
+https://github.com/blog/1672-introducing-github-traffic-analytics
+
+
+## Atom
+
+https://github.com/ladybug-analysis-tools/ladybug-web/commits/gh-pages.atom
+
+https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML
+
+#### CDN
+
+https://www.maxcdn.com/
+https://rawgit.com/
+
+
+<script src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js ></script>
+
+<script src="https://raw.github.com/mrdoob/three.js/r59/build/three.min.js"></script>
+
+
+## Pages 
+Setting up your pages site repository
+https://help.github.com/articles/setting-up-your-pages-site-repository/
+
+
+
+
+A8*r7e*RnjjF2%mQMHKN
+
+Recovery codes
+180d2-b85cc 3a50c-0ce3b 53c1c-71a87 a2e34-4508e 190ad-70f56 d1974-2212d f5b91-e02ef 9ab76-60ca2 2e969-6d645 f0383-1e251 42cce-5cb60 5bdb6-2c77d ffd0b-667ca dd0ae-8cb33 99dbe-082f6 01cf4-2dd74
+
+
+###  line numbers
+https://github.com/leapmotion/leapjs/blob/master/leap.js#L273-L278
+
+
+## GitHub Desktop
+
+https://help.github.com/desktop/
+
+

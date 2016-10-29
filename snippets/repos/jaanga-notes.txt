@@ -1,0 +1,15 @@
+
+
+No side menus
+Navigate back up with bread crumbs
+
+All repos and folders to have readme.md and index.html with readme reader
+
+Issue: 
+file names get changed causing broken links. 
+The broken links are usually in higher level folders - because they are not apparrent
+
+Resolution:
+Links in higher level folders - as much as possible - should point to other readme files
+Only the local readme file should link to actual files
+

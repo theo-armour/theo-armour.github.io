@@ -1,0 +1,193 @@
+### rest API
+
+https://docs.google.com/spreadsheet/ccc?key=t2RtClXueloQFq0ldp5wwdQ#gid=0
+https://docs.google.com/spreadsheet/ccc?key=0Akg809SWki8tdDJSdENsWHVlbG9RRnEwbGRwNXd3ZFE&usp=sharing
+
+https://spreadsheets.google.com/feeds/list/0Akg809SWki8tdDJSdENsWHVlbG9RRnEwbGRwNXd3ZFE/od6/public/basic?hl=en_US&alt=json
+
+https://docs.google.com/feeds/list/0Akg809SWki8tdHltZm5kU3NLWDlxcmdqQkdvMWQwWHc/od6/public/basic?hl=en_US&alt=json
+
+https://spreadsheets.google.com/feeds/cells/0Akg809SWki8tdDJSdENsWHVlbG9RRnEwbGRwNXd3ZFE/od6/public/basic?alt=json
+
+https://docs.google.com/spreadsheet/ccc?key=0Akg809SWki8tdHltZm5kU3NLWDlxcmdqQkdvMWQwWHc&usp=sharing
+https://docs.google.com/spreadsheet/ccc?key=0Akg809SWki8tdHltZm5kU3NLWDlxcmdqQkdvMWQwWHc&usp=sharing
+
+
+https://docs.google.com/spreadsheets/d/1ye4EIhHS4_szAmFKMhz2MGbMciRmkqrnrEio6Qr85y8/pubhtml
+https://spreadsheets.google.com/feeds/list/1ye4EIhHS4_szAmFKMhz2MGbMciRmkqrnrEio6Qr85y8/od6/public/basic?alt=json
+
+https://spreadsheets.google.com/feeds/cells/1D8ioOe41dmq2HVN5Gg-8rKzWDxsHiLXYo9uUeUolAZ4/od6/public/basic?alt=json
+https://spreadsheets.google.com/feeds/cells/1D8ioOe41dmq2HVN5Gg-8rKzWDxsHiLXYo9uUeUolAZ4/od6/public/basic?alt=json
+
+function onOpen() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var menuEntries = [ {name: "showAlertMsgHello", functionName: "showAlertMsgHello"},
+                      {name: "showToast", functionName: "showToast"},
+                      {name: "showLog", functionName: "showLog"},
+                      {name: "getActiveUser", functionName: "getActiveUser"},
+                      {name: "Sort Sheet", functionName: "sortSheet"},
+                      {name: "Edit Sheet", functionName: "editSheet"},
+                      {name: "Import Data SS", functionName: "importDataSS"},
+                      {name: "Create Sheet", functionName: "createSheet"},
+                      {name: "Set Values", functionName: "setValues"},
+                      {name: "Clear Sheet", functionName: "clearSheet"},
+                      {name: "Do Something", functionName: "doSomething"},
+                      {name: "Get Sheet", functionName: "getSheet"},
+                      {name: "Get Data Other Sheet", functionName: "getDataOtherSheet"},
+                      {name: "Get Data Range", functionName: "getDataRange"},
+                      {name: "Inches 2 MM", functionName: "in2mm"},
+                      {name: "myTryFunction", functionName: "myTryFunction"}
+                       
+                    ];
+  ss.addMenu("Misc/Strings", menuEntries);
+  
+  var menuEntries = [ {name: "Get Time", functionName: "getTime"},
+                      {name: "Get Time Decimal", functionName: "getTimeDecimal"}, 
+                      {name: "Get 24 Hour Minute", functionName: "get24HourMinute"},
+                      {name: "Compare Time", functionName: "compareTime"},
+                      {name: "Compare TimeGAS", functionName: "compareTimeGAS"},
+                      {name: "Do Between", functionName: "doBetween"},
+                      {name: "Is Today", functionName: "isToday"}
+                       
+                    ];
+  ss.addMenu("Dates", menuEntries);  
+}
+
+function showAlertMsg() {
+  Browser.msgBox("Hello, World!");
+}
+
+function showToast() {
+// https://developers.google.com/apps-script/class_spreadsheet#toast
+
+  // var startSeconds = Utilities.formatDate(new Date(), "GMT", "GMT", "yyyy-MM-dd'T'HH:mm:ss'Z'");
+  // Browser.msgBox(startSeconds );
+  // SpreadsheetApp.getActiveSpreadsheet().toast("Hello", "world?", 3);
+  // SpreadsheetApp.getActiveSpreadsheet().toast(Utilities.formatDate(new Date(), "GMT", "yyyy-MM-dd'T'HH:mm:ss'Z'"), "Time", 5);
+  SpreadsheetApp.getActiveSpreadsheet().toast(Utilities.formatDate(new Date(), "PST", "Hmm"), "Time", 5);
+
+}
+
+
+
+function showLog() {
+var mySpreadsheets = DocsList.getFilesByType("spreadsheet");
+Logger.log(mySpreadsheets );
+} 
+
+
+function tryGetActiveUser() {
+// The code below will display the email address of the person running the script
+//Browser.msgBox(Session.getActiveUser().getEmail());
+//Browser.msgBox(Session.getEffectiveUser().getEmail());
+//Browser.msgBox(Session.getUser().getEmail());
+  Browser.msgBox('Email: ' + Session.getUser().getUserLoginId() + ' Effective: ' + Session.getEffectiveUser().getEmail() + ' ~ Active: ' + Session.getActiveUser().getEmail());
+}
+
+function myTryFunction() {  // get value and set value
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[2];
+  // var sheet = ss.getActiveSheet()
+  var myValue = Browser.inputBox("Enter a number");
+  sheet.getRange("A1").setValue("Number entered:");
+  var b1Range = sheet.getRange("B1:B8");
+  b1Range.setValue(myValue);
+  var valueToShow = b1Range.getValue() + 1;
+  Browser.msgBox("The value you entered plus one is: " + valueToShow);
+}
+
+function sortSheet() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  sheet = sheet.getRange("A2:A10");
+  //sheet.sort(1,0); 
+  sheet.sort([{column: 1, ascending: false}]);
+  
+}
+
+   
+    
+function setValues() { // push data
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var columnNames = [new Date(), Math.random(), "Column C", "Column D", "Column E"]; 
+  var headersRange = sheet.getRange(1, 1, 1, columnNames.length);                
+  headersRange.setValues([columnNames]);  
+
+  var rowData = new Array;
+  for (var j = 0; j < 10; j++) {
+       var colData = new Array;
+       for (var i = 0; i < 5; i++) {
+         colData.push(Math.random());     
+       }
+       rowData.push(colData);
+  } 
+  headersRange = sheet.getRange(2, 1, rowData.length, colData.length);                
+  headersRange.setValues(rowData);
+}  
+
+function clearSheet () {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  // sheet.getRange(1,1,1,1).clear();
+  // sheet.getRange(1,1,sheet.getLastRow(),sheet.getLastColumn()).clear();
+  sheet.clear();
+}
+
+function getSheet () {
+  Browser.msgBox(SpreadsheetApp.getActiveSpreadsheet().getActiveSheet().getName());
+}
+  
+function getDataOtherSheet () {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("getStockInfo");
+  if (sheet != null) {
+    Browser.msgBox(sheet.getRange(1,1).getValue());
+  }
+}  
+
+function doSomething () {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  sheet.getRange(1,8).setValue(Math.random());
+}  
+
+
+// String 
+
+
+function getDataRange() {
+  // The code below prints the contents of the range in the sheet that has data
+  var range = SpreadsheetApp.getActiveSheet().getDataRange();
+  Browser.msgBox(range.getValues());
+}
+
+function getDataToUpperCase() {
+  var range = SpreadsheetApp.getActiveSheet().getDataRange();
+  var values = range.getValues();
+  Browser.msgBox(values[0][0].toUpperCase());
+}
+
+function getDataToInitCaps1() {
+  var range = SpreadsheetApp.getActiveSheet().getDataRange();
+  var values = range.getValues();
+ SpreadsheetApp.getActiveRange().offset(0,0,1,1).setFormula('=PROPER(A1)');
+}
+
+function getDataToInitCaps() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var lastRow = sheet.getLastRow();
+  for (var i = 1; i <= lastRow; i++) {
+    sheet.getRange(i,2).setFormula('=PROPER(A' + i + ')');
+  }
+  Browser.msgBox(lastRow);
+}
+
+function in2mm() {
+  // Function to convert from INCHES to MILLIMETERS
+  var inNum = 3;
+  var outNum = 0;     // this will hold the answer
+  var factor = 25.4;  // multiply input by this factor to get output
+  if (typeof inNum != "number") {  // check to make sure input is a number
+    return("error: input must be a number");  // return the error message
+  }
+  outNum = inNum * factor;  // calculate the answer
+  // return outNum;  // return the answer to the cell which has the formula
+  Browser.msgBox(outNum);
+}
+
