@@ -1,67 +1,98 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang=en >
 <head>
 <meta charset=utf-8 >
-<title>Open HTML or Markdown</title>
+<title>GubGub Theo Armour R1</title>
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
-<meta name=description content=' File wrangler. Open HTML or Markdown files including passing on location.hash.' >
-<meta name=keywords content='Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS' >
-<meta name=date content='2016-06-03' >
+<meta name=description content='Search and explore GitHub users and see what they have been up to in full detail.' >
+<meta name=keywords content='Jaanga,Theo Armour,GitHub API,CSS,HTML,JavaScript,GitHub,FOSS' >
+<meta name=date content='2016-10-26' >
 </head>
 <body>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js ></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.3/showdown.min.js ></script>
+<!--
+<script src=./0-cor-core/core-r1.js ></script>
+<script src=./1-api-authentication/api-authentication-r1.js ></script>
+<script src=./2-sel-select/sel-select-r1.js ></script>
+<script src=./dat-data/dat-data-r1.js ></script>
+<script src=./user-events-big/user-events-big-r1.js ></script>
+<script src=./eus-events-user/eus-events-user-r1.js ></script>
+<script src=./usr-users/users-r1.js ></script>
+-->
+<script src=https://jaanga.github.io/gubgub/0-cor-core/core-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/1-api-authentication/api-authentication-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/2-sel-select/sel-select-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/dat-data/dat-data-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/user-events-big/user-events-big-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/eus-events-user/eus-events-user-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/usr-users/users-r1.js ></script>
 <script>
 
-// https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/templates/open-index-or-markdown
+	COR.readMeURL = 'index.html#https://jaanga.github.io/gubgub/README.md';
 
-	var defaultFile = 'github-api-user-explorer2-r1.html';
-	var contents;
+	COR.readMeText =
+
+		'This is a version of <a href=https://jaanga.github.io/gubgub >GubGub</a> created for Theo Armour. ' +
+		'See also <a href=index.html#README.md >GubGub Theo Armour README</a>' +
+	'';
 
 	init();
 
 	function init() {
 
-		if ( location.hash.match( '.md' ) ) {
+		COR.initThreeColumns();
 
-			onHashChange();
+//		COR.css.innerHTML += '.DATbuttonLeft { display: none; }'; // uncomment to hide left column User Data buttons
 
-		} else {
+		COR.menu.innerHTML =
 
-			window.location.href = defaultFile + location.hash;
+			COR.getMenuDetailsHeader() +
 
-		}
+			API.getMenuDetailsAPIAccessToken() +
 
-	}
+			SEL.getMenuDetailsSelectGroup() +
 
-	function onHashChange() {
+			SEL.getMenuDetailsSelectUser() +
 
-		var css, converter, url, xhr;
+			DAT.getMenuDetailsUserData() +
 
-		css = document.head.appendChild( document.createElement( 'style' ) );
-		css.innerHTML =
+			COR.getMenuDetailsAbout() +
 
-			'body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right: 0; }' +
-			'a { color: crimson; text-decoration: none; }' +
-			'button, input[type=button] { background-color: #eee; border: 2px #eee solid; color: #888; }' +
+			COR.getMenuFooter() +
 
-		'';
+		b;
 
-		contents = contents ? contents : document.body.appendChild( document.createElement( 'div' ) ) ;
 
-		converter = new showdown.Converter( { strikethrough: true, literalMidWordUnderscores: true, simplifiedAutoLink: true, tables: true });
+		window.addEventListener( 'hashchange', COR.onHashChange, false );
 
-		url = location.hash.slice( 1 );
+		if ( location.hash.match( '.md' ) ) { COR.onHashChange(); }
 
-		xhr = new XMLHttpRequest();
-		xhr.open( 'get', url, true );
-		xhr.onload = function() { contents.innerHTML = converter.makeHtml( xhr.responseText ); };
-		xhr.send( null );
+		if ( location.hash.match( 'token=' ) ) { API.onEventAPIKeyUpdate(); }
 
-		document.title = url.split( '/' ).pop();
+		SELselGroup.value = 'listFavorites'; // uncomment to have selected user aooear as default
 
-		window.addEventListener( 'hashchange', onHashChange, false );
+		SEL.setUserDetails();
+
+		API.getRateLimits();
 
 	}
+
+// gets called by SEL.setUserDetails...
+
+	SEL.getUserDetails = function( user ) {
+
+		console.clear();
+
+		location.hash = user;
+
+		DAT.getUserData( user ); // left column update
+
+		EUS.requestGitHubAPIUserEvents( user ); // middle and right columns update
+
+		window.scrollTo( 0, 0 );
+		COR.updates.scrollTop = 0;
+
+	};
 
 </script>
 </body>
