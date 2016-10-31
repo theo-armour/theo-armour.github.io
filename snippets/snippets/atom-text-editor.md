@@ -8,7 +8,7 @@ Links
 
 To do
 --------------------------------------------------------------------------------
-
+Get Lint working properly
 
 
 
@@ -27,7 +27,16 @@ No files open at start-up < make sure 'welcome...' is unchecked
 
 
 
+Packages
+--------------------------------------------------------------------------------
 
+### Installed
+https://atom.io/packages/command-toolbar
+    * Press ctrl or alt and tap the touchpad to edit
+https://github.com/gstack/atom-browser-webview
+
+### Of interest
+https://github.com/mark-hahn/line-count
 
 
 Open projects
