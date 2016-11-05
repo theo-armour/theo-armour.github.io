@@ -73,7 +73,7 @@ just use 'this' wherever possible
 //		var fileName, text, lines;
 
 		xhr = new XMLHttpRequest();
-		xhr.crossOrigin = 'anonymous'; 
+		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', fileName, true );
 		xhr.onload = callback;
 		xhr.send( null );
@@ -729,7 +729,7 @@ sandbox='allow-scripts'
 		image.src = '../';
 
 		var images = document.body.appendChild( document.createElement( 'div' ) );
-		images.innerHTML = 
+		images.innerHTML =
 
 			'<img id=image src=https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png > ' +
 			'<canvas id=canvas width=512 height=512 style="border: 1px solid red;" ></canvas>';
@@ -1011,8 +1011,8 @@ RegExp Modifiers
 /g ~ global/greedy
 /m ~ multiline
 
-\' single quote
-\" double quote
+\'' single quote
+\"" double quote
 \\ backslash
 \n new line
 \r carriage return
@@ -1181,4 +1181,3 @@ http://stackoverflow.com/questions/3030859/detecting-the-onload-event-of-a-windo
 
 		window.location.protocol
 		document.location.origin
-
