@@ -37,7 +37,7 @@ http://mrdoob.github.io/three.js/docs/#Reference/Loaders/XHRLoader
 spheresIndex = ( spheresIndex + 1 ) % spheres.length;
 
 webgl_loader_scene_blender.html# - simple object lister
-zoom extents - tony's book
+zoom extents - tony\''s book
 
 object.traverse( callback )
 * callback - An Function with as first argument an object3D object.
@@ -807,7 +807,7 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		loader = new THREE.TextureLoader();
 		loader.crossOrigin = 'anonymous';
 		loader.load( 'http://i.imgur.com/RPv6ofy.jpg', callback );
-		
+
 		function callback ( texture ){
 
 				sphere1.material = new THREE.MeshBasicMaterial( { map: texture } );

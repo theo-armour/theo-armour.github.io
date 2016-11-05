@@ -2,55 +2,67 @@
 <html lang=en >
 <head>
 <meta charset=utf-8 >
-<title>GubGub Theo Armour R1</title>
+<title>GubGub Theo Armour R2</title>
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
 <meta name=description content='Search and explore GitHub users and see what they have been up to in full detail.' >
 <meta name=keywords content='Jaanga,Theo Armour,GitHub API,CSS,HTML,JavaScript,GitHub,FOSS' >
-<meta name=date content='2016-10-26' >
+<meta name=date content='2016-11-04' >
+<link rel='shortcut icon' href=../favicon.ico type='image/x-icon'/ >
 </head>
 <body>
+
 <script src=https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.3/showdown.min.js ></script>
 <!--
-<script src=./0-cor-core/core-r1.js ></script>
-<script src=./1-api-authentication/api-authentication-r1.js ></script>
-<script src=./2-sel-select/sel-select-r1.js ></script>
-<script src=./dat-data/dat-data-r1.js ></script>
-<script src=./user-events-big/user-events-big-r1.js ></script>
-<script src=./eus-events-user/eus-events-user-r1.js ></script>
-<script src=./usr-users/users-r1.js ></script>
+<script src=../r2/0-cor-core/cor-core-r2.js ></script>
+<script src=../r2/0-mn3-menu-three/mn3-menu-three.js ></script>
+<script src=../r2/0-api-authentication/api-authentication.js ></script>
+
+<script src=../r2/1-sel-select/sel-select.js ></script>
+<script src=../r2/0-usr-users/usr-users.js ></script>
+
+<script src=../r2/1-dat-data/dat-data.js ></script>
+
+<script src=../r2/2-res-results/res-results.js ></script>
+<script src=../r2/2-res-results/res-results-events.js ></script>
+<script src=../r2/2-eus-events-user/eus-events-user.js ></script>
 -->
-<script src=https://jaanga.github.io/gubgub/0-cor-core/core-r1.js ></script>
-<script src=https://jaanga.github.io/gubgub/1-api-authentication/api-authentication-r1.js ></script>
-<script src=https://jaanga.github.io/gubgub/2-sel-select/sel-select-r1.js ></script>
-<script src=https://jaanga.github.io/gubgub/dat-data/dat-data-r1.js ></script>
-<script src=https://jaanga.github.io/gubgub/user-events-big/user-events-big-r1.js ></script>
-<script src=https://jaanga.github.io/gubgub/eus-events-user/eus-events-user-r1.js ></script>
-<script src=https://jaanga.github.io/gubgub/usr-users/users-r1.js ></script>
+<script src=https://jaanga.github.io/gubgub/r2/0-cor-core/cor-core-r2.js ></script>
+<script src=https://jaanga.github.io/gubgub/r2/0-mn3-menu-three/mn3-menu-three.js ></script>
+<script src=https://jaanga.github.io/gubgub/r2/0-api-authentication/api-authentication.js ></script>
+
+<script src=https://jaanga.github.io/gubgub/r2/1-sel-select/sel-select.js ></script>
+<script src=https://jaanga.github.io/gubgub/r2/0-usr-users/usr-users.js ></script>
+
+<script src=https://jaanga.github.io/gubgub/r2/1-dat-data/dat-data.js ></script>
+
+<script src=https://jaanga.github.io/gubgub/r2/2-res-results/res-results.js ></script>
+<script src=https://jaanga.github.io/gubgub/r2/2-res-results/res-results-events.js  ></script>
+<script src=https://jaanga.github.io/gubgub/r2/2-eus-events-user/eus-events-user.js ></script>
+
 <script>
 
-	COR.readMeURL = 'index.html#https://jaanga.github.io/gubgub/README.md';
-
-	COR.readMeText =
-
-		'This is a version of <a href=https://jaanga.github.io/gubgub >GubGub</a> created for Theo Armour. ' +
-		'See also <a href=index.html#README.md >GubGub Theo Armour README</a>' +
-	'';
+	COR.readMeURL = 'index.html#../README.md';
+//	COR.readMeText = 'This is the default version of <a href=https://jaanga.github.io/gubgub/ >GubGub</a>.';
 
 	init();
 
 	function init() {
 
-		COR.initThreeColumns();
+		COR.taglineHeader += '+ an Index  howdy!' + b;
 
-//		COR.css.innerHTML += '.DATbuttonLeft { display: none; }'; // uncomment to hide left column User Data buttons
+		COR.readMeText = 'This is the SEL default version of GubGub.';
 
-		COR.menu.innerHTML =
+		MNU.initThreeColumns();
+
+		MNU.css.innerHTML += '.DATbuttonLeft { display: none; }'; // uncomment to hide left column User Data buttons
+
+		MNU.menu.innerHTML =
 
 			COR.getMenuDetailsHeader() +
 
 			API.getMenuDetailsAPIAccessToken() +
 
-			SEL.getMenuDetailsSelectGroup() +
+			SEL.getMenuDetailsSelectQuery() +
 
 			SEL.getMenuDetailsSelectUser() +
 
@@ -62,35 +74,52 @@
 
 		b;
 
+		window.addEventListener( 'hashchange', onHashChange, false );
 
-		window.addEventListener( 'hashchange', COR.onHashChange, false );
-
-		if ( location.hash.match( '.md' ) ) { COR.onHashChange(); }
-
-		if ( location.hash.match( 'token=' ) ) { API.onEventAPIKeyUpdate(); }
-
-		SELselGroup.value = 'listFavorites'; // uncomment to have selected user aooear as default
+		SELselQuery.selectedIndex = 0;
 
 		SEL.setUserDetails();
 
-		API.getRateLimits();
+		onHashChange();
 
 	}
 
-// gets called by SEL.setUserDetails...
 
-	SEL.getUserDetails = function( user ) {
+	function onHashChange() {
 
-		console.clear();
+		var hash, callback, xhr;
 
-		location.hash = user;
+		hash = location.hash.slice( 1 );
 
-		DAT.getUserData( user ); // left column update
+		if ( hash.match( 'token=' ) ){ API.onEventAPIKeyUpdate(); return;  }
 
-		EUS.requestGitHubAPIUserEvents( user ); // middle and right columns update
+		if ( hash.endsWith( '.md' ) === true ) {
 
-		window.scrollTo( 0, 0 );
-		COR.updates.scrollTop = 0;
+// console.log( 'hash', hash );
+
+			COR.requestFile( hash, callbackMD );
+
+			function callbackMD( xhr ) {
+
+				if ( xhr.target.status === 404 ) { return; }
+
+				MNU.contents.innerHTML = COR.converter.makeHtml( xhr.target.responseText );
+
+				if ( hash.match( 'README.md' ) === true ){ READMEbespokeText.innerHTML = 'things'; }
+
+			}
+
+			return;
+
+		}
+
+		if ( hash && hash !== SEL.user ) {
+
+			SEL.user = hash;
+
+			SEL.getUserDetails();
+
+		}
 
 	};
 

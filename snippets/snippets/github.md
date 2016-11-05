@@ -9,10 +9,6 @@ Notes GitHub
 
 for gists only 2016-10-09 ~
 
-6b2866dc8158285cc37b3644881f56bd2c6649e0
-
-#token=6b2866dc8158285cc37b3644881f56bd2c6649e0
-
 ################ API
 
 https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+
