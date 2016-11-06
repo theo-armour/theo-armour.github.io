@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang=en >
+<head>
+<meta charset=utf-8 >
+<title>GubGub Theo Armour R2</title>
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
+<meta name=description content='Explore and monitor the many GitHub projects helped by the GitHub API and client-side cookbook JavaScript' >
+<meta name=keywords content='Jaanga,Theo Armour,GitHub API,CSS,HTML,JavaScript,GitHub,FOSS' >
+<meta name=date content='2016-11-06' >
+</head>
+<body>
+	<script src=https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.4/showdown.min.js ></script>
+
+	<script src=https://jaanga.github.io/gubgub/r2/0-cor-core/cor-core.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/0-mn3-menu-three/mn3-menu-three.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/0-api-authentication/api-authentication.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/1-sel-select/sel-select.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/0-usr-users/usr-users.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/1-dat-data/dat-data.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/2-res-results/res-results.js ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/2-res-results/res-results-events.js  ></script>
+	<script src=https://jaanga.github.io/gubgub/r2/2-eus-events-user/eus-events-user.js ></script>
+
+<script>
+
+	COR.readMeURL = 'ta2.html#https://jaanga.github.io/gubgub/README.md';
+	COR.readMeText =
+
+		'Bespoke edition of <a href="https://jaanga.github.io/gubgub/" target="_blank">GubGub</a> ' +
+		' especially crafted for Theo - ' +
+		' and yet created <i>post priori</i> in an easy and simple manner. ' +
+		' See also <a href="ta2.html#README.md" >GubGub Theo README</a>' +
+
+	'';
+
+init();
+
+function init() {
+
+//		COR.taglineHeader += '+ a home page howdy!' + b;
+
+	MNU.initThreeColumns();
+
+	MNU.css.innerHTML += '.DATbuttonLeft { display: none; }'; // uncomment to hide left column User Data buttons
+
+	MNU.menu.innerHTML =
+
+		COR.getMenuDetailsHeader() +
+
+		API.getMenuDetailsAPIAccessToken() +
+
+		SEL.getMenuDetailsSelectQuery() +
+
+		SEL.getMenuDetailsSelectUser() +
+
+		DAT.getMenuDetailsUserData() +
+
+		COR.getMenuDetailsAbout() +
+
+		COR.getMenuFooter() +
+
+	b;
+
+	window.addEventListener( 'hashchange', onHashChange, false );
+
+	SELselQuery.selectedIndex = 0;
+
+	SEL.setUserDetails();
+
+	onHashChange();
+
+}
+
+
+function onHashChange() {
+
+	var hash, callback, xhr, txt;
+
+	hash = location.hash.slice( 1 );
+
+	if ( hash.match( 'token=' ) ){ API.onEventAPIKeyUpdate(); return;  }
+
+	if ( hash.endsWith( '.md' ) === true ) {
+
+		COR.requestFile( hash, callbackMD );
+
+		function callbackMD( xhr ) {
+
+			if ( xhr.target.status === 404 ) { return; }
+
+			txt = xhr.target.responseText;
+
+			if ( hash.includes( 'README.md' ) === true ){ txt = txt.replace( 'READMEbespokeText', COR.readMeText || '' ); }
+
+			MNU.contents.innerHTML = COR.converter.makeHtml( txt );
+
+		}
+
+		return;
+
+	}
+
+	if ( hash && hash !== SEL.user ) {
+
+		SEL.user = hash;
+
+		SEL.getUserDetails();
+
+	}
+
+};
+
+</script>
+</body>
+</html>
