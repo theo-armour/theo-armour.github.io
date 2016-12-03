@@ -78,15 +78,17 @@ just use 'this' wherever possible
 		xhr.onload = callback;
 		xhr.send( null );
 
-		function callback() {
+		function callback( xhr ) {
 
-			text = xhr.responseText;
+			text = xhr.target.response;
+
 //			lines = text.split(/\r\n|\n/);
 			lines = text.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
 
 			console.log( lines[ 8 ] );
 			console.log( lines.length );
-
+//			lastMod = xhr.target.getResponseHeader ( "Last-Modified" );
+			console.log( xhr.target.getResponseHeader ( "Last-Modified" ) );
 		}
 
 	}
@@ -435,6 +437,18 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 	js.onload = helper;
 	js.src = fname;
 	document.body.appendChild( js );
+
+	if ( !editor ) {
+
+		editor = document.body.appendChild( document.createElement( 'script' ) );
+		editor.onload = setEditContents;
+		editor.src = 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js';
+
+	} else {
+
+		setEditContents();
+
+	}
 
 
 // ### EVENTS Key cursor

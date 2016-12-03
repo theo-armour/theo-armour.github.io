@@ -482,7 +482,7 @@ starts at top / left and goes right and down
 http://mrdoob.github.io/three.js/docs/#Reference/Lights/PointLight
 PointLight(hex, intensity, distance)
 hex — Numeric value of the RGB component of the color.
-intensity — Numeric value of the light's strength/intensity.
+intensity — Numeric value of the light''s strength/intensity.
 distance -- The distance of the light where the intensity is 0. When distance is 0, then the distance is endless.
 Creates a light at a specific position in the scene. The light shines in all directions (roughly similar to a light bulb.)
 
@@ -744,8 +744,10 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
 		shape = new THREE.Shape();
-//		shape.fromPoints( [ v2( 0, 0 ), v2( 50, 0 ), v2( 50, 50 ), v2( 0, 50 ) ] );
+
 		shape.absarc( 0, 0, 50, 0, 2 * Math.PI );
+
+
 
 		var hole = new THREE.Path();
 //		hole.fromPoints( [ v2( 10, 10 ), v2( 30, 10 ), v2( 30, 40 ), v2( 10, 40 ) ] );
@@ -754,7 +756,8 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		shape.holes.push( hole );
 
 // choose one
-		geometry = shape.extrude( { amount: 10, bevelEnabled: false, curveSegments: 8, steps: 3 } );
+		// not geometry = shape.extrude( { amount: 10, bevelEnabled: false, curveSegments: 8, steps: 3 } );
+		geometry = new THREE.ExtrudeGeometry( shape, { bevelEnabled: false, amount: 10 } );
 //		geometry = new THREE.ShapeGeometry( shape );
 //		geometry = shape.makeGeometry( { curveSegments: 30 } );
 
