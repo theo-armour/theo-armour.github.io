@@ -15,8 +15,8 @@
 
 	var news =
 
-		'<a href=http://nytimes.com/ target=_blank>nytimes</a>' +
-			' <a href=http://www.nytimes.com/pages/technology/ target=_blank>tch</a>' + b +
+		'<a href=https://nytimes.com/ target=_blank>nytimes</a>' +
+			' <a href=https://www.nytimes.com/pages/technology/ target=_blank>tch</a>' + b +
 		'<a href=http://drudgereport.com target=_blank>drudge</a>' + b +
 		'<a href=http://boingboing.net/blog/ target=_blank>boing</a>' + b +
 		'<a href=http://lifehacker.com/ target=_blank>lifehacker</a>' + b +
@@ -74,6 +74,20 @@
 	'';
 
 
+	var specials =
+		'<a href=http://jaanga.github.io/demo/ target=_blank > demo </a> <a href=https://github.com/jaanga/jaanga.github.io/tree/master/demo target=_blank > gh </a>' + b +
+		'<a href=https://jaanga.github.io/request-jaanga-blog-posts.html target=_blank > blog </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/ target=_blank > cookbook html </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs target=_blank > ckbk three.js </a>' + b +
+		'<a href=http://jaanga.github.io/documents/ target=_blank > documents </a> <a href=https://github.com/jaanga/jaanga.github.io/tree/master/documents target=_blank > gh </a>' + b +
+		'<a href=http://jaanga.github.io/equirec/index.html target=_blank > equirec </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/outer-space target=_blank > outer space </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/tutorials target=_blank > tutoials </a>' + b +
+
+		'<a href= target=_blank >  </a>' +
+	'';
+
+
 	init();
 
 	function init() {
@@ -84,7 +98,7 @@
 		var css = document.body.appendChild( document.createElement( 'style' ) );
 		css.innerHTML =
 
-			'body { font: 12pt monospace; margin: 0 auto; max-width: 90em; }' +
+			'body { font: 12pt monospace; margin: 0 auto; max-width: 87em; }' +
 
 			'a { color: lightgrey; text-decoration: none; }' +
 
@@ -125,7 +139,7 @@
 
 		'';
 
-		requestFile( 'https://api.github.com/users/theo-armour/orgs', callbackOrgs );
+		requestFile( 'https://api.github.com/users/theo-armour/orgs?per_page=100', callbackOrgs );
 
 		requestFile( 'https://api.github.com/users/jaanga/repos?per_page=100', callbackJaanga );
 
@@ -153,18 +167,15 @@
 
 			if ( repo.includes( 'heightmap' ) || repo.includes( '-de' ) || repo.includes( '-srtm' ) || repo.includes( '-usgs' )  ) { continue; }
 
-			arr1.push( repo.replace( /-/g, '&#8209;' ).link( 'https://' + 'jaanga' + '.github.io/' + repo ) );
+			arr1.push( '<a href=https://jaanga.github.io/' + repo + ' target=_blank > ' + repo.replace( /-/g, '&#8209;' ) + ' </a>' );
 
-//			arr2.push( ( 'gh' ).link( 'https://github.com/jaanga/' + repo ) );//
 			arr2.push( '<a href=https://github.com/jaanga/' + repo + ' target=_blank > gh </a>' );
 
 		}
 
-		col3.innerHTML = arr1.join( b );
+		col3.innerHTML = 'jaanga' + b + arr1.join( b );
 
-		col4.innerHTML = arr2.join( b );
-
-//console.log( 'repos', repos );
+		col4.innerHTML = b + arr2.join( b );
 
 	}
 
@@ -183,19 +194,17 @@
 
 			repo = repos[ i ]
 
-			if ( repo.includes( 'heightmap' ) || repo.includes( '-de' ) || repo.includes( '-srtm' ) || repo.includes( '-usgs' )  ) { continue; }
+//			if ( repo.includes( 'heightmap' ) || repo.includes( '-de' )  ) { continue; }
 
-			arr1.push( repo.replace( /-/g, '&#8209;' ).link( 'https://' + 'theo-armour' + '.github.io/' + repo ) );
+			arr1.push( '<a href=https://theo-armour.github.io/' + repo + ' target=_blank > ' + repo.replace( /-/g, '&#8209;' ) + ' </a>' );
 
-//			arr2.push( ( 'gh' ).link( 'https://github.com/theo-armour/' + repo ) );
-			arr2.push( '<a href=https://github.com/jaanga/' + repo + ' target=_blank >gh</a>' );
-
+			arr2.push( '<a href=https://github.com/theo-armour/' + repo + ' target=_blank > gh </a>' );
 
 		}
 
-		col5.innerHTML = arr1.join( b );
+		col5.innerHTML = 't-a' + b + arr1.join( b ) + b + b + specials;
 
-		col6.innerHTML = arr2.join( b );
+		col6.innerHTML = b + arr2.join( b );
 
 	}
 
@@ -203,24 +212,9 @@
 
 	function callbackOrgs( xhr ) {
 
+		var response, logins, login, arr1, arr2;
+
 		response = JSON.parse( xhr.target.response );
-/*
-		logins = response.map( function( obj ) { return obj.login; } ).sort();
-
-
-		col1.innerHTML =
-
-			( 'theo&#8209;armour').link( 'https://theo-armour.github.io/') + b +
-
-			logins.map( function( login ) {
-					return login.replace( /-/g, '&#8209;' ).link( 'https://' + login + '.github.io/' ); } ).join( b );
-
-		col2.innerHTML =
-			('gh').link( 'https://github.com/theo-armour/') + b +
-
-			logins.map( function( login ) { return ( 'gh' ).link( 'https://github.com/' + login ); } ).join( b );
-
-*/
 
 		logins = response.map( function( obj ) { return obj.login; } ).sort();
 
@@ -231,39 +225,21 @@
 
 			login = logins[ i ]
 
-//			if ( repo.includes( 'heightmap' ) || repo.includes( '-de' ) || repo.includes( '-srtm' ) || repo.includes( '-usgs' )  ) { continue; }
-
 			arr1.push( login.replace( /-/g, '&#8209;' ).link( 'https://' + login + '.github.io/' ) );
 
-//			arr2.push( ( 'gh' ).link( 'https://github.com/theo-armour/' + repo ) );
-			arr2.push( '<a href=https://github.com/' + login + ' target=_blank >gh</a>' );
-
+			arr2.push( '<a href=https://github.com/' + login + '/' + login + '.github.io target=_blank >gh</a>' );
 
 		}
 
-		col1.innerHTML = arr1.join( b );
-
-		col2.innerHTML = arr2.join( b );
-
-	}
-
-	function callbackcccccOrgs( xhr ) {
-
-		response = JSON.parse( xhr.target.response );
-
-		logins = response.map( function( obj ) { return obj.login; } ).sort();
-
 		col1.innerHTML =
-
-			( 'theo&#8209;armour').link( 'https://theo-armour.github.io/') + b +
-
-			logins.map( function( login ) {
-					return login.replace( /-/g, '&#8209;' ).link( 'https://' + login + '.github.io/' ); } ).join( b );
+			'<a href=https://theo-armour.github.io/ target=_blank >theo&#8209;armour</a>'+ b +
+			arr1.join( b )+
+		'';
 
 		col2.innerHTML =
-			('gh').link( 'https://github.com/theo-armour/') + b +
-
-			logins.map( function( login ) { return ( 'gh' ).link( 'https://github.com/' + login ); } ).join( b );
+			'<a href=https://github.com/theo-armour/theo-armour.github.io target=_blank > gh </a>'+ b +
+			arr2.join( b ) +
+		'';
 
 	}
 
