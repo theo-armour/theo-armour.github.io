@@ -155,7 +155,8 @@
 
 			arr1.push( repo.replace( /-/g, '&#8209;' ).link( 'https://' + 'jaanga' + '.github.io/' + repo ) );
 
-			arr2.push( ( 'gh' ).link( 'https://github.com/jaanga/' + repo ) );
+//			arr2.push( ( 'gh' ).link( 'https://github.com/jaanga/' + repo ) );//
+			arr2.push( '<a href=https://github.com/jaanga/' + repo + ' target=_blank > gh </a>' );
 
 		}
 
@@ -186,7 +187,9 @@
 
 			arr1.push( repo.replace( /-/g, '&#8209;' ).link( 'https://' + 'theo-armour' + '.github.io/' + repo ) );
 
-			arr2.push( ( 'gh' ).link( 'https://github.com/theo-armour/' + repo ) );
+//			arr2.push( ( 'gh' ).link( 'https://github.com/theo-armour/' + repo ) );
+			arr2.push( '<a href=https://github.com/jaanga/' + repo + ' target=_blank >gh</a>' );
+
 
 		}
 
@@ -194,13 +197,57 @@
 
 		col6.innerHTML = arr2.join( b );
 
-console.log( 'repos', repos );
-
 	}
 
 
 
 	function callbackOrgs( xhr ) {
+
+		response = JSON.parse( xhr.target.response );
+/*
+		logins = response.map( function( obj ) { return obj.login; } ).sort();
+
+
+		col1.innerHTML =
+
+			( 'theo&#8209;armour').link( 'https://theo-armour.github.io/') + b +
+
+			logins.map( function( login ) {
+					return login.replace( /-/g, '&#8209;' ).link( 'https://' + login + '.github.io/' ); } ).join( b );
+
+		col2.innerHTML =
+			('gh').link( 'https://github.com/theo-armour/') + b +
+
+			logins.map( function( login ) { return ( 'gh' ).link( 'https://github.com/' + login ); } ).join( b );
+
+*/
+
+		logins = response.map( function( obj ) { return obj.login; } ).sort();
+
+		arr1 = [];
+		arr2 = [];
+
+		for ( var i = 0; i < logins.length; i++ ) {
+
+			login = logins[ i ]
+
+//			if ( repo.includes( 'heightmap' ) || repo.includes( '-de' ) || repo.includes( '-srtm' ) || repo.includes( '-usgs' )  ) { continue; }
+
+			arr1.push( login.replace( /-/g, '&#8209;' ).link( 'https://' + login + '.github.io/' ) );
+
+//			arr2.push( ( 'gh' ).link( 'https://github.com/theo-armour/' + repo ) );
+			arr2.push( '<a href=https://github.com/' + login + ' target=_blank >gh</a>' );
+
+
+		}
+
+		col1.innerHTML = arr1.join( b );
+
+		col2.innerHTML = arr2.join( b );
+
+	}
+
+	function callbackcccccOrgs( xhr ) {
 
 		response = JSON.parse( xhr.target.response );
 
