@@ -81,8 +81,8 @@
 
 <script>
 
-	var fileName = 'http://theo-armour.github.io/ucsf/models/HumanHeart';
-	var fileName2 = 'http://theo-armour.github.io/ucsf/models/FEMUR';
+	var fileName = 'https://theo-armour.github.io/ucsf/models/HumanHeart';
+	var fileName2 = 'https://theo-armour.github.io/ucsf/models/FEMUR';
 
 	var loader;
 	var heart, femur;
@@ -133,7 +133,7 @@
 		THREE.ImageUtils.crossOrigin = '';
 
 // sky sphere
-		texture = THREE.ImageUtils.loadTexture( "http://theo-armour.github.io/ucsf/parnassus-sky-sphere.png" );
+		texture = THREE.ImageUtils.loadTexture( "https://theo-armour.github.io/ucsf/parnassus-sky-sphere.png" );
 		texture.minFilter = texture.magFilter = THREE.NearestFilter;
 
 		geometry = new THREE.SphereGeometry( 50, 20, 20 );
@@ -197,7 +197,7 @@
 		material = new THREE.MeshPhongMaterial( { color: 0xeeeeee, emissive: 0x555555, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
 
 		THREE.ImageUtils.crossOrigin = 'anonymous';
-		var r = 'http://mrdoob.github.io/three.js/examples/textures/cube/skybox/';
+		var r = 'https://mrdoob.github.io/three.js/examples/textures/cube/skybox/';
 		var urls = [ r + 'px.jpg', r + 'nx.jpg', r + 'py.jpg', r + 'ny.jpg', r + 'pz.jpg', r + 'nz.jpg' ];
 
 		textureCube = THREE.ImageUtils.loadTextureCube( urls );
