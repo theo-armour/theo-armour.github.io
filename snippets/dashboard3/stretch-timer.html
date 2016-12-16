@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<title>stretchTimer</title>
+<meta charset="UTF-8">
+<meta name="author" content="Theo Armour">
+</head>
+<style>
+h2 {margin: 0; padding: 0; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
+0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 
+0 20px 20px rgba(0,0,0,.15);}
+</style>
+<body style="font: 10pt sans-serif; margin-top: 0; " onload="startCount()">
+<h2>Stretch Timer</h2>
+<form>
+<input type="button" value="8" onClick="resetStart(8)" style="width:20px;">
+<input type="button" value="18" onClick="resetStart(18)" style="width:25px;">
+<input type="button" value="28" onClick="resetStart(28)" style="width:25px;"><br>
+<input type="text" id="duration" size="1" />
+<input type="button" value="Go" onClick="startCount()"> <br>
+<input type="text" id="txt" size="1">
+<input type="button" id='stop' value="Stop" onClick="stopCount()"><br>
+<input type="button" value="Did it!" onClick="didSomething()">
+</form>
+<div id ='start'>x</div>
+
+<script>
+var start = "28";
+document.getElementById("duration").value = start;
+document.getElementById('start').innerHTML = new Date();
+var c = start;
+var t;
+var timerIsOn = 0;
+
+function timedCount() {
+  c = c - 1;
+  document.getElementById('txt').value = c;
+  if (c <= 0) {c = document.getElementById("duration").value;
+    // var snd = new Audio("music/success.wav");
+    // snd.play();
+    // alert("Stand Up And Dance!");
+    window.location.assign("file:///C:/Dropbox/code/dashboard-2/stretch-form.html");
+  }
+  t = setTimeout(function(){timedCount();}, 60 * 1000);
+}
+
+function startCount() {
+  if (!timerIsOn) {
+    timerIsOn=1;    
+    timedCount();
+  }
+  c = document.getElementById("duration").value;
+  document.getElementById('txt').value = c;
+  document.getElementById('stop').value = 'Stop';
+  document.getElementById('start').innerHTML = new Date();
+  
+}
+
+function resetStart(tim) {
+  if (!timerIsOn) {
+    timerIsOn=1;    
+    timedCount();
+  }
+  c = tim;
+  document.getElementById('duration').value = tim;
+  document.getElementById('txt').value = tim;
+  document.getElementById('start').innerHTML = tim + ' - ' + new Date();
+}
+
+function stopCount() {
+  clearTimeout(t);
+  timerIsOn=0;
+  document.getElementById('stop').value = 'Stopped';
+}
+
+// probably does nothing
+function didSomething() {
+  clearTimeout(t);
+  timerIsOn=0;
+  window.location.assign("file:///C:Dropbox/code/dashboard-2/stretch-form.html");
+}
+
+</script>
+<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdHkydEwzTGNKYjFWMkhuRXZrRWpUUVE&hl=en#gid=0" target="_blank" style="font-size: 9pt;">stretchtimer ss</a>
+<a href='https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdE8yM1kwdkpXSUJCZlZMcGRXbktWanc#gid=17' target="_blank" style="font-size: 9pt;">checklist ss</a>
+
+<!--
+<iframe width='300' height='300' frameborder='0'  
+src='https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0Akg809SWki8tdHkydEwzTGNKYjFWMkhuRXZrRWpUUVE&single=true&gid=0&range=B2%3AC30&output=html&widget=true'>
+</iframe>
+-->
+</body>
+</html>
+
+<!-- Google Spreadsheet Element Code 
+<iframe frameborder=0 marginwidth=0 marginheight=0 border=0 style="border:0;margin:0;width:300px;height:250px;" 
+src="http://spreadsheets.google.com/pub?output=html&amp;widget=true&amp;single=true&amp;element=true&amp;gid=0&amp;key=rn2UaS5nfPftRcrOuxxlHRQ" 
+scrolling="no" allowtransparency="true"></iframe>         
+-->

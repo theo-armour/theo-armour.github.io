@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title>teodori</title>
+<meta charset=utf-8>
+</head>
+<body>
+<script>
+// New year tasks: copy spreadsheet and remember to add a new onformsubmit trigger...
+// opening in new tab: chrome> settings> advanced> privacy> content > popups> exceptions> https://dl.dropboxusercontent.com
+	
+	var css = document.body.appendChild( document.createElement('style') );
+	css.innerHTML = 'body { font: normal 10pt monospace; margin: 3px, 0m 0, 3px; padding: 0; }' +
+		'a { color: #44e;} ' +
+		'form label {font-size: 9pt;} ' +
+	'';
+
+	var daysOfWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+	var date = new Date();
+	var hours = ('0' + date.getHours()).slice(-2);
+	var minutes = ('0' + date.getMinutes()).slice(-2);
+	var day = daysOfWeek[ date.getDay() ];
+	var tim = hours + ':' + minutes;
+
+	var content = document.body.appendChild( document.createElement( 'div' ) );;
+	content.innerHTML = '<a href="#" onClick="setMinutes(5)" >5</a> ~ ' +
+		'<a href="#" onClick="setMinutes(8)" >8</a> ~ ' +
+		'<a href="#" onClick="setMinutes(18)" >18</a> ~ ' +
+		'<a href="#" onClick="setMinutes(28)" >28</a> ~ ' +
+		'<a href="#" id="toggle" onClick="toggleTimer()" >Stop Timer</a> ~ ' +
+		'<span id="status1">status1</span>/' +
+		'<span id="status2">status2</span>' + ' time: ' + tim + '' +
+	'';
+
+// JavaScript GET - use document.URL + this http://javascript.about.com/library/blqs1.htm
+	var teodoroDuro = "18";
+	var teodoroCurrent = teodoroDuro;
+	var timVar;
+	var timerIsOn = 0;
+	var snd = new Audio("success.wav");
+	var sound = false;
+	var submitted = false;
+
+	status1.innerHTML = teodoroDuro;
+	toggleTimer();
+
+	function setMinutes(mins) {
+		teodoroCurrent = teodoroDuro = mins;
+		status1.innerHTML = mins;
+		status2.innerHTML = mins;
+	}
+
+	function toggleTimer() {
+		if (!timerIsOn) {
+			timerIsOn = 1;
+			timedCount();
+			toggle.innerHTML = 'Stop Timer';
+		} else {
+			clearTimeout(timVar);
+			timerIsOn = 0;
+			toggle.innerHTML = 'Start';
+		}
+	}
+
+	function timedCount() {
+		status2.innerHTML = teodoroCurrent--;
+		if ( sound ) {
+			snd.play();
+			sound = false;
+		}
+		if (teodoroCurrent <= 0) {
+			teodoroCurrent = teodoroDuro;
+			openNewBackgroundTab();
+			sound = true;
+		}
+		timVar = setTimeout(function(){ timedCount(); }, 60000);
+	}
+
+	function openNewBackgroundTab(){
+		var a = document.createElement('a');
+		a.target='_blank';
+		// a.href = "http://www.pandora.com/station/play/12161925770470805";
+		a.href = "http://www.pandora.com/";
+		// a.href = 'http://www.example.com/';
+		var evt = document.createEvent('MouseEvents');    
+		evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, false, 0, null);
+		a.dispatchEvent(evt);
+	}
+
+	
+	var form = document.body.appendChild( document.createElement( 'div' ) );
+	form.innerHTML =
+	'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location=\'teodori.html?mins=28\';}"></iframe>' +
+
+	//'<form action="https://spreadsheets.google.com/formResponse?hl=en&amp;formkey=dHkydEwzTGNKYjFWMkhuRXZrRWpUUVE6MQ&amp;ifq" method="post" target="hidden_iframe" onsubmit="submitted=true;">' +
+	'<form action="https://spreadsheets.google.com/formResponse?hl=en&amp;formkey=dGp3dWdlZENhTk9sSnd3d2FfdkVPUVE6MA&amp;ifq" method="post" target="hidden_iframe" onsubmit="submitted=true;">' +
+
+	
+	'<label for="entry_0">Fitness:</label><br>' +
+	'<select id=selFitness onchange="doSelFitness( this.selectedIndex, this.value );" style="width:120px"></select> ' +
+	'<select id=selLocation onchange="doSelLocation( this.selectedIndex, this.value );" style="width:130px"></select> ' +
+	'<select title="has duration" id=selPhysicalTask onchange="doSelPhysicalTask( this.selectedIndex, this.value );" style="width:120px"></select> ' +
+	
+	'<br><textarea name="entry.0.single" rows="1" cols="50" id="entry_0" autofocus="autofocus"></textarea><br>' +
+
+	'<label for="entry_2">Food:</label> ' +
+	'<select id=selFood onchange="doSelFood( this.selectedIndex, this.value );" ></select> &nbsp; ' +
+	'<select id=selDrink onchange="doSelDrink( this.selectedIndex, this.value );" ></select><br>' +
+	'<textarea name="entry.2.single" rows="1" cols="50" id="entry_2"></textarea><br>' +
+
+	'<label for="entry_1">Task:</label><br>' +
+	'<select id=selActivity onchange="doSelActivity( this.selectedIndex, this.value );" style="width:130px";"></select>' +
+	'<select id=selProject onchange="doSelProject( this.selectedIndex, this.value );" ></select>' +
+	'<select id=selTask onchange="doSelTask( this.selectedIndex, this.value );" style="width:130px";"></select>' +
+	'<select id=selPeople onchange="doSelPeople( this.selectedIndex, this.value );" ></select><br>' +
+
+	'<textarea name="entry.1.single" rows="2" cols="50" id="entry_1"></textarea><br>' +
+	'<input type="hidden" name="pageNumber" value="0">' +
+	'<input type="hidden" name="backupCache" value="">' +
+	'<input type="submit" name="submit" value="Did It!" accesskey="D"> ' +
+
+	'<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdGp3dWdlZENhTk9sSnd3d2FfdkVPUVE&hl=en#gid=0" target="_blank">stretchtimer ss</a> ' +
+	'<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdE8yM1kwdkpXSUJCZlZMcGRXbktWanc#gid=17" target="_blank">checklist ss</a>' +
+
+	'<form><br>';
+
+	form.innerHTML += '***2013<br>' +
+		day + ' ~ San Francisco ~ ?? kg ~ weather ~ mood ~ workout ~ sat<br>' +
+		tim + ' ~ ' +
+	'';
+
+	var arrFitness = ['select exercise','apt walk','15 squats','15 squats + squeezes','dance','warm-up','push-ups','plank moves',
+		'weights #1','weights #2','weights #3','hundreds','food prep','fives','standing desk','walkabout'
+	];
+	for (var option, i = 0; i < arrFitness.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrFitness[i];
+		selFitness.appendChild( option );
+	}
+	function doSelFitness( index, value ) {
+		entry_0.value += value + ' / ';
+	}
+
+	var arrLocation = ['select location','1 cycle','2 cycles','bath','bedroom','hall','kitchen','living room','---','laundry','recycling','Safeway','stairs','stroll','restaurant','cafe'];
+	for (var option, i = 0; i < arrLocation.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrLocation[i];
+		selLocation.appendChild( option );
+	}
+	function doSelLocation( index, value ) {
+		entry_0.value += value + ' / ';
+	}
+
+	var arrPhysicalTask = ['select task','ablutions','shower','dishes/dress','tidy/organize','eat','food prep','live/play/love','sit','nap','sleep'];
+	for (var option, i = 0; i < arrPhysicalTask.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrPhysicalTask[i];
+		selPhysicalTask.appendChild( option );
+	}
+	function doSelPhysicalTask( index, value ) {
+		entry_0.value += value + ' / ';
+	}
+
+	var arrFood = ['select food','carrots','cereal','dip','cheese shreds','chocolate','college cheese','coleslaw snack','coleslaw meal','nuts','rice + fresh',
+		'rice + frozen','popcorn','salad prepared','sushi/sashimi/salmon','prepared meal fresh', 'prepared meal frozen', 'prepared snack frozen'];
+	for (var option, i = 0; i < arrFood.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrFood[i];
+		selFood.appendChild( option );
+	}
+	function doSelFood( index, value ) {
+		entry_2.value += value + ' / ';
+	}
+
+	var arrDrink = ['select drink','coffee', 'tea','juice','water','beer','saki','sherry','wine'];
+	for (var option, i = 0; i < arrDrink.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrDrink[i];
+		selDrink.appendChild( option );
+	}
+	function doSelDrink( index, value ) {
+		entry_2.value += value + ' / ';
+	}
+
+// to add when? What stage
+	var arrActivity = ['--- select activity','admin/manage','code','communicate','edit/summarize','fix','help','learn/read','maintain/monitor/install',
+		'operate','plan/list', 'shop/compare/','surf/news','write',
+	];
+	for (var option, i = 0; i < arrActivity.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrActivity[i];
+		selActivity.appendChild( option );
+	}
+
+	function doSelActivity( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+// project or arena
+	var arrProject = ['--select project','quantified life','nerdvana','AlgeSurf','FGx','Incomplete Nature','Jaanga','Leap Motion',
+
+// destination? where?
+	'--select destination','Browser/OS','CrashPlan','Evernote','FileThis','GitHub','JavaScript/css/html','Mint','Shoeboxed','GDrive/DropBox','DH/BH','Blogger'
+	];
+	for (var option, i = 0; i < arrProject.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrProject[i];
+		selProject.appendChild( option );
+	}
+	function doSelProject( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+// 	task, what, sector
+	var arrTask = [	'--- select task','Dashboard/Teodori','newTab/extension','paper/mail','accounts','bookmarks','call/text','hw/it/apps','contacts',
+		'email triage', 'email','post/diary/sum','tidy/organize/calendar','sync/backup'
+	];
+	for (var option, i = 0; i < arrTask.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrTask[i];
+		selTask.appendChild( option );
+	}
+	function doSelTask( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+// who or org
+	var arrPeople = ['--select people','me/posterity','ace-it','family','friends','WebGL/Parisi','barbary coast','fogg','accounts',
+		'jaanga','aotn','kudashev','sps','bbn','syr', 'tgd'
+	];
+	for (var option, i = 0; i < arrPeople.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrPeople[i];
+		selPeople.appendChild( option );
+	}
+	function doSelPeople( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+</script>
+</body>
+</html>

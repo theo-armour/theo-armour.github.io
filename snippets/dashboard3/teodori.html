@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title>teodori</title>
+<meta charset=utf-8 />
+</head>
+<body>
+<script>
+// New year tasks: copy spreadsheet and remember to add a new onformsubmit trigger...
+// opening in new tab: chrome> settings> advanced> privacy> content > popups> exceptions> https://dl.dropboxusercontent.com
+	
+	var css = document.body.appendChild( document.createElement('style') );
+	css.innerHTML = 'body { font: normal 10pt monospace; margin: 3px, 0m 0, 3px; padding: 0; }' +
+		'a { color: #44e;} ' +
+		'form label {font-size: 9pt;} ' +
+	'';
+
+	var daysOfWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+	var date = new Date();
+	var hours = ('0' + date.getHours()).slice(-2);
+	var minutes = ('0' + date.getMinutes()).slice(-2);
+	var day = daysOfWeek[ date.getDay() ];
+	var tim = hours + ':' + minutes;
+
+	var content = document.body.appendChild( document.createElement( 'div' ) );;
+	content.innerHTML = '<a href=# onClick="setMinutes(5)" >5</a> ~ ' +
+		'<a href=# onClick="setMinutes(8)" >8</a> ~ ' +
+		'<a href=# onClick="setMinutes(18)" >18</a> ~ ' +
+		'<a href=# onClick="setMinutes(28)" >28</a> ~ ' +
+		'<a href=# id="toggle" onClick="toggleTimer()" >Stop Timer</a> ~ ' +
+		'<span id="status1">status1</span>/' +
+		'<span id="status2">status2</span>' + ' time: ' + tim + '' +
+	'';
+
+// JavaScript GET - use document.URL + this http://javascript.about.com/library/blqs1.htm
+	var teodoroDuro = "18";
+	var teodoroCurrent = teodoroDuro;
+	var timVar;
+	var timerIsOn = 0;
+	var snd = new Audio("success.wav");
+	var sound = false;
+	var submitted = false;
+
+	status1.innerHTML = teodoroDuro;
+	toggleTimer();
+
+	function setMinutes( mins ) {
+		teodoroCurrent = teodoroDuro = mins;
+		status1.innerHTML = mins;
+		status2.innerHTML = mins;
+	}
+
+	function toggleTimer() {
+		if (!timerIsOn) {
+			timerIsOn = 1;
+			timedCount();
+			toggle.innerHTML = 'Stop Timer';
+		} else {
+			clearTimeout(timVar);
+			timerIsOn = 0;
+			toggle.innerHTML = 'Start';
+		}
+	}
+
+	function timedCount() {
+		status2.innerHTML = teodoroCurrent--;
+		if ( sound ) {
+			snd.play();
+			sound = false;
+		}
+		if ( teodoroCurrent <= 0 ) {
+			teodoroCurrent = teodoroDuro;
+			openNewBackgroundTab();
+			sound = true;
+		}
+		timVar = setTimeout( function(){ timedCount(); }, 60000 );
+	}
+
+	function openNewBackgroundTab(){
+		var a = document.createElement('a');
+		a.target='_blank';
+		// a.href = "http://www.pandora.com/station/play/12161925770470805";
+		a.href = "http://www.pandora.com/";
+		// a.href = 'http://www.example.com/';
+		var evt = document.createEvent('MouseEvents');
+		evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, false, 0, null);
+		a.dispatchEvent(evt);
+	}
+
+	
+	var form = document.body.appendChild( document.createElement( 'div' ) );
+	form.innerHTML =
+//	'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location=\'teodori.html?mins=28\';}"></iframe>' +
+	'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location=\'https://googledrive.com/host/0B0g809SWki8tMEl1eXExRFhWNFU\';}"></iframe>' +
+
+
+	//'<form action="https://spreadsheets.google.com/formResponse?hl=en&amp;formkey=dHkydEwzTGNKYjFWMkhuRXZrRWpUUVE6MQ&amp;ifq" method="post" target="hidden_iframe" onsubmit="submitted=true;">' +
+	'<form action="https://spreadsheets.google.com/formResponse?hl=en&amp;formkey=dGp3dWdlZENhTk9sSnd3d2FfdkVPUVE6MA&amp;ifq" method="post" target="hidden_iframe" onsubmit="submitted=true;">' +
+
+
+	'<label for="entry_0">Fit</label>: ' +
+	
+	'<a href=# onclick="entry_0.value += \'apt walk / \';" title="apartment walkabout">aptWlk</a> ' +
+	'<a href=# onclick="entry_0.value += \'15 squats / \';" title="squats">sqts</a> ' +
+	'<a href=# onclick="entry_0.value += \'15 squats + squeezes/ \';" title="squats + squeezes">sqSz</a> ' +
+	'<a href=# onclick="entry_0.value += \'dance / \';" title="dance">danc</a> ' +
+	'<a href=# onclick="entry_0.value += \'warm-up / \';" title="warm-up">wrmUp</a> ' +
+	'<a href=# onclick="entry_0.value += \'push-ups / \';" title="push-ups">pshUp</a> ' +
+	'<a href=# onclick="entry_0.value += \'plank moves / \';" title="plank moves">plnkMv</a> ' +
+	'<a href=# onclick="entry_0.value += \'weights #1 / \';" title="weights #1">wght1</a> ' +
+	'<a href=# onclick="entry_0.value += \'weights #2 / \';" title="weights #2">wght2</a> ' +
+	'<a href=# onclick="entry_0.value += \'weights #3 / \';" title="weights #3">wght3</a> ' +
+	'<a href=# onclick="entry_0.value += \'hundreds / \';" title="hundreds">100s</a> ' +
+	'<a href=# onclick="entry_0.value += \'fives / \';" title="fives">5s</a> ' +
+	'<br>' +
+// healthy activities
+
+	'<a href=# onclick="entry_0.value += \'food prep / \';" title="food prep">foodPrp</a> ' +
+	'<a href=# onclick="entry_0.value += \'shower / \';" title="shower">showr</a> ' +
+	'<a href=# onclick="entry_0.value += \'dishes + dressed / \';" title="dishes + dressed">dshDrss</a> ' +
+	'<a href=# onclick="entry_0.value += \'tidy / \';" title="tidy">tidy</a> ' +
+	'<a href=# onclick="entry_0.value += \'standing desk / \';" title="standing desk">stndDsk</a> / ' +
+// not as healthy
+	'<a href=# onclick="entry_0.value += \'eating / \';" title="eating">eat</a> ' +
+	'<a href=# onclick="entry_0.value += \'sitting / \';" title="sitting">sit</a> ' +
+	'<a href=# onclick="entry_0.value += \'nap / \';" title="nap">nap</a> / ' +
+
+// locations
+	'<a href=# onclick="entry_0.value += \'ablutions / \';" title="ablutions">abl</a> ' +
+	'<a href=# onclick="entry_0.value += \'bath / \';" title="bath">ba</a> ' +
+	'<a href=# onclick="entry_0.value += \'bedroom / \';" title="bedroom">br</a> ' +
+	'<a href=# onclick="entry_0.value += \'hall / \';" title="hall">hl</a> ' +
+	'<a href=# onclick="entry_0.value += \'kitchen / \';" title="kitchen">ktchn</a> ' +
+	'<a href=# onclick="entry_0.value += \'living room / \';" title="living room">lvgRm</a><br>' +
+
+	'<a href=# onclick="entry_0.value += \'walkabout / \';" title="walkabout">walkAbout</a> / ' +
+	'<a href=# onclick="entry_0.value += \'hallway \';" title="corridor">hallway</a> ' +
+	'<a href=# onclick="entry_0.value += \'laundry # / \';" title="laundry">lndry</a> ' +
+	'<a href=# onclick="entry_0.value += \'recycling / \';" title="recycling">recycl</a> ' +
+	'<a href=# onclick="entry_0.value += \'stairs / \';" title="stairs">stairs</a> ' +
+	'<a href=# onclick="entry_0.value += \'stroll / \';" title="stroll">stroll</a> ' +
+	'<a href=# onclick="entry_0.value += \'Safeway / \';" title="Safeway">SafeWy</a> ' +
+	'<a href=# onclick="entry_0.value += \'restaurant / \';" title="restaurant">restrnt</a> ' +
+	'<a href=# onclick="entry_0.value += \'cafe / \';" title="cafe">cafe</a> ' +
+	'<a href=# onclick="entry_0.value += \'people / \';" title="be with people">peeps</a> ' +
+	
+	//'<select id=selFitness onchange="doSelFitness( this.selectedIndex, this.value );" style="width:120px"></select> ' +
+	//'<select id=selLocation onchange="doSelLocation( this.selectedIndex, this.value );" style="width:130px"></select> ' +
+	//'<select title="has duration" id=selPhysicalTask onchange="doSelPhysicalTask( this.selectedIndex, this.value );" style="width:120px"></select> ' +
+'<br>' +
+
+	' <textarea name="entry.0.single" rows="1" cols="50" id="entry_0" autofocus="autofocus"></textarea><br>' +
+// 	,'dip','cheese shreds','chocolate','college cheese','coleslaw snack','coleslaw meal','nuts','rice + fresh',
+//		'rice + frozen','popcorn','salad prepared','sushi/sashimi/salmon','prepared meal fresh', 'prepared meal frozen', 'prepared snack frozen'];
+	
+	'<label for="entry_2">Food</label>: ' +
+	'<a href=# onclick="entry_2.value += \'carrots / \';" title="carrots / hummus">car</a> ' +
+	'<a href=# onclick="entry_2.value += \'dip / \';" title="dip">dip</a> ' +
+	
+	'<a href=# onclick="entry_2.value += \'cereal / \';" title="cereal">cer</a> ' +
+	
+	'<a href=# onclick="entry_2.value += \'cheese shreds / \';" title="cheese shreds">che</a> ' +
+	'<a href=# onclick="entry_2.value += \'chocolate / \';" title="chocolate">cho</a> ' +
+
+	'<a href=# onclick="entry_2.value += \'college cheese / \';" title="college cheese">cc</a> ' +
+	'<a href=# onclick="entry_2.value += \'coleslaw / \';" title="coleslaw">col</a> ' +
+	'<a href=# onclick="entry_2.value += \'nuts / \';" title="nuts">n</a> ' +
+	'<a href=# onclick="entry_2.value += \'rice + veggies / \';" title="rice + veggies">ri</a> ' +
+	'<a href=# onclick="entry_2.value += \'popcorn / \';" title="popcorn">po</a> ' +
+	'<a href=# onclick="entry_2.value += \'salad / \';" title="salad">sa</a> ' +
+	'<a href=# onclick="entry_2.value += \'soup / \';" title="soup">soup</a> ' +
+	'<a href=# onclick="entry_2.value += \'sushi / \';" title="sushi">sushi</a> ' +
+	'<a href=# onclick="entry_2.value += \'prepared dish / \';" title="prepared dish">pre</a> | ' +
+// 	'tea','juice','water','sherry','wine'];
+	'<a href=# onclick="entry_2.value += \'coffee / \';" title="coffee">cof</a> ' +
+	'<a href=# onclick="entry_2.value += \'wine / \';" title="wine">wine</a> ' +
+	'<a href=# onclick="entry_2.value += \'beer / \';" title="beer">beer</a> ' +
+	'<a href=# onclick="entry_2.value += \'saki / \';" title="saki">saki</a> ' +
+	'<a href=# onclick="entry_2.value += \'sherry / \';" title="sherry">sherry</a> ' +
+
+	//'<select id=selFood onchange="doSelFood( this.selectedIndex, this.value );" ></select> &nbsp; ' +
+	//'<select id=selDrink onchange="doSelDrink( this.selectedIndex, this.value );" ></select><br>' +
+'<br>' +
+	'<textarea name="entry.2.single" rows="1" cols="50" id="entry_2"></textarea><br>' +
+
+// add -ing to all. these are verbs
+'activity: ' +
+	'<a href=# onclick="entry_1.value += \'admin / \';" title="Admin: file this / shoeboxed / mint / statements">admin</a> ' +
+	'<a href=# onclick="entry_1.value += \'surf + news / \';" title="surf + news">surfNws</a> ' +
+	'<a href=# onclick="entry_1.value += \'email / read + triage / \';" title="email - triage">emlTri</a> ' +
+	'<a href=# onclick="entry_1.value += \'email / compose / \';" title="email - compose">emlComp</a> ' +
+
+	'<a href=# onclick="entry_1.value += \'code / content / \';" title="code: write edit software ">code content</a> ' +
+	'<a href=# onclick="entry_1.value += \'code / script / \';" title="code: write edit software ">code script</a> ' +
+	'<a href=# onclick="entry_1.value += \'write / \';" title="generate content">write</a> ' +
+	'<a href=# onclick="entry_1.value += \'text / \';" title="text hangout">sms</a> ' +
+	'<a href=# onclick="entry_1.value += \'call / \';" title="phone voice">call</a> ~ ' +
+	
+	'<a href=# onclick="entry_1.value += \'blog / \';" title="blog">blog</a> ' +
+	'<a href=# onclick="entry_1.value += \'post / \';" title="forum / post">post</a> ' +
+
+	'<a href=# onclick="entry_1.value += \'mail + paper / \';" title="mail + paper">mailPpr</a> ' +
+	'<a href=# onclick="entry_1.value += \'summary / \';" title="summary">sumry</a> ' +
+// filming?	blog?
+	'<a href=# onclick="entry_1.value += \'video / \';" title="video photo imaging">video</a> ' +
+
+'<br>' +
+
+'<label for="entry_1">task</label>: ' +
+	
+// covered by activity	'<a href=# onclick="entry_1.value += \'communicate / \';" title="Communicate: [c]alling / [t]exting / [e]mailing">comm</a> ' +
+	'<a href=# onclick="entry_1.value += \'design / \';" title="designing">design</a> ' +
+	'<a href=# onclick="entry_1.value += \'help / \';" title="Help: forums / blogging / helping (sps / fogg / three.js etc)">help</a> ' +
+	
+	'<a href=# onclick="entry_1.value += \'document / \';" title="Document: write">document</a> ' +
+	
+	'<a href=# onclick="entry_1.value += \'learn / \';" title="Learn: reading / learning / studying">learn</a> ' +
+	'<a href=# onclick="entry_1.value += \'live / \';" title="Live: eat / sleep / play / love">live</a> ' +
+	'<a href=# onclick="entry_1.value += \'manage / \';" title="Manage: app hw">manage</a> ' +
+	'<a href=# onclick="entry_1.value += \'plan / \';" title="Plan: Evernote / Dashboard">plan</a> ' +
+	'<a href=# onclick="entry_1.value += \'organize / \';" title="Categorize / arrange / transport">organize</a> ' +
+	'<a href=# onclick="entry_1.value += \'preserve / \';" title="Preserve: bookmark tidy / email tidy / photos / slim the repository / file organize & publicize / backup / dropbox / crashplan">presrv</a> ' +
+	'<a href=# onclick="entry_1.value += \'record / \';" title="Record: diary / quantified life / dash[b]oard">record</a> ' +
+	'<a href=# onclick="entry_1.value += \'simplify / \';" title="Simplify: reduce outgoings - link2exchange / dreamhost /  sugarsync">smplfy</a><br /> ' +
+
+'project: ' +
+	'<a href=# onclick="entry_1.value += \'banking / \';" title="DWA Pershing Chase">banking</a> ' +
+	'<a href=# onclick="entry_1.value += \'acounts / \';" title="Mint Turbotax">accounts</a> ' +
+	'<a href=# onclick="entry_1.value += \'hosting / \';" title="bookmarks">hosting</a> ' +
+	'<a href=# onclick="entry_1.value += \'bookmarks / \';" title="bookmarks">bookmarks</a> ' +
+	'<a href=# onclick="entry_1.value += \'dashboard / \';" title="dashboard - teodori">dshBrd</a> ' +
+	'<a href=# onclick="entry_1.value += \'cookbook / \';" title="Cookbook: snippets">cookbk</a> ' +
+	'<a href=# onclick="entry_1.value += \'template / \';" title="boilerplate">template</a> ' +
+	'<a href=# onclick="entry_1.value += \'files / \';" title="files">files</a> ' +
+	'<a href=# onclick="entry_1.value += \'contacts / \';" title="peeps">contacts</a> ' +
+	// '<a href=# onclick="entry_1.value += \'beer map / \';" title="beer map">beer map</a> ' +
+	'<a href=# onclick="entry_1.value += \'apps / \';" title="hardware">apps</a> ' +
+	'<a href=# onclick="entry_1.value += \'hardware / \';" title="hardware">hardware</a> ' +
+'<br>' +
+
+'<label>tool | app: </label>' +
+	'<a href=# onclick="entry_1.value += \'Browser/OS / \';" title="Browser/OS">brwsrOs</a> ' +
+	'<a href=# onclick="entry_1.value += \'Blender / \';" title="Blender">Blender</a> ' +
+
+	'<a href=# onclick="entry_1.value += \'GitHub / \';" title="GitHub">gitHub</a> ' +
+	'<a href=# onclick="entry_1.value += \'Evernote / \';" title="Evernote">evrNot</a> ' +
+	'<a href=# onclick="entry_1.value += \'Notepad | Caret / \';" title="Notepad++">notPd+</a> ' +
+	
+	'<a href=# onclick="entry_1.value += \'GDrive / \';" title="GDrive">gDrive</a> ' +
+	'<a href=# onclick="entry_1.value += \'Shoeboxed / \';" title="Shoeboxed">shoeBx</a> ' +
+	'<a href=# onclick="entry_1.value += \'PayPal / \';" title="PayPal">payPl</a> ' +
+	'<a href=# onclick="entry_1.value += \'Mint / \';" title="Mint">Mint</a> ' +
+	
+	
+	'<a href=# onclick="entry_1.value += \'Three.js / \';" title="Three.js">Three.js</a> ' +
+// camStudio / quicktime
+
+// destination? where?
+//	'CrashPlan','Evernote','FileThis','GitHub','JavaScript/css/html','Mint','Shoeboxed','GDrive/DropBox','DH/BH','Blogger'
+
+'<br>' +
+
+'group/who: ' +
+
+	'<a href=# onclick="entry_1.value += \'vA3C / \';" title="vA3C">vA3C</a> ' +
+	'<a href=# onclick="entry_1.value += \'jaanga / \';" title="jaanga">jaanga</a> ' +
+
+	'<a href=# onclick="entry_1.value += \'Abantech / \';" title="Abantech">Abantech</a> ' +
+	'<a href=# onclick="entry_1.value += \'SoundViz / \';" title="SounndViz">SoundViz</a> ' +
+	'<a href=# onclick="entry_1.value += \'Leap Motion / \';" title="Leap Motion">Leap</a> ' +
+	'<a href=# onclick="entry_1.value += \'algebraic surfaces / \';" title="Algebraic Surfaces">algSrf</a> ' +
+	'<a href=# onclick="entry_1.value += \'FGx / \';" title="FGx">fgx</a> ' +
+	'<a href=# onclick="entry_1.value += \'Incomplete Nature / \';" title="Incomplete Nature">incNat</a> ' +
+	'<a href=# onclick="entry_1.value += \'sp500 / \';" title="SP500" >sp500</a> ' +
+	'<a href=# onclick="entry_1.value += \'TheoA / \';" title="TheoA">TheoA</a> ' +
+//	'<a href=# onclick="entry_1.value += \'Urban Data Challenge / \';" title="Urban Data Challenge">udc</a> ' +
+'<br>' +
+
+'<a href=# onclick="entry_1.value += \'ditto / \';" title="ditto">ditto</a> ' +
+
+'<label>people: </label>' +
+	'<a href=# onclick="entry_1.value += \'ace-it / \';" title="ace-it">ace-it</a> ' +
+	'<a href=# onclick="entry_1.value += \'family / \';" title="family">family</a> ' +
+	'<a href=# onclick="entry_1.value += \'friends / \';" title="friends">friend</a> ' +
+	'<a href=# onclick="entry_1.value += \'Barbary Coast / \';" title="PM FoGG Geri">barbCoast</a> ' +
+	'<a href=# onclick="entry_1.value += \'me/posterity / \';" title="me/posterity">me?</a> ' +
+	
+	'<a href=# onclick="entry_1.value += \'forum / \';" title="forum">forum</a> ' +
+	'<a href=# onclick="entry_1.value += \'users / \';" title="users">user</a> ' +
+	'<a href=# onclick="entry_1.value += \'developers / \';" title="dev">devel</a> ' +
+	'<a href=# onclick="entry_1.value += \'developers / \';" title="GoDaddy Google">registrar</a> ' +
+
+
+	
+// 	people 'me/posterity','WebGL/Parisi','barbary coast','fogg','accounts',
+//	'jaanga','aotn','kudashev','sps','bbn','syr', 'tgd'
+	
+	//'<select id=selActivity onchange="doSelActivity( this.selectedIndex, this.value );" style="width:130px";"></select>' +
+	//'<select id=selProject onchange="doSelProject( this.selectedIndex, this.value );" ></select>' +
+	//'<select id=selTask onchange="doSelTask( this.selectedIndex, this.value );" style="width:130px";"></select>' +
+	
+	//'<select id=selPeople onchange="doSelPeople( this.selectedIndex, this.value );" ></select><br>' +
+'<br>' +
+	'<textarea name="entry.1.single" rows="2" cols="50" id="entry_1"></textarea><br>' +
+	'<input type="hidden" name="pageNumber" value="0">' +
+	'<input type="hidden" name="backupCache" value="">' +
+	'<input type="submit" name="submit" value="Did It!" accesskey="D"> ' +
+
+	'<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdGp3dWdlZENhTk9sSnd3d2FfdkVPUVE&hl=en#gid=0" target="_blank">stretchtimer ss</a> ' +
+	'<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdE8yM1kwdkpXSUJCZlZMcGRXbktWanc#gid=17" target="_blank">checklist ss</a>' +
+
+	'<form><br>';
+
+	form.innerHTML += '***2016<br>' +
+		day + ' ~ San Francisco ~ ?? kg ~ weather ~ mood ~ workout ~ sat<br>' +
+		tim + ' ~&nbsp; <br>' +
+	'';
+
+
+
+
+/*
+	var arrFitness = ['select exercise','apt walk','15 squats','15 squats + squeezes','dance','warm-up','push-ups','plank moves',
+		'weights #1','weights #2','weights #3','hundreds','food prep','fives','standing desk','walkabout'
+	];
+	for (var option, i = 0; i < arrFitness.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrFitness[i];
+		selFitness.appendChild( option );
+	}
+	function doSelFitness( index, value ) {
+		entry_0.value += value + ' / ';
+	}
+
+	var arrLocation = ['select location','1 cycle','2 cycles','bath','bedroom','hall','kitchen','living room','---','laundry','recycling','Safeway','stairs','stroll','restaurant','cafe'];
+	for (var option, i = 0; i < arrLocation.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrLocation[i];
+		selLocation.appendChild( option );
+	}
+	function doSelLocation( index, value ) {
+		entry_0.value += value + ' / ';
+	}
+
+	var arrPhysicalTask = ['select task','ablutions','shower','dishes/dress','tidy/organize','eat','food prep','live/play/love','sit','nap','sleep'];
+	for (var option, i = 0; i < arrPhysicalTask.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrPhysicalTask[i];
+		selPhysicalTask.appendChild( option );
+	}
+	function doSelPhysicalTask( index, value ) {
+		entry_0.value += value + ' / ';
+	}
+
+	var arrFood = ['select food','carrots','cereal','dip','cheese shreds','chocolate','college cheese','coleslaw snack','coleslaw meal','nuts','rice + fresh',
+		'rice + frozen','popcorn','salad prepared','sushi/sashimi/salmon','prepared meal fresh', 'prepared meal frozen', 'prepared snack frozen'];
+	for (var option, i = 0; i < arrFood.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrFood[i];
+		selFood.appendChild( option );
+	}
+	function doSelFood( index, value ) {
+		entry_2.value += value + ' / ';
+	}
+
+	var arrDrink = ['select drink','coffee', 'tea','juice','water','beer','saki','sherry','wine'];
+	for (var option, i = 0; i < arrDrink.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrDrink[i];
+		selDrink.appendChild( option );
+	}
+	function doSelDrink( index, value ) {
+		entry_2.value += value + ' / ';
+	}
+
+// to add when? What stage
+	var arrActivity = ['--- select activity','admin/manage','code','communicate','edit/summarize','fix','help','learn/read','maintain/monitor/install',
+		'operate','plan/list', 'shop/compare/','surf/news','write',
+	];
+	for (var option, i = 0; i < arrActivity.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrActivity[i];
+		selActivity.appendChild( option );
+	}
+
+	function doSelActivity( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+// project or arena
+	var arrProject = ['--select project','quantified life','nerdvana','AlgeSurf','FGx','Incomplete Nature','Jaanga','Leap Motion',
+
+// destination? where?
+	'--select destination','Browser/OS','CrashPlan','Evernote','FileThis','GitHub','JavaScript/css/html','Mint','Shoeboxed','GDrive/DropBox','DH/BH','Blogger'
+	];
+	for (var option, i = 0; i < arrProject.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrProject[i];
+		selProject.appendChild( option );
+	}
+	function doSelProject( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+// 	task, what, sector
+	var arrTask = [	'--- select task','Dashboard/Teodori','newTab/extension','paper/mail','accounts','bookmarks','call/text','hw/it/apps','contacts',
+		'email triage', 'email','post/diary/sum','tidy/organize/calendar','sync/backup'
+	];
+	for (var option, i = 0; i < arrTask.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrTask[i];
+		selTask.appendChild( option );
+	}
+	function doSelTask( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+
+// who or org
+	var arrPeople = ['--select people','me/posterity','ace-it','family','friends','WebGL/Parisi','barbary coast','fogg','accounts',
+		'jaanga','aotn','kudashev','sps','bbn','syr', 'tgd'
+	];
+	for (var option, i = 0; i < arrPeople.length; i++) {
+		option = document.createElement( 'option' );
+		option.innerText = arrPeople[i];
+		selPeople.appendChild( option );
+	}
+	function doSelPeople( index, value ) {
+		entry_1.value += value + '/ ';
+	}
+*/
+
+
+</script>
+</body>
+</html>

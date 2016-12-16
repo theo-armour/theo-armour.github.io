@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=utf-8>
+<meta name='viewport' content='width=device-width'>
+<title>teodori</title>
+<style>
+
+	h1 {margin: 0; padding: 0; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
+	0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 
+	0 20px 20px rgba(0,0,0,.15);}
+
+	form label {font-size: 9pt;}
+</style>
+</head>
+<body>
+  <script>
+// New year tasks: copy spreadsheet and remember to add a new onformsubmit trigger...
+
+	document.body.style.cssText = 'font: bold 10pt monospace; margin-top: 0;';
+
+	var header = document.body.appendChild(document.createElement( 'h1' ) );;
+	header.innerHTML='teodori ';
+
+	var content = document.body.appendChild( document.createElement( 'div' ) );;
+	content.innerHTML =
+	'<div>' +
+		'<a href="#" onClick="setMinutes(5)" >5</a> ~ ' +
+		'<a href="#" onClick="setMinutes(8)" >8</a> ~ ' +
+		'<a href="#" onClick="setMinutes(18)" >18</a> ~ ' +
+		'<a href="#" onClick="setMinutes(28)" >28</a> ~ ' +
+		'<a href="#" id="toggle" onClick="toggleTimer()" >Stop Timer</a> - ' +
+		'<span id="status1">status1</span> - ' +
+		'<span id="status2">status2</span>' +
+		'</div>' +
+		'<div id="status3">start time: ' + new Date() + '</div>' +
+	'';
+	// '<a href="#" onClick="didIt()" >Did It</a>';
+
+	var submitted=false;
+
+	// JavaScript GET - use document.URL + this http://javascript.about.com/library/blqs1.htm
+	var minutes = "18";
+	// document.getElementById("status1").innerHTML = minutes;
+	status1.innerHTML = minutes;
+	var c = minutes;
+	var t;
+	var timerIsOn = 0;
+	var snd = new Audio("success.wav");
+	var sound = false;  
+
+	toggleTimer();
+
+	function setMinutes(mins) {
+		c = minutes = mins;
+		document.getElementById("status1").innerHTML = mins;
+		document.getElementById('status2').innerHTML = mins;
+	}
+
+	function toggleTimer() {
+		if (!timerIsOn) {
+			timerIsOn=1;    
+			timedCount();
+			document.getElementById('toggle').innerHTML = 'Stop Timer';
+		} else {
+			clearTimeout(t);
+			timerIsOn=0;
+			document.getElementById('toggle').innerHTML = 'Start';  
+		}
+	}
+
+	function timedCount() {
+		document.getElementById('status2').innerHTML = c;
+		c = c - 1;
+		if ( sound ) { 
+		snd.play();
+		sound = false;
+		}
+		if (c <= 0) {
+		c = minutes;
+		openNewBackgroundTab();
+		sound = true;
+		}
+		t = setTimeout(function(){timedCount();}, 60 * 1000);
+	}
+
+	function openNewBackgroundTab(){
+		var a = document.createElement("a");
+		a.target='_blank';
+		// a.href = "http://www.pandora.com/station/play/12161925770470805";
+		a.href = "http://www.pandora.com/";
+		var evt = document.createEvent("MouseEvents");    
+		evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, false, 0, null);
+		a.dispatchEvent( evt );
+	}
+
+	var form = document.createElement( 'div' );
+	document.body.appendChild( form );
+	form.innerHTML =
+	'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location=\'teodori.html?mins=28\';}"></iframe>' +
+
+	//'<form action="https://spreadsheets.google.com/formResponse?hl=en&amp;formkey=dHkydEwzTGNKYjFWMkhuRXZrRWpUUVE6MQ&amp;ifq" method="post" target="hidden_iframe" onsubmit="submitted=true;">' +
+	'<form action="https://spreadsheets.google.com/formResponse?hl=en&amp;formkey=dGp3dWdlZENhTk9sSnd3d2FfdkVPUVE6MA&amp;ifq" method="post" target="hidden_iframe" onsubmit="submitted=true;">' +
+	
+	
+	'<label for="entry_0">Fitness </label>' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'apt walk / \';" title="apartment walkabout">aw</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'15 squats / \';" title="squats">sq</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'15 squats + squeezes/ \';" title="squats + squeezes">sz</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'dance / \';" title="dance">da</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'warm-up / \';" title="warm-up">wu</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'push-ups / \';" title="push-ups">pu</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'plank moves / \';" title="plank moves">pm</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'weights #1 / \';" title="weights #1">w1</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'weights #2 / \';" title="weights #2">w2</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'weights #3 / \';" title="weights #3">w3</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'hundreds / \';" title="hundreds">hu</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'fives / \';" title="fives">fi</a> / ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'walkabout / \';" title="walkabout">wlk</a><br />' +
+	// activities
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'shower / \';" title="shower">sh</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'dishes + dressed / \';" title="dishes + dressed">dd</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'tidy / \';" title="tidy">ti</a> ' +
+
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'eating / \';" title="eating">eat</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'sitting / \';" title="sitting">sit</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'standing desk / \';" title="standing desk">st</a>/' +
+
+
+	// locations
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'bath / \';" title="bath">ba</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'bedroom / \';" title="bedroom">br</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'hall / \';" title="hall">h</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'kitchen / \';" title="kitchen">k</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'living room / \';" title="living room">l</a>/' +
+
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'laundry # / \';" title="laundry">la</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'recycling / \';" title="recycling">re</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'stairs / \';" title="stairs">str</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'Safeway / \';" title="Safeway">Sa</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'restaurant / \';" title="restaurant">res</a> ' +
+	'<a href="#" onclick="JavaScript:e0.innerHTML += \'people / \';" title="be with people">ppl</a> ' +
+	'<br><textarea name="entry.0.single" rows="1" cols="50" id="entry_0" autofocus="autofocus"></textarea>' +
+
+	'<br><label for="entry_2">Food </label>' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'carrots / \';" title="carrots / hummus">car</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'cereal / \';" title="cereal">cer</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'cheese shreds / \';" title="cheese shreds">che</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'chocolate / \';" title="chocolate">cho</a> ' +
+
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'college cheese / \';" title="college cheese">cc</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'coleslaw / \';" title="coleslaw">col</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'nuts / \';" title="nuts">n</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'rice + veggies / \';" title="rice + veggies">ri</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'popcorn / \';" title="popcorn">po</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'salad / \';" title="salad">sa</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'prepared dish / \';" title="prepared dish">pre</a> | ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'coffee / \';" title="coffee">cf</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'wine / \';" title="wine">wn</a> ' +
+	'<a href="#" onclick="JavaScript:e2.innerHTML += \'beer / \';" title="beer">br</a> ' +
+	'<br><textarea name="entry.2.single" rows="1" cols="50" id="entry_2"></textarea>' +
+
+	'<br><label for="entry_1">Task </label>' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'admin / \';" title="Admin: file this / shoeboxed / mint / statements">adm</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'code / \';" title="coding">cod</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'communicate / \';" title="Communicate: [c]alling / [t]exting / [e]mailing">com</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'help / \';" title="Help: blogging / helping (sps / fogg / three.js etc)">hlp</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'learn / \';" title="Learn: reading / learning / studying">lrn</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'live / \';" title="Live: eat / sleep / play / love">liv</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'plan / \';" title="Plan: Evernote / Dashboard">pln</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'preserve / \';" title="Preserve: bookmark tidy / email tidy / photos / slim the repository / file organize & publicize / backup / dropbox / crashplan">pre</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'record / \';" title="Record: diary / quantified life / dash[b]oard">rec</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'simplify / \';" title="Simplify: reduce outgoings - link2exchange / dreamhost /  sugarsync">smp</a><br /> ' +
+
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'email / read + triage / \';" title="email - triage">emlT</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'email / compose / \';" title="email - compose">emlC</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'call / \';" title="call">cal</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'mail + paper / \';" title="mail + paper">ma</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'surf + news / \';" title="surf + news">su</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'text / \';" title="text">txt</a> ~ ' +
+
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'dashboard / \';" title="dashboard - teodori">dsh</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'Incomplete Nature / \';" title="Incomplete Nature">in</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'jaanga / \';" title="jaanga">jng</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'Urban Data Challenge / \';" title="Urban Data Challenge">udc</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'algebraic surfaces / \';" title="Algebraic Surfaces">as</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'FGx / \';" title="FGx">fgx</a> ' +
+
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'GitHub / \';" title="GitHub">ghb</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'Evernote / \';" title="Evernote">evn</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'Notepad / \';" title="Notepad">np+</a> ' +
+
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'documentation / \';" title="documentation">doc</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'Shoeboxed / \';" title="Shoeboxed">shu</a> ' +
+	'<a href="#" onclick="JavaScript:e1.innerHTML += \'summary / \';" title="summary">sum</a> ' +
+
+	'<br><textarea name="entry.1.single" rows="2" cols="50" id="entry_1"></textarea>' +
+	'<br><input type="hidden" name="pageNumber" value="0">' +
+	'<input type="hidden" name="backupCache" value="">' +
+	'<input type="submit" name="submit" value="Did It!" accesskey="D"> ' +
+
+	'<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdGp3dWdlZENhTk9sSnd3d2FfdkVPUVE&hl=en#gid=0" target="_blank">stretchtimer ss</a> ' +
+	'<a href="https://spreadsheets.google.com/ccc?key=0Akg809SWki8tdE8yM1kwdkpXSUJCZlZMcGRXbktWanc#gid=17" target="_blank">checklist ss</a>' +
+
+	'<br></form>';
+
+	// form.innerHTML += document.URL;
+
+	var e0 = document.getElementById('entry_0');
+	var e1 = document.getElementById('entry_1');
+	var e2 = document.getElementById('entry_2');
+
+</script>
+</body>
+</html>
