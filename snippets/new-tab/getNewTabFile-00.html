@@ -16,7 +16,7 @@
 	var news =
 
 		'<a href=https://nytimes.com/ target=_blank>nytimes</a>' +
-			'&nbsp;<a href=https://www.nytimes.com/pages/technology/ target=_blank>tch</a>' + b +
+			' <a href=https://www.nytimes.com/pages/technology/ target=_blank>tch</a>' + b +
 		'<a href=http://drudgereport.com target=_blank>drudge</a>' + b +
 		'<a href=http://boingboing.net/blog/ target=_blank>boing</a>' + b +
 		'<a href=http://lifehacker.com/ target=_blank>lifehacker</a>' + b +
@@ -122,12 +122,7 @@
 		contents.id = 'contents';
 		contents.innerHTML =
 
-			'<div id=header class=col >' +
-				( 'theoNewwwTab &#x2766;' ).link( "" ) +
-				' &nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>' +
-			'</div>' + b +
-
-			'<div class=col style=margin-left:20px;width:200px;overflow:hidden; >' + news + '</div>' +
+			'<div id=header class=col >' + ( 'theoNewwwTab &#x2766;' ).link( "") + '</div>' + b +
 
 			'<div id=col1 class=col style=width:200px;overflow:hidden; > </div>' +
 
@@ -140,6 +135,8 @@
 			'<div id=col5 class=col style=margin-left:20px;width:250px;overflow:hidden; > </div>' +
 
 			'<div id=col6 class=col style=margin-left:10px;width:35px; > </div>' +
+
+			'<div id=col7 class=col style=margin-left:20px;width:200px;overflow:hidden; >' + news + '</div>' +
 
 			'<div id=col8 class=col style=margin-left:20px;width:200px;overflow:hidden; >' + items + '</div>' +
 
