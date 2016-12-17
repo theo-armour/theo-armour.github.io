@@ -11,6 +11,8 @@ Text Expansion
 See also: http://www.keyboard-and-mouse-sharing.com/index.html
 
 
+
+
 ## https://textexpander.com/
 
 * iPhone, Mac & Windows
@@ -26,8 +28,8 @@ See also: http://www.keyboard-and-mouse-sharing.com/index.html
 theo@evereverland.net
 
 t.armour@gmail.com
- 
 
- t.armour@gmail.com 
+
+ t.armour@gmail.com
 
 theo@evereverland.net

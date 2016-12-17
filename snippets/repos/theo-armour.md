@@ -3,6 +3,13 @@
 # https://theoarmour.github.io
 
 
+## Snippets
+
+### Dashboard
+
+* Add twitter feed
+* Add facebook feed
+
 
 
 ### newTabPage
@@ -11,7 +18,7 @@
 * Add readme
 
 
-### UCSF
+## UCSF
 
 [] Copy femur-heart-ux=csf
 
