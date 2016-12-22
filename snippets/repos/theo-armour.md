@@ -20,8 +20,13 @@
 
 ## UCSF
 
-[] Copy femur-heart-ux=csf
+[] Email to Monash
+[] Source 3D colon
+
 
 Dr Bradley Monash
 * Bradley.Monash@ucsf.edu
 * http://profiles.ucsf.edu/bradley.monash
+Dr Sanford
+Dr Rodriguez
+
