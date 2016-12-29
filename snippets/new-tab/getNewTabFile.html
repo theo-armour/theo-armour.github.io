@@ -3,7 +3,7 @@
 <head>
 <meta charset=utf-8 >
 <title>theoNewTab</title>
-<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1' >
 <meta name=description content='' >
 <meta name=keywords content='WebGL,Three.js,Tween.js,JavaScript,GitHub,FOSS,3D,STEM' >
 <meta name=date content='2016-11-30' >
@@ -22,8 +22,8 @@
 		'<a href=http://lifehacker.com/ target=_blank>lifehacker</a>' + b +
 		'<a href=http://slashdot.net/ target=_blank>slashdot</a>' + b +
 		'<a href=http://techmeme.com/ target=_blank>techmeme</a>' + b +
-		'<a href=http://news.ycombinator.com/ target=_blank>hacker_news</a>' + b +
 		'<a href=http://reddit.com target=_blank>reddit</a>' + b +
+		'<a href=http://news.ycombinator.com/ target=_blank>hacker_news</a>' + b +
 		'<a href=http://kottke.org target=_blank>kottke</a>' + b +
 		'<a href=http://swiss-miss.com target=_blank>swiss-miss</a>' + b +
 		'<a href=http://techcrunch.com target=_blank>tc</a>' +
@@ -44,6 +44,27 @@
 		'<a href=http://youtube.com target=_blank>youtube</a>' + b +
 	'';
 
+
+	var jaangaIo =
+		b +
+		'jaanga' + b +
+		'<a href=http://jaanga.github.io/demo/ target=_blank > demo </a> <a href=https://github.com/jaanga/jaanga.github.io/tree/master/demo target=_blank > gh </a>' + b +
+		'<a href=https://jaanga.github.io/request-jaanga-blog-posts.html target=_blank > blog </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/ target=_blank > cookbook html </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs target=_blank > ckbk three.js </a>' + b +
+		'<a href=http://jaanga.github.io/documents/ target=_blank > documents </a> <a href=https://github.com/jaanga/jaanga.github.io/tree/master/documents target=_blank > gh </a>' + b +
+		'<a href=http://jaanga.github.io/equirec/index.html target=_blank > equirec </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/outer-space target=_blank > outer space </a>' + b +
+		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/tutorials target=_blank > tutorials </a>' + b +
+
+		b +
+		'<a href=http://dl.dropboxusercontent.com/u/4732486/dashboard-2/dashboard2.html target=_blank>dashboard</a>' + b +
+
+		'<a href= target=_blank >  </a>' +
+	'';
+
+
+
 	var items =
 
 		'<a href=https://www.evernote.com/home target=_blank>evernote</a>' + b +
@@ -56,14 +77,14 @@
 		'<a href=https://slack.com target=_blank>slackk</a>' + b +
 		b +
 		'<a href=https://flickr.com target=_blank>flickr</a> <a href=https://flickr.com/bbn66 target=_blank>bbn66</a>' + b +
-		'<a href=http://websightdesign.com target=_blank>wsd</a>' + b +
+		'<a href=http://websightdesign.com target=_blank>websight&nbsp;design</a>' + b +
 		b +
 		'<a href=http://stackoverflow.com/ target=_blank>stacko\'flow</a>' + b +
 		'<a href=http://pandora.com target=_blank>pandora</a>' + b +
 
 
 		b +
-		'<a href=http://threejs.org target=_blank >Three</a>' +
+		'<a href=http://threejs.org target=_blank >three.js</a>' +
 			' <a href=https://github.com/mrdoob/three.js target="_blank">gh</a>' + b +
 
 		'<a href=http://wikihouse.github.io/viewer-experiments/ target=_blank>wikihous</a>' +
@@ -73,22 +94,6 @@
 		b +
 	'';
 
-
-	var specials =
-		b +
-		'<a href=http://dl.dropboxusercontent.com/u/4732486/dashboard-2/dashboard2.html target=_blank>dashboard</a>' + b +
-		b +
-		'<a href=http://jaanga.github.io/demo/ target=_blank > demo </a> <a href=https://github.com/jaanga/jaanga.github.io/tree/master/demo target=_blank > gh </a>' + b +
-		'<a href=https://jaanga.github.io/request-jaanga-blog-posts.html target=_blank > blog </a>' + b +
-		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/ target=_blank > cookbook html </a>' + b +
-		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs target=_blank > ckbk three.js </a>' + b +
-		'<a href=http://jaanga.github.io/documents/ target=_blank > documents </a> <a href=https://github.com/jaanga/jaanga.github.io/tree/master/documents target=_blank > gh </a>' + b +
-		'<a href=http://jaanga.github.io/equirec/index.html target=_blank > equirec </a>' + b +
-		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/outer-space target=_blank > outer space </a>' + b +
-		'<a href=https://github.com/jaanga/jaanga.github.io/tree/master/tutorials target=_blank > tutorials </a>' + b +
-
-		'<a href= target=_blank >  </a>' +
-	'';
 
 
 	init();
@@ -186,6 +191,7 @@
 
 	}
 
+
 	function callbackTheoArmour( xhr ) {
 
 		var response, repos, repo, arr1, arr2;
@@ -209,7 +215,7 @@
 
 		}
 
-		col5.innerHTML = 't-a' + b + arr1.join( b ) + b + specials;
+		col5.innerHTML = 't-a' + b + arr1.join( b ) + b + jaangaIo;
 
 		col6.innerHTML = b + arr2.join( b );
 
