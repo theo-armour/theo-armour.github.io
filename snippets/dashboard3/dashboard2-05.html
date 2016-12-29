@@ -7,7 +7,7 @@
 <style>
 	h1 { margin: 0; padding: 0; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
 	0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3),
-	0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba( 0,0,0,0.2 ),
+	0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
 	0 20px 20px rgba(0,0,0,.15); }
 </style>
 </head>
@@ -25,13 +25,13 @@
 
 		var css = document.body.appendChild( document.createElement('style') );
 		css.innerHTML =
-			'body { font: bold 10pt monospace; margin: 0; padding: 0; /* overflow: hidden; */ }' +
+			'body { font: bold 10pt monospace; margin: 0; padding: 0; /* overflow: hidden; */}' +
 			'a { color: #44e;} ' +
 		'';
 
 		var header = document.body.appendChild(document.createElement( 'div' ) );;
 		header.style.cssText = 'left: 10; margin:0; padding: 0; position: absolute; top: 0; ';
-		header.innerHTML='<a href=""><h1>theo dashboard</h1></a>';
+		header.innerHTML='<a href=""><h1>teodori</h1></a>';
 
 		menu = header.appendChild( document.createElement( 'div' ) );
 
@@ -44,32 +44,32 @@
 			'&src=t.armour%40gmail.com&color=%232952A3' +
 			'&src=f0g8s583oqqvdmsbq1nbg0hsgg%40group.calendar.google.com&color=%23125A12' +
 			'&src=3j17jdl2sm000uvda3t3tvetu8%40group.calendar.google.com&color=%23B1365F' +
-			'&src=%23contacts%40group.v.calendar.google.com&color=%230D7813' +
-	  		'&src=en.usa%23holiday%40group.v.calendar.google.com&color=%23B1440E' +
-
+			'&src=%23contacts%40group.v.calendar.google.com&color=%230D7813' +z
 //&src=french__en%40holiday.calendar.google.com&color=%23528800' +
-// not  	'&src=6opmuhdntvimdoq72v7r62nsk5mhojf7%40import.calendar.google.com&color=%232F6309' +
+
+// not  			'&src=6opmuhdntvimdoq72v7r62nsk5mhojf7%40import.calendar.google.com&color=%232F6309' +
 //			'&src=i_2602z306zcd3bz5eb0zd1f4za897z906fzaa5d%23sunrise%40group.v.calendar.google.com&color=%235229A3' +
-//  		'&src=p%23weather%40group.v.calendar.google.com&color=%23182C57&ctz=America%2FLos_Angeles' +
+	  		'&src=en.usa%23holiday%40group.v.calendar.google.com&color=%23B1440E' +
+//  			'&src=p%23weather%40group.v.calendar.google.com&color=%23182C57&ctz=America%2FLos_Angeles' +
 		'';
 
 
 // center ~cdiary
 
 		if2 = document.body.appendChild( document.createElement( 'iframe' ) );
-		if2.style.cssText = 'height: 98%; left: 20%; position: absolute; top: 0px; width: 50%; ' ;
+		if2.style.cssText = 'height: 98%; left: 20%; position: absolute; top: 0px; width: 38%; ' ;
 
 // right top
 		var if3 = document.body.appendChild( document.createElement( 'iframe' ) );
-		if3.style.cssText = 'height: 100px; left: 71%; position: absolute; top: 0px; width: 28%; ';
+		if3.style.cssText = 'height: 10%; left: 58.5%; position: absolute; top: 0px; width: 41%; ';
 //		if3.src = 'https://dl.dropbox.com/u/4732486/dashboard-2/teodori.html?mins=18';
 //		if3.src = 'https://googledrive.com/host/0B0g809SWki8tMEl1eXExRFhWNFU';
 		if3.src='../dashboard3/teodori.html';
 
 // right bottom
-		var if4 = document.body.appendChild( document.createElement( 'iframe' ) );
-		if4.style.cssText = 'height: ' + ( window.innerHeight - 150 ) + 'px;  left: 71%; position: absolute; top: 150px; width: 28%; ';
-		if4.src = '../fidgetty/fidgetty-r3.html';
+//		var if4 = document.body.appendChild( document.createElement( 'iframe' ) );
+//		if4.style.cssText = 'height: 37%;  left: 58.5%; position: absolute; top: 62%; width: 41%; ';
+//		if4.src = 'https://docs.google.com/spreadsheet/pub?key=0Akg809SWki8tdGp3dWdlZENhTk9sSnd3d2FfdkVPUVE&single=true&gid=0&range=A1%3AE30&output=html';
 
 // January
 		TA['d0101'] = '1hH6NdnJ7z0eEa6q67JLuiGTOpiNMMZuuuqRxol1GOf0';
@@ -518,8 +518,8 @@
 			'<a href="#" onclick="changeDay( -1 );">' + prevFile + '&lt;</a> ' +
 			'<a href="#" onclick="changeDay( 0 );">' + dayFile +'</a> ' +
 			'<a href="#" onclick="changeDay( 1 );"> &gt;' + nextFile + '</a> ' +
+			'<a href="https://www.google.com/calendar/" target="_blank">cal</a> ' +
 			'<a href="https://drive.google.com/?authuser=0#folders/0B0g809SWki8tZGM4NjI0ZDAtNTRjMi00MGRmLWJmNjQtYmU0NzRhZTdkODZh" target="_blank">diary</a>' +
-			' ~ <a href="https://www.google.com/calendar/" target="_blank">cal</a> ' +
 		'' ;
 	}
 </script>
