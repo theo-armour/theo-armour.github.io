@@ -910,6 +910,15 @@ Math.atan2() is passed separate x and y arguments, and Math.atan() is passed the
 	function sech( a ){ return Math.sech( a ); }
 
 
+// ### META
+
+See theo-armour.github.io/ucsf2/pookeepon-go/
+See https://github.com/ladybug-analysis-tools/ladybug-web/blob/gh-pages/ladybug-web-via-github-api-r2.html#L188-L200
+See http://stackoverflow.com/questions/7524585/how-do-i-get-the-information-from-a-meta-tag-with-javascript
+
+	document.head.querySelector( '[name=description]' ).content;
+
+
 
 
 // NAMESPACE
