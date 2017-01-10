@@ -635,6 +635,7 @@ input file + reader : see cookbook
 
 
 // ### FORMAT Numbers
+
 // see also String and >> Number
 
 	function addCommas( nStr ){
@@ -773,7 +774,7 @@ sandbox='allow-scripts'
 		window.history.back( 1 );
 
 		var xhr;
-		xhr= new XMLHttpRequest();
+		xhr = new XMLHttpRequest();
 		xhr.open( 'GET', fileName, true );
 		xhr.onload = function() {
 
@@ -965,7 +966,7 @@ Old school: number with commas
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-arr.from( obj )
+Array.from( obj )
 
 		var object = object || {};
 		var Object.getOwnPropertySymbols( object );  // ??
