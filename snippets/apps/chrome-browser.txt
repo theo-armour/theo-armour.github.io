@@ -1,0 +1,64 @@
+https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.2i0llw1ym
+
+
+1. Select DOM Elements
+
+
+$(‘tagName’) $(‘.class’) $(‘#id’) and $(‘.class #id’)
+
+ $$(‘.className’) will give you all the elements that have the class className, and $$(‘.className’)[0]and $$(‘.className’)[1]
+
+
+
+2. Convert Your Browser Into An Editor
+
+document.body.contentEditable=true
+
+document.designMode = "on";
+
+
+<div contenteditable="true">
+  This text can be edited!
+</div>
+
+
+3. Find Events Associated with an Element in the DOM
+
+getEventListeners($('selector'))
+
+4. Monitor Events
+
+
+
+5. Find the Time Of Execution of a Code Block
+
+console.time('myTime'); //Starts the timer with label - myTime
+
+for(var i=0; i < 100000; i++){
+  2+4+5;
+}
+
+console.timeEnd('mytime'); //Ends the timer with Label - myTime
+
+//Output - myTime:12345.00 ms
+
+6. Arrange the Values of a Variable into a Table
+var myArray=[{a:1,b:2,c:3},{a:1,b:2,c:3,d:4},{k:11,f:22},{a:1,b:2,c:3}]
+console.table(myArray)
+
+7. Inspect an Element in the DOM
+inspect($('#6370'))
+
+inspect($('a')[1])
+
+8. List the Properties of an Element
+dir($('selector'))
+
+
+9. Retrieve the Value of your Last Result
+$_
+
+10. Clear the Console and the Memory
+clear{}
+
+or Ctrl-L
