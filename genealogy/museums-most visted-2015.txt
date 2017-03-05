@@ -1,0 +1,100 @@
+8,600,000 Louvre PARIS
+6,820,686 British Museum LONDON
+6,533,106 Metropolitan Museum of Art NEW YORK
+6,002,251 Vatican Museums VATICAN CITY
+5,908,254National Gallery LONDON
+5,291,797 National Palace Museum TAIPEI
+4,712,581Tate Modern LONDON
+4,104,331 National Gallery of Art WASHINGTON, DC
+3,668,031 State Hermitage Museum ST PETERSBURG
+3,440,000 Musée d’Orsay PARIS
+3,432,325 Victoria and Albert Museum LONDON
+3,249,591 Reina Sofía MADRID
+3,235,104 Somerset House LONDON
+3,129,680 National Museum of Korea SEOUL
+3,084,624 Museum of Modern Art NEW YORK
+3,060,000 Centre Pompidou PARIS
+2,772,829 Tokyo Metropolitan Art Museum TOKYO
+2,762,143 National Folk Museum of Korea SEOUL
+2,696,666 Museo Nacional del Prado MADRID
+2,466,311 National Art Center Tokyo TOKYO
+2,411,311 *National Gallery of Victoria MELBOURNE
+2,345,666 Rijksmuseum AMSTERDAM
+2,289,023 Centro Cultural Banco do Brasil RIO DE JANEIRO
+2,157,637 Moscow Kremlin Museums MOSCOW
+2,148,242 *National Galleries of Scotland EDINBURGH
+2,145,486 National Portrait Gallery LONDON
+2,039,226 *Getty LOS ANGELES
+1,971,146 Galleria degli Uffizi FLORENCE
+1,923,504 *Shanghai Museum SHANGHAI
+1,914,880 Tokyo National Museum TOKYO
+1,908,744 Van Gogh Museum AMSTERDAM
+1,738,089 Grand Palais PARIS
+1,626,825 State Tretyakov Gallery MOSCOW
+1,615,224 Museo Soumaya MEXICO CITY
+1,576,511 Saatchi Gallery LONDON
+1,567,310 National Museum of Scotland EDINBURGH
+1,500,761 *FAMSF SAN FRANCISCO
+1,500,000 MuCEM MARSEILLES
+1,486,171 Acropolis Museum ATHENS
+1,415,397 Galleria dell'Accademia FLORENCE
+1,378,126 *Instituto Tomie Ohtake SÃO PAULO
+1,343,450 Australian Centre for Moving Image MELBOURNE
+1,301,277 Musée du Quai Branly PARIS
+1,300,000 National Portrait Gallery/SAAM WASHINGTON, DC
+1,284,519 Tate Britain LONDON
+1,276,127 Palazzo Ducale VENICE
+1,268,560 Centro Cultural Banco do Brasil SÃO PAULO
+1,261,552 Kelvingrove Art Gallery and Museum GLASGOW
+1,192,567 Museum of Fine Arts BOSTON
+1,190,000 *National Art Museum of China BEIJING
+1,181,861 *Queensland Art Gallery/GoMA BRISBANE
+1,162,124 Teatre-Museu Dalí FIGUERES
+1,133,285 Whitney Museum NEW YORK
+1,126,954 Österreichische Galerie Belvedere VIENNA
+1,103,211 Guggenheim Bilbao BILBAO
+1,101,565 MMCA SEOUL
+1,096,608 Royal Academy of Arts LONDON
+1,089,206 Gyeongju National Museum GYEONGJU
+1,065,471 Royal Ontario Museum TORONTO
+1,041,395 LACMA LOS ANGELES
+1,031,027 Imperial War Museum LONDON
+1,026,509 Centro Cultural Banco do Brasil BRASÍLIA
+1,008,125 Museu Picasso BARCELONA
+1,004,649 Palazzo Reale MILAN
+1,000,000 Fondation Louis Vuitton PARIS
+995,335 Serpentine Galleries LONDON
+965,491 Museo Thyssen-Bornemisza MADRID
+942,463 Montreal Museum of Fine Arts MONTREAL
+936,839 Birmingham Museum BIRMINGHAM
+892,827 Museum of Fine Arts HOUSTON
+873,402 Guggenheim Museum NEW YORK
+849,779 Minneapolis Institute of Arts MINNEAPOLIS
+840,249 Ashmolean Museum OXFORD
+823,092 Museu Coleção Berardo LISBON
+820,850 Palais de Tokyo PARIS
+812,116 National Museum in Krakow KRAKOW
+810,000 Deutsches Historisches Museum BERLIN
+775,020 CaixaForum Barcelona BARCELONA
+772,426 Huntington Library SAN MARINO
+770,000 Musée de l’Orangerie PARIS
+767,413 Kunsthistorisches Museum VIENNA
+767,355 *Musées Royaux des Beaux-Arts BRUSSELS
+765,471 Musée Picasso PARIS
+762,110 Art Gallery of Ontario TORONTO
+760,106 Ullens Center for Contemporary Art BEIJING
+757,961 Museo Egizio TURIN
+757,286 Art Gallery of South Australia ADELAIDE
+752,587 Meijer Gardens & Sculpture Park GRAND RAPIDS
+751,797 Philadelphia Museum of Art PHILADELPHIA
+750,000 Pergamonmuseum BERLIN
+747,263 Museum of Liverpool LIVERPOOL
+738,988 Dallas Museum of Art DALLAS
+733,470 Detroit Institute of Arts DETROIT
+730,422 Israel Museum JERUSALEM
+726,000 Neues Museum BERLIN
+724,580 Louisiana Museum of Modern Art HUMLEBÆK
+724,257 Stedelijk Museum AMSTERDAM
+718,637 National Gallery of Ireland DUBLIN
+717,211 Museu Nacional d’Arte de Catalunya BARCELONA
+713,627 Museu d’Art Contemporani BARCELONA

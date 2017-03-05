@@ -22,6 +22,8 @@ https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML
 https://www.maxcdn.com/
 https://rawgit.com/
 
+https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js
+
 
 <script src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js ></script>
 

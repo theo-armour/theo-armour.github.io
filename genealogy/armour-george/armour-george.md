@@ -21,7 +21,7 @@ A cablegram yesterday morning from Bright, England conveyed the sad, yet not who
 
 It is some three years since Mr Armour first begin to experience those physical troubles which finally culminated in his demise. His complaint was rheumatism, and it settled at last into rheumatism of the heart. In May of last year, yielding to the advice of his physician, in the hope that his condition would be improved by the air, he sailed for England. Proceeding to London, he spent some two months in that city but the hoped-for change failed to come, and accordingly sort the more salubrious climate of Brighton, where he has since remained. He gradually failed in strength however, and, about two months ago, had a renewed attack of the disease?? from which he had so long suffered. He rallied somewhat, but, as the sequel shows, only for a time. During the weeks since that critical juncture Mr Armour was confined to his room, his condition gradually becoming more alarming until 1 o'clock yesterday morning, when he expired. During his last moments Mr Armour was attended by his wife and daughter Mary, and by his son William and his wife formerly Miss Berthe Cobb, of this city. The remains will be brought to Chicago for interment <sic>.
 
-Mr Armour was born in Campbeltown, Argyllshire, Scotland
+**Mr Armour was born in Campbeltown, Argyllshire, Scotland**
 in 1811, and what is in his 69th year at the time of his death. He came in this country a year or two after attaining his majority, and located in Ottawa, Illinois. He embarked in merchandising there, and subsequently lived in Joliet and Lockport, following the same business. A better opportunity presenting itself, however, he became a contractor with Mr George Steel. The new firm built a section of the Illinois and Michigan Canal, a portion of the Chicago, Burlington & Quincy Railroad, and a portion of the Rock Island. Their business was very profitable. Along in the 50’s Mr Armour moved to Chicago. In 1853? he formed a partnership with Wesley Munger, and the firm erected the first modern elevator in the site now occupied by the “Air-Line” house. Previous to that time there was but one elevator here, a small affair owned by Mr Steel and operated by horse-power. The firm prospered, Hiram Wheeler was taken in, and other elevators work by Munger, Wheeler & Co.
 
 The Firm of Armour, Dole & Co.,
@@ -49,13 +49,12 @@ Like thousands of others, Mr Armour suffered largely by the Chicago Fire, his ho
 Besides the members of the family above referred to, Mr Armour leaves two other sons, one of whom, Allison, is at Yale, and the other, George, is in business here. A fourth son died about ten years ago of the same disease as his father, in spite of an extended European trip.
 
 
-George Armour
-Bio
+### Bio
 http://www.marketswiki.com/wiki/George_Amour
 
 https://fr.wikipedia.org/wiki/George_Armour
 
-Obituary
+### Obituary
 
 http://query.nytimes.com/mem/archive-free/pdf?res=9507EFDF103CEE3ABC4C52DFB066838A699FDE
 
@@ -72,7 +71,7 @@ Biodictionary A
 https://books.google.com/books?id=bN8CAAAAYAAJ&pg=PA133&lpg=PA133&dq=%22george+armour%22&source=bl&ots=v5r3LG-gSt&sig=0vvkwrL1as5-etkIAxjtu7gLZFY&hl=en&ei=br96TMuyHo--sAO088zsCg&sa=X&oi=book_result&ct=result&resnum=8&ved=0CCoQ6AEwBzgK#v=onepage&q=%22george%20armour%22&f=false
 Addresses
 
-Railroad Contractor
+### Railroad Contractor
 
 https://books.google.com/books?id=wP80AQAAMAAJ&pg=PA1041&lpg=PA1041&dq=george+armour+railroad+foreman
 Portrait and Biographical Album of Otoe and Cass Counties, Nebraska ..., Part 2
@@ -99,7 +98,7 @@ Chicago Yesterdays: A Sheaf of Reminiscences
 Steel  & GA
 The first large steam elevator that was ever built in Chicago for handling grain from railroad tracks was on the North side, on the river west of Wells Street. It was built by George A Gibbs and E W Griffin of Gibbs, Griffin & Company. Gibbs told me that people thought he was crazy to undertake such a thing and that it would not pay. A year or two later George Steel, a Scotchman, built another elevator just west of Gibbs, Griffin and Company. He sold out to Wesley Munger and George Armour. Munger add on a small meal at Waukegan, which had burned down, and George Armour had been a contractor on the canal. Both were at this time end of moderate means, but their early development of the grain-elevator business made for them  great fortunes.
 
-Wounded 1857
+### Wounded 1857
 
 http://www.ipsn.org/chiviol.html
 A Republican businessman named George Armour challenged the votes of some Irishmen who did not reside within ward boundaries. Armour was set upon by a crowd of poll-watching ruffians, kicked, beaten about the head, and dragged through the streets by the hair until his friends came to the rescue. Another Wentworth worker was not nearly so lucky. He was attacked, stabbed, and chased clear down to La Salle Street where he jumped onto a dangerously thin sheet of river ice to escape his pursuers. The man escaped but not before one of the 7th Ward Irishers crashed through the ice and drowned in the bone-chilling waters of the Chicago River.
@@ -107,12 +106,13 @@ Barbara Armour
 
 http://archives.chicagotribune.com/1898/02/03/page/12/article/grieve-for-mrs-armour
 
-John William Armour ~ son
+### John William Armour ~ son
 
 https://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=112151648
 John William Armour (1851 - 1865)
 George Allison Armour (1852 - 1853) ??
-John Armour ~ brother
+
+### John Armour ~ brother
 
 https://en.wikipedia.org/wiki/Armour's_Warehouse
 1861
@@ -162,9 +162,9 @@ GA = Grain king
 http://chicagoscots.net/Name%20List/Name%20List%20A.htm
 one of the "Grain Kings" of his time was a loyal and liberal Presbyterian.
 
-People
+## People
 
-Allison Vincent Armour
+### Allison Vincent Armour
 
 https://www.loc.gov/item/ggb2005022781/
 Photo with vanderbilt
@@ -186,11 +186,13 @@ https://books.google.com/books?id=M9FdCwAAQBAJ&pg=PA36#v=onepage&q&f=false
 https://books.google.com/books?id=Be8QAAAAIAAJ&pg=PA84
 
 http://mssa.library.yale.edu/obituary_record/1925_1952/1940-41.pdf
-AVA 0bit
-William T Baker
+* AVA 0bit
+
+### William T Baker
 
 http://www.marketswiki.com/wiki/William_T._Baker
-Captain R C Bristol
+
+### Captain R C Bristol
 https://books.google.com/books?id=mkBSAAAAYAAJ
 Buffalo up to 1840
 
@@ -207,7 +209,8 @@ February 8, 1861 -- Description of First Steamboats to Reach Chicago
 
 https://books.google.com/books?id=xih_ki9bLyQC&pg=PA179
 P179 ~ 1847 ~ Bristol builds first steam powered grain elevator in chicago
-George Dole
+
+### George Dole
 http://www.encyclopedia.chicagohistory.org/pages/643.html
 Innovation, Invention, and Chicago Business
 An early innovator named George Dole arrived from Detroit in 1831. The following summer the firm of Newberry and Dole erected what is thought to be Chicago's first frame building used for business—specifically, the slaughtering and packing of cattle and hogs. While slaughtering for local consumption had taken place in Chicago for some time, Newberry and Dole were the first to pack meat for export. In 1839, the firm began shipping wheat from Chicago's first grain elevator, which was located at the north end of the Rush Street bridge. Consequently, Dole is generally credited with being the father of Chicago's meatpacking industry as well as of its shipping, warehouse, and elevator systems. He innovated the market mechanisms that would make Chicago a major transshipment point.
