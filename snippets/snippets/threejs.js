@@ -211,11 +211,27 @@ if ( ! Detector.webgl ) {
 }
 
 
+// ### Edges
+
+
+			var edgesGeometry, edgesMaterial, edges,
+
+			edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
+			edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
+			edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+			mesh.add( edges );
+
 // ### Events
 
 see assets
 
 
+// ### EXTRUDE
+
+		geometry = new THREE.ExtrudeGeometry( shape, { amount: 10, bevelEnabled: false } );
+        material = new THREE.MeshNormalMaterial();
+        mesh = new THREE.Mesh( geometry, material ) ;
+        scene.add( mesh );
 
 
 // GEOMETRY MATRIX / Edits
@@ -223,6 +239,8 @@ see assets
 		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
 		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2, 3 ) );
 		geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, -30 ) );
+
+
 
 
 

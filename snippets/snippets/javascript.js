@@ -94,6 +94,8 @@ just use 'this' wherever possible
 	}
 
 
+////////////////
+
 	var xmlHttp;
 	var byteArray;
 	var changes = 0
@@ -1047,14 +1049,6 @@ RegExp Modifiers
 (x) Matches 'x' and remembers the match, as the following example shows. The parentheses are called capturing parentheses.
 
 
-`
-
-
-dddd
-
-
-`
-
 
 // ### SAVE FILE
 //file:///C:/Users/Theo/Dropbox/Public/code-cookbook/0-cookbook-general/file-save-api/file-saver-2015-02-26/file-saver.html
@@ -1085,10 +1079,10 @@ dddd
 	}
 
 
-### settimeout
+### setTimeout
 
 
-setTimeout(function(){ controls.autoRotate = true;; }, 3000);
+setTimeout(function(){ controls.autoRotate = true; }, 3000);
 
 // ### SPEECH SYNTH
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
