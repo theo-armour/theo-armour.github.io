@@ -75,6 +75,7 @@ just use 'this' wherever possible
 		xhr = new XMLHttpRequest();
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', fileName, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
 		xhr.onload = callback;
 		xhr.send( null );
 
