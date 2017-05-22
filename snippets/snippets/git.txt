@@ -2,6 +2,15 @@ Notes Git
 
 
 
+$ git add -vA . << verbose and All
+$ git commit -am “updated experimental”
+
+$git reset --hard
+- must add the hard for it to work...
+- alows a pull to work after you have screwed up the local directory
+
+
+
 
 
 $ git config -l
@@ -27,7 +36,7 @@ gitub reference setup ~ git portable setupg
 Reminders
 differentiate between origin and upstream
 :*O:/gad::git add -vA .
-:*O:/gh::git checkout 
+:*O:/gh::git checkout
 :*O:/gcom::git commit -am ""
 :*O:/gn::git config --list
 :*O:/gp::git push origin gh-pages
@@ -40,7 +49,7 @@ $ git fetch upstream
 $ git merge upstream/master
 
 What to do with unfamiliar folder
-$ git 
+$ git
 $ git config -l
 $ git status
 $ git show  << type “q” to quit
@@ -69,24 +78,26 @@ $ git commit -am “updated experimental”
 $ git checkout master
 $ git merge experimental
 $ git add -vA .
-$ git commit -a -m “updated master”git 
+$ git commit -a -m “updated master”git
 $ git push origin master
 
 try git add A to delete folders?git
 
-Adding release numbers >> git Tag 
+Adding release numbers >> git Tag
 $ git tag -a r34
 see also git describe
 brings up Vim >> edit file > press Exc key >> :wq to save and exit
 
 Git remote
-http://help.github.com/create-a-repo/ 
+http://help.github.com/create-a-repo/
+
+$ git remote -v
 
 $ git remote rm origin
 $ git remote add origin git@github.com:theo-armour/threo.js.git
 
 cloning a branch >> git clone
-http://help.github.com/fork-a-repo/ 
+http://help.github.com/fork-a-repo/
 $ git clone git@github.com:username/appname.git
 
 Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository (visible using git branch -r), and creates and checks out an /initial branch that is forked from the cloned repository’s currently active branch.

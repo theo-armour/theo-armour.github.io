@@ -1,5 +1,38 @@
-https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.2i0llw1ym
 
+## Chrome
+
+--allow-file-access-from-files
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files
+
+chrome://apps
+chrome://extensions/
+chrome://flags/
+chrome://history/
+chrome://bookmarks/
+chrome://downloads/
+chrome://internals/
+chrome://gpu/
+chrome://flags/
+chrome://hardware ??
+
+
+## PDFs on Chrome
+
+Settings > Show advanced settings > Privacy > Content Settings > PDF Documents > Un-check checkbox
+
+
+For using OpenGL in Chrome, you need to start it with a command line option:
+--use-gl=desktop
+--allow-file-access-from-files
+
+
+
+================================================================================
+
+debugger;
+When the debugger is invoked, execution is paused at the debugger statement. It is like a breakpoint in the script source.
+
+https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.2i0llw1ym
 
 1. Select DOM Elements
 
@@ -26,13 +59,14 @@ document.designMode = "on";
 
 getEventListeners($('selector'))
 
+
 4. Monitor Events
 
 
 
 5. Find the Time Of Execution of a Code Block
 
-console.time('myTime'); //Starts the timer with label - myTime
+console.time( 'myTime' ); //Starts the timer with label - myTime
 
 for(var i=0; i < 100000; i++){
   2+4+5;

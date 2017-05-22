@@ -1,4 +1,4 @@
-﻿// 
+﻿//
 
 It’s much easier to recover from no abstraction than the wrong abstraction
 
@@ -12,7 +12,7 @@ http://www.w3schools.com/howto/howto_js_animate.asp
 
 
 ### CHARACTERS
-http://unicode.org/emoji/charts/full-emoji-list.html 
+http://unicode.org/emoji/charts/full-emoji-list.html
 http://www.unicode.org/charts/
 https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 
@@ -193,11 +193,12 @@ name			Sets or returns the value of the name attribute in a frame/iframe
 noResize		Sets or returns the value of the noresize attribute in a frame
 scrolling		Sets or returns the value of the scrolling attribute in a frame/iframe	NOT working
 src				Sets or returns the value of the src attribute in a frame/iframe
+srcdoc
 width			Sets or returns the value of the width attribute in an iframe
 
 http://www.w3schools.com/tags/att_iframe_sandbox.asp
 
-sandbox = 'allow-scripts' 
+sandbox = 'allow-scripts'
 
 ### META
 

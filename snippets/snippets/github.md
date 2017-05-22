@@ -9,6 +9,21 @@ Notes GitHub
 
 for gists only 2016-10-09 ~
 
+See also
+
+C:\Users\Theo\Dropbox\Public\git-repos\jaanga.github.io\cookbook-html\examples\github-api-rss\github-api.md
+
+
+Link to specific lines of source code:
+
+https://github.com/geoffmcl/map-test2/blob/gh-pages/nav.html#L247-299
+
+https://github.com/blog/699-making-github-more-open-git-backed-wikis
+
+http://stackoverflow.com/questions/1170166/can-i-checkout-github-wikis-like-a-git-repository:
+git clone git@github.com:jaanga/terrain.wiki.git
+
+
 ################ API
 
 https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+

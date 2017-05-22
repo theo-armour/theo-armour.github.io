@@ -63,37 +63,65 @@ just use 'this' wherever possible
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_binary_data
 
 
-		var fileName;
+		let fileName;
 
 		requestFile( fileName );
 
 
 	function requestFile( fileName ) {
 
-//		var fileName, text, lines;
+//		let fileName, text, lines;
 
 		xhr = new XMLHttpRequest();
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', fileName, true );
 		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
 		xhr.onload = callback;
 		xhr.send( null );
 
 		function callback( xhr ) {
 
-			text = xhr.target.response;
+//			let response, text;
+
+			response = xhr.target.response;
+			text = JSON.parse( response );
+console.log( '', text );
 
 //			lines = text.split(/\r\n|\n/);
 			lines = text.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
-
 			console.log( lines[ 8 ] );
 			console.log( lines.length );
+
 //			lastMod = xhr.target.getResponseHeader ( "Last-Modified" );
 			console.log( xhr.target.getResponseHeader ( "Last-Modified" ) );
+
 		}
 
 	}
 
+
+////////////////////
+
+
+	function requestFile( fileName, callback, index ) {
+
+		var xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', fileName, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+		xhr.onload = function( xhr ){ callback( xhr, index ) };
+		xhr.send( null );
+
+		function callback( xhr, index ) {
+
+console.log( index, xhr.target.response );
+
+		}
+
+	}
 
 ////////////////
 
@@ -588,6 +616,11 @@ console.log( '', files );
 
 		'<input type=radio id=inpRad1 name=rad onclick=setRad(); value=rad1 checked /> radio 1 <input type=radio name=rad id=inpRad2 onclick=setRad(); value=rd2 /> radio 2 ' +
 
+
+
+
+// TEXTAREA
+
 // '<textarea id=txtItem cols=25 rows=5>bits</textarea>' +
 	var textarea = document.body.appendChild( document.createElement( 'textarea' ) );
 	textarea.style.cssText = 'height: ' + (window.innerHeight - 150) + 'px; width: 50%; ';
@@ -601,6 +634,8 @@ console.log( '', files );
 
 input file + reader : see cookbook
 
+
+		<input onClick="this.select(); size=8 > // text
 
 
 
@@ -624,7 +659,9 @@ input file + reader : see cookbook
 
 		for ( var i = 0; i < arr.length; i++ ) {
 
-			selFiles[ i ] = new Option( arr[ i ][ 0 ], arr[ i ][ 1 ] );
+//			selFiles[ i ] = new Option( arr[ i ][ 0 ], arr[ i ][ 1 ] );
+
+selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 
 //			item = arr[ i ];
 //			selXXX.appendChild( document.createElement( 'option' ) );
@@ -1020,7 +1057,7 @@ Conditional Operator
 		var extension = fileName.split( '.' ).pop().toLowerCase();
 
 
->>> /xxx(.*?)xxx/si
+>>> /xxx(.*?)xxx/gi
 
 * (.*?) Matches anything in between
 * May need to have a backslash: \(.*?)
@@ -1028,6 +1065,8 @@ Conditional Operator
 .match( /<h1(.*?)>(.*?)<\/h1>/ )
 
 stringWithQuotes.replace(/["']/g, "");
+
+		MNU.files = MNU.tableOfContents.replace( /(.*)\((.*)\)(.*)/gi, '$2' ).split( '\n' );
 
 
 

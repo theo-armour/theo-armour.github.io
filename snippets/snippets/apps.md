@@ -1,16 +1,4 @@
 
-## Chrome
-
---allow-file-access-from-files
-"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files
-
-chrome://apps
-chrome://extensions/
-chrome://flags/
-chrome://history/
-chrome://bookmarks/
-chrome://downloads/
-chrome://internals/
 
 ## Leap
 http://js.leapmotion.com/
@@ -23,6 +11,7 @@ For development
 
 thwipo
 
+
 ### Notepad++
 
 column select alt-shift-cursor keys
@@ -32,7 +21,7 @@ http://stackoverflow.com/questions/1764635/aspell-dictionary-cant-be-opened
 Settings > Preferences
 
 General ~ check doc panel list both / Tab bar: hide
-Editing ~ Line Wrap > indent? 
+Editing ~ Line Wrap > indent?
 Backup ~ Remember current session... > uncheck
 Auto-Completion ~ Enable auto-completion > uncheck
 MISC.  ~ Document Switcher > enable > uncheck ~ Auto-indent > uncheck ~ Highlight tag attributes > uncheck
@@ -52,7 +41,8 @@ http://www.liberkey.com/en/forums/support-en/solved-notepad-and-spellchecker-plu
 
 
 
-### Startup Menu 
+### Startup Menu
+
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 or
 C:\Users\theo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
@@ -60,42 +50,24 @@ C:\Users\theo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 ### mklink ~ symlinks
 
-	http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/ 
+	http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/
 
 
 	> mklink /D C:\TestFolder C:\Users\Geek\TestFolder
 
 
-## GitHub
-
-$ git add -vA . << verbose and All
-$ git commit -am “updated experimental”
-
-$git reset --hard
-- must add the hard for it to work...
-- alows a pull to work after you have screwed up the local directory
-
-
-Link to specific lines of source code:
-
-https://github.com/geoffmcl/map-test2/blob/gh-pages/nav.html#L247-299
-
-https://github.com/blog/699-making-github-more-open-git-backed-wikis
-
-http://stackoverflow.com/questions/1170166/can-i-checkout-github-wikis-like-a-git-repository:
-git clone git@github.com:jaanga/terrain.wiki.git 
 
 
 ## jsFiddle
 
-http://blog.jsfiddle.net/ 
-https://twitter.com/#!/js_fiddle 
+http://blog.jsfiddle.net/
+https://twitter.com/#!/js_fiddle
 
-http://jsfiddle.net/theo/dashboard/ 
+http://jsfiddle.net/theo/dashboard/
 
 How to show the final product? - use this to get the source code
 
-http://jsfiddle.net/qGPTT/3/embedded/ 
+http://jsfiddle.net/qGPTT/3/embedded/
 
 
 ## Putty

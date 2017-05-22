@@ -229,9 +229,9 @@ see assets
 // ### EXTRUDE
 
 		geometry = new THREE.ExtrudeGeometry( shape, { amount: 10, bevelEnabled: false } );
-        material = new THREE.MeshNormalMaterial();
-        mesh = new THREE.Mesh( geometry, material ) ;
-        scene.add( mesh );
+		material = new THREE.MeshNormalMaterial();
+		mesh = new THREE.Mesh( geometry, material ) ;
+		scene.add( mesh );
 
 
 // GEOMETRY MATRIX / Edits
@@ -751,7 +751,7 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 // ### SHAPES
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Core/Path
 // http://threejs.org/docs/#Reference/Extras.Core/Shape
-// http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/ExtrudeGeometry
+
 
 
 //http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/ExtrudeGeometry
@@ -762,9 +762,16 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		var geometry, material, mesh;
 		var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
+//
+
+		shape = new THREE.Shape( [ v2( 0, 10), v2( 0, 50), v2( 30, 60), v2( 40, 10) ] );
+		geometry = shape.extrude( { amount: 10, bevelEnabled: false } );
+
+//
 		shape = new THREE.Shape();
 
 		shape.absarc( 0, 0, 50, 0, 2 * Math.PI );
+
 
 
 
@@ -961,3 +968,6 @@ FaceNormalsHelper
 	var sin = function( a ){ return Math.sin( a ); };
 
 	var sign = function( n ) { return Math.sign( n ); };
+
+	var sin = Math.sin;
+	var cos = Math.cos;
