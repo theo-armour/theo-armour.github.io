@@ -2,9 +2,7 @@
 
 
 # GitHub API
-pat
 
-ed7a5e3e458585dbe8c94ce39c322957404af138
 
 
 https://api.github.com/rate_limit

@@ -162,15 +162,15 @@ https://raw.githubusercontent.com/sagemath/sage/master/src/sage/functions/jacobi
 
 * just list the sub-folders
 
-curl -i -H 'Authorization: 34555a60a42e4e68f3ccc6d9e5c94da82ec2fd38' https://api.github.com/theo-armour
+curl -i -H 'Authorization: xxxxx' https://api.github.com/theo-armour
 
-curl -u theo-armour:34555a60a42e4e68f3ccc6d9e5c94da82ec2fd38 https://api.github.com/theo-armour
+curl -u theo-armour:xxxxxx https://api.github.com/theo-armour
 
 curl -i -u theo-armour -H "X-GitHub-OTP: 634579" -d '{"scopes": ["repo", "user"], "note": "getting-started"}' https://api.github.com/authorizations
 
-curl -i -H 'Authorization: token 34555a60a42e4e68f3ccc6d9e5c94da82ec2fd38' https://api.github.com/user
+curl -i -H 'Authorization: token xxxxxx' https://api.github.com/user
 
-curl -i -H 'Authorization: token 34555a60a42e4e68f3ccc6d9e5c94da82ec2fd38' https://api.github.com/user/repos
+curl -i -H 'Authorization: token xxxxxx' https://api.github.com/user/repos
 
 
 
