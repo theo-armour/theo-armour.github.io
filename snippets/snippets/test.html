@@ -1,7 +1,21 @@
-<div class="title"></div>
+<!doctype html>
+<html lang=en >
+<head>
+<title></title>
+<meta charset=utf-8 />
+</head>
+<body>
+<script>
 
-<div id="div"></div>
+document.body.style.cssText = ' font: bold 12pt monospace; ';
 
-<div></div>
-<p>nn</p><p>vvvv</p>
-<blockquote></blockquote>
+var info = document.body.appendChild( document.createElement( 'div' ) );
+
+info.innerHTML = '<a href="" ><h1>' + location.pathname.split( '/' ).pop() + '</h1></a>' +
+'<div id=msg1 ></div>' +
+
+'';
+
+</script>
+</body>
+</html>

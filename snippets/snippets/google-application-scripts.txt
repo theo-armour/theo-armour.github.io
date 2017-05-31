@@ -5,6 +5,7 @@ Wow!
 http://ramblings.mcpher.com/Home/excelquirks/htmlservice/parallel
 
 ## Triggers
+********************************************************************************
 
 * https://developers.google.com/apps-script/reference/script/clock-trigger-builder
 * https://developers.google.com/apps-script/guides/triggers/
@@ -18,10 +19,12 @@ Everything from scratch with new trigger
 No persistent variables = except in scriptproperties
 Most update a spreadsheet
 
+Difficult to stop a script. Triggers just keep on coming!!
+2017-05-25 Next trigger may have to be over 60 seconds after the current trigger
 
-**********************************************************
 
 ## OAuth2 for Apps Script
+********************************************************************************
 
 https://mashe.hawksey.info/2016/08/working-with-github-repository-files-using-google-apps-script-examples-in-getting-writing-and-committing-content/
 * Much easier than I feared ;-)
