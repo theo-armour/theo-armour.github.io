@@ -1,24 +1,11 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/alt-stoic/#alt-stoic/README.md "View file as a web page." ) </span>
 
 
-<!--
-<a href="https://theo-armour.github.io/" >theo-armour.github.io</a> &raquo; 
--->
-
-[Alt Stoic Read Me]( https://theo-armour.github.io/#alt-stoic/README.md )
+[Alt-Stoic Read Me]( https://theo-armour.github.io/#alt-stoic/README.md )
 ===
-_say something fun here_
+_say something Stoic here_
 
-<!--
-<img src="" style=display:none; width=800 >
--->
 
-<iframe id=ifr src=https://theo-armour.github.io/alt-stoic/index.html width=100% height=600px ></iframe>
-_Alt Stoic_
-
-## Full Screen: [ Alt Stoic ]( https://theo-armour.github.io/alt-stoic/index.html )
-
-***
 
 ## Concept
 
@@ -32,6 +19,13 @@ Each pattern describes a problem which occurs over and over again in our environ
 patterns are descriptions of common problems and proposal for the solutions that can be used repeatedly every time the problem is encountered and producing an different outcome.
 
 -->
+
+If you are an atheist, then establishing guidelines/precepts/codes of behavior is an on-going work-in-progress.
+
+A fruitful opportunity may avail itself in the thoughts of the Stoics
+
+These pages attempt to provide a broad glimpse into the varietty of Stoic thinking both archaic an modern
+
 
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
@@ -52,27 +46,6 @@ patterns are descriptions of common problems and proposal for the solutions that
 * Click on title to reload
 
 
-## Things you can do using this script
-
-* Click the three bars( 'hamburger menu icon' ) to slide the menu in and out
-* Press Control-U/Command-Option-U to view the source code
-* Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
-
-
-## Things you can do by editing the code
-
-* Open the source code for this file: Click the 'Edit' box in the top right hand corner
-* Click the 'Raw' icon and save the raw file to your computer
-* Once you've downloaded the file, you can click it to run it.
-* Open the file with a text editor
-
-
-<!--
-## Users
-_where used_
-
-Intended for xxx
--->
 
 
 ## Links of Interest
