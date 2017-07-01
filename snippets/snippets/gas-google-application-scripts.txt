@@ -99,23 +99,7 @@ function onOpen() {
 
 * multiple menus OK
 
-## hello world
 
-  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheetSource = spreadsheet.getSheetByName( 'test' );
-
-function init() {
-
-  sheetSource.getRange( 'A2:E5' ).clear();
-
-  sheetSource.getRange( 2, 2 ).setValue( 'Hello,' );
-  sheetSource.getRange( 2, 3 ).setValue( 'World!' );
-
-  values = sheetSource.getRange( 2, 2, 1, 2 ).getValues();
-
-  sheetSource.getRange( 4, 2 ).setValue( [ [ values[ 0 ][ 0 ] + ' ' + values[ 0 ][ 1 ] ] ] );
-
-}
 
 ## messaging
 
@@ -146,7 +130,7 @@ function showToast() {
 function showLog() {
 
 	var mySpreadsheets = DocsList.getFilesByType("spreadsheet");
-	Logger.log(mySpreadsheets );
+	Logger.log( mySpreadsheets );
 }
 
 
@@ -166,10 +150,10 @@ https://developers.google.com/apps-script/reference/spreadsheet/sheet
 .getLastRow() ~ Returns the position of the last row that has content.
 .getMaxRows() ~ Returns the current number of rows in the sheet, regardless of content.
 
-    sheet.setActiveSelection( "A1" );
-    sheet.setActiveSelection( sheetTwitter.getRange( i + 2, 1 ) );
+sheet.setActiveSelection( "A1" );
+sheet.setActiveSelection( sheetTwitter.getRange( i + 2, 1 ) );
 
-	sheet.getRange( 5, 4, 1, 2 ).setValues( [ ['Symbols count: ', symbolCount ] ] );
+sheet.getRange( 5, 4, 1, 2 ).setValues( [ ['Symbols count: ', symbolCount ] ] );
 
 
 
@@ -184,14 +168,7 @@ function sortSheet() {
 
 }
 
-## Add data
 
-function appendRow () {
-
-  var sheet = SpreadsheetApp.getActiveSheet();
-  sheet.appendRow( [ Math.random(), Math.random(), Math.random()] );
-
-}
 
 
 function setValues() { // push data

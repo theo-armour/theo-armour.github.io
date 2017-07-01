@@ -16,9 +16,7 @@ chrome://flags/
 chrome://hardware ??
 
 
-## PDFs on Chrome
-
-Settings > Show advanced settings > Privacy > Content Settings > PDF Documents > Un-check checkbox
+## PDFs on ChromeSettings > Show advanced settings > Privacy > Content Settings > PDF Documents > Un-check checkbox
 
 
 For using OpenGL in Chrome, you need to start it with a command line option:
@@ -86,7 +84,11 @@ inspect($('#6370'))
 inspect($('a')[1])
 
 8. List the Properties of an Element
+
 dir($('selector'))
+
+The dir method displays an interactive list of the object passed to it.
+console.dir(document.body);
 
 
 9. Retrieve the Value of your Last Result

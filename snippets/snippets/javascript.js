@@ -63,10 +63,13 @@ just use 'this' wherever possible
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_binary_data
 
 
+// https://crossorigin.me/
+
 		let fileName;
 
 		requestFile( fileName );
 
+	}
 
 	function requestFile( fileName ) {
 

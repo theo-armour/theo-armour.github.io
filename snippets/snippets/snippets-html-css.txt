@@ -16,6 +16,7 @@ http://unicode.org/emoji/charts/full-emoji-list.html
 http://www.unicode.org/charts/
 https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 
+
 ☎
 ©
 🔃
@@ -25,6 +26,7 @@ https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 
 ☰ hamburger / trigram for heaven &#9776;
 
+new tab/external link: &#x1F5D7; 🗗
 link &#128279; 🔗
 
 home: &#x2302;
