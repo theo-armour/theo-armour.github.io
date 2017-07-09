@@ -14,9 +14,3 @@ http://threejs.org/examples/webgl_custom_attributes.html
 
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files
 
-windows find
-
-https://technet.microsoft.com/en-us/library/cc732459.aspx
-
-
-findstr /p /s /i "word word"  *.html
