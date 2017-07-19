@@ -69,6 +69,7 @@ $ sudo startunity <<
 Ctrl+Alt+Back and Ctrl+Alt+Forward plus Ctrl+Alt+Refresh
 
 Use the 'Full screen' and 'switch window' buttons
+
 ## Switching
 
 * To switch back to Chrome OS on the fly simply hit Alt+Ctrl+Shift+Back.

@@ -13,8 +13,8 @@ curl -i https://api.github.com/users/theo-armour
 	fileName = 'https://api.github.com/repos/jaanga/sp500/contents/trades';
 
 
-Tree + Contents
-===
+# Tree + Contents
+
 
 ## Folder Contents
 

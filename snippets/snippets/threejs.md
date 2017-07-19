@@ -1,3 +1,5 @@
+
+
 		geometry = new THREE.BoxGeometry( 10, 10, 10 );
 		material = new THREE.MeshNormalMaterial();
 		mesh = new THREE.Mesh( geometry, material );
@@ -13,7 +15,7 @@
 
 		var color = new THREE.Color( 'grey' );
 
-		var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+		let v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 
 // Changes
 
@@ -274,8 +276,9 @@ see assets
 // TorusGeometry( radius, tube, radialSegments, tubularSegments, arc )
 		geometry = new THREE.TorusGeometry( 4, 0.5, 15, 30 );
 
+// https://threejs.org/docs/#api/geometries/TorusKnotGeometry
 // TorusKnotGeometry(radius, tube, radialSegments, tubularSegments, p, q, heightScale );
-		geometry = new THREE.TorusKnotGeometry( 30, 10, 100, 12 );
+		geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
 
 		.applyMatrix()
 		.clone()
@@ -286,7 +289,7 @@ see assets
 		.center();
 
 
-// ### GEOMETRY / Lathe
+### GEOMETRY / Lathe
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/LatheGeometry
 // Class for generating meshes with axial symmetry. Possible uses include donuts, pipes, vases etc. The lathe rotate around the Z axis.
 // LatheGeometry(points, segments, phiStart, phiLength) - does not close automatically
@@ -311,7 +314,7 @@ see assets
 	}
 
 
-// ### GEOMETRY / Lines
+### GEOMETRY / LINE
 
 	function addLine( vertices ) {
 
@@ -371,16 +374,33 @@ see assets
 	}
 
 
-// ### GEOMETRY/ Loaders
+### GEOMETRY/ Loaders
+
+https://threejs.org/docs/#api/loaders/JSONLoader
+sse load-walt-r1.html
+
+	function loadWalt() {
 
 		loader = new THREE.JSONLoader();
-		loader.load( '../models/WaltHeadLo.js', function ( geometry ) {
-			geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -Math.PI / 2 ) );
-			geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( Math.PI / 2 ) );
-			material = new THREE.MeshNormalMaterial();
-			mesh = new THREE.Mesh( geometry, material );
-			scene.add( mesh );
-		} );
+		loader.load( 'https://threejs.org/examples/obj/WaltHeadLo.js',
+
+			function ( geometry ) {
+
+				geometry.computeFaceNormals();
+				geometry.computeVertexNormals();
+//				geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -Math.PI / 2 ) );
+//				geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( Math.PI / 2 ) );
+				geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 1, 1 ) );
+				geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, 0 ) );
+				material = new THREE.MeshNormalMaterial();
+
+				mesh = new THREE.Mesh( geometry, material );
+				scene.add( mesh );
+			}
+
+		);
+
+	}
 
 
 
@@ -457,7 +477,12 @@ starts at top / left and goes right and down
 
 
 
-// ### HELPERS
+### HELPERS / WIREFRAME
+
+https://threejs.org/docs/#api/helpers/AxisHelper
+
+		let axisHelper = new THREE.AxisHelper( 50 );
+		scene.add( axisHelper );
 
 		scene.add( new THREE.BoxHelper( mesh ) );
 
@@ -514,6 +539,10 @@ Creates a light at a specific position in the scene. The light shines in all dir
 
 
 		scene.add( new THREE.CameraHelper( lightDirectional.shadow.camera ) );
+
+
+
+
 
 
 // ### MATERIALS / textures> see below
@@ -872,7 +901,7 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 See files
 
 
-// Vector3
+###  Vector3
 http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 
 
@@ -889,17 +918,6 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 ### VECTOR
 
 		var map2fixed = function( vect ) { return vect.toArray().map( function( num ){ return num.toFixed( 3 ); } ) };
-
-
-// ### WIREFRAME HELPER
-
-		geometry = new THREE.ArrowHelper( dir, origin, length, hex )
-		geometry = new THREE.AxisHelper( 50 );
-		scene.add( new THREE.WireframeHelper( mesh ) );
-
-VertexTangentsHelper
-GridHelper
-FaceNormalsHelper
 
 
 

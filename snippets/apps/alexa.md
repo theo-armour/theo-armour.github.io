@@ -11,12 +11,28 @@
 
 
 Build a cheat sheet
-Add Tony flash brief items
+Tony Dub's flash brief items
+
+Today’s weather forecast
+NPR hourly news
+BBC world service
+Bloomberg market minute
+WSJ minute briefing
+WSJ tech news briefing
+CNN flash briefing
+CNBC flash briefing
+Digital Trends
+AP tech news
+Washing Post Politics brief
+The Daily (by the New York Times) (long, in depth stories)
+CBS news radio
+Alexa Things to try
+
 
 http://alexa.amazon.com/spa/index.html#lists/todos
 http://echo.amazon.com/
 http://echo.amazon.com/#help/call,
-
+https://www.amazon.com/gp/browse.html?node=16067214011
 
 ### Use These Anytime
 
@@ -28,6 +44,10 @@ Alexa, turn it up / louder.
 Alexa, volume 2 (Choose between 0-10)
 Alexa, next
 Alexa, can you repeat that?
+Alexa, play getting started video
+Alexa, where's my stuff? << track orders
+Alexa, tell me a joke
+Alexa, tell me a life hack
 
 Alexa, is my Safeway open?
 
@@ -48,6 +68,10 @@ Alexa, play comedy [or your artist of choice] station on Pandora
 
 ### Alarms & Timers
 
+Alexa, set alarm for 9:45 am
+Alexa, set a timer for 45 minutes
+Alexa, snooze
+Alexa, show me my timers
 
 ### Calendar
 
@@ -55,6 +79,21 @@ Alexa, show [me] my calendar
 Alexa, when is my next meeting?
 Alex, add an event
 
+### Shows, Podcasts and Radio
+
+Alexa, play the program Radiolab
+Alexa, play ESPN Radio
+
+## Discover Music
+
+Alexa, what song is this?
+Alexa, play Bob Dylan's first album
+Alexa, show me the lyrics
+
+### Prime Music
+
+Alexa, show Prime playlists
+Alexa, play my Miles Davis station
 
 ### Skills
 

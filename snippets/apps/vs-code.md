@@ -32,4 +32,4 @@ https://docs.emmet.io/cheat-sheet/
 To switch between views, press Ctrl+Shift+V in the editor. You can view the preview side-by-side (Ctrl+K V)
 
 
-*{{u|TonyTheTiger}}, thank you for the suggestions as to what to do next. It would be really cool to get to [[WP:DYK]] status, but as a newb it's probably better to for me follow a slower, more gentle route - and work hard on getting the article to [[WP:GAC]] level. And, as I now understand things a new [[WP:GAC]] article can also be a [[WP:DYK]]. So I think I will start with a [[WP:PR]] - which I will do in a day or two once I have read up more on the process. Again thank you for your time and effort. I will keep you apprised of progress
+

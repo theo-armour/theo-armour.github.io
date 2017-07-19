@@ -1,11 +1,43 @@
 
 
 
+## 2017-07-13
+
+* face colors
 
 
+## 2017-07-11
 
-2016-12-02
-================================================================================
+More work on Ladybug Beta
+* Balloon quote
+
+## 2017-07-09
+
+Very happy with Glitch.com
+
+Back to using Notepad++
+* Easier to track and open files with sidebar
+
+Acer Helios 300 Predator is very nice.
+* Fast
+* Keyboard has issues for me
+* Everything needed is installed and running
+* Took about a day and a half of intermittent activity
+
+Ladybug Tools demo
+* Coming along nicely
+* Can do everything Mostapha does with simple W3Schools code
+
+meshLine Demo
+* Coming along nicely
+* Can now turn location.hash into JSON with a couple of lines of code
+	* Big new insight - will help with lots of projects
+	* As many parameters as you want, in any order
+
+	
+	
+## 2016-12-02
+
 
 playing with vscode settings
 
@@ -13,8 +45,7 @@ cleaning up bookmarks
 
 
 
-2016-11-30
-===
+## 2016-11-30
 
 https://developer.microsoft.com/en-us/windows/hardware/3d-print/3d-builder-resources
 Has 3D models
@@ -29,8 +60,7 @@ more fixes to TooToo R2
 newTab file coming along
 
 
-2016-11-29
-===
+## 2016-11-29
 
 Liking VS Code more and more / And still love Atom Editor and NotePad++
 * Loving:
@@ -45,8 +75,7 @@ use tabs
 
 
 
-2016-11-28
-===
+## 2016-11-28
 
 VS Code looks to be better than Atom Editor
 
@@ -66,16 +95,14 @@ Added 'Apps I Use' post for Beyond Compare
 
 
 
-2016-11-27
-===
+## 2016-11-27
 
 Add more shortcuts to Auto Text Expander
 
 
-2016-11-17
-===
+## 2016-11-17
 
-eeePC: Next day. Intenet connection failed over night. Trying again. Looking good.
+eeePC: Next day. Internet connection failed over night. Trying again. Looking good.
 
 Testing testing 1 2 3. Can we edit using Codeanywhere with my Google Pixel C? Looks good.
 

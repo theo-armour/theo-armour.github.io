@@ -1,23 +1,31 @@
-Header Tags
-===
+http://www.emoji-cheat-sheet.com/
+
+:large_blue_circle:
+
+
+## Header Tags
+
 #Header 1
 ##Header 2
 ###Header 3
 ####Header 4
 
-Bold and Italics
+## Bold and Italics
+
 **Bold**
 _Italicize_ or *italicize*
 
-Ordered List
+## Ordered List
+
 1. Item (Hit Return key = automatic numbers or bullets)
 2. Item
 3. Item
 
-Blockquotes
->Angle bracket on the first line of the blockquote.
+## Blockquotes
 
-Code
+> Angle bracket on the first line of the blockquote.
+
+## Code
 
     // Code is just text indented a bit
     which(is_easy) to_remember();
@@ -27,7 +35,7 @@ Code
 // Markdown extra adds un-indented code blocks too
 
 if (this_is_more_code == true && !indented) {
-    // tild wrapped code blocks, also not indented
+    // tilde wrapped code blocks, also not indented
 }
 
 ~~~
@@ -67,7 +75,4 @@ Task lists
 - [ ] task
 - [x] task
 
-http://www.emoji-cheat-sheet.com/
-
-:large_blue_circle:
 

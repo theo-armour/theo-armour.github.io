@@ -1,9 +1,17 @@
-# egypt parallel constitution
+# Egypt parallel constitution
 
 
+
+[Needed: a description of the common problems people were facing in 2011 and how or why this was a good proposal for the solution.
+
+Think about
+
+A mission: a statement of a rationale, applicable now as well as in the future
+
+A vision: a descriptive picture of a desired future state]
 ## 2017-07-03 ~ 
 
-* Add links to anchors in constition
+* Add links to anchors in constitution
 * FAQ
 
 

@@ -1180,6 +1180,16 @@ setTimeout( function(){alert("Hello")},3000);
 		if ( parseInt( timer,10 ) %2 === 0 ){ ...
 
 
+## TRY /CATCH 
+
+try {
+ throw 'myException'; // generates an exception
+}
+catch (e) {
+
+// statements to handle any exceptions
+	logMyErrors(e); // pass exception object to error handler
+}
 
 
 // ### WINDOW

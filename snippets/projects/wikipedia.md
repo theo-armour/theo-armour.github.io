@@ -1,5 +1,17 @@
 
 
+
+[[Category:Dermatologic societies]]
+
+[[Category:Lua-based templates]]
+[[Category:Templates using data from Wikidata]]
+[[Category:Medicine infobox templates]]
+[[Category:Medical external link templates]]
+[[Category:External link templates using Wikidata]]
+[[Category:Infobox templates using Wikidata]]
+
+
+
 ## Wikipedia Museums
 
 #### Wikipedia: friend or foe?
@@ -20,4 +32,6 @@
 * Well listed in all portals and projects
 * Make sure well-represented in Wikipedia Commons
 * Make sure your images are the canonical images
+
+
 

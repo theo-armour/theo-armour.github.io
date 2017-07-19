@@ -4,6 +4,12 @@
 		css.innerHTML ='body { font: 600 12pt monospace; margin: 0; overflow: hidden; }';
 
 
+		title = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
+
+
+
+
+
 	var menu, info;
 
 	function addCSS() {
