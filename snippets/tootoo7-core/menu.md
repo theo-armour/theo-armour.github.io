@@ -12,7 +12,9 @@
 
 ### [html-very-long menu]( #html-very-long.html )
 
+<!--
 ### [set-options-test]( #set-options-test.html )
+-->
 
 ### [threejs-basic]( #threejs-basic.html )
 
@@ -24,6 +26,3 @@
 
 [contributing]( #contributing.md )
 
-***
-
-### [Index Dev]( index-dev.html )
