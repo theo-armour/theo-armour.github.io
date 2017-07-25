@@ -6,16 +6,51 @@
 
 
 
+## Math Function Plot
+
+	function drawGround() {
+
+		geometry = new THREE.PlaneGeometry( 100, 100, 100, 100 );
+
+		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
+
+		for ( var i = 0; i < geometry.vertices.length; i++ ) {
+
+			vertex = geometry.vertices[ i ];
+
+			vertex.y = 10 * Math.sin( vertex.x / 10 ) + 5 * Math.cos( vertex.z / 10 ) ;
+
+		}
+
+		geometry.computeFaceNormals();
+		geometry.computeVertexNormals();
+
+		material = new THREE.MeshNormalMaterial( { side: 2 } );
+		ground = new THREE.Mesh( geometry, material );
+		scene.add( ground );
+
+
+	}
+
+
+## Lights
+
 	function addLights( size ) {
 
 // 2017-04-02 ~ http://jaanga.github.io/cookbook-threejs/templates/add-lights/template-threejs-lights-r2.html
 
 		let lightAmbient, lightDirectional, lightPoint;
-		size = size ? size : 100;
+		let size;
 
 		lightAmbient = new THREE.AmbientLight( 0x444444 );
 		scene.add( lightAmbient );
 
+		lightPoint = new THREE.PointLight( 0xffffff, 0.95 );
+		camera.add( lightPoint );
+		lightPoint.position = new THREE.Vector3( 0, 0, 1 );
+		scene.add( camera );
+
+		size = size ? size : 100;
 		lightDirectional = new THREE.DirectionalLight( 0xffffff, 0.5 );
 		lightDirectional.position.set( -size, size, size );
 		lightDirectional.shadow.camera.scale.set( 13, 15, 0.5 );
@@ -28,13 +63,12 @@
 
 		scene.add( new THREE.CameraHelper( lightDirectional.shadow.camera ) );
 
-		lightPoint = new THREE.PointLight( 0xffffff, 0.95 );
-		camera.add( lightPoint );
-		lightPoint.position = new THREE.Vector3( 0, 0, 1 );
-		scene.add( camera );
 
 	}
 
+
+
+## Shadows
 
 	function addShadows() {
 

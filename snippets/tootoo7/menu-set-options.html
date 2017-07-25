@@ -1,0 +1,57 @@
+
+<style>
+body, html { font: 12pt monospace; height: 100%; margin: 0; padding: 0px 5px 0 0px !important; overflow: hidden; }
+  
+input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 100%; }
+input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
+</style>
+
+<p>
+Pick a color <br><input type="color" id="colorWell" onchange="setColor( this );" style="width:100%" ><br>  
+</p>
+
+<p>
+  Width <input type="range" id="inpWidth" onchange="setWidth( this );" >
+</p>
+
+<p>
+  Opacity <input type="range" id="inpOpacity" onchange="setOpacity( this );">
+</p>
+
+<p>
+  
+  Map: <select id="inpMap" style="width:100%" ></select><br>
+  
+  <input type="checkbox" > Use map 
+  
+</p>
+
+<script>
+
+    function setColor( that ) {
+    
+    parent.parent.mainIframe.contentWindow.location.hash = "color:" + that.value.slice( 1 );
+
+    console.log( that.value );
+    
+  }
+
+  function setWidth( that ) {
+    
+    parent.location.hash = 'linewidth:' + ( 0.1 * that.value );
+
+    console.log( that.value);
+    
+  }  
+  
+  function setOpacity( that ) {
+    
+    parent.mainIframe.contentWindow.location.hash = 'opacity:' + (0.01 * that.value );
+
+    console.log( that.value );
+    
+  }
+
+</script>

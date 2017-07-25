@@ -1,3 +1,28 @@
+
+## MapBox
+
+https://api.mapbox.com/v4/mapbox.terrain-rgb/15/5242/12663.pngraw?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
+https://api.mapbox.com/v4/mapbox.terrain-rgb/0/0/0.pngraw?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+https://api.mapbox.com/v4/mapbox.terrain-rgb/7/20/49.pngraw?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
+
+height = -10000 + ((R * 256 * 256 + G * 256 + B) * 0.1)
+
+key from https://www.mapbox.com/mapbox-gl-js/example/map-tiles/
+http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v6/14/4823/6160.vector.pbf?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
+works!!!
+
+pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
+https://api.mapbox.com/v4/mapbox.streets/14/4823/6160.png?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
+
+http://tile.openstreetmap.org/7/20/49.png
+
+
+## 
 {
 	"vicinity": "xxx",
 	"latitude": 0,
@@ -24,6 +49,7 @@
 // EGNS / isle of Man
 // PHOG hawaii
 
+
 // San Francisco
 	var latitude = 37.796;
 	var longitude = -122.398;
@@ -31,18 +57,25 @@
 // Paris
 	var latitude = 48.8566;
 	var longitude = 2.3522;
+/*
 
 // Igualada Spain
-//	var latitude = 41.5861554761;
-//	var longitude = 1.6519343471;
+	var latitude = 41.5861554761;
+	var longitude = 1.6519343471;
 
 // VNLK
-//	var latitude = 27.71110193545;
-//	var longitude = 86.71228385040001;
+	var latitude = 27.71110193545;
+	var longitude = 86.71228385040001;
 
-// YGIL / Gilgandra
-//	var latitude = -31.7276314069;
-//	var longitude = 148.63915118805;
+// YGIL Gilgandra
+	var latitude = -31.7276314069;
+	var longitude = 148.63915118805;
+
+// PHOG hawaii
+	var latitude = 20.8968;
+	var longitude = -156.4329;
+
+*/
 
 more nice lat lon
 
@@ -55,6 +88,7 @@ more nice lat lon
 
 * http://oms.wff.ch/calc.php?baseurl=cylce&lat=47.629000&long=7.262000&longto=7.906000&latto=47.354000
 
+
 ## Tile Servers
 
 * http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_servers
@@ -64,7 +98,6 @@ more nice lat lon
 
 
 ## MATH
-
 
 
 	var pi = Math.PI, pi05 = pi * 0.5, pi2 = pi + pi;
@@ -104,10 +137,12 @@ more nice lat lon
 
 	function lat2tile( lat, zoom ) {
 
-		var pi = Math.PI
-		return Math.floor(( 1 - Math.log( Math.tan( lat * pi / 180) + 1 / Math.cos( lat * pi / 180)) / pi )/2 * Math.pow(2, zoom) );
+		var pi = Math.PI;
+
+		return Math.floor( ( 1 - Math.log( Math.tan( lat * pi / 180 ) + 1 / Math.cos( lat * pi / 180 ) ) / pi ) / 2 * Math.pow( 2, zoom ) );
 
 	}
+
 
 	function tile2lon( x, zoom ) {
 
@@ -123,6 +158,7 @@ more nice lat lon
 
 	}
 
+http://wiki.openstreetmap.org/wiki/Zoom_levels
 
 ### 
 

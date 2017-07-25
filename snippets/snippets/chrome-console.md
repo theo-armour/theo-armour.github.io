@@ -7,15 +7,15 @@
 ## URLs
 
 chrome://apps
+chrome://bookmarks/
+chrome://dino << hit the space bar
+chrome://downloads/
 chrome://extensions/
 chrome://flags/
-chrome://history/
-chrome://bookmarks/
-chrome://downloads/
-chrome://internals/
 chrome://gpu/
-chrome://flags/
 chrome://hardware ??
+chrome://history/
+chrome://internals/
 
 
 ## PDFs on ChromeSettings > Show advanced settings > Privacy > Content Settings > PDF Documents > Un-check checkbox
@@ -33,7 +33,7 @@ When the debugger is invoked, execution is paused at the debugger statement. It 
 
 https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.2i0llw1ym
 
-1. Select DOM Elements
+## 1. Select DOM Elements
 
 
 $(‘tagName’) $(‘.class’) $(‘#id’) and $(‘.class #id’)
@@ -59,23 +59,24 @@ document.designMode = "on";
 getEventListeners($('selector'))
 
 
-4. Monitor Events
+## 4. Monitor Events
 
 
 
-5. Find the Time Of Execution of a Code Block
+## 5. Find the Time Of Execution of a Code Block
 
-console.time( 'myTime' ); //Starts the timer with label - myTime
+console.time( 'timer 1' ); //Starts the timer with label - myTime
 
 for(var i=0; i < 100000; i++){
   2+4+5;
 }
 
-console.timeEnd('mytime'); //Ends the timer with Label - myTime
+console.timeEnd( 'timer 1' ); //Ends the timer with Label - myTime
 
 //Output - myTime:12345.00 ms
 
-6. Arrange the Values of a Variable into a Table
+## 6. Arrange the Values of a Variable into a Table
+
 var myArray=[{a:1,b:2,c:3},{a:1,b:2,c:3,d:4},{k:11,f:22},{a:1,b:2,c:3}]
 console.table(myArray)
 

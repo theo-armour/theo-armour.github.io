@@ -620,9 +620,11 @@ console.log( '', files );
 		'<input type=radio id=inpRad1 name=rad onclick=setRad(); value=rad1 checked /> radio 1 <input type=radio name=rad id=inpRad2 onclick=setRad(); value=rd2 /> radio 2 ' +
 
 
+		<input onClick="this.select();" size=8 > // highlight the text
 
 
-// TEXTAREA
+
+### FORM TEXTAREA
 
 // '<textarea id=txtItem cols=25 rows=5>bits</textarea>' +
 	var textarea = document.body.appendChild( document.createElement( 'textarea' ) );
@@ -638,11 +640,10 @@ console.log( '', files );
 input file + reader : see cookbook
 
 
-		<input onClick="this.select(); size=8 > // text
 
 
 
-// ### FORM SELECT
+### FORM SELECT
 
 // http://stackoverflow.com/questions/9895082/javascript-populate-drop-down-list-with-array
 
