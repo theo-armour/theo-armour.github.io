@@ -1,28 +1,28 @@
 
+The Obstacle is the Way
+===============================================================================
 
-Wikipedia
-
-The four cardinal virtues of the Stoic philosophy is a classification derived from the teachings of Plato:
-
-* wisdom (Sophia)
-* courage (Andreia)
-* justice (Dikaiosyne)
-* temperance (Sophrosyne).
-
-
-
+Ryan Holiday is my favorite Stoic auther these days
 
 In _The Obstacle is the Way_, Holiday divides stoic thinking into: perception, action and will
 
-I like this,
 
-Perception - how we look at our specific problems - attitude - approach p6
-	- See truth - neither good nor bad
-Actions - how we turn problems into opportunities
-Will - handle defeat and difficulty
-
+* Perception - how we look at our specific problems - attitude - approach p6
+	* See truth - neither good nor bad
+* Actions - how we turn problems into opportunities
+* Will - handle defeat and difficulty
 
 
+### Ryan Holiday Links
+
+
+* https://www.amazon.com/Obstacle-Way-Timeless-Turning-Triumph/dp/1591846358
+* https://www.amazon.com/exec/obidos/ASIN/0735211736
+* https://www.amazon.com/Ego-Enemy-Ryan-Holiday/dp/1591847818
+* http://ryanholiday.net/heres-everything-wrote-2016/
+* https://www.theguardian.com/lifeandstyle/2016/dec/11/how-would-the-stoics-cope-today
+* http://www.nytimes.com/2016/12/06/fashion/ryan-holiday-stoicism-american-apparel.html
+* http://boingboing.net/2016/12/19/heres-an-ancient-philosophy.html
 
 
 Perception
@@ -98,7 +98,7 @@ The art of not panicking
 I am in control, not my emotions, I see what is really going on. I am not going to get excited or upser
 
 
-###
+
 ### Practice Objectivity p30 / To be Objective
 
 The difference between observing and perceiving. The previous eye is weak. the observing eye is strong
@@ -178,13 +178,15 @@ Beyond an immediate negative reaction is opportunity
 No glass-half-full platitudes. There must be complete flip. Seeing through negative and into its corollary: the positive
 
 
-### Part II
-
-Problems are rarely as bad as we think. Rather they are precisely as bad as we think.
-
+***
 
 Action
 ================================================================================
+
+Problems are rarely as bad as we think. Rather they are precisely as bad as we think.
+
+### Part II
+
 
 We greet our obstacles with
 
@@ -218,7 +220,7 @@ Working at it works
 
 ### Iterate
 
-
+***
 
 Will
 ================================================================================
@@ -251,11 +253,24 @@ And prepare to start the cycle once more / Prepare to Start Again / p172
 
 ***
 
+_Further - non Holiday - thoughts_
+
+# Wikipedia
+
+The four cardinal virtues of the Stoic philosophy is a classification derived from the teachings of Plato:
+
+* wisdom (Sophia)
+* courage (Andreia)
+* justice (Dikaiosyne)
+* temperance (Sophrosyne).
+
+
 
 1. See clearly
 2. Act correctly
 3. Endure and accept
 
+Plus
 1. See things for what they are
 2. Do what we can
 3. Endure and bear what we must
@@ -266,3 +281,10 @@ Act
 Endure and accept
 
 But how to decide what to be acted upon?
+
+***
+
+We need thoughts that are modern. Replicating the life of two thousand years ago is not the way forward. We need to reinvent these ideas.
+
+Coping well with adversity is fine. But we also need to consider beauty, creativity, sex and more.
+
