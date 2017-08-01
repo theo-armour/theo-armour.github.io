@@ -24,6 +24,7 @@ In _The Obstacle is the Way_, Holiday divides stoic thinking into: perception, a
 * http://www.nytimes.com/2016/12/06/fashion/ryan-holiday-stoicism-american-apparel.html
 * http://boingboing.net/2016/12/19/heres-an-ancient-philosophy.html
 
+_the following is the start of a summary of Holiday's book_
 
 Perception
 ================================================================================
