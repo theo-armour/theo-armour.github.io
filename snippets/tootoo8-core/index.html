@@ -11,9 +11,8 @@
 -->
 <meta name=description content="File wrangler. Default index.html file. Opens HTML or Markdown files. Passes location.hash." >
 <meta name=keywords content="ShowDown,Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS" >
-<meta name=date content="2017-07-24" >
-<style>
-
+<meta name=date content="2017-07-31" >
+<style id="foo" >
 /* items mostly in tag/class/id then alphabetical order */
 
 body, html { font: 12pt monospace; height: 100%; margin: 0; /* overflow: hidden; */ }
@@ -22,16 +21,15 @@ a { color: crimson; }
 
 blockquote, pre { background-color: #eee; padding: 10px; }
 
-
-.center { height: 100%; left: 0; margin: 0 auto; max-width: 600px; padding: 0 0 0 55px; position: absolute; right: 0; }
+.center { border: 0px solid red; left: 0; margin: 0 auto; max-width: 600px; position: absolute; right: 0; }
 
 .ifr { border-width: 0; height: 100%; margin: 0; width: 100%; }
 
 .mainIframe { overflow: hidden; }
 
-.menu { height: 100%; overflow: hidden; }
-.menu a { text-decoration: none; }
-.menu a:hover, .menu a:focus{ color: #f1f1f1; }
+.menu { height: 100%; overflow: auto; }
+.menuSub a { text-decoration: none; }
+.menuSub a:hover, .menuSub a:focus{ color: #f1f1f1; }
 
 .menu h2, .menu h3, .menu h4, .menu p, .menu iframe { color: #555; }
 
@@ -49,15 +47,16 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 #hamburger:hover { cursor: pointer; opacity: 1; }
 
-#main { height: 100%; margin-left: 250px; transition: margin-left .5s; position: relative; }
+
+#main { height: 100%; margin-left: 250px; transition: margin-left .5s; position: absolute; top: 0; width: calc(100% - 250px); }
 
 
 #menu {
-	background-color: lightgray; box-sizing: border-box; height: 100%; left: 0; overflow: hidden;
+	background-color: lightgray; box-sizing: border-box; height: 100%; left: 0; overflow: auto;
 	position: fixed; top: 0; transition: 0.5s; width: 250px; z-index: 1;
 }
 
-#menuContents { border: 0px red solid; height: 100%; margin: 0; padding: 0 0 0 15px; overflow: auto; }
+#menuHead, #menuBody, #menuFoot { border: 0px red solid; margin: 0; padding: 0 0 0 15px;/* overflow: auto; */ }
 
 
 
@@ -91,7 +90,11 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	<div id = "menu" >
 
-	<div id = "menuContents" class = "menu" ></div>
+		<div id = "menuHead" class = "menuSub" ></div>
+
+		<div id = "menuBody" class = "menuSub" ></div>
+
+		<div id = "menuFoot" class = "menuSub" ></div>
 
 	</div>
 
@@ -105,16 +108,18 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 	<div id = "hamburger" onclick = "toggleNav();" > &#9776; slide</div>
 
 
-	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on GitHub" ><img src = "https://status.github.com/images/invertocat.png" > Edit this file</div>
+	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on GitHub" ><img src = "invertocat.png" > Edit this file</div>
 
 <!--
 
 	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on Glitch" ><img src = "https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-day.svg" > Edit this file</div>
 
 -->
+
 <script>
 
-  let projectName = 'theo-armour';
+
+	let projectName = '';
 
 
 	init();
@@ -122,9 +127,19 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	function init() {
 
+		let arr = location.pathname.split( '/' );
+
+		let p = arr.pop();
+
+		projectName = arr.pop();
+
 		showdown.setFlavor( 'github' );
 
-		requestFile( 'menu.md', menuContents );
+		requestFile( 'menu-head.md', menuHead );
+
+		requestFile( 'menu-body.md', menuBody );
+
+		requestFile( 'menu-foot.md', menuFoot );
 
 		onHashChange();
 
@@ -146,7 +161,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 //		document.title = url.split( '/' ).pop();
 
-		title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );;
+		title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );
 
 		document.title = title ? title + ' - ' + projectName : 'README - ' + projectName;
 
@@ -158,9 +173,9 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		} else if ( url.startsWith( 'menu' ) ) {
 
-			menu.innerHTML = '<div id=menuContents class=menu ></div>';
+			menuBody.innerHTML = '<div id=menuContents class=menu ></div>';
 
-			requestFile( url, menuContents );
+			requestFile( url, menuBody );
 
 		} else if ( url.startsWith( 'html' ) ) {
 
@@ -252,6 +267,8 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		xhr.onload = function() {
 
 			target.innerHTML = converter.makeHtml( xhr.responseText );
+
+			projectName = document.links[ 0 ].text;
 
 		};
 

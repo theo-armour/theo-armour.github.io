@@ -1,4 +1,5 @@
 
+		let geometry, material, mesh;
 
 		geometry = new THREE.BoxGeometry( 10, 10, 10 );
 		material = new THREE.MeshNormalMaterial();
@@ -526,7 +527,7 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 http://mrdoob.github.io/three.js/docs/#Reference/Lights/PointLight
 PointLight(hex, intensity, distance)
 hex — Numeric value of the RGB component of the color.
-intensity — Numeric value of the light''s strength/intensity.
+intensity — Numeric value of the light's strength/intensity.
 distance -- The distance of the light where the intensity is 0. When distance is 0, then the distance is endless.
 Creates a light at a specific position in the scene. The light shines in all directions (roughly similar to a light bulb.)
 

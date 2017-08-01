@@ -1,4 +1,4 @@
-## [TA Core]( index.html )
+## [TA More]( index.html )
 
 #### [README / home page]( #README.md )
 
@@ -8,19 +8,25 @@
 
 ***
 
-### [breakout-image]( #breakout-image.md )
 
-### [html-very-long menu]( #html-very-long.html )
+### [Math Functions]( #threejs-math-functions.html )
 
 <!--
 ### [set-options-test]( #set-options-test.html )
+
+### [breakout-image]( #breakout-image.md )
+
+
+### [threejs-basic]( #threejs-basic.html )
+
 -->
 
-### [threejs-basic]( #threejs-basic.html ) [&#x1F5D7;]( threejs-basic.html )
 
 ***
 
 [license]( #license.md )
+
 [code of conduct]( #code-of-conduct.md )
+
 [contributing]( #contributing.md )
 

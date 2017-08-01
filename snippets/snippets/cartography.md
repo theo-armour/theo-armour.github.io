@@ -129,6 +129,9 @@ more nice lat lon
 // Source http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#ECMAScript_.28JavaScript.2FActionScript.2C_etc..29
 
 
+
+
+
 	function lon2tile( lon, zoom ) {
 
 		return Math.floor( ( lon + 180 ) / 360 * Math.pow( 2, zoom ) );
@@ -192,4 +195,13 @@ function lat2y( a ) { return 180 / Math.PI * Math.log( Math.tan( Math.PI / 4 + a
 
 
 
+
+### Google Maps
+
+
+
+Google Maps Time Zone API 
+https://developers.google.com/maps/documentation/timezone/start
+
+https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000
 

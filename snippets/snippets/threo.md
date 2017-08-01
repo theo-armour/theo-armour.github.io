@@ -8,13 +8,15 @@
 
 ## Math Function Plot
 
-	function drawGround() {
+	function drawPlane() {
+
+		let geometry, material, mesh;
 
 		geometry = new THREE.PlaneGeometry( 100, 100, 100, 100 );
 
 		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
 
-		for ( var i = 0; i < geometry.vertices.length; i++ ) {
+		for ( let i = 0; i < geometry.vertices.length; i++ ) {
 
 			vertex = geometry.vertices[ i ];
 
@@ -26,9 +28,8 @@
 		geometry.computeVertexNormals();
 
 		material = new THREE.MeshNormalMaterial( { side: 2 } );
-		ground = new THREE.Mesh( geometry, material );
-		scene.add( ground );
-
+		mesh = new THREE.Mesh( geometry, material );
+		scene.add( mesh );
 
 	}
 

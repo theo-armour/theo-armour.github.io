@@ -33,7 +33,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 .menu a { text-decoration: none; }
 .menu a:hover, .menu a:focus{ color: #f1f1f1; }
 
-.menu h2, .menu h3, .menu h4, .menu p, .menu iframe { color: #555; }
+.menu h2, .menu h3, .menu h4, .menu p, .menu iframe { color: #aaa; }
 
 
 #butEditFile { background-color: #555; color: #fff; opacity: 0.5; padding: 8px; position: fixed; right: 20px; top: 20px; vertical-align: middle; z-index: 1; }
@@ -72,9 +72,6 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 .breakout { background-repeat:no-repeat; background-size:100% 100%; text-align:center; margin-left:-100%; margin-right:-100%; }
 
 /*
-
-// Put in Markdown file
-
 	<div class="breakout" style=background-image:url("https://lorempixel.com/1000/500");height:500px; >breakout image</div>
 */
 
@@ -104,17 +101,12 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	<div id = "hamburger" onclick = "toggleNav();" > &#9776; slide</div>
 
-
-	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on GitHub" ><img src = "https://status.github.com/images/invertocat.png" > Edit this file</div>
-
-<!--
-
 	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on Glitch" ><img src = "https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-day.svg" > Edit this file</div>
 
--->
+
 <script>
 
-  let projectName = 'theo-armour';
+  let projectName = 'ta-core';
 
 
 	init();
@@ -144,11 +136,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		url = location.hash.slice( 1 );
 
-//		document.title = url.split( '/' ).pop();
-
-		title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );;
-
-		document.title = title ? title + ' - ' + projectName : 'README - ' + projectName;
+		document.title = url.split( '/' ).pop();
 
 		if ( !url ) {
 
@@ -202,20 +190,14 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 			butEditFile.style.display = '';
 			hamburger.innerHTML = '&#9776; slide';
-
 		}
-
 	}
 
 
 
 	function onclickEditButton(){
 
-//		window.open( 'https://glitch.com/edit/#!/' + projectName + '?path=' + location.hash.slice( 1 ) );
-
-		let file = location.hash.slice( 1 ) ? location.hash.slice( 1 ) : 'README.md';
-
- 		window.open( 'https://github.com/' + projectName + '/' + projectName + '.github.io/blob/master/' + file );
+		window.open( 'https://glitch.com/edit/#!/' + projectName + '?path=' + location.hash.slice( 1 ) );
 
 	}
 
