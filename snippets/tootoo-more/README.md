@@ -20,8 +20,11 @@ lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non num
 * 2017-08-04 ~ Iframe automatic resize
 * 2017-08-04 ~ Audio / podcaster
 
+
+
 ## Change Log
 
 ### 2017-08-04 ~ Theo
 
 * Fixing resize and menu sliding issues. Results looking better
+* Add ccapture to More and updating menus
