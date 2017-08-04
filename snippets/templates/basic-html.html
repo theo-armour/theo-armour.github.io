@@ -1,20 +1,26 @@
 <!doctype html>
-<html lang="en" >
+<html lang = "en" >
 <head>
-<meta charset="utf-8" >
+<meta charset = "utf-8" >
+<meta name = description content = 'Basic HTML template' >
+<meta name = keywords content='JavaScript,GitHub,FOSS,3D,STEM' >
+<meta name = date content='2017-08-01' >
 <title></title>
 <style>
-body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
-a { color: crimson; text-decoration: none; }
 
-/*  #contents { margin: 0 20px; max-width: 500px; position: absolute; } */
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	a { color: crimson; text-decoration: none; }
+
+/*	#menu { margin: 0 20px; max-width: 500px; position: absolute; } */
 
 </style>
 </head>
 <body>
 
-	<h1><a id="title" href="" ></a></h1>
-	<div id="contents" ></div>
+	<div id = "menu" >
+		<div id = "header" ><h1><a id = "title" href = "" ></a></h1></div>
+		<div id = "contents" ></div>
+	</div>
 
 <script>
 
@@ -30,8 +36,6 @@ a { color: crimson; text-decoration: none; }
 
 		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
 		contents.innerHTML = txt;
-
-
 
 	}
 

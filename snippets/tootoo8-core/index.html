@@ -11,11 +11,12 @@
 -->
 <meta name=description content="File wrangler. Default index.html file. Opens HTML or Markdown files. Passes location.hash." >
 <meta name=keywords content="ShowDown,Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS" >
-<meta name=date content="2017-07-31" >
+<meta name=date content="2017-08-04" >
 <style id="foo" >
+
 /* items mostly in tag/class/id then alphabetical order */
 
-body, html { font: 12pt monospace; height: 100%; margin: 0; /* overflow: hidden; */ }
+body, html { background-color: #ddd; font: 12pt monospace; height: 100%; margin: 0; /* overflow: hidden; */ }
 
 a { color: crimson; }
 
@@ -108,7 +109,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 	<div id = "hamburger" onclick = "toggleNav();" > &#9776; slide</div>
 
 
-	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on GitHub" ><img src = "invertocat.png" > Edit this file</div>
+	<div id = "butEditFile" onclick = "onclickEditButton();" title = "Update this file on GitHub" ><img src = "https://status.github.com/images/invertocat.png" > Edit this file</div>
 
 <!--
 
@@ -189,7 +190,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 			requestFile( url, mainContents );
 
-		} else if ( url.includes( '.html' ) ) {
+		} else if ( url.includes( '.htm' ) ) {
 
 			main.innerHTML = '<iframe id=mainIframe class=ifr src=' + url + ' ></iframe>';
 
@@ -197,8 +198,8 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		} else {
 
-			mainIframe.contentWindow.location.hash = url;
 			menuIframe.contentWindow.location.hash = url;
+			mainIframe.contentWindow.location.hash = url;
 
 		}
 
@@ -220,17 +221,15 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		}
 
-	}
+		if ( !menu.style.width || menu.style.width === '250px' ) {
 
+			main.style.width = ( window.innerWidth - 250 ) + 'px';
 
+		} else { 
 
-	function onclickEditButton(){
+			main.style.width = window.innerWidth + 'px';
 
-//		window.open( 'https://glitch.com/edit/#!/' + projectName + '?path=' + location.hash.slice( 1 ) );
-
-		let file = location.hash.slice( 1 ) ? location.hash.slice( 1 ) : 'README.md';
-
- 		window.open( 'https://github.com/' + projectName + '/' + projectName + '.github.io/blob/master/' + file );
+		}
 
 	}
 
@@ -242,15 +241,31 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 			menu.style.width = '0';
 			hamburger.style.left = '0';
+
 			main.style.marginLeft = '0';
+			main.style.width = window.innerWidth + 'px';
 
 		} else {
 
 			menu.style.width = '250px';
 			hamburger.style.left = '250px';
+
 			main.style.marginLeft = '250px';
+			main.style.width = ( window.innerWidth - 250 ) + 'px';
 
 		}
+
+	}
+
+
+
+	function onclickEditButton(){
+
+//		window.open( 'https://glitch.com/edit/#!/' + projectName + '?path=' + location.hash.slice( 1 ) );
+
+		let file = location.hash.slice( 1 ) ? location.hash.slice( 1 ) : 'README.md';
+
+ 		window.open( 'https://github.com/' + projectName + '/' + projectName + '.github.io/blob/master/' + file );
 
 	}
 

@@ -48,6 +48,30 @@ sandbox='allow-scripts'
 	ifr.setAttribute( 'src', fileName );
 
 
+### Using JSON
+
+https://www.w3schools.com/js/js_json_intro.asp
+
+
+https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
+
+see view-rss.html
+
+			parser = new DOMParser();
+			xmlDoc = parser.parseFromString( response, 'text/xml' );
+
+
+
+### Update Parent Style
+
+<style = "foo" > ...
+
+		if ( parent.document.getElementById( 'foo' ) ) {
+
+			parent.document.getElementById( 'foo' ).innerHTML += "h3 { margin: 0}";
+
+		}
+
 
 ### Messaging
 

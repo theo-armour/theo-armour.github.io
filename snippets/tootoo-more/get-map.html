@@ -18,8 +18,6 @@ a { color: crimson; text-decoration: none; }
 
 <script>
 
-  var parameters;
-  
 	const b = '<br>';
 
 	init();
@@ -33,53 +31,42 @@ a { color: crimson; text-decoration: none; }
 		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
 		contents.innerHTML = txt;
 
-		onHashChange();
-
 		window.addEventListener( 'hashchange', onHashChange, false );
+
+	}
+  
+  
+
+	function onHashChange() {
+  
+    contents.innerHTML += '<p>' + location.hash + '</p>';
     
-    parent.location.hash = 'menu-set-options.md';
+    params = JSON.parse( location.hash.slice( 1 ) );
     
+console.log( '', params );
+    zoom = 12;
+    x = lon2tile( parseFloat( params.longitude ), zoom );
+    y = lat2tile( parseFloat( params.latitude ), zoom );
+    str = 'https://tile.openstreetmap.org/' + zoom + '/' + x + '/' + y + '.png';
+    contents.innerHTML += '<p><img src="' + str + '" ></p>';
+    
+  }  
+
+  
+  function lon2tile( lon, zoom ) {
+
+		return Math.floor( ( lon + 180 ) / 360 * Math.pow( 2, zoom ) );
+
 	}
 
-  function onHashChange() {
-    
-    contents.innerHTML += 'tt ' + location.hash + '<br>';
-    
-    getParameters();
-    
-  }
-  
-  
-  function getParameters() {
-    
-    hashes = location.hash.split( '#' );
+	function lat2tile( lat, zoom ) {
 
-    if ( hashes.length > 1 ) {    
-    
-      str = '{' + hashes[ 1 ].replace( /(\b)/g, '"$1' ).replace( /"\."/g, '.' )  + '}';
-        
-//        str = '{' + hashes[ 1 ].replace( /(\w+)([:,\b])/g, '"$1"$2' ).slice( 0, -1 )  + '}';
-        
-// console.log( 'str', str );  
-        
-      params = JSON.parse( str );   
-    
-      parameters = parameters || {};
-      parameters.color = params.color ? '#' + params.color : '#ff0000';
-      parameters.lineWidth = params.linewidth ? parseFloat( params.linewidth ) : 1;
-      parameters.opacity = params.opacity ? parseFloat( params.opacity ) : 0.5;
-      parameters.side = 2;
-      parameters.transparent = true;
+		var pi = Math.PI;
 
-console.log( '', parameters );   
+		return Math.floor( ( 1 - Math.log( Math.tan( lat * pi / 180 ) + 1 / Math.cos( lat * pi / 180 ) ) / pi ) / 2 * Math.pow( 2, zoom ) );
 
-      return parameters;
-    
-    }    
-    
-    
-  }
-  
+	}
+
 </script>
 </body>
 </html>

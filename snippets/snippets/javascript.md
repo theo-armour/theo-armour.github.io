@@ -67,13 +67,15 @@ just use 'this' wherever possible
 
 		let fileName;
 
+		fileName = 'https://crossorigin.me/';
+
 		requestFile( fileName );
 
 	}
 
 	function requestFile( fileName ) {
 
-//		let fileName, text, lines;
+//		let xhr;
 
 		xhr = new XMLHttpRequest();
 		xhr.crossOrigin = 'anonymous';
@@ -85,16 +87,19 @@ just use 'this' wherever possible
 
 		function callback( xhr ) {
 
-//			let response, text;
+			let response, text, lines;
 
 			response = xhr.target.response;
-			text = JSON.parse( response );
-console.log( '', text );
 
-//			lines = text.split(/\r\n|\n/);
-			lines = text.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
-			console.log( lines[ 8 ] );
-			console.log( lines.length );
+//			text = JSON.parse( response );
+//console.log( '', text );
+
+// or
+//			lines = response.split(/\r\n|\n/);
+			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+
+			console.log( 'line 8',lines[ 8 ] );
+			console.log( 'length', lines.length );
 
 //			lastMod = xhr.target.getResponseHeader ( "Last-Modified" );
 			console.log( xhr.target.getResponseHeader ( "Last-Modified" ) );

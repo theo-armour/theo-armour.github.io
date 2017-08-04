@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
+<title></title>
+<style>
+
+	body { background-color: #eee; font: 12pt monospace; width: 100% }
+	a { color: crimson; text-decoration: none; }
+	#title { text-align: center; }
+
+/*  #contents { margin: 0 20px; max-width: 500px; position: absolute; } */
+
+</style>
+</head>
+<body>
+
+	<h1 id = "title" ><a  href = "" ></a></h1>
+	<div id = "contents" ></div>
+
+<script>
+
+	let user, repo, path, url;
+	let items, item, source;
+
+	init();
+
+	function init() {
+
+		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
+
+		getGallery();
+
+	}
+
+
+	function getGallery( user, repo, path ) {
+
+		user = 'dianachace';
+		repo = 'dianachace.github.io';
+		path = 'burrage-redlands';
+
+		url  = 'https://api.github.com/repos/' + user + '/' + repo + '/contents/' + path;
+
+		requestFile( url, callbackGalleryContents );
+
+	}
+
+
+
+	function callbackGalleryContents( xhr ){
+
+		let response, items, source, src;
+		let page = '';
+
+		response = xhr.target.response;
+		items = JSON.parse( response );
+
+		for ( let i = 0; i < items.length; i++ ) {
+
+			item = items[ i ];
+
+			source = item.download_url;
+			src = source.toLowerCase();
+
+			if ( src.includes( '.thumb' ) || src.includes( '.highlight' ) || src.endsWith( '.dat' )  ||
+				src.endsWith( '.lock' ) || src.endsWith( '.avi' ) || src.endsWith( '.html' )) { continue; }
+
+			page +=
+
+			'<div style=display:inline-block;margin:10px; >' +
+
+				'<a href=JavaScript:getFileImage("' + source +'"); >' +
+					'<img src="' + source + '" height=200; title="' + source + '" >' +
+				'</a>' +
+
+			'</div>';
+
+		}
+
+		contents.innerHTML = '<div id=divGallery >' + page + '</div>';
+
+	}
+
+
+
+	function getFileImage( url ){
+
+		contents.innerHTML = '<img src="' + url + '" style="border: 0px solid gray; margin: 25px 0 0 50px; max-width: 800px; " >';
+
+	}
+
+
+
+	function requestFile( url, callback ) {
+
+		let xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.open( 'get', url, true );
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
+
+
+</script>
+</body>
+</html>

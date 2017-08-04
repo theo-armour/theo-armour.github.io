@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = description content = 'Basic HTML template' >
+<meta name = keywords content='JavaScript,GitHub,FOSS,3D,STEM' >
+<meta name = date content='2017-08-01' >
+<title></title>
+<style>
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	a { color: crimson; text-decoration: none; }
+
+
+	img { background-color: white; height: 60px; }
+	div { padding: 5px 0; }
+
+	#butNextFile { color: #888; font-size: 36pt; opacity: 0.5; padding: 8px; position: fixed; right: 20px; top: -2%; }
+	#butPreviousFile { color: #888; font-size: 36pt; opacity: 0.5; padding: 8px; position: fixed; margin-left: 20px; top: -2%; }
+
+	#butNextFile a, #butPreviousFile a { text-decoration: none; color: #888; }
+	#butNextFile:hover, #butPreviousFile:hover { cursor: pointer; opacity: 1; }
+
+
+/*	#menu { margin: 0 20px; max-width: 500px; position: absolute; } */
+
+</style>
+</head>
+<body>
+
+	<div id="butNextFile" >&gt;</div>
+	<div id="butPreviousFile" >&lt;</div>  
+
+
+	<div id = "menu" >
+		<div id = "header" ><h3><a id = "title" href = "" ></a></h3></div>
+		<div id = "menuIframe" ></div>
+	</div>
+
+
+<script>
+
+	let fileName = 'https://crossorigin.me/http://www.buildingsimulation2017.org/sponsors.html';
+
+//	fileName ='https://crossorigin.me/https://www.conftool.pro/bs2017/sessions.php';
+
+	var win;
+	var doc, links, linksInText;
+
+	const b = '<br>';
+
+	init();
+
+	function init() {
+
+		let txt;
+
+		txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
+
+		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5 ).replace( /-/g, ' ' );
+//		menuIframe.innerHTML = txt;
+
+		requestFile( fileName, callback );
+
+//		parent.location.hash = 'sponsors.md';
+
+	}
+
+
+
+	function callback( xhr ){
+
+		let allLinks, externalLinks, text, href;
+		let parser = new DOMParser();
+
+		doc = parser.parseFromString( xhr.target.response, 'text/html' );
+
+		allLinks = doc.getElementsByTagName( 'a' );
+		externalLinks = [];
+		linksInText = []
+
+
+
+		for ( lnk of allLinks ) {
+
+			href = lnk.getAttribute( 'href' );
+
+			if ( href.includes( 'http' ) ) {
+
+				text = lnk.innerHTML.replace( /=\"img/, '="http://www.buildingsimulation2017.org/img' );
+
+				linksInText.push( href );
+
+				externalLinks.push( '<a href=#' + href + ' onclick=winOpen(this); >' + text + '<\/a>' );
+
+			}
+
+		}
+
+		text = '<div>' + externalLinks.join( '<\/div><div>' ) + '</div>';
+
+		doc = parser.parseFromString( text, 'text/html' );
+
+		links = doc.getElementsByTagName( 'a' );
+		menuIframe.innerHTML =  doc.body.innerHTML;
+
+	}
+
+
+	function winOpen( that, scrollIntoView ) {
+
+		var href, link;
+
+		href = that.getAttribute('href')
+		link = href.slice( 1 );
+
+		if ( win ) { win.close(); }
+	//	if ( link.search( 'http' ) === -1 ) { return; }
+
+		for ( let lnk of links ) {
+
+			lnk.name = lnk.parentElement.style.backgroundColor = lnk.getAttribute( 'href' )  === href ? 'yellow' : '';
+
+		}
+
+		menuIframe.innerHTML = doc.body.innerHTML;
+
+		win = window.open( link, '', 'width=1000, height=950, top=100', true );
+		win.moveBy( -6000,  0);
+		win.moveBy( 400, 0 );
+		win.focus();
+
+		document.body.onunload = function() { win.close(); };
+
+		setButtons( link );
+
+		if ( scrollIntoView === true ) {
+
+			el = document.getElementsByName( 'yellow' );
+			el[ 0 ].scrollIntoView();
+
+		}
+
+	}
+
+
+
+	function setButtons( path ) {
+
+		var index, indexNext, indexPrevious;
+
+//		butEditFile.innerHTML = '<a href="' + path + '" target="_blank"> Open in new tab </a>';
+
+		index = linksInText.indexOf( path );
+
+		indexNext = index + 1;
+		if ( indexNext >= linksInText.length ) { indexNext = 0; }
+
+		indexPrevious = index - 1;
+		if ( indexPrevious < 0 ) { indexPrevious = linksInText.length - 1; }
+
+		butNextFile.innerHTML = '<a href="#' + linksInText[ indexNext ] + '" onclick=winOpen(this,true); > &gt; </a>';
+		butPreviousFile.innerHTML = '<a href="#' + linksInText[ indexPrevious ] + '" onclick=winOpen(this,true); > &lt; </a>';
+
+	}
+
+
+	function requestFile( fileName, callback ) {
+
+		let xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', fileName, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
+
+
+</script>
+</body>
+</html>
