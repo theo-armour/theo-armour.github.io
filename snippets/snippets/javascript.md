@@ -1046,7 +1046,8 @@ RegExp Modifiers
 \r carriage return
 \t tab
 \b backspace
-\f form feed
+\f form 
+
 
 (x) Matches 'x' and remembers the match, as the following example shows. The parentheses are called capturing parentheses.
 

@@ -2,13 +2,24 @@
 
 It’s much easier to recover from no abstraction than the wrong abstraction
 
-Quick Tip: What Are Factory Functions in JavaScript
+From Quick Tip: What Are Factory Functions in JavaScript
 https://www.sitepoint.com/factory-functions-javascript/
 
 ## THINGS to look at
 
 http://www.html5rocks.com/en/tutorials/webcomponents/imports/
 http://www.w3schools.com/howto/howto_js_animate.asp
+
+
+
+## Button and Range
+
+button, input[type=button] { background-color: #ddd; border: 2px #fff solid; color: #322; }
+
+input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 160px; }
+input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
 
 
 ### CHARACTERS
@@ -117,6 +128,7 @@ h2:before { content:"❦ ";
 
 	setRandomGradientBackground();
 
+
 ### CSS Transform Scale Origin
 
 https://www.sitepoint.com/a-primer-on-css3-transforms/
@@ -203,6 +215,8 @@ width			Sets or returns the value of the width attribute in an iframe
 http://www.w3schools.com/tags/att_iframe_sandbox.asp
 
 sandbox = 'allow-scripts'
+
+
 
 ### META
 

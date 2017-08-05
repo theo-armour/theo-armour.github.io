@@ -1,6 +1,8 @@
 
 
-<iframe src=view-web-pages.html class=ifr ></iframe>
+
+
+<iframe src=view-web-pages/view-web-pages.html class=ifrvv height=700 width=100% frameBorder=0 ></iframe>
 
 ***
 

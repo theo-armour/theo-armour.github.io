@@ -4,20 +4,19 @@
 [TooToo More Read me]( #README.md )
 ====
 
-lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
-
-
+Toys for TooToo to play with
 
 
 ## Issues
 
-* 2017-08-04 ~ Window resing
+* 2017-08-04 ~ Window resizing
 
 
 ## To-Do
 
+* 2017-08-04 ~ View RSS workaround - now that crossorigin.me is broken
 * 2017-08-04 ~ Add breadcrumbs to menu
-* 2017-08-04 ~ Iframe automatic resize
+* 2017-08-04 ~ Iframe in menu automatic resize
 * 2017-08-04 ~ Audio / podcaster
 
 
@@ -26,5 +25,6 @@ lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non num
 
 ### 2017-08-04 ~ Theo
 
-* Fixing resize and menu sliding issues. Results looking better
+* Fixing resize and menu sliding issues. Results looking better - still issues on a cell phone - height need better updating? 
 * Add ccapture to More and updating menus
+* Add 'scape data from file'

@@ -40,7 +40,7 @@
 
 <script>
 
-	let fileName = 'https://crossorigin.me/http://www.buildingsimulation2017.org/sponsors.html';
+	let fileName = 'bs2017-sponsors.html';
 
 //	fileName ='https://crossorigin.me/https://www.conftool.pro/bs2017/sessions.php';
 
@@ -62,7 +62,7 @@
 
 		requestFile( fileName, callback );
 
-//		parent.location.hash = 'sponsors.md';
+		parent.location.hash = '#view-web-pages/readme-view-web-pages.md';
 
 	}
 
@@ -102,7 +102,7 @@
 		doc = parser.parseFromString( text, 'text/html' );
 
 		links = doc.getElementsByTagName( 'a' );
-		menuIframe.innerHTML =  doc.body.innerHTML;
+		parent.menuIframe.innerHTML =  doc.body.innerHTML;
 
 	}
 

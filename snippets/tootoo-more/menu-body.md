@@ -26,6 +26,8 @@ Utilities
 
 ### [CCapture]( #../utilities/ccapture/ccapture-iframe-r1.html )
 
+### [Scrape Data From File]( #../utilities/scrape-data-from-file/scrape-data-from-file-r1.html )
+
 ***
 
 <h1 style=text-align:center; > &#x2766; </h1>
