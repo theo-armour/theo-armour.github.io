@@ -34,10 +34,6 @@ We need thoughts that are modern. Replicating the life of two thousand years ago
 
 Coping well with adversity is fine. But we also need to consider beauty, creativity, sex and more.
 
-### Naming
-
-https://en.wikipedia.org/wiki/Alt.*_hierarchy
-
 
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
@@ -49,6 +45,17 @@ https://en.wikipedia.org/wiki/Alt.*_hierarchy
 
 * TBD
 
+
+## Naming
+
+Still fishing around for a name for this project. (Do Stoics go on fishing expeditions?)
+
+Alt-Stoic - See:
+* See https://en.wikipedia.org/wiki/Alt.*_hierarchy
+
+Stoic 2.0 - See:
+* https://en.wikipedia.org/wiki/Web_2.0
+* http://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html
 
 
 ## To Do / Goals / Up Next

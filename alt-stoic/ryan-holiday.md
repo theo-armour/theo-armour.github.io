@@ -17,9 +17,11 @@ Ryan Holiday is my favorite Stoic author these days
 * https://www.theguardian.com/lifeandstyle/2016/dec/11/how-would-the-stoics-cope-today
 * http://www.nytimes.com/2016/12/06/fashion/ryan-holiday-stoicism-american-apparel.html
 * http://boingboing.net/2016/12/19/heres-an-ancient-philosophy.html
+* https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way
 
-
-
+Nice summary
+* https://paulminors.com/the-obstacle-is-the-way-by-ryan-holiday-book-summary-pdf/
+* http://www.samuelthomasdavies.com/book-summaries/business/the-obstacle-is-the-way/
 
 # _The Obstacle is the Way_
 
@@ -136,8 +138,8 @@ Give yourself clarity, not sympathy.
 
 Remember: We choose how we’ll look at things.
 
-Context - a sense of the larger picture - not just what is immediately in front of us
-Framing - individual's unique way of looking at the world, a way that interprets it events
+**Context** - a sense of the larger picture - not just what is immediately in front of us
+**Framing** - individual's unique way of looking at the world, a way that interprets it events
 
 We choose how we look at things. We retain the ability to inject perspective into a situation.
 
@@ -228,12 +230,37 @@ courage is mostly just taking action,
 Working at it works
 
 
-### Iterate
+## Iterate
+
+
+## Follow the Process
+
+
+## Do Your Job, Do it Right
+
+
+## What’s Right is What Works
+
+
+## In Praise of the Flank Attack
+
+
+## Use Obstacles Against Themselves
+
+
+## Channel Your Energy
+
+
+## Seize The Offensive
+
+
+## Prepare for None of It to Work
 
 ***
 
 # Part III ~ Will
 
+## The Discipline of Will p125
 
 In every situation, we can
 
@@ -241,25 +268,71 @@ Always prepare ourselves for more difficult times / Build Your Inner Citadel / p
 
 Always accept what we're unable to change / Anticipation ( Thinking Negatively ) / p137
 * Prepare for failure. Be ready for success
+
 Always manage our expectations / The Art of Acquiescence / p144]
 * Be indifferent. It's OK
+
 Always persevere / Perseverance / p156
 * Persistence. Staying power. Hold
-Always learn to love our fate / Lover Everything That Happens / p150
+
+Always learn to love our fate and what happens to us/ Lover Everything That Happens / p150
 * Might as well be happy
+
 Always protect our inner self, retreat into ourselves
 
-Always submit to a larger or greater cause /Something Bigger than yourself / p160
+Always submit to a larger or greater cause / Something Bigger than yourself / p160
 * We are in this together. Help others
+
 Always remind ourselves of our own mortality / Meditate on Your Mortality / p165
 * Mortality can have benefits.
+
+
 And prepare to start the cycle once more / Prepare to Start Again / p172
 * the more you accomplish, the more new challenges appear
 
-## Build Your Inner Citadel
 
 
 
+## Build Your Inner Citadel p131
+DIY. Mental athletics. Toughen yourself. To be great takes practice. Armor-plating: may not make you invincible but it helps. 
+
+## Anticipation (Thing Negatively ) p139
+
+Premortem. Prepare for disruption. Things go wrong. Prepare for failure. Ready for Success
+
+## The Art of Acquiescience p141
+So it goes. _C'est la vie._
+
+## Love Everything That Happens: _Amor Fati_ p147
+You might as well be happy. Smile. Every cloud has a silver lining
+
+## Perseverance p153
+Determination. Staying power. Steer the course.
+
+## Something Bigger Thank Yourself p161
+Lend a hand. We're in this together. Help thrive and survive.
+
+## Meditate on Your Morality p167
+_Memento mori_. Serenity. Death as an obstoacle
+
+## Prepare to Start Again p169
+Anticipate next round, Passing one obstacle means you are worthy of more.
 
 
+# Final Thoughts p173
 
+
+1. See clearly / Perceive
+2. Act correctly
+3. Endure and accept
+
+Plus
+1. See things for what they are
+2. Do what we can
+3. Endure and bear what we must
+
+Plus
+
+1. What blocked the path now is a path.
+2. What once impeded action advances action.
+3. The Obstacle is the Way.

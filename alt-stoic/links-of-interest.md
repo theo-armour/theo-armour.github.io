@@ -86,23 +86,3 @@ Finally, A Guide to the Good Life shows readers how to become thoughtful observe
 A number of works by the same author relate to the Stoics.
 
 
-
-## Source Unknown
-
-
-Probably from Ryan Holiday
-
-
-1. See clearly
-2. Act correctly
-3. Endure and accept
-
-Plus
-1. See things for what they are
-2. Do what we can
-3. Endure and bear what we must
-
-
-Perceive
-Act
-Endure and accept
