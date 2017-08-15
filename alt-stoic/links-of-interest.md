@@ -8,12 +8,12 @@
 
 ### Massimo Pigliucci
 
-A prolific writer on Stoicism,
+A prolific writer on Stoicism,\:
 
 * [How to Be a Stoic]( https://howtobeastoic.wordpress.com/ )
 	* An evolving guide to practical Stoicism for the 21st century
 	* Many links to his work
-* Typical post[ Stoic spiritual exercises: I, from the Enchiridion](  https://howtobeastoic.wordpress.com/2016/02/09/stoic-spiritual-exercises-i-from-the-enchiridion/ )
+* Typical post[Stoic spiritual exercises: I, from the Enchiridion]( https://howtobeastoic.wordpress.com/2016/02/09/stoic-spiritual-exercises-i-from-the-enchiridion/ )
 
 See also this PDF
 
