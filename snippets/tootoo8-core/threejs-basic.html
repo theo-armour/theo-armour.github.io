@@ -49,6 +49,7 @@
 		scene = new THREE.Scene();
 
 		window.addEventListener( 'resize', onWindowResize, false );
+		window.addEventListener( 'orientationchange', onWindowResize, false );
 
 
 		let axisHelper = new THREE.AxisHelper( 50 );

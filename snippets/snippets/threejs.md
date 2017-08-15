@@ -859,7 +859,21 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 
 
-// ### TEXTURES
+### TEXTURES
+
+https://threejs.org/docs/#api/textures/Texture
+
+		var texture = new THREE.TextureLoader().load( "arrow-gray.png" );
+
+		loader = new THREE.TextureLoader();
+		loader.crossOrigin = '';
+
+		heightmap = loader.load( '../bitmaps/bathymetry_bw_composite_2k.png' );
+
+		texture = loader.load( '../bitmaps/2_no_clouds_4k.jpg' );
+
+
+***
 
 // http://jaanga.github.io/cookbook-threejs/materials-sandbox/load-texture/
 
@@ -874,14 +888,11 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		}
 
 
-		loader = new THREE.TextureLoader();
-		loader.crossOrigin = '';
-		heightmap = loader.load( '../bitmaps/bathymetry_bw_composite_2k.png' );
-		texture = loader.load( '../bitmaps/2_no_clouds_4k.jpg' );
 
 
 
-*** textures must be 512x512 to repeat
+
+### textures must be 512x512 to repeat
 
 		THREE.ImageUtils.crossOrigin = 'anonymous';
 		texture = THREE.ImageUtils.loadTexture( "../../textures/im5.jpg" );
@@ -923,7 +934,7 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 
 
 
-// ### THREE.JS SCRIPTS
+### THREE.JS SCRIPTS
 
 <script src='../../../git-repos/three.js/examples/js/Detector.js'></script>
 <script src='../../../git-repos/three.js/build/three.min.js'></script>

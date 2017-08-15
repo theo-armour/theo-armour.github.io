@@ -10,10 +10,11 @@ http://www.emoji-cheat-sheet.com/
 ###Header 3
 ####Header 4
 
-## Bold and Italics
+## Bold and Italics and Strikeout
 
 **Bold**
 _Italicize_ or *italicize*
+~~strikeout~~
 
 ## Ordered List
 
@@ -24,6 +25,7 @@ _Italicize_ or *italicize*
 ## Blockquotes
 
 > Angle bracket on the first line of the blockquote.
+
 
 ## Code
 
@@ -44,28 +46,26 @@ if (this_is_more_code == true && !indented) {
 GFM also supports fenced blocks
 ```
 
-Footnotes
+## Footnotes
 [^1]
  
 [^1]:
 
 
-
-Links
+## Links
 <URL Link>
 [Anchor](URL)
 
 Inline Image
 ![Image Tag]( direct image URL link =400x300 )
 
-Horizontal Line
+
+## Horizontal Line
 —-
 
-Strikethrough
-~~Strikethrough~~
 
 
-Table
+## Table
 Heading | Heading |Heading
 —- |—- |—-
 Item | Item | Item

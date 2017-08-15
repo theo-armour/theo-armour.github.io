@@ -27,9 +27,9 @@ just use 'this' wherever possible
 
 ## Useful things /LOOPs
 
-		for ( var i = 0; i < 2; i++ ) {
+		for ( let i = 0; i < 2; i++ ) {
 
-			for ( var j = 0; j < 2; j++ ) {
+			for ( let j = 0; j < 2; j++ ) {
 
 			}
 
@@ -64,42 +64,46 @@ just use 'this' wherever possible
 
 
 // https://crossorigin.me/
+// https://cors-anywhere.herokuapp.com/
 
 		let fileName;
 
-		fileName = 'https://crossorigin.me/';
+		fileName = 'https://cors-anywhere.herokuapp.com/';
 
 		requestFile( fileName );
 
 	}
 
-	function requestFile( fileName ) {
+	function requestFile( url ) {
 
 //		let xhr;
 
 		xhr = new XMLHttpRequest();
 		xhr.crossOrigin = 'anonymous';
-		xhr.open( 'GET', fileName, true );
-		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
 		xhr.onload = callback;
 		xhr.send( null );
 
 		function callback( xhr ) {
 
-			let response, text, lines;
+			let response, json, lines;
 
 			response = xhr.target.response;
 
-//			text = JSON.parse( response );
-//console.log( '', text );
+console.log( 'response', response );
+			contents.innerHTML = response;
+
+//			json = JSON.parse( response );
+//console.log( '', json );
 
 // or
 //			lines = response.split(/\r\n|\n/);
-			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
 
-			console.log( 'line 8',lines[ 8 ] );
-			console.log( 'length', lines.length );
+//			console.log( 'line 8',lines[ 8 ] );
+//			console.log( 'length', lines.length );
 
 //			lastMod = xhr.target.getResponseHeader ( "Last-Modified" );
 			console.log( xhr.target.getResponseHeader ( "Last-Modified" ) );

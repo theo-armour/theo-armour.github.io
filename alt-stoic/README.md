@@ -22,9 +22,21 @@ patterns are descriptions of common problems and proposal for the solutions that
 
 If you are an atheist, then establishing guidelines/precepts/codes of behavior is an on-going work-in-progress.
 
-A fruitful opportunity may avail itself in the thoughts of the Stoics
+A fruitful opportunity may avail itself in the thoughts of the Stoics.
 
-These pages attempt to provide a broad glimpse into the varietty of Stoic thinking both archaic an modern
+These pages attempt to provide a broad glimpse into the variety of Stoic thinking both archaic an modern.
+
+***
+
+How to decide what is to be acted upon?
+
+We need thoughts that are modern. Replicating the life of two thousand years ago is not the way forward. We need to reinvent these ideas.
+
+Coping well with adversity is fine. But we also need to consider beauty, creativity, sex and more.
+
+### Naming
+
+https://en.wikipedia.org/wiki/Alt.*_hierarchy
 
 
 ### Mission
@@ -38,26 +50,19 @@ These pages attempt to provide a broad glimpse into the varietty of Stoic thinki
 * TBD
 
 
-## Features
-
-* TBD
-* Click three bars( 'hamburger' ) icon to slide menu in or out
-* Direct link to this read me file
-* Click on title to reload
-
-
-
-
-## Links of Interest
-
 
 ## To Do / Goals / Up Next
 
-
-## Issues / Bugs / Things that need Work
+* 2017-08-14 ~ keep working on summary of _The Obstacle is the Way_
+* 2017-08-14 ~ Build a Stoic cheat-sheet adapted to today's life
+* 2017-08-14 ~ Find ways of combining Stoicism with other ways of thought
 
 
 ## Change Log
+
+### 2017-08-14 ~ Theo
+
+* Much tidying up and re-jigging the text
 
 ### 2017-05-30
 

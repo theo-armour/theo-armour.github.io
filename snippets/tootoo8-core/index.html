@@ -16,26 +16,30 @@
 
 /* items mostly in tag/class/id then alphabetical order */
 
-body, html { background-color: #eee; font: 12pt monospace; height: 100%; margin: 0; /* overflow: hidden; */ }
+body, html { background-color: #fefefe; font: 12pt monospace; height: 100%; margin: 0; /* overflow: hidden; */ }
 
 a { color: crimson; }
 
 blockquote, pre { background-color: #eee; padding: 10px; }
 
-.center { border: 0px solid red; left: 0; margin: 0 auto; max-width: 600px; position: absolute; right: 0; }
+
+.center { border: 0px solid red; left: 0; margin: 0 auto; max-width: 800px; position: absolute; right: 0; }
 
 .ifr { border-width: 0; height: 100%; margin: 0; width: 100%; }
 
 .mainIframe { overflow: hidden; }
 
-.menu { height: 100%; overflow: auto; }
+/* .menu { height: 100%; overflow: auto; } */
+/*.menuSub h2, .menuSub h3, .menuSub h4, .menuSub p { margin: 10px 0 0 0; } */
 .menuSub a { text-decoration: none; }
 .menuSub a:hover, .menuSub a:focus{ color: #f1f1f1; }
 
-.menu h2, .menu h3, .menu h4, .menu p, .menu iframe { color: #555; }
+/* .menu h2, .menu h3, .menu h4, .menu p, .menu iframe { color: #555; } */
 
-
-#butEditFile { background-color: #555; color: #fff; opacity: 0.5; padding: 8px; position: fixed; right: 20px; top: 20px; vertical-align: middle; z-index: 1; }
+#butEditFile { 
+	background-color: #555; color: #fff; opacity: 0.5; padding: 8px; position: fixed; right: 20px; top: 20px; 
+	vertical-align: middle; z-index: 1; 
+}
 
 #butEditFile:hover { cursor: pointer; opacity: 1; }
 
@@ -43,7 +47,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 #hamburger {
 	background-color: #edd; cursor:pointer; font-size:30px;	left: 250px; line-height: 30px; margin: 0; opacity: 0.5;
-	padding: 5px 15px 8px 10px; position: fixed; top: 20px; transition: left .5s; z-index: 1;
+	padding: 5px 15px 8px 10px; position: fixed; top: 60px; transition: left .5s; z-index: 1;
 }
 
 #hamburger:hover { cursor: pointer; opacity: 1; }
@@ -54,10 +58,12 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 #menu {
 	background-color: lightgray; box-sizing: border-box; height: 100%; left: 0; overflow: auto;
-	position: fixed; top: 0; transition: 0.5s; width: 250px; z-index: 1;
+	padding: 0 5px 0 15px; position: fixed; top: 0; transition: 0.5s; width: 250px; z-index: 1;
 }
 
-#menuHead, #menuBody, #menuFoot { border: 0px red solid; margin: 0; padding: 0 0 0 15px;/* overflow: auto; */ }
+/*
+#menuHead, #menuBody, #menuFoot { border: 0px red solid; margin: 0; /* overflow: auto; */ }
+*/
 
 
 
@@ -132,7 +138,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		let p = arr.pop();
 
-		projectName = arr.pop();
+		projectName = arr.pop().replace( /\.github\.io/gi, '');
 
 		showdown.setFlavor( 'github' );
 
@@ -145,6 +151,10 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		onHashChange();
 
 		window.addEventListener( 'hashchange', onHashChange, false );
+
+//		window.addEventListener( 'orientationchange', function() { window.location.reload(); } );
+
+		window.addEventListener( 'orientationchange', onWindowResize, false  );
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
@@ -169,8 +179,12 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		if ( !url ) {
 
 			url = 'README.md';
-
 			requestFile( url, mainContents );
+
+// Set issues as blog on home page
+//			url = 'view-github-issues.html';
+//			main.innerHTML = '<iframe id=mainIframe class=ifr src=' + url + ' ></iframe>';
+//			main.style.overflow = 'hidden';
 
 		} else if ( url.startsWith( 'menu' ) ) {
 
@@ -209,14 +223,18 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	function onWindowResize(){
 
+		const ifr = document.querySelector( 'iframe' );
+
 		if ( window.innerWidth < 1000 ) {
 
 			butEditFile.style.display = 'none';
+			if ( ifr ) { ifr.style.display = 'none'; }
 			hamburger.innerHTML = '&#9776;';
 
 		} else {
 
 			butEditFile.style.display = '';
+			if ( ifr ) { ifr.style.display = ''; }
 			hamburger.innerHTML = '&#9776; slide';
 
 		}
@@ -283,7 +301,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 			target.innerHTML = converter.makeHtml( xhr.responseText );
 
-			projectName = document.links[ 0 ].text;
+//			projectName = document.links[ 0 ].text;
 
 		};
 

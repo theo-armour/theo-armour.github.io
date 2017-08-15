@@ -14,11 +14,12 @@ http://www.w3schools.com/howto/howto_js_animate.asp
 
 ## Button and Range
 
-button, input[type=button] { background-color: #ddd; border: 2px #fff solid; color: #322; }
+	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 5px 28px; }
+	button:hover {background: #ccc;}
 
-input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 160px; }
-input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
-input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+	input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 160px; }
+	input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+	input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
 
 
 
@@ -40,7 +41,7 @@ https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 🗀 &#x1f5c0;
 &#x1f4c1;
 new tab/external link: &#x1F5D7; 🗗
-link &#128279; 🔗
+link &#128279; 🔗 or &#x1f517;
 
 home: &#x2302;
 i in circle: &#x24D8;

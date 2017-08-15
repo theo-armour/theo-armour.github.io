@@ -1,6 +1,6 @@
 
-### [Stoic 2]( #stoic2.md )
+### [Ryan Holiday]( #ryan-holiday.md )
 
 ### [Links of Interest]( #links-of-interest.md )
 
-
+### [Journal]( #journal.md )

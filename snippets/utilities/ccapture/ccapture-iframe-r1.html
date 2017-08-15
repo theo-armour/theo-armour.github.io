@@ -23,7 +23,7 @@ Menu and contents in HTML.
 // Notices you have to specify the path to the gif.worker.js 
 	var capturer = new CCapture( { format: 'gif', workersPath: 'js/' } );
 
-	// Create a capturer that exports PNG images in a TAR file
+// Create a capturer that exports PNG images in a TAR file
 //	var capturer = new CCapture( { format: 'png' } );
 
 	// Create a capturer that exports JPEG images in a TAR file
@@ -38,8 +38,6 @@ Menu and contents in HTML.
 	function init() {
 
 		var css, contents, hamburger, menu;
-
-		var txt = '<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>';
 
 		css = document.body.appendChild( document.createElement('style') );
 		css.innerHTML = 
@@ -88,53 +86,6 @@ Menu and contents in HTML.
 					' ~ <a href=index.html#readme.md onmouseover=pop1.style.display=""; onmouseout=pop1.style.display="none"; > &#x24D8; </a>' +
 				'</h2>' +
 				'<div class=popUp id=pop1 style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>' +
-
-/*
-				'<p>' +
-					'This is a template or boilerplate file that is frequently used to start-off a Jaanga projects.' +
-					'The widgets below don\'t do anything but are here to indicate the look and feel.' + 
-				'</p>' +
-
-				'<p>' +
-					'Select:<br><select id=selList onchange="" title="Select the item" size=5 >' +
-						'<option title="this is a" >aaa aaa aaa</option>' +
-						'<option selected >bbb bbb bbb</option>' +
-						'<optGroup label="Type 2" >' +
-							'<option>cc cc cc cc</option>' +
-						'</optGroup>' +
-					'</select>' +
-				'</p>' +
-
-				'<p>' +
-					'<button onclick=alert("button1"); title="Save as PNG" > Save </button> ' +
-					'<button onclick=console.log("button2"); > Button 2 </button> ' +
-					'<button onclick=doIt(); > Button 3 </button>' +
-				'</p>' +
-
-				'<p>' +
-					'<input type=radio name=field id=but1 />button 1 ' +
-					'<input type=radio name=field id=but2 checked />button 2 ' +
-					'<input type=radio name=field id=but3 />button 3' +
-				'</p>' +
-
-				'<p>' +
-					'Slider: <input type=range id=inp min=0 max=10 step=1 value=5 oninput=out.value=inp.value title="0 to 10: OK" > <output id=out >5</output>' +
-				'</p>' +
-
-				'<p title="Nothing here yet. ;-(">' +
-					'<input id=inpPretty type=checkbox > Pretty colors ' +
-				'</p>' +
-
-				'<p>Samples: <input list=numbers id=inpSamples min=1 max=1024 onchange=initMap(); placeholder="Select sample size" title="Select the number of samples" ></p>' +
-					'<datalist id=numbers >' +
-					'<option value=10 >' +
-					'<option value=30 >' +
-					'<option value=50 >' +
-					'<option value=100 >' +
-					'<option value=512 >' +
-					'</datalist>' +
-*/
-
 
 				'<p><input type=file id=inpFile onchange=openFile(this); ></p>' +
 				'<p id=menuOpenFile ></p>' +

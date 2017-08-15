@@ -6,6 +6,7 @@
 
 Toys for TooToo to play with
 
+Given that the TooToo8 readme is a template, this readme is where actual updates and dev notes are kept.
 
 ## Issues
 
@@ -14,7 +15,7 @@ Toys for TooToo to play with
 
 ## To-Do
 
-* 2017-08-04 ~ View RSS workaround - now that crossorigin.me is broken
+* 2017-08-14 ~ Go to internal link via location.hash
 * 2017-08-04 ~ Add breadcrumbs to menu
 * 2017-08-04 ~ Iframe in menu automatic resize
 * 2017-08-04 ~ Audio / podcaster
@@ -22,6 +23,16 @@ Toys for TooToo to play with
 
 
 ## Change Log
+
+
+### 2017-08-13 ~ Theo
+
+* Add minor updates from ibpsa
+	* add device orientation fixes
+* 2017-08-04 ~ View RSS workaround - now that crossorigin.me is broken
+* Add 'view github issues'
+* Add 'view github contents'
+* Many fixes to 'Menu View Web Pages'
 
 ### 2017-08-04 ~ Theo
 

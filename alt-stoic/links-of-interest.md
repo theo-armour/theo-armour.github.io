@@ -1,7 +1,30 @@
 
 
-Stoic Links of Interest
-===
+# Stoic Links of Interest
+
+## Web Sites
+
+
+### Massimo Pigliucci
+
+* [How to Be a Stoic]( https://howtobeastoic.wordpress.com/ )
+	* An evolving guide to practical Stoicism for the 21st century
+	* Many links to his work
+* Typical post[ Stoic spiritual exercises: I, from the Enchiridion](  https://howtobeastoic.wordpress.com/2016/02/09/stoic-spiritual-exercises-i-from-the-enchiridion/ )
+
+See also this PDF
+
+* [Stoicism 101]( https://www.dropbox.com/s/czz1azk5j8irnjm/Stoicism%20101.pdf?dl=0 )
+
+
+
+### [Stoicism Subreddit]( https://www.reddit.com/r/Stoicism/ )
+
+* Very ctive subreddit woth extensive sidebar with links to further information
+* Extensive [FAQ]( https://www.reddit.com/r/Stoicism/wiki/faq )
+
+
+
 
 ## Wikipedia
 
@@ -9,8 +32,11 @@ Stoic Links of Interest
 
 Stoicism is a school of Hellenistic philosophy that flourished throughout the Roman and Greek world until the 3rd century AD. Stoicism is predominantly a philosophy of personal ethics which is informed by its system of logic and its views on the natural world. According to its teachings, as social beings, the path to happiness for humans is found in accepting that which we have been given in life, by not allowing ourselves to be controlled by our desire for pleasure or our fear of pain, by using our minds to understand the world around us and to do our part in nature's plan, and by working together and treating others in a fair and just manner.
 
+
 #### Etymology
+
 Stoic comes from the Greek _stōïkos_, meaning 'of the portico'. This, in turn, comes from _stoa_, the painted portico, in reference to where the influential Stoic Zeno of Citium taught - on his front porch.
+
 
 #### Ethics
 
@@ -23,9 +49,10 @@ The four cardinal virtues of the Stoic philosophy is a classification derived fr
 * wisdom (Sophia)
 * courage (Andreia)
 * justice (Dikaiosyne)
-* temperance (Sophrosyne).
+* temperance (Sophrosyne)
 
 See also: https://en.wikipedia.org/wiki/Cardinal_virtues
+
 
 ### [Cynicism]( https://en.wikipedia.org/wiki/Cynicism_(philosophy) )
 
@@ -55,15 +82,27 @@ In A Guide to the Good Life, Irvine offers a refreshing presentation of Stoicism
 Finally, A Guide to the Good Life shows readers how to become thoughtful observers of their own lives. If we watch ourselves as we go about our daily business and later reflect on what we saw, we can better identify the sources of distress and eventually avoid that pain in our life. By doing this, the Stoics thought, we can hope to attain a truly joyful life.
 
 ***
-And a number of work by the same author relate to the Stoics.
+
+A number of works by the same author relate to the Stoics.
 
 
-## Web Sites
+
+## Source Unknown
 
 
-### [How to Be a Stoic]( https://howtobeastoic.wordpress.com/ )
+Probably from Ryan Holiday
 
-* an evolving guide to practical Stoicism for the 21st century
-* https://www.dropbox.com/s/czz1azk5j8irnjm/Stoicism%20101.pdf?dl=0
 
-### [Stoicism Subreddit]( https://www.reddit.com/r/Stoicism/ )
+1. See clearly
+2. Act correctly
+3. Endure and accept
+
+Plus
+1. See things for what they are
+2. Do what we can
+3. Endure and bear what we must
+
+
+Perceive
+Act
+Endure and accept

@@ -80,7 +80,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 .button { background-color: #bbb; border: 1px solid #eee; color: #fff; display: inline-block; padding: 8px; vertical-align: middle; }
 
-
+#ifrMenu{ z-index: 10; }
 </style>
 
 </head>
@@ -140,7 +140,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		requestFile( 'menu-body.md', menuBody );
 
-//		requestFile( 'menu-foot.md', menuFoot );
+		requestFile( 'menu-foot.md', menuFoot );
 
 		onHashChange();
 
@@ -159,7 +159,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		let url, target;
 
 		url = location.hash.slice( 1 );
-
+console.log( 'url', url );
 //		document.title = url.split( '/' ).pop();
 
 		title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );
@@ -178,6 +178,8 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 			requestFile( url, menuBody );
 
+// drop this choice/ always have iframe inside md file??
+
 		} else if ( url.startsWith( 'html' ) ) {
 
 			menu.innerHTML = '<iframe id=menuIframe class=ifr src=' + url + ' ></iframe>';
@@ -192,6 +194,9 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		} else if ( url.includes( '.htm' ) ) {
 
+
+
+console.log( 'urleeeeeee', url );
 			main.innerHTML = '<iframe id=mainIframe class=ifr src=' + url + ' ></iframe>';
 
 			main.style.overflow = 'hidden';
