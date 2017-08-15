@@ -8,6 +8,8 @@
 
 ### Massimo Pigliucci
 
+A prolific writer on Stoicism,
+
 * [How to Be a Stoic]( https://howtobeastoic.wordpress.com/ )
 	* An evolving guide to practical Stoicism for the 21st century
 	* Many links to his work
@@ -21,7 +23,7 @@ See also this PDF
 
 ### [Stoicism Subreddit]( https://www.reddit.com/r/Stoicism/ )
 
-* Very ctive subreddit woth extensive sidebar with links to further information
+* Very active subreddit with sidebar with extensive links to further information
 * Extensive [FAQ]( https://www.reddit.com/r/Stoicism/wiki/faq )
 
 
