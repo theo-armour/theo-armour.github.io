@@ -66,11 +66,11 @@ just use 'this' wherever possible
 // https://crossorigin.me/
 // https://cors-anywhere.herokuapp.com/
 
-		let fileName;
+		let url;
 
-		fileName = 'https://cors-anywhere.herokuapp.com/';
+		url = 'https://cors-anywhere.herokuapp.com/';
 
-		requestFile( fileName );
+		requestFile( url );
 
 	}
 
@@ -313,7 +313,7 @@ a.unshift([item]) Prepends items to the start of the array.
 
 
 
-### Multi Dim
+### Array Multi Dim
 
 	var a = [];
 	for (i = 0; i < 4; i++) {
@@ -495,6 +495,10 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 
 
 // ### EVENTS Key cursor
+
+https://stackoverflow.com/questions/2381336/detect-click-into-iframe-using-javascript/23231136#23231136
+
+		window.addEventListener( 'resize', onWindowResize, false );
 
 		window.addEventListener( 'keyup', onKeyUp, false );
 
@@ -1091,6 +1095,8 @@ RegExp Modifiers
 
 setTimeout(function(){ controls.autoRotate = true; }, 3000);
 
+
+
 // ### SPEECH SYNTH
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance
@@ -1180,7 +1186,7 @@ Number(x).toLocaleString();
 
 
 
-// ### TIME
+### TIME
 
 http://www.w3schools.com/js/js_timing.asp
 
@@ -1203,7 +1209,8 @@ catch (e) {
 }
 
 
-// ### WINDOW
+### WINDOW
+
 http://www.w3schools.com/jsref/obj_window.asp
 
 http://www.w3schools.com/jsref/met_win_open.asp

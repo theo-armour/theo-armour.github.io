@@ -1,5 +1,43 @@
 
 
+
+
+## Stats
+
+<a href="javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()" title="Mr.doob's Stats.js" >Show fps statistics</a>
+
+
+
+## Math Function Plot
+
+	function drawPlane() {
+
+		let geometry, material, mesh;
+
+		geometry = new THREE.PlaneGeometry( 100, 100, 100, 100 );
+
+		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
+
+		for ( let i = 0; i < geometry.vertices.length; i++ ) {
+
+			vertex = geometry.vertices[ i ];
+
+			vertex.y = 10 * Math.sin( vertex.x / 10 ) + 5 * Math.cos( vertex.z / 10 ) ;
+
+		}
+
+		geometry.computeFaceNormals();
+		geometry.computeVertexNormals();
+
+		material = new THREE.MeshNormalMaterial( { side: 2 } );
+		mesh = new THREE.Mesh( geometry, material );
+		scene.add( mesh );
+
+	}
+
+
+## Lights 1
+
 	function addLights( size ) {
 
 // 2017-04-02 ~ http://jaanga.github.io/cookbook-threejs/templates/add-lights/template-threejs-lights-r2.html
@@ -45,6 +83,8 @@
 	}
 
 
+## Shadows
+
 	function addShadows() {
 
 // 2017-01-02 ~ http://jaanga.github.io/cookbook-threejs/templates/add-lights/template-threejs-lights-r3.html
@@ -64,7 +104,7 @@
 
 
 
-## rotation
+## Rotation
 
 		window.addEventListener( 'keyup', onKeyUp, false );
 		renderer.domElement.addEventListener( 'click', function() { controls.autoRotate = false; }, false );
@@ -118,6 +158,7 @@
 	}
 
 
+## Gnomen
 
 	function drawGnomen() {
 
@@ -164,7 +205,7 @@
 
 
 
-
+## Trylon and Perisphere
 
 	function initTrylonPerisphere() {
 

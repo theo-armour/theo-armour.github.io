@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = description content = "Basic HTML template" >
+<meta name = keywords content = "JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = date content = "2017-08-19" >
+<title>Theo Armour</title>
+<style id = "foo" >
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	a { color: crimson; text-decoration: none; }
+
+
+div.scrollmenu {
+	background-color: #333;
+	overflow: auto;
+	white-space: nowrap;
+	}
+
+div.scrollmenu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+	background-color: #777;
+}
+
+.iframeMain { width: 100% }
+
+</style>
+</head>
+<body>
+<script src = "https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js" ></script>
+
+	<div id = "menu" >
+		<div id = "header" ><h1><a id = "title" href = "" >theo armour</a></h1></div>
+
+	</div>
+
+	<div class="scrollmenu">
+
+		<a href = "#../README.md">Read Me</a>
+		<a href = "#view-github-issues.html">News</a>
+		<a href = "#view-github-events.html">Recent Events</a>
+		<a href = "#view-github-repos.html">Active Repos</a>
+		<a href = "#view-rss.html">RSS</a>
+		<a href = "#../page/contact.md">Contact</a>
+		<a href = "#../page/about.md">About</a>
+
+	</div>
+
+		<div id = "contentsHidden" ></div>
+		<div id=titles ></div>
+		<div id = "contents" ></div>
+
+<script>
+
+// https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp
+
+	const b = '<br>';
+
+	init();
+
+	function init() {
+
+		contentsHidden.style.display = 'none';
+
+		onHashChange();
+
+		window.addEventListener( 'hashchange', onHashChange, false );
+
+		location.hash = '../README.md';
+
+	}
+
+
+	function onHashChange() {
+
+		let url;
+
+		url = location.hash.slice( 1 );
+
+		if ( url.endsWith( '.md' ) ) {
+
+			requestFile( url, callback );
+
+		} else if ( url.includes( '.htm' ) ){
+
+			contentsHidden.innerHTML = '<iframe id=ifrMain class=iframeMain src=' + url + ' ></iframe>';
+
+		}
+
+	}
+
+
+	function requestFile( url, callback ) {
+
+		let xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
+
+
+	function callback( xhr ) {
+
+		let response;
+		let converter;
+
+		converter = new showdown.Converter();
+
+		response = xhr.target.response;
+
+//console.log( 'response', response );
+
+		contents.innerHTML = converter.makeHtml( response );
+
+	}
+
+
+</script>
+</body>
+</html>

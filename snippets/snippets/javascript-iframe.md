@@ -60,6 +60,7 @@ see view-rss.html
 			parser = new DOMParser();
 			xmlDoc = parser.parseFromString( response, 'text/xml' );
 
+			doc = parser.parseFromString( response, 'text/html' );
 
 
 ### Update Parent Style
@@ -90,7 +91,7 @@ see view-rss.html
 console.log( '', event );
 console.log( '', event.data );
 
-//	  if (event.origin !== "http://example.org:8080" )
+//		if (event.origin !== "http://example.org:8080" )
 //		return;
 
 	}

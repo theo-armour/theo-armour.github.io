@@ -18,7 +18,8 @@
 
 		let v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 
-// Changes
+
+## Changes
 
 http://mrdoob.github.io/three.js/docs/#Reference/Loaders/XHRLoader
 
@@ -36,7 +37,8 @@ http://mrdoob.github.io/three.js/docs/#Reference/Loaders/XHRLoader
 
 		vector.unproject( camera );
 
-// Notes
+
+## Notes
 spheresIndex = ( spheresIndex + 1 ) % spheres.length;
 
 webgl_loader_scene_blender.html# - simple object lister
@@ -61,7 +63,7 @@ object.traverse( callback )
 
 
 
-// BASIC
+## BASIC
 
 	function updateCamera() {
 
@@ -72,7 +74,8 @@ object.traverse( callback )
 	}
 
 
-// ### CONTROLS
+
+### CONTROLS
 
 controls.update()
 controls.reset();
@@ -126,7 +129,7 @@ controls.reset();
 
 
 
-// ### COLORS / Random  ###
+### COLORS / Random  ###
 
 trick
 		mesh.scale.z = -1;
@@ -187,7 +190,7 @@ THREE.ColorKeywords = { 'aliceblue': 0xF0F8FF, 'antiquewhite': 0xFAEBD7, 'aqua':
 var color = new THREE.Color( 'skyblue' );
 
 
-// ### CLOCK ###
+### CLOCK ###
 
 	var clock = new THREE.Clock();
 	var delta = clock.getDelta(),
@@ -204,7 +207,8 @@ var color = new THREE.Color( 'skyblue' );
 
 
 
-// ### DETECTOR
+### DETECTOR
+
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage( {parent: threejs} );  // move the message wherever
 
 if ( ! Detector.webgl ) {
@@ -214,7 +218,7 @@ if ( ! Detector.webgl ) {
 }
 
 
-// ### Edges
+### Edges
 
 
 			var edgesGeometry, edgesMaterial, edges,
@@ -224,20 +228,16 @@ if ( ! Detector.webgl ) {
 			edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
 			mesh.add( edges );
 
+
+
 // ### Events
 
 see assets
 
 
-// ### EXTRUDE
-
-		geometry = new THREE.ExtrudeGeometry( shape, { amount: 10, bevelEnabled: false } );
-		material = new THREE.MeshNormalMaterial();
-		mesh = new THREE.Mesh( geometry, material ) ;
-		scene.add( mesh );
 
 
-// GEOMETRY MATRIX / Edits
+## GEOMETRY MATRIX / Edits
 
 		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
 		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2, 3 ) );
@@ -247,7 +247,7 @@ see assets
 
 
 
-// ### GEOMETRY
+## GEOMETRY
 
 // you must new or clone geometry for each new mesh
 
@@ -290,7 +290,18 @@ see assets
 		.center();
 
 
-### GEOMETRY / Lathe
+
+## Geometry EXTRUDE
+
+		geometry = new THREE.ExtrudeGeometry( shape, { amount: 10, bevelEnabled: false } );
+		material = new THREE.MeshNormalMaterial();
+		mesh = new THREE.Mesh( geometry, material ) ;
+		scene.add( mesh );
+
+
+
+
+## GEOMETRY / Lathe
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/LatheGeometry
 // Class for generating meshes with axial symmetry. Possible uses include donuts, pipes, vases etc. The lathe rotate around the Z axis.
 // LatheGeometry(points, segments, phiStart, phiLength) - does not close automatically
@@ -499,12 +510,14 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 		scene.add( new THREE.VertexTangentsHelper( mesh, 50, col ) );
 
 
-// ### Images
+
+
+### Images
 
 		img.crossOrigin = 'Anonymous';
 
 
-// ### LIGHTS
+### LIGHTS
 
 
 // hemisphere
@@ -546,7 +559,7 @@ Creates a light at a specific position in the scene. The light shines in all dir
 
 
 
-// ### MATERIALS / textures> see below
+### MATERIALS / textures> see below
 
 ambient: 0xffffff, 'gold'
 color: Math.random() * 0xffffff,
@@ -596,38 +609,11 @@ wireframe: false,
 
 
 
-// ### MATH
-		var sin = function( a ) { return Math.sin( a ); };
-		var r = function( a ) { return a * Math.random(); };
-
-// var cos = Math.cos, sin = Math.sin; << where did I see something like thi?
-// .degToRad
-// .radToDeg
-Also: THREE.Math.degToRad
-
-	var pi = Math.PI, pi2 = 2 * Math.PI, pi05 = 0.5 * Math.PI;
-	var d2r = pi / 180, r2d = 180 / pi;  // degrees / radians
-
-	function v( x, y, z ){ return new THREE.Vector3( x, y, z ); }
-	function v2( x, y ){ return new THREE.Vector2( x, y ); }
-
-	function cos( a ){ return Math.cos( a ); }
-	function sin( a ){ return Math.sin( a ); }
-	function pow(a,b){ return Math.pow(a,b); }
-	function ran(){ return Math.random(); }
-
-	function convertPosition( lat, lon, radius ) {
-		var rc =  radius * cos( lat );
-		return  new THREE.Vector3(
-			rc * cos( lon),
-			radius * sin( lat ),
-			rc * sin( lon)
-		);
-	}
 
 
 
-// ### MESH
+
+## MESH
 
 		mesh.castShadow() = mesh.receiveShadow() = true;
 
@@ -653,7 +639,7 @@ Also: THREE.Math.degToRad
 
 
 
-// ### OBJECT3D ###
+## OBJECT3D ##
 
 http://mrdoob.github.io/three.js/docs/#Reference/Core/Object3D
 
@@ -731,13 +717,17 @@ obj.translateOnAxis( axisOfMovement, delta );
 
 
 
-// RENDERER
+
+## RENDERER
 
 		renderer.shadowMapEnabled = true;
 //		renderer.shadowMapSoft = true;
 
 
-// SCENE
+
+
+## SCENE
+
 * http://threejs.org/docs/#Reference/Scenes/Scene
 	* See overrideMaterial
 
@@ -764,7 +754,8 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 	};
 
 
-// SHADOWS
+
+## SHADOWS
 		light.castShadow = true;
 
 		mesh.castShadow = true;
@@ -778,7 +769,7 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 
 
-// ### SHAPES
+## SHAPES
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Core/Path
 // http://threejs.org/docs/#Reference/Extras.Core/Shape
 
@@ -788,21 +779,20 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 	function buildShapeWithHole() {
 
-		var shape, hole;
-		var geometry, material, mesh;
-		var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+		let shape, hole;
+		let geometry, material, mesh;
+		let v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
 //
 
 		shape = new THREE.Shape( [ v2( 0, 10), v2( 0, 50), v2( 30, 60), v2( 40, 10) ] );
-		geometry = shape.extrude( { amount: 10, bevelEnabled: false } );
+		tee = new THREE.Shape( [ v2( 0, 0 ), v2( 0, 50 ), v2( 10, 50 ), v2( 10, 30 ), v2( 50, 30 ), v2( 50, 20 ) , v2( 10, 20 ), v2( 10, 0 ) ] );
+
+// not		geometry = shape.extrude( { amount: 10, bevelEnabled: false } );
 
 //
 		shape = new THREE.Shape();
-
 		shape.absarc( 0, 0, 50, 0, 2 * Math.PI );
-
-
 
 
 		var hole = new THREE.Path();
@@ -822,6 +812,7 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		scene.add( mesh );
 
 	}
+
 
 
 // ## SPLINES
@@ -936,22 +927,10 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 
 ### THREE.JS SCRIPTS
 
-<script src='../../../git-repos/three.js/examples/js/Detector.js'></script>
-<script src='../../../git-repos/three.js/build/three.min.js'></script>
-<script src='../../../git-repos/three.js/examples/js/controls/TrackballControls.js'></script>
-<script src='../../../git-repos/three.js/examples/js/libs/stats.min.js'></script>
-
-<script src='../../../../git-repos/three.js/examples/js/Detector.js'></script>
-<script src='../../../../git-repos/three.js/build/three.min.js'></script>
-<script src='../../../../git-repos/three.js/examples/js/controls/TrackballControls.js'></script>
-<script src='../../../../git-repos/three.js/examples/js/libs/stats.min.js'></script>
-
-
 <script src=http://mrdoob.github.io/three.js/examples/js/Detector.js ></script>
 <script src=http://mrdoob.github.io/three.js/build/three.min.js ></script>
 <script src=http://mrdoob.github.io/three.js/examples/js/controls/TrackballControls.js ></script>
 <script src=http://mrdoob.github.io/three.js/examples/js/libs/stats.min.js ></script>
-
 
 <script src="http://mrdoob.github.com/three.js/examples/fonts/gentilis_bold.typeface.js"></script>
 <script src="http://mrdoob.github.com/three.js/examples/fonts/gentilis_regular.typeface.js"></script>
@@ -964,23 +943,28 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 <script src="http://mrdoob.github.com/three.js/examples/fonts/droid/droid_serif_regular.typeface.js"></script>
 <script src="http://mrdoob.github.com/three.js/examples/fonts/droid/droid_serif_bold.typeface.js"></script>
 
-<script src="../../../../git-repos/three.js/examples/fonts/gentilis_bold.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/gentilis_regular.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/optimer_bold.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/optimer_regular.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/helvetiker_bold.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/helvetiker_regular.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/droid/droid_sans_regular.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/droid/droid_sans_bold.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/droid/droid_serif_regular.typeface.js"></script>
-<script src="../../../../git-repos/three.js/examples/fonts/droid/droid_serif_bold.typeface.js"></script>
-
-<script src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js ></script>
 
 <script src="https://raw.github.com/mrdoob/three.js/r59/build/three.min.js"></script>
 <script src="https://raw.github.com/mrdoob/three.js/r47/examples/js/Stats.js"></script>
 <script src="https://raw.github.com/mrdoob/three.js/r47/examples/fonts/helvetiker_bold.typeface.js" ></script>
 
+<script src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js ></script>
+
+
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js" ></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js" ></script>
+
+
+
+## Math
+
+Also: THREE.Math.degToRad https://threejs.org/docs/#api/math/Math
+
+
+	function convertPosition( lat, lon, radius ) {
+		var rc =  radius * cos( lat );
+		return new THREE.Vector3( rc * cos( lon), radius * sin( lat ), rc * sin( lon) );
+	}
 
 	var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 	var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
