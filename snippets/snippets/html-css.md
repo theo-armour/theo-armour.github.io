@@ -73,7 +73,7 @@ box model
 
 * { box-sizing: border-box; height: 100% vertical-align: top; }
 
-
+use window.clientWidth << takes scrollbar into account
 
 
 border-width, border-style, and border-color.

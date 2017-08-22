@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-* {box-sizing:border-box}
+* { box-sizing:border-box }
 
 body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right:0; }
 
@@ -40,7 +40,7 @@ body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right:0;
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', fileName, true );
 		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
+//		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
 		xhr.onload = callback;
 		xhr.send( null );
 
@@ -57,18 +57,17 @@ body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right:0;
 		parser = new DOMParser();
 		xmlDoc = parser.parseFromString( response, 'text/xml' );
 
-		title = xmlDoc.getElementsByTagName( 'title' )[0].childNodes[0].nodeValue;
+		title = xmlDoc.getElementsByTagName( 'title' )[0].childNodes[0].nodeValue.toLowerCase();
 		id = xmlDoc.getElementsByTagName( 'id' )[0].childNodes[0].nodeValue;
 		updated = xmlDoc.getElementsByTagName( 'updated' )[0].childNodes[0].nodeValue;
 		entries = xmlDoc.getElementsByTagName( 'entry' );
 
-		parent.titles.innerHTML =
+//		parent.titles.innerHTML =
+		txt =
 			'<h1>' + title.link( id.slice( 0, id.indexOf( '?' ) ) ) + '</h1>' +
 			'Update: ' + updated.replace( /T|Z/g, ' ' ) +
 			'';
 
-
-		txt = '';
 
 		for ( let entry of entries ) {
 

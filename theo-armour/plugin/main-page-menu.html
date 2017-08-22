@@ -8,29 +8,16 @@
 <title>Theo Armour</title>
 <style id = "foo" >
 
-	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	body { font: 12pt monospace; height: 100%; margin: 0 auto; max-width: 800px; }
 	a { color: crimson; text-decoration: none; }
 
+	div.scrollmenu { background-color: #333; overflow: auto; white-space: nowrap; }
 
-div.scrollmenu {
-	background-color: #333;
-	overflow: auto;
-	white-space: nowrap;
-	}
+	div.scrollmenu a { display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none; }
 
-div.scrollmenu a {
-	display: inline-block;
-	color: white;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-}
+	div.scrollmenu a:hover { background-color: #777; }
 
-div.scrollmenu a:hover {
-	background-color: #777;
-}
-
-.iframeMain { width: 100% }
+	div.iframeMain { width: 100%; }
 
 </style>
 </head>
@@ -38,6 +25,7 @@ div.scrollmenu a:hover {
 <script src = "https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js" ></script>
 
 	<div id = "menu" >
+
 		<div id = "header" ><h1><a id = "title" href = "" >theo armour</a></h1></div>
 
 	</div>
@@ -54,21 +42,22 @@ div.scrollmenu a:hover {
 
 	</div>
 
-		<div id = "contentsHidden" ></div>
-		<div id=titles ></div>
-		<div id = "contents" ></div>
+	<div id = "contentsHidden" ></div>
+	<div id=titles ></div>
+	<div id = "contents" ></div>
 
 <script>
 
 // https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp
 
-	const b = '<br>';
 
 	init();
 
 	function init() {
 
 		contentsHidden.style.display = 'none';
+
+		parent.document.body.style.overflow = "hidden";
 
 		onHashChange();
 
@@ -84,6 +73,8 @@ div.scrollmenu a:hover {
 		let url;
 
 		url = location.hash.slice( 1 );
+
+		titles.inneHTML = '';
 
 		if ( url.endsWith( '.md' ) ) {
 
@@ -106,7 +97,7 @@ div.scrollmenu a:hover {
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', url, true );
 		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
-		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+//		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
 		xhr.onload = callback;
 		xhr.send( null );
 

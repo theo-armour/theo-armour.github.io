@@ -1,6 +1,13 @@
+<style>
 
-[Paul Masson]( #paulmasson )
-[Mr.doob]( #mrdoob )
+select { width: 100%; }
+
+</style>
+
+
+<div id=mnuPeeps ></div>
+
+<iframe src=./plugin/view-github-peeps.html width=100% height=0 frameBorder=0 ></iframe>
 
 <div id=mnuContents ></div>
 

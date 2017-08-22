@@ -25,7 +25,7 @@ html {
 	--menu-width: 250px
 }
 
-body, html { background-color: #fefefe; font: 12pt monospace; height: 100%; margin: 0; /* overflow: hidden; */ }
+body, html { background-color: #fefefe; font: 12pt monospace; height: 100%; margin: 0; }
 
 a { color: crimson; }
 
@@ -61,7 +61,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 #ifrMain { border-width: 0; height: 100%; margin: 0; width: 100%; }
 
-#main { height: 100%; margin-left: var( --menu-width ); transition: margin-left .5s; position: absolute; top: 0; width: calc( 100% - var( --menu-width ) ); }
+#main { box-sizing: border-box; height: 100%; margin-left: var( --menu-width ); transition: margin-left .5s; position: absolute; top: 0; width: calc( 100% - var( --menu-width ) ); }
 
 #menu {
 	background-color: lightgray; box-sizing: border-box; height: 100%; left: 0; overflow: auto;
@@ -138,10 +138,10 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		let arr = location.pathname.split( '/' );
 
-		let p = arr.pop();
+//		let p = arr.pop();
 
-		projectName = arr.pop().replace( /\.github\.io/gi, '');
-
+//		projectName = arr.pop().replace( /\.github\.io/gi, '');
+//console.log( 'projectName', projectName  );
 		showdown.setFlavor( 'github' );
 
 		requestFile( './menu/menu-head.md', menuHead );
@@ -155,8 +155,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		window.addEventListener( 'hashchange', onHashChange, false );
 
 //		window.addEventListener( 'orientationchange', function() { window.location.reload(); } );
-
-		window.addEventListener( 'orientationchange', onWindowResize, false  );
+//		window.addEventListener( 'orientationchange', onWindowResize, false  );
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
@@ -168,7 +167,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	function onHashChange() {
 
-		let url;
+		let url, title;
 
 		url = location.hash.slice( 1 );
 
@@ -216,12 +215,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		} else {
 
 			ifrMenu.contentWindow.location.hash = url;
-
-//			if ( document.getElementById( 'ifrMain' ) ) {
-
-				ifrMain.contentWindow.location.hash = url;
-
-//			}
+			ifrMain.contentWindow.location.hash = url;
 
 		}
 
@@ -241,7 +235,6 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 			butEditFile.style.display = 'none';
 			hamburger.innerHTML = '&#9776;';
 			hamburger.style.top = '0';
-			main.style.top = '30px';   // not good for full screen
 
 			for ( var i = 0; i < iframes.length; i++ ) {
 
@@ -258,7 +251,6 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 			butEditFile.style.display = '';
 			hamburger.innerHTML = '&#9776; slide';
 			hamburger.style.top = '80px';
-			main.style.top = '0';
 
 			for ( var i = 0; i < iframes.length; i++ ) {
 
@@ -273,13 +265,14 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		}
 
 // main
-		if ( !menu.style.width || menu.style.width === '250px' ) {
+		if ( !menu.style.width || menu.style.width === '325px' ) {
 
-			main.style.width = ( window.innerWidth - 250 ) + 'px';
+//			main.style.width = ( window.innerWidth - 250 ) + 'px';
+			main.style.width = ( window.clientWidth - 325 ) + 'px';
 
 		} else { 
 
-			main.style.width = window.innerWidth + 'px';
+			main.style.width = window.clientWidth + 'px';
 
 		}
 
@@ -289,21 +282,21 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	function onClickSlideMenu() {
 
-		if ( !menu.style.width || menu.style.width === '250px' ) {
+		if ( !menu.style.width || menu.style.width === '325px' ) {
 
 			menu.style.width = '0';
 			hamburger.style.left = '0';
 
 			main.style.marginLeft = '0';
-			main.style.width = window.innerWidth + 'px';
-
+			main.style.width = window.clientWidth + 'px';
+			
 		} else {
 
-			menu.style.width = '250px';
-			hamburger.style.left = '250px';
+			menu.style.width = '325px';
+			hamburger.style.left = '325px';
 
-			main.style.marginLeft = '250px';
-			main.style.width = ( window.innerWidth - 250 ) + 'px';
+			main.style.marginLeft = '325px';
+			main.style.width = ( window.clientWidth - 325 ) + 'px';
 
 		}
 
@@ -317,7 +310,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		let file = location.hash.slice( 1 ) ? location.hash.slice( 1 ) : 'README.md';
 
- 		window.open( 'https://github.com/' + projectName + '/' + projectName + '.github.io/blob/master/' + file );
+ 		window.open( 'https://github.com/' + userGitHub + '/' + userGitHub + '.github.io/blob/master/' + folderGitHub + '/' + file );
 
 	}
 
@@ -331,13 +324,24 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		xhr = new XMLHttpRequest();
 		xhr.open( 'get', url, true );
+		xhr.target = target;
 		xhr.onload = function() {
 
 			target.innerHTML = converter.makeHtml( xhr.responseText );
+//console.log( 'xhr', xhr );
 
-//			projectName = document.links[ 0 ].text;
+			if ( xhr.target === menuHead ) {
+
+				userGitHub = document.links[ 0 ].text.toLowerCase();
+//console.log( 'userGitHub', userGitHub );
+
+				folderGitHub = document.links[ 1 ].text.toLowerCase().replace( / /g, '-' );
+//console.log( 'folderGitHub', folderGitHub );
+
+			}
 
 			onload();
+
 			onWindowResize();
 
 		};

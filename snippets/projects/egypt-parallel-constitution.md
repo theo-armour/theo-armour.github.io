@@ -1,7 +1,5 @@
 # Egypt parallel constitution
 
-
-
 [Needed: a description of the common problems people were facing in 2011 and how or why this was a good proposal for the solution.
 
 Think about
@@ -9,6 +7,24 @@ Think about
 A mission: a statement of a rationale, applicable now as well as in the future
 
 A vision: a descriptive picture of a desired future state]
+
+
+## 2017-08-21 ~ 
+
+Tools to help people make important decisions
+
+Make decisions in a variety of contexts: Buddhist or atheist, conservative or progressive
+Take account of gender, race, abilities
+Built upon authority, shoulders of giants
+
+
+Provide definitions, cataloging system, ontologies
+
+
+
+
+
+
 ## 2017-07-03 ~ 
 
 * Add links to anchors in constitution

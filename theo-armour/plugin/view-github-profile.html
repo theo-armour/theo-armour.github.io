@@ -80,7 +80,8 @@
 
 	function onHashChange() {
 
-console.log( '##', location.hash );
+//console.log( 'location.hash', location.hash );
+
 		let url;
 
 		user = location.hash ? location.hash.slice( 1 ) : user;
@@ -120,6 +121,12 @@ console.log( '##', location.hash );
 		}
 
 		parent.mnuContents.innerHTML = txt;
+
+		if ( userData.login !== 'theo-armour' ) {
+
+			RES.getRepos( userData.login );
+
+		}
 
 //		height = document.body.scrollHeight;
 

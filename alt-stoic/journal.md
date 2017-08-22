@@ -1,7 +1,30 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/alt-stoic/#journal.md "View file as a web page." ) </span>
 
 
-# 2017-08-14
+## 2017-08-21
+
+Need to double-click perception
+
+
+https://en.wikipedia.org/wiki/Perception
+
+https://en.wikipedia.org/wiki/Social_perception
+
+https://en.wikipedia.org/wiki/Social_cognition
+
+https://en.wikipedia.org/wiki/Immanuel_Kant#Theory_of_perception
+
+https://www.reddit.com/r/Stoicism/comments/5ow1u6/paul_guyers_thoughts_on_kant_as_a_stoic/
+
+https://en.wikipedia.org/wiki/How_to_Read_a_Book
+
+https://en.wikipedia.org/wiki/Ways_of_Seeing
+
+https://en.wikipedia.org/wiki/Charles_Sanders_Peirce
+
+How does semiotics affect perception?
+
+## 2017-08-14
 
 I had a nice, intense dialog with Andranik on the Stoics last night.
 

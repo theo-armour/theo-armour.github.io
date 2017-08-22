@@ -60,8 +60,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = txt;
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = txt;
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -102,7 +102,7 @@
 
 					'<h3>' +
 						( i + 1 ) + ' ' +
-                        ( following.login + b + '<img src=' + following.avatar_url + ' width=180 >' ).link( 'https://github.com/' + following.login ) +
+						( following.login + b + '<img src=' + following.avatar_url + ' width=180 >' ).link( 'https://github.com/' + following.login ) +
 					'</h3>' +
 
 					'<div>' +
@@ -120,8 +120,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = txt;
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = txt;
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -171,8 +171,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = txt;
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = txt;
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -239,8 +239,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = txt;
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = txt;
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -291,8 +291,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = txt;
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = txt;
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -338,8 +338,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = txt;
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = txt;
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -382,8 +382,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = '<table>' + txt + '</table>';
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = '<table>' + txt + '</table>';
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}
@@ -423,8 +423,8 @@
 
 			}
 
-			parent.ifrMain.contentWindow.contents.innerHTML = '<table>' + txt + '</table>';
-
+//			parent.ifrMain.contentWindow.contents.innerHTML = '<table>' + txt + '</table>';
+			parent.main.innerHTML = '<div id=mainContents class=center >' + txt + '</div>';
 			window.scrollTo( 0, 0 );
 
 		}

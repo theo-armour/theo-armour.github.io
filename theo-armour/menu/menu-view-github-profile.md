@@ -1,3 +1,6 @@
+_<span title="I do this regularly" >Click things to see if Theo is still alive and ~~kidding~~ coding.</span>_
+
+<br>
 
 <div id=mnuContents ></div>
 

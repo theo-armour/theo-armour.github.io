@@ -85,7 +85,11 @@
 
 		height = document.body.scrollHeight;
 
-		parent.ifrMenuSearch.style.height = ( 20 + height)  + 'px';
+		if ( parent.ifrMenuSearch ) {
+
+			parent.ifrMenuSearch.style.height = ( 20 + height )  + 'px';
+
+		}
 
 	}
 
@@ -138,7 +142,7 @@
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', url, true );
 		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
-		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+//		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
 		xhr.onload = callback;
 		xhr.send( null );
 
@@ -150,7 +154,7 @@
 
 			json = JSON.parse( response );
 
-console.log( '', json );
+//console.log( '', json );
 
 			selUser.innerHTML = '';
 
@@ -163,6 +167,10 @@ console.log( '', json );
 			}
 
 			selUser.onclick = function() { parent.ifrMenu.contentWindow.location.hash = selUser.value; };
+
+			selUser.selectedIndex = Math.floor( Math.random() * selUser.length );
+			parent.ifrMenu.contentWindow.location.hash = selUser.value;
+
 		}
 
 	}
