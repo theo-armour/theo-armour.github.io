@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
+<meta name = "description" content = "Basic HTML template" >
+<meta name = "keywords" content = "JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2017-08-04" >
+<title></title>
+<style>
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 400px; }
+	a { color: crimson; text-decoration: none; }
+	select { width: 100%; }
+
+</style>
+</head>
+<body>
+
+	<div id = "menu" >
+<!--
+		<div id = "header" ><h1><a id = "title" href = "" ></a></h1></div>
+-->
+		Search
+		<div><select id="selSearch" size=20 onchange=search(this.value); ></select></div>
+
+		Users
+		<div><select id="selUser" size=15 ></select></div>
+
+		<div id = "contents" ></div>
+
+	</div>
+
+<script>
+
+	var oneWeekAgo = new Date();
+	oneWeekAgo.setDate( oneWeekAgo.getDate() - 7 );
+	var oneWeekAgo$ = oneWeekAgo.toJSON().slice( 0, 10 );
+
+	let options = {
+
+		"Popular": [
+
+			{ "value": "stars:\>20000", "title": "Users with repos & stars > 20,000" },
+			{ "value": "JavaScript+stars:>3000", "title": "Users with word \'JavaScript\' & stars > 3000" },
+			{ "value": "Python+stars:>3000", "title": "Users with word \'Python\' & stars > 3000" },
+			{ "value": "created:>' + oneWeekAgo$ + '", "title": "Users/repos newer than ' + oneWeekAgo$ + '" }
+		],
+
+		"Pertaining to Three.js & 3D": [
+			{ "value": "three+stars:>300", "title": "Users with word \'three\' & stars > 300" },
+			{ "value": "3D+stars:>1000", "title": "Users with word \'3D\' & stars > 1000" },
+			{ "value": "stl+stars:>50", "title": "Users with word \'stl\' & stars > 50" }
+		],
+
+		"Pertaining to mathematics": [
+			{ "value": "math+stars:>200", "title": "Users with word \'math\' & stars > 200" },
+			{ "value": "calculus+stars:>20", "title": "Users with word \'calculus\' & stars > 20" },
+			{ "value": "sagemath+stars:>0", "title": "Users with word \'sagemath\' & stars > 0" }
+		],
+
+		"Pertaining to cartography": [
+			{ "value": "cartography+stars:>8", "title": "Users with word \'cartography\' & stars >8" },
+			{ "value": "maps+stars:>1000", "title": "Users with word \'maps\' & stars >1000" },
+			{ "value": "geojson+stars:>100", "title": "Users with word \'geojson\' & stars >100" },
+			{ "value": "geography+stars:>100", "title": "Users with word \'geography\' & stars >100" }
+		],
+
+		"Pertaining to flight simulation": [
+			{ "value": "flight+stars:>100", "title": "Users with word \'flight\' & stars >100" },
+		]
+
+	}
+
+
+	init();
+
+	function init() {
+
+		let txt;
+
+//		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5 ).replace( /-/g, ' ' );
+
+		setSearch();
+
+		height = document.body.scrollHeight;
+
+		if ( parent.ifrMenuSearch ) {
+
+			parent.ifrMenuSearch.style.height = ( 20 + height )  + 'px';
+
+		}
+
+	}
+
+
+	function setSearch() {
+
+		let keys = Object.keys( options );
+
+		for ( let i = 0; i < keys.length; i++ ) {
+
+			selSearch.innerHTML += '<optgroup label="' + keys[ i ] + '" >';
+
+			let group = options[ keys[ i ] ];
+
+			for ( let j = 0; j < group.length; j++ ) {
+
+				let option = group[ j ];
+
+				selSearch.innerHTML += '<option value="' + option.value + '" >' + option.title + '</option>';
+
+//console.log( '', option );
+
+			}
+
+			selSearch.innerHTML += '</optgroup>';
+
+		}
+
+		selSearch.selectedIndex = 4;
+
+		search( selSearch.value );
+
+	}
+
+
+	function search( query ) {
+
+		url = 'https://api.github.com/search/repositories?q=' + query + '&sort=stars&order=desc&per_page=100';
+
+		requestFile( url );
+
+	}
+
+
+	function requestFile( url ) {
+
+		let xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+//		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+		function callback( xhr ) {
+
+			let response, json, item;
+
+			response = xhr.target.response;
+
+			json = JSON.parse( response );
+
+//console.log( '', json );
+
+			selUser.innerHTML = '';
+
+			for ( let i = 0; i < json.items.length; i++ ) {
+
+				item = json.items[ i ];
+
+				selUser[ selUser.length ] = new Option( ( i + 1 ) + ' ' + item.full_name, item.owner.login );
+
+			}
+
+			selUser.onclick = function() { parent.ifrMenu.contentWindow.location.hash = selUser.value; };
+
+			selUser.selectedIndex = Math.floor( Math.random() * selUser.length );
+			parent.ifrMenu.contentWindow.location.hash = selUser.value;
+
+		}
+
+	}
+
+
+
+</script>
+</body>
+</html>

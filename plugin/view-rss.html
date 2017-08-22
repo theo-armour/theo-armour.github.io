@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* { box-sizing:border-box }
+
+body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right:0; }
+
+
+/* On smaller screens, decrease text size */
+@media only screen and ( max-width: 300px ) {
+	.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+	<div id=titles ></div>
+
+	<div id=contents ></div>
+
+
+<script>
+
+	const urlCORS = 'https://cors-anywhere.herokuapp.com/';
+
+//	let fName =  urlCORS + 'http://www.grasshopper3d.com/group/ladybug/forum/topic/list?feed=yes';
+	let urlAtom =  'https://github.com/theo-armour.atom';
+
+	requestFile( urlCORS + urlAtom );
+
+
+	function requestFile( fileName ) {
+
+  	let xhr, text, lines;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', fileName, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+//		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
+
+
+	function callback( xhr ) {
+
+		let response, txt, parser, xmlDoc, title, id, updated, entries, author, authorName, authorURI, str;
+		const b = '<br>';
+
+		response = xhr.target.response;
+
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString( response, 'text/xml' );
+
+		title = xmlDoc.getElementsByTagName( 'title' )[0].childNodes[0].nodeValue.toLowerCase();
+		id = xmlDoc.getElementsByTagName( 'id' )[0].childNodes[0].nodeValue;
+		updated = xmlDoc.getElementsByTagName( 'updated' )[0].childNodes[0].nodeValue;
+		entries = xmlDoc.getElementsByTagName( 'entry' );
+
+//		parent.titles.innerHTML =
+		txt =
+			'<h1>' + title.link( id.slice( 0, id.indexOf( '?' ) ) ) + '</h1>' +
+			'Update: ' + updated.replace( /T|Z/g, ' ' ) +
+			'';
+
+
+		for ( let entry of entries ) {
+
+			title = entry.getElementsByTagName( 'title' )[0].childNodes[0].nodeValue;
+			link = entry.getElementsByTagName( 'link' )[0].getAttribute( 'href' );
+			author = entry.getElementsByTagName( 'author' )[0];
+			authorName = author.getElementsByTagName( 'name' )[0].childNodes[0].nodeValue;
+			authorURI = author.getElementsByTagName( 'uri' )[0].childNodes[0].nodeValue;
+			content = entry.getElementsByTagName( 'content' )[0];
+			str = parser.parseFromString( content.innerHTML, "text/html");
+
+			txt += '<h2>' + title.link( link ) + '</h2>' +
+				authorName.link( authorURI ) + b +
+				str.body.innerText + b +
+			'';
+
+//console.log( '', str.body.innerText );
+
+		}
+
+		parent.contents.innerHTML = txt;
+
+	}
+
+
+</script>
+</body>
+</html>

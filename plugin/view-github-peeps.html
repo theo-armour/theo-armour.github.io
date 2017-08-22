@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = description content = "Basic HTML template" >
+<meta name = keywords content = "JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = date content = "2017-08-21" >
+<title>view github peeps </title>
+</head>
+<body>
+
+<script>
+
+	init();
+
+	function init() {
+
+		parent.mnuPeeps.innerHTML = 
+
+		'<select id=selUser size=12 width=100% onclick=parent.ifrMenu.contentWindow.location.hash=this.value; >' +
+			'<optgroup label="Theo" >' +
+				'<option selected >Theo-Armour</option>' +
+				'<option>Pushme-Pullyou</option>' +
+				'<option>jaanga</option>' +
+				'<option>icoloridelbuio</option>' +
+
+			'</optgroup>' +
+
+			'<optgroup label="Three.js/WedGL" >' +
+				'<option>Mrdoob</option>' +
+				'<option>bhouston</option>' +
+				'<option>gero3</option>' +
+				'<option>saqoosha</option>' +
+				'<option>WestLangley</option>' +
+				'<option>zz85</option>' +
+				'<option>Koblin</option>' +
+				'<option>alteredq</option>' +
+				'<option>kig</option>' +
+				'<option>spite</option>' +
+				'<option>greggman</option>' +
+				'<option>philogb</option>' +
+				'<option>toji</option>' +
+				'<option>tparisi</option>' +
+				'<option>arodic</option>' +
+				'<option>lo-th</option>' +
+				'<option>CallumPrentice</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="FGx">' +
+				'<option>GeoffMcl</option>' +
+				'<option>pedromorgan</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="Google" >' +
+				'<option>kenrussell</option>' +
+				'<option>toji</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="Ladybug" >' +
+				'<option>MostaphaRoudsari</option>' +
+				'<option>chriswmackey</option>' +
+				'<option>ayezioro</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="Sage Math" >' +
+				'<option>PaulMasson</option>' +
+				'<option>WilliamStein</option>' +
+				'<option>HaraldSchilly</option>' +
+				'<option>DanDrake</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="???" >' +
+				'<option>3Dmashup</option>' +
+				'<option>art</option>' +
+				'<option>alavit-d</option>' +
+				'<option>mourner</option>' +
+				'<option>mbostock</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="OpenDesk" >' +
+				'<option>harrykeen18</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="Abantech" >' +
+				'<option>GMelencio</option>' +
+				'<option>jamesAbantech</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="Wiredcraft" >' +
+				'<option>hunvreus</option>' +
+				'<option>quentinberder</option>' +
+			'</optgroup>' +
+
+			'<optgroup label="Autodesk" >' +
+				'<option>jeremytammik</option>' +
+				'<option>KeanW</option>' +
+				'<option>Autodesk</option>' +
+			'</optgroup>' +
+		'</select>' +
+
+		'';
+
+		parent.selUser.selectedIndex = Math.floor( Math.random() * parent.selUser.length );
+		parent.ifrMenu.contentWindow.location.hash = parent.selUser.value;
+
+	}
+
+</script>
+</body>
+</html>
+
+
