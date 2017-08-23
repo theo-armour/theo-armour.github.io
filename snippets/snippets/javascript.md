@@ -66,9 +66,9 @@ just use 'this' wherever possible
 // https://crossorigin.me/
 // https://cors-anywhere.herokuapp.com/
 
-		let url;
+		let urlCORS, url;
 
-		url = 'https://cors-anywhere.herokuapp.com/';
+		urlCORS = 'https://cors-anywhere.herokuapp.com/';
 
 		requestFile( url );
 
@@ -91,8 +91,8 @@ just use 'this' wherever possible
 			let response, json, lines;
 
 			response = xhr.target.response;
-
 console.log( 'response', response );
+
 			contents.innerHTML = response;
 
 //			json = JSON.parse( response );
