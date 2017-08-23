@@ -1,6 +1,29 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/alt-stoic/#journal.md "View file as a web page." ) </span>
 
 
+## 2017-08-23 ~ 
+
+https://en.wikipedia.org/wiki/IPO_model
+
+See Judge Act
+
+http://vinformation.org/en/vincentian-formation-resources/presentations-media-games/the-see-judge-act-process/
+
+
+The phrase OODA loop refers to the decision cycle of observe, orient, decide, and act, developed by military strategist and United States Air Force Colonel John Boyd. Boyd applied the concept to the combat operations process, often at the strategic level in military operations. It is now also often applied to understand commercial operations and learning processes. The approach favors agility over raw power in dealing with human opponents in any endeavor.
+
+
+https://en.wikipedia.org/wiki/OODA_loop
+
+
+
+Judge/ Process
+
+https://en.wikipedia.org/wiki/SWOT_analysis
+
+
+
+
 ## 2017-08-21
 
 Need to double-click perception
