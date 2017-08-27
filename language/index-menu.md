@@ -12,7 +12,7 @@
 #### [README / home page]( #README.md )
 
 
-### [Corpora]( #pages/corpora.md )
+### [Corpora]( #page/corpora.md )
 
 
 ### [Links]( #pages/links.md )
@@ -42,8 +42,8 @@
 
 ***
 
-[license         ]( #./pages/license.md )
-[code of conduct ]( #./pages/code-of-conduct.md )
-[contributing    ]( #./pages/contributing.md )
+[license         ]( #./page/license.md )
+[code of conduct ]( #./page/code-of-conduct.md )
+[contributing    ]( #./page/contributing.md )
 
 <h1 style=text-align:center; > &#x2766; </h1>
