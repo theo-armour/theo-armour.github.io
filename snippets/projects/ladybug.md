@@ -1,11 +1,12 @@
 
 
+Feel the heat: Burning mAnalemma brings #temple_2017 to your browser #burningman #threejs #mapbox
 
 https://github.com/mdahlhausen/epwvis/issues/8
 
 @mostaphaRoudsari @mdahlhausen @MingboPeng 
 
-NREL/EnergyPlus hava a folder on GitHub with a small number of EPW files - probably for testing - here:
+NREL/EnergyPlus have a folder on GitHub with a small number of EPW files - probably for testing - here:
 
  https://github.com/NREL/EnergyPlus/tree/develop/weather
 
@@ -23,11 +24,13 @@ http://www.ladybug.tools/eval/publication
 
 Mission
 
-* Authoritative / sources /thanks / credits
+* Authoritative / sources / thanks / credits
 * Free in every sense / no charges / can fork
 * Easy to tinker/tweak
 
 # ladybug-tools.github.io
+
+# spider
 
 # ladybug-web
 
