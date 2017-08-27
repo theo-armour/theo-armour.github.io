@@ -10,9 +10,9 @@
 
 ## Public Corpora
 
-http://quod.lib.umich.edu/m/micase/
-http://guides.lib.umich.edu/c.php?g=282869&p=1884909
-https://linguistics.stanford.edu/resources/resources-corpora
+* http://quod.lib.umich.edu/m/micase/
+* http://guides.lib.umich.edu/c.php?g=282869&p=1884909
+* https://linguistics.stanford.edu/resources/resources-corpora
 
 ### "COCA" 
 http://www.americancorpus.org/
@@ -22,9 +22,9 @@ http://corpus.byu.edu/coca/
 * http://corpus.byu.edu/size.asp
 	* corpora, size, queries = better resources, more insight
 
-http://commoncrawl.org/'
+* http://commoncrawl.org/
 
-http://martinweisser.org/corpora_site/CBLLinks.html
+* http://martinweisser.org/corpora_site/CBLLinks.html
 
 
 
