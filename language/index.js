@@ -11,6 +11,6 @@
 
 	defaults.repository = "theo-armour.github.io";
 
-	defaults.folder = 'theo-armour.github.io';
+	defaults.folder = 'theo-armour.github.io/tree/master/language/';
 
 	defaults.url = 'page/links.md';
