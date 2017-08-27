@@ -7,10 +7,10 @@
 
 	defaults.menuWidth = 250;
 
-	defaults.user = 'pushme-pullyou';
+	defaults.user = 'theo-armour';
 
-	defaults.repository = "pushme-pullyou2";
+	defaults.repository = "theo-armour.github.io";
 
-	defaults.folder = 'pushme-pullyou2';
+	defaults.folder = 'theo-armour.github.io';
 
-//	defaults.url = 'README.md';
+	defaults.url = 'page/links.md';
