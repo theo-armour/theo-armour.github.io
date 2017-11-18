@@ -1,5 +1,12 @@
 
 
+
+## Caret
+
+* Standalone
+* trying to be an IDE
+* the best
+
 ## DriveNotepad
 
 
@@ -34,7 +41,3 @@ https://github.com/GoogleChrome/text-app/issues
 Saves to Googel Drive
 
 Full and powerful markdown editor
-
-## Caret
-Stanalone
-trying to be an IDE

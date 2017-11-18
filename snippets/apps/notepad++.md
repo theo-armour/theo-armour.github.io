@@ -1,8 +1,22 @@
-NotedPad++
-===
 
 
+# NotedPad++ / https://notepad-plus-plus.org/
 
+## 2017-11-18 ~ 
+
+Check ed the plugins - nothing really interesting
+
+## Emmet
+
+https://emmet.io/download/
+
+https://docs.emmet.io/
+
+Re-bind Emmet actions shortcuts in Settings > Shortcut Mapper > Plugin commands. The Expand Abbreviation action can be mapped to Tab key.
+
+Python 2.7 
+
+* lorem
 
 ## regex
 no need for /'s
@@ -22,6 +36,7 @@ Aspell Location
 C:\Program Files (x86)\Aspell\bin\aspell-15.dll
 
 Check use special button
+
 
 ### Installing Aspell
 Install in default
@@ -86,11 +101,21 @@ See misc > Auto-indent > uncheck
 * C:\Users\Theo\Dropbox\Public\settings
 
 ### MISC.
-* Document Switcher > Enable > uncheck - maybe not
-* Smart Highlighting > check 'Match case'
-* Auto-indent > uncheck
+	* Document Switcher > Enable > uncheck - maybe not
+	* Smart Highlighting > check 'Match case'
+	* Auto-indent > uncheck
 
 
+
+
+## Panels
+
+### Folder as workspace
+
+## Column Mode Editing
+Using
+Alt + Mouse dragging   or
+Alt + Shift + Arrow keys
 
 
 ## Menu

@@ -59,7 +59,7 @@ What is a right? Many ways of defining, cataloging and assigning. Too many ways 
 
 But
 
-Zuckerberg connects two billion people and starte this in his dormitory room
+Zuckerberg connects two billion people and started this in his dormitory room
 
 Macron - never elected to office - starts a political pary and sweeps into the presidents office on 15 months
 

@@ -13,14 +13,12 @@ curl -i https://api.github.com/users/theo-armour
 	fileName = 'https://api.github.com/repos/jaanga/sp500/contents/trades';
 
 
-# Tree + Contents
-
 
 ## Folder Contents
 
 * https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/2017-04-20';
 
-## file Contents
+## File Contents
 
 * https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/2017-04-20/GOOG.txt';
 * Contents base64 encoded
@@ -33,7 +31,7 @@ download_url from file or tree
 
 
 
-### Tree
+## Tree
 
 * https://developer.github.com/v3/git/trees/
 

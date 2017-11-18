@@ -11,17 +11,29 @@ http://www.html5rocks.com/en/tutorials/webcomponents/imports/
 http://www.w3schools.com/howto/howto_js_animate.asp
 
 
+## Colors
+https://www.w3schools.com/colors/colors_names.asp
 
 ## Button and Range
 
-	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 5px 28px; }
-	button:hover {background: #ccc;}
-
-	input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 160px; }
-	input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
-	input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus { color: #f1f1f1; }
 
 
+	button, input[ type=button ] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 15px; }
+	button:hover { background: #ccc; color: #fff }
+
+	input[ type=range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; box-sizing: border-box; width: 100% }
+	input[ type=range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+	input[ type=range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
+
+html { --mnu-back-col: lightgray; --menu-width: 250px; }
+
+width: calc( 100% - var( --menu-width ) )
+
+		const width = getComputedStyle(document.documentElement).getPropertyValue( '--mnu-width' );
 
 ### CHARACTERS
 http://unicode.org/emoji/charts/full-emoji-list.html
@@ -34,17 +46,26 @@ https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 🔃
 🔭
 📈
-🛈  &#x2139; &#x24D8;
+🛈  &#x2139; &#x24D8; i in circle
+
 
 ☰ hamburger / trigram for heaven &#9776;
 
 🗀 &#x1f5c0;
-&#x1f4c1;
-new tab/external link: &#x1F5D7; 🗗
+📁 &#x1f4c1;
+
+✎ &#9998; pencil
+
+🖉 &#x1f589; &#128393;
+
+new tab/external link: &#x1F5D7; 🗗  or ❐ &#x2750; or ⧉ &#x29c9;
+
 link &#128279; 🔗 or &#x1f517;
 
-home: &#x2302;
-i in circle: &#x24D8;
+⌂ home: &#x2302;
+
+🕷  &#x1f577; spider
+🕸 &#x1f578; spider web 
 recycle: &#21BB;
 Currency: &pound;  &euro;
 Arrows: &uArr;  &laquo; &raquo;
@@ -59,12 +80,11 @@ file:///C:/Dropbox/Public/code-cookbook/0-cookbook-general/string%20manipulation
 - see bottom for rotating characters by degrees.
 
 
-### Colors
-
-http://www.w3schools.com/colors/colors_names.asp
 
 
 ### CSS BORDERS
+
+outline: none;
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 
@@ -139,11 +159,14 @@ https://www.sitepoint.com/a-primer-on-css3-transforms/
 
 ### DETAILS
 
-<details>
+outline: none;
+
+<details open >
   <summary>Copyright 1999-2014.</summary>
   <p> - by Refsnes Data. All Rights Reserved.</p>
   <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
 </details>
+
 
 
 ### FORM
@@ -171,16 +194,47 @@ if ( check.checked ) { doIt(); }
 		<input title="Set the " style="width: 200px;" type="range" min="0" max="500" onchange="" step="50" value="300" >
 		<input type=number id=inpNum style=width:50px; min=0.01 max=1.0 step=0.05 value=0.5 />
 
+
+### FORM Type=Range
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
+// http://danielstern.ca/range.css/#/
+
+Use oninput: handles both mouse and touch
+
 		'<input type="range" id="rangeinput" value="50" onmousemove="rangevalue.value=value"/> '  +
 		'<output id="rangevalue">50</output><br>' +
 
-		'<input type=range id=inpRange min=0 max=10 step=1 value=5 onmousemove=outRange.value=value; /> '  +
+	input[ type = range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 100%; }
+	input[ type = range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+	input[ type = range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
+
+	input[type=range] { -webkit-appearance: none; background-color: #ddd; width: 100%; }
+	input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+	input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
+	.floatright { float: right; }
+
 		'<output id=outRange >5</output><br>' +
+		'<input type=range id=inpRange min=0 max=10 step=1 value=5 oninput=outRange.value=value; /> '  +
+
+		<p title='howdy' >
+			title <output id=outRange class=floatRight >5</output>
+			<input type=range id=inpRange min=0 max=10 step=1 value=5 oninput=outRange.value=value; />
+		</p>
+
+### valueAsNumber
+
+https://www.w3.org/TR/2011/WD-html5-20110525/common-input-element-attributes.html#dom-input-valueasnumber
 
 
-	input[type=range] { -webkit-appearance: none; background-color: silver; height:20px; width: 200px; }
-	input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 28px; opacity: 0.5; width: 10px; }
+Still not working in Edge maybe. Use parseFloat...
 
+### Range stepUp / stepDown
+// Where is there a good use example?
+
+https://www.w3schools.com/jsref/met_range_stepup.asp
+https://www.w3schools.com/jsref/met_range_stepdown.asp
 
 
 ### FORM SELECT

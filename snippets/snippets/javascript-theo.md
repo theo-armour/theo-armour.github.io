@@ -1,5 +1,6 @@
 
 
+
 		var css = document.head.appendChild( document.createElement('style') );
 		css.innerHTML ='body { font: 600 12pt monospace; margin: 0; overflow: hidden; }';
 
@@ -7,7 +8,25 @@
 		title = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
 
 
+		<div>
 
+			<details>
+
+			<summary>About</summary>
+
+			<p>
+				Copyright &copy; <script> document.write( ( new Date() ).getFullYear() ); </script> Ladybug Tools authors.
+				<a href=http://github.com/ladybug-tools/spider/ >MIT license</a>.
+			</p>
+
+			<p>
+				Click the 'i in a circle' info icon for more <a href=#README.md title="Click here for help and information" >help</a>.
+			</p>
+
+
+			</details>
+
+		</div>
 
 
 	var menu, info;
@@ -63,6 +82,7 @@
 		window.addEventListener('mouseup', mouseUp, false);
 	}
 
+
 	function addInfo() {
 		info = document.body.appendChild( document.createElement( 'div' ) );
 		info.style.cssText = 'display: none; background-color: #ccc; left: 50px; opacity: 0.9; padding: 20px; ' +
@@ -111,7 +131,7 @@
 
 
 
-// ### Two panel setup
+### Two panel setup
 
 	document.body.style.cssText = 'font: bold 12pt monospace; margin: 0 5px; overflow: hidden;';
 

@@ -30,6 +30,11 @@ http://corpus.byu.edu/coca/
 
 ## Specialty Corpora
 
+* http://www.loc.gov/cds/products/marcDist.php
+
+* LOC: MARC Distribution Services (data set)
+
+
 
 * https://www.pacer.gov/
 

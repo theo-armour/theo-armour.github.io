@@ -1,4 +1,43 @@
 
+# To Do / * = idea / [] = doIt / [x] = done / more??
+
+## 2017-09-20 ~ 
+
+14:59 ~ See build-well
+
+
+## 2017-09-19
+
+https://betterhumans.coach.me/replace-your-to-do-list-with-interstitial-journaling-to-increase-productivity-4e43109d15ef
+
+
+Every time you switch projects, open up your journal and enter the following three things:
+
+1 Note the time. Most people will find having these timestamps to be useful to look back on.
+
+2 Write a few sentences about what you just worked on. “What project did I just finish? Are there any parts of that project that I’m still thinking about?” Use complete sentences rather than one word answers. “Email. Yes.” is not a valid answer.
+
+3 Write a few sentences about what you’re about to work on. “What is the first action of the project I’m about to start? How should I approach getting the project done?”
+
+
+Rename Next Action to First Action.
+
+First Action makes it easier to narrow in on a smaller action, 
+
+
+22:56 ~ killing email
+
+23:14 ~  Youtube shortcuts
+ To pause a video press K. To fast forward press L. To rewind press J. To watch frame by frame forward or backward, press the period or comma key.
+
+
+23:24 ~  transfer 4 domains - get authorization from gd
+
+
+Fix files this issues
+
+
+23:39 ~  ~ add Authorized representatives to medicare
 
 
 

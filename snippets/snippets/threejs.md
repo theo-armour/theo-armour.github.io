@@ -1,10 +1,13 @@
 
 		let geometry, material, mesh;
 
-		geometry = new THREE.BoxGeometry( 10, 10, 10 );
-		material = new THREE.MeshNormalMaterial();
-		mesh = new THREE.Mesh( geometry, material );
+		const geometry = new THREE.BoxGeometry( 10, 10, 10 );
+		const material = new THREE.MeshNormalMaterial();
+		const mesh = new THREE.Mesh( geometry, material );
 		scene.add( mesh );
+
+
+		scene.add( new THREE.Mesh( new THREE.BoxGeometry( 10, 10, 10 ), new THREE.MeshNormalMaterial() ); );
 
 		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
 		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 1, 1 ) );
@@ -44,6 +47,9 @@ spheresIndex = ( spheresIndex + 1 ) % spheres.length;
 webgl_loader_scene_blender.html# - simple object lister
 zoom extents - tony\''s book
 
+
+## TRAVERSE
+
 object.traverse( callback )
 * callback - An Function with as first argument an object3D object.
 * Executes the callback on this object and all descendants.
@@ -70,7 +76,7 @@ object.traverse( callback )
 		target = mesh.position.clone();
 		camera.position.copy( target.clone().add( new THREE.Vector3( 0.08, 0.08, 0.08 ) ) );
 		controls.target.copy( target );
-
+		camera.updateProjectionMatrix(); // <<<<
 	}
 
 
@@ -85,7 +91,7 @@ controls.reset();
 // "target" sets the location of focus, where the control orbits around and where it pans with respect to.
 	this.target = new THREE.Vector3();
 
-	// center is old, deprecated; use "target" instead
+// center is old, deprecated; use "target" instead
 	this.center = this.target;
 
 // This option actually enables dollying in and out; left as "zoom" for backwards compatibility
@@ -243,7 +249,9 @@ see assets
 		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2, 3 ) );
 		geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, -30 ) );
 
-
+// https://discourse.threejs.org/t/how-to-convert-three-buffergeometry-coordinates-to-worlds-when-rotating/889
+// transform a local coordinate to a world coordinate
+		vertex.applyMatrix4( object.matrixWorld );
 
 
 
@@ -271,6 +279,12 @@ see assets
 		vertices = geometry.attributes.position.array;
 
 
+
+		const edges = new THREE.EdgesGeometry( geometry );
+		const line = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xffffff } ) );
+		scene.add( line );
+
+
 // SphereGeometry( radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength )
 		geometry = new THREE.SphereGeometry( radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength )
 
@@ -290,16 +304,26 @@ see assets
 		.center();
 
 
+## Dispose
 
-## Geometry EXTRUDE
+https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-way-to-dispose-and-release-memory-garbag
 
-		geometry = new THREE.ExtrudeGeometry( shape, { amount: 10, bevelEnabled: false } );
-		material = new THREE.MeshNormalMaterial();
-		mesh = new THREE.Mesh( geometry, material ) ;
-		scene.add( mesh );
+		if ( objects ) {
 
+			objects.traverse( function ( child ) {
 
+				if ( child.geometry ) {
 
+					child.geometry.dispose();
+					child.material.dispose();
+
+				}
+
+				if ( child.texture ) { child.texture.dispose(); }
+
+			} );
+
+		}
 
 ## GEOMETRY / Lathe
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/LatheGeometry
@@ -328,10 +352,12 @@ see assets
 
 ### GEOMETRY / LINE
 
+		<button onclick=drawRandomLines(); >draw random lines</button>
+
 	function addLine( vertices ) {
 
-		var geometry, material, line;
-		var v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+		let geometry, material, line;
+		const v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 
 		geometry = new THREE.Geometry();
 		geometry.vertices = vertices || [ v( -10, 0, 0 ),  v( 0, 10, -10 ), v( 10, 0, 0 ) ];
@@ -419,76 +445,6 @@ sse load-walt-r1.html
 
 
 
-
-// ### GEOMETRY / Multiple
-
-	var geometries = [
-
-		new THREE.BoxGeometry( 10, 10, 10 ),
-		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
-		new THREE.DodecahedronGeometry( 05 ),
-		new THREE.SphereGeometry( 5, 12, 8 ),
-		new THREE.TorusGeometry( 10, 5 ),
-
-	];
-
-			var geometry = geometries[ Math.floor( Math.random() * geometries.length ];
-			var material = new THREE.MeshNormalMaterial();
-
-			for ( var j = 0; j < 5; j++ ) {
-
-				var mesh = new THREE.Mesh( geometry, material );
-				mesh.position.set( Math.random() * 100 - 50, Math.random() * 50, Math.random() * 100 - 50 );
-				mesh.scale.set( Math.random() * 2, Math.random() * 2, Math.random() * 2 );
-				scene.add( mesh );
-
-			}
-
-
-// ### GEOMETRY / PlaneBufferGeometry
-
-
-PlaneGeometry(width, height, widthSegments, heightSegments)
-starts at top / left and goes right and down
-
-
-	function createCylinder( radius, height, columns, rows ) {
-
-		var radius = radius ? radius : 20;
-		var height = height ? height : 50;
-		var columns = columns ? columns : 120;
-		var rows = rows ? rows : 1;
-		var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
-
-		geometry = new THREE.PlaneBufferGeometry(  1, 1, columns, rows );
-
-		vertices = geometry.attributes.position.array;
-
-		var count = 0;
-
-		for ( var i = 0; i <= rows; i++ ) {
-
-			var theta = 2 * Math.PI / columns;
-
-			for ( var j = 0; j <= columns; j++ ) {
-
-				vertices[ count++ ] = radius * Math.cos( theta * j );
-				vertices[ count++ ] = i * height / rows;
-				vertices[ count++ ] = radius * Math.sin( theta * j );
-
-			}
-
-		}
-
-		geometry.computeFaceNormals();
-		geometry.computeVertexNormals();
-
-		return geometry;
-
-	}
-
-
-
 ### HELPERS / WIREFRAME
 
 https://threejs.org/docs/#api/helpers/AxisHelper
@@ -515,6 +471,41 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 ### Images
 
 		img.crossOrigin = 'Anonymous';
+
+
+### JSON / save to file
+
+		<p>
+			<button onclick = saveFile(); >save building data to file</button> 
+		</p>
+
+
+	function saveFile() {
+
+		var output = objects.toJSON();
+
+		try {
+// parseNumber??
+			output = JSON.stringify( output, parseNumber, '\t' );
+			output = output.replace( /[\n\t]+([\d\.e\-\[\]]+)/g, '$1' );
+
+		} catch ( e ) {
+
+			output = JSON.stringify( output );
+
+		}
+
+		var blob = new Blob( [ output ] );
+		var a = document.body.appendChild( document.createElement( 'a' ) );
+
+		a.href = window.URL.createObjectURL( blob );
+		a.download = 'threejs.json';
+		a.click();
+//		delete a;
+		a = null;
+
+	}
+
 
 
 ### LIGHTS
@@ -686,7 +677,7 @@ obj.translateOnAxis( axisOfMovement, delta );
 
 
 
-// PATH / 2D
+## PATH / 2D
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Core/Path
 
 
@@ -756,6 +747,7 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 
 ## SHADOWS
+
 		light.castShadow = true;
 
 		mesh.castShadow = true;
@@ -775,13 +767,13 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 
 
-//http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/ExtrudeGeometry
+//https://threejs.org/docs/#api/geometries/ExtrudeGeometry
 
 	function buildShapeWithHole() {
 
 		let shape, hole;
 		let geometry, material, mesh;
-		let v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
 //
 
@@ -790,9 +782,10 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 // not		geometry = shape.extrude( { amount: 10, bevelEnabled: false } );
 
-//
-		shape = new THREE.Shape();
 		shape.absarc( 0, 0, 50, 0, 2 * Math.PI );
+//
+
+		shape = new THREE.Shape( vertices );
 
 
 		var hole = new THREE.Path();
@@ -814,8 +807,21 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 	}
 
 
+		let shape;
+		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+		vectors = [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
+		shape = new THREE.Shape( vectors );
+		geometry = new THREE.ShapeGeometry( shape );
 
-// ## SPLINES
+		const material = new THREE.MeshNormalMaterial();
+		const mesh = new THREE.Mesh( geometry, material );
+		scene.add( mesh );
+
+## Shape Utils
+
+
+
+## SPLINES
 
 // http://jaanga.github.io/cookbook-threejs/examples/animation/nice-path/nice-path-spline-r1.html
 // http://jaanga.github.io/cookbook-threejs/examples/geometry/curves/curves-r1.html
@@ -918,6 +924,7 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 		var rad2 = Math.atan2( vv.z, vv.x ); // In radians
 
 
+
 ### VECTOR
 
 		var map2fixed = function( vect ) { return vect.toArray().map( function( num ){ return num.toFixed( 3 ); } ) };
@@ -956,15 +963,41 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 
 
 
-## Math
+## MATH
+
+
+>> angles-normalize-r1.html
+
+		pt1 = geometry.vertices[ 0 ];
+		pt2 = geometry.vertices[ 2 ];
+
+		vectorDelta = pt2.clone().sub( pt1 );
+		angle = Math.atan2( vectorDelta.y, vectorDelta.x );
+
+		geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( - angle ) );
+
 
 Also: THREE.Math.degToRad https://threejs.org/docs/#api/math/Math
 
+
+### Spherical coordinates
 
 	function convertPosition( lat, lon, radius ) {
 		var rc =  radius * cos( lat );
 		return new THREE.Vector3( rc * cos( lon), radius * sin( lat ), rc * sin( lon) );
 	}
+
+
+https://threejs.org/docs/#api/math/Spherical
+
+		spherical = new THREE.Spherical().setFromVector3 ( new THREE.Vector3( 1, 1, 1 ) );
+		vector = new THREE.Vector3().setFromSpherical ( spherical )
+		mesh.position.setFromSpherical( spherical );
+		mesh.rotation.setFromVector3( vector );
+
+
+
+
 
 	var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 	var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };

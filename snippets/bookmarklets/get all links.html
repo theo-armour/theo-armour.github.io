@@ -1,0 +1,5 @@
+<a href='javascript:(function(){
+var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");
+for(;n>0;n--){var i=t[n-1].getAttribute("href");t[n-1]!=null&amp;&amp;i!=null&amp;&amp;i.charAt(0)==="h"&amp;
+&amp;i.indexOf(window.location.hostname)==-1&amp;
+&amp;e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})()'>Get all external Links</a>

@@ -7,25 +7,66 @@
 <a href="javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()" title="Mr.doob's Stats.js" >Show fps statistics</a>
 
 
+## Help
+
+Axis RGB = XYZ directions
+Use one/two/three fingers to rotate/zoom/pan the display in 3D
+	Or left/scroll/right with your pointing device
+Click the three bars( 'hamburger menu icon' ) to slide the menu in and out
+Press Control-U/Command-Option-U to view the source code
+Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
+Click 'Show fps statistics' to see how many frames per second your computer is giving you
 
 
-## background gradient
+			'<p>Axis RGB = XYZ directions</p>' +
+			'<p>Spacebar|click to stop spinning</p>' +
+			'<p>Use one|two|three fingers to rotate|zoom|pan display in 3D<br>' +
+				'Or left|scroll|right with your pointing device</p>' +
+			'<p>Press Control-Shift-J|Command-Option-J to see if the JavaScript console reports any errors</p>' +
 
 
 
-	function toggleBackgroundGradient() {
+// ### GEOMETRY / PlaneBufferGeometry
 
-// 2016-07-18
 
-		var col = function() { return ( 0.5 + 0.5 * Math.random() ).toString( 16 ).slice( 2, 8 ); };
-		var pt = function() { return ( Math.random() * window.innerWidth ).toFixed( 0 ); }
-		var image = document.body.style.backgroundImage;
+PlaneGeometry(width, height, widthSegments, heightSegments)
+starts at top / left and goes right and down
 
-		document.body.style.backgroundImage = image ? '' : 'radial-gradient( circle farthest-corner at ' +
-				pt() + 'px ' + pt() + 'px, #' + col() + ' 0%, #' + col() + ' 50%, #' + col() + ' 100% ) ';
+
+	function createCylinder( radius, height, columns, rows ) {
+
+		var radius = radius ? radius : 20;
+		var height = height ? height : 50;
+		var columns = columns ? columns : 120;
+		var rows = rows ? rows : 1;
+		var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+
+		geometry = new THREE.PlaneBufferGeometry(  1, 1, columns, rows );
+
+		vertices = geometry.attributes.position.array;
+
+		var count = 0;
+
+		for ( var i = 0; i <= rows; i++ ) {
+
+			var theta = 2 * Math.PI / columns;
+
+			for ( var j = 0; j <= columns; j++ ) {
+
+				vertices[ count++ ] = radius * Math.cos( theta * j );
+				vertices[ count++ ] = i * height / rows;
+				vertices[ count++ ] = radius * Math.sin( theta * j );
+
+			}
+
+		}
+
+		geometry.computeFaceNormals();
+		geometry.computeVertexNormals();
+
+		return geometry;
 
 	}
-
 
 
 ## Math Function Plot
@@ -56,7 +97,32 @@
 	}
 
 
+
 ## Lights 1
+// https://threejs.org/docs/#api/lights/DirectionalLight
+// https://threejs.org/docs/#api/lights/shadows/DirectionalLightShadow
+
+
+		renderer.shadowMap.enabled = true;
+
+		mesh.castShadow = true
+		mesh.receiveShadow = true;
+
+		let lightAmbient, lightDirectional, lightPoint;
+		lightAmbient = new THREE.AmbientLight( 0x444444 );
+		scene.add( lightAmbient );
+
+		const size = 100
+		lightDirectional = new THREE.DirectionalLight( 0xffeedd, 1 );
+		lightDirectional.position.set( -size, size, size );
+		lightDirectional.shadow.camera.scale.set( 13, 15, 0.5 );
+		lightDirectional.castShadow = true;
+		scene.add( lightDirectional );
+
+		scene.add( new THREE.CameraHelper( lightDirectional.shadow.camera ) );
+
+
+## Lights 2
 
 	function addLights( size ) {
 
@@ -103,6 +169,7 @@
 	}
 
 
+
 ## Shadows
 
 	function addShadows() {
@@ -124,24 +191,24 @@
 
 
 
-## Rotation
-
-		window.addEventListener( 'keyup', onKeyUp, false );
-		renderer.domElement.addEventListener( 'click', function() { controls.autoRotate = false; }, false );
-
-
-
 
 ## Cubes
+
+		cubes = drawCubes();
+		scene.add( cubes )
+
+	}
+
+
 
 	function drawCubes() {
 
 		const cubes = new THREE.Object3D();
-		const geometry, material, mesh;
+		let geometry, material, mesh, edges;
 
 		geometry = new THREE.BoxGeometry( 10, 10, 10 );
 
-		for ( var i = 0; i < 50; i++ ) {
+		for ( let i = 0; i < 50; i++ ) {
 
 			material = new THREE.MeshPhongMaterial( {
 				color: 0xffffff * Math.random(),
@@ -156,19 +223,16 @@
 			material = new THREE.MeshNormalMaterial();
 
 			mesh = new THREE.Mesh( geometry, material );
-			mesh.position.set( 100 * Math.random() - 50, 100 * Math.random(), 100 * Math.random() - 50 );
+			mesh.position.set( 100 * Math.random() - 50, 100 * Math.random() - 50, 100 * Math.random() - 50 );
 			mesh.rotation.set( 6.3 * Math.random(), 1.57 * Math.random(), 3.14 * Math.random() );
 			mesh.castShadow = true;
 			mesh.receiveShadow = true;
 			cubes.add( mesh );
 
-//			helper = new THREE.EdgesHelper( mesh );
-//			helper.material.color.setRGB( 1, 0, 0 );
-//			scene.add( helper );
 
-			var geometryEdge = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
-			var material = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 1 } );
-			var edges = new THREE.LineSegments( geometryEdge, material );
+			geometryEdge = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
+			material = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 1 } );
+			edges = new THREE.LineSegments( geometryEdge, material );
 			mesh.add( edges ); // add wireframe as a child of the parent mesh
 
 		}
@@ -176,6 +240,32 @@
 		return cubes;
 
 	}
+
+
+// ### GEOMETRY / Multiple
+
+	var geometries = [
+
+		new THREE.BoxGeometry( 10, 10, 10 ),
+		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
+		new THREE.DodecahedronGeometry( 05 ),
+		new THREE.SphereGeometry( 5, 12, 8 ),
+		new THREE.TorusGeometry( 10, 5 ),
+
+	];
+
+			var geometry = geometries[ Math.floor( Math.random() * geometries.length ];
+			var material = new THREE.MeshNormalMaterial();
+
+			for ( var j = 0; j < 5; j++ ) {
+
+				var mesh = new THREE.Mesh( geometry, material );
+				mesh.position.set( Math.random() * 100 - 50, Math.random() * 50, Math.random() * 100 - 50 );
+				mesh.scale.set( Math.random() * 2, Math.random() * 2, Math.random() * 2 );
+				scene.add( mesh );
+
+			}
+
 
 
 ## Gnomen
@@ -272,6 +362,9 @@
 
 	}
 
+
+## toggleStonehenge
+
 	function toggleStonehenge() {
 
 		var stonehenge = scene.getObjectByName( 'stonehenge' );
@@ -343,6 +436,11 @@
 
 
 ## Placards
+
+
+			placard = drawPlacard( '', 0.05, 120, 100, 10, 0 );
+			scene.add( placard );
+
 
 	function drawPlacard( text, scale, color, x, y, z ) {
 
@@ -419,18 +517,65 @@
 
 
 
-### toggle wireframe
+### drawRandomLines
 
-	function toggleWireframe() {
+				<button onclick=drawRandomLines(); >draw random lines</button>
 
-		scene.traverse( function ( child ) {
 
-			if ( child instanceof THREE.Mesh ) {
+	function drawRandomLines( count = 10 ) {
 
-				child.material.wireframe = chkWire.checked;
+		var v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 
-			}
+		let vertices = [];
+		for ( var i = 0; i < count; i++ ) {
 
-		} );
+			vertices.push( v( 100 * Math.random() - 50, 0, 100 * Math.random() - 50 ) );
+
+		}
+
+		const geometry = new THREE.Geometry();
+		geometry.vertices = vertices || [ v( -10, 0, 0 ),  v( 0, 10, -10 ), v( 10, 0, 0 ) ];
+		const material = new THREE.LineBasicMaterial( { color: 0x000000 } );
+		const line = new THREE.Line( geometry, material );
+
+		scene.add( line );
+//		return line;
 
 	}
+
+
+### Nice Path - Line
+
+see jaanga.github.io/cookbook-threejs/examples/animation/camera-actions-select
+
+	function drawNicePath() {
+
+		var segments = 30;
+
+		var geometry, vertices, material, line;
+		var v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+//		var v = function() { return new THREE.Vector3; }
+
+		geometry = new THREE.Geometry();
+		vertices = geometry.vertices;
+
+		for ( var i = 0; i < 2 * segments * Math.PI + 1; i++ ) {
+
+			vertices.push( v( 
+				Math.sin( i * 7 / segments ) * 30, 
+				Math.cos( i * 3 / segments  ) * 30, 
+				Math.sin( i * 2 / segments  ) * 30 ) 
+			);
+
+		}
+
+		material = new THREE.LineBasicMaterial( { color: 0x000000 } );
+		line = new THREE.Line( geometry, material );
+
+		scene.add( line );
+//		return line;
+
+	}
+
+
+

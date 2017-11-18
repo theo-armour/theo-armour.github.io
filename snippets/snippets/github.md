@@ -16,7 +16,7 @@ C:\Users\Theo\Dropbox\Public\git-repos\jaanga.github.io\cookbook-html\examples\g
 
 Link to specific lines of source code:
 
-https://github.com/geoffmcl/map-test2/blob/gh-pages/nav.html#L247-299
+https://github.com/geoffmcl/map-test2/blob/gh-pages/nav.html#L247-L299
 
 https://github.com/blog/699-making-github-more-open-git-backed-wikis
 

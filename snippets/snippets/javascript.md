@@ -1,4 +1,4 @@
-post
+
 // ECMA 6
 
 		let x = 6
@@ -44,7 +44,7 @@ just use 'this' wherever possible
 		}
 
 
-		for ( var i = 0; i < iLength; i++ ) {
+		for ( let i = 0; i < iLength; i++ ) {
 			for ( var j = 0; j < jLength; j++ ) {
 
 			}
@@ -96,8 +96,8 @@ console.log( 'response', response );
 			contents.innerHTML = response;
 
 //			json = JSON.parse( response );
-//console.log( '', json );
-
+//console.log( 'json', json );
+// JSON.stringify( dxf, null, ' ' )
 // or
 //			lines = response.split(/\r\n|\n/);
 ///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
@@ -455,7 +455,7 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 // https://developer.mozilla.org/en-US/docs/Web/API/Document
 // http://www.w3schools.com/jsref/dom_obj_document.asp
 
-
+var css = document.body.appendChild( document.createElement('style') );
 
 // ### DOM
 
@@ -495,6 +495,20 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 
 
 // ### EVENTS Key cursor
+
+https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+
+
+	let event = new Event( "bingo", {"bubbles": true, "cancelable": false, detail: true } );
+
+
+//	window.addEventListener( "bingo", addAvatar );
+	window.addEventListener( "bingo", addControls, false );
+
+
+	window.dispatchEvent( event );
+
+
 
 https://stackoverflow.com/questions/2381336/detect-click-into-iframe-using-javascript/23231136#23231136
 
@@ -563,6 +577,9 @@ console.log( thing );
 
 		return txt;
 
+
+## Details
+
 function switchOpen() {
 
 	if (details.getAttribute('open')) {
@@ -606,7 +623,7 @@ console.log( '', files );
 
 
 
-// ### FORM ELEMENTS
+## FORM ELEMENTS
 
 	var button = body.appendChild( document.createElement( 'button' ) );
 	button.innerHTML = '<s>button2</s>';
@@ -618,22 +635,29 @@ console.log( '', files );
 	];
 
 
+### FORM Range
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
+
+
 		var input body.appendChild( document.createElement( 'input' ) );
 		input.type = 'text';
 		input.value = 'Tra la la';
 
-		...'Frequency 1:<input id=inpFrequency1 > ' +  // easier to label if in the HTML
+		'Frequency 1:<input id=inpFrequency1 > ' +  // easier to label if in the HTML
 		inpFrequency1.type = 'range';
 		inpFrequency1.min = 0.00001;
 		inpFrequency1.max = 0.001;
 		inpFrequency1.step = 0.0001;
 		inpFrequency1.title = inpFrequency1.value = frequency1;
 		inpFrequency1.onchange = function() { inpFrequency1.title = frequency1 = parseFloat( this.value); };
+// oninput
 
 		'<input type=radio id=inpRad1 name=rad onclick=setRad(); value=rad1 checked /> radio 1 <input type=radio name=rad id=inpRad2 onclick=setRad(); value=rd2 /> radio 2 ' +
 
 
 		<input onClick="this.select();" size=8 > // highlight the text
+
+oninput="validity.valid||(value='');"
 
 
 
@@ -921,7 +945,8 @@ Math.atan2() is passed separate x and y arguments, and Math.atan() is passed the
 	function sech( a ){ return Math.sech( a ); }
 
 
-// ### META
+
+### META
 
 See theo-armour.github.io/ucsf2/pookeepon-go/
 See https://github.com/ladybug-analysis-tools/ladybug-web/blob/gh-pages/ladybug-web-via-github-api-r2.html#L188-L200
@@ -932,7 +957,7 @@ See http://stackoverflow.com/questions/7524585/how-do-i-get-the-information-from
 
 
 
-// NAMESPACE
+### NAMESPACE
 
 
 files
@@ -1000,8 +1025,28 @@ http://stackoverflow.com/questions/208016/how-to-list-the-properties-of-a-javasc
 
 
 
+https://stackoverflow.com/questions/722668/traverse-all-the-nodes-of-a-json-object-tree-with-javascript
+http://2ality.com/2015/10/property-traversal-order-es6.html
 
-// ### OPERATORS
+	function traverse( obj ) {
+
+		for ( i in obj ) {
+
+//			if ( !!obj[ i ] && typeof( obj[ i ] ) === 'object' ) {
+			if ( obj[ i ] !== null && typeof( obj[ i ] ) === 'object' ) {
+
+console.log( i, obj[ i ]);
+
+				traverse( obj [ i ] );
+
+			}
+
+		}
+
+	}
+
+
+### OPERATORS
 
 Conditional Operator
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
@@ -1016,7 +1061,8 @@ Conditional Operator
 
 
 
-// ### REGEXP
+### REGEXP
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 // http://www.w3schools.com/jsref/jsref_obj_regexp.asp
 // http://www.w3schools.com/jsref/jsref_replace.asp
@@ -1093,11 +1139,14 @@ RegExp Modifiers
 ### setTimeout
 
 
-setTimeout(function(){ controls.autoRotate = true; }, 3000);
+setTimeout( function(){ controls.autoRotate = true; }, 3000);
+
+See
+
+https://developers.google.com/web/updates/2015/08/using-requestidlecallback
 
 
-
-// ### SPEECH SYNTH
+### SPEECH SYNTH
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance
 // http://stackoverflow.com/questions/21513706/getting-the-list-of-voices-in-speechsynthesis-of-chrome-web-speech-api
@@ -1130,7 +1179,7 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 
 
 
-// ### STRING
+### STRING
 
 'my string'.startsWith('my'); //true
 'my string'.endsWith('my'); // false
@@ -1148,7 +1197,7 @@ http://www.w3schools.com/jsref/jsref_obj_string.asp
 		yourNumber = parseInt(hexString, 16);
 
 
-Formatting
+#### Formatting
 
 Number(x).toLocaleString();
 ( 123456789 ).toLocaleString();
@@ -1162,6 +1211,9 @@ Number(x).toLocaleString();
 	var fileType = ( fileName.substr( fileName.lastIndexOf( '.' ) ) );
 
 	fileName = fullPath.substr( 1 + fullPath.lastIndexOf( '/' ) ).toLowerCase();
+
+
+Number( space.area.toFixed(4) )
 
 
 
@@ -1208,6 +1260,15 @@ catch (e) {
 	logMyErrors(e); // pass exception object to error handler
 }
 
+### Validity
+
+https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
+
+https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
+
+oninput="validity.valid||(value='');"
+
+
 
 ### WINDOW
 
@@ -1218,8 +1279,16 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/open
 
 http://stackoverflow.com/questions/3030859/detecting-the-onload-event-of-a-window-opened-with-window-open
 
+
+		if ( window.self === window.top ) 
+
 		window.open("http://www.w3schools.com");
 		newWindow = window.open( 'popup-r1.html','_blank', 'centerscreen' );
 
+		const newWindow = window.open("", "MsgWindow", "width=200,height=100");
+		newWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+
 		window.location.protocol
 		document.location.origin
+
+		window.scrollTo( 0, 0 );

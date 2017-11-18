@@ -33,6 +33,12 @@ When the debugger is invoked, execution is paused at the debugger statement. It 
 
 https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.2i0llw1ym
 
+
+## Control P
+
+* See dropown list of all files
+
+
 ## 1. Select DOM Elements
 
 
