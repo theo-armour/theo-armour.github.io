@@ -114,6 +114,8 @@ Editable bitmap drawings
 * no dropbox
 
 ## Codeanywhere
+SSH terminal into GitHub
+
 Edits and saves to DropBox
 In DropBox can use public link to view in Browser
 Browser version better than app: 

@@ -224,7 +224,7 @@ if ( ! Detector.webgl ) {
 }
 
 
-### Edges
+### GEOMETRY / Edges
 
 
 			var edgesGeometry, edgesMaterial, edges,
@@ -818,6 +818,8 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		scene.add( mesh );
 
 ## Shape Utils
+
+THREE.ShapeUtils.area( vertices ).toLocaleString();
 
 
 

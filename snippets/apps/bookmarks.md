@@ -1,4 +1,15 @@
 
+
+
+2017-11-19
+
+* xmarks did a job on my bookmarks
+* it says I have 27,000
+
+
+
+
+
 ## C
 
 Topics & Peeps I am currently thinking about

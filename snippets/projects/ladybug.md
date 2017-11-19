@@ -1,6 +1,14 @@
 
 
 
+https://github.com/antonszilasi/spiderAnton
+
+https://antonszilasi.github.io/spiderAnton/speed/speed-page.html
+
+https://github.com/antonszilasi/spiderAnton/blob/master/speed/geometry.js
+
+antonszilasi/spiderAnton/blob/newQline/speed/
+
 ## 2017-10-30 ~ Ben & Anton
 
 Creating schematics ~ not architecture or renderings
