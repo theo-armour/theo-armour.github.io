@@ -9,6 +9,10 @@ https://github.com/antonszilasi/spiderAnton/blob/master/speed/geometry.js
 
 antonszilasi/spiderAnton/blob/newQline/speed/
 
+validation
+https://antonszilasi.github.io/spiderAnton//speed/tests/geometryLogicValidator.html
+
+
 ## 2017-10-30 ~ Ben & Anton
 
 Creating schematics ~ not architecture or renderings
