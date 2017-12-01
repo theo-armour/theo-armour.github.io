@@ -17,8 +17,6 @@
 		let txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
 
 
-
-
 		divTooToo.innerHTML = 
 `
 
@@ -35,18 +33,30 @@
 			">ascii table</a>
 	</p>
 
-
+	<p>
 			<a href='javascript:(function(){
 			var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");
 			for(;n>0;n--){var i=t[n-1].getAttribute("href");t[n-1]!=null&amp;&amp;i!=null&amp;&amp;i.charAt(0)==="h"&amp;
 			&amp;i.indexOf(window.location.hostname)==-1&amp;
-			&amp;e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})()'>Get all external Links
+			&amp;e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})()
+			'>Get all external Links
 			</a>
+	</p>
 
-			<p><a href="
-javascript:t='';c=new%20Array('00','33','66','99','CC','FF');for(i=0;i<6;i++){t+='<table%20width=100%>';for(j=0;j<6;j++){t+='<tr>';for(k=0;k<6;k++){L=c[i]+c[j]+c[k];t+='<td%20bgcolor='+L+'>'+L}t+='</tr>'}t+='</table>'};with(document){write(t);void(close())}
+	<p>
+			<a href="
+				javascript:t='';c=new%20Array('00','33','66','99','CC','FF');for(i=0;i<6;i++){t+='<table%20width=100%>';for(j=0;j<6;j++){t+='<tr>';for(k=0;k<6;k++){L=c[i]+c[j]+c[k];t+='<td%20bgcolor='+L+'>'+L}t+='</tr>'}t+='</table>'};with(document){write(t);void(close())}
+			">216 colors</a>
+	</p>
 
-">216 colors</a></p>
+
+	<p>
+
+		<a href="
+		javascript:(function(){var script=document.createElement('script');script.type='text/javascript';script.src='https://cdn.rawgit.com/zz85/zz85-bookmarklets/master/js/ThreeInspector.js';document.body.appendChild(script);})()
+		">zz85 three.js inspector</a>
+
+	</p>
 `
 
 

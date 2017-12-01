@@ -24,11 +24,12 @@
 ## Admin
 
 * Organize shoebox files
-* Update fileThis
+
 * Finish brain study
 * Close disused credit cards
 * Pixelbook de-laminating
 * Pay some money to Navient
+* llbean card??
 
 ## To buy
 
@@ -41,7 +42,7 @@
 
 ## Done
 
-
+* Update fileThis
 * Andronik
 * succeed nothing in my charts regarding blood tests
 * cancel Google headphones
