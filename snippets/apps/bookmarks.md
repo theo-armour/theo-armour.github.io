@@ -1,5 +1,12 @@
 
 
+Linus quotes
+https://lkml.org/lkml/2017/11/21/356
+
+
+The Build Order Every Startup Should Follow To Become Successful
+https://hackernoon.com/the-build-order-every-startup-should-follow-to-become-successful-635e7ed00fa3
+
 
 2017-11-19
 

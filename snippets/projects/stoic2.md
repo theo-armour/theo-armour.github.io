@@ -1,6 +1,9 @@
 
-The Obstacle is the Way
-===============================================================================
+# The Obstacle is the Way
+
+
+
+
 
 Ryan Holiday is my favorite Stoic auther these days
 
@@ -26,8 +29,8 @@ In _The Obstacle is the Way_, Holiday divides stoic thinking into: perception, a
 
 _the following is the start of a summary of Holiday's book_
 
-Perception
-================================================================================
+# Perception
+
 
 
 Massimo: https://howtobeastoic.wordpress.com/2016/02/09/stoic-spiritual-exercises-i-from-the-enchiridion/

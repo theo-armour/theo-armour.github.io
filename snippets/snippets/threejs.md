@@ -19,7 +19,7 @@
 
 		var color = new THREE.Color( 'grey' );
 
-		let v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+		const v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 
 
 ## Changes
@@ -324,6 +324,12 @@ https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-w
 			} );
 
 		}
+
+
+### geometry BufferGeometry
+
+* .setFromPoints is cool
+
 
 ## GEOMETRY / Lathe
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/LatheGeometry
@@ -676,6 +682,20 @@ obj.translateOnAxis( axisOfMovement, delta );
 		obj.rotation.setFromVector3( startRotation );
 
 
+### Object3D.localToWorld 
+
+scene.updateMatrixWorld();
+
+		object.localToWorld ( point )
+
+* vector - A vector representing a position in local (object) space.
+* Converts the vector from local space to world space.
+
+Also
+
+			var vector = ceilingGeometry.vertices[ k ].clone();
+			vector.applyMatrix4( object.matrixWorld );
+
 
 ## PATH / 2D
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Core/Path
@@ -760,9 +780,23 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 
 
+#### Quick Shape
+
+		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+		const vectors = [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
+		const shape = new THREE.Shape( vectors );
+		const geometry = new THREE.ShapeGeometry( shape );
+
+		const material = new THREE.MeshNormalMaterial();
+		const mesh = new THREE.Mesh( geometry, material );
+		scene.add( mesh );
+
+
 
 ## SHAPES
-// http://mrdoob.github.io/three.js/docs/#Reference/Extras.Core/Path
+
+https://threejs.org/docs/#api/extras/core/Path
+
 // http://threejs.org/docs/#Reference/Extras.Core/Shape
 
 
@@ -807,17 +841,10 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 	}
 
 
-		let shape;
-		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
-		vectors = [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
-		shape = new THREE.Shape( vectors );
-		geometry = new THREE.ShapeGeometry( shape );
 
-		const material = new THREE.MeshNormalMaterial();
-		const mesh = new THREE.Mesh( geometry, material );
-		scene.add( mesh );
+## Shape Utils Area
 
-## Shape Utils
+https://threejs.org/docs/#api/extras/ShapeUtils
 
 THREE.ShapeUtils.area( vertices ).toLocaleString();
 

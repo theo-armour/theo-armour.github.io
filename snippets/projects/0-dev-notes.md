@@ -1,7 +1,33 @@
-
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
-## 2017-09-20 ~ 
+
+
+
+## 2017-11-29
+
+income 9660
+
+rent 3300
+loan 1300
+5234  800
+----
+total5400
+
+	4260 to spend per month
+
+## 2017-11-29 ~ 
+
+
+
+00:30
+
+What is the purpose of beauty?
+What is the end goal of being beautiful?
+
+
+new mouse/mice ? washable?
+
+## 2017-09-20 ~
 
 14:59 ~ See build-well
 
@@ -22,7 +48,7 @@ Every time you switch projects, open up your journal and enter the following thr
 
 Rename Next Action to First Action.
 
-First Action makes it easier to narrow in on a smaller action, 
+First Action makes it easier to narrow in on a smaller action,
 
 
 22:56 ~ killing email
@@ -41,10 +67,10 @@ Fix files this issues
 
 
 
-## 2017-07-19 ~ 
+## 2017-07-19 ~
 
 
-OSM 
+OSM
 
 
 

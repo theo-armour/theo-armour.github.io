@@ -1,5 +1,8 @@
 
-// ECMA 6
+		const div = document.body.appendChild( document.createElement( 'div' ) );
+		div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px; }
+
+## ECMA 6
 
 		let x = 6
 
