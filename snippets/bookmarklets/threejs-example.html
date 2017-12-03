@@ -25,17 +25,26 @@
 	<div id = "divHeader" >
 		<div id = "divTitle" ></div>
 		<div id = "divContents" >
-			<button onclick=thing(); >button</button>
+<!--			<button onclick=thing(); >button</button> -->
 		</div>
 	</div>
 
 	<div id = "divMenu" ></div>
 
-		<p>
-			<a href=
-			"JavaScript:( function(){ var script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='threejs-example.js'; } )()" >threejs examples</a>
-		</p>
+	<p>
+		<a id=aThree href=
+		"JavaScript:( function(){ var script=document.head.appendChild( document.createElement( 'script' ) );
+			script.src='threejs-example.js'; } )()"
+		>threejs examples</a>
+	</p>
+
+
+	<iframe id=ifrThree height=600px width=100% ></iframe>
+
+	<a href=JavaScript:ifrThree.src="#https://rawgit.com/mrdoob/three.js/master/examples/canvas_interactive_cubes_tween.html" >bbb</a>
+
+	<button onclick=ifrThree.src="https://rawgit.com/mrdoob/three.js/master/examples/canvas_interactive_cubes_tween.html" >bbb</button>
+
 <script>
 
 	const b = '<br>';
@@ -48,11 +57,15 @@
 
 		divTitle.innerHTML = '<h2><a  href = "" >' + location.href.split( '/' ).pop().slice( 0, -5 ).replace( /-/g, ' ' ) + '</a></h2>';
 
-		txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
+//		txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
 
-		divContents.innerHTML += b + txt;
+//		divContents.innerHTML += b + txt;
+
+		aThree.click();
 
 	}
+
+
 
 </script>
 </body>
