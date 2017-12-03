@@ -1,19 +1,25 @@
 
 
+## Tidy
+
+
 ## Phone 
 
-* Change Hygienist appt
 * Dr Fasset appointment
 
 
 ## Email
 
+* Jerome: key for Scout 73
 * Allison > Bruno
 * Jacqueline, Liz & Myron
 * Maria
 * Mia Grosjean
 * Dr Kattah
-* Succeed study thoughts
+	* Need a helper?
+* Succeed study 
+	* MyChart
+	* thoughts on texts
 * Gharen and WSD
 
 
@@ -23,13 +29,19 @@
 
 ## Admin
 
+* Find Anti-hoarder
 * Organize shoebox files
-
 * Finish brain study
 * Close disused credit cards
 * Pixelbook de-laminating
 * Pay some money to Navient
 * llbean card??
+
+
+## Health
+
+* Act on Succeed Study blood test results
+
 
 ## To buy
 
@@ -37,11 +49,12 @@
 	* Epson WorkForce ES-300W Wireless Color Portable Document Scanner
 
 
-### MyCharts
+
 
 
 ## Done
 
+* Change Hygienist appt
 * Update fileThis
 * Andronik
 * succeed nothing in my charts regarding blood tests
