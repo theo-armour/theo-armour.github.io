@@ -20,9 +20,21 @@ Ryan Holiday is my favorite Stoic author these days
 * http://boingboing.net/2016/12/19/heres-an-ancient-philosophy.html
 * https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way
 
-Nice summary
+### Nice summary 1
 * https://paulminors.com/the-obstacle-is-the-way-by-ryan-holiday-book-summary-pdf/
+
+
+### Nice summary 2
 * http://www.samuelthomasdavies.com/book-summaries/business/the-obstacle-is-the-way/
+
+
+The Book in Three Sentences
+* What stands in the way becomes the way.
+* Focus on the things you can control, let go of everything else and turn every new obstacle into an opportunity to get better, stronger, and tougher.
+* It’s three interdependent, interconnected, and fluidly contingent disciplines: Perception, Action, and the Will.
+
+
+
 
 # _The Obstacle is the Way_
 
@@ -147,7 +159,7 @@ We choose how we look at things. We retain the ability to inject perspective int
 Perception precedes action. Right action follows right perspective.
 
 
-### To focus on what can be controlled ; Is it Up to You / p384
+### To focus on what can be controlled / Is it Up to You / p384
 
 What is up to us. What is not up to us.
 
@@ -197,10 +209,14 @@ No glass-half-full platitudes. There must be complete flip. Seeing through negat
 
 # Part II Action
 
-Problems are rarely as bad as we think. Rather they are precisely as bad as we think.
+p60 Problems are rarely as bad as we think. Rather they are precisely as bad as we think.
 
+Our actions must be:
+* Deliberate
+* Bold
+* Persistent
 
-We greet our obstacles with
+We greet our obstacles with:
 
 with energy p70
 with persistence
@@ -212,38 +228,81 @@ with craftiness and savvy
 with an eye for opportunity and pivotal moments
 
 
-Deliberate
-Bold
-Persistent
 
 
 ### energy / Get Moving / p70
 
+
+The importance of aggression, taking risks, of barreling forward.
+
 Stay moving. Always
 
-the importance of aggression, taking risks, of barreling forward.
-
 courage is mostly just taking action,
+
+All the greats started by saying: Yes. Let's go.
 
 
 ### persistence / Practice Persistence / p74
 
 Working at it works
 
+In trying all the wrong ways, you my discover a new way
 
-## Iterate
+Unity of purpose, deafness to doubt and the desire to stay at it
+
+Consider this mind=set:
+* Never in a hurry
+* Never worried
+* Never desperate
+* Never stopping short
+
+It's supposed to be hard
 
 
-## Follow the Process
+
+## Iterate / p81
+
+Failure is a feature
+
+Action and failure are two sides of the same coin
+
+The world is telling you something with each failure. Listen.
+
+Failure shows us the way - by showing us what isn't the way.
+
+## Follow the Process / p85
+
+Do what you need to do right now.
+
+The process is order. keep our perceptions in check, our actions in sync.
 
 
-## Do Your Job, Do it Right
+The process is about doing the right thing right now
 
 
-## What’s Right is What Works
+
+## Do Your Job, Do it Right / p90
+
+Everything is a chance to do and be your best.
+
+When action is our priority, vanity falls away.
+
+Our job
+* hard work
+* honesty
+* helping others as best we can
 
 
-## In Praise of the Flank Attack
+## What’s Right is What Works / p98
+
+
+Pragmatism
+
+Think progress not perfection
+
+## In Praise of the Flank Attack / p100
+
+Take a step back, then go around the problem. Find some leverage. Approch fron the 'line of leat resistence'
 
 
 ## Use Obstacles Against Themselves
@@ -286,7 +345,6 @@ Always submit to a larger or greater cause / Something Bigger than yourself / p1
 
 Always remind ourselves of our own mortality / Meditate on Your Mortality / p165
 * Mortality can have benefits.
-
 
 And prepare to start the cycle once more / Prepare to Start Again / p172
 * the more you accomplish, the more new challenges appear

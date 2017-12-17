@@ -2,6 +2,42 @@
 
 
 
+## 2017-12-16
+
+https://code.visualstudio.com/docs/editor/multi-root-workspaces
+
+## 2017-12-15
+
+View Office documents online
+https://products.office.com/en-US/office-online/view-office-documents-online
+
+* create a bookmarklet to automate the process
+* embed Microsoft docs on tooToo
+
+
+Need to set up better on-the-move work environment so I code away from the desk
+
+
+## 2017-12-10 yelp review
+
+Fish and Farm
+
+In essence, Fish and Farm is the place where peeps staying 'upstairs' at Club Quarters come down to eat. It's also where - like many peeps in the 'hood - I come to eat. Why? Because Fish and Farm serves chef-prepared meals 24/7. 'Chef-prepared' means - hello - prepared by people who actually and truly eat the food they prepare. The typical Club Quarters peeps are airline staff, frequent fliers, former-bank robbers, whatever. In otnd the worher words, peeps, who need to eat tasty food or otherwise they are unhappy.
+
+OK, you got the picture. So do start with the mussels. From Prince Edward Island. Cooked Mariniere - with garlic, parseley and vin blanc. Or try the Basquaise with Roasted Bell pepper, parseley, vin blanc and Spanish Chorizo. Then try the warm cheese galette and the artichoke sala.
+
+The difficulty is the main course. Today there are eleven choices. I want one of each. Each dish is a North American classic. And, guess what, they are classy representives of their representations.  Each is good enough to eat time and time again.
+
+Tonight it was a less frequented path: the vegetable risotto. And it delivered. The warm, cozy large arborio rice was complimented by zucchini, broccoi and all goodly, healthy veggies to eat.
+
+Um, but here is the real thing!! It has taken me three hours to write this review. Why? Because I am sitting at the bar at Fish and Farm and all these nice talkative peeps have sat next to me. I am a techie and I've talked tech. I'm born in Boston and I've talked East Coast. I do business around the world and I've talked frequent flier. What more can you talk/ask for?
+
+Anyway, it's time to close and I cannot do so so without mentioning the general manager, Michael. Actually, I talk to him as Michel because he is totally French-speaking. Of course, he speaks a bunch of other languages. I do find that his Tagalog could use help. Whatever. The main thing is that if you want to have a photo-opportunity with a classy, totally well-dressed gentleman then you can do no better than giving Michel a hug
+
+And, so, if you want a tasty meal in the San Francisco Financial District 24/7, then Fish and Farm is a welcoming hang-out.
+
+
+
 
 ## 2017-11-29
 
@@ -15,14 +51,14 @@ total5400
 
 	4260 to spend per month
 
-## 2017-11-29 ~ 
+## 2017-11-29 ~
 
 
 
 00:30
 
 What is the purpose of beauty?
-What is the end goal of being beautiful?
+What is the end goal of being beautiful?ff
 
 
 new mouse/mice ? washable?

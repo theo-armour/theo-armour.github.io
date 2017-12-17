@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
-<meta name=description content="What should 21st century Stoicism be thinking about?" >
+<meta name=description content="Basic menu sliding" >
 <meta name=keywords content="JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2017-12-16" >
-<title>Alt Stoic</title>
+<meta name = "date" content = "2017-12-08" >
+<title>basic hamburger</title>
 <style>
 /* Copyright 2017 pushMe pullYou authors. MIT License */
 
 /* https://www.w3schools.com/colors/colors_names.asp // use colors and borders to help identify the scope of particular elements */
 
-	html { --mnu-color: crimson; --mnu-back-color: #eee; --mnu-width:300px; height: 100%; }
+	html { --mnu-color: MediumSlateBlue; --mnu-back-color: cornsilk; --mnu-width:300px; height: 100%; }
 
-	body, html { background-color: #fefefe; font: 12pt monospace; height: 100%; margin: 0; }
+	body, html { font: 12pt monospace; height: 100%; margin: 0; overflow: hidden; }
 
 	a { color: var( --mnu-color ); text-decoration: none; }
 	a:hover, a:focus, #hamburger:hover { background-color: yellow; color: #888; }
@@ -23,7 +23,7 @@
 	button, input[ type=button ] { background-color: #ddd; border: none; color: var( --mnu-color ); cursor: pointer; padding: 3px 20px; }
 	button:hover { background-color: #ccc; color: white }
 
-	iframe { width: 100%; }
+	iframe { border: none; height: 100%; width: 100%; }
 
 	input[ type = range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 100%; }
 	input[ type = range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
@@ -34,7 +34,6 @@
 	#divContainer { height: 100%; margin: 0 0 0 var( --mnu-width ); transition: margin-left .5s; position: relative; }
 	#divContents { height: 100%; left: 0; margin: 0 auto; max-width: 800px; right: 0;}
 
-
 	#divMenu { background-color: var( --mnu-back-color ); box-sizing: border-box; margin: 0;
 		overflow-x: hidden; padding: 30px 10px 30px 10px; position: fixed; top: 0; width: var( --mnu-width ); z-index: 1; transition: 0.5s; }
 
@@ -44,44 +43,34 @@
 </style>
 </head>
 <body>
-<script src = "https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js" ></script>
-
 
 	<div id = "divMenu" >
 
-		<a href="https://github.com/theo-armour/theo-armour.github.io/tree/master/alt-stoic" target="_top" ><img src="https://status.github.com/images/invertocat.png" height=18 ></a>
+<!--	<a href="" target="_top" ><img src="https://status.github.com/images/invertocat.png" height=18 ></a> -->
 		<div id = "divTitle" ></div>
 
-		<div id = "divMenuItems" >
+		<p>
+			<a id=aThree href="JavaScript:( function(){ 
+					const script = document.head.appendChild( document.createElement( 'script' ) );
+					script.src = 'threejs-example-r2.js'; 
+			} )()" >
+			threejs examples</a>
+		</p>
 
-			<p><a href=#ryan-holiday.md  >Ryan Holiday</a></p>
-			<p><a href=#links-of-interest.md >Links of Interest</a></p>
-			<p><a href=#journal.md >Journal</a></p>
-
-			<p><a href= ></a></p>
-
-			<hr>
-
-			<p><a href=#foot-license.md >license</a></p>
-			<p><a href=#foot-code-of-conduct.md >code of conduct</a></p>
-			<p><a href=#foot-contributing.md >contributing</a></p>
-
-			<h1 style=text-align:center; > &#x2766; </h1>
-
-		</div>
+		<div id=divTooToo ></div>
 
 	</div>
 
+
 	<div id = "divContainer" >
 
-		<div id = "divContents" ></div>
+		<iframe id=ifrThree ></iframe>
 
 	</div>
 
 	<div id = "hamburger" onclick=toggleNav(); > slide &#9776;  </div>
 
 <script>
-
 
 	init();
 
@@ -93,40 +82,18 @@
 			'<p>' + document.head.querySelector( '[name=description]' ).content + '</p>' +
 		'';
 
-		window.addEventListener( 'hashchange', onHashChange, false );
+		window.addEventListener ( 'hashchange', onHashChange, false );
 
-		onHashChange();
+		aThree.click();
 
 	}
 
 
 	function onHashChange() {
 
-		let url = !location.hash ? 'README.md' : location.hash.slice( 1 );
+		const url = location.hash.slice( 1 );
 
-		requestFile( url, divContents );
-
-	}
-
-
-
-	function requestFile( url, target ) {
-
-		xhr = new XMLHttpRequest();
-		xhr.open( 'get', url, true );
-		xhr.onload = callback;
-		xhr.send( null );
-
-	}
-
-
-	function callback( xhr ) {
-
-		let converter
-
-//		showdown.setFlavor( 'github' );
-		converter = new showdown.Converter();
-		divContents.innerHTML = converter.makeHtml( xhr.target.response );
+		ifrThree.src = url;
 
 	}
 

@@ -1,7 +1,33 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/alt-stoic/#journal.md "View file as a web page." ) </span>
 
 
-## 2017-08-23 ~ 
+
+## 2017-12-16
+
+There are many philsophies but few agree. 
+
+It would be nice to have some tools that would help compare and contrast various philosophies.
+
+Comparative Philosophy
+http://www.iep.utm.edu/comparat/
+
+
+https://en.wikipedia.org/wiki/Outline_of_thought
+https://en.wikipedia.org/wiki/Creative_problem-solving
+https://en.wikipedia.org/wiki/Problem_solving
+https://en.wikipedia.org/wiki/Wicked_problem
+https://en.wikipedia.org/wiki/Collaborative_information_seeking
+
+There are so many ways to think about things, its probably not worth thinking about.
+
+
+Perception
+
+https://en.wikipedia.org/wiki/Category:Perception
+https://en.wikipedia.org/wiki/Epistemology
+
+
+## 2017-08-23
 
 https://en.wikipedia.org/wiki/IPO_model
 

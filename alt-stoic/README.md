@@ -3,7 +3,7 @@
 
 # [Alt-Stoic Read Me]( https://theo-armour.github.io/alt-stoic/#README.md )
 
-_say something Stoic here_
+_need to say something catchy yet Stoic here_
 
 
 
@@ -60,12 +60,18 @@ Stoic 2.0 - See:
 
 ## To Do / Goals / Up Next
 
+
 * 2017-08-14 ~ keep working on summary of _The Obstacle is the Way_
 * 2017-08-14 ~ Build a Stoic cheat-sheet adapted to today's life
 * 2017-08-14 ~ Find ways of combining Stoicism with other ways of thought
 
 
 ## Change Log
+
+### 2017-12-16 ~ Theo
+
+* Rebuild menu in simpler fashion
+* Add more notes to Holiday Part II
 
 ### 2017-08-14 ~ Theo
 

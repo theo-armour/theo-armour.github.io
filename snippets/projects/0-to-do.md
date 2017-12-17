@@ -10,55 +10,102 @@
 
 ## Email
 
-* Jerome: key for Scout 73
 * Allison > Bruno
 * Jacqueline, Liz & Myron
-* Maria
-* Mia Grosjean
-* Cynthia * Kyle: guitar/manalemma/ camera
-* Succeed study 
-	* MyChart
-	* thoughts on texts
+* Geri: dinner/ ggta?
 * Gharen and WSD
 * Isabelle: letter to Notaire 
 
 
 ## Errands
 
+* Rubbing alcohol
 * Clipper card at Walgreens
+
 
 ## Admin
 
-* Find Anti-hoarder
-* Organize shoe box files
-* Finish brain study
+* Register on Gateway site
+    * Window seals fixed
+    * Toilet seat tightened
+* Get old pixel phone going
+* IRA withdrawal papers
+* Succeed study 
+	* MyChart
+	* thoughts on texts
+	* 4 days of food < to ss
+* Find anti-hoarder
+* Organize Shoebox files
 * Close disused credit cards
 * Pixelbook de-laminating
 * Pay some money to Navient
-* llbean card << activate
+* Stop Pentagram
+
+
+## Homey
+
+* Clean bathroom
+* Do laundry
+* Clean kitchen
+
+
+## Nice
+
+* Mia Grosjean
+* Michel Yelp review
+* Lorenzo Apicella
+* Peeps upstairs
+* WSD What's up?
+* Englehardts
+* Where do all the crows go in the evening?
 
 ## Health
 
+* Update colonoscopy notes
 * Act on Succeed Study blood test results
+* Dr Yoga email
+	* Mouth guard
+	* new toothpaste 
 
 
 ## To buy
 
-* WiFi scanner ?
-	* Epson WorkForce ES-300W Wireless Color Portable Document Scanner
-Window mount for Circle2
+Amazon pantry
+* Chicken stock no salt
+* Seaweed
+* Bran Buds
+* Diapers
+* Coffee
+* Wipes
+* Drawer units
+* Hearing protectors
 
 
 ## Writing
-
-* Go for the unattainable / in contrast to Rittel
 
 
 
 ## Done
 
+2017-12-14
+* colonoscopy
+* 180 caths +100
+* Handwashing liquid
+* Deposit WSD check
+* Ron: $320
+* WiFi scanner ?
+	* Epson WorkForce ES-300W Wireless Color Portable Document Scanner
+Window mount for Circle2
 
 
+* Finish brain study
+* Colonoscopy video
+* Maria
+* Jerome: key for Scout 73
+* llbean card << activate
+* Go for the unattainable / in contrast to Rittel https://en.wikipedia.org/wiki/Wicked_problem / Already done. See Pattern language
+* Geri
+* Cynthia * Kyle: guitar/manalemma/ camera / 
 
 * Dr Kattah
 

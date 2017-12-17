@@ -96,7 +96,7 @@ just use 'this' wherever possible
 			response = xhr.target.response;
 console.log( 'response', response );
 
-			contents.innerHTML = response;
+			divContents.innerHTML = response;
 
 //			json = JSON.parse( response );
 //console.log( 'json', json );

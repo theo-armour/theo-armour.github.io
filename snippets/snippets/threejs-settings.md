@@ -310,6 +310,7 @@ linewidth -- (optional) width of the arrow lines. Default is 1.
 	}
 
 
+
 	function toggleAxesHelper() {
 
 		axisHelper.visible = !axisHelper.visible;

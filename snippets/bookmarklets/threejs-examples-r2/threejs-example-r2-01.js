@@ -1,5 +1,5 @@
 
-//	var divTooToo;
+	var divTooToo;
 
 	var user = 'mrdoob'
 	var repo = '/three.js';
@@ -41,11 +41,16 @@
 
 	function getFiles() {
 
-		let page = '';
+		txt = inpGetFiles.value;
 
-		for ( let file of files ) {
+		page = '';
 
-			if ( !file.includes( inpGetFiles.value ) ) { continue; } 
+		for ( let i = 0; i < files.length; i++ ) {
+
+			file = files[ i ];
+console.log( '', file);
+
+			if ( !file.includes( txt ) ) { continue; } 
 
 			page +=
 				'<div>' +
@@ -62,25 +67,24 @@
 
 	function callbackTypes( xhr ) {
 
-		const response = JSON.parse( xhr.target.response );
-		const files = [];
-		const categories = [];
-		let text = '<hr>';
+		var response = JSON.parse( xhr.target.response );
+		var categories = [];
+		files = [];
+		var text = '';
 
-		for ( let key in response ) {
+		for ( var key in response ) {
 
-			const file = response[ key ].name;
+			var file = response[ key ].name;
 
 			if ( file.indexOf( '.html' ) === -1 || file === 'index.html' ) { continue; }
 
-			const id = file.slice( 0, -5 );
+			var id = file.slice( 0, -5 );
 			files.push( id );
-			let title = id.split( '_' );
-			const category = title.shift();
+			var title = id.split( '_' );
+			var category = title.shift();
 			title = title.join().replace( /,/gi, ' ' );
 
-//			if ( categories.indexOf( category ) === -1 ) {
-			if ( !categories.includes( category ) ) {
+			if ( categories.indexOf( category ) === -1 ) {
 
 				categories.push( category );
 
@@ -88,11 +92,17 @@
 
 			}
 
-			text += '<div><a href=#' + urlGitHubPage + file + ' >' + title + '</a></div>';
-
+//			text += '<div><a href=JavaScript:getExample("' + file + '") >' + title + '<a></div>';
+			text += ' <a href=#' + urlGitHubPage + file + ' >' + title + '</a> ' +
+			'<br>';
 		}
 
+//		info.innerHTML = files.length + ' files';
 		divTooToo.innerHTML += text;
+
+		
+//		scope.ifrMenuSub.style.height = ( divMenu.scrollHeight + 10 ) + 'px';
+//		parent.document.body.style.overflow = 'hidden';
 
 	}
 

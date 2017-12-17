@@ -8,12 +8,12 @@
 
 ### Massimo Pigliucci
 
-A prolific writer on Stoicism,\:
+A prolific writer on Stoicism:
 
 * [How to Be a Stoic]( https://howtobeastoic.wordpress.com/ )
 	* An evolving guide to practical Stoicism for the 21st century
 	* Many links to his work
-* Typical post[Stoic spiritual exercises: I, from the Enchiridion]( https://howtobeastoic.wordpress.com/2016/02/09/stoic-spiritual-exercises-i-from-the-enchiridion/ )
+* Typical post: [Stoic spiritual exercises: I, from the Enchiridion]( https://howtobeastoic.wordpress.com/2016/02/09/stoic-spiritual-exercises-i-from-the-enchiridion/ )
 
 See also this PDF
 
@@ -27,11 +27,13 @@ See also this PDF
 * Extensive [FAQ]( https://www.reddit.com/r/Stoicism/wiki/faq )
 
 
+https://www.reddit.com/r/Stoicism/comments/7js2gj/what_are_other_philosophies_similar_to_stoicism/
 
 
-## Wikipedia
 
-### [Stoicism]( https://en.wikipedia.org/wiki/Stoicism )
+### Wikipedia
+
+#### [Stoicism]( https://en.wikipedia.org/wiki/Stoicism )
 
 Stoicism is a school of Hellenistic philosophy that flourished throughout the Roman and Greek world until the 3rd century AD. Stoicism is predominantly a philosophy of personal ethics which is informed by its system of logic and its views on the natural world. According to its teachings, as social beings, the path to happiness for humans is found in accepting that which we have been given in life, by not allowing ourselves to be controlled by our desire for pleasure or our fear of pain, by using our minds to understand the world around us and to do our part in nature's plan, and by working together and treating others in a fair and just manner.
 
@@ -57,7 +59,7 @@ The four cardinal virtues of the Stoic philosophy is a classification derived fr
 See also: https://en.wikipedia.org/wiki/Cardinal_virtues
 
 
-### [Cynicism]( https://en.wikipedia.org/wiki/Cynicism_(philosophy) )
+#### [Cynicism]( https://en.wikipedia.org/wiki/Cynicism_(philosophy) )
 
 Although Cynicism concentrated solely on ethics, Cynic philosophy had a major impact on the Hellenistic world, ultimately becoming an important influence for Stoicism.
 
@@ -73,6 +75,8 @@ What would stoic ethics be like today if stoicism had survived as a systematic a
 What would stoic ethics be like today if stoicism had survived as a systematic approach to ethical theory, if it had coped successfully with the challenges of modern philosophy and experimental science? A New Stoicism proposes an answer to that question, offered from within the stoic tradition but without the metaphysical and psychological assumptions that modern philosophy and science have abandoned. Lawrence Becker argues that a secular version of the stoic ethical project, based on contemporary cosmology and developmental psychology, provides the basis for a sophisticated form of ethical naturalism, in which virtually all the hard doctrines of the ancient Stoics can be clearly restated and defended.
 
 Becker argues, in keeping with the ancients, that virtue is one thing, not many; that it, and not happiness, is the proper end of all activity; that it alone is good, all other things being merely rank-ordered relative to each other for the sake of the good; and that virtue is sufficient for happiness. Moreover, he rejects the popular caricature of the stoic as a grave figure, emotionally detached and capable mainly of endurance, resignation, and coping with pain. To the contrary, he holds that while stoic sages are able to endure the extremes of human suffering, they do not have to sacrifice joy to have that ability, and he seeks to turn our attention from the familiar, therapeutic part of stoic moral training to a reconsideration of its theoretical foundations.
+
+
 
 ### [William B Irvine]( https://www.amazon.com/William-B.-Irvine/e/B001IZPOQ6/ )
 

@@ -6,6 +6,13 @@ Update the main read me
 
 ### 
 
+https://rawgit.com/PerkinsAndWill/spiderAnton/master/SwellInteractive/ScatterPlot4SPEED/ScatterPlot4SPEED.pptx
+
+https://rawgit.com/PerkinsAndWill/spiderAnton/master/SwellInteractive/GeometryVizSpec/GeometryUpdates.pptx
+
+https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Frawgit.com%2FPerkinsAndWill%2FspiderAnton%2Fmaster%2FSwellInteractive%2FGeometryVizSpec%2FGeometryUpdates.pptx
+
+
 https://github.com/antonszilasi/spiderAnton
 
 https://antonszilasi.github.io/spiderAnton/speed/speed-page.html
