@@ -1,39 +1,58 @@
 
 
+## Reno trip
+
+
 ## Tidy
 
 
-## Phone 
+## Phone
+
+* Tania
 
 * Dr Fasset appointment
+* Dr Martin
+	* Jaundice
+	* hemoglobin
+
 
 
 ## Email
 
+* Jane
+* Smith
+* David
+* Dreamers in Bend
 * Allison > Bruno
-* Jacqueline, Liz & Myron
 * Geri: dinner/ ggta?
 * Gharen and WSD
-* Isabelle: letter to Notaire 
+* Isabelle: letter to Notaire
 
 
 ## Errands
 
-* Rubbing alcohol
-* Clipper card at Walgreens
+* Sticky notes
 
 
 ## Admin
 
+share ny times subscription
+
+Drivers License renewal
+
+good
+alixarmour@gmail.com
+
+bad
+alix.f.armour@gmail.com
+
 * Register on Gateway site
-    * Window seals fixed
-    * Toilet seat tightened
-* Get old pixel phone going
+	* Window seals fixed
+	* Toilet seat tightened
 * IRA withdrawal papers
-* Succeed study 
-	* MyChart
+* Succeed study
+	* test results to MyChart
 	* thoughts on texts
-	* 4 days of food < to ss
 * Find anti-hoarder
 * Organize Shoebox files
 * Close disused credit cards
@@ -42,17 +61,20 @@
 * Stop Pentagram
 
 
+
 ## Homey
 
-* Clean bathroom
-* Do laundry
-* Clean kitchen
+*
+
 
 
 ## Nice
 
+* Tim Child
+* Chici
+* John Willis online
 * Mia Grosjean
-* Michel Yelp review
+* Michel : Yelp review
 * Lorenzo Apicella
 * Peeps upstairs
 * WSD What's up?
@@ -64,22 +86,16 @@
 
 ## Health
 
-* Update colonoscopy notes
-* Act on Succeed Study blood test results
+* Messag to Dr Kattah re melani coli??
 * Dr Yoga email
 	* Mouth guard
-	* new toothpaste 
-
+	* new toothpaste
+* Next UCSF visit: drop off will body papers
 
 ## To buy
 
 Amazon pantry
-* Chicken stock no salt
-* Seaweed
-* Bran Buds
-* Diapers
-* Coffee
-* Wipes
+
 * Drawer units
 * Hearing protectors
 
@@ -87,8 +103,41 @@ Amazon pantry
 ## Writing
 
 
+## Waiting
+
+* Lastpass family account
+* Jacqueline, Liz & Myron
+
+
+***
+
 
 ## Done
+
+
+
+
+2017-12-20
+* Get old pixel phone going
+* Plum pudding?
+* Act on Succeed Study blood test results
+* Update colonoscopy notes
+* Succeed study
+	* 4 days of food < to ss
+* Rubbing alcohol
+* Clipper card at Walgreens
+
+
+2017-12-19
+* Clean bathroom
+* Clean kitchen
+
+* Chicken stock no salt
+* Seaweed
+* Bran Buds
+* Diapers
+* Coffee
+* Wipes
 
 2017-12-14
 * colonoscopy
@@ -108,7 +157,7 @@ Window mount for Circle2
 * llbean card << activate
 * Go for the unattainable / in contrast to Rittel https://en.wikipedia.org/wiki/Wicked_problem / Already done. See Pattern language
 * Geri
-* Cynthia * Kyle: guitar/manalemma/ camera / 
+* Cynthia * Kyle: guitar/manalemma/ camera /
 
 * Dr Kattah
 

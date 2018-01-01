@@ -1,8 +1,20 @@
 
 
+Cynthia / Cal folder
+https://drive.google.com/drive/folders/0B6CqfRSpvPf3Z2FjYXl6SmdLNFk
+
+https://docs.google.com/spreadsheets/d/12zc_ybWXQG_ryFPN5_OU3q4xioH8A6aYSsnKidsXYqw/edit?ts=5a34727e#gid=0
+
+# Links of possible interest
+
+https://docs.google.com/document/d/1GUfOr58BivJkmM57qMljQce07khRmLNtD5GqXSAUf1U/edit
+
+One weird trick to end gerrymandering: cake-cutting game theory
+https://boingboing.net/2017/11/06/one-weird-trick-to-end-gerryma.html
 
 
-Wicked problems
+# Wicked problems
+
 https://en.wikipedia.org/wiki/Wicked_problem
 
 contrast with

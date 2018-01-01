@@ -1,6 +1,32 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+## 2017-12-31 ~
+
+maybe I should get my diary over to Markdown???
+
+gbXML View: user experince moving along nicely
+
+Prediqtiv: changing over to alpha-vantage. Could be quite good
+Mozilla-text-editor: looking quite nice
+
+
+Boostnotes look interesting
+
+## 2017-12-27
+
+build a nearly-self-updating songbook
+
+Build a morphing iframe script
+
+
+## 2017-12-20 ~
+
+Enjoy this code for free in-flight Wi-Fi!
+
+3grrqbwk29959gfh
+This works for Gogo enabled flights and is good for one use until March 31, 2018. We sent you an email with your code too.Terms and conditions apply
+
 
 ## 2017-12-16
 
@@ -28,13 +54,13 @@ OK, you got the picture. So do start with the mussels. From Prince Edward Island
 
 The difficulty is the main course. Today there are eleven choices. I want one of each. Each dish is a North American classic. And, guess what, they are classy representives of their representations.  Each is good enough to eat time and time again.
 
-Tonight it was a less frequented path: the vegetable risotto. And it delivered. The warm, cozy large arborio rice was complimented by zucchini, broccoi and all goodly, healthy veggies to eat.
+Tonight it was a less frequented path: the vegetable risotto. And it delivered. The warm, cozy large _arborio_ rice was complimented by zucchini, broccoi and all goodly, healthy veggies to eat.
 
 Um, but here is the real thing!! It has taken me three hours to write this review. Why? Because I am sitting at the bar at Fish and Farm and all these nice talkative peeps have sat next to me. I am a techie and I've talked tech. I'm born in Boston and I've talked East Coast. I do business around the world and I've talked frequent flier. What more can you talk/ask for?
 
 Anyway, it's time to close and I cannot do so so without mentioning the general manager, Michael. Actually, I talk to him as Michel because he is totally French-speaking. Of course, he speaks a bunch of other languages. I do find that his Tagalog could use help. Whatever. The main thing is that if you want to have a photo-opportunity with a classy, totally well-dressed gentleman then you can do no better than giving Michel a hug
 
-And, so, if you want a tasty meal in the San Francisco Financial District 24/7, then Fish and Farm is a welcoming hang-out.
+And, so, if yhttps://github.com/absence/absence.github.ioou want a tasty meal in the San Francisco Financial District 24/7, then Fish and Farm is a welcoming hang-out.
 
 
 
@@ -52,8 +78,6 @@ total5400
 	4260 to spend per month
 
 ## 2017-11-29 ~
-
-
 
 00:30
 
@@ -143,8 +167,8 @@ meshLine Demo
 	* Big new insight - will help with lots of projects
 	* As many parameters as you want, in any order
 
-	
-	
+
+
 ## 2016-12-02
 
 
@@ -180,8 +204,6 @@ How to turn off quick suggestions?
 * edit settings.json
 
 use tabs
-
-
 
 
 ## 2016-11-28

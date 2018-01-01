@@ -6,13 +6,55 @@ A good order
 
 Perception, Judgment and Action
 
+
+
+### Perception
+
+How do we know that we know?
+https://en.wikipedia.org/wiki/Metaphysics
+https://en.wikipedia.org/wiki/Epistemology
+
+* Holiday: you can control your perceptions
+* Holiday: So control them well
+* Holiday: See things as they really are, without ornament
+* Holiday: Focus on what you can control
+* Holiday: Live in the moment. There no obstacles in the present
+* Holiday: See the good
+
+* Know which biases you are in
+* Know how you are being manipulated 
+
+
+### Judgment
+
+value theory 
+https://en.wikipedia.org/wiki/Axiology
 What are goals and objectives? mostly judgments
 
-What is tennis? All three in quick succession.
+Problem solving
 
 
+
+### Action
+
+Logic belongs here?
 Time mostly belongs to action. Perception and Judgment are timeless
+Actions are about time
+
+Holiday:
+* Bold 
+* Deliberate
+* Persistent
+
+SMART goals - turn judments into effective actions
+Allen's GTD
+
+
+
+### All together now
+
 A building is a judgment about the way thing should be
+
 Cooking is a series of PJAs
 1. We preceive that we are hungry
 2. We decide to cook somthing
@@ -25,12 +67,22 @@ Then
 
 and so on until we percive that we are no longer hungry
 
+What is misic?
+
+Goals are a way of judging whether something is actionable
+
+
+What is tennis? All three in quick succession.
+
+
+### Carry on
 
 Now that we have PJA as the over arching set of categories, can we further define each one so that so that we get 'better' at it?
 
 And what is this 'better' thing anyway?
 
- 
+
+
 
 
 ### Ideas along the way
@@ -54,25 +106,29 @@ https://www.nytimes.com/2017/12/18/smarter-living/how-to-stick-with-new-years-re
 * Time-bound: Set a reasonable timeline for your goal, and focus on the small wins along the way.
 
 
-Add 'Quality without a name' QWAN?
-
-http://wiki.c2.com/?QualityWithoutaName
-https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
-
 problem solving
 
 https://en.wikipedia.org/wiki/Wicked_problem
 https://en.wikipedia.org/wiki/Problem_solving
 
-
+* Complexity (large numbers of items, interrelations and decisions)
+* Dynamics (time considerations)
+* Intransparency (lack of clarity of the situation)
+* Polytely (multiple goals)
 
 
 http://lithgow-schmidt.dk/sherry-arnstein/ladder-of-citizen-participation.html#d0e70
 A Ladder of Citizen Participation - Sherry R Arnstein
-
 * A catalog of perceptions
 * With suggested remedies as judgments
  
+
+
+### Add 'Quality without a name' QWAN?
+
+http://wiki.c2.com/?QualityWithoutaName
+https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
+
 
 
 ## 2017-12-17 
@@ -99,6 +155,10 @@ http://www.iep.utm.edu/comparat/
 
 
 https://en.wikipedia.org/wiki/Outline_of_thought
+	* https://en.wikipedia.org/wiki/Bloom%27s_taxonomy
+	* https://en.wikipedia.org/wiki/Abraham_Maslow
+	* https://en.wikipedia.org/wiki/Wisdom
+	* https://en.wikipedia.org/wiki/Meaning_of_life
 https://en.wikipedia.org/wiki/Creative_problem-solving
 https://en.wikipedia.org/wiki/Problem_solving
 https://en.wikipedia.org/wiki/Wicked_problem

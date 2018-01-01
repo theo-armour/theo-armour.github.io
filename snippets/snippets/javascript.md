@@ -10,8 +10,6 @@ template strings.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
 
 
-use this inside a function when creating global variables...
-
 ### GitHub Source
 
 https://cdnjs.com/
@@ -19,16 +17,22 @@ src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js
 src=http://rawgit.com/mrdoob/three.js/dev/build/three.min.jsf
 
 
-###
+### Scroll into View
+
 		msg1.innerHTML = txt + '<p id=endof ></p>' ;
 		endof.scrollIntoView();
 
 
 ### CALLBACKS
+
+
+use this inside a function when creating global variables...
+
+
 just use 'this' wherever possible
 
 
-## Useful things /LOOPs
+## Useful things / LOOPs
 
 		for ( let i = 0; i < 2; i++ ) {
 
@@ -61,7 +65,8 @@ just use 'this' wherever possible
 
 
 
-// ### AJAX 2
+### AJAX 2
+
 // http://www.html5rocks.com/en/tutorials/file/xhr2/
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_binary_data
 
@@ -225,8 +230,6 @@ console.log('waiting...');
 
 ## ARRAYS
 
-
-
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 // http://www.w3schools.com/jsref/jsref_obj_array.asp
 
@@ -372,7 +375,7 @@ see cookbook/array/array-pop-while-switch
 
 
 
-// ### COLORS
+## COLORS
 
 check on FF....
 
@@ -396,7 +399,8 @@ random gradient background
 
 
 
-// ### DATES
+### DATES
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 	var daysOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
@@ -452,7 +456,45 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 
 
 
-// ### DOCUMENT
+## DETAILS
+
+* https://developer.mozilla.org/en-US/docs/Web/API/FileReader
+* https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications
+
+* http://thenewcode.com/680/Feature-Detection-and-Styling-For-The-HTML5-details-Element
+
+		txt =
+
+			'<details open >' +
+				'<summary><h3>file reader</h3></summary>' +
+				'<p><input type=file id=inpFile onchange=openFile(this); ></p>' +
+				'<textarea id=textArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
+				'<div id=menuOpenFile ></div>' +
+			'</details>' +
+		'';
+
+		return txt;
+
+
+## Details
+
+function switchOpen() {
+
+	if (details.getAttribute('open')) {
+
+		details.removeAttribute('open');
+
+	} else {
+
+		details.setAttribute('open', 'open');
+
+	}
+
+}
+
+
+
+### DOCUMENT
 
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document
@@ -460,7 +502,16 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 
 var css = document.body.appendChild( document.createElement('style') );
 
-// ### DOM
+
+
+### DOCUMENT Write
+
+https://www.w3schools.com/jsref/met_doc_write.asp
+
+document.write("Hello World!");
+
+
+### DOM
 
 	var script= document.createElement('script');
 	script.type= 'text/javascript';
@@ -497,7 +548,28 @@ var css = document.body.appendChild( document.createElement('style') );
 	}
 
 
-// ### EVENTS Key cursor
+
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
+https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
+
+		divContents.contentEditable = true;
+
+
+
+## DOMParser
+
+
+
+
+## Escape / encodeURI()
+
+	var uri = 'https://mozilla.org/?x=шеллы';
+	var encoded = encodeURI(uri);
+
+
+
+
+### EVENTS Key cursor
 
 https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 
@@ -559,44 +631,15 @@ console.log( thing );
 
 
 
-### FILE OPEN / DETAILS
-
-* https://developer.mozilla.org/en-US/docs/Web/API/FileReader
-* https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications
-
-* http://thenewcode.com/680/Feature-Detection-and-Styling-For-The-HTML5-details-Element
 
 
 
-		txt =
+## File Open
 
-			'<details open >' +
-				'<summary><h3>file reader</h3></summary>' +
+
+				'<h3>file reader</h3>' +
 				'<p><input type=file id=inpFile onchange=openFile(this); ></p>' +
 				'<textarea id=textArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
-				'<div id=menuOpenFile ></div>' +
-			'</details>' +
-		'';
-
-		return txt;
-
-
-## Details
-
-function switchOpen() {
-
-	if (details.getAttribute('open')) {
-
-		details.removeAttribute('open');
-
-	} else {
-
-		details.setAttribute('open', 'open');
-
-	}
-
-}
-
 
 
 
@@ -718,39 +761,14 @@ selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 
 
 
-// ### FORMAT Numbers
 
-// see also String and >> Number
-
-	function addCommas( nStr ){
-
-		nStr += '';
-
-		var x = nStr.split( '.' );
-		var x1 = x[ 0 ];
-		var x2 = x.length > 1 ? '.' + x[ 1 ] : '';
-		var rgx = /(\d+)(\d{3})/;
-
-		while ( rgx.test( x1 ) ) {
-
-			x1 = x1.replace( rgx, '$1' + ',' + '$2' );
-
-		}
-
-		return x1 + x2;
-
-	}
-
-
-
-
-// ### GLOBAL FUNCTIONS
+### GLOBAL FUNCTIONS
 
 parseInt( string, 10 ) << include the radix
 
 
 
-// ### GRADIENT RANDOM
+### GRADIENT RANDOM
 
 	function setRandomGradient() {
 
@@ -774,7 +792,7 @@ parseInt( string, 10 ) << include the radix
 
 /
 
-// ### IMAGE
+### IMAGE
 
 		var image = document.body.appendChild( document.createElement( 'img' ) );
 		image.crossOrigin = 'anonymous';  // before source, needs an onload
@@ -795,7 +813,7 @@ parseInt( string, 10 ) << include the radix
 		}
 
 
-// ### LOCATION.HASH
+### LOCATION.HASH
 
 		window.addEventListener ( 'hashchange', onHashChange, false );
 
@@ -854,7 +872,7 @@ parseInt( string, 10 ) << include the radix
 	};
 
 
-// ### LOCATION.HASH 2 PERMALINKS
+### LOCATION.HASH 2 PERMALINKS
 
 	XX.defaults = {
 		camx: 0,
@@ -910,7 +928,7 @@ parseInt( string, 10 ) << include the radix
 
 
 
-// ### MATH
+### MATH
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
@@ -977,7 +995,7 @@ So when you see aabb.doIt() in code you know exactly which file to go to.
 
 
 
-// ### NUMBER
+### NUMBER
 
 Formatting
 
@@ -1000,7 +1018,7 @@ Old school: number with commas
 
 
 
-// ### OBJECTS
+### OBJECTS
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
@@ -1103,17 +1121,16 @@ RegExp Modifiers
 \r carriage return
 \t tab
 \b backspace
-\f form 
+\f form
 
 
 (x) Matches 'x' and remembers the match, as the following example shows. The parentheses are called capturing parentheses.
 
 
 
-// ### SAVE FILE
+### SAVE FILE
+
 //file:///C:/Users/Theo/Dropbox/Public/code-cookbook/0-cookbook-general/file-save-api/file-saver-2015-02-26/file-saver.html
-
-
 //http://ausdemmaschinenraum.wordpress.com/2012/12/06/how-to-save-a-file-from-a-url-with-javascript/
 
 	var info = document.body.appendChild( document.createElement( 'div' ) );
@@ -1252,7 +1269,7 @@ setTimeout( function(){alert("Hello")},3000);
 		if ( parseInt( timer,10 ) %2 === 0 ){ ...
 
 
-## TRY /CATCH 
+## TRY /CATCH
 
 try {
  throw 'myException'; // generates an exception
@@ -1283,7 +1300,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/open
 http://stackoverflow.com/questions/3030859/detecting-the-onload-event-of-a-window-opened-with-window-open
 
 
-		if ( window.self === window.top ) 
+		if ( window.self === window.top )
 
 		window.open("http://www.w3schools.com");
 		newWindow = window.open( 'popup-r1.html','_blank', 'centerscreen' );

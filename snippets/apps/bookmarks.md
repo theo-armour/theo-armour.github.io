@@ -1,4 +1,7 @@
 
+https://github.com/huyingjie/Checklist-Checklist
+
+https://gizmodo.com/new-technology-were-actually-excited-about-for-2018-1821514332
 
 Linus quotes
 https://lkml.org/lkml/2017/11/21/356

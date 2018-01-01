@@ -6,11 +6,12 @@
 
 Changes editor split layout from horizontal to vertical
 
-VSC > View > Toggle Editor Group Layout
+VSC > View > Toggle Editor Group Layout / also icon at top right
 
 Alt+Shift+1 (PC)
 
 Cmd+Option+1 (Mac)
+
 
 ## Preview Mode
 
@@ -33,5 +34,11 @@ https://docs.emmet.io/cheat-sheet/
 
 To switch between views, press Ctrl+Shift+V in the editor. You can view the preview side-by-side (Ctrl+K V)
 
+
+    * Can drag and drop from Sidebar to browser
+    * F1 for help
+
+How to turn off quick suggestions?
+* edit settings.json
 
 

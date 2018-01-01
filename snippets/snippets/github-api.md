@@ -1,28 +1,14 @@
-﻿---
-layout: post
-title: GitHub API Cheat Sheet
----
-
-yaml tables. must be first thing in the gist
-
-GitHub API
-===
-
-Here: http://jaanga.github.io/cookbook-html/examples/github-api-rss/github-api-users-explorer/
+﻿
+# GitHub API
 
 
 ## Documentation: https://developer.github.com/v3/
 
-### Bookmarks
 
-5 entertaining things you can find with the GitHub Search API
-* https://gist.github.com/jasonrudolph/6065289
-
-fun look at issues
-* https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+
+https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+
 
 
-### GitHub Help
+https://developer.github.com/v3/
 
 
 * https://help.github.com/categories/search/
@@ -38,10 +24,6 @@ fun look at issues
 
 
 * http://stackoverflow.com/questions/14731459/github-api-fetch-all-folders-and-files-in-single-get-request
-
-
-
-
 
 
 
@@ -108,6 +90,8 @@ not
 
 
 * https://developer.github.com/v3/issues/
+
+
 
 ***
 
@@ -249,6 +233,7 @@ Get the README << finds any readme!!
 or
 * https://api.github.com/repos/jaanga/jaanga.github.io/contents/readme.md
 
+
 ### License
 
 * https://api.github.com/repos/benbalter/gman/license
@@ -318,6 +303,7 @@ or
 
 * https://api.github.com/users/theo-armour
 * lists repo count. gists, etc
+
 
 ### Events
 
@@ -464,6 +450,11 @@ followers
 
 https://api.github.com/feeds
 
+
+
+Links of Interest
+
+
 ## Ladybug Web
 
 * https://api.github.com/repos/ladybug-tools/ladybug-web << main one
@@ -490,4 +481,117 @@ https://api.github.com/feeds
 
 * https://api.github.com/users/ladybug-tools/received_events
 * https://api.github.com/users/ladybug-tools/repos
+
+
+## Theo
+
+https://api.github.com/users/theo-armour/events
+
+
+https://api.github.com/repos/theo-armour/theo-armour.github.io/git/trees/master?recursive=1
+
+https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/aceit/
+https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/aceit/index.html
+
+
+## Jaanga
+
+https://api.github.com/users/jaanga/received_events
+
+https://api.github.com/repos/jaanga/algesurf/contents/parametric-equations/equation-files/
+https://api.github.com/repos/jaanga/algesurf/git/trees/gh-pages?recursive=1
+https://api.github.com/repos/jaanga/algesurf
+https://api.github.com/repos/jaanga/jaanga.github.io/git/trees/master?recursive=1
+
+https://api.github.com/repos/jaanga/jaanga.github.io/git/trees/5bc5abeabb0706b67596c8663894729bb255759d?recursive=1
+
+## Analytic Physics
+
+https://api.github.com/repos/paulmasson/sagemath-docs
+
+https://api.github.com/repos/paulmasson/sagemath-docs/contents/functions/
+
+
+## Dirksen
+https://api.github.com/repos/josdirksen/learning-threejs/git/trees/master?recursive=1
+
+
+## NASA
+
+https://api.github.com/repos/nasa/nasa-3d-resources
+
+https://api.github.com/repos/nasa/NASA-3D-Resources/contents/3D%20Printing
+
+https://api.github.com/repos/nasa/nasa-3d-resources/git/trees/master?recursive=1
+
+
+## STL
+https://github.com/blog/1465-stl-file-viewing
+
+
+https://github.com/search?q=NASA-3D&extension:stl&type=Code&s=indexed
+https://github.com/search?q=3D+Printing+extension:stl&type=Code&s=indexed
+
+
+https://api.github.com/search/code?q=3D+extension:stl
+
+
+## Three.js
+https://api.github.com/repos/mrdoob/three.js << go here to see what's available
+
+https://api.github.com/repos/mrdoob/three.js/stats/contributors
+https://api.github.com/repos/mrdoob/three.js/stats/commit_activity
+https://api.github.com/repos/mrdoob/three.js/stats/participation
+
+https://api.github.com/repos/mrdoob/three.js/git/commits/6295c939392a5fc6033d9e5e28877dd48618275c
+https://api.github.com/repos/mrdoob/three.js/commits?path=examples/webgl_geometry_colors_lookuptable.html
+https://api.github.com/repos/mrdoob/three.js/commits?path=examples <<
+https://api.github.com/repos/mrdoob/three.js/commits?path=src/lights
+
+
+https://api.github.com/search/repositories?q=webgl+repo:three.js&sort=stars&order=desc
+https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc
+
+https://api.github.com/repos/mrdoob/three.js/contents/examples?ref=dev
+https://api.github.com/repos/mrdoob/three.js/contents/examples?ref=r70
+
+https://api.github.com/repos/mrdoob/three.js/git/trees/master?recursive=1 <<<<<<<<<<<<<<
+https://api.github.com/repos/mrdoob/three.js/git/trees/dev?recursive=1
+https://api.github.com/repos/mrdoob/three.js/git/trees/r70?recursive=1
+
+
+
+https://api.github.com/repos/mrdoob/three.js/tags
+
+
+https://api.github.com/repos/mrdoob/three.js/contents/examples/
+https://api.github.com/repos/mrdoob/three.js/contents/examples/models
+https://api.github.com/repos/mrdoob/three.js/contents/examples/models
+
+https://api.github.com/repos/mrdoob/three.js/contents/examples/canvas_ascii_effect.html?ref=dev
+https://api.github.com/repos/mrdoob/three.js/contents/examples?ref=dev
+https://api.github.com/repos/mrdoob/three.js/contents/examples?ref=r25
+
+https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/canvas_ascii_effect.html
+https://raw.githubusercontent.com/mrdoob/three.js/r70/examples/canvas_ascii_effect.html
+https://raw.github.com/mrdoob/three.js/dev/examples/webgl_effects_parallaxbarrier.html
+
+
+## SAGE
+
+https://github.com/sagemath/sage/blob/master/src/sage
+https://github.com/sagemath/sage/blob/master/src/sage/functions/jacobi.py
+
+
+https://api.github.com/repos/sagemath/sage/git/trees/3defc14ec89f8439928ba56448fee77eec3eb647?recursive=5
+
+https://api.github.com/repos/sagemath/sage/functions
+
+
+
+https://api.github.com/repos/sagemath/sage/contents/src/sage?recursive=5
+
+https://api.github.com/repos/sagemath/sage/contents/src/sage/functions?ref=develop
+
+https://raw.githubusercontent.com/sagemath/sage/master/src/sage/functions/jacobi.py
 

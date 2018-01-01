@@ -14,6 +14,7 @@ http://www.w3schools.com/howto/howto_js_animate.asp
 ## Colors
 https://www.w3schools.com/colors/colors_names.asp
 
+
 ## Button and Range
 
 	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
@@ -34,8 +35,6 @@ html { --mnu-back-col: lightgray; --menu-width: 250px; }
 width: calc( 100% - var( --menu-width ) )
 
 		const width = getComputedStyle(document.documentElement).getPropertyValue( '--mnu-width' );
-
-
 
 
 
@@ -69,7 +68,7 @@ link &#128279; 🔗 or &#x1f517;
 ⌂ home: &#x2302;
 
 🕷  &#x1f577; spider
-🕸 &#x1f578; spider web 
+🕸 &#x1f578; spider web
 recycle: &#21BB;
 Currency: &pound;  &euro;
 Arrows: &uArr;  &laquo; &raquo;
@@ -84,6 +83,10 @@ file:///C:/Dropbox/Public/code-cookbook/0-cookbook-general/string%20manipulation
 - see bottom for rotating characters by degrees.
 
 
+### CSS Docs
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://www.w3schools.com/css/default.asp
 
 
 ### CSS BORDERS
@@ -93,7 +96,6 @@ outline: none;
 * https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 
 box model
-
 
 * { box-sizing: border-box; height: 100% vertical-align: top; }
 
@@ -154,11 +156,20 @@ h2:before { content:"❦ ";
 	setRandomGradientBackground();
 
 
+
 ### CSS Transform Scale Origin
 
 https://www.sitepoint.com/a-primer-on-css3-transforms/
 
 	.divIframe { border: 0px solid red; height: 960px; width: 960px; transform: scale( 0.25 ); transform-origin: 0 0; }  // or  top left instead og 0 0
+
+
+
+### CSS External style sheet
+
+https://www.w3schools.com/css/css_howto.asp
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
 
 
 ### DETAILS
@@ -225,7 +236,8 @@ Use oninput: handles both mouse and touch
 		<p title='howdy' >
 			title <output id=outRange class=floatRight >5</output>
 			<input type=range id=inpRange min=0 max=10 step=1 value=5 oninput=outRange.value=value; />
-		</p>
+
+
 
 ### valueAsNumber
 
@@ -233,6 +245,7 @@ https://www.w3.org/TR/2011/WD-html5-20110525/common-input-element-attributes.htm
 
 
 Still not working in Edge maybe. Use parseFloat...
+
 
 ### Range stepUp / stepDown
 // Where is there a good use example?
@@ -288,6 +301,8 @@ sandbox = 'allow-scripts'
 
 
 ### TEXTAREA
+
+
 <textarea id=textArea cols=30 rows=5 placeholder="Stuff" >
 		'Iteration system wide engenders economies of scale, cross-media technology, presentation action items and life cycle replication.'
 </textarea>

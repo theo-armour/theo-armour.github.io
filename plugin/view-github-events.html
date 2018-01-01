@@ -144,7 +144,7 @@
 			txt +=
 
 				( i + 1 ) + ' ' + event.created_at.slice( 11, -4 ) + ' ' + actor + ' ' + link + b +
-				'<small>' + type[ 'on' + event.type ]( event ) + '</small>' +
+				'<small>' + type[ ( 'on' + event.type ) ]( event ) + '</small>' +
 
 			b;
 
@@ -160,6 +160,7 @@
 
 //
 
+	type.onCommitCommentEvent = function( event ) {return 'Commit Comment ' + event.payload.comment.body.link( event.payload.comment.html_url ) };
 
 	type.onCreateEvent = function( event ) { return 'create ' + event.payload.master_branch; };
 
