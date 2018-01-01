@@ -11,18 +11,21 @@
 * Tania
 
 * Dr Fasset appointment
-* Dr Martin
+* Dr Martin appointment
 	* Jaundice
 	* hemoglobin
 
+## gbXML
+
+* David
+* Michal
 
 
 ## Email
 
-* Jane
+
 * Smith
-* David
-* Dreamers in Bend
+	* Dreamers in Bend
 * Allison > Bruno
 * Geri: dinner/ ggta?
 * Gharen and WSD
@@ -71,7 +74,7 @@ alix.f.armour@gmail.com
 ## Nice
 
 * Tim Child
-* Chici
+
 * John Willis online
 * Mia Grosjean
 * Michel : Yelp review
@@ -86,7 +89,7 @@ alix.f.armour@gmail.com
 
 ## Health
 
-* Messag to Dr Kattah re melani coli??
+* Message to Dr Kattah re melani coli??
 * Dr Yoga email
 	* Mouth guard
 	* new toothpaste
@@ -115,7 +118,10 @@ Amazon pantry
 ## Done
 
 
-
+* Chici
+* Jane
+* Andronik
+* David
 
 2017-12-20
 * Get old pixel phone going

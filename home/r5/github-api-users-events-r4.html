@@ -6,7 +6,7 @@
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' >
 <meta name=description content='Use GitHub API to gather a users organization, repos and events.
 Select user from drop-down ist or by input.
-Display all ten pageea of user events 0ne-by-one or all at once.
+Display all ten pages of user events 0ne-by-one or all at once.
 List user events in an informative manner.
 ' >
 <meta name=keywords content='AJAX,JavaScript,GitHub,FOSS,STEM' >
@@ -18,17 +18,17 @@ List user events in an informative manner.
 
 // https://developer.github.com/v3/
 
-	var users = [ 
+	var users = [
 
-		'Theo-Armour', 
+		'Theo-Armour',
 		'#Three.js',
-		'MrDoob', 
-		'WestLangley', 
+		'MrDoob',
+		'WestLangley',
 		'zz85',
 		'#FGx',
-		'GeoffMcl', 
+		'GeoffMcl',
 		'#Ladybug',
-		'MostaphaRoudsari', 
+		'MostaphaRoudsari',
 		'#Xplora',
 		'PaulMasson',
 		'#???',
@@ -91,7 +91,7 @@ List user events in an informative manner.
 
 		menu = hamburger.appendChild( document.createElement( 'div' ) );
 		menu.id = 'menu';
-		menu.innerHTML = 
+		menu.innerHTML =
 
 			'<h2>' +
 				'<a href="" >' + document.title + '</a>' +
@@ -178,9 +178,9 @@ List user events in an informative manner.
 
 		getEvents( name, page, contents );
 
-		getOrgs( name, page, contents ); 
+		getOrgs( name, page, contents );
 
-		getRepos( name, page, contents ); 
+		getRepos( name, page, contents );
 
 		getUser( name );
 
@@ -242,7 +242,7 @@ List user events in an informative manner.
 
 				org = orgs[ i ];
 
-				txt += '<div><a href=https://github.com/' + org.login + ' >' + org.login + '</a><br>' + 
+				txt += '<div><a href=https://github.com/' + org.login + ' >' + org.login + '</a><br>' +
 
 					'<small>' + org.description + '</small></div>';
 
@@ -277,7 +277,7 @@ List user events in an informative manner.
 
 				repo = repos[ i ];
 
-				txt += '<div><a href=' + repo.html_url + ' >' + repo.name + '</a><br>' + 
+				txt += '<div><a href=' + repo.html_url + ' >' + repo.name + '</a><br>' +
 
 					'<small>' + repo.updated_at.slice( 0, 10 ) + ' - ' + repo.description + '</small></div>';
 
@@ -302,12 +302,12 @@ List user events in an informative manner.
 
 		pageHeader =
 		'<h1>' +
-			'user: <a href=https://github.com/' + user + '>' + user + '</a> ' + 
+			'user: <a href=https://github.com/' + user + '>' + user + '</a> ' +
 			'page <button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button> ' +
 //			'<button onclick=window.scrollTo(0,0); >top</button>' +
 		'</h1>';
 
-		pageFooter = 
+		pageFooter =
 		'<h1>' +
 			'page <button onclick=proceed(-1); >prev</button> ' + page + ' <button onclick=proceed(1); >next</a></button> ' +
 			'<button onclick=window.scrollTo(0,0); >top</button>' +
@@ -336,7 +336,7 @@ List user events in an informative manner.
 
 					dates.push( event.created_at.slice( 0, 10 ) )
 
-					pageContent += 
+					pageContent +=
 						'<hr style=margin-top:70px; >' +
 						'<h2>' + event.created_at.slice( 0, 10 ) + '</h2>';
 
@@ -350,7 +350,7 @@ List user events in an informative manner.
 
 				}
 
-				pageContent += 
+				pageContent +=
 					'<div>' + ( i + 1 ) + '. ' + event.created_at.slice( 11, -1 ) + '</div>' +
 					'<div>Repository: <a href=http://github.com/' + event.repo.name + ' > ' + event.repo.name + '</a></div>' +
 				'';
@@ -399,9 +399,9 @@ List user events in an informative manner.
 	eventSet.onDeleteEvent = function( event ) {
 
 		txt =
-			'<div>Pusher: ' + event.payload.pusher_type + '<div>' + 
-			'<div>Ref: ' + event.payload.ref + '<div>' + 
-			'<div>Ref Type: ' + event.payload.ref_type + '<div>' + 
+			'<div>Pusher: ' + event.payload.pusher_type + '<div>' +
+			'<div>Ref: ' + event.payload.ref + '<div>' +
+			'<div>Ref Type: ' + event.payload.ref_type + '<div>' +
 		'';
 		return txt;
 
@@ -409,10 +409,10 @@ List user events in an informative manner.
 
 	eventSet.onIssuesEvent = function( event ) {
 
-		txt = 
-			'<div>Title <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' + 
+		txt =
+			'<div>Title <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' +
 			'<div>Labels: ' + ( event.payload.issue.labels.length ? event.payload.issue.labels[ 0 ].name  : '' ) + '</div>' +
-				( event.payload.action === 'opened' ? 
+				( event.payload.action === 'opened' ?
 				'<div>Action: opened</div><div class=issue >' + converter.makeHtml( event.payload.issue.body ) + '</div>' :
 				'<div>Action: closed</div>' ) +
 		'';
@@ -423,8 +423,8 @@ List user events in an informative manner.
 
 	eventSet.onIssueCommentEvent = function( event ) {
 
-		txt = 
-			'<div>Title: <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' + 
+		txt =
+			'<div>Title: <a href=' + event.payload.issue.html_url + ' >' + event.payload.issue.title + '</a></div>' +
 			( event.payload.issue.labels.length ? '<div>Labels: ' + event.payload.issue.labels[ 0 ].name  + '</div>' : '' ) +
 			'<div class=issue >' + converter.makeHtml( event.payload.comment.body ) + '</div>' ;
 		'';
@@ -445,7 +445,7 @@ List user events in an informative manner.
 	eventSet.onPushEvent = function( event ) {
 //console.log( 'onEvent', event );
 		txt =
-			'<div>Message: ' + ( event.payload.commits.length ? event.payload.commits[ 0 ].message : '' ) + 
+			'<div>Message: ' + ( event.payload.commits.length ? event.payload.commits[ 0 ].message : '' ) +
 				' - Size: ' + event.payload.size + ' - Commits: ' + event.payload.commits.length + '</div>' +
 		'';
 		return txt;
@@ -477,9 +477,9 @@ List user events in an informative manner.
 	eventSet.onReleaseEvent = function( event ) {
 
 		txt =
-			'<div>Name: ' + event.payload.release.name + '<div>' + 
-			'<h3 style=color:magenta; >Action: ' + event.payload.action + '</h3>' + 
-			'<div>Prerelease: ' + event.payload.release.prerelease + '<div>' + 
+			'<div>Name: ' + event.payload.release.name + '<div>' +
+			'<h3 style=color:magenta; >Action: ' + event.payload.action + '</h3>' +
+			'<div>Prerelease: ' + event.payload.release.prerelease + '<div>' +
 		'';
 		return txt;
 

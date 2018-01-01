@@ -288,6 +288,7 @@ http://www.w3schools.com/tags/att_iframe_sandbox.asp
 
 sandbox = 'allow-scripts'
 
+onload
 
 
 ### META
