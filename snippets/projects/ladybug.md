@@ -1,10 +1,24 @@
 
 
-### 2017-11-30 ~ 
+## Contacts
+
+* Michal
+* David
+* Syracuse
+* Prof
+* Dr Tarek Rakha UK
+* Mostapha
+
+* Better home page
+* Board of Advisors
+* Statement of Intent
+
+
+### 2017-11-30 ~
 
 Update the main read me
 
-### 
+###
 
 https://rawgit.com/PerkinsAndWill/spiderAnton/master/SwellInteractive/ScatterPlot4SPEED/ScatterPlot4SPEED.pptx
 
@@ -28,8 +42,8 @@ https://antonszilasi.github.io/spiderAnton//speed/tests/geometryLogicValidator.h
 ## 2017-10-30 ~ Ben & Anton
 
 Creating schematics ~ not architecture or renderings
-User is a DJ 
-* Needs to hear before playing. 
+User is a DJ
+* Needs to hear before playing.
 * Everything that's doable must be visible from the get go
 * Guns on every mantle piece: is something looks wrong there's a way to fix it
 Feels like a game
@@ -87,8 +101,6 @@ What should I be doing and where should it be hosted?
 Issue: there's not a lot of content out there. need models. need visuals.
 
 
-
-
 I'm mostly online and in writing
 
 Github user login?
@@ -108,9 +120,9 @@ https://www.forbes.com/sites/davelavinsky/2013/12/03/business-plan-outline-23-po
 
 People / Partners / Skills
 
-Product / Processes / 
+Product / Processes /
 
-Customers / Market / Segments 
+Customers / Market / Segments
 
 Sales and Marketing / Revenue Model
 
@@ -164,12 +176,12 @@ PS There's nothing wrong with the R14 format but it had to handle 3D, PostScript
 https://ladybug-tools.github.io/spider/images/temple-postmodern-ezgif.gif
 
 Post-modern @burningman - de-constructing @temple_2017!
-# Burning_mAnalemma R5  #threejs @Mapbox @ladybug_tools 
+# Burning_mAnalemma R5  #threejs @Mapbox @ladybug_tools
 http://ladybug.tools/spider/burning-manalemma-2017
 
 
 Climbing Mt Everest? Bring along @burningman @temple_2017!
-Burning_mAnalemma R4  #threejs @Mapbox @ladybug_tools 
+Burning_mAnalemma R4  #threejs @Mapbox @ladybug_tools
 http://ladybug.tools/spider/burning-manalemma-2017
 
 
@@ -183,7 +195,7 @@ Burning mAnalemma R4
 
 
 
-Burning_mAnalemma R3 @temple_2017 @burningman #threejs @Mapbox @ladybug_tools 
+Burning_mAnalemma R3 @temple_2017 @burningman #threejs @Mapbox @ladybug_tools
 
 http://ladybug.tools/spider/burning-manalemma-2017
 
@@ -194,7 +206,7 @@ https://t.co/u3Nbo8ZO2g
 
 https://github.com/mdahlhausen/epwvis/issues/8
 
-@mostaphaRoudsari @mdahlhausen @MingboPeng 
+@mostaphaRoudsari @mdahlhausen @MingboPeng
 
 NREL/EnergyPlus have a folder on GitHub with a small number of EPW files - probably for testing - here:
 

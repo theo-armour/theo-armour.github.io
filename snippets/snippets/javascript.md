@@ -2,6 +2,34 @@
 		const div = document.body.appendChild( document.createElement( 'div' ) );
 		div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px; }
 
+
+# requestIdleCallback
+
+https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_source=javascriptweekly&utm_medium=email
+
+
+# Easily create an HTML editor with DesignMode and ContentEditable
+
+https://hackernoon.com/easily-create-an-html-editor-with-designmode-and-contenteditable-7ed1c465d39b#.hh7gdokty
+
+very good:
+https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.g3fu2ql70
+
+document.designMode = true for the entire document
+element.contentEditable = 'true for just one element.
+
+getEventListeners( menu )
+monitorEvents($('#menu'))
+inspect( menu )
+dir( menu )
+console.table( scene )
+
+console.time('myTime');
+console.timeEnd('myTime');
+
+clear()
+
+
 ## ECMA 6
 
 		let x = 6
