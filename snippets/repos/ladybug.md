@@ -2,23 +2,22 @@
 
 ## Contacts
 
+* Vring over ibpsa files
+* Art as the link gatherer
 * Michal
 * David
-* Syracuse
-* Prof
-* Dr Tarek Rakha UK
+* Syracuse Prof Dr Tarek Rakha UK
 * Mostapha
-
 * Better home page
-* Board of Advisors
+* Board of Advisors Dr Andrew Marsh
 * Statement of Intent
 
 
-### 2017-11-30 ~
+### 2017-11-30
 
 Update the main read me
 
-###
+### PW
 
 https://rawgit.com/PerkinsAndWill/spiderAnton/master/SwellInteractive/ScatterPlot4SPEED/ScatterPlot4SPEED.pptx
 

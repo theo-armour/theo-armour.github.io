@@ -1,11 +1,36 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+
+## 2018-01-03
+
+using mozilla text editor and github API, I have a nice little content management system going
+- similar to my PHP system of years ago.
+
+This editor brings up all sorts of issues
+
+html vs markdown
+diary as google docs vs html vs markdown
+
+first editor where I understand most everything
+- that I feel I could enhance
+
+
+## Alpha Vantage thoughts
+
+need to break big files into many smaller files
+Use file system API - not standard
+* https://developer.mozilla.org/en-US/docs/Web/API/FileSystem
+* https://www.noupe.com/design/html5-filesystem-api-create-files-store-locally-using-javascript-webkit.html
+use local storage?
+* https://developer.mozilla.org/en-US/docs/Web/API/Storage_API
+use Glitch
+
 ## 2017-12-31 ~
 
 maybe I should get my diary over to Markdown???
 
-gbXML View: user experince moving along nicely
+gbXML View: user experience moving along nicely
 
 Prediqtiv: changing over to alpha-vantage. Could be quite good
 Mozilla-text-editor: looking quite nice

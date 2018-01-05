@@ -1,31 +1,31 @@
 
+Drivers License renewal
+* finish reading dmv manual
+* take practice test
 
 ## Reno trip
 
+- [*] car rental
+- [*] spreadsheet
+* [*] info sheet
+	* Add items
 
 ## Tidy
 
+*
 
 ## Phone
 
-* Tania
 
 * Dr Fasset appointment
-* Dr Martin appointment
+* Dr Martin appointment ~ call in April
 	* Jaundice
 	* hemoglobin
-
-## gbXML
-
-* David
-* Michal
 
 
 ## Email
 
 
-* Smith
-	* Dreamers in Bend
 * Allison > Bruno
 * Geri: dinner/ ggta?
 * Gharen and WSD
@@ -34,6 +34,8 @@
 
 ## Errands
 
+* aquaphor cream
+* umami / msg
 * Sticky notes
 
 
@@ -41,22 +43,22 @@
 
 share ny times subscription
 
-Drivers License renewal
-
 good
 alixarmour@gmail.com
-
 bad
 alix.f.armour@gmail.com
 
-* Register on Gateway site
+* Find anti-hoarder
+	* Start bookmark page
+	* Cragslist
+	* Alice Bravo
+* Gateway site
 	* Window seals fixed
 	* Toilet seat tightened
 * IRA withdrawal papers
 * Succeed study
-	* test results to MyChart
+	* Erin: test results to MyChart
 	* thoughts on texts
-* Find anti-hoarder
 * Organize Shoebox files
 * Close disused credit cards
 * Pixelbook de-laminating
@@ -64,16 +66,14 @@ alix.f.armour@gmail.com
 * Stop Pentagram
 
 
-
 ## Homey
 
-*
+* Camera outdoors
 
 
 
 ## Nice
 
-* Tim Child
 
 * John Willis online
 * Mia Grosjean
@@ -98,18 +98,18 @@ alix.f.armour@gmail.com
 ## To buy
 
 Amazon pantry
-
-* Drawer units
-* Hearing protectors
-
+* Chamois
 
 ## Writing
 
 
 ## Waiting
 
+* Tim Child
 * Lastpass family account
 * Jacqueline, Liz & Myron
+* Drawer units
+* Hearing protectors
 
 
 ***
@@ -117,7 +117,10 @@ Amazon pantry
 
 ## Done
 
-
+2018-01-03
+* Kyle: Why not delorme messenger
+* Smith
+	* Dreamers in Bend
 * Chici
 * Jane
 * Andronik
