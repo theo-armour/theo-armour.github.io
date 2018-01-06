@@ -21,3 +21,9 @@ https://github.com/topics/alpha-vantage
 
 
 http://alpha-vantage.readthedocs.io/en/latest/
+
+
+## lists of symbols
+
+https://api.iextrading.com/1.0/ref-data/symbols
+

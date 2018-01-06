@@ -33,11 +33,10 @@ Drivers License renewal
 
 ## Errands
 
-* Uncle Sam Cereal
-* Oatmeal cereal
-* aquaphor cream
+
 * umami / msg
 * Sticky notes
+
 * haircut
 * omeprazole
 
@@ -60,7 +59,6 @@ alix.f.armour@gmail.com
 	* Erin: test results to MyChart
 	* thoughts on texts
 * Organize Shoebox files
-
 * Pixelbook de-laminating
 * Pay some money to Navient
 * Stop Pentagram
