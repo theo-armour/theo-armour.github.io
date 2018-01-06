@@ -16,16 +16,15 @@ Drivers License renewal
 
 ## Phone
 
-
+* kukosabe (415) 757-0155 1-4 pm / http://kusakabe-sf.com/menu/
+* Close disused credit cards
 * Dr Fasset appointment
-* Dr Martin appointment ~ call in April
-	* Jaundice
-	* hemoglobin
 
 
 ## Email
 
 
+* aceit: share ny times subscription
 * Allison > Bruno
 * Geri: dinner/ ggta?
 * Gharen and WSD
@@ -34,14 +33,15 @@ Drivers License renewal
 
 ## Errands
 
+* Uncle Sam Cereal
+* Oatmeal cereal
 * aquaphor cream
 * umami / msg
 * Sticky notes
-
+* haircut
+* omeprazole
 
 ## Admin
-
-share ny times subscription
 
 good
 alixarmour@gmail.com
@@ -60,7 +60,7 @@ alix.f.armour@gmail.com
 	* Erin: test results to MyChart
 	* thoughts on texts
 * Organize Shoebox files
-* Close disused credit cards
+
 * Pixelbook de-laminating
 * Pay some money to Navient
 * Stop Pentagram
@@ -71,20 +71,17 @@ alix.f.armour@gmail.com
 * Camera outdoors
 
 
-
 ## Nice
-
 
 * John Willis online
 * Mia Grosjean
 * Michel : Yelp review
 * Lorenzo Apicella
-* Peeps upstairs
+* Peeps upstairs < draft the note
 * WSD What's up?
 * Englehardts
 * Where do all the crows go in the evening?
 * Terrance Deacon
-
 
 
 ## Health
@@ -99,19 +96,24 @@ alix.f.armour@gmail.com
 
 Amazon pantry
 * Chamois
+* All bran buds
+* Seaweed
+* Broth
 
 ## Writing
 
 
 ## Waiting
 
+* JoAnn
 * Tim Child
 * Lastpass family account
 * Jacqueline, Liz & Myron
 * Drawer units
 * Hearing protectors
-
-
+* Dr Martin appointment ~ call in April
+	* Jaundice
+	* hemoglobin
 ***
 
 
