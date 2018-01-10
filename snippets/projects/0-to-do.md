@@ -1,4 +1,8 @@
 
+btb
+water
+
+
 Drivers License renewal
 * finish reading dmv manual
 * take practice test
@@ -16,14 +20,14 @@ Drivers License renewal
 
 ## Phone
 
-* kukosabe (415) 757-0155 1-4 pm / http://kusakabe-sf.com/menu/
+* kusakabe (415) 757-0155 1-4 pm / http://kusakabe-sf.com/menu/
 * Close disused credit cards
 * Dr Fasset appointment
 
 
 ## Email
 
-
+* Chateau d'Yquem
 * aceit: share ny times subscription
 * Allison > Bruno
 * Geri: dinner/ ggta?
@@ -33,11 +37,10 @@ Drivers License renewal
 
 ## Errands
 
-
 * umami / msg
 * Sticky notes
-
 * haircut
+
 * omeprazole
 
 ## Admin
@@ -48,8 +51,6 @@ bad
 alix.f.armour@gmail.com
 
 * Find anti-hoarder
-	* Start bookmark page
-	* Cragslist
 	* Alice Bravo
 * Gateway site
 	* Window seals fixed
@@ -61,7 +62,7 @@ alix.f.armour@gmail.com
 * Organize Shoebox files
 * Pixelbook de-laminating
 * Pay some money to Navient
-* Stop Pentagram
+* Anthem
 
 
 ## Homey
@@ -84,6 +85,7 @@ alix.f.armour@gmail.com
 
 ## Health
 
+* Angela Laffen
 * Message to Dr Kattah re melani coli??
 * Dr Yoga email
 	* Mouth guard
@@ -116,6 +118,10 @@ Amazon pantry
 
 
 ## Done
+
+2018-01-09
+
+* Stop Pentagram
 
 2018-01-03
 * Kyle: Why not delorme messenger
