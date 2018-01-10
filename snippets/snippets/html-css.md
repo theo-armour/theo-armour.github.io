@@ -184,6 +184,15 @@ outline: none;
 
 
 
+### DIV Resize
+
+
+div {
+    resize: both;
+    overflow: auto;
+}
+
+
 ### FORM
 - see also Textarea
 

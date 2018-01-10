@@ -1227,6 +1227,27 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 
 
 
+### Storage
+
+		const apiKey = localStorage.getItem( 'apiKey' );
+		inpApiKey.value = apiKey ? apiKey : '' ;
+
+	function setStorage() {
+
+		const thing = inpStoredValue.value;
+		localStorage.setItem('thing', thing );
+
+	}
+
+	function getStorage() {
+
+		const thing = localStorage.getItem( 'thing' );
+		divContents.innerHTML += thing + b;
+
+	}
+
+
+
 ### STRING
 
 'my string'.startsWith('my'); //true
