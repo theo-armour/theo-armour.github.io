@@ -2,15 +2,19 @@
 
 ## Contacts
 
-* Vring over ibpsa files
+* Bring over ibpsa files
 * Art as the link gatherer
-* Michal
-* David
 * Syracuse Prof Dr Tarek Rakha UK
 * Mostapha
 * Better home page
 * Board of Advisors Dr Andrew Marsh
 * Statement of Intent
+
+
+### Waiting
+
+* David
+* Michal
 
 
 ### 2017-11-30
