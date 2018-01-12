@@ -2,6 +2,35 @@
 
 
 
+## 2018-01-11
+
+Jordan B Peterson
+https://jordanbpeterson.com/
+https://en.wikipedia.org/wiki/Jordan_Peterson
+https://www.understandmyself.com/personality-assessment
+
+https://www.selfauthoring.com/
+https://www.understandmyself.com/faq
+
+
+-= PETERSON'S RULES =-
+1. STOP DOING THE WRONG THINGS
+2. MAKE A SCHEDULE
+3. CLARIFY YOUR THOUGHTS
+4. TAKE THE MEANINGFUL PATH
+5. SPECIFY YOUR GOALS
+6. STOP SAYING THINGS THAT MAKE YOU WEAK
+7. ADOPT THE MODE OF AUTHENTIC BEING
+8. LEARN FROM YOUR ERRORS
+9. HAVE A CONVERSATION WITH YOURSELF
+10. AIM HIGH
+
+-= BONUS =-
+* HAVE A ROUTINE
+* DON'T THINK ABOUT THE PAST
+* ESTABLISH YOURSELF
+
+
 ## 2018-01-03
 
 using mozilla text editor and github API, I have a nice little content management system going

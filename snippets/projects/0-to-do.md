@@ -2,10 +2,14 @@
 btb
 water
 
+http://spectrumwineretail.com/Chateau-d-Yquem-Sauternes-Bordeaux-2013-98-Points.aspx
+Spectrum Wine Auctions Corporate Office
+14201 Chambers Rd
+Tustin, CA, 92780
+United States of America
 
-Drivers License renewal
-* finish reading dmv manual
-* take practice test
+Telephone: (888) 982-1982 or +1 (949) 748-4845
+
 
 ## Reno trip
 
@@ -20,7 +24,7 @@ Drivers License renewal
 
 ## Phone
 
-* kusakabe (415) 757-0155 1-4 pm / http://kusakabe-sf.com/menu/
+
 * Close disused credit cards
 * Dr Fasset appointment
 
@@ -40,7 +44,6 @@ Drivers License renewal
 * umami / msg
 * Sticky notes
 * haircut
-
 * omeprazole
 
 ## Admin
@@ -109,15 +112,22 @@ Amazon pantry
 * Tim Child
 * Lastpass family account
 * Jacqueline, Liz & Myron
-* Drawer units
-* Hearing protectors
 * Dr Martin appointment ~ call in April
 	* Jaundice
 	* hemoglobin
+
+
 ***
 
 
 ## Done
+
+
+2018-01-11
+* kusakabe (415) 757-0155 1-4 pm / http://kusakabe-sf.com/menu/ << our chef Ken
+Drivers License renewal
+* finish reading dmv manual
+* take practice test
 
 2018-01-09
 
