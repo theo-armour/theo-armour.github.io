@@ -8,6 +8,8 @@ https://shop.gopro.com/cameras/fusion/CHDHZ-101.html
 Alix ideas
 
 Children ~ if the right magic happens, you will know and you will have. needs rightperson/right support
+large corporation - zooming up
+have: focus / desire for assembling people / project oriented
 
 btb
 water
@@ -51,6 +53,7 @@ Telephone: (888) 982-1982 or +1 (949) 748-4845
 
 ## Errands
 
+* More keys
 * umami / msg
 * Sticky notes
 * omeprazole
@@ -103,11 +106,14 @@ alix.f.armour@gmail.com
 * Dr Yoga email
 	* Mouth guard
 	* new toothpaste
-* Next UCSF visit: drop off will body papers
+* Next UCSF visit:
+	* Blood test
+	* drop off will body papers
 
 ## To buy
 
 Amazon pantry
+
 * Chamois
 * All bran buds
 * Seaweed
@@ -128,6 +134,17 @@ Amazon pantry
 
 
 ***
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Done
