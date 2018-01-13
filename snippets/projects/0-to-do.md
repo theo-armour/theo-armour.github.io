@@ -1,4 +1,14 @@
 
+
+
+Alix GoPro Fusion
+https://shop.gopro.com/cameras/fusion/CHDHZ-101.html
+* It's all about the software
+
+Alix ideas
+
+Children ~ if the right magic happens, you will know and you will have. needs rightperson/right support
+
 btb
 water
 
@@ -43,7 +53,6 @@ Telephone: (888) 982-1982 or +1 (949) 748-4845
 
 * umami / msg
 * Sticky notes
-* haircut
 * omeprazole
 
 ## Admin
@@ -75,6 +84,7 @@ alix.f.armour@gmail.com
 
 ## Nice
 
+* Meetup: BillB
 * John Willis online
 * Mia Grosjean
 * Michel : Yelp review

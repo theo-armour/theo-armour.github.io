@@ -1,6 +1,13 @@
 
 # Politics
 
+
+## Deep State
+
+* <https://en.wikipedia.org/wiki/Deep_state_in_the_United_States>
+* <https://en.wikipedia.org/wiki/State_within_a_state>
+
+
 ## Writers of interest
 
 ### Caitlin Johnstone
@@ -19,5 +26,19 @@ Jul 11 2017
 * <https://medium.com/@nayafia/keeping-my-mouth-shut-38b7141fe523>
 
 
+### Noam Chomsky
+
+* <https://www.thenation.com/article/noam-chomsky-neoliberalism-destroying-democracy/>
+
+### Jordan B Peterson
+
+https://jordanbpeterson.com/
 
 
+### Mark Zuckerberg
+
+* <https://www.facebook.com/notes/mark-zuckerberg/building-global-community/10154544292806634>
+
+
+### Ben Thompson
+* <https://stratechery.com/2017/manifestos-and-monopolies/>

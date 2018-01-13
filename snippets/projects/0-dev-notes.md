@@ -31,6 +31,29 @@ https://www.understandmyself.com/faq
 * ESTABLISH YOURSELF
 
 
+
+Jordan Peterson LIVE: 12 Rules for Life - An Antidote to Chaos
+https://www.youtube.com/watch?v=GJJClhqGq_M&t=
+
+Jordan Casey
+2 months ago
+1. Stand up straight with you shoulders back. 55:20
+2. Treat yourself like someone you are responsible for helping. 1:09:31
+3. Make friends with people who want the best for you. 1:13:17
+4 Compare yourself to who you were yesterday, not to who someone else is today. 1:17:38
+5. Do not let your children do anything that makes you dislike them. 1:22:48
+6. Set your house in perfect order before you criticize the world. 1:30:46
+7. Pursue what is meaningful, not what is expedient. 1:34:28
+8. Tell the truth, or at least don't lie. 1:43:40
+9.. Assume that the person you're listening to might know something you don't. 1:45:52
+10. Be precise in your speech. 1:48:57
+11. Do not bother children when they are skateboarding. 1:54:30
+12. Pet a cat when you encounter one on the street. 1:59:31﻿
+Show less
+REPLY
+
+
+
 ## 2018-01-03
 
 using mozilla text editor and github API, I have a nice little content management system going
