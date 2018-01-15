@@ -1227,10 +1227,12 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 
 
 
-### Storage
+### Local Storage
 
 		const apiKey = localStorage.getItem( 'apiKey' );
 		inpApiKey.value = apiKey ? apiKey : '' ;
+
+	<p><input id=inpStoredValue onchange=setStorage(); ></p>
 
 	function setStorage() {
 

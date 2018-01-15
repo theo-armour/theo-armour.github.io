@@ -1,27 +1,7 @@
 
-
-
-Alix GoPro Fusion
-https://shop.gopro.com/cameras/fusion/CHDHZ-101.html
-* It's all about the software
-
-Alix ideas
-
-Children ~ if the right magic happens, you will know and you will have. needs rightperson/right support
-large corporation - zooming up
-have: focus / desire for assembling people / project oriented
-
-btb
-water
-
-http://spectrumwineretail.com/Chateau-d-Yquem-Sauternes-Bordeaux-2013-98-Points.aspx
-Spectrum Wine Auctions Corporate Office
-14201 Chambers Rd
-Tustin, CA, 92780
-United States of America
-
-Telephone: (888) 982-1982 or +1 (949) 748-4845
-
+balcony
+camera
+coffee table
 
 ## Reno trip
 
@@ -43,9 +23,9 @@ Telephone: (888) 982-1982 or +1 (949) 748-4845
 
 ## Email
 
-* Chateau d'Yquem
+* JoAnn
 * aceit: share ny times subscription
-* Allison > Bruno
+* Allison > Bruno / * Chateau d'Yquem / /march trip
 * Geri: dinner/ ggta?
 * Gharen and WSD
 * Isabelle: letter to Notaire
@@ -54,9 +34,7 @@ Telephone: (888) 982-1982 or +1 (949) 748-4845
 ## Errands
 
 * More keys
-* umami / msg
 * Sticky notes
-* omeprazole
 
 ## Admin
 
@@ -87,7 +65,7 @@ alix.f.armour@gmail.com
 
 ## Nice
 
-* Meetup: BillB
+* Meetup: BillB / Diana
 * John Willis online
 * Mia Grosjean
 * Michel : Yelp review

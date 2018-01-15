@@ -1,25 +1,29 @@
 
 
-My United number JKD94084
+# Alix
 
-United Confirmation Number JH4PM1
 
-Flight: LH457
+## Scout ideas
 
-Depart:
-15:20
-Sun., Aug. 27, 2017
-Los Angeles, CA, US (LAX)
- 
-Arrive:
-11:20 +1 Day
-Mon., Aug. 28, 2017
-Frankfurt, DE (FRA)
- Travel Time:
-11 hr 0 mn  
-Flight: LH457
+What to do with empty space?
+Photo poster
 
-Operated By Lufthansa
-Aircraft: Airbus A380-800
-Fare Class: Economy (X)
-Meal: None
+
+## GoPro Fusion
+https://shop.gopro.com/cameras/fusion/CHDHZ-101.html
+* It's all about the software
+
+## Life ideas
+
+Children ~ if the right magic happens, you will know and you will have. needs rightperson/right support
+large corporation - zooming up
+have: focus / desire for assembling people / project oriented / excellent multi-channel communications / sens of design
+
+peeps to talk to?  charlotte/arnaud ~ corinne ~ autonomy dude
+peeps look for 35-40 / established success
+the demand: ladies in Tech
+
+
+
+
+## Help plan Cynthia's wedding in France

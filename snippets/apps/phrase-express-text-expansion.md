@@ -13,11 +13,14 @@
 * Works OK on Chromebook with Android
 	* Syncs automatically with Windows
 	* Does not work: Caret, Evernote, Google Docs, DropBox editor
-		* But can copy and paste fairly easily 
+		* But can copy and paste fairly easily
 	* Does work: Gmail, CodeAnywhere, Gists, Google spreadsheet
 
 See also: http://www.keyboard-and-mouse-sharing.com/index.html
 
+### Create shortcut inStartup
+
+C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 ## http://www.pitrinec.com/products/perfect-keyboard
 
