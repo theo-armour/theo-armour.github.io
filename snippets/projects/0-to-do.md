@@ -1,7 +1,8 @@
 
-balcony
-camera
-coffee table
+lastpass
+Alix: prime
+
+
 
 ## Reno trip
 
@@ -38,10 +39,7 @@ coffee table
 
 ## Admin
 
-good
-alixarmour@gmail.com
-bad
-alix.f.armour@gmail.com
+
 
 * Find anti-hoarder
 	* Alice Bravo
@@ -105,7 +103,7 @@ Amazon pantry
 * JoAnn
 * Tim Child
 * Lastpass family account
-* Jacqueline, Liz & Myron
+* Jacqueline /  Liz & Myron
 * Dr Martin appointment ~ call in April
 	* Jaundice
 	* hemoglobin
@@ -126,6 +124,15 @@ Amazon pantry
 
 
 ## Done
+
+
+
+good
+alixarmour@gmail.com
+bad
+
+from: alix.f.armour@gmail.com
+to: alixarmour@gmail.com
 
 
 2018-01-11
