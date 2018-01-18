@@ -12,6 +12,7 @@ https://www.understandmyself.com/personality-assessment
 https://www.selfauthoring.com/
 https://www.understandmyself.com/faq
 
+https://www.quora.com/What-are-the-most-valuable-things-everyone-should-know/answer/Jordan-B-Peterson
 
 -= PETERSON'S RULES =-
 1. STOP DOING THE WRONG THINGS

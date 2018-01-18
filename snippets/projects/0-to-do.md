@@ -1,22 +1,30 @@
 
 lastpass
-Alix: prime
+Alix: prime amazon
+phone protection
+message to Ben
+nintendo labo
+taxes
+nytimes
 
 
 
-## Reno trip
+## Andronik
 
-- [*] car rental
-- [*] spreadsheet
-* [*] info sheet
-	* Add items
-
+Computers
+input ~ processing ~ output
+Stoics
+perception ~ judgment ~ action
+Jordan B Peterson
+what is? ~ what should be? ~ how should we act
+C S Peirce
+Sign ~ Object ~ Interpretant
+represent ~ a quaility/rule ~ ramification/effect
 ## Tidy
 
 *
 
 ## Phone
-
 
 * Close disused credit cards
 * Dr Fasset appointment
@@ -26,7 +34,7 @@ Alix: prime
 
 * JoAnn
 * aceit: share ny times subscription
-* Allison > Bruno / * Chateau d'Yquem / /march trip
+* Allison > Bruno / * Chateau d'Yquem / march trip
 * Geri: dinner/ ggta?
 * Gharen and WSD
 * Isabelle: letter to Notaire
@@ -58,7 +66,7 @@ Alix: prime
 
 ## Homey
 
-* Camera outdoors
+
 
 
 ## Nice
@@ -126,7 +134,7 @@ Amazon pantry
 ## Done
 
 
-
+* Camera outdoors
 good
 alixarmour@gmail.com
 bad
