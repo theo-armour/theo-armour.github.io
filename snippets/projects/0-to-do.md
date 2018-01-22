@@ -1,12 +1,11 @@
 
-lastpass
-Alix: prime amazon
-phone protection
-message to Ben
-nintendo labo
-taxes
-nytimes
+* Succeed study
+	* Erin: test results to MyChart
+	* thoughts on texts
 
+nintendo labo
+taxes /Don Shaw
+Diana
 
 
 ## Andronik
@@ -17,9 +16,13 @@ Stoics
 perception ~ judgment ~ action
 Jordan B Peterson
 what is? ~ what should be? ~ how should we act
-C S Peirce
+C S Pierce
 Sign ~ Object ~ Interpretant
-represent ~ a quaility/rule ~ ramification/effect
+represent ~ a quality/rule ~ ramification/effect
+Semantics
+
+
+
 ## Tidy
 
 *
@@ -27,13 +30,12 @@ represent ~ a quaility/rule ~ ramification/effect
 ## Phone
 
 * Close disused credit cards
-* Dr Fasset appointment
+* Dr Fassett appointment
 
 
 ## Email
 
 * JoAnn
-* aceit: share ny times subscription
 * Allison > Bruno / * Chateau d'Yquem / march trip
 * Geri: dinner/ ggta?
 * Gharen and WSD
@@ -55,9 +57,6 @@ represent ~ a quaility/rule ~ ramification/effect
 	* Window seals fixed
 	* Toilet seat tightened
 * IRA withdrawal papers
-* Succeed study
-	* Erin: test results to MyChart
-	* thoughts on texts
 * Organize Shoebox files
 * Pixelbook de-laminating
 * Pay some money to Navient
@@ -108,7 +107,7 @@ Amazon pantry
 
 ## Waiting
 
-* JoAnn
+
 * Tim Child
 * Lastpass family account
 * Jacqueline /  Liz & Myron

@@ -283,6 +283,7 @@ a.toLocaleString()
 a.unshift([item]) Prepends items to the start of the array.
 
 
+
 ### Splitting to Float
 
 		elevations = data.split( ',' ).map( function( item ) { return parseFloat( item ); } );
@@ -585,8 +586,16 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
 
 
 ## DOMParser
+https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
 
+var parser = new DOMParser();
 
+var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
+
+doc = parser.parseFromString(stringContainingSVGSource, "image/svg+xml");
+
+var parser = new DOMParser();
+doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 
 ## Escape / encodeURI()
@@ -841,6 +850,7 @@ parseInt( string, 10 ) << include the radix
 		}
 
 
+
 ### LOCATION.HASH
 
 		window.addEventListener ( 'hashchange', onHashChange, false );
@@ -869,90 +879,6 @@ parseInt( string, 10 ) << include the radix
 
 	}
 
-// See C:\Users\Theo\Dropbox\Public\git-repos\jaanga.github.io\demo\ms\sun-lat-lon\sun-lat-lon-hash-r2-@.html
-
-
-		var hashes = location.hash.split('#');
-		xTile = ( hashes[1] !== undefined ) ? hashes[1] : xTile;
-		yTile = ( hashes[2] !== undefined ) ? hashes[2] : yTile;
-
-		for ( var i = 0; i < len = hashes.length; i++) {
-
-			parameter = hashes[i].substr( 0, 2 );
-			value = parseFloat( hashes[i].substr( 3 ) );
-
-			if ( parameter === 'px' ) object.position.x = value;
-			if ( parameter === 'py' ) object.position.y = value;
-			if ( parameter === 'pz' ) object.position.z = value;
-
-			if ( parameter === 'rx' ) object.rotation.x = value;
-			if ( parameter === 'ry' ) object.rotation.y = value;
-			if ( parameter === 'rz' ) object.rotation.z = value;
-
-			if ( parameter === 'sx' ) object.scale.x = value;
-			if ( parameter === 'sy' ) object.scale.y = value;
-			if ( parameter === 'sz' ) object.scale.z = value;
-
-			if ( parameter === 'na' ) object.name = parameters[i].substr( 3 );
-
-		}
-
-	};
-
-
-### LOCATION.HASH 2 PERMALINKS
-
-	XX.defaults = {
-		camx: 0,
-		camy: 700,
-		camz: 1600,
-		posx: 0,
-		posy: 0,
-		posz: 0,
-		rotx: 0,
-		roty: 0,
-		rotz: 0,
-		sclx: 1,
-		scly: 1,
-		sclz: 1,
-		tarx: 0,
-		tary: 0,
-		tarz: 0
-	};
-
-	XX.values = {}; // current or runtime updates
-
-	XX.parsePermalink = function () {
-		var item, index;
-		var hashes = location.hash.split('#');
-		for (var i = 1, len = hashes.length; i < len; i++) {
-			item = hashes[i].split('=');
-			index = item[0];
-			if ( uf.defaults[ index ] ){
-				uf.values[ index ] = item;
-			}
-		}
-		uf.camAlt = uf.values.camalt ? parseFloat( uf.values.camalt[1] ) : uf.defaults.camalt;
-		uf.camLat = uf.values.camlat ? parseFloat( uf.values.camlat[1] ) : uf.defaults.camlat;
-		uf.camLon = uf.values.camlon ? parseFloat( uf.values.camlon[1] ) : uf.defaults.camlon;
-		uf.camX = uf.values.camx ? parseFloat( uf.values.camx[1] ) : uf.defaults.camx;
-		uf.camY = uf.values.camy ? parseFloat( uf.values.camy[1] ) : uf.defaults.camy;
-		uf.camZ = uf.values.camz ? parseFloat( uf.values.camz[1] ) : uf.defaults.camz;
-		uf.clearColor = uf.values.clearColor ? parseInt( uf.values.clearColor[1], 10 ) : uf.defaults.clearColor;
-		uf.lat = uf.values.lat ? parseFloat( uf.values.lat[1] ) : uf.defaults.lat;
-		uf.lon = uf.values.lon ? parseFloat( uf.values.lon[1] ) : uf.defaults.lon ;
-		uf.mapType = uf.values.map ? parseInt( uf.values.map[1], 10) : uf.defaults.map;
-		uf.scaleVertical = uf.values.scale ? parseFloat( uf.values.scale[1] ) : uf.defaults.scale ;
-		uf.tilesPerSide = uf.values.tiles ? parseInt( uf.values.tiles[1], 10 ) : uf.defaults.tiles;
-		uf.vertsPerTile = uf.values.verts ? parseInt( uf.values.verts[1], 10) : uf.defaults.verts;
-		uf.tarAlt = uf.values.taralt ? parseFloat( uf.values.taralt[1] ) : uf.defaults.taralt;
-		uf.tarLat = uf.values.tarlat ? parseFloat( uf.values.tarlat[1] ) : uf.defaults.tarlat;
-		uf.tarLon = uf.values.tarlon ? parseFloat( uf.values.tarlon[1] ) : uf.defaults.tarlon;
-		uf.tarX = uf.values.tarx ? parseFloat( uf.values.tarz[1] ) : uf.defaults.tarx;
-		uf.tarY = uf.values.tary ? parseFloat( uf.values.tary[1] ) : uf.defaults.tary;
-		uf.tarZ = uf.values.tarz ? parseFloat( uf.values.tarz[1] ) : uf.defaults.tarz;
-		uf.zoom = uf.values.zoom ? parseInt( uf.values.zoom[1], 10 ) : uf.defaults.zoom;
-	};
 
 
 

@@ -73,7 +73,7 @@ recycle: &#21BB;
 Currency: &pound;  &euro;
 Arrows: &uArr;  &laquo; &raquo;
 Arrows in circle: CCW &#8634; CW &#8635;
-Dingbats &#10070; &#10087; nice: &#x2766;
+Dingbats &#10070; &#10087; ❦ nice: &#x2766;
 ❧ ❦
 Hands: black: L &#x261A; R &#x261B; / White L &#x261C; U &#x261D; R &#x261E; D &#x261F; / V=sign &#x270C;
 
