@@ -1,5 +1,6 @@
 
-Socks
+
+* mint report << done
 
 # Reno trip
 

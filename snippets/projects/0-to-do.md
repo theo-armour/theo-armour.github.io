@@ -1,31 +1,38 @@
 
-* Succeed study
-	* Erin: test results to MyChart
-	* thoughts on texts
 
-nintendo labo
-taxes /Don Shaw
+
+
+taxes / Don Shaw /Christina / Marcia / HR Block
 Diana
+JoshH
+IRS payments checks
 
 
 ## Andronik
 
-Computers
-input ~ processing ~ output
-Stoics
-perception ~ judgment ~ action
-Jordan B Peterson
-what is? ~ what should be? ~ how should we act
-C S Pierce
-Sign ~ Object ~ Interpretant
-represent ~ a quality/rule ~ ramification/effect
-Semantics
+* Brooks article
+* Patrick
+* Peterson book
+
+
+## Health
+
+* Feb 16: Steph?
+* Dr Martin: message
+* Angela Laffen ~ blood test?
+* Message to Dr Kattah re melani coli??
+* Dr Yoga email
+	* Mouth guard
+	* new toothpaste
+* Next UCSF visit:
+	* Blood test
+	* drop off will body papers
 
 
 
 ## Tidy
 
-*
+* paper table
 
 ## Phone
 
@@ -47,8 +54,8 @@ Semantics
 * More keys
 * Sticky notes
 
-## Admin
 
+## Admin
 
 
 * Find anti-hoarder
@@ -70,6 +77,7 @@ Semantics
 
 ## Nice
 
+* Dylan: nintendo labo
 * Meetup: BillB / Diana
 * John Willis online
 * Mia Grosjean
@@ -82,25 +90,12 @@ Semantics
 * Terrance Deacon
 
 
-## Health
-
-* Angela Laffen
-* Message to Dr Kattah re melani coli??
-* Dr Yoga email
-	* Mouth guard
-	* new toothpaste
-* Next UCSF visit:
-	* Blood test
-	* drop off will body papers
-
 ## To buy
 
 Amazon pantry
 
 * Chamois
-* All bran buds
-* Seaweed
-* Broth
+* Eagle Creek bags
 
 ## Writing
 
@@ -120,19 +115,12 @@ Amazon pantry
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Done
 
-
+reno ss
+* Succeed study
+	* Erin: test results to MyChart
+	* thoughts on texts
 * Camera outdoors
 good
 alixarmour@gmail.com

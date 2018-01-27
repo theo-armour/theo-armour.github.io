@@ -1,7 +1,7 @@
 
 # About
 
-<img src=../data/theo-at-68.jpg width=100 style=float:lft; > 
+<img src=https://theo-armour.github.io//data/theo-at-68.jpg width=100 style=float:lft; >
 
 Theo Armour was born in Boston, Massachusetts and grew up in Paris and the United States. Theo lives in San Francisco and has three daughters: <a href="http://nimblescooters.com/about-us/" target="_blank">Alix</a>&nbsp;living in Tustin CA and Paris, <a href="https://bikeeastbay.org/staff" target="_blank">Cynthia</a> in Oakland and <a href="http://disasterbydrought2015.calpoly.edu/contact-us" target="_blank">Eloise</a>&nbsp;in San Luis Obispo. He attended a number of schools including the <a href="http://www.pds.org/" target="_blank">Princeton Day School</a>, <a href="http://sps.edu/" target="_blank">St Paul's School</a>, <a href="http://www.bbns.org/" target="_blank">Buckingham Browne &amp; Nichols</a> and <a href="http://www.syr.edu/" target="_blank">Syracuse University</a>.<br />
 
