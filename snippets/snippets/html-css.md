@@ -119,6 +119,7 @@ dotted solid
 
 
 ### CSS Center with CSS
+
 http://codepen.io/shshaw/full/gEiDt
 .Absolute-Center {
   width: 50%;
@@ -188,9 +189,23 @@ outline: none;
 
 
 div {
-    resize: both;
-    overflow: auto;
+	resize: both;
+	overflow: auto;
 }
+
+
+### Flexbox
+
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* https://www.w3schools.com/css/css3_flexbox.asp
+* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+* https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34
+
+	.container { display: flex; }
+
+	.container > div { border: 1px solid red; margin: 5px; padding: 10px; }
+
+
 
 
 ### FORM
@@ -217,6 +232,7 @@ if ( check.checked ) { doIt(); }
 
 		<input title="Set the " style="width: 200px;" type="range" min="0" max="500" onchange="" step="50" value="300" >
 		<input type=number id=inpNum style=width:50px; min=0.01 max=1.0 step=0.05 value=0.5 />
+
 
 
 ### FORM Type=Range

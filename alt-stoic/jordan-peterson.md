@@ -46,7 +46,11 @@ Jordan Casey
 10. Be precise in your speech. 1:48:57
 11. Do not bother children when they are skateboarding. 1:54:30
 12. Pet a cat when you encounter one on the street. 1:59:31﻿
-Show less
-REPLY
 
 
+## Links of Interest
+
+* <https://www.nytimes.com/2018/01/25/opinion/jordan-peterson-moment.html>
+	* <https://www.nytimes.com/2018/01/25/opinion/jordan-peterson-moment.html#permid=25714164>
+		* Young men would be better served if a psychologist, or preferably their parent(s) as well as elementary and high school teachers, instilled the concepts of reason, logic, and free will.
+		* And, finally, they need to learn that sometimes the needs of the many outweigh the needs of the few,

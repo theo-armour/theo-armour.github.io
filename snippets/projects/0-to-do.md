@@ -1,25 +1,21 @@
 
 
+https://www.kayak.com/flights/SFO-SBA/2018-03-08-flexible/2018-03-13-flexible?fs=flexdepart=20180308;stops=0;flexreturn=20180313;quality=-wifi&sort=bestflight_a
 
-
-taxes / Don Shaw /Christina / Marcia / HR Block
 Diana
+
+taxes / Don Shaw / Marcia / HR Block
 JoshH
 IRS payments checks
+new checks
+* IRA withdrawal papers
 
-
-## Andronik
-
-* Brooks article
-* Patrick
-* Peterson book
+/Cristina
 
 
 ## Health
 
 * Feb 16: Steph?
-* Dr Martin: message
-* Angela Laffen ~ blood test?
 * Message to Dr Kattah re melani coli??
 * Dr Yoga email
 	* Mouth guard
@@ -28,6 +24,18 @@ IRS payments checks
 	* Blood test
 	* drop off will body papers
 
+## Books
+Links to two or three books that provide up to date good diet guidelines.
+
+I liked Willets' 'Eat Drink and be Healthy' and Weil's ''. I assume there are books of equal readability based on more recent studies.
+
+## Bloggers and Sites
+
+Access to current stories and articles on recent research
+
+## Forums
+
+Web sites where you can ask questions about diet and receive replies
 
 
 ## Tidy
@@ -44,26 +52,25 @@ IRS payments checks
 
 * JoAnn
 * Allison > Bruno / * Chateau d'Yquem / march trip
-* Geri: dinner/ ggta?
 * Gharen and WSD
 * Isabelle: letter to Notaire
 
 
 ## Errands
 
+* Pepcid
+* Ibuprufen
 * More keys
 * Sticky notes
 
 
 ## Admin
 
-
 * Find anti-hoarder
 	* Alice Bravo
 * Gateway site
 	* Window seals fixed
 	* Toilet seat tightened
-* IRA withdrawal papers
 * Organize Shoebox files
 * Pixelbook de-laminating
 * Pay some money to Navient
@@ -102,7 +109,9 @@ Amazon pantry
 
 ## Waiting
 
-
+* Geri: dinner/ ggta?
+* Dr Martin: message
+* Angela Laffen ~ blood test?
 * Tim Child
 * Lastpass family account
 * Jacqueline /  Liz & Myron
@@ -116,6 +125,13 @@ Amazon pantry
 
 
 ## Done
+
+
+## Andronik
+
+* Brooks article
+* Patrick
+* Peterson book
 
 reno ss
 * Succeed study
