@@ -1,9 +1,11 @@
 
 # Action
 
-## [What to Say When You Meet the Angel of Death at a Party]( https://www.nytimes.com/2018/01/26/opinion/sunday/cancer-what-to-say.html )
+## A Close Readings of '[What to Say When You Meet the Angel of Death at a Party]( https://www.nytimes.com/2018/01/26/opinion/sunday/cancer-what-to-say.html )'
 
-By Kate Bowler / JAN. 26, 2018
+The following is a [close reading]( https://en.wikipedia.org/wiki/Close_reading ) of the above article written by Kate Bowler that appeared in the New York Times on January 26, 2018.
+
+Here are some of the highlights of the article:
 
 * It feels impossible to transmit the kernel of truth. I am not dying. I am not terminal. I am keeping vigil in the place of almost death. I stand in the in-between where everyone must pass, but so few can remain.
 * Most people I talk with succumb immediately to a swift death by free association. I remind them of something horrible and suddenly they are using words like “pustules” at my child’s fourth-birthday party. They might be reminded of an aunt, a neighbor or a cousin’s friend. No matter how distant the connection, all the excruciating particularities of this person’s misfortune will be excavated.
@@ -20,6 +22,15 @@ By Kate Bowler / JAN. 26, 2018
 
 ### Comments
 
+The first thing I want to do is acknowledge Kate Bowler, her existence, her possible untimely demise and her sharing of pertinent, useful and kindly observations. Hello Kate.
+
+Kate may be about to die. This, however,  does not stop toothaches, sprained ankles and having to do the laundry. That she has set aside the time to write an article good enough not only to be in the New York Times but also to be one of the most popular articles is a good indication of the force and veracity of her thoughts and feelings.
+
+Kate: I will do my best to come to terms with your being and listen to your thoughts.
+
+## 'succumb immediately to a swift death by free association'
+
+This may be the most pertinent sentence of the article: 'Most people I talk with succumb immediately to a swift death by free association.' Somebody says they have a toothache and so every gets to talk about a toothache they had.
 
 I understand what Kate means when she says 'free association', but I can only find a [psychoanalytic definition]( https://en.wikipedia.org/wiki/Free_association_(psychology) ).
 
@@ -29,9 +40,10 @@ The typical thing is that somebody ask if your well and you reply that you are e
 
 There are 577 comments to the article. Interestingly, the majority refer to a death or prognosis of death relating to the person writing the comment. In other words Kate is absolutely correct when she says: Most people I talk with succumb immediately to a swift death by free association.
 
-The three categories of brutish behavior tht Kate describes are sublime. I feel quite certain that I have been able to create dialogs containing all three sophisms(?) in just a few sentences. I could probably talk at length about them, but the better things to discuss are what are the things one might say or do that might be constructive.
+## three categories: minimizers, teachers and solvers.
 
-***
+The three categories of brutish behavior that Kate describes are sublime. I feel quite certain that I have been able to create dialogs containing all three sophisms(?) in just a few sentences. I could probably talk at length about them, but the better things to discuss are what are the things one might say or do that might be constructive.
+
 
 If you see or sense that somebody has an issue or a disability then ask about it or try and say something inoffensively amusing. Children do this almost automatically. Adults should do this more often. I walk with a cane. If I see somebody else with a cane then I might say: 'wanna race?'
 

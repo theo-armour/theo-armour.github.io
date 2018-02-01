@@ -102,9 +102,9 @@ just use 'this' wherever possible
 // https://crossorigin.me/
 // https://cors-anywhere.herokuapp.com/
 
-		let urlCORS, url;
+		let url;
 
-		urlCORS = 'https://cors-anywhere.herokuapp.com/';
+		const urlCORS = 'https://cors-anywhere.herokuapp.com/';
 
 		requestFile( url );
 
