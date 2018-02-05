@@ -1,5 +1,5 @@
 
-# bricoleur-and-engineer
+# _Bricoleur_ and Engineer
 
 ## The Stimulus: 'In Praise of Theory in Design Research: How Levi-Strauss Redefined Workflow'
 
@@ -20,13 +20,13 @@ Good question.
 
 I am trying to ascertain the benefits of have a system of comparisons in things such as [critical thinking]( https://en.wikipedia.org/wiki/Critical_thinking ). Where do [ontologies]( https://en.wikipedia.org/wiki/Ontology ) fit into writing a good paper? How can a system of classification or [categorization]( https://en.wikipedia.org/wiki/Categorization ) help you win an argument? But I am not having much luck.
 
-In any case, I like being able to put things in camps, groups, baskets or whatever and this article on classifying peeps working on a project as engineers or _bricoleurs_ resonates. I felt the engineer as an architect talking to clients, as a program manager at Autodesk talking to clients. On the other hand I felt the _bricoleur_ role more than once as a hospital patient or as a parent.
+In any case, I like being able to put things in camps, groups, baskets or whatever and this article on classifying peeps working on a project as engineers or _bricoleurs_ resonates. I felt the engineer as an architect talking to clients, as a program manager at Autodesk talking to end-users. On the other hand I felt the _bricoleur_ role more than once as a hospital patient or as a parent.
 
 
 ### Engineers
 * Doctors are the engineers
 * Priests and clerics are the engineer
-* Lawysers are the engineers
+* Lawyers are the engineers
 * Judges are the engineers
 * Teachers are the engineers
 * School principals are the engineers

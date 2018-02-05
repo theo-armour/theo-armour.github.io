@@ -7,28 +7,26 @@
 * Bicycles
 
 
-levi-strauss brocileur email
-dry erase
-
-Kalman = web site
 
 AV key ybd1
 
 https://www.kayak.com/flights/SFO-SBA/2018-03-08-flexible/2018-03-13-flexible?fs=flexdepart=20180308;stops=0;flexreturn=20180313;quality=-wifi&sort=bestflight_a
 
-Diana
 
 taxes / Don Shaw / Marcia / HR Block
 JoshH
 IRS payments checks
 new checks
-* IRA withdrawal papers
+
+* IRA withdrawal papers - downloaded
 
 /Cristina
 reno lady
 
 ## Health
 
+* Phone Angela Laffen re blood tests
+* good diet sites
 * Feb 16: Steph?
 * Message to Dr Kattah re melani coli??
 * Dr Yoga email
@@ -105,7 +103,6 @@ Web sites where you can ask questions about diet and receive replies
 * Michel : Yelp review
 * Lorenzo Apicella
 * Peeps upstairs < draft the note
-* WSD What's up?
 * Englehardts
 * Where do all the crows go in the evening?
 * Terrance Deacon
@@ -123,6 +120,7 @@ Amazon pantry
 
 ## Waiting
 
+* Diana Thursday
 * Geri: dinner/ ggta?
 * Dr Martin: message
 * Angela Laffen ~ blood test?
@@ -140,6 +138,9 @@ Amazon pantry
 
 ## Done
 
+
+2018-02-04 ~
+Kalman = web site
 
 ## Andronik
 
