@@ -30,26 +30,40 @@ Kate: I will do my best to come to terms with your being and listen to your thou
 
 ## 'succumb immediately to a swift death by free association'
 
-This may be the most pertinent sentence of the article: 'Most people I talk with succumb immediately to a swift death by free association.' Somebody says they have a toothache and so every gets to talk about a toothache they had.
-
-I understand what Kate means when she says 'free association', but I can only find a [psychoanalytic definition]( https://en.wikipedia.org/wiki/Free_association_(psychology) ).
+This may be the most pertinent sentence of the article: 'Most people I talk with succumb immediately to a swift death by free association.' I understand what Kate means when she calls this 'free association', but I can only find a [psychoanalytic definition]( https://en.wikipedia.org/wiki/Free_association_(psychology) ).
 
 What people say is a sort of a _[non-sequitur]( https://en.wikipedia.org/wiki/Non_sequitur_(literary_device) )_ - which is something said that, because of its apparent lack of meaning relative to what preceded it seems absurd to the point of being humorous or confusing.
 
-The typical thing is that somebody ask if your well and you reply that you are experiencing a toothache and they proceed to tell you about the toothache they had last year. I find this shift in conversation to be very a very common occurrence. I certainly have fallen into this deviation more than once. Unfortunately, for large numbers of people this type of reactive discussion is the primary type of discussion. Unfortunately, there's usually no Sigmund Freud person listening in and will to make sense of it all.
+For example, somebody says they have a toothache and so everybody gets to talk about a toothache they have had while the crrent sufferer grits their aching teeth.
 
-There are 577 comments to the article. Interestingly, the majority refer to a death or prognosis of death relating to the person writing the comment. In other words Kate is absolutely correct when she says: Most people I talk with succumb immediately to a swift death by free association.
+The typical thing is that somebody asks if your well and you reply that you are experiencing a toothache and they proceed to tell you about the toothache they had last year. I find this shift in conversation to be very common occurrence. I certainly have fallen into this deviation more than once. Unfortunately, for large numbers of people this type of reactive discussion is the primary type of discussion. Unfortunately, there's usually no Sigmund Freud person listening in who can make sense of it all.
+
+There are 577 comments to the article. Interestingly, the majority of the comments contain the 'free associations'. Many refer to a death or prognosis of death relating to the person writing the comment. In other words Kate is absolutely correct when she says: Most people I talk with succumb immediately to a swift death by free association.
+
+Some of the comments are of the sort that indicate 'I have endured something like what I believe you are enduring. And I just want you to know that I understand how hard and difficult such things can be. Most of the comments seem to lead into one if the three categories described by Kate.
 
 ## three categories: minimizers, teachers and solvers.
 
 The three categories of brutish behavior that Kate describes are sublime. I feel quite certain that I have been able to create dialogs containing all three sophisms(?) in just a few sentences. I could probably talk at length about them, but the better things to discuss are what are the things one might say or do that might be constructive.
 
+## What to do
 
-If you see or sense that somebody has an issue or a disability then ask about it or try and say something inoffensively amusing. Children do this almost automatically. Adults should do this more often. I walk with a cane. If I see somebody else with a cane then I might say: 'wanna race?'
+If you see or sense that somebody has an issue or a disability then ask about it or try and say something inoffensively amusing. Children do this almost automatically. Adults should do this more often. I walk with a cane. If I see somebody else with a cane then I might say: 'wanna race?'.
+
+Acknowledge the person and the issue. If you do nothing else just nod your head to indicate you have an understanding about what they are or have gone through.
 
 Determine if saying that you are sorry about the situation is appropriate. If the issue is current or in the process of happening then yes. If the incident that caused the misfortune happened, say, decades ago, then words of grief and grimaces of horror are mawkish.
 
 In either case, it may be more effective to let the person know that they appear to be handling the situation commendably.
+
+You seem to be handling the issue well
+Steer the course. Stay in charge of your destiny.
+
+* https://www.rd.com/health/conditions/what-to-say-to-someone-who-is-sick-and-what-not-to-say/
+* https://psychcentral.com/blog/10-things-to-say-to-a-sick-friend/
+* http://www.nytimes.com/2011/06/12/fashion/what-to-say-to-someone-whos-sick-this-life.html
+* https://www.theguardian.com/lifeandstyle/2012/apr/18/10-things-not-say-when-ill
+* https://www.wikihow.com/Be-an-Encouragement-to-Someone-Who-Is-Sick-or-Ill
 
 Touch the person. Open the door for them. Offer to carry a bag. Do something for them. Act.
 

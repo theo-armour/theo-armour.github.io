@@ -1289,3 +1289,10 @@ http://stackoverflow.com/questions/3030859/detecting-the-onload-event-of-a-windo
 		document.location.origin
 
 		window.scrollTo( 0, 0 );
+
+
+## XML handling
+
+https://developer.mozilla.org/en-US/docs/XML_introduction
+https://www.w3schools.com/xml/default.asp
+https://en.wikipedia.org/wiki/XML

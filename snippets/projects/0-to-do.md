@@ -1,5 +1,18 @@
 
-Kalman
+## back behind me
+
+* 3 breaths, vertical stretch, hundreds. figure 8 knees
+* 3 breaths, vertical stretch, coccyx curls, legs side to side
+* Leg circles
+* Bicycles
+
+
+levi-strauss brocileur email
+dry erase
+
+Kalman = web site
+
+AV key ybd1
 
 https://www.kayak.com/flights/SFO-SBA/2018-03-08-flexible/2018-03-13-flexible?fs=flexdepart=20180308;stops=0;flexreturn=20180313;quality=-wifi&sort=bestflight_a
 
@@ -12,7 +25,7 @@ new checks
 * IRA withdrawal papers
 
 /Cristina
-
+reno lady
 
 ## Health
 
@@ -59,8 +72,8 @@ Web sites where you can ask questions about diet and receive replies
 
 ## Errands
 
-* Pepcid
-* Ibuprufen
+* toothpicks
+* milk
 * More keys
 * Sticky notes
 
