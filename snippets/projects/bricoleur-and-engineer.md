@@ -31,7 +31,10 @@ In any case, I like being able to put things in camps, groups, baskets or whatev
 * Teachers are the engineers
 * School principals are the engineers
 * Planners and policy makers are the engineers
-	* Planned, researched, methodical, sane, the ant, death
+
+#### Attributes
+
+* Planned, researched, methodical, sane, the ant, conscious of past and future, death
 
 ### _Bricoleurs_
 * Patients are the _bricoleurs_
@@ -41,7 +44,10 @@ In any case, I like being able to put things in camps, groups, baskets or whatev
 * Students are the _bricoleurs_
 * Teachers are the _bricoleurs_
 * Residents are the _bricoleurs_
-	* Ad hoc, random, crazy in a nice way, the grasshopper, living in the moment, conscious of past and future, life
+
+#### Attributes
+
+* Ad hoc, random, crazy in a nice way, the grasshopper, living in the moment, life
 
 ### Which is which sex?
 
@@ -73,7 +79,7 @@ The nice thing about baskets is that one day you can put things in one basket an
 
 ### Where do we go from here?
 
-The is idea that two groups of people can look right past each other.Each group viewing the matter at hand in a very different manner.
+The is idea that two groups of people can look right past each other. Each group viewing the matter at hand in a very different manner.
 
 The nice thing about the Selman/Petrie article is that it suggests that engineers may observe a situation, come to terms with the situation and then present findings or solutions acceptable to the _bricoleurs_. Win-win.
 
