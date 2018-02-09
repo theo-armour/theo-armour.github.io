@@ -1,32 +1,61 @@
 
 ## back behind me
 
-* 3 breaths, vertical stretch, hundreds. figure 8 knees
-* 3 breaths, vertical stretch, coccyx curls, legs side to side
-* Leg circles
-* Bicycles
 
+* 3 breaths, vertical stretch, coccyx curls. figure 8 knees
+* Hundreds
+* Fives bicycle
+* Legs side to side
+* Leg circles
+* Bicycle ride 1min
+* 10 stoops + lunging around apt
+* Child's pose
+* Plank
 
 
 AV key ybd1
 
-https://www.kayak.com/flights/SFO-SBA/2018-03-08-flexible/2018-03-13-flexible?fs=flexdepart=20180308;stops=0;flexreturn=20180313;quality=-wifi&sort=bestflight_a
+### taxes / Don Shaw / Marcia / HR Block / Cristina
 
-
-taxes / Don Shaw / Marcia / HR Block
-JoshH
 IRS payments checks
-new checks
 
-* IRA withdrawal papers - downloaded
+### jaanga.com
 
-/Cristina
-reno lady
+https://admin.google.com/jaanga.com/VerifyAdminAccountPasswordReset
+
+http://google36a08745d0697c7a.jaanga.com
+
+### 828-0000.com
+
+https://admin.google.com/828-0000.com/AdminHome
 
 ## Health
 
-* Phone Angela Laffen re blood tests
-* good diet sites
+* Dr Martin
+	* best mneumonic
+	* names of conditions
+	* Aspirin ibu or aleive?
+	* Rotate meds
+	* Exercises
+	* Ongoing hip issues
+
+Dr Martin
+
+You will likely have me as a patient today and I look forward to the consultation.
+
+The primary reasons for my joy is that the primary reasons for the visit seem to have eviscerated themselves.
+
+My various back and leg pains are very much diminished - this happened overnight - and adult daily life ( ADL ) is returning for sure. Nonetheless perfection is not perfect or whatever and we must deal with the cards that were dealt. So I hav a number of issues where considered advice would be helpful and - fingers crossed - as helpful as yor past advice.
+
+1. What are some of the canonical descriptions of the symptoms I have had?
+2. What is a good mneumonic for pain assessment? OPQRST? SOCRATES?
+	* Why isn't there a template for this on MyCart?
+
+
+
+
+* Dry needling / https://en.wikipedia.org/wiki/Dry_needling
+* Phone Angela Laffan re blood tests
 * Feb 16: Steph?
 * Message to Dr Kattah re melani coli??
 * Dr Yoga email
@@ -71,7 +100,6 @@ Web sites where you can ask questions about diet and receive replies
 ## Errands
 
 * toothpicks
-* milk
 * More keys
 * Sticky notes
 
@@ -114,15 +142,14 @@ Amazon pantry
 
 * Chamois
 * Eagle Creek bags
-
+* Foie gras
 ## Writing
 
 
 ## Waiting
 
-* Diana Thursday
+* new checks
 * Geri: dinner/ ggta?
-* Dr Martin: message
 * Angela Laffen ~ blood test?
 * Tim Child
 * Lastpass family account
@@ -138,6 +165,12 @@ Amazon pantry
 
 ## Done
 
+* find Elaine's sheet
+2018-02-05
+JoshH
+* IRA withdrawal papers - downloaded
+
+reno lady
 
 2018-02-04 ~
 Kalman = web site
