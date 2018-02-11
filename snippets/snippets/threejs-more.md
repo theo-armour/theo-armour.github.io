@@ -26,7 +26,7 @@ Click 'Show fps statistics' to see how many frames per second your computer is g
 
 
 
-// ### GEOMETRY / PlaneBufferGeometry
+### GEOMETRY / PlaneBufferGeometry
 
 
 PlaneGeometry(width, height, widthSegments, heightSegments)
@@ -242,7 +242,7 @@ starts at top / left and goes right and down
 	}
 
 
-// ### GEOMETRY / Multiple
+### GEOMETRY / Multiple
 
 	var geometries = [
 
@@ -561,10 +561,10 @@ see jaanga.github.io/cookbook-threejs/examples/animation/camera-actions-select
 
 		for ( var i = 0; i < 2 * segments * Math.PI + 1; i++ ) {
 
-			vertices.push( v( 
-				Math.sin( i * 7 / segments ) * 30, 
-				Math.cos( i * 3 / segments  ) * 30, 
-				Math.sin( i * 2 / segments  ) * 30 ) 
+			vertices.push( v(
+				Math.sin( i * 7 / segments ) * 30,
+				Math.cos( i * 3 / segments  ) * 30,
+				Math.sin( i * 2 / segments  ) * 30 )
 			);
 
 		}

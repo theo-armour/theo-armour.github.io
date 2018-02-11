@@ -21,6 +21,8 @@ IRS payments checks
 
 ### jaanga.com
 
+https://admin.google.com/jaanga.com/
+
 https://admin.google.com/jaanga.com/VerifyAdminAccountPasswordReset
 
 http://google36a08745d0697c7a.jaanga.com
@@ -28,6 +30,8 @@ http://google36a08745d0697c7a.jaanga.com
 ### 828-0000.com
 
 https://admin.google.com/828-0000.com/AdminHome
+
+
 
 ## Health
 
@@ -52,17 +56,13 @@ My various back and leg pains are very much diminished - this happened overnight
 	* Why isn't there a template for this on MyCart?
 
 
-
-
 * Dry needling / https://en.wikipedia.org/wiki/Dry_needling
-* Phone Angela Laffan re blood tests
 * Feb 16: Steph?
 * Message to Dr Kattah re melani coli??
 * Dr Yoga email
 	* Mouth guard
 	* new toothpaste
 * Next UCSF visit:
-	* Blood test
 	* drop off will body papers
 
 ## Books
