@@ -43,27 +43,23 @@ https://admin.google.com/828-0000.com/AdminHome
 	* Exercises
 	* Ongoing hip issues
 
-Dr Martin
-
-You will likely have me as a patient today and I look forward to the consultation.
-
-The primary reasons for my joy is that the primary reasons for the visit seem to have eviscerated themselves.
-
-My various back and leg pains are very much diminished - this happened overnight - and adult daily life ( ADL ) is returning for sure. Nonetheless perfection is not perfect or whatever and we must deal with the cards that were dealt. So I hav a number of issues where considered advice would be helpful and - fingers crossed - as helpful as yor past advice.
-
-1. What are some of the canonical descriptions of the symptoms I have had?
-2. What is a good mneumonic for pain assessment? OPQRST? SOCRATES?
-	* Why isn't there a template for this on MyCart?
-
-
-* Dry needling / https://en.wikipedia.org/wiki/Dry_needling
-* Feb 16: Steph?
-* Message to Dr Kattah re melani coli??
-* Dr Yoga email
+* 4:00pm Feb 15: Stephanie
 	* Mouth guard
 	* new toothpaste
 * Next UCSF visit:
 	* drop off will body papers
+
+
+### Upper Endoscopy Instructions
+
+1600 Divisadero St., 1st floor, Room B123, Endoscopy unit
+
+February 22 - ARRIVAL TIME 7:00 AM
+5 days before your procedure: Fen 17 - STOP tablets containing Iron
+
+* Transport?
+* Un-sedated?
+* Message to Dr Kattah re melani coli??
 
 ## Books
 Links to two or three books that provide up to date good diet guidelines.
@@ -92,14 +88,12 @@ Web sites where you can ask questions about diet and receive replies
 ## Email
 
 * JoAnn
-* Allison > Bruno / * Chateau d'Yquem / march trip
 * Gharen and WSD
 * Isabelle: letter to Notaire
 
 
 ## Errands
 
-* toothpicks
 * More keys
 * Sticky notes
 
@@ -143,6 +137,9 @@ Amazon pantry
 * Chamois
 * Eagle Creek bags
 * Foie gras
+
+
+
 ## Writing
 
 
