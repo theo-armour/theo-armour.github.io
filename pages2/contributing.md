@@ -61,18 +61,45 @@ Setting your membership to public helps new users see that they are joining a te
 ***
 
 Now that you are set up as a user and a member, let us explore the ways you may contribute to this project... [TBD]
- 
 
 
 
+## Bug Reporting
+
+#### Before reporting a bug
+
+1. Search issue tracker for similar issues.
+2. Try the latest version of the script
+
+#### How to report a bug
+
+1. Specify the script name and revision number of the script where the bug occurred.
+2. Specify your browser version, operating system, and graphics card. (for example, Chrome 23.0.1271.95, Windows 7, Nvidia Quadro 2000M)
+3. Describe the problem in detail. Explain how to reproduce the error. Explain what happened, and what you expected would happen.
+4. Provide a small test-case (http://jsfiddle.net). If a test-case is not possible, provide a link to a live version of your application.
+5. If helpful, include a screenshot. Annotate the screenshot for clarity.
 
 
+## Code Style Guide
+
+All code and examples in Ladybug Tools / Spider are written using Mr.doob's Code Style. Of course you are free to use whatever style you prefer for your own work, but if you are adding code to the library or examples then you must follow this guide.
+
+You can find details here: [Mr.doob's Code Style™]( https://github.com/mrdoob/three.js/wiki/Mr.doob%27s-Code-Style%E2%84%A2)
+You can find examples here: [three.js / examples]( https://threejs.org/examples/ )
+
+General guidelines include:
+
+* Where possible and not unreasonable: all HTML, CSS and JavaScript in a single file
+* Preserve white space, let the code look and feel as if it is a poem on a sheet of paper
+	* Allow the code to be read aloud
+* Write code that is easy for beginners and non-programmers or read
+	* Avoid the use of symbols
+	* Do use words
 
 
+***
 
-
-
-
+# <center title="hello!" ><a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > &#x1f578; </a></center>
 
 
 

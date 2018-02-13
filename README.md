@@ -1,17 +1,25 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/#README.md "View file as a web page." ) </span>
 
 
-[read me]( #README.md )
-====
-<!--
-<iframe class=iframeReadMe src=threejs-basic.html width=100% height=600px onload=this.contentWindow.controls.enableZoom=false; ></iframe>
-## Full Screen: []( .html )
--->
+# [Theo Armour]( #README.md )
+
+
+<div class=divMenuBar >
+
+	<a href = "#README.md">Read Me</a>
+	<a href = "#plugin/view-github-issues.html">News</a>
+	<a href = "#view-github-events.html">Recent Events</a>
+	<a href = "#view-github-repos.html">Active Repos</a>
+	<a href = "#view-rss.html">RSS</a>
+	<a href = "#page/contact.md">Contact</a>
+	<a href = "#page/about.md">About</a>
+
+</div>
 
 
 ## concept
 
-This is the seventh significant update to the theo-armour.github.io. It the fastest, most quickly built to date - taking less than a day to build.
+This is the eigth significant update to the theo-armour.github.io. It the fastest, most quickly built to date - taking less than a day to build.
 
 
 ## mission
@@ -19,7 +27,7 @@ This is the seventh significant update to the theo-armour.github.io. It the fast
 
 Thinking out loud as I put the package together:
 
-* I am a README file. Read me files are the documentation - and the marketing - for huge portions of modern technology. You can know more about me more quickly just by reading my read me files, They are an active and on-going journal of most of my activities. 
+* I am a README file. Read me files are the documentation - and the marketing - for huge portions of modern technology. You can know more about me more quickly just by reading my read me files, They are an active and on-going journal of most of my activities.
 
 * Eat your own dog food. If you call yourself a coder, then you should have a web site and code it yourself. If that's too difficult or would take too long then you can't really call yourself an effective coder, can you?
 
@@ -31,14 +39,14 @@ Thinking out loud as I put the package together:
 
 * Starting again from scratch today is a lot more fun than trying to figure out what you wrote yesterday.
 
-* Snippets of code. I would be lost without my snippets. 
+* Snippets of code. I would be lost without my snippets.
 
 * Easy Peasy Pleasy. Writing code for beginners is a good thing. If you can explain it to student, then why go further?
 
 * Self-garbage collecting. When we talk about about cleaning up the memery on a computer, we call it 'garbage collection'. We humans need to do it too. We need to erase all the established practices, well-known 'gotchas' ans rules-of-thumb. Contemporary computing is moving so fast that every thing we do from habit can and should be questioned. Those who code from history are doomed.
 
-* Just-in-time-Learning 
- 
+* Just-in-time-Learning
+
 
 ## links of interest
 

@@ -6,10 +6,10 @@
 <meta name = "description" content = "This script allows you to list, open view all the files in all the Theo Armour folders" >
 <meta name = "keywords" content = "JavaScript,Markdown,GitHub,FOSS,3D,STEM" >
 <meta name = "date" content = "2018-02-11" >
-<title>Theo Armour pushme-pullyou</title>
+<title>Theo Armour</title>
 
 <style>
-/* Copyright 2018 Ladybug Tools authors. MIT License */
+/* Copyright 2018 Theo Armour authors. MIT License */
 
 /* https://www.w3schools.com/colors/colors_names.asp // use colors and borders to help identify the scope of particular elements */
 
@@ -32,6 +32,10 @@
 
 	td { vertical-align: top; }
 
+	.divMenuBar{ background-color: #000; }
+	.divMenuBar a{ color: #f00; margin: 5px; }
+	.divMenuBar a { display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none; }
+
 	#divContainer { height: 100%; margin: 0 0 0 var( --mnu-width ); transition: margin-left .5s; position: relative; }
 	#divContents { height: 100%; left: 0; margin: 0 auto; right: 0;}
 
@@ -49,13 +53,13 @@
 
 	<div id = "divMenu" >
 
+		<!--
 		<p>
-<!--
 			<a href="http://www.ladybug.tools/" target="_top" >Ladybug Tools</a> &raquo;
 			<a href="http://www.ladybug.tools/spider/" target="_top" >&#x1f578;</a> &raquo;
 			<a href="../index.html" target="_"top style=font-size:24px; >&#x2302;</a> &raquo;
--->
 		</p>
+		-->
 
 		<h2>
 			<a id="urlInfo" target="_top" >info</a>
@@ -80,11 +84,11 @@
 
 		<div id= "divFooter" >
 
-			<div title='many thanks!' ><a href=#pages/credits.md >Credits</a></div>
-			<div><a href=#pages/code-of-conduct.md >Code of Conduct</a></div>
-			<div><a href=#pages/contributing.md >Contributing</a></div>
-			<div><a href=#pages/license.md >License</a></div>
-			<div><a href=#pages/markdown-help.md >Markdown Help</a></div>
+			<div title='many thanks!' ><a href=#pages2/credits.md >Credits</a></div>
+			<div><a href=#pages2/code-of-conduct.md >Code of Conduct</a></div>
+			<div><a href=#pages2/contributing.md >Contributing</a></div>
+			<div><a href=#pages2/license.md >License</a></div>
+			<div><a href=#pages2/markdown-help.md >Markdown Help</a></div>
 			<div><a href="javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()" title="Mr.doob's Stats.js appear in top left corner" >Show frames/second statistics</a></div>
 			<div><a href="https://api.github.com/rate_limit" target="_blank" title="Occasionaly this script breaks if you go over the GitHub API rate limit" >github rate limits</a></div>
 
@@ -126,8 +130,8 @@
 
 	function init() {
 
-		urlGitHubPage = location.pathname.includes( user + '/' + user + '.github.io' ) ? '' : 'https://rawgit.com/' + user + repo + branch;
-//console.log( 'urlGitHubPage', urlGitHubPage );
+		urlGitHubPage = location.pathname.includes( '/' + user + '.github.io' ) ? '' : 'https://rawgit.com/' + user + repo + branch;
+		//console.log( 'urlGitHubPage', urlGitHubPage );
 
 		urlInfo.href = urlGitHubSource;
 		urlInfo.innerHTML = iconInfo;
@@ -143,7 +147,7 @@
 	function onHashChange() {
 
 		let url, ulc, pathCurrent;
-
+		/*
 		if ( !location.hash ) {
 
 			url = urlGitHubPage + uriDefaultFile;
@@ -151,19 +155,18 @@
 			pathCurrent = '';
 
 		} else {
+		*/
 
 			url = location.hash.slice( 1 );
 			ulc = url.toLowerCase();
-//console.log( 'url', url );
+			//console.log( 'url', url );
 
 			const crumbs = url.slice( urlGitHubPage.length );
 			pathCurrent = crumbs.lastIndexOf( '/' ) > 0 ? crumbs.slice( 0, crumbs.lastIndexOf( '/' ) ) : '';
 
 //console.log( 'pathCurrent',  pathCurrent );
 
-		}
-
-
+//		}
 
 		getFolderContents( pathCurrent );
 
@@ -242,7 +245,7 @@
 
 		if ( items.message ) { alert( items.message ); return; }
 
-		const ignoreFolders = [ 'data' ]; //, 'plugins'
+		const ignoreFolders = [ 'aceit', 'db-boilerplate','data', 'js', 'menu' ]; //, 'plugins'
 
 		for ( let item of items ) {
 
@@ -262,7 +265,7 @@
 
 		}
 
-		const ignoreFiles = [ '.gitattributes', '.gitignore', '404.html' ];
+		const ignoreFiles = [ '.gitattributes', '.gitignore', '.nojekyll',  ];
 
 		for ( let item of items ) {
 
@@ -287,7 +290,8 @@
 					'</tr></table>';
 
 				if ( ( !location.hash || location.hash.toLowerCase().endsWith( 'readme.md' ) )
-					&& item.path !== 'README.md' && item.name.toLowerCase() === 'readme.md' ) {
+//					&& item.path !== 'README.md'
+					&& item.name.toLowerCase() === 'readme.md' ) {
 
 					location.hash = urlGitHubPage + pathRepo + itemPath;
 
