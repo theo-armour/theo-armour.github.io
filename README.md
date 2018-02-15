@@ -6,13 +6,13 @@
 
 <div class=divMenuBar >
 
-	<a href = "#README.md">Read Me</a>
-	<a href = "#plugin/view-github-issues.html">News</a>
-	<a href = "#plugin/view-github-events.html">Recent Events</a>
-	<a href = "#plugin/view-github-repos.html">Active Repos</a>
-	<a href = "#plugin/view-rss.html">RSS</a>
-	<a href = "#pages2/contact.md">Contact</a>
-	<a href = "#pages2/about.md">About</a>
+<a href = "#README.md">Read Me</a>
+<a href = "#plugin/view-github-issues.html">News</a>
+<a href = "#plugin/view-github-events.html">Recent Events</a>
+<a href = "#plugin/view-github-repos.html">Active Repos</a>
+<a href = "#plugin/view-rss.html">RSS</a>
+<a href = "#pages2/contact.md">Contact</a>
+<a href = "#pages2/about.md">About</a>
 
 </div>
 
