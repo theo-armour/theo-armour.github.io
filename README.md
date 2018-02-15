@@ -19,7 +19,7 @@
 
 ## concept
 
-This is the eigth significant update to the theo-armour.github.io. It the fastest, most quickly built to date - taking less than a day to build.
+This is the eighth significant update to the theo-armour.github.io. It the fastest, most quickly built to date - taking less than a day to build.
 
 
 ## mission
