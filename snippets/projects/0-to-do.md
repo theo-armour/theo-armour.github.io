@@ -1,4 +1,6 @@
 
+ride from hospital
+
 ## back behind me
 
 
@@ -115,7 +117,6 @@ Web sites where you can ask questions about diet and receive replies
 
 
 
-
 ## Nice
 
 * Dylan: nintendo labo
@@ -133,10 +134,8 @@ Web sites where you can ask questions about diet and receive replies
 ## To buy
 
 Amazon pantry
-
-* Chamois
-* Eagle Creek bags
-* Foie gras
+* diapers
+* cofffee
 
 
 
@@ -147,7 +146,6 @@ Amazon pantry
 
 * new checks
 * Geri: dinner/ ggta?
-* Angela Laffen ~ blood test?
 * Tim Child
 * Lastpass family account
 * Jacqueline /  Liz & Myron
@@ -161,6 +159,10 @@ Amazon pantry
 
 
 ## Done
+
+* Chamois
+* Eagle Creek bags
+* microwave
 
 * find Elaine's sheet
 2018-02-05

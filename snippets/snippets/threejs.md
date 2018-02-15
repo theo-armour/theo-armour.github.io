@@ -482,7 +482,7 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 ### JSON / save to file
 
 		<p>
-			<button onclick = saveFile(); >save building data to file</button> 
+			<button onclick = saveFile(); >save building data to file</button>
 		</p>
 
 
@@ -682,7 +682,9 @@ obj.translateOnAxis( axisOfMovement, delta );
 		obj.rotation.setFromVector3( startRotation );
 
 
-### Object3D.localToWorld 
+
+
+### Object3D.localToWorld
 
 scene.updateMatrixWorld();
 
@@ -695,6 +697,7 @@ Also
 
 			var vector = ceilingGeometry.vertices[ k ].clone();
 			vector.applyMatrix4( object.matrixWorld );
+
 
 
 ## PATH / 2D

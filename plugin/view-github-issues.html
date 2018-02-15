@@ -30,11 +30,11 @@
 		<span style="display: none" >Not visible in GitHub source code view</span>
 
 		<hr>
-
+-->
 		<div id = "contents" ></div>
 
 	</div>
--->
+
 
 <script>
 
@@ -90,11 +90,12 @@
 
 //console.log( '', json );
 
-		parent.contents.innerHTML = '';
+		contents.innerHTML = '';
+
 		for ( var i = 0; i < json.length; i++ ) {
 
 			issue = json[ i ];
-			parent.contents.innerHTML += 
+			contents.innerHTML += 
 
 				'<h1>' + ( issue.title ).link( issue.html_url ) + '</h1>' + 
 				'<div><i>created: ' + issue.created_at + ' by ' + issue.user.login +  '</i></div>' +
