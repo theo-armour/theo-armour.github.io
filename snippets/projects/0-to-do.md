@@ -1,25 +1,61 @@
 
-ride from hospital
+pay anthem on 1 March $2,439
+* https://www11.anthem.com/ca/anthemextraspackages/
+SilverScript ~ see evernote
+Broadway
+
+Diana - club dinner OK - send email
+
+Deposit cash
+
+### taxes / Don Shaw / Marcia / HR Block / Cristina
+
+IRS payments - checks
+
+## ucb-mph-strategy-pdf
+* No links
+* No footnotes
+* No author credits
+* No open license - All rights reserved.
+* No stats/data/evidence
+* Not SMART-enabled ~ https://en.wikipedia.org/wiki/SMART_criteria
+
+Typical marketing document designed to lure partially-engaged peeps to donate
+Promulgates US charity-driven donations over European tax-driven funding
+	* Walter Reuther vs Aneurin Bevin
+	* AMA
+Pushes for one-off disruptions rather than long-term engagement
+Written for sixth grade English skills
+No existing partnerships highlighted
+
+To what extent is the UCB SPH complicit - a creator/promoter/supporter the current lack of health of the average American?
+Is it the enemy?
+
+***
+
+
+
+
 
 ## back behind me
 
-
 * 3 breaths, vertical stretch, coccyx curls. figure 8 knees
+* Bridging
 * Hundreds
 * Fives bicycle
+* Leg ups
 * Legs side to side
 * Leg circles
 * Bicycle ride 1min
 * 10 stoops + lunging around apt
-* Child's pose
+* Child's pose / Cat & Camel
 * Plank
 
 
 AV key ybd1
 
-### taxes / Don Shaw / Marcia / HR Block / Cristina
 
-IRS payments checks
+
 
 ### jaanga.com
 
@@ -45,19 +81,34 @@ https://admin.google.com/828-0000.com/AdminHome
 	* Exercises
 	* Ongoing hip issues
 
-* 4:00pm Feb 15: Stephanie
-	* Mouth guard
-	* new toothpaste
 * Next UCSF visit:
 	* drop off will body papers
+
+### UCSF Willed Body ~ (415) 476-1981
+Administration Offices 513 Parnassus Avenue, S-1334
+
+Address?
 
 
 ### Upper Endoscopy Instructions
 
+ride from hospital
+Medical transportation companies:
+
+GWART 415-379-9972
+* https://www.goservices.com/z/5514/San-Francisco-CA/Gwart
+
+Medsam Transportation 415-561-0628
+* <https://www.yelp.com/biz/medsam-enterprises-san-francisco>
+
+* Safecare Medical Transportation 415-609-4566. Leon << rserved>>
+
+***
+
 1600 Divisadero St., 1st floor, Room B123, Endoscopy unit
 
 February 22 - ARRIVAL TIME 7:00 AM
-5 days before your procedure: Fen 17 - STOP tablets containing Iron
+5 days before your procedure: Feb 17 - STOP tablets containing Iron
 
 * Transport?
 * Un-sedated?
