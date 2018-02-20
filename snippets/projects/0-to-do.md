@@ -1,6 +1,8 @@
 
-pay anthem on 1 March $2,439
-* https://www11.anthem.com/ca/anthemextraspackages/
+
+
+
+
 SilverScript ~ see evernote
 Broadway
 
@@ -72,7 +74,9 @@ https://admin.google.com/828-0000.com/AdminHome
 
 
 ## Health
-
+pay anthem on 1 March $2,439
+* https://www11.anthem.com/ca/anthemextraspackages/
+* Angela Laffen
 * Dr Martin
 	* best mneumonic
 	* names of conditions
@@ -147,7 +151,9 @@ Web sites where you can ask questions about diet and receive replies
 
 ## Errands
 
+* Deposit cash
 * More keys
+* Rubber things for doors
 * Sticky notes
 
 
@@ -210,6 +216,14 @@ Amazon pantry
 
 
 ## Done
+
+For Ray
+
+What's the use of a conspiracy theory if Ray's not in it?
+
+your friend
+Theo
+
 
 * Chamois
 * Eagle Creek bags
