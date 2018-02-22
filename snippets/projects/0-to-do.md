@@ -105,7 +105,7 @@ GWART 415-379-9972
 Medsam Transportation 415-561-0628
 * <https://www.yelp.com/biz/medsam-enterprises-san-francisco>
 
-* Safecare Medical Transportation 415-609-4566. Leon << rserved>>
+* Safecare Medical Transportation 415-609-4566. Leon << reserved>>
 
 ***
 

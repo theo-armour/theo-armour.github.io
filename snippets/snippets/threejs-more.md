@@ -122,6 +122,22 @@ starts at top / left and goes right and down
 		scene.add( new THREE.CameraHelper( lightDirectional.shadow.camera ) );
 
 
+## Lights
+
+		const lightAmbient = new THREE.AmbientLight( 0x444444 );
+		scene.add( lightAmbient );
+
+		const lightDirectional = new THREE.DirectionalLight( 0xffffff, 1 );
+		lightDirectional.shadow.mapSize.width = 2048;  // default 512
+		lightDirectional.shadow.mapSize.height = 2048;
+		lightDirectional.castShadow = true;
+		scene.add( lightDirectional );
+
+		const lightPoint = new THREE.PointLight( 0xffffff, 0.5 );
+		lightPoint.position = new THREE.Vector3( 0, 0, 1 );
+		camera.add( lightPoint );
+		scene.add( camera );
+
 ## Lights 2
 
 	function addLights( size ) {
@@ -192,7 +208,7 @@ starts at top / left and goes right and down
 
 
 
-## Cubes
+## GEOMETRY / Cubes
 
 		cubes = drawCubes();
 		scene.add( cubes )
