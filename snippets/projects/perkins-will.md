@@ -1,6 +1,42 @@
 
-## 2018-02-16
 
+## 2018-02-25
+
+### Peeps
+
+
+* Welle, Benjamin - organizer
+	* Benjamin.Welle@perkinswill.com
+	* https://github.com/bwelle
+* Theo Armour - creator
+	* t.armour@gmail.com
+	* https://github.com/theo-armour
+* Anton Szilasi
+	* Anton.Szilasi@perkinswill.com
+	* ajszilasi@gmail.com
+	* https://github.com/antonszilasi
+* Zack Rogers
+	* rogers@daylightinginnovations.com
+	* http://www.daylightinginnovations.com/
+	* http://www.daylightinginnovations.com/spot-overview-flow-diagram
+* John Mardaljevic
+	* j.mardaljevic@lboro.ac.uk
+	* http://www.lboro.ac.uk/departments/abce/staff/john-mardaljevic
+	* http://climate-based-daylighting.com/doku.php?id=radiance2018
+* Robert Guglielmetti ~ Mr Rumble strip
+	* Robert.Guglielmetti@nrel.gov
+	* Lighting Designer/Researcher/Software Developer at National Renewable Energy Laboratory
+	* https://www.nrel.gov/research/robert-guglielmetti.html
+	* http://www.rumblestrip.org/about/
+	* rob.guglielmetti@gmail.com
+	* https://github.com/rpg777
+	* https://rawgit.com/rpg777/didactic-meow/master/presentations/2017.08_Radiance-Workshop/Guglielmetti%20-%20OpenStudio_Radiance_PAT.html
+
+
+https://www.radiance-online.org//
+
+
+## 2018-02-16
 
 
 ### Objectives
