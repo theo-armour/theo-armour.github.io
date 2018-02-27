@@ -540,6 +540,7 @@ https://www.w3schools.com/jsref/met_doc_write.asp
 document.write("Hello World!");
 
 
+
 ### DOM
 
 	var script= document.createElement('script');
@@ -584,6 +585,15 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
 		divContents.contentEditable = true;
 
 
+
+
+## document.querySelectorAll();
+* https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+
+
+var x = document.querySelectorAll(".example");
+
+var x = document.querySelectorAll("button");
 
 ## DOMParser
 https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
