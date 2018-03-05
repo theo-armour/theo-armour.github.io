@@ -697,7 +697,7 @@ console.log( thing );
 		reader = new FileReader();
 		reader.onload = function( event ) {
 
-			textArea.innerHTML = reader.result;
+			txtArea.innerHTML = reader.result;
 
 			menuOpenFile.innerHTML =
 				'name: ' + files.files[0].name + '<br>' +

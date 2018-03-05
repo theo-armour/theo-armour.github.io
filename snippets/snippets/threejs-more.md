@@ -260,7 +260,9 @@ starts at top / left and goes right and down
 
 ### GEOMETRY / Multiple
 
-	var geometries = [
+	function addGeometry() {
+
+		var geometries = [
 
 		new THREE.BoxGeometry( 10, 10, 10 ),
 		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
@@ -268,20 +270,23 @@ starts at top / left and goes right and down
 		new THREE.SphereGeometry( 5, 12, 8 ),
 		new THREE.TorusGeometry( 10, 5 ),
 
-	];
+		];
 
-			var geometry = geometries[ Math.floor( Math.random() * geometries.length ];
+
+		for ( var j = 0; j < 250; j++ ) {
+
+			var geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
 			var material = new THREE.MeshNormalMaterial();
 
-			for ( var j = 0; j < 5; j++ ) {
+			var mesh = new THREE.Mesh( geometry, material );
+			mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
+			mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
+			mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
+			scene.add( mesh );
 
-				var mesh = new THREE.Mesh( geometry, material );
-				mesh.position.set( Math.random() * 100 - 50, Math.random() * 50, Math.random() * 100 - 50 );
-				mesh.scale.set( Math.random() * 2, Math.random() * 2, Math.random() * 2 );
-				scene.add( mesh );
+		}
 
-			}
-
+	}
 
 
 ## Gnomen

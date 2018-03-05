@@ -3,7 +3,7 @@
 <head>
 <meta charset = "utf-8" >
 <meta name = "viewport" content= "width=device-width, initial-scale=1">
-<meta name = "description" content = "This script allows you to list, open view all the files in all the Theo Armour folders" >
+<meta name = "description" content = "This menu script allows you to list, open and view all the files in all the Theo Armour folders" >
 <meta name = "keywords" content = "JavaScript,Markdown,GitHub,FOSS,3D,STEM" >
 <meta name = "date" content = "2018-02-11" >
 <title>Theo Armour</title>
@@ -84,11 +84,12 @@
 
 		<div id= "divFooter" >
 
-			<div title='many thanks!' ><a href=#pages2/credits.md >Credits</a></div>
-			<div><a href=#pages2/code-of-conduct.md >Code of Conduct</a></div>
-			<div><a href=#pages2/contributing.md >Contributing</a></div>
-			<div><a href=#pages2/license.md >License</a></div>
-			<div><a href=#pages2/markdown-help.md >Markdown Help</a></div>
+			<div title='many thanks!' ><a href=#pages/credits.md >Credits</a></div>
+			<div title='' ><a href=#pages/about-this-cms.md >About this CMS</a></div>
+			<div><a href=#pages/code-of-conduct.md >Code of Conduct</a></div>
+			<div><a href=#pages/contributing.md >Contributing</a></div>
+			<div><a href=#pages/license.md >License</a></div>
+			<div><a href=#pages/markdown-help.md >Markdown Help</a></div>
 			<div><a href="javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()" title="Mr.doob's Stats.js appear in top left corner" >Show frames/second statistics</a></div>
 			<div><a href="https://api.github.com/rate_limit" target="_blank" title="Occasionaly this script breaks if you go over the GitHub API rate limit" >github rate limits</a></div>
 
@@ -115,7 +116,7 @@
 	const branch = '/master/'
 
 	const uriDefaultFile = 'README.md';
-//	const uriDefaultFile = '../../plugins/view-github-issues.html'
+	//const uriDefaultFile = '../../plugins/view-github-issues.html'
 
 	const iconInfo = '<img src="https://status.github.com/images/invertocat.png" height=18 >';
 
@@ -290,7 +291,7 @@
 					'</tr></table>';
 
 				if ( ( !location.hash || location.hash.toLowerCase().endsWith( 'readme.md' ) )
-//					&& item.path !== 'README.md'
+					//&& item.path !== 'README.md'
 					&& item.name.toLowerCase() === 'readme.md' ) {
 
 					location.hash = urlGitHubPage + pathRepo + itemPath;
