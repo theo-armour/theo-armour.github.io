@@ -699,7 +699,7 @@ console.log( thing );
 
 			txtArea.innerHTML = reader.result;
 
-			menuOpenFile.innerHTML =
+			divLog.innerHTML =
 				'name: ' + files.files[0].name + '<br>' +
 				'size: ' + files.files[0].size.toLocaleString() + ' bytes<br>' +
 				'type: ' + files.files[0].type + '<br>' +
