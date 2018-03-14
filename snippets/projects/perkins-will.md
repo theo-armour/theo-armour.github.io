@@ -1,9 +1,78 @@
 
 
+### 2018-03-13
+
+reuse knowledge
+pentaho
+
+fixed input
+can't change topology on fly
+
+OS server is the issue /
+
+speed: missing daylighting
+radiance
+
+what are the metrics peeps should be looking at? pre-design
+
+how to viz metrics
+need to provide guidance / UE
+teaching users
+
+Ben's wishlist
+
+John: simpler ignore climate: SBI
+
+- Compare multiple /
+
+space type needs foot/candle requirements
+
+
+mailing list
+github presence
+various papers
+	Goals
+	Issues
+	Admin
+
+me
+add WWR calcs to viewer
+what type of window type
+
+start simple / add complexity
+
+
+
+My short term goals
+
+* Build a gbxml2rad script
+	* Runs from browser / saves locally
+	* Translate a gbXML data into a Radiance .RAD files
+		* While file or
+		* individual spaces
+		* User selected such as external walls + floors + roof
+* Read rtrace output and apply to gbXML surfaces
+	* Module in gbXML viewer that
+
+
+Ben's Agenda
+
+Introductions
+Provide brief demo of current state of the Simulation Platform for Energy Efficient Design (SPEED).
+Review research questions pertaining to the addition of Radiance-based CBDM to the SPEED platform.
+	Appropriate metrics for early design
+	Effective visualization of CBDM
+	Tradeoffs between value and computational cost
+Implementation requirements/strategy of (3) into SPEED
+	How to leverage existing Radiance measure
+	List functionality currently supported/not supported
+	Integration points with SPEED
+Establish preliminary scoping, roles, and next steps
+
+
 ## 2018-02-25
 
 ### Peeps
-
 
 * Welle, Benjamin - organizer
 	* Benjamin.Welle@perkinswill.com
@@ -32,8 +101,14 @@
 	* https://github.com/rpg777
 	* https://rawgit.com/rpg777/didactic-meow/master/presentations/2017.08_Radiance-Workshop/Guglielmetti%20-%20OpenStudio_Radiance_PAT.html
 
+### Radiance Links
 
 https://www.radiance-online.org//
+https://www.radiance-online.org//pipermail/radiance-general/
+https://en.wikipedia.org/wiki/Radiance_(software)
+
+### The science
+https://en.wikipedia.org/wiki/Radiance
 
 
 ## 2018-02-16

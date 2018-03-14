@@ -1,8 +1,8 @@
 
 
-2017-07-07 ~ 
+2017-07-07 ~
 
-## To Do 
+## To Do
 
 * Update AutoHotKey
 
@@ -10,7 +10,7 @@
 ## Lessons Learned
 Use Ninite.com to install Chrome, Firefox DropBox, Evernote, Google Drive etc
 
-Don't forget DropBox takes forever. 
+Don't forget DropBox takes forever.
 * Sync only a few folders at a time
 * Start with just one or two folders
 
@@ -25,3 +25,4 @@ https://technet.microsoft.com/en-us/library/cc732459.aspx
 
 
 findstr /p /s /i "word word"  *.html
+

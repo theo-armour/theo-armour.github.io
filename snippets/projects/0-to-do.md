@@ -1,10 +1,8 @@
 
-
+popcorn soup ~ yummy!
 
 SilverScript ~ see evernote
-Broadway
-
-Diana - club dinner OK - send email
+Broadway Storage - pay
 
 Deposit cash
 
@@ -13,6 +11,7 @@ Deposit cash
 IRS payments - checks
 
 ## ucb-mph-strategy-pdf
+http://sph.berkeley.edu/sites/default/files/2015-2020_Strategy.pdf
 * No links
 * No footnotes
 * No author credits
@@ -52,7 +51,7 @@ Is it the enemy?
 * Plank
 
 
-AV key ybd1
+Alpha Vantage key ybd1
 
 
 
@@ -72,7 +71,7 @@ https://admin.google.com/828-0000.com/AdminHome
 
 
 ## Health
-pay anthem on 1 March $2,439
+
 * https://www11.anthem.com/ca/anthemextraspackages/
 * Angela Laffen
 * Dr Martin
@@ -144,7 +143,7 @@ Web sites where you can ask questions about diet and receive replies
 
 * JoAnn
 * Gharen and WSD
-* Isabelle: letter to Notaire
+
 
 
 ## Errands
@@ -191,7 +190,8 @@ Web sites where you can ask questions about diet and receive replies
 Amazon pantry
 * diapers
 * cofffee
-
+* hearing things
+* hand soap
 
 
 ## Writing
@@ -199,7 +199,7 @@ Amazon pantry
 
 ## Waiting
 
-* new checks
+
 * Geri: dinner/ ggta?
 * Tim Child
 * Lastpass family account
@@ -215,7 +215,12 @@ Amazon pantry
 
 ## Done
 
-For Ray
+* Isabelle: letter to Notaire
+* new checks
+pay anthem on 1 March $2,439
+Diana - club dinner OK - send email
+
+Book: For Ray
 
 What's the use of a conspiracy theory if Ray's not in it?
 
