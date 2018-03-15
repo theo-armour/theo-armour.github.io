@@ -13,9 +13,30 @@
 
 ### Waiting
 
-* David
-* Michal
 
+requesting animation frames, https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+multiplying matrices https://en.wikipedia.org/wiki/Matrix_multiplication
+and conjugating quatrnions / https://en.wikipedia.org/wiki/Quaternion#Conjugation,_the_norm,_and_reciprocal
+
+## 2018-03-13
+* Aceit, tania, allison, diana, kyle, cynthiam, mia,rob
+* David Naylor, Tim Child, David Ellis, TGD
+
+gbXML Viewer R11 / Launch Video
+
+Hi everybody
+
+Here is an update on the software I have been writing: [gbXML Viewer]( http://www.ladybug.tools/spider/gbxml-viewer/ )
+
+One of my goals in all of this is to help encourage more women and young peeps to be involved with STEM (science, tech, engineering and math ) topics.
+
+It seems that my collaborator, Michal, can deliver the goods: [Ladybug Spider gbXML Viewer Introduction Video](  https://www.linkedin.com/feed/update/urn:li:activity:6378839271171772417/ )
+
+Much as I enjoy the watching this video and and listening to its presenter, I wonder if continuing this kind of effort will be a good thing for the people involved and for the product.
+
+You being a seasoned watcher of what peeps watch, I'd really appreciate your take on this effort.
+
+Theo
 
 ### 2018-02-07 ~
 

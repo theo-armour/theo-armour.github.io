@@ -10,31 +10,6 @@ Deposit cash
 
 IRS payments - checks
 
-## ucb-mph-strategy-pdf
-http://sph.berkeley.edu/sites/default/files/2015-2020_Strategy.pdf
-* No links
-* No footnotes
-* No author credits
-* No open license - All rights reserved.
-* No stats/data/evidence
-* Not SMART-enabled ~ https://en.wikipedia.org/wiki/SMART_criteria
-
-Typical marketing document designed to lure partially-engaged peeps to donate
-Promulgates US charity-driven donations over European tax-driven funding
-	* Walter Reuther vs Aneurin Bevin
-	* AMA
-Pushes for one-off disruptions rather than long-term engagement
-Written for sixth grade English skills
-No existing partnerships highlighted
-
-To what extent is the UCB SPH complicit - a creator/promoter/supporter the current lack of health of the average American?
-Is it the enemy?
-
-***
-
-
-
-
 
 ## back behind me
 
@@ -90,30 +65,6 @@ Administration Offices 513 Parnassus Avenue, S-1334
 
 Address?
 
-
-### Upper Endoscopy Instructions
-
-ride from hospital
-Medical transportation companies:
-
-GWART 415-379-9972
-* https://www.goservices.com/z/5514/San-Francisco-CA/Gwart
-
-Medsam Transportation 415-561-0628
-* <https://www.yelp.com/biz/medsam-enterprises-san-francisco>
-
-* Safecare Medical Transportation 415-609-4566. Leon << reserved>>
-
-***
-
-1600 Divisadero St., 1st floor, Room B123, Endoscopy unit
-
-February 22 - ARRIVAL TIME 7:00 AM
-5 days before your procedure: Feb 17 - STOP tablets containing Iron
-
-* Transport?
-* Un-sedated?
-* Message to Dr Kattah re melani coli??
 
 ## Books
 Links to two or three books that provide up to date good diet guidelines.
@@ -189,7 +140,8 @@ Web sites where you can ask questions about diet and receive replies
 
 Amazon pantry
 * diapers
-* cofffee
+* coffee
+* Bran buds
 * hearing things
 * hand soap
 

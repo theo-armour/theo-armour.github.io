@@ -13,6 +13,28 @@ One weird trick to end gerrymandering: cake-cutting game theory
 https://boingboing.net/2017/11/06/one-weird-trick-to-end-gerryma.html
 
 
+## ucb-mph-strategy-pdf
+http://sph.berkeley.edu/sites/default/files/2015-2020_Strategy.pdf
+* No links
+* No footnotes
+* No author credits
+* No open license - All rights reserved.
+* No stats/data/evidence
+* Not SMART-enabled ~ https://en.wikipedia.org/wiki/SMART_criteria
+
+Typical marketing document designed to lure partially-engaged peeps to donate
+Promulgates US charity-driven donations over European tax-driven funding
+	* Walter Reuther vs Aneurin Bevin
+	* AMA
+Pushes for one-off disruptions rather than long-term engagement
+Written for sixth grade English skills
+No existing partnerships highlighted
+
+To what extent is the UCB SPH complicit - a creator/promoter/supporter the current lack of health of the average American?
+Is it the enemy?
+
+
+
 # Wicked problems
 
 https://en.wikipedia.org/wiki/Wicked_problem
@@ -21,7 +43,7 @@ contrast with
 
 https://en.wikipedia.org/wiki/Pattern_language
 
-The elements of the language are entities called patterns. Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice. 
+The elements of the language are entities called patterns. Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.
 
 
 ## A Ladder Of Citizen Participation
@@ -40,7 +62,7 @@ Sherry R. Arnstein
 ### References
 
 * http://www.eltis.org/sites/eltis/files/trainingmaterials/challenge_participation_final.pdf
-	* Lengthy and many clickable links 
+	* Lengthy and many clickable links
 * https://en.wikipedia.org/wiki/Participation_(decision_making)
 * http://www.citizenshandbook.org/arnsteinsladder.html
 * http://www.bangthetable.com/ladder-of-citizen-participation/
