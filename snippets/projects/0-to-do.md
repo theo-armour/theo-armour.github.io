@@ -1,7 +1,12 @@
+water plants
 
 popcorn soup ~ yummy!
 
-SilverScript ~ see evernote
+SilverScript Member #G6C825534 ~ 1-866-552-6106
+
+silverscript.com
+payments 1 866 237 7373
+
 Broadway Storage - pay
 
 Deposit cash
@@ -92,8 +97,9 @@ Web sites where you can ask questions about diet and receive replies
 
 ## Email
 
+* Alix / Leah
 * JoAnn
-* Gharen and WSD
+
 
 
 
@@ -138,12 +144,19 @@ Web sites where you can ask questions about diet and receive replies
 
 ## To buy
 
+Amazon
+* water filters
+* Ear plugs
+* Toothpaste
+
 Amazon pantry
+*
 * diapers
 * coffee
 * Bran buds
 * hearing things
 * hand soap
+* Seaweed
 
 
 ## Writing
@@ -151,7 +164,7 @@ Amazon pantry
 
 ## Waiting
 
-
+* Goren and WSD
 * Geri: dinner/ ggta?
 * Tim Child
 * Lastpass family account
