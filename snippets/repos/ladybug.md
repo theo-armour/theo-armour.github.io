@@ -1,5 +1,15 @@
 
 
+## Coming soon
+
+* Tiny surfaces issue
+* Add ground plane
+* Add color selectors
+* Add color schemes choices menu
+* add radiance
+
+
+
 ## Contacts
 
 * Bring over ibpsa files

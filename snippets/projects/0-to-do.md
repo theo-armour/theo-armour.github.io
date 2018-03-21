@@ -150,11 +150,10 @@ Amazon
 * Toothpaste
 
 Amazon pantry
-*
+
 * diapers
 * coffee
 * Bran buds
-* hearing things
 * hand soap
 * Seaweed
 
