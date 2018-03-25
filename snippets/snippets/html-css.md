@@ -140,6 +140,8 @@ h2:before { content:"❦ ";
 ### CSS Random Gradient Background
 
 // height not always necessary
+// IMPORTANT to check
+
 	document.body.style.cssText += ' height: ' + window.innerHeight + 'px; ';
 
 	function setRandomGradientBackground() {
@@ -171,6 +173,10 @@ https://www.sitepoint.com/a-primer-on-css3-transforms/
 https://www.w3schools.com/css/css_howto.asp
 
 <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
+
+# HTML
 
 
 ### DETAILS
