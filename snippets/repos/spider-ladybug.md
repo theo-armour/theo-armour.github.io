@@ -1,12 +1,5 @@
 
 
-## Coming soon
-
-* Tiny surfaces issue
-* Add ground plane
-* Add color selectors
-* Add color schemes choices menu
-* add radiance
 
 
 
@@ -26,7 +19,32 @@
 
 requesting animation frames, https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 multiplying matrices https://en.wikipedia.org/wiki/Matrix_multiplication
-and conjugating quatrnions / https://en.wikipedia.org/wiki/Quaternion#Conjugation,_the_norm,_and_reciprocal
+and conjugating quaternions / https://en.wikipedia.org/wiki/Quaternion#Conjugation,_the_norm,_and_reciprocal
+
+
+
+## Change Log
+## Coming soon
+
+* Tiny surfaces issue
+* Add ground plane
+* Add color selectors
+* Add color schemes choices menu
+* add radiance
+
+#### 2018-03-25 ~
+
+So Anton sent me this gbXML file which is now online here:
+http://www.ladybug.tools/spider/gbxml-viewer/r12/gv-app/gv-app.html#../../../cookbook/07-create-exportable-buildings/test-gbxml-files/SPEED%20gbxml.xml
+He asked if I could create a Sun Path for this file
+Sun Path definition >> https://en.wikipedia.org/wiki/Sun_path
+Using Lagybug Toools / Spider / gbXML Viewer. I instantiated the Sun Path menu and from which I created this screen
+
+Just for fun I also called the Sun Sahadow Range menu and grabbed this screenshot of the model taken at 12 noon on the shortest day of the year and showing the shadows for ten position of the sun. BTW I noted that the latitude and longitude of the the model is situated in my bedroom in San Francisco.
+
+And, well, it would be nice to be even more technical so here is a screen grab showing the Window Wall Ratios of facades facing the eight canonical solar positions
+
+
 
 ## 2018-03-13
 * Aceit, tania, allison, diana, kyle, cynthiam, mia,rob

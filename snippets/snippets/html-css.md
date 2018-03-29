@@ -175,6 +175,14 @@ https://www.w3schools.com/css/css_howto.asp
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 
 
+### CSS Switch
+
+<link rel="stylesheet" id="stylesheet" type="text/css" href="style1.css">
+			<p><button onclick=stylesheet.href="style1.css"; >style 1</button></p>
+
+			<p><button onclick=stylesheet.href="style2.css"; >style 2</button></p>
+
+https://www.w3schools.com/w3css/w3css_color_themes.asp
 
 # HTML
 
@@ -321,6 +329,7 @@ sandbox = 'allow-scripts'
 
 onload
 
+		ifrThree.contentWindow.location.reload(); // true forces all assets to reload
 
 ### META
 

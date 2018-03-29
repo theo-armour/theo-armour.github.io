@@ -8,7 +8,7 @@
 https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_source=javascriptweekly&utm_medium=email
 
 
-# Easily create an HTML editor with DesignMode and ContentEditable
+# Easily create an HTML editor with DesignMode and ContentEditabledocument.body.style.color
 
 https://hackernoon.com/easily-create-an-html-editor-with-designmode-and-contenteditable-7ed1c465d39b#.hh7gdokty
 
@@ -426,6 +426,19 @@ random gradient background
 		'';
 
 
+
+## CSS
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+// get variable from inline style
+element.style.getPropertyValue("--my-var");
+
+// get variable from wherever
+getComputedStyle(element).getPropertyValue("--my-var");
+
+// set variable on inline style
+element.style.setProperty("--my-var", jsVar + 4);
 
 
 ### DATES
