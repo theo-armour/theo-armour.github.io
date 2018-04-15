@@ -1,7 +1,10 @@
 
 
+## Solar experiments
 
-epw
+
+
+#=epw
 
 
 ## Contacts
@@ -24,8 +27,26 @@ and conjugating quaternions / https://en.wikipedia.org/wiki/Quaternion#Conjugati
 
 
 
+
+
 ## Change Log
-## Coming soon
+
+
+### 2018-04-11
+
+Coming soon
+
+GV R13 Numbers
+
+* Getters and setters everywhere
+* CSS to buttons // add using algorithm?
+* Add areas by CAD object type?
+
+Reports
+* Add zones
+* Use gbXML_TRK.xml
+
+### 2018-04-??
 
 * Tiny surfaces issue
 * Add ground plane

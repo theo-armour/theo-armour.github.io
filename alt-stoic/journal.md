@@ -131,6 +131,24 @@ https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
 
 
 
+
+## 2018-04-08
+
+
+https://www.reddit.com/r/LifeProTips/comments/8abuup/lpt_if_you_genuinely_want_to_know_more_about/
+
+LPT: If you genuinely want to know more about another person, ask them what they are passionate about . . . instead, of what they do. Often times you'll get a genuine answer and you get the added bonus of seeing them light up with energy as they describe something they actually care about.
+
+
+
+http://recomendo.com/issues/pocket-magic-trick-minimalism-notebooks-how-to-apologize-104995
+
+(1) Acknowledge how your action affected the person; 
+(2) Say you’re sorry; 
+(3) Describe what you’re going to do to make it right or make sure it doesn’t happen again. 
+
+Don’t excuse or explain
+ 
 ## 2017-12-17 
 
 Perception Action Will

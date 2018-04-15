@@ -263,6 +263,11 @@ console.log('waiting...');
 
 Array.from( An array-like or iterable object to convert to an array )
 
+	AA.doSomethingWithObjOrArrayOfObj = function( obj ) {
+
+		const obj = Array.isArray( obj ) ? obj : [ obj ];
+
+
 - add them all...
 
 a.concat(item[, itemN]) Returns a new array with the items added on to it.

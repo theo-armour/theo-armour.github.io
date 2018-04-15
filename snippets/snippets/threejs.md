@@ -605,9 +605,25 @@ wireframe: false,
 		mesh.geometry.__dirtyNormals = true;
 
 
+### Vertex Colors
 
+jaanga.github.io/cookbook-threejs/materials-sandbox/color/vertex-colors/vertex-colors-single-plane.html
 
+		for ( let f of geometry.faces ) {
 
+			console.log( 'face', f );
+
+			f.vertexColors[ 0 ] = new THREE.Color( 0xffffff * Math.random());
+			f.vertexColors[ 1 ] = new THREE.Color( 0xffffff * Math.random());
+			f.vertexColors[ 2 ] = new THREE.Color( 0xffffff * Math.random());
+
+			geometry.vertices[ f[ 'a' ] ].z = 100 * Math.random() - 50;
+			geometry.vertices[ f[ 'b' ] ].z = 100 * Math.random() - 50;
+			geometry.vertices[ f[ 'c' ] ].z = 100 * Math.random() - 50;
+
+		}
+
+		material = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.DoubleSide, vertexColors: THREE.VertexColors } );
 
 
 ## MESH

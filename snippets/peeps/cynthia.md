@@ -82,7 +82,9 @@ Racial Inequality in Health and the Impact of a Policy-induced Breakdown of Afri
 
 Arline T. Geronimus
 Department of Health Behavior and Health Education, University of Michigan
+https://en.wikipedia.org/wiki/Arline_Geronimus
 
+https://www.ncbi.nlm.nih.gov/pubmed/1467758
 
 http://guide.berkeley.edu/courses/cy_plan/
 
