@@ -978,7 +978,9 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 		var map2fixed = function( vect ) { return vect.toArray().map( function( num ){ return num.toFixed( 3 ); } ) };
 
 
+### VIREFRAME
 
+				<button onclick=mesh.material.wireframe=!mesh.material.wireframe; >wireframe</button>
 
 ### THREE.JS SCRIPTS
 

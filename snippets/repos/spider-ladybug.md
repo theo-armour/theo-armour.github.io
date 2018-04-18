@@ -31,6 +31,18 @@ and conjugating quaternions / https://en.wikipedia.org/wiki/Quaternion#Conjugati
 
 ## Change Log
 
+### 2018-04-15
+
+REP
+* code cleanup - delete dead code
+
+ISS
+* Duplicate adjacent spaces
+* Duplicate Coordinates
+* lots of little fixes
+
+HUD2
+* Add buttons
 
 ### 2018-04-11
 
@@ -38,12 +50,12 @@ Coming soon
 
 GV R13 Numbers
 
-* Getters and setters everywhere
+* Getters and setters everywhere  << getting therr
 * CSS to buttons // add using algorithm?
 * Add areas by CAD object type?
 
 Reports
-* Add zones
+* Add zones << done
 * Use gbXML_TRK.xml
 
 ### 2018-04-??
