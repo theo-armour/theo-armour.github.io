@@ -7,6 +7,7 @@ tania: car & driver
 Alix wikipedia page
 
 Dental appointment
+eloise.ws??
 
 byron
 Denise Law
@@ -20,11 +21,9 @@ payments 1 866 237 7373
 
 Broadway Storage - pay
 
-Deposit cash
 
 ### taxes / Don Shaw / Marcia / HR Block / Cristina
 
-IRS payments - checks
 
 
 ## back behind me
@@ -116,7 +115,6 @@ Web sites where you can ask questions about diet and receive replies
 
 ## Errands
 
-* Deposit cash
 * More keys
 * Rubber things for doors
 * Sticky notes
@@ -156,9 +154,7 @@ Web sites where you can ask questions about diet and receive replies
 ## To buy
 
 Amazon
-* water filters
-* Ear plugs
-* Toothpaste
+
 
 Amazon pantry
 
