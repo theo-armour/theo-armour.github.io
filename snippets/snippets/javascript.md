@@ -127,21 +127,21 @@ just use 'this' wherever possible
 			let response, json, lines;
 
 			response = xhr.target.response;
-console.log( 'response', response );
+			console.log( 'response', response );
 
 			divContents.innerHTML = response;
 
-//			json = JSON.parse( response );
-//console.log( 'json', json );
-// JSON.stringify( dxf, null, ' ' )
-// or
-//			lines = response.split(/\r\n|\n/);
-///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+			//			json = JSON.parse( response );
+			//console.log( 'json', json );
+			// JSON.stringify( dxf, null, ' ' )
+			// or
+			//			lines = response.split(/\r\n|\n/);
+			///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
 
-//			console.log( 'line 8',lines[ 8 ] );
-//			console.log( 'length', lines.length );
+			//			console.log( 'line 8',lines[ 8 ] );
+			//			console.log( 'length', lines.length );
 
-//			lastMod = xhr.target.getResponseHeader ( "Last-Modified" );
+			//			lastMod = xhr.target.getResponseHeader ( "Last-Modified" );
 			console.log( xhr.target.getResponseHeader ( "Last-Modified" ) );
 
 		}
