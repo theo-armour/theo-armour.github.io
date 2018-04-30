@@ -748,6 +748,11 @@ Also
 
 
 
+
+## POINTS
+
+
+
 ## RENDERER
 
 		renderer.shadowMapEnabled = true;
