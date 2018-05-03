@@ -1,15 +1,11 @@
 
-
-ignite for girls
-
-tania: car & driver
+Ryan Wold
 
 Alix wikipedia page
 
 Dental appointment
 eloise.ws??
 
-byron
 Denise Law
 
 popcorn soup ~ yummy!
@@ -44,8 +40,6 @@ Broadway Storage - pay
 Alpha Vantage key ybd1
 
 
-
-
 ### jaanga.com
 
 https://admin.google.com/jaanga.com/
@@ -72,8 +66,6 @@ https://admin.google.com/828-0000.com/AdminHome
 	* Exercises
 	* Ongoing hip issues
 
-* Next UCSF visit:
-	* drop off will body papers
 
 ### UCSF Willed Body ~ (415) 476-1981
 Administration Offices 513 Parnassus Avenue, S-1334
@@ -103,13 +95,13 @@ Web sites where you can ask questions about diet and receive replies
 
 * Close disused credit cards
 * Dr Fassett appointment
-
+* Dentist appointment
 
 ## Email
 
 * Alix / Leah
 * JoAnn
-
+* Geri
 
 
 
@@ -158,12 +150,12 @@ Amazon
 
 Amazon pantry
 
-* diapers
-* coffee
+* Diapers
+* Nescafe
 * Bran buds
-* hand soap
+* Hand soap
 * Seaweed
-
+* Protein powder
 
 ## Writing
 
