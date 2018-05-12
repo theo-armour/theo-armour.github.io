@@ -1,5 +1,22 @@
 
 
+### 2018-05-06
+
+* Chien Si issues
+
+Radiance
+
+Three.js Raycaster: > This method is too simplistic for the purposes of generating quantitative data for us.
+
+Radiance manual pages
+* Mo images
+* No sample data
+
+
+Solemma
+* speed / aster than AVG??
+
+
 ### 2018-03-13
 
 reuse knowledge

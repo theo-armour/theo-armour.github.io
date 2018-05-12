@@ -7,7 +7,7 @@ user: theo
 pw: turner123
 
 
-the production of electricity via photovoltaic cell becomes a continuously declining expensive. 
+the production of electricity via photovoltaic cell becomes a continuously declining expensive.
 
 Eventually the price of electricity becomes negligible.
 
@@ -19,7 +19,7 @@ One of the tasks of the robots will to manipulate 3D printing and recycling devi
 
 The average family will then live in the architecture of its ongoing choosing.
 
-Thir abode will update form and function on daily basis.
+Their abode will update form and function on daily basis.
 
 The robots will carry out a myriad of tasks from changing the overall style for the week from mock Tudor to rural Japanese all the way to gingerly removing a spider from the underside of a gutter and transporting her to a safe part of the garden.
 

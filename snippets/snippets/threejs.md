@@ -356,7 +356,7 @@ https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-w
 	}
 
 
-### GEOMETRY / LINE
+### GEOMETRY / LINE / LINES
 
 		<button onclick=drawRandomLines(); >draw random lines</button>
 
