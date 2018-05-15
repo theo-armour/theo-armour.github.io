@@ -885,12 +885,12 @@ parseInt( string, 10 ) << include the radix
 
 		history.replaceState( '', document.title, window.location.pathname );
 
+// http://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-with-javascript-without-page-refresh
 
 	function onHashChange() {
 
 		fileName = location.hash ? location.hash.split( '#' )[1] : 'readme.md';
 
-// http://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-with-javascript-without-page-refresh
 		document.title = document.title ? document.title : fileName;
 		window.history.back( 1 );
 
