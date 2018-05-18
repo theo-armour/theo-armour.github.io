@@ -8,7 +8,7 @@
 		if ( !divTooToo ) {
 
 			divTooToo = document.body.appendChild( document.createElement( 'div' ) );
-			divTooToo.style.cssText = 
+			divTooToo.style.cssText =
 				'background-color: white; border: 1px solid red; max-width: 350px; opacity: 0.85; ' +
 				' padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
 
@@ -17,10 +17,19 @@
 		let txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
 
 
-		divTooToo.innerHTML = 
+		divTooToo.innerHTML =
 `
+	<p><a href="https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor.html" target="_blank">text edit</a></p>
 
+	<p><a href="javascript:(function(){document.body.contentEditable = true;})()" >make content editable</a></p>
 
+	<p><a href='javascript:(function(){window.open("http://jkirchartz.com/demos/HTML5notepad.html","HTML5 notepad");})()' >html5 notepad</a></p>
+
+	<p><a href='javascript:(function(){window.open("jkirchartz-demos/HTML5notepad.html","HTML5 notepad");})()' >html5 notepad</a></p>
+
+	<p><a href="javascript:(function(){window.open('http://validator.w3.org/check?uri='+window.location);})()" >Validate with validator.w3.org</a></p>
+
+	<p><a href="javascript:(function(){window.open('data:text/html, <html contenteditable style=padding:10%; ></html>')})()" >open new editable page</a></p>
 	<p>
 		<a href="
 			javascript:function C(v){return '<td>'+v+'</td><td>'+((v>>4).toString(16)+(v&15).toString(16)).toUpperCase()+'</td><td bgcolor=DDDDDD>&'+'#'+v+';
@@ -57,6 +66,10 @@
 		">zz85 three.js inspector</a>
 
 	</p>
+
+	<p><a href="file:///C:/" >C:/</a> <a href="file:///D:/" >D:/</a></p>
+
+
 `
 
 

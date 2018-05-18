@@ -26,4 +26,6 @@ https://www.farnamstreetblog.com/mental-models/
 
 http://www.communitybuildingguide.com/
 
+file:///C:/
 
+file:///D:/
