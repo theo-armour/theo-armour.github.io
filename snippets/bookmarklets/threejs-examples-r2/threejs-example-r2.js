@@ -1,5 +1,5 @@
 
-//	var divTooToo;
+	//var divTooToo; // uncomment for r2
 
 	var user = 'mrdoob'
 	var repo = '/three.js';
@@ -22,13 +22,13 @@
 		if ( !divTooToo ) {
 
 			divTooToo = document.body.appendChild( document.createElement( 'div' ) );
-			divTooToo.style.cssText = 
+			divTooToo.style.cssText =
 				'background-color: white; border: 1px solid red; max-height: 90%; max-width: 350px; opacity: 0.85; ' +
 				'overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
 
 		}
 
-		divTooToo.innerHTML = 
+		divTooToo.innerHTML =
 			'<h3>Three.js Examples</h3>' +
 			'<p><input id=inpGetFiles onkeyup=getFiles(); ></p>' +
 			'<div id=divSubMenu ></div>' +
@@ -45,7 +45,7 @@
 
 		for ( let file of files ) {
 
-			if ( !file.includes( inpGetFiles.value ) ) { continue; } 
+			if ( !file.includes( inpGetFiles.value ) ) { continue; }
 
 			page +=
 				'<div>' +
@@ -111,7 +111,7 @@
 
 			const fileName = encodeURI( file.name );
 
-			txt += 
+			txt +=
 
 			'<div style=margin-bottom:8px; >' +
 
