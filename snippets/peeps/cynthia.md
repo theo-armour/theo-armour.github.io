@@ -5,7 +5,29 @@ https://drive.google.com/drive/folders/0B6CqfRSpvPf3Z2FjYXl6SmdLNFk
 
 https://docs.google.com/spreadsheets/d/12zc_ybWXQG_ryFPN5_OU3q4xioH8A6aYSsnKidsXYqw/edit?ts=5a34727e#gid=0
 
-# Links of possible interest
+
+## Autonomous Vehicles
+
+
+### Organizations
+
+* https://meridianmobility.tech/
+	* Meridian was created by government and industry to focus on key areas of UK capability in the global Connected and Autonomous Vehicle (CAV) sector which is predicted to be worth £907 billion by 2035. These include advanced development and validation, connected environments, data and cyber security and new service development.
+
+### Sources
+
+* https://www.reddit.com/r/SelfDrivingCars/
+	* See right-side menu
+* https://www.reddit.com/r/Futurology/
+* https://www.reddit.com/search?q=autonomous+vehicle
+* https://readwrite.com/?s=vehicle
+
+### About
+
+* https://techcrunch.com/2018/05/14/apples-self-driving-car-fleet-grows-to-55-in-california/
+
+
+## Links of possible interest
 
 https://docs.google.com/document/d/1GUfOr58BivJkmM57qMljQce07khRmLNtD5GqXSAUf1U/edit
 

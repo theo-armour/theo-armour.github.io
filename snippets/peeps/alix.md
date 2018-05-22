@@ -3,6 +3,12 @@
 # Alix
 
 
+
+##
+
+Leah Rosenthal, Director of Digital Marketing
+leah@websightdesign.com
+
 ## Scout ideas
 
 What to do with empty space?

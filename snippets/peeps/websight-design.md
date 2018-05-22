@@ -9,9 +9,6 @@ Would you want your business to be secretive, passive, aggressive, in danger, pr
 Live by the creed you sell
 Eat your own dog food
 
-
-
-
 Accessible
 - On-line
 - Open source
@@ -39,6 +36,7 @@ compass.com
 Please just put up an email address
 https 100%
 
+Lent Howard, Director Of Sales lent@websightdesign.com
 
 Alex Paine (agp@websightdesign.com)
 Noah Furhman (noah@websightdesign.com)
