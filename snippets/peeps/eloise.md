@@ -2,6 +2,8 @@
 
 # Eloise
 
+eloise.ws??
+
 ## Itinerary
 
 I plan on coming back to SLO Tuesday, spending the night, then going down to Joshua tree on Wednesday.

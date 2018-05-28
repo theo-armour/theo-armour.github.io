@@ -1,19 +1,12 @@
 
-Ryan Wold
+
 
 Alix wikipedia page
+Diana
+Alex Jenny
 
-Dental appointment
-eloise.ws??
 
-Denise Law
 
-popcorn soup ~ yummy!
-
-SilverScript Member #G6C825534 ~ 1-866-552-6106
-
-silverscript.com
-payments 1 866 237 7373
 
 Broadway Storage - pay
 
@@ -39,6 +32,7 @@ Broadway Storage - pay
 
 Alpha Vantage key ybd1
 
+popcorn soup ~ yummy!
 
 ### jaanga.com
 
@@ -68,6 +62,7 @@ https://admin.google.com/828-0000.com/AdminHome
 
 
 ### UCSF Willed Body ~ (415) 476-1981
+
 Administration Offices 513 Parnassus Avenue, S-1334
 
 Address?
@@ -99,7 +94,7 @@ Web sites where you can ask questions about diet and receive replies
 
 ## Email
 
-* Alix / Leah
+
 * JoAnn
 * Geri
 
@@ -147,7 +142,6 @@ Web sites where you can ask questions about diet and receive replies
 
 Amazon
 
-
 Amazon pantry
 
 * Diapers
@@ -177,6 +171,20 @@ Amazon pantry
 
 
 ## Done
+
+2018-05-23
+
+Denise Law
+Cynthia M
+BillB
+Charlotte
+* Alix / Leah
+
+SilverScript Member #G6C825534 ~ 1-866-552-6106
+
+silverscript.com ~ payments 1 866 237 7373
+
+
 
 * Isabelle: letter to Notaire
 * new checks

@@ -1,6 +1,31 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+Song of Tony
+
+With apologies to the first lin of Wlat Whitmans' 'Song of Myself'
+
+I celebrate Tony
+
+and sing tony
+
+I drink with Tony
+
+and think Tony
+
+I read Tony
+
+and rhyme Tony
+
+I hear Tony
+
+and growl Tony
+
+I like Tony
+
+and am Tony
+
+
 
 ## 2018-01-11
 
