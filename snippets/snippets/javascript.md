@@ -699,12 +699,12 @@ console.log( thing );
 
 
 
-## File Open
+## Input Type File Open
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
-
-				'<h3>file reader</h3>' +
-				'<p><input type=file id=inpFile onchange=openFile(this); ></p>' +
-				'<textarea id=textArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
+		'<h3>file reader</h3>' +
+		'<p><input type=file id=inpFile onchange=openFile(this); accept = '.rad, .res, .pts' multiple ></p>' +
+		'<textarea id=textArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
 
 
 
