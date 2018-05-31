@@ -28,7 +28,6 @@ Click 'Show fps statistics' to see how many frames per second your computer is g
 
 ### GEOMETRY / PlaneBufferGeometry
 
-
 PlaneGeometry(width, height, widthSegments, heightSegments)
 starts at top / left and goes right and down
 

@@ -1,10 +1,11 @@
 
 https://en.wikipedia.org/w/index.php?title=List_of_most-viewed_YouTube_videos&action=edit&section=3
 
-===Further reading===
-{{refbegin}}
-* {{cite web |first=Rob |last=Walker |title=On YouTube, Amateur Is the New Pro |url=https://www.nytimes.com/2012/07/01/magazine/on-youtube-amateur-is-the-new-pro.html |website=[[The New York Times]] |date=June 28, 2012 |accessdate=March 26, 2017}}
-{{refend}}
+## Further reading
+
+	{{refbegin}}
+	* {{cite web |first=Rob |last=Walker |title=On YouTube, Amateur Is the New Pro |url=https://www.nytimes.com/2012/07/01/magazine/on-youtube-amateur-is-the-new-pro.html |website=[[The New York Times]] |date=June 28, 2012 |accessdate=March 26, 2017}}
+	{{refend}}
 
 
 {{cite AV media | people=Fouladkar, Assad (Director) | date=May 15, 2003 | title=Lamma hikyit Maryam | trans-title = When Maryam Spoke Out | medium=Motion picture | location=Lebanon | publisher=Fouladkar, Assad}}
