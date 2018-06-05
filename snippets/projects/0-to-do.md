@@ -1,15 +1,23 @@
 
-
+Donations
 
 Alix wikipedia page
+
+Bill B ~ Diana
+Lent
+
+Olivier
+Bob I
+David
+
+
+Taxes Josh
+Broadway Storage - pay
+Drugstore
+
 Diana
 Alex Jenny
-
-
-
-
-Broadway Storage - pay
-
+Bill B ~ Fogg
 
 ### taxes / Don Shaw / Marcia / HR Block / Cristina
 
