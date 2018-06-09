@@ -1037,21 +1037,24 @@ Also: THREE.Math.degToRad https://threejs.org/docs/#api/math/Math
 
 ### Spherical coordinates
 
-	function convertPosition( lat, lon, radius ) {
-		var rc =  radius * cos( lat );
-		return new THREE.Vector3( rc * cos( lon), radius * sin( lat ), rc * sin( lon) );
-	}
-
-
 https://threejs.org/docs/#api/math/Spherical
 
+		phi - polar angle from the y (up) axis. Default is 0.
+		theta - equator angle around the y (up) axis. Default is 0.
+
+		spherical = new THREE.Spherical( radius : Float, phi : Float, theta : Float );
 		spherical = new THREE.Spherical().setFromVector3 ( new THREE.Vector3( 1, 1, 1 ) );
-		vector = new THREE.Vector3().setFromSpherical ( spherical )
+
+		vector = new THREE.Vector3().setFromSpherical ( spherical );
 		mesh.position.setFromSpherical( spherical );
 		mesh.rotation.setFromVector3( vector );
 
 
 
+	function convertPosition( lat, lon, radius ) {
+		var rc =  radius * cos( lat );
+		return new THREE.Vector3( rc * cos( lon), radius * sin( lat ), rc * sin( lon ) );
+	}
 
 
 	var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
