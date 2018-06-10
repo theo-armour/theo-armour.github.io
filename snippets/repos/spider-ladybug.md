@@ -33,6 +33,28 @@ and conjugating quaternions / https://en.wikipedia.org/wiki/Quaternion#Conjugati
 
 ## Change Log
 
+### 2018-06-09
+
+gbXML Viewer Sun Range Next Generation
+
+'Aragog' gbXML Viewer currently has the ability to depict a Sun range for any date of the year with a maximum of 16 Suns in any rendering.
+
+The current results are moderately acceptable but in no way compare with professional tools such as [Radiance]( https://www.radiance-online.org/). The objective of the current exercise
+
+* Depict the shadows for a gbXML or Radiance .rad files given any reasonable number of Sun positions
+* Produce results that are reproducible abd verifiable
+* Do all this in a manner that is fast, easy and simple
+
+There are two parts to the solition
+* Draw the shadows on the ground
+* Draw the shade and shadows on the building
+
+We are currently tackling the first part. Good progress is being made. So here are some first visual results
+
+
+
+
+
 ### 2018-04-15
 
 REP
