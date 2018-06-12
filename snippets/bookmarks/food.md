@@ -19,6 +19,7 @@ https://www.amazon.com/Wickedly-Prime-Organic-Roasted-Flavored/dp/B01GIUFJCE/ref
 
 
 ### Bragg
+father married the daughter-in-law etc
 
 
 ## Beverage
@@ -30,5 +31,7 @@ vinegar drinks are goo
 * 20ml apple cider vinegar
 * Dash of Sriracha
 * Dollop of ginger paste
+
+popcorn in soup is good
 
 
