@@ -54,9 +54,9 @@
 	</p>
 
 	<p>
-			<a href="
-				javascript:t='';c=new%20Array('00','33','66','99','CC','FF');for(i=0;i<6;i++){t+='<table%20width=100%>';for(j=0;j<6;j++){t+='<tr>';for(k=0;k<6;k++){L=c[i]+c[j]+c[k];t+='<td%20bgcolor='+L+'>'+L}t+='</tr>'}t+='</table>'};with(document){write(t);void(close())}
-			">216 colors</a>
+		<a href="
+			javascript:t='';c=new%20Array('00','33','66','99','CC','FF');for(i=0;i<6;i++){t+='<table%20width=100%>';for(j=0;j<6;j++){t+='<tr>';for(k=0;k<6;k++){L=c[i]+c[j]+c[k];t+='<td%20bgcolor='+L+'>'+L}t+='</tr>'}t+='</table>'};with(document){write(t);void(close())}
+		">216 colors</a>
 	</p>
 
 	<p>
