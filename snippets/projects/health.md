@@ -1,5 +1,10 @@
 
 
+2018-06-11
+
+radiology 415 353 2573
+
+
 One DAY before procedure:
 Do not take any fiber supplements (for example, no Metamucil, Fibercon, Citrucel, Konsyl or similar fiber agents)
 Do NOT take any food or drinks that are red or purple

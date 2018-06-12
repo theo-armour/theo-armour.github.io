@@ -3,6 +3,9 @@ Donations
 
 Alix wikipedia page
 
+Dr Martin
+Dr derma
+
 Bill B ~ Diana
 Lent
 
@@ -13,7 +16,6 @@ David
 
 Taxes Josh
 Broadway Storage - pay
-Drugstore
 
 
 ***
@@ -152,6 +154,10 @@ Web sites where you can ask questions about diet and receive replies
 ## To buy
 
 Amazon
+* Omeprazole
+* chamois
+* diapers
+* protein powder
 
 Amazon pantry
 
