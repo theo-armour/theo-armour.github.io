@@ -14,9 +14,6 @@
 
 		}
 
-		let txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
-
-
 		divTooToo.innerHTML =
 
 `
@@ -42,15 +39,13 @@
 
 	<p><a href="javascript:(function(){window.open('data:text/html, <html contenteditable style=padding:10%; ></html>')})()" >open new editable page</a></p>
 
-
 	<p>
-			<a href='javascript:(function(){
+		<a href='javascript:(function(){
 			var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");
 			for(;n>0;n--){var i=t[n-1].getAttribute("href");t[n-1]!=null&amp;&amp;i!=null&amp;&amp;i.charAt(0)==="h"&amp;
 			&amp;i.indexOf(window.location.hostname)==-1&amp;
 			&amp;e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})()
-			'>Get all external Links
-			</a>
+		'>Get all external Links</a>
 	</p>
 
 	<p>
@@ -68,13 +63,14 @@
 			for(j=0;j<c;j++){t=i+(j*b);
 			if(t<=255)a+=C(t);}a+='</tr>';}a+='</table>';var W=open('','','width=500,height=600,left=0,top=0,resizable,scrollbars');
 			void(W.document.write(a));
-			">ascii table</a>
+		">ascii table</a>
 	</p>
 
-	<p><a href="file:///C:/" title="copy links/paste&go/or use local" >C:/</a> - <a href="file:///D:/" title="copy links/paste&go/or use local" >D:/</a><br>
+	<p>
+		<a href="file:///C:/" title="copy links/paste&go/or use local" >C:/</a> - <a href="file:///D:/" title="copy links/paste&go/or use local" >D:/</a><br>
+		<a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/bookmarklets/theo-armour-bookmarklet.js" target="_blank">theo-armour-bookmarklet.js</a>
 		<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarks/" target="_blank">bookmarks</a><br>
 		<a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/bookmarks/food.md" target="_blank" >food.md</a>
-
 	</p>
 
 
