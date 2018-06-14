@@ -1,10 +1,12 @@
 
-Donations
+
 
 Alix wikipedia page
 
-Dr Martin
+Dr Kattah appt
+Dr Martin <<
 Dr derma
+Dr Han
 
 Bill B ~ Diana
 Lent
@@ -23,6 +25,9 @@ sps syracuse bbn
 Diana
 Alex Jenny
 Bill B ~ Fogg
+call denise laws
+Alliso
+email rayn
 
 ### taxes / Don Shaw / Marcia / HR Block / Cristina
 
