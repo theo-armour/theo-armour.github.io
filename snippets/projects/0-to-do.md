@@ -1,6 +1,8 @@
 
 
-
+amazon diapers etc
+phone case
+mouse
 Alix wikipedia page
 
 Dr Kattah appt
