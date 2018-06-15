@@ -1,8 +1,9 @@
 
-Jacqueline Hultner
+
 amazon diapers etc
 phone case
-mouse
+pixelbook or samsung or wait?
+
 Alix wikipedia page
 
 Dr Kattah appt
@@ -26,6 +27,8 @@ Broadway Storage - pay
 
 
 ***
+mouse
+Jacqueline Hultner
 sps syracuse bbn
 Diana
 Alex Jenny
