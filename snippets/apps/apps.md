@@ -76,6 +76,7 @@ http://jsfiddle.net/qGPTT/3/embedded/
 
 Paste > Shift-Ins
 
+
 ## Windows 8
 
 Turn off Thumbs.db

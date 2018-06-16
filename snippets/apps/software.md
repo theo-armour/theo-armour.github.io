@@ -92,7 +92,7 @@ Browser version better than app:
 * has autosave - that makes slightly annoying beep
 * all the edit features in browser but not in app
 App version
-* Has annying horizontal sliding menus
+* Has annoying horizontal sliding menus
 
 
 

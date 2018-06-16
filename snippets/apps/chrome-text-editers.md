@@ -38,6 +38,9 @@ https://github.com/GoogleChrome/text-app/issues
 197 KN
 
 ## TextDown
-Saves to Googel Drive
+Saves to Google Drive
 
 Full and powerful markdown editor
+
+
+## StackEdit
