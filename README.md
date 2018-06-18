@@ -1,25 +1,14 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/#README.md "View file as a web page." ) </span>
 
+<div><input type=button onclick="window.location.href='https://github.com/ladybug-tools/spider/tree/master/solar-well/sun-range-bitmap/README.md'"
+value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ><div>
 
 # [Theo Armour]( #README.md )
 
 
-<div class=divMenuBar >
-
-<a href = "#README.md">Read Me</a>
-<a href = "#https://rawgit.com/theo-armour/theo-armour.github.io/master/plugin/view-github-issues.html">News</a>
-<a href = "#https://rawgit.com/theo-armour/theo-armour.github.io/master/plugin/view-github-events.html">Recent Events</a>
-<a href = "#https://rawgit.com/theo-armour/theo-armour.github.io/master/plugin/view-github-repos.html">Active Repos</a>
-<a href = "#https://rawgit.com/theo-armour/theo-armour.github.io/master/plugin/view-rss.html">RSS</a>
-<a href = "#pages2/contact.md">Contact</a>
-<a href = "#pages2/about.md">About</a>
-
-</div>
-
-
 ## concept
 
-This is the eighth significant update to the theo-armour.github.io. It the fastest, most quickly built to date - taking less than a day to build.
+This is the ninth significant update to the theo-armour.github.io.
 
 
 ## mission
@@ -41,9 +30,9 @@ Thinking out loud as I put the package together:
 
 * Snippets of code. I would be lost without my snippets.
 
-* Easy Peasy Pleasy. Writing code for beginners is a good thing. If you can explain it to student, then why go further?
+* Easy Peasy Pleasey. Writing code for beginners is a good thing. If you can explain it to student, then why go further?
 
-* Self-garbage collecting. When we talk about about cleaning up the memery on a computer, we call it 'garbage collection'. We humans need to do it too. We need to erase all the established practices, well-known 'gotchas' ans rules-of-thumb. Contemporary computing is moving so fast that every thing we do from habit can and should be questioned. Those who code from history are doomed.
+* Self-garbage collecting. When we talk about about cleaning up the memory on a computer, we call it 'garbage collection'. We humans need to do it too. We need to erase all the established practices, well-known 'gotchas' ans rules-of-thumb. Contemporary computing is moving so fast that every thing we do from habit can and should be questioned. Those who code from history are doomed.
 
 * Just-in-time-Learning
 
@@ -59,7 +48,7 @@ https://glitch.com/edit/#!/theo
 
 ## To Do
 
-* 2017-08-20 ~ Fix view gists isues
+* 2017-08-20 ~ Fix view gists issues
 * 2017-08-20 ~ Add 3D splash
 * 2017-08-20 ~ Remove horizontal scroll bar
 * 2017-08-20 ~ Smaller image icon
