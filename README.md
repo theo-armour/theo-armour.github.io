@@ -8,7 +8,11 @@ value="You are now in a GitHub web page view - Click this button to view this re
 
 ## concept
 
-This is the ninth significant update to the theo-armour.github.io.
+This is the ninth significant update to theo-armour.github.io. None of them have been much good because I'm almost always anywhere but here.
+
+Here is a snapshot of what I - and some of my friends - have been playing with:
+
+[GubGub R2 for Theo Armour]( https://theo-armour.github.io/ta2.html )
 
 
 ## mission
