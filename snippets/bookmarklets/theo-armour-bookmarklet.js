@@ -54,6 +54,9 @@
 		">216 colors</a>
 	</p>
 
+	<p><a href="
+	javascript:inp=document.body.appendChild(document.createElement('input'));inp.value='thikkng';inp.select();document.execCommand('copy');delete inp;
+	">do it</a> </p>
 	<p>
 		<a href="
 			javascript:function C(v){return '<td>'+v+'</td><td>'+((v>>4).toString(16)+(v&15).toString(16)).toUpperCase()+'</td><td bgcolor=DDDDDD>&'+'#'+v+';
@@ -71,7 +74,7 @@
 		<a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/bookmarklets/theo-armour-bookmarklet.js" target="_blank">theo-armour-bookmarklet.js</a><br>
 		<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarks/" target="_blank">bookmarks</a><br>
 		<a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/bookmarks/food.md" target="_blank" >food.md</a><br>
-	
+
 		<a href="https://github.com/theo-armour/qdata/blob/master/README.md" target="_blank">qdata</a>
 	</p>
 
