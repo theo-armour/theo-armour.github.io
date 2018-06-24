@@ -6,7 +6,7 @@
 ### Energy Analysis
 
 
-#=epw
+### epw
 
 
 ## Contacts
@@ -45,7 +45,7 @@ The current results are moderately acceptable but in no way compare with profess
 * Produce results that are reproducible abd verifiable
 * Do all this in a manner that is fast, easy and simple
 
-There are two parts to the solition
+There are two parts to the solution
 * Draw the shadows on the ground
 * Draw the shade and shadows on the building
 

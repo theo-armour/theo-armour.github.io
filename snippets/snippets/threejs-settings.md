@@ -255,11 +255,11 @@ linewidth -- (optional) width of the arrow lines. Default is 1.
 
 	function toggleBackgroundGradient() {
 
-// 2016-07-18
+// 2018-06-23
 
-		var col = function() { return ( 0.5 + 0.5 * Math.random() ).toString( 16 ).slice( 2, 8 ); };
-		var pt = function() { return ( Math.random() * window.innerWidth ).toFixed( 0 ); }
-		var image = document.body.style.backgroundImage;
+		const col = function() { return ( 0.5 + 0.5 * Math.random() ).toString( 16 ).slice( 2, 8 ); };
+		const pt = function() { return ( Math.random() * window.innerWidth ).toFixed( 0 ); }
+		const image = document.body.style.backgroundImage;
 
 		document.body.style.backgroundImage = image ? '' : 'radial-gradient( circle farthest-corner at ' +
 			pt() + 'px ' + pt() + 'px, #' + col() + ' 0%, #' + col() + ' 50%, #' + col() + ' 100% ) ';
