@@ -184,6 +184,27 @@ https://www.w3schools.com/css/css_howto.asp
 
 https://www.w3schools.com/w3css/w3css_color_themes.asp
 
+
+
+### CSS Varaibles
+
+* https://www.w3schools.com/css/css3_variables.asp
+* https://developer.mozilla.org/en-US/docs/Web/CSS/var
+* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+* https://stackoverflow.com/questions/36088655/accessing-a-css-custom-property-aka-css-variable-through-javascript
+
+
+var bodyStyles = window.getComputedStyle(document.body);
+var fooBar = bodyStyles.getPropertyValue('--foo-bar'); //get
+
+document.body.style.setProperty('--foo-bar', newValue);//set
+
+
+// setter
+document.documentElement.style.setProperty('--myVariable', 'blue');
+// getter
+document.documentElement.style.getPropertyValue('--myVariable');
+
 # HTML
 
 
@@ -208,7 +229,7 @@ div {
 }
 
 
-### Flexbox
+### CSS Flexbox
 
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 * https://www.w3schools.com/css/css3_flexbox.asp
