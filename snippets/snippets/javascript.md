@@ -288,8 +288,14 @@ a.toLocaleString()
 a.unshift([item]) Prepends items to the start of the array.
 
 
+### ARRAY Duplicates
 
-### Splitting to Float
+* https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+
+
+arr = arr.filter( (value, index, array) => array.indexOf (value) == index );
+
+### ARRAY Split to Float
 
 		elevations = data.split( ',' ).map( function( item ) { return parseFloat( item ); } );
 		txtline = lines[ i ].split( ',' ).map( parseFloat );
@@ -298,7 +304,7 @@ a.unshift([item]) Prepends items to the start of the array.
 
 
 
-### Min/Max
+### ARRAY Min/Max
 
 		var max_of_array = Math.max.apply( Math, array);
 		var min_of_array = Math.min.apply( Math, array);
@@ -337,20 +343,6 @@ a.unshift([item]) Prepends items to the start of the array.
 	}
 
 
-### Array Random
-
-		get_random = function ( list ) {
-
-			return list[ Math.floor( ( Math.random() * list.length ) ) ];
-
-		}
-
-		get_random( [ 2, 3, 5 ] )
-
-		var list = [1,2,3];
-
-		console.log( list.sort( function() { Math.random() - 0.5 } ) ); // [2,1,3]
-
 
 
 ### Array Multi Dim
@@ -370,6 +362,20 @@ a.unshift([item]) Prepends items to the start of the array.
 
 see cookbook/array/array-pop-while-switch
 
+
+### Array random
+
+		get_random = function ( list ) {
+
+			return list[ Math.floor( ( Math.random() * list.length ) ) ];
+
+		}
+
+		get_random( [ 2, 3, 5 ] )
+
+		var list = [1,2,3];
+
+		console.log( list.sort( function() { Math.random() - 0.5 } ) ); // [2,1,3]
 
 
 
@@ -525,7 +531,7 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 
 ## Details
 
-function switchOpen() {
+function toggleOpen() {
 
 	if (details.getAttribute('open')) {
 
@@ -1242,7 +1248,7 @@ Number( space.area.toFixed(4) )
 
 
 
-### SWITCH
+### SWITCH CASE
 
 // http://www.w3schools.com/js/js_switch.asp
 

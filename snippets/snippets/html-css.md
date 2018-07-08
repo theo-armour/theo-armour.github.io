@@ -326,6 +326,12 @@ https://www.w3schools.com/jsref/met_range_stepdown.asp
 </select>
 
 
+### ICONS
+
+* https://commons.wikimedia.org/wiki/Category:Icons_by_subject < hundreds available
+* https://github.com/icons8/flat-color-icons/tree/master/svg
+* See also mindmap readme
+
 
 ### IFRAME
 

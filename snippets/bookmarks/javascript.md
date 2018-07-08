@@ -29,3 +29,11 @@ http://www.communitybuildingguide.com/
 file:///C:/
 
 file:///D:/
+
+## JavaScript Fun Tip Collections
+
+15 HTML element methods you’ve potentially never heard of
+https://hackernoon.com/15-html-element-methods-youve-potentially-never-heard-of-fc6863e41b2a
+
+
+

@@ -471,8 +471,17 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 		scene.add( new THREE.VertexNormalsHelper( mesh, -50, col ) );
 		scene.add( new THREE.VertexTangentsHelper( mesh, 50, col ) );
 
+#### arrows
 
+		scene.add( new THREE.ArrowHelper( dir, origin, length, hex ) );
 
+		ArrowHelper(dir : Vector3, origin : Vector3, length : Number, hex : Number, headLength : Number, headWidth : Number )
+		dir -- direction from origin. Must be a unit vector.
+		origin -- Point at which the arrow starts.
+		length -- length of the arrow. Default is 1.
+		hex -- hexadecimal value to define color. Default is 0xffff00.
+		headLength -- The length of the head of the arrow. Default is 0.2 * length.
+		headWidth -- The length of the width of the arrow. Default is 0.2 * headLength.
 
 ### Images
 
