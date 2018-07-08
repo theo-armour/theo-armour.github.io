@@ -8,7 +8,7 @@ value='You are now in a GitHub web page view - Click this button to view this re
 <!--
 <iframe src=https://theo-armour.github.io/snippets/0-templates/basic-html.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 
-## Full Screen: [https://]( https://theo-armour.github.io/index.html )
+## Full Screen: [https://]( https://theo-armour.github.io/snippets/0-templates/index.html )
 -->
 
 
