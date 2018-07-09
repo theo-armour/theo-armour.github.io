@@ -8,7 +8,9 @@
 https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_source=javascriptweekly&utm_medium=email
 
 
-# Easily create an HTML editor with DesignMode and ContentEditabledocument.body.style.color
+
+
+# Easily create an HTML editor with DesignMode and ContentEditable document.body.style.color
 
 https://hackernoon.com/easily-create-an-html-editor-with-designmode-and-contenteditable-7ed1c465d39b#.hh7gdokty
 
