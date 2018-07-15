@@ -89,6 +89,16 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://www.w3schools.com/css/default.asp
 
 
+
+
+element.getBoundingClientRect()
+https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+
+window.getComputedStyle()
+
+
+getComputedStyle
+
 ### CSS BORDERS
 
 outline: none;
@@ -184,7 +194,10 @@ https://www.w3schools.com/css/css_howto.asp
 
 https://www.w3schools.com/w3css/w3css_color_themes.asp
 
+### CSS Font-size
 
+* em is relative to the font-size of its direct or nearest parent,
+* rem is relative to the html (root) font-size.
 
 ### CSS Varaibles
 
@@ -204,6 +217,11 @@ document.body.style.setProperty('--foo-bar', newValue);//set
 document.documentElement.style.setProperty('--myVariable', 'blue');
 // getter
 document.documentElement.style.getPropertyValue('--myVariable');
+
+
+
+
+**********
 
 # HTML
 
@@ -357,6 +375,19 @@ sandbox = 'allow-scripts'
 onload
 
 		ifrThree.contentWindow.location.reload(); // true forces all assets to reload
+
+
+
+### Images IMG
+
+Random image
+
+* https://commons.wikimedia.org/wiki/Special:Random/Image
+* https://picsum.photos/
+* https://medium.com/quick-code/how-to-quickly-generate-a-random-gallery-of-images-from-an-unsplash-collection-in-javascript-4ddb2a6a4faf
+* https://unsplash.com/
+
+
 
 ### META
 

@@ -1,9 +1,19 @@
 
 
 
+### Table of Basic PowerShell Commands
+
+https://blogs.technet.microsoft.com/heyscriptingguy/2015/06/11/table-of-basic-powershell-commands/
+
+
+
+
 https://lifehacker.com/how-to-turn-any-part-of-your-windows-desktop-into-a-gif-1825787640
 
 Problem Steps Recorder. Windows key PSR
+
+
+
 
 2017-07-07 ~
 
