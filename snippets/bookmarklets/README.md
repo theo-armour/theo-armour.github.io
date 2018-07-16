@@ -27,6 +27,9 @@ const script=document.head.appendChild( document.createElement( 'script' ) );
 script.src='snippets/bookmarklets/theo-armour-bookmarklet.js'; } )()" >
 theo armour bookmarklet local</a>
 </p>
+
+
+
 ## Concept
 
 
