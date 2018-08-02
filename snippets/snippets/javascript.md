@@ -1083,6 +1083,7 @@ Conditional Operator
 		fileName = heightMap.src.split( '/' ).pop().toLowerCase();
 		var extension = fileName.split( '.' ).pop().toLowerCase();
 
+SEE spider get read me files
 
 >>> /xxx(.*?)xxx/gi
 

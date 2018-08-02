@@ -28,7 +28,8 @@ For using OpenGL in Chrome, you need to start it with a command line option:
 
 ## Debugger
 
-debugger;
+> debugger;
+
 When the debugger is invoked, execution is paused at the debugger statement. It is like a breakpoint in the script source.
 
 https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.2i0llw1ym
@@ -36,8 +37,19 @@ https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-ex
 
 ## Control P
 
-* See dropown list of all files
+* See dropdown list of all files
 
+
+## Local Overrides
+
+* Developer console must be open
+* find css file
+* Click 'Sources' tab > 'Overrides' tab
+* 'Enable Local Overrides' must be checked
+* right-click file title > 'Save overrides'
+
+* https://developers.google.com/web/updates/2018/01/devtools
+* https://glebbahmutov.com/blog/local-overrides/
 
 ## 1. Select DOM Elements
 
@@ -45,7 +57,6 @@ https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-ex
 $(‘tagName’) $(‘.class’) $(‘#id’) and $(‘.class #id’)
 
  $$(‘.className’) will give you all the elements that have the class className, and $$(‘.className’)[0]and $$(‘.className’)[1]
-
 
 
 2. Convert Your Browser Into An Editor
@@ -81,6 +92,7 @@ console.timeEnd( 'timer 1' ); //Ends the timer with Label - myTime
 
 //Output - myTime:12345.00 ms
 
+
 ## 6. Arrange the Values of a Variable into a Table
 
 var myArray=[{a:1,b:2,c:3},{a:1,b:2,c:3,d:4},{k:11,f:22},{a:1,b:2,c:3}]
@@ -101,6 +113,7 @@ console.dir(document.body);
 
 9. Retrieve the Value of your Last Result
 $_
+
 
 10. Clear the Console and the Memory
 clear{}

@@ -1,4 +1,8 @@
 
+
+New ones
+
+
 https://github.com/huyingjie/Checklist-Checklist
 
 https://gizmodo.com/new-technology-were-actually-excited-about-for-2018-1821514332
@@ -11,14 +15,21 @@ The Build Order Every Startup Should Follow To Become Successful
 https://hackernoon.com/the-build-order-every-startup-should-follow-to-become-successful-635e7ed00fa3
 
 
+
+
+
 2017-11-19
 
 * xmarks did a job on my bookmarks
 * it says I have 27,000
 
 
+# Bookmark Editor
 
 
+
+
+# Bookmark Categories
 
 ## C
 
@@ -49,13 +60,7 @@ articles of interest
 Three.js
 
 
-New ones
 
-How, if You’re a Man, to Deal With the Fact That You’re Probably Trash
-https://verysmartbrothas.theroot.com/how-if-you-re-a-man-to-deal-with-the-fact-that-you-re-1820410857
-
-
-https://www.desmos.com/calculator
 
 
 

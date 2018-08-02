@@ -10,23 +10,34 @@ https://skillet.lifehacker.com/ingredients-that-add-flavor-without-adding-salt-1
 
 ## Seaweed
 
-https://www.amazon.com/b/ref=wpshort?ie=UTF8&node=13854994011
+* https://www.amazon.com/b/ref=wpshort?ie=UTF8&node=13854994011
+* https://www.amazon.com/Wickedly-Prime-Organic-Roasted-Seaweed/dp/B0722W7DDD/ref=lp_13854994011_1_18_s_it?
+* https://www.amazon.com/Wickedly-Prime-Organic-Roasted-Flavored/dp/B01GIUFJCE/ref=lp_13854994011_1_21_m
 
-https://www.amazon.com/Wickedly-Prime-Organic-Roasted-Seaweed/dp/B0722W7DDD/ref=lp_13854994011_1_18_s_it?
-https://www.amazon.com/Wickedly-Prime-Organic-Roasted-Flavored/dp/B01GIUFJCE/ref=lp_13854994011_1_21_m
+## Apple Cider is good
 
-## Vendors
+Vendor / Bragg
+* father Bragg married the daughter-in-law etc
+
+Reviews
+* http://bragg.com/products/bragg-organic-apple-cider-vinegar.html
+* http://www.naturallivingideas.com/drinking-apple-cider-vinegar-benefits/
+* https://www.healthline.com/nutrition/6-proven-health-benefits-of-apple-cider-vinegar#section1
+
+Side effects
+* Could cause diarrhea / WebMD
 
 
-### Bragg
-father married the daughter-in-law etc
+## Cereal
 
+Horseradish on Bran Buds with high-protein almond milk- very interesting
 
-## Beverage
+## Beverages
+
 
 broths are good
 
-vinegar drinks are goo
+vinegar drinks are good
 
 * 20ml apple cider vinegar
 * Dash of Sriracha

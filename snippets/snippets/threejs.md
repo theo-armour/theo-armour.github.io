@@ -813,16 +813,20 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 
 
 
-#### Quick Shape
+#### Quick Shapes
+
+function getShape( points ) {
 
 		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
-		const vectors = [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
-		const shape = new THREE.Shape( vectors );
+		points = points || [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
+		const shape = new THREE.Shape( points );
 		const geometry = new THREE.ShapeGeometry( shape );
 
-		const material = new THREE.MeshNormalMaterial();
+		const material = new THREE.MeshNormalMaterial( { side: 2 } );
 		const mesh = new THREE.Mesh( geometry, material );
-		scene.add( mesh );
+		return mesh;
+
+}
 
 
 
@@ -916,6 +920,13 @@ THREE.ShapeUtils.area( vertices ).toLocaleString();
 	}
 
 
+
+### SPRITE
+
+
+var spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000 } );
+var sprite = new THREE.Sprite( spriteMaterial );
+scene.add( sprite );
 
 
 ### TEXTURES

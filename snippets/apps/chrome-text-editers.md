@@ -44,3 +44,6 @@ Full and powerful markdown editor
 
 
 ## StackEdit
+* See own file here in apps
+* Works in tab
+* Good

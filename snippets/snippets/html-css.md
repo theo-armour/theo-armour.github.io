@@ -378,7 +378,7 @@ onload
 
 
 
-### Images IMG
+### IMG Images IMG
 
 Random image
 
@@ -386,6 +386,34 @@ Random image
 * https://picsum.photos/
 * https://medium.com/quick-code/how-to-quickly-generate-a-random-gallery-of-images-from-an-unsplash-collection-in-javascript-4ddb2a6a4faf
 * https://unsplash.com/
+
+
+
+
+## Emoji
+
+For GitHub Pages sites built on GitHub.com, emoji images are served from the GitHub.com CDN, with a base URL of https://assets-cdn.github.com, which results in emoji image URLs like https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png.
+
+Complete list of github markdown emoji markup
+* https://gist.github.com/rxaviers/7360908 -
+* https://assets-cdn.github.com/images/icons/emoji/octocat.png
+* https://www.webpagefx.com/tools/emoji-cheat-sheet/
+
+Unicode
+* https://api.github.com/emojis
+	* https://platform.github.community/t/add-ability-to-query-raw-text-with-unicode-emojis/4603
+* https://yutannihilation.github.io/list_of_github_emojis/github_emojis.html
+
+Compare
+* https://emojipedia.org/
+
+Purposeful
+* https://github.com/dannyfritz/commit-message-emoji
+* https://gist.github.com/parmentf/035de27d6ed1dce0b36a
+
+More
+https://gist.github.com/endolith/157796
+
 
 
 

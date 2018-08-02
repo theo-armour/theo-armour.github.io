@@ -29,8 +29,14 @@ theo armour bookmarklet local</a>
 </p>
 
 
-
 ## Concept
+
+
+## Lessons learned
+
+* You cannot use window.open to fetch a web page and then apply new CSS to the freshly loaded pages
+	* It's a CORS thing
+
 
 
 ## Links of Interest

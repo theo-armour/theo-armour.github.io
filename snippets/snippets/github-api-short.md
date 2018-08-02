@@ -15,6 +15,7 @@ curl -i https://api.github.com/users/theo-armour
 ## Folder Contents
 
 * https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/2017-04-20';
+* https://api.github.com/repos/ladybug-tools/spider/contents/
 
 ## File Contents
 
@@ -34,7 +35,7 @@ download_url from file or tree
 * https://developer.github.com/v3/git/trees/
 
 * https://api.github.com/repos/jaanga/jaanga.github.io/git/trees/master?recursive=1
-
+* https://api.github.com/repos/ladybug-tools/spider/git/trees/master?recursive=1
 
 ## GrapQL
 
