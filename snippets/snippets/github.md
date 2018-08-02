@@ -1,4 +1,23 @@
-# Notes GitHub API
+
+
+
+
+## JavaScript
+
+* http://jsbeautifier.org/
+
+## Releases
+
+
+* https://help.github.com/categories/releases/
+* https://blog.github.com/2013-07-02-release-your-software/
+* https://stackoverflow.com/questions/38675829/how-to-create-releases-for-public-or-private-repository-in-github
+
+
+Tips
+* Right click on Latest Release and copy the URL to share it. The suffix of this URL is always /releases/latest.
+
+## Notes GitHub API
 
 * https://github.com/tiimgreen/github-cheat-sheet
 * https://github.com/blog/1647-viewing-yaml-metadata-in-your-documents
@@ -13,7 +32,7 @@ See also
 C:\Users\Theo\Dropbox\Public\git-repos\jaanga.github.io\cookbook-html\examples\github-api-rss\github-api.md
 
 
-Link to specific lines of source code:
+## Link to specific lines of source code:
 
 https://github.com/geoffmcl/map-test2/blob/gh-pages/nav.html#L247-L299
 
@@ -72,9 +91,6 @@ https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js
 <script src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js ></script>
 
 <script src="https://raw.github.com/mrdoob/three.js/r59/build/three.min.js"></script>
-
-
-
 
 
 
