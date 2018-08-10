@@ -455,21 +455,33 @@ sse load-walt-r1.html
 
 https://threejs.org/docs/#api/helpers/AxisHelper
 
-		let axisHelper = new THREE.AxisHelper( 50 );
-		scene.add( axisHelper );
+	let axisHelper = new THREE.AxisHelper( 50 );
+	scene.add( axisHelper );
 
-		scene.add( new THREE.BoxHelper( mesh ) );
+	scene.add( new THREE.BoxHelper( mesh ) );
 
-		var gridHelper = new THREE.GridHelper( size, step );
-		scene.add( gridHelper );
+	var gridHelper = new THREE.GridHelper( size, step );
+	scene.add( gridHelper );
 
-		scene.add( new THREE.WireframeHelper( mesh ) );
+	scene.add( new THREE.WireframeHelper( mesh ) );
 
-		var col = 0xffffff * Math.random();
-		scene.add( new THREE.EdgesHelper( mesh, -50, col ) );
-		scene.add( new THREE.FaceNormalsHelper( mesh, -50, col ) );
-		scene.add( new THREE.VertexNormalsHelper( mesh, -50, col ) );
-		scene.add( new THREE.VertexTangentsHelper( mesh, 50, col ) );
+	var col = 0xffffff * Math.random();
+	scene.add( new THREE.EdgesHelper( mesh, -50, col ) );
+	scene.add( new THREE.FaceNormalsHelper( mesh, -50, col ) );
+	scene.add( new THREE.VertexNormalsHelper( mesh, -50, col ) );
+	scene.add( new THREE.VertexTangentsHelper( mesh, 50, col ) );
+
+
+#### EDGES
+
+let geometry = new THREE.BoxBufferGeometry( 100, 100, 100 );
+let edgesGeometry = new THREE.EdgesGeometry( geometry );
+let edgesMaterial = new THREE.LineBasicMaterial( { color: 0xffffff } );
+let edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+
+let edges = new THREE.LineSegments( new THREE.EdgesGeometry( geometry ), new THREE.LineBasicMaterial( { color: 0xffffff } ) );
+scene.add( edges );
+
 
 #### arrows
 
@@ -482,6 +494,10 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 		hex -- hexadecimal value to define color. Default is 0xffff00.
 		headLength -- The length of the head of the arrow. Default is 0.2 * length.
 		headWidth -- The length of the width of the arrow. Default is 0.2 * headLength.
+
+
+
+
 
 ### Images
 

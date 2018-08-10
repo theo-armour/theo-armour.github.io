@@ -306,6 +306,7 @@ Use oninput: handles both mouse and touch
 	input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
 	input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
 
+
 	.floatright { float: right; }
 
 		'<output id=outRange >5</output><br>' +

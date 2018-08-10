@@ -1083,7 +1083,23 @@ Conditional Operator
 		fileName = heightMap.src.split( '/' ).pop().toLowerCase();
 		var extension = fileName.split( '.' ).pop().toLowerCase();
 
-SEE spider get read me files
+SEE spider / gbxml viewer / assets / get read me files
+
+function parseFile( text, pattern ){
+
+
+		const re = new RegExp( pattern, "gim" );
+		match = re.exec( text );
+		//console.log( 'match', match );
+
+		if ( match && match.length ) {
+
+			//divContents.innerText += match[ 0 ].slice( match[ 0 ].indexOf( '\n'), -3 );
+			divContents.innerText += '\n' + match[ 0 ].slice( 4, -3 );
+
+		}
+
+}
 
 >>> /xxx(.*?)xxx/gi
 
@@ -1145,6 +1161,11 @@ RegExp Modifiers
 		a = null;
 
 	}
+
+
+// UTF-16
+
+// https://stackoverflow.com/questions/27318715/blob-url-with-utf-16le-encoding
 
 
 ### setTimeout

@@ -2,9 +2,12 @@ Jaw-dropping software converts 360 video into 3D model for VR
 360rumors.com/2017/11/software-institut-pascal-converts-360-video-3d-model-vr.html
 
 
+# text
+
 ## Stats
 
 <a href="javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()" title="Mr.doob's Stats.js" >Show fps statistics</a>
+
 
 
 ## Help
@@ -23,6 +26,110 @@ Click 'Show fps statistics' to see how many frames per second your computer is g
 			'<p>Use one|two|three fingers to rotate|zoom|pan display in 3D<br>' +
 				'Or left|scroll|right with your pointing device</p>' +
 			'<p>Press Control-Shift-J|Command-Option-J to see if the JavaScript console reports any errors</p>' +
+
+
+
+## drawGroundGridAxis
+
+
+	drawGroundGridAxis();
+
+function drawGroundGridAxis() {
+
+// 2018-08-09 https://theo-armour.github.io/snippetssnippets/threejs-draw-things.md
+
+	const geometry = new THREE.BoxGeometry( 100, 100, 5 );
+	const material = new THREE.MeshNormalMaterial();
+	const ground = new THREE.Mesh( geometry, material );
+	ground.position.set( 0, 0, -2.5 );
+
+	const edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
+	const edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
+	const edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+	ground.add( edges );
+
+	scene.add( ground );
+
+	const gridHelper = new THREE.GridHelper( 100, 10 );
+	gridHelper.rotation.x = Math.PI / 2;
+	scene.add( gridHelper );
+
+	const axesHelper = new THREE.AxesHelper( 50 );
+	scene.add( axesHelper );
+
+}
+
+
+
+## drawMultipleMeshes
+
+
+	drawMultipleMeshes();
+
+function drawMultipleMeshes( count = 50 ) {
+
+// 2018-08-09 / https://theo-armour.github.io/snippetssnippets/threejs-draw-things.md
+
+	const meshes = new THREE.Group();
+	//const geometry = new THREE.BoxGeometry( 10, 10, 10 );
+	const geometry = new THREE.SphereBufferGeometry( 5 );
+	const material = new THREE.MeshNormalMaterial();
+
+	for ( let i = 0; i < count; i++) {
+
+		//const material = new THREE.MeshPhongMaterial( { color: 0xffffff * Math.random(), opacity: 0.5, transparent: true } );
+		const mesh = new THREE.Mesh( geometry, material );
+		mesh.position.set( 100 * Math.random() - 50, 100 * Math.random() - 50, 50 * Math.random() );
+		mesh.rotation.set( 6.3 * Math.random(), 1.57 * Math.random(), 3.14 * Math.random() );
+		mesh.name = 'cube-' + i;
+		//mesh.castShadow = true
+		//mesh.receiveShadow = true;
+
+
+		const edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
+		const edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 5 } );
+		const edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+		mesh.add( edges ); // add wireframe as a child of the parent mesh
+
+		meshes.add( mesh );
+
+	}
+
+	// return meshes;
+	scene.add( meshes);
+
+}
+
+
+### GEOMETRY / Multiple
+
+	function addGeometry() {
+
+		var geometries = [
+
+		new THREE.BoxGeometry( 10, 10, 10 ),
+		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
+		new THREE.DodecahedronGeometry( 05 ),
+		new THREE.SphereGeometry( 5, 12, 8 ),
+		new THREE.TorusGeometry( 10, 5 ),
+
+		];
+
+
+		for ( var j = 0; j < 250; j++ ) {
+
+			var geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
+			var material = new THREE.MeshNormalMaterial();
+
+			var mesh = new THREE.Mesh( geometry, material );
+			mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
+			mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
+			mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
+			scene.add( mesh );
+
+		}
+
+	}
 
 
 
@@ -207,85 +314,11 @@ starts at top / left and goes right and down
 
 
 
-## GEOMETRY / Cubes
-
-		cubes = drawCubes();
-		scene.add( cubes )
-
-	}
 
 
 
-	function drawCubes() {
-
-		const cubes = new THREE.Object3D();
-		let geometry, material, mesh, edges;
-
-		geometry = new THREE.BoxGeometry( 10, 10, 10 );
-
-		for ( let i = 0; i < 50; i++ ) {
-
-			material = new THREE.MeshPhongMaterial( {
-				color: 0xffffff * Math.random(),
-				emissive: 0xffffff * Math.random(),
-				opacity: Math.random(),
-				specular: 0xffffff * Math.random(),
-//				shading: THREE.FlatShading,
-//				shininess: 10,
-				transparent: true
-			} );
-
-			material = new THREE.MeshNormalMaterial();
-
-			mesh = new THREE.Mesh( geometry, material );
-			mesh.position.set( 100 * Math.random() - 50, 100 * Math.random() - 50, 100 * Math.random() - 50 );
-			mesh.rotation.set( 6.3 * Math.random(), 1.57 * Math.random(), 3.14 * Math.random() );
-			mesh.castShadow = true;
-			mesh.receiveShadow = true;
-			cubes.add( mesh );
 
 
-			geometryEdge = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
-			material = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 1 } );
-			edges = new THREE.LineSegments( geometryEdge, material );
-			mesh.add( edges ); // add wireframe as a child of the parent mesh
-
-		}
-
-		return cubes;
-
-	}
-
-
-### GEOMETRY / Multiple
-
-	function addGeometry() {
-
-		var geometries = [
-
-		new THREE.BoxGeometry( 10, 10, 10 ),
-		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
-		new THREE.DodecahedronGeometry( 05 ),
-		new THREE.SphereGeometry( 5, 12, 8 ),
-		new THREE.TorusGeometry( 10, 5 ),
-
-		];
-
-
-		for ( var j = 0; j < 250; j++ ) {
-
-			var geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
-			var material = new THREE.MeshNormalMaterial();
-
-			var mesh = new THREE.Mesh( geometry, material );
-			mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
-			mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
-			mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
-			scene.add( mesh );
-
-		}
-
-	}
 
 
 ## Gnomen
@@ -457,14 +490,15 @@ starts at top / left and goes right and down
 
 ## Placards
 
+// 2018-08-09 ~ https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs/examples/placards
 
+/*
 			placard = drawPlacard( '', 0.05, 120, 100, 10, 0 );
 			scene.add( placard );
 
 
 	function drawPlacard( text, scale, color, x, y, z ) {
 
-// 2016-02-27 ~ https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs/examples/placards
 
 		var placard = new THREE.Object3D();
 		var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
@@ -533,6 +567,8 @@ starts at top / left and goes right and down
 		}
 
 	}
+
+*/
 
 
 
