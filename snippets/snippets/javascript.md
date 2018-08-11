@@ -707,7 +707,7 @@ console.log( thing );
 
 
 
-## Input Type File Open
+## Input Type File Open FILEREADER
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 		'<h3>file reader</h3>' +
