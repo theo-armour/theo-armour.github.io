@@ -20,6 +20,7 @@
 		var color = new THREE.Color( 'grey' );
 
 		const v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+		const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
 
 
 ## Changes
@@ -1095,6 +1096,7 @@ https://threejs.org/docs/#api/math/Spherical
 
 	var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 	var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+	const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
 
 	var pi = Math.PI;
 	var pi05 = 0.5 * pi;

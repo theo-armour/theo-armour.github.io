@@ -7,7 +7,7 @@ $ git commit -am “updated experimental”
 
 $git reset --hard
 - must add the hard for it to work...
-- alows a pull to work after you have screwed up the local directory
+- allows a pull to work after you have screwed up the local directory
 
 
 

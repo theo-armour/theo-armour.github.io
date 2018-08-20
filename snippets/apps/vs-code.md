@@ -15,7 +15,7 @@ Alt+Shift+1 (PC)
 
 Cmd+Option+1 (Mac)
 
-"editor.minimap.enabled": false
+
 
 
 ## Emmet < wow!
@@ -36,6 +36,17 @@ Preview mode is indicated by italics in the Tab heading
 ## Settings
 
 %APPDATA%\Code\User\settings.json
+
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.trimAutoWhitespace": true,
+	"editor.renderWhitespace": "all",
+
+	"files.autoSave": "onFocusChange",
+	"files.trimTrailingWhitespace": true,
+
+	"workbench.colorTheme": "Visual Studio Light"
+
 
 
 ## Snippets

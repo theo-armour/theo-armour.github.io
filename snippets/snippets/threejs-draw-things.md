@@ -101,11 +101,14 @@ function drawMultipleMeshes( count = 50 ) {
 }
 
 
+
+
+
 ### GEOMETRY / Multiple
 
-	function addGeometry() {
+function addGeometry() {
 
-		var geometries = [
+	var geometries = [
 
 		new THREE.BoxGeometry( 10, 10, 10 ),
 		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
@@ -113,23 +116,31 @@ function drawMultipleMeshes( count = 50 ) {
 		new THREE.SphereGeometry( 5, 12, 8 ),
 		new THREE.TorusGeometry( 10, 5 ),
 
-		];
+	];
 
 
-		for ( var j = 0; j < 250; j++ ) {
+	for ( let j = 0; j < 250; j++ ) {
 
-			var geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
-			var material = new THREE.MeshNormalMaterial();
+		const geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
+		const material = new THREE.MeshNormalMaterial();
 
-			var mesh = new THREE.Mesh( geometry, material );
-			mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
-			mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
-			mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
-			scene.add( mesh );
+		const mesh = new THREE.Mesh( geometry, material );
+		mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
+		mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
+		mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
+		scene.add( mesh );
 
-		}
+		const edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
+		const edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 5 } );
+		const edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+		mesh.add( edges );
 
 	}
+
+}
+
+
+
 
 
 

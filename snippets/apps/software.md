@@ -12,7 +12,6 @@ Try
 SmartMouse < bartels
 
 
-
 ## Amazon Drive
 
 amazon drive < access using windows explorer & beyond compare is OK
