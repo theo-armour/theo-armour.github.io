@@ -3,9 +3,9 @@
 
 ### Table of Basic PowerShell Commands
 
+https://www.groovypost.com/howto/find-restore-open-command-prompt-windows-10/
+
 https://blogs.technet.microsoft.com/heyscriptingguy/2015/06/11/table-of-basic-powershell-commands/
-
-
 
 
 https://lifehacker.com/how-to-turn-any-part-of-your-windows-desktop-into-a-gif-1825787640

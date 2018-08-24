@@ -1152,8 +1152,8 @@ RegExp Modifiers
 
 	function saveFile() {
 
-		var blob = new Blob( [ txtArea.innerHTML ] );
-		var a = document.body.appendChild( document.createElement( 'a' ) );
+		let blob = new Blob( [ txtArea.innerHTML ] );
+		let a = document.body.appendChild( document.createElement( 'a' ) );
 		a.href = window.URL.createObjectURL( blob );
 		a.download = 'hello-world.txt';
 		a.click();
