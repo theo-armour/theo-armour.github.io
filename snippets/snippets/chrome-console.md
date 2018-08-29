@@ -1,4 +1,10 @@
 
+## Links of interest
+
+* https://medium.com/frontmen/art-of-debugging-with-chrome-devtools-ab7b5fd8e0b4
+* http://bgrins.github.io/devtools-snippets/
+
+
 ## Chrome allow-file-access-from-files
 
 --allow-file-access-from-files
@@ -53,6 +59,7 @@ https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-ex
 
 ## 1. Select DOM Elements
 
+https://medium.freecodecamp.org/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329
 
 $(‘tagName’) $(‘.class’) $(‘#id’) and $(‘.class #id’)
 
@@ -119,3 +126,25 @@ $_
 clear{}
 
 or Ctrl-L
+
+## Log Objects
+
+thing = 9
+9
+{thing}
+{thing: 9}
+
+
+## Use $ and $$
+
+use the $ and $$ as shortcuts for document.querySelector() and document.querySelectorAll() respectively.
+
+## debug(fn)
+
+everytime that function is invoked, the debugger will then pause the execution on the first line of that function.
+
+## copy(obj)
+
+copy(anything) is a handy utility in the console that allows you to put anything into the system clipboard.
+
+Give copy some mangled JSON. It will pretty print it for you.

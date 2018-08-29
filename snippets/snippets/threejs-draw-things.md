@@ -68,7 +68,7 @@ function drawGroundGridAxis() {
 
 function drawMultipleMeshes( count = 50 ) {
 
-// 2018-08-09 / https://theo-armour.github.io/snippetssnippets/threejs-draw-things.md
+// 2018-08-09 / https://theo-armour.github.io/snippets/snippets/threejs-draw-things.md
 
 	const meshes = new THREE.Group();
 	//const geometry = new THREE.BoxGeometry( 10, 10, 10 );
