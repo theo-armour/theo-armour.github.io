@@ -32,7 +32,10 @@ console.timeEnd('myTime');
 clear()
 
 
-## ECMA 6
+## ES6 / ECMA 6
+
+vasco3/es6-cheatsheet.markdown
+* https://gist.github.com/vasco3/22b09ef0ca5e0f8c5996#modules
 
 		let x = 6
 
