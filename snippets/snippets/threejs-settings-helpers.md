@@ -51,31 +51,79 @@
 
 ## Zoom Object Bounding Sphere
 
-	function zoomObjectBoundingSphere( obj ) {
+// 2018-09-24 ~ see camera-switching.html
 
-		if ( obj.geometry ) {
+function zoomObjectBoundingSphere( obj = scene ) {
 
-			obj.geometry.computeBoundingSphere();
-			const center = obj.geometry.boundingSphere.center;
-			const radius = obj.geometry.boundingSphere.radius;
+	const bbox = new THREE.Box3().setFromObject( obj );
 
-		} else {
+	if ( bbox.isEmpty() === true ) { return; }
 
-			const bbox = new THREE.Box3().setFromObject( model );
+	const sphere = bbox.getBoundingSphere( new THREE.Sphere() );
+	const center = sphere.center;
+	const radius = sphere.radius;
 
-			const sphere = bbox.getBoundingSphere();
-			center = sphere.center;
-			radius = sphere.radius;
-		}
+	//console.log( 'center', center );
+	//console.log( 'radius', radius );
 
-console.log( 'center', center );
-console.log( 'radius', radius );
+	controls.target.copy( center );
+	controls.maxDistance = 5 * radius;
 
-		controls.target.copy( center );
-		camera.position.copy( center.clone().add( new THREE.Vector3( 1.5 * radius, 1.5 * radius, 1.5 * radius ) ) );
-		axisHelper.position.copy( center );
+	camera.position.copy( center.clone().add( new THREE.Vector3( 1.5 * radius, 1.5 * radius, 1.5 * radius ) ) );
+	camera.near = 0.1 * radius;
+	camera.far = 10 * radius;
+	camera.updateProjectionMatrix();
+
+	scene.userData.objCenter = center;
+	scene.userData.objRadius = radius;
+
+}
+
+
+
+THRU.zoomObjectBoundingSphere = function( obj = undefined ) {
+	//console.log( 'obj', obj );
+
+	const bbox = new THREE.Box3().setFromObject( obj );
+	//console.log( 'bbox', bbox );
+
+	if ( bbox.isEmpty() === true ) { return; }
+
+	//if ( isNaN( bbox.max.x - bbox.min.x ) ) { console.log( 'zoom fail', {obj},{bbox} ); return; } // is there a better way of seeing if we have a good bbox?
+
+	const sphere = bbox.getBoundingSphere( new THREE.Sphere() );
+	const center = sphere.center;
+	const radius = sphere.radius;
+
+	THR.controls.reset();
+	THR.controls.target.copy( center );
+	THR.controls.maxDistance = 5 * radius;
+
+	THR.camera.position.copy( center.clone().add( new THREE.Vector3( 1.5 * radius, 1.5 * radius, 1.5 * radius ) ) );
+	THR.camera.near = 0.1 * radius; //2 * camera.position.length();
+	THR.camera.far = 10 * radius; //2 * camera.position.length();
+	THR.camera.updateProjectionMatrix();
+
+	//lightDirectional.position.copy( center.clone().add( new THREE.Vector3( -1.5 * radius, -1.5 * radius, 1.5 * radius ) ) );
+	//lightDirectional.shadow.camera.scale.set( 0.2 * radius, 0.2 * radius, 0.01 * radius );
+	//lightDirectional.target = axesHelper;
+
+	if ( THRU.axesHelper ) {
+
+		THRU.axesHelper.scale.set( radius, radius, radius );
+		//THR.axesHelper.position.copy( center );
 
 	}
+	//scene.position.copy( center );
+
+	obj.userData.center = center;
+	obj.userData.radius = radius;
+
+	//		scene.remove( cameraHelper );
+	//		cameraHelper = new THREE.CameraHelper( lightDirectional.shadow.camera );
+	//		scene.add( cameraHelper );
+
+};
 
 
 

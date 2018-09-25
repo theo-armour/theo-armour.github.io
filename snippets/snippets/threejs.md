@@ -505,6 +505,7 @@ scene.add( edges );
 		img.crossOrigin = 'Anonymous';
 
 
+
 ### JSON / save to file
 
 		<p>
@@ -652,6 +653,7 @@ jaanga.github.io/cookbook-threejs/materials-sandbox/color/vertex-colors/vertex-c
 		material = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.DoubleSide, vertexColors: THREE.VertexColors } );
 
 
+
 ## MESH
 
 		mesh.castShadow() = mesh.receiveShadow() = true;
@@ -676,6 +678,33 @@ jaanga.github.io/cookbook-threejs/materials-sandbox/color/vertex-colors/vertex-c
 		mesh.position.copy( child.getWorldPosition() );
 		scene.add( mesh );
 
+
+
+
+### MESHES
+
+
+function setSomeBoxes( count = 50 ) {
+
+	const geometry = new THREE.BoxGeometry( 5, 5, 5 );
+	const material = new THREE.MeshNormalMaterial();
+
+	for ( let i = 0; i < count; i++ ) {
+
+		const mesh = new THREE.Mesh( geometry, material );
+		mesh.position.set( 100 * Math.random() - 50, 100 * Math.random() - 50, 100 * Math.random() - 50 );
+		mesh.rotation.set( 2 * Math.random(), 2 * Math.random(), 2 * Math.random() );
+
+		const edgesGeometry = new THREE.EdgesGeometry( mesh.geometry );
+		const edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
+		const surfaceEdge = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+
+		mesh.add( surfaceEdge );
+		scene.add( mesh );
+
+	}
+
+}
 
 
 ## OBJECT3D ##

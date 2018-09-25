@@ -85,6 +85,8 @@ file:///C:/Dropbox/Public/code-cookbook/0-cookbook-general/string%20manipulation
 
 ### CSS Docs
 
+ <link rel="stylesheet" href="style.css">
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://www.w3schools.com/css/default.asp
 
