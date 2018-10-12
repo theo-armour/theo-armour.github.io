@@ -280,12 +280,6 @@ see assets
 		vertices = geometry.attributes.position.array;
 
 
-
-		const edges = new THREE.EdgesGeometry( geometry );
-		const line = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xffffff } ) );
-		scene.add( line );
-
-
 // SphereGeometry( radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength )
 		geometry = new THREE.SphereGeometry( radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength )
 
@@ -303,6 +297,22 @@ see assets
 		.mergeVertices();
 
 		.center();
+
+#### GEOMETRY / EDGES edgesGEOMETRY
+
+let geometry = new THREE.BoxBufferGeometry( 100, 100, 100 );
+
+let edgesGeometry = new THREE.EdgesGeometry( geometry );
+let edgesMaterial = new THREE.LineBasicMaterial( { color: 0xffffff } );
+let edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+
+let edges = new THREE.LineSegments( new THREE.EdgesGeometry( geometry ), new THREE.LineBasicMaterial( { color: 0xffffff } ) );
+
+scene.add( edges );
+
+		const edges = new THREE.EdgesGeometry( geometry );
+		const line = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xffffff } ) );
+		scene.add( line );
 
 
 ## Dispose
@@ -473,18 +483,10 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 	scene.add( new THREE.VertexTangentsHelper( mesh, 50, col ) );
 
 
-#### EDGES
-
-let geometry = new THREE.BoxBufferGeometry( 100, 100, 100 );
-let edgesGeometry = new THREE.EdgesGeometry( geometry );
-let edgesMaterial = new THREE.LineBasicMaterial( { color: 0xffffff } );
-let edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
-
-let edges = new THREE.LineSegments( new THREE.EdgesGeometry( geometry ), new THREE.LineBasicMaterial( { color: 0xffffff } ) );
-scene.add( edges );
 
 
-#### arrows
+
+#### HELPERS / arrows
 
 		scene.add( new THREE.ArrowHelper( dir, origin, length, hex ) );
 
@@ -1083,6 +1085,8 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js" ></script>
 
 
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
 
 ## MATH
 

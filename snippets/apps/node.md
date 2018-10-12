@@ -4,17 +4,31 @@ http://nodejs.org
 
 https://nodejs.org/api/
 
+## My Node and NPM
+
+D:\Dropbox\Public\code-cookbook\0-node
+D:\Dropbox\Public\git-repos\jaanga.github.io\cookbook-html\npm
+
+http://jaanga.github.io/#cookbook-html/npm/README.md
+
+
+
+## Locations
+
 nodes is kept in Program Files (x86)
 
+C:\Program Files\nodejs\
+
 Use Windows Explorer/NotePad++ to open a command window in the folder you want to work in. Then > prompt $$
+
+Or Git Bash
+
 
 > node
 takes to a node window
 
 > node my_parser.js
 runs it
-
-
 
 // Command line Arguments
 
@@ -24,8 +38,11 @@ runs it
 
 	});
 
->> update
-got to https://nodejs.org/download/ click install.
+
+
+##  Update Node
+
+got to https://nodejs.org/en/ click install.
 x64 msi version is good
 
 >> version
@@ -33,7 +50,9 @@ node -v
 
 node -help
 
-### NPM ~ https://www.npmjs.org/
+## NPM ~ https://www.npmjs.org/
+
+
 
 https://docs.npmjs.com/getting-started/
 
@@ -48,37 +67,36 @@ How do I install something on my computer in a central location?
 	* Install it globally by tacking -g or --global to the command.
 	* This is especially important for command line utilities that need to add their bins to the global system PATH.)
 
-Uninstall
->> npm uninstall jshint -g
+
+## Update NPM
+
 
 npm version
 
 >> npm -v
 
-
-How do I update npm?
-
->> npm install npm -g
->> npm install npm@latest -g
-	* same as install
-
+## Update NPM packages
 
 Find out which packages need to be updated
+https://docs.npmjs.com/getting-started/updating-global-packages
+
+To find out which packages need to be updated, type:
 >> npm outdated -g --depth=0.
->> npm outdated -g depth:0
 
-To update global packages
+To update all global packages, type:
+>> npm update -g
 
->> npm install <package> -g
+Uninstall
+>> npm uninstall jshint -g
 
 
-
-### Keepers
-
+## Keepers
 
 https://github.com/nodeapps/http-server
 
-### PNG
+
+
+## PNG
 
 https://github.com/oliver-moran/jimp
 

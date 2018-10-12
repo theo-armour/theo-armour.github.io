@@ -1,5 +1,20 @@
 
 
+https://github.com/orgs/ladybug-tools/teams/core
+
+
+
+monthly newsletter
+online agenda
+occasional online meetups
+
+Spider Road Map
+Ladybug tools road map
+
+
+
+***
+
 http://www.grasshopper3d.com/
 
 http://grasshopperprimer.com/en/index.html
@@ -21,10 +36,10 @@ https://www.youtube.com/channel/UCX0holrRypJilkFo-Dv4JsQ
 
 https://github.com/HydraShare/hydra#hydra
 
-
 https://github.com/chriswmackey/Dragonfly
 
 
+## Visual programming
 
 https://www.outsystems.com/blog/visual-programming-is-unbelievable.html
 https://www.postscapes.com/iot-visual-programming-tools/
@@ -33,7 +48,7 @@ http://www.craft.ai/blog/the-maturity-of-visual-programming/
 
 
 
-Users
+## Users
 
 https://baker.uoregon.edu/resources/lightinganalysis/ladybughoneybee-for-grasshopper/
 

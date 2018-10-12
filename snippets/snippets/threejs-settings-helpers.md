@@ -251,6 +251,8 @@ console.log( '', buildings  );
 
 	function toggleEdges() {
 
+		
+
 		if ( !chartEdges ) {
 
 			const edgesGeometry = new THREE.WireframeGeometry( chart.geometry );

@@ -1,14 +1,11 @@
 
 
-amazon diapers etc
-phone case
-pixelbook or samsung or wait?
 
 Alix wikipedia page
 
 Dr Kattah appt
 Dr Martin <<
-Dr derma
+Dr 
 Dr Han
 
 Bill B ~ Diana ~ http://www.thepanetwork.com/
