@@ -34,8 +34,7 @@ https://developer.github.com/v3/
 * https://api.github.com/feeds
 
 * https://github.com/timeline
-* https://github.com/jaanga/timeline
-
+* https://github.com/jaanga/timeline << not
 
 
 ## Commits
@@ -43,15 +42,18 @@ https://developer.github.com/v3/
 * https://api.github.com/repos/jaanga/jaanga.github.io/commits
 * https://api.github.com/repos/jaanga/terrain3/commits
 * https://api.github.com/repos/jaanga/jaanga.github.io/commits?path=readme.md
-* https://api.github.com/repos/ladybug-tools/spider/commits?path=README.md
 
+* https://api.github.com/repos/ladybug-tools/spider/commits?path=README.md
+* https://api.github.com/repos/ladybug-tools/spider-gbxml-tools/commits?path=README.md
 
 ***
 
 ## Events
 
+* https://api.github.com/users/theo-armour/events/public
 * https://api.github.com/repos/jaanga/jaanga.github.io/events
 * https://api.github.com/repos/jaanga/terrain3/events
+* https://api.github.com/repos/ladybug-tools/spider-gbxml-tools/events
 
 not
 * https://api.github.com/repos/jaanga/jaanga.github.io/events?path=cookbook-html/examples << not
@@ -341,6 +343,7 @@ Examples
 * https://api.github.com/search/code?q=addClass+repo:jquery/jquery+filename:classes.js
 * https://api.github.com/search/code?q=repo:mrdoob/three.js+filename:CameraHelper.js
 * https://api.github.com/search/code?q=repo:jaanga/sp500/trades
+* https://api.github.com/search/code?q=repo:ladybug-tools/spider-gbxml-tools+filename:README.md
 
 not
 * https://api.github.com/search/code?q=3D+extension:stl << not
