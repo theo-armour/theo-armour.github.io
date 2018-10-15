@@ -75,6 +75,8 @@ npm version
 
 >> npm -v
 
+>> npm help
+
 ## Update NPM packages
 
 Find out which packages need to be updated
@@ -88,6 +90,35 @@ To update all global packages, type:
 
 Uninstall
 >> npm uninstall jshint -g
+
+
+## NOM Tips
+
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+source in: file:///C:/Users/tarmo/AppData/Roaming/npm/node_modules/npm/html/doc/cli/npm.html
+
+
+npm whoami
+
+npm li | list and ll or la for more info
+
+npm version 1.1.0
+
+### npm commands
+ access, adduser, audit, bin, bugs, c, cache, ci, cit,
+ completion, config, create, ddp, dedupe, deprecate,
+ dist-tag, docs, doctor, edit, explore, get, help,
+ help-search, hook, i, init, install, install-test, it, link,
+ list, ln, login, logout, ls, outdated, owner, pack, ping,
+ prefix, profile, prune, publish, rb, rebuild, repo, restart,
+ root, run, run-script, s, se, search, set, shrinkwrap, star,
+ stars, start, stop, t, team, test, token, tst, un,
+ uninstall, unpublish, unstar, up, update, v, version, view,
 
 
 ## Keepers

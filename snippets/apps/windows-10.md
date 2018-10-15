@@ -8,6 +8,14 @@ https://www.groovypost.com/howto/find-restore-open-command-prompt-windows-10/
 https://blogs.technet.microsoft.com/heyscriptingguy/2015/06/11/table-of-basic-powershell-commands/
 
 
+## Prompt
+
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-6
+
+function prompt {$null}
+
+
+
 https://lifehacker.com/how-to-turn-any-part-of-your-windows-desktop-into-a-gif-1825787640
 
 Problem Steps Recorder. Windows key PSR
