@@ -41,7 +41,7 @@ sudo sh ~/Downloads/crouton -u -t unity,unity-desktop,touch,extension,xiwi,chrom
 Control-D on switch on
 
 
-## Terminal
+## Crosh Terminal
 
 Control ~ Alt ~ T = cat
 Paste: $control ~ shift ~ v <<!!
