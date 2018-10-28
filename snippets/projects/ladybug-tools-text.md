@@ -1,4 +1,44 @@
+## Wikipedia
 
+
+https://en.wikipedia.org/wiki/Autodesk_Ecotect_Analysis
+
+https://en.wikipedia.org/wiki/Grasshopper_3D
+
+
+### Categories
+
+https://en.wikipedia.org/wiki/Category:Building_information_modeling
+https://en.wikipedia.org/wiki/Category:Computer-aided_design_stubs
+
+https://en.wikipedia.org/wiki/Category:Computer-aided_engineering
+https://en.wikipedia.org/wiki/Category:3D_graphics_software
+https://en.wikipedia.org/wiki/Category:3D_computer_graphics
+https://en.wikipedia.org/wiki/Category:Simulation_software_stubs
+https://en.wikipedia.org/wiki/Category:Free_computer-aided_design_software
+https://en.wikipedia.org/wiki/Category:Computer-aided_design_stubs
+
+
+https://en.wikipedia.org/wiki/Category:Science_software_stubs - ecotect
+https://en.wikipedia.org/wiki/Category:Software_stubs
+
+### Lists
+
+https://en.wikipedia.org/wiki/List_of_CAx_companies
+https://en.wikipedia.org/wiki/List_of_3D_modeling_software
+https://en.wikipedia.org/wiki/List_of_3D_computer_graphics_software
+https://en.wikipedia.org/wiki/List_of_file_formats#Computer-aided_design_.28CAD.29
+
+
+### Comparisons
+
+https://en.wikipedia.org/wiki/Comparison_of_computer-aided_design_editors
+https://en.wikipedia.org/wiki/Comparison_of_3D_computer_graphics_software
+https://en.wikipedia.org/wiki/Comparison_of_CAD,_CAM_and_CAE_file_viewers
+https://en.wikipedia.org/wiki/Comparison_of_computer-aided_design_editors
+
+
+##
 
 https://github.com/orgs/ladybug-tools/teams/core
 

@@ -774,6 +774,7 @@ Also
 
 
 ## PATH / 2D
+
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Core/Path
 
 
@@ -860,6 +861,12 @@ http://stackoverflow.com/questions/14397596/add-custom-event-to-object3d
 		renderer.shadowMap.enabled = true;
 
 
+## SHAPES
+
+https://threejs.org/docs/#api/extras/core/Path
+
+// http://threejs.org/docs/#Reference/Extras.Core/Shape
+
 
 #### Quick Shapes
 
@@ -875,15 +882,6 @@ function getShape( points ) {
 		return mesh;
 
 }
-
-
-
-## SHAPES
-
-https://threejs.org/docs/#api/extras/core/Path
-
-// http://threejs.org/docs/#Reference/Extras.Core/Shape
-
 
 
 //https://threejs.org/docs/#api/geometries/ExtrudeGeometry
@@ -1006,10 +1004,6 @@ https://threejs.org/docs/#api/textures/Texture
 		}
 
 
-
-
-
-
 ### textures must be 512x512 to repeat
 
 		THREE.ImageUtils.crossOrigin = 'anonymous';
@@ -1048,12 +1042,14 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 
 ### VECTOR
 
+vecto to fixed string
+
 		var map2fixed = function( vect ) { return vect.toArray().map( function( num ){ return num.toFixed( 3 ); } ) };
 
 
 ### VIREFRAME
 
-				<button onclick=mesh.material.wireframe=!mesh.material.wireframe; >wireframe</button>
+		<button onclick=mesh.material.wireframe=!mesh.material.wireframe; >wireframe</button>
 
 ### THREE.JS SCRIPTS
 

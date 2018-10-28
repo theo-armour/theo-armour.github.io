@@ -141,9 +141,6 @@ function addGeometry() {
 
 
 
-
-
-
 ### GEOMETRY / PlaneBufferGeometry
 
 PlaneGeometry(width, height, widthSegments, heightSegments)
@@ -325,13 +322,6 @@ starts at top / left and goes right and down
 
 
 
-
-
-
-
-
-
-
 ## Gnomen
 
 	function drawGnomen() {
@@ -425,6 +415,7 @@ starts at top / left and goes right and down
 		scene.add( trylonPerisphere );
 
 	}
+
 
 
 ## toggleStonehenge
@@ -583,6 +574,91 @@ starts at top / left and goes right and down
 
 
 
+## Draw Line & Points
+
+
+	line = getLine( getPointsCircle );
+	scene.add( line );
+
+}
+
+
+function getLine( func ) {
+
+	scene.remove( line );
+
+	const points = func();
+
+	const  geometry = new THREE.Geometry();
+	geometry.vertices = points;
+
+	const material = new THREE.LineBasicMaterial( { color: 0x000000 } );
+	line = new THREE.Line( geometry, material );
+
+	return line;
+
+}
+
+
+
+function getPointsCircle() {
+
+	const radius = 20;
+	const pointCount = 20;
+	const points = [];
+	const delta = 2 * Math.PI / pointCount;
+
+	for ( let i = 0; i < pointCount + 1; i++ ) {
+
+		const x = radius * Math.cos( i * delta );
+		const y = radius * Math.sin( i * delta );
+		const z = 30;
+
+		points.push( new THREE.Vector3( x, y, z ) );
+
+	}
+
+	return points;
+
+}
+
+
+
+
+function getPointsStar() {
+
+	const radius = 10;
+	const pointCount = 20;
+	const points = [];
+	const delta = 2 * Math.PI / pointCount;
+
+	for ( let i = 0; i < pointCount; i++ ) {
+
+		const x = ( 50 * Math.random() + radius ) * Math.cos( i * delta );
+		const y = 40;
+		const z = ( 50 * Math.random() + radius ) * Math.sin( i * delta );
+		points.push( new THREE.Vector3( x, y, z ) );
+
+	}
+
+	return points;
+
+}
+
+
+## Sprites
+
+function getSprite() {
+
+	cconst spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000 } );
+	sprite = new THREE.Sprite( spriteMaterial );
+
+	scene.add( sprite );
+
+	return sprite;
+	
+}
+
 
 ### drawRandomLines
 
@@ -609,6 +685,8 @@ starts at top / left and goes right and down
 //		return line;
 
 	}
+
+
 
 
 ### Nice Path - Line
