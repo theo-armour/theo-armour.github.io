@@ -3,6 +3,7 @@
 ## Text Expansion
 
 
+
 ## http://www.phraseexpress.com/
 
 
@@ -22,6 +23,8 @@ See also: http://www.keyboard-and-mouse-sharing.com/index.html
 
 C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
+
+
 ## http://www.pitrinec.com/products/perfect-keyboard
 
 * Windows only
@@ -30,7 +33,9 @@ C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ## https://textexpander.com/
 
 * iPhone, Mac & Windows
-* No Chromebook or Android
+* Chromebook
+	* Gmail OK
+* Android
 
 
 ## AutoHotKey ~ http://ahkscript.org/

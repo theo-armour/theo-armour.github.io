@@ -76,9 +76,3 @@ http://jsfiddle.net/qGPTT/3/embedded/
 
 Paste > Shift-Ins
 
-
-## Windows 8
-
-Turn off Thumbs.db
-
-In "Files and Folders", simply check the button next to "Always show icons, never thumbnails"

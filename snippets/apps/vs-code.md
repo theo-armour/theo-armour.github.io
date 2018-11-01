@@ -99,12 +99,15 @@ Create cursors on all occurrences of a string: Ctrl+Shift+L
 
 ## Settings
 
+https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
 %APPDATA%\Code\User\settings.json
 
 {
 
 	"editor.detectIndentation": false,
 	"editor.insertSpaces": false,
+	"editor.tabCompletion": "on"
 	"editor.trimAutoWhitespace": true,
 	"editor.renderWhitespace": "all",
 

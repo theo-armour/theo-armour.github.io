@@ -4,14 +4,14 @@
 http://www.howtogeek.com/howto/8711/stupid-geek-tricks-enable-the-secret-how-to-geek-mode-in-windows/
 
 ## Access Denied
-http://windows.microsoft.com/en-US/windows-vista/Troubleshoot-access-denied-when-opening-files-or-folders 
+http://windows.microsoft.com/en-US/windows-vista/Troubleshoot-access-denied-when-opening-files-or-folders
 use lock hunter...
 
 
 ## Lessons Learned
 Use Ninite.com to install Chrome, Firefox DropBox, Evernote, Google Drive etc
 
-Don't forget DropBox takes forever. 
+Don't forget DropBox takes forever.
 * Sync only a few folders at a time
 * Start with just one or two folders
 
@@ -71,7 +71,7 @@ dxdiag
 ## Symlinks
 
 mklink ~ symlinks
-http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/ 
+http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/
 
 
 > mklink /D C:\TestFolder C:\Users\Geek\TestFolder
@@ -82,7 +82,7 @@ mklink /D C:\Dropbox\Public\code-cookbook\three.js C:\Dropbox\Public\git-repos\t
 // mklink /D  c:\Dropbox\xampp\htdocs\pub c:\Dropbox\public\
 mklink /D C:\Dropbox\apps-portable\PortableApps\xampp\htdocs\pub c:\Dropbox\public\
 
-mklink /D c:\Dropbox\apps-portable\ d:\apps-portable\ 
+mklink /D c:\Dropbox\apps-portable\ d:\apps-portable\
 
 
 mklink /D c:\
@@ -115,3 +115,10 @@ http://support.microsoft.com/kb/301583
 
 ## defaults
 Windows normal screen dark blue is RGB 58 110 165
+
+
+## Windows 8
+
+Turn off Thumbs.db
+
+In "Files and Folders", simply check the button next to "Always show icons, never thumbnails"

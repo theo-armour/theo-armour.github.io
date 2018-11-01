@@ -4,7 +4,7 @@
 
 ### Features
 
-* Nicely formatted Markdown 
+* Nicely formatted Markdown
 * GitHub Flavor Markdown
 * Live preview
 * Easy to switch to preview mode and click links
@@ -24,6 +24,8 @@
 ### Tips
 
 * Paste with Control-Shift-V to remove formatting
+
+
 
 ### Links
 
