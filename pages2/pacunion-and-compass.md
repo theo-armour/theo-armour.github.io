@@ -1,7 +1,7 @@
 
 # PacUnion and Compass Merger
 
-OK links on merger
+Links regarding the merger
 * 2018-08-21: https://www.sfchronicle.com/business/networth/article/Compass-buying-Pacific-Union-second-SF-real-13172961.php
 * 2018-08-22: https://www.pacificunionpress.com/the-real-deal-covers-pacific-union-and-compass-deal/
 * 2018-08-30: https://www.sfchronicle.com/business/networth/article/It-s-official-Compass-buying-Pacific-Union-to-13192026.php
@@ -14,7 +14,7 @@ OK links on merger
 https://www.pacificunion.com/
 
 * There's a find-an-agent page but no-become-an-agent page
-
+* Compared to Comapass, the PacUnion site is much more oriented toward home owner and buyers than toward agents
 
 
 # Observations on the [compass.com]( https://compas.com ) web site
@@ -22,7 +22,7 @@ https://www.pacificunion.com/
 
 # Coding Aspects
 
-I have had a look at the source code of the home page and several other pages, below are some of my observations
+I looke at the source code of the home page and several other pages, below are some of the things I noticed and my observations.
 
 
 ## Home Page CSS
@@ -40,7 +40,7 @@ See https://github.com/arnaudleray/pocketgrid
 * One man band product with a single release
 * https://stackoverflow.com/questions/21118115/pocketgrid-grid-layout-with-fixed-width-navigation-column
 
-Archaic scripts from single person operations are not the sort of scripts you expect to find in billion dollar company web sites
+Comment: Archaic scripts from single person operations are not the sort of scripts you expect to find in billion dollar company web sites
 
 
 
@@ -79,15 +79,17 @@ Angular was hot in 2014.  It's much less hot these days.
 
 ### npm:babel-runtime@5.8.35
 * From 2015
+* Current releasr is 7
+
 
 ### Variable and ID names
 
 A number of IDs and variable names refer to "uc" and "urban-compass" - as in 'uc-globalHeader-logotype'.
-The company changed its web address from urbancompass to compass after acquiring the URL in 2015.
+The company changed its web address from urbancompass.com to compass.com after acquiring the address in 2015.
 
-### Generally
+### General Objservation
 
-The code for compass.com is:
+The code for the compass.com home page is:
 
 * Old
 * Contains much useless node.js stuff
@@ -100,13 +102,14 @@ Technically
 The code of the site might be forgivable for an industrial company or a bank.
 Compass, however, purports to be a tech leader. The code of their web site home page in no way matches up with that expectation
 
+
 Later:
 
-The code of the agents page and some of the other pages is very different than the code for the home page - and has a much better feel to it. The in-house development team is just eighteen people. It looks like most effort has gone into the apps and just some selected web pages.
+The code for the agents page and some of the other pages is very different than the code for the home page - and has a much better feel to it. The in-house development team is just eighteen people. It looks like most effort has gone into the apps and just some selected web pages.
 
 
 
-# Web page content
+# Web Page Content
 
 I also browsed around the various pages and have these observations regarding the content
 
@@ -124,7 +127,7 @@ Posts of interest
 
 ### Github: https://github.com/UrbanCompass
 
-* two people involved
+* Only two people involved
 
 
 
@@ -142,7 +145,8 @@ Posts of interest
 
 ### https://www.compass.com/agents/
 
-* Kind of OK
+* Kind of OK look and feel
+* Complex to navigate
 
 
 ### https://www.compass.com/quarterly/
@@ -159,13 +163,15 @@ Posts of interest
 
 * Sold Out - A new round of sales in Fall 2018
 
+
 ### Twitter
 
-* Looks OK
+* Tweeting looks OK
 
 ## Conclusions
 
 Navigation gets a bit complicated and the user experience is all a bit messy, but it certainly seems to address the wants and needs of agents
+
 * The whole chitchat has a Tony Robbins feel to it
 * Lots of services are available to up-sell to agents
 * The business of getting and keeping agents is the paramount message
