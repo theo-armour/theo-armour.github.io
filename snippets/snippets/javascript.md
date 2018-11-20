@@ -1318,6 +1318,7 @@ catch (e) {
 	logMyErrors(e); // pass exception object to error handler
 }
 
+
 ### Validity
 
 https://developer.mozilla.org/en-US/docs/Web/API/ValidityState

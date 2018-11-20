@@ -4,6 +4,7 @@ Rawgit.con closing down October 2019
 
 https://rawgit.com/
 
+
 ## Recommends
 
 [jsDelivr]( https://www.jsdelivr.com/ )
@@ -30,3 +31,8 @@ GitHub Pages
 
 [ViewSource]( https://github.com/viewsource/viewsource.github.com )
 * http://viewsource.github.io/threejs/
+
+## See also
+
+ * https://discourse.threejs.org/t/cdn-for-non-build-files/4727
+ * https://github.com/mrdoob/three.js/issues/15027

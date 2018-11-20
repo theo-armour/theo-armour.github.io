@@ -1,5 +1,16 @@
 
-points to Consider
+# WSD
+
+## Tech tools
+
+* https://laravel.com/
+
+* SVN revision control system
+* https://www.digitalocean.com/
+* https://getcomposer.org/
+* https://www.yiiframework.com/
+
+# points to Consider
 
 help people find homes that are open, friendly, safe, green, smart, good looking
 

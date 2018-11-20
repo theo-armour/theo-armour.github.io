@@ -1,5 +1,24 @@
 
 
+
+
+What should we do to support Spider/keep Theo and Michal happy?
+Also, we should discuss:
+
+What should the spider logo be?
+How should we integrate Spider into the Ladybug Tools website and the D3 web (https://www.ladybug.tools/#tools)?
+What things still remain to be done to get gbXML support in Honeybee?
+https://www.ladybug.tools/index.html updates to include Spider
+Theo will explain over-complex current status of gbXML viewer code
+Discuss app, repo, folder and file naming ideas
+Update on NREL politics
+Update priorities
+Discuss how can Spider can better integrate with other LT tools
+
+
+
+
+
 ## Solar experiments
 
 
