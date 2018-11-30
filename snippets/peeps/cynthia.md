@@ -1,20 +1,55 @@
 
 
-Cynthia / Cal folder
-https://drive.google.com/drive/folders/0B6CqfRSpvPf3Z2FjYXl6SmdLNFk
 
-https://docs.google.com/spreadsheets/d/12zc_ybWXQG_ryFPN5_OU3q4xioH8A6aYSsnKidsXYqw/edit?ts=5a34727e#gid=0
+# Cynthia
+
+
+## 2018-11-29 ~ C+K stop by in SF
+
+
+* Christmas plans
+	* Planes, trains and cars
+		* Uber all the way? ;-)
+* Dispersal of heirlooms
+* to storage first we
+* Disposal of bikes / walker
+* Larry Schell contact
+* Alix news
+* Mailing lists
+* Establishing clannish behaviors
+
+
+Studies
+	* New peeps at level of Geronimus & Arnstein?
+	* teaching and grading
+	* Presentation and papers
+	* Internships / jobs
+
+
+## Summer 2018
+
+
+Cynthia / Cal folder
+* https://drive.google.com/drive/folders/0B6CqfRSpvPf3Z2FjYXl6SmdLNFk
+* https://docs.google.com/spreadsheets/d/12zc_ybWXQG_ryFPN5_OU3q4xioH8A6aYSsnKidsXYqw/edit?ts=5a34727e#gid=0
+
+
 
 
 ## Autonomous Vehicles
 
 
+
+
 ### Organizations
+
 
 * https://meridianmobility.tech/
 	* Meridian was created by government and industry to focus on key areas of UK capability in the global Connected and Autonomous Vehicle (CAV) sector which is predicted to be worth £907 billion by 2035. These include advanced development and validation, connected environments, data and cyber security and new service development.
 
+
 ### Sources
+
 
 * https://www.reddit.com/r/SelfDrivingCars/
 	* See right-side menu
@@ -22,17 +57,25 @@ https://docs.google.com/spreadsheets/d/12zc_ybWXQG_ryFPN5_OU3q4xioH8A6aYSsnKidsX
 * https://www.reddit.com/search?q=autonomous+vehicle
 * https://readwrite.com/?s=vehicle
 
+
 ### About
+
 
 * https://techcrunch.com/2018/05/14/apples-self-driving-car-fleet-grows-to-55-in-california/
 
 
+
+
 ## Links of possible interest
+
 
 https://docs.google.com/document/d/1GUfOr58BivJkmM57qMljQce07khRmLNtD5GqXSAUf1U/edit
 
+
 One weird trick to end gerrymandering: cake-cutting game theory
 https://boingboing.net/2017/11/06/one-weird-trick-to-end-gerryma.html
+
+
 
 
 ## ucb-mph-strategy-pdf
@@ -44,6 +87,7 @@ http://sph.berkeley.edu/sites/default/files/2015-2020_Strategy.pdf
 * No stats/data/evidence
 * Not SMART-enabled ~ https://en.wikipedia.org/wiki/SMART_criteria
 
+
 Typical marketing document designed to lure partially-engaged peeps to donate
 Promulgates US charity-driven donations over European tax-driven funding
 	* Walter Reuther vs Aneurin Bevin
@@ -52,36 +96,52 @@ Pushes for one-off disruptions rather than long-term engagement
 Written for sixth grade English skills
 No existing partnerships highlighted
 
+
 To what extent is the UCB SPH complicit - a creator/promoter/supporter the current lack of health of the average American?
 Is it the enemy?
 
 
 
+
+
+
 # Wicked problems
+
 
 https://en.wikipedia.org/wiki/Wicked_problem
 
+
 contrast with
 
+
 https://en.wikipedia.org/wiki/Pattern_language
+
 
 The elements of the language are entities called patterns. Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.
 
 
+
+
 ## A Ladder Of Citizen Participation
+
 
 Sherry R. Arnstein
 * https://en.wikipedia.org/wiki/Sherry_Arnstein
 * http://www.aacom.org/news-and-events/publications/iome/2015/july-august-2015/Arnstein-bio
 
+
 ## Copyable text
+
 
 * https://lithgow-schmidt.dk/sherry-arnstein/ladder-of-citizen-participation.html
 * http://peggymouldercampaign2014.com/wp-content/uploads/2014/10/Connie_Tucker_Handout_CBPR_Ladder.pdf
 * http://www.participatorymethods.org/sites/participatorymethods.org/files/Arnstein%20ladder%201969.pdf
 
 
+
+
 ### References
+
 
 * http://www.eltis.org/sites/eltis/files/trainingmaterials/challenge_participation_final.pdf
 	* Lengthy and many clickable links
@@ -95,22 +155,35 @@ Sherry R. Arnstein
 * http://www.academia.edu/22518577/ARNSTEIN_S_LADDER_OF_CITIZEN_PARTICIPATION_A_CRITICAL_DISCUSSION
 
 
+
+
 ### A working model for public participation. - History of Social Work
+
 
 * https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1975,%20%20Arnstein,%20a%20working%20model%20OCR%20C.pdf
 
+
 ## TO DENIGRATE, IGNORE, OR DISRUPT
 Racial Inequality in Health and the Impact of a Policy-induced Breakdown of African American Communities
+
 
 Arline T. Geronimus
 Department of Health Behavior and Health Education, University of Michigan
 https://en.wikipedia.org/wiki/Arline_Geronimus
 
+
 https://www.ncbi.nlm.nih.gov/pubmed/1467758
 
+
 http://guide.berkeley.edu/courses/cy_plan/
+
 
 https://www.law.berkeley.edu/php-programs/courses/coursePage.php?cID=20179&termCode=D&termYear=2017
 
 
+
+
 ## http://bradmax25.blogspot.com/
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzODE0MDEyMjldfQ==
+-->

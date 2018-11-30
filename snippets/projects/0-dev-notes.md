@@ -1,9 +1,58 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+
+## 2018-11-27
+
+
+## 2018-11-26
+
+Things to do of an evening
+* in 18 minute theodoros
+
+Activities
+* Paperwork
+* Email
+* Bookmarks
+* Contacts
+* Google Groups / Groups.io
+* Bike ride / exercise
+* Drawing
+	* Things to draw album
+* File triage
+	* local archives
+	* cloud-archives
+	* web archives
+		* Internet archive
+		* Donation
+* Write an article
+	* "We need to get rid of gun-free zones."
+	* Microwave
+	* Ray article
+	* hernias
+	* what is an academic article? What do I believe?
+* Github preserve
+	* Theo Armour home page update
+	* Templates
+* Ladybug Tools
+	* Web page text
+* Wiki
+	* Ladybug Tools wiki
+	* Three.js wiki
+	* Lithium Cycles Wiki
+* Learn
+	* google home
+	* groups.io
+	* notion.io
+	* VS Code / Dropbox / GitHub on Chromebook
+* Art collection dispersal
+* Possessions dispersal
+
+
+## 2018-05
 Song of Tony
 
-With apologies to the first lin of Wlat Whitmans' 'Song of Myself'
+With apologies to the first line of Walt Whitman's 'Song of Myself'
 
 I celebrate Tony
 
@@ -63,18 +112,18 @@ https://www.youtube.com/watch?v=GJJClhqGq_M&t=
 
 Jordan Casey
 2 months ago
-1. Stand up straight with you shoulders back. 55:20
+1. Stand up straight with your shoulders back. 55:20
 2. Treat yourself like someone you are responsible for helping. 1:09:31
 3. Make friends with people who want the best for you. 1:13:17
-4 Compare yourself to who you were yesterday, not to who someone else is today. 1:17:38
+4. Compare yourself to who you were yesterday, not to who someone else is today. 1:17:38
 5. Do not let your children do anything that makes you dislike them. 1:22:48
 6. Set your house in perfect order before you criticize the world. 1:30:46
 7. Pursue what is meaningful, not what is expedient. 1:34:28
 8. Tell the truth, or at least don't lie. 1:43:40
-9.. Assume that the person you're listening to might know something you don't. 1:45:52
+9. Assume that the person you're listening to might know something you don't. 1:45:52
 10. Be precise in your speech. 1:48:57
 11. Do not bother children when they are skateboarding. 1:54:30
-12. Pet a cat when you encounter one on the street. 1:59:31﻿
+12. Pet a cat when you encounter one on the street. 1:59:31
 Show less
 REPLY
 
@@ -396,3 +445,6 @@ Rediscover bit but. But Thheop only boots from CD or HD. Many hours failing to f
 Use Ubuntu to create a start disk with Ubuntu already on it.
 Pixel 2 now has Crouton/Ubuntu on it. But this Ubunto cannot play with HDs very well.
 So fire up old eee PC. It has Ubuntu. So let's get it up to date and use it.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5NzI2NDQ1MzRdfQ==
+-->

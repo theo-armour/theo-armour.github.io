@@ -1,4 +1,7 @@
 
+#Siris
+
+
 Publishers
 7 Graphic Novel Publishers Accepting Manuscripts Directly From Writers
 https://medium.com/@ericaverr/7-graphic-novel-publishers-accepting-manuscripts-directly-from-writers-1366132b04d2

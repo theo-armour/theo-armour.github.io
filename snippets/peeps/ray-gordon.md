@@ -10,7 +10,12 @@ mother: Polish / Jewish
 
 Purdue 1963
 * Dr 'dork' Clifford / Chemistry
+* BS: materials engineer
 
-Materials engineer
+Navy
+
+Stanford MBA
 
 BofA
+
+Startup
