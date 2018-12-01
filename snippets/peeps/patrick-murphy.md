@@ -1,5 +1,10 @@
 
+
+
+
 # Patrick Murphy
+
+
 
 
 
@@ -7,14 +12,19 @@
 # Career Advice
 
 
+
 * http://www.thepanetwork.com/
+
 
 
 # Family
 
+
+
 * Sister 6'7"
 * Mother 78 Basque Bakersfield
 * Step-father: 60s
+
 
 
 girlfriend #1 crazy
@@ -24,13 +34,20 @@ girlfriend #3 died
 
 
 
+
+
 ## Errands
 
+* Get wine and veggies
 * Unscrew lids to jars
+
+
 * Clean vent in Kitchen
 
 
+
 ## Shoeboxed
+
 
 
 * https://app.shoeboxed.com/member/v2/envelopes
@@ -40,17 +57,30 @@ girlfriend #3 died
 
 
 
+
+
 ## Accounts
+
+
 
 * Prepare more years of accounts
 
 
+
 ## File Triage
+
+
 
 * Beyond Compare
 
 
+
+
+
+
 ## Storage
+
+
 
 * Broadway Storage - pay Paula
 * Arrange for new storage space
@@ -58,6 +88,10 @@ girlfriend #3 died
 
 
 
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MDYxNzE5MCwtMjAxNzIyMTY0Nl19
+eyJoaXN0b3J5IjpbLTE1MDIyODcwMDIsMjA0MDYxNzE5MCwtMj
+AxNzIyMTY0Nl19
 -->

@@ -300,5 +300,6 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQwNzc0OTcsMTY5Mjk1NzM2M119
+eyJoaXN0b3J5IjpbODkyMjA3NDIyLC0xMTI0MDc3NDk3LDE2OT
+I5NTczNjNdfQ==
 -->

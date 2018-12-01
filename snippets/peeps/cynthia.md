@@ -11,7 +11,7 @@
 	* Planes, trains and cars
 		* Uber all the way? ;-)
 * Dispersal of heirlooms
-* to storage first we
+	* to storage first
 * Disposal of bikes / walker
 * Larry Schell contact
 * Alix news
@@ -185,5 +185,5 @@ https://www.law.berkeley.edu/php-programs/courses/coursePage.php?cID=20179&termC
 
 ## http://bradmax25.blogspot.com/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODE0MDEyMjldfQ==
+eyJoaXN0b3J5IjpbLTg0MDQ2MzQ4MywtMTM4MTQwMTIyOV19
 -->
