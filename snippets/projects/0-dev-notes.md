@@ -1,8 +1,30 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+## 2018-12-05
 
-## 2018-11-27
+Juliette Hannedouche <[juliettehannedouche@gmail.com>
+David Ellis <dave.robert.ellis@gmail.com>
+## 2018-12-04
+
+encyclopedia
+* https://www.britannica.com/topic/encyclopaedia
+	* The present concept of the encyclopaedia as an essential starting point from which one can embark on a voyage of discovery, or as a point of basic reference on which one can always rely, dates only to the 18th century.
+	* Encyclopaedia writing requires teamwork in which each article is edited in relation to others closely connected by subject. If a writer makes a statement that is partly qualified or totally contradicted in another article, the contributions of both writers must be scrutinized by the editorial staff, whose job it is to effect some kind of eventual agreement. Truth can be viewed from many standpoints, and references to any controversy may produce problems demanding all the skill and tact of the editors to resolve, particularly when the reputation of the writer is at stake in a signed article.
+	* For example, an account of the [Korean War](https://www.britannica.com/event/Korean-War) might vary according to whether it was written by a North or South Korean, a Chinese, or an American writer.
+	* Seems to say that an enc is a summation of knowledge as agreed by authors and contributors. Accepts bias. Accepts need to update
+
+Definitions
+* https://www.merriam-webster.com/dictionary/encyclopedia
+	* a work that contains information on all branches of knowledge or treats comprehensively a particular branch of knowledge usually in articles arranged alphabetically often by subject
+* https://www.dictionary.com/browse/encyclopedia
+	* a  book, set of  books, optical disc, mobile device, or  online informational resource containing articles onvarious topics, usually in  alphabetical arrangement, covering all branches of  knowledge or,  lesscommonly, all aspects of  one subject.
+* https://www.infoplease.com/encyclopedia/literature-and-the-arts/language-linguistics-and-literary-terms/literature-general/encyclopedia
+	* **encyclopedia,** compendium of knowledge, either general (attempting to cover all fields) or specialized (aiming to be comprehensive in a particular field).
+* https://en.wikipedia.org/wiki/Encyclopedia
+	* A study by  _[Nature](https://en.wikipedia.org/wiki/Nature_(journal) "Nature (journal)")_  in 2005 found that Wikipedia's science articles were roughly comparable in accuracy to those of  _[Encyclopædia Britannica](https://en.wikipedia.org/wiki/Encyclop%C3%A6dia_Britannica "Encyclopædia Britannica")_, containing the same number of serious errors and about 1/3 more minor factual inaccuracies, but Wikipedia's writing tended to be confusing and less readable.[[31]](https://en.wikipedia.org/wiki/Encyclopedia#cite_note-GilesJ2005Internet-31)  Encyclopædia Britannica refuted the study's conclusions, deeming the study fatally flawed.[[32]](https://en.wikipedia.org/wiki/Encyclopedia#cite_note-Britannica-rebuttal-32)
+	* Many academics, historians, teachers, and journalists reject Wikipedia as a reliable source of information, and Wikipedia is itself not a reliable source according to its own standards because of its openly editable  [wiki](https://en.wikipedia.org/wiki/Wiki "Wiki")model.[[33]](https://en.wikipedia.org/wiki/Encyclopedia#cite_note-33)  [Critics](https://en.wikipedia.org/wiki/Criticism_of_Wikipedia "Criticism of Wikipedia")  argue Wikipedia exhibits  [systemic bias](https://en.wikipedia.org/wiki/Systemic_bias "Systemic bias").[[34]](https://en.wikipedia.org/wiki/Encyclopedia#cite_note-34)[[35]](https://en.wikipedia.org/wiki/Encyclopedia#cite_note-35)
+
 
 
 ## 2018-11-26
@@ -446,5 +468,7 @@ Use Ubuntu to create a start disk with Ubuntu already on it.
 Pixel 2 now has Crouton/Ubuntu on it. But this Ubunto cannot play with HDs very well.
 So fire up old eee PC. It has Ubuntu. So let's get it up to date and use it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzI2NDQ1MzRdfQ==
+eyJoaXN0b3J5IjpbMjA1MzIxMTM3LC01MDA4MDAyMzcsNzYwOT
+I4NjQzLDg3ODk1MzAyMywtNTE0MDA0NTUzLC0xNzQ5ODU5MTcx
+LDIxMTY4NDkyOTIsLTg5NjQzMjQ0NCwtMTk3MjY0NDUzNF19
 -->

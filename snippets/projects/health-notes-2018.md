@@ -1,6 +1,31 @@
 
 # Health Notes 2018
 
+
+
+
+
+## 2018-12-03
+
+https://www.ahchealthenews.com/2015/06/15/are-you-living-with-a-hernia/
+
+“Surgery creates another weakened area and up to 10 percent of abdominal incisions will develop an incisional hernia,” Dr. Sulkowski says.
+
+https://my.clevelandclinic.org/health/transcripts/1725_hernia-what-you-should-know
+
+## 2018-12-01
+
+
+Chat with Richard Smith
+* Hernias
+	* Operation?
+	* Truss?
+	* Other measures / precautions?
+* Christmas
+* Chairs and stuff
+
+
+
 ## 2018-11-29
 
 * From myCharts test result: Klebsiella Oxytoca
@@ -8,16 +33,16 @@
 	* https://www.medicalnewstoday.com/articles/321072.php
 
 
-* poo/shower/dishes all done 
+* poo/shower/dishes all done
 	* protrusion/pain seem under control
 * New trick: lift left knee in air helps protrusion recede
-	* Use yoga blocks in front of kitchen sink to help keep left leg up in air  
+	* Use yoga blocks in front of kitchen sink to help keep left leg up in air
 * Also lie down for a few minutes between all activities
 	* Lying on side may help process
 
 Actions
 * Left another message with UCSF General Surgery
-* 
+*
 ## 2018-11-28
 
 
@@ -34,7 +59,7 @@ Adaptations
 * Until hernia trusses arrive:
 	* Whenever possible for a one-handed person: walk with hand pressed against affected region in groin
 	* Press stump into affected area when sitting
-* Bend down with the knees not with the stomach 
+* Bend down with the knees not with the stomach
 
 
 Activities
@@ -56,7 +81,7 @@ Family connections
 * Tania had hernia repaired at age 4/5 / hiatal hernia
 * Grandma: hiatal hernia
 
-* 
+*
 
 
 ## 2018-11-27
@@ -122,9 +147,9 @@ I look forward to hearing your thoughts on my observations. And, given that I am
 
 see message in my chart
 
-* 
+*
 To Lindsay Grace Mann, NP
-* 
+*
 
 Hernia prognosis and upcoming ultrasound scan
 
@@ -172,7 +197,8 @@ Given the above, could you kindly help me with the responding to following quest
 	* Would any procedures be likely to occur before the holidays?
 	* If so, would recovery be likely to affect the plans?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NzU0MDg3MywtNDE1Nzc2NjMsLTUzNT
-M0MjM0NSwtOTc0NTMxOTA4LC00OTkwNzAwNjcsLTIwODIxNTY5
-NzVdfQ==
+eyJoaXN0b3J5IjpbLTEyNTIyMzY2NTksLTYzNDgyODY1OSwtOD
+c5NTIzMDYyLC03NzEyNzAwMSwxNjk3NTQwODczLC01MzUzNDIz
+NDUsLTk3NDUzMTkwOCwtNDk5MDcwMDY3LC0yMDgyMTU2OTc1XX
+0=
 -->

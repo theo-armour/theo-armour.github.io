@@ -1,27 +1,31 @@
 
 ## Food
 
-* Aquaphor
-* Nuts
-
-
-
 ## Email
 
+* Juliette
+* Three.js
+* Tony Banks
+* ace-it 
+* WSD
+* theo-peeps
 * Englehardts
 * Alfred
 
+### Ray
+Is this about:
+* Wikipedia
+* Mark Levin
+* Polemics versus Authoritative
+
 ## Tidy
 
-* paper table
-
-
-## Errands
+* sa
+* ## Errands
 
 * More keys
 * Cipro?
 * Masks
-* B12
 
 ## Admin
 
@@ -67,10 +71,10 @@ Taxes Josh
 ## To buy
 
 * Wrinkle free pants
-* More pack-it bags
 * Anker battery ?
 
 Amazon regulars
+* Starbucks coffee
 * Omeprazole
 * chamois
 * Diapers
@@ -300,6 +304,10 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkyMjA3NDIyLC0xMTI0MDc3NDk3LDE2OT
-I5NTczNjNdfQ==
+eyJoaXN0b3J5IjpbLTEyNzQ3NTIyMTMsLTEyNDY3MDE0MjMsNT
+YxNDc0NDkwLC0xMDQ0ODc5NzUwLDc0NjA1NDQwNiwxODE2NDQ2
+NzYsODIxMzM4NzgyLDE0MDkxMjIyMDgsMTAxNjEzNTgzMiw5Mz
+MzNTkxNDUsMjA0MTc5NzQ2MiwxOTcxNzYzNjAzLDEwNTM0OTc3
+OTgsODA3MzAzMDA3LDg5MjIwNzQyMiwtMTEyNDA3NzQ5NywxNj
+kyOTU3MzYzXX0=
 -->
