@@ -1,14 +1,34 @@
 
-## Food
 
+Richard
+* Kathy
+* hernia
+* moab
+* furniture
+
+### Patrick
+
+Accounts
+* copies in pm folder
+
+File archives
+
+
+
+
+### Food
+
+* salads
+* 
 ## Email
 
-* Juliette
-* Three.js
-* Tony Banks
+* David Naylor
+* Mostapha
+* Juliette [x]
+* Three.js ~ https://discourse.threejs.org/t/three-js-r100-coming-soon-time-to-celebrate/5241
 * ace-it 
 * WSD
-* theo-peeps
+* theo-peeps [x][x]
 * Englehardts
 * Alfred
 
@@ -20,11 +40,9 @@ Is this about:
 
 ## Tidy
 
-* sa
-* ## Errands
+## Errands
 
 * More keys
-* Cipro?
 * Masks
 
 ## Admin
@@ -42,7 +60,7 @@ Is this about:
 
 ## Nice
 
-
+fogg.us to fogg.blog
 Bill B ~ Diana ~
 Bill B ~ Fogg
 Denise Laws?
@@ -64,7 +82,6 @@ Taxes Josh
 * Peeps upstairs < draft the note
 * Where do all the crows go in the evening?
 * Terrance Deacon
-
 
 
 
@@ -92,22 +109,25 @@ Amazon regulars
 
 ## Waiting
 
+* RixhardS [x]
+* Shea[ x ]
+* Tony Banks [x]
+
 
 
 ### taxes / accounts
 
 Add Patrick: power of attorney
-
 Don Shaw / Marcia / HR Block / Cristina
-
-
-***
-
 
 
 ## Done
 
+### 2018-12-06
 
+
+
+### 2018??
 * Goren and WSD
 * Geri: dinner/ ggta?
 * Tim Child
@@ -304,10 +324,11 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQ3NTIyMTMsLTEyNDY3MDE0MjMsNT
-YxNDc0NDkwLC0xMDQ0ODc5NzUwLDc0NjA1NDQwNiwxODE2NDQ2
-NzYsODIxMzM4NzgyLDE0MDkxMjIyMDgsMTAxNjEzNTgzMiw5Mz
-MzNTkxNDUsMjA0MTc5NzQ2MiwxOTcxNzYzNjAzLDEwNTM0OTc3
-OTgsODA3MzAzMDA3LDg5MjIwNzQyMiwtMTEyNDA3NzQ5NywxNj
-kyOTU3MzYzXX0=
+eyJoaXN0b3J5IjpbNDEzMjI3MDg3LDE0ODcwOTExMzYsLTE4Mz
+kyNzQ3MDksLTIwNDE5MTQ4NSwxMTQwNTE4NDExLC01MjgzMTc5
+NzIsLTYzMzMzMjA5OCwtMTAwODI2MDE5MSwtMTMwMDI4MzcwNy
+wtODEzNDcxOTkyLDEzOTY2NjE5NDksMTcyNDY0ODg0MywtNDYx
+MzY0MSwtMTI3NDc1MjIxMywtMTI3NDc1MjIxMywtMTI0NjcwMT
+QyMyw1NjE0NzQ0OTAsLTEwNDQ4Nzk3NTAsNzQ2MDU0NDA2LDE4
+MTY0NDY3Nl19
 -->

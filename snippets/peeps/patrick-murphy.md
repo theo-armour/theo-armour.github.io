@@ -19,28 +19,16 @@
 
 # Family
 
-
-
 * Sister 6'7"
 * Mother 78 Basque Bakersfield
 * Step-father: 60s
-
-
 
 girlfriend #1 crazy
 girlfriend #2 died
 girlfriend #3 died
 
 
-
-
-
-
 ## Errands
-
-* Get wine and veggies
-* Unscrew lids to jars
-
 
 * Clean vent in Kitchen
 
@@ -48,43 +36,34 @@ girlfriend #3 died
 
 ## Shoeboxed
 
-
-
 * https://app.shoeboxed.com/member/v2/envelopes
 * More envelopes
 * Create our own envelopes
 
 
-
-
-
-
 ## Accounts
 
-
-
 * Prepare more years of accounts
-
+dropobox
 
 
 ## File Triage
 
-
-
 * Beyond Compare
-
-
-
-
-
+* License
 
 ## Storage
 
-
-
 * Broadway Storage - pay Paula
 * Arrange for new storage space
+* organize van to pick up items from Vallejo
 * Movers
+
+## Possessions
+* bench to Antonio's 
+* visit to storage
+	* work on triage
+
 
 
 
@@ -92,6 +71,7 @@ girlfriend #3 died
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDIyODcwMDIsMjA0MDYxNzE5MCwtMj
-AxNzIyMTY0Nl19
+eyJoaXN0b3J5IjpbMzYwMTQ4NTMsLTIwNzI4NTU2MzcsNjQzNj
+g5OTg0LC0xNTAyMjg3MDAyLDIwNDA2MTcxOTAsLTIwMTcyMjE2
+NDZdfQ==
 -->

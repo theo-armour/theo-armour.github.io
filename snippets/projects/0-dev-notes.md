@@ -3,8 +3,10 @@
 
 ## 2018-12-05
 
-Juliette Hannedouche <[juliettehannedouche@gmail.com>
+Juliette Hannedouche <juliettehannedouche@gmail.com>
 David Ellis <dave.robert.ellis@gmail.com>
+
+
 ## 2018-12-04
 
 encyclopedia
@@ -255,6 +257,7 @@ total5400
 
 00:30
 
+
 What is the purpose of beauty?
 What is the end goal of being beautiful?ff
 
@@ -341,14 +344,15 @@ meshLine Demo
 	* Big new insight - will help with lots of projects
 	* As many parameters as you want, in any order
 
-
-
 ## 2016-12-02
 
 
 playing with vscode settings
 
 cleaning up bookmarks
+
+
+
 
 
 
@@ -468,7 +472,8 @@ Use Ubuntu to create a start disk with Ubuntu already on it.
 Pixel 2 now has Crouton/Ubuntu on it. But this Ubunto cannot play with HDs very well.
 So fire up old eee PC. It has Ubuntu. So let's get it up to date and use it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MzIxMTM3LC01MDA4MDAyMzcsNzYwOT
-I4NjQzLDg3ODk1MzAyMywtNTE0MDA0NTUzLC0xNzQ5ODU5MTcx
-LDIxMTY4NDkyOTIsLTg5NjQzMjQ0NCwtMTk3MjY0NDUzNF19
+eyJoaXN0b3J5IjpbMTY1NTk4NDk4MiwxOTE0MzMwMTA3LDIwNT
+MyMTEzNywtNTAwODAwMjM3LDc2MDkyODY0Myw4Nzg5NTMwMjMs
+LTUxNDAwNDU1MywtMTc0OTg1OTE3MSwyMTE2ODQ5MjkyLC04OT
+Y0MzI0NDQsLTE5NzI2NDQ1MzRdfQ==
 -->
