@@ -13,16 +13,22 @@
 
 ### 828-0000.com
 
-
 * https://admin.google.com/828-0000.com/AdminHome
 
 
 
+## Tips
 
+* Rename and move folders on old drives so they match the current hierarchy
+	* Simplifies amd automates verification a lot
 
 
 ## Journal
 
+
+### 2018-12-09
+
+D:\1811wdmp4tb\wdmycloud\ <> h:\1108wd1tb << looking good
 
 ### 2018-12-01
 

@@ -87,6 +87,13 @@ Taxes Josh
 
 ## To buy
 
+For Moab
+* Handles
+* Stools
+* Trusses
+* Omeprazole
+* Diapers
+
 * Wrinkle free pants
 * Anker battery ?
 
@@ -324,11 +331,11 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzMjI3MDg3LDE0ODcwOTExMzYsLTE4Mz
-kyNzQ3MDksLTIwNDE5MTQ4NSwxMTQwNTE4NDExLC01MjgzMTc5
-NzIsLTYzMzMzMjA5OCwtMTAwODI2MDE5MSwtMTMwMDI4MzcwNy
-wtODEzNDcxOTkyLDEzOTY2NjE5NDksMTcyNDY0ODg0MywtNDYx
-MzY0MSwtMTI3NDc1MjIxMywtMTI3NDc1MjIxMywtMTI0NjcwMT
-QyMyw1NjE0NzQ0OTAsLTEwNDQ4Nzk3NTAsNzQ2MDU0NDA2LDE4
-MTY0NDY3Nl19
+eyJoaXN0b3J5IjpbLTgxNDk4MjgyNyw0MTMyMjcwODcsMTQ4Nz
+A5MTEzNiwtMTgzOTI3NDcwOSwtMjA0MTkxNDg1LDExNDA1MTg0
+MTEsLTUyODMxNzk3MiwtNjMzMzMyMDk4LC0xMDA4MjYwMTkxLC
+0xMzAwMjgzNzA3LC04MTM0NzE5OTIsMTM5NjY2MTk0OSwxNzI0
+NjQ4ODQzLC00NjEzNjQxLC0xMjc0NzUyMjEzLC0xMjc0NzUyMj
+EzLC0xMjQ2NzAxNDIzLDU2MTQ3NDQ5MCwtMTA0NDg3OTc1MCw3
+NDYwNTQ0MDZdfQ==
 -->

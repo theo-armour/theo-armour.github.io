@@ -1090,10 +1090,14 @@ SEE spider / gbxml viewer / assets / get read me files
 
 function parseFile( text, pattern ){
 
+		const regex = new RegExp( `${ inpString.value }`, "gim" );
+		const matches = text.match( regex );
 
-		const re = new RegExp( pattern, "gim" );
-		match = re.exec( text );
+		const regex = new RegExp( pattern, "gim" );
+		match = regex.exec( text );
 		//console.log( 'match', match );
+
+
 
 		if ( match && match.length ) {
 
