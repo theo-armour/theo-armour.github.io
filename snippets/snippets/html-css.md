@@ -91,8 +91,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://www.w3schools.com/css/default.asp
 
 
-
-
 element.getBoundingClientRect()
 https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 
@@ -201,7 +199,7 @@ https://www.w3schools.com/w3css/w3css_color_themes.asp
 * em is relative to the font-size of its direct or nearest parent,
 * rem is relative to the html (root) font-size.
 
-### CSS Varaibles
+### CSS Variables
 
 * https://www.w3schools.com/css/css3_variables.asp
 * https://developer.mozilla.org/en-US/docs/Web/CSS/var
@@ -220,7 +218,16 @@ document.documentElement.style.setProperty('--myVariable', 'blue');
 // getter
 document.documentElement.style.getPropertyValue('--myVariable');
 
+### CSS load with function
 
+function loadCss() {
+
+	const css = document.head.appendChild( document.createElement('link') );
+	css.rel = "stylesheet";
+	css.href = "style.css";
+	console.log( 'css', css );
+	
+}
 
 
 **********

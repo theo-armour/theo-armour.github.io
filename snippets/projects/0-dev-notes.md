@@ -1,6 +1,24 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+### 2018-12-15
+
+lightning rounds
+one online / one physical
+
+### 2018-12-14
+
+paris 1903
+https://www.youtube.com/watch?v=NjDclfAFRB4
+
+Everybody dressed-up. Filmed on Sundays?
+Few working class people visible - besides the coach drivers
+People move anywhere, anyway they want - no lines / no signals
+No signs / no drains / no manholes / few lights 
+Many canes / many hats / many horses / black is the new black
+
+
+
 ## 2018-12-05
 
 Juliette Hannedouche <juliettehannedouche@gmail.com>
@@ -472,8 +490,10 @@ Use Ubuntu to create a start disk with Ubuntu already on it.
 Pixel 2 now has Crouton/Ubuntu on it. But this Ubunto cannot play with HDs very well.
 So fire up old eee PC. It has Ubuntu. So let's get it up to date and use it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NTk4NDk4MiwxOTE0MzMwMTA3LDIwNT
-MyMTEzNywtNTAwODAwMjM3LDc2MDkyODY0Myw4Nzg5NTMwMjMs
-LTUxNDAwNDU1MywtMTc0OTg1OTE3MSwyMTE2ODQ5MjkyLC04OT
-Y0MzI0NDQsLTE5NzI2NDQ1MzRdfQ==
+eyJoaXN0b3J5IjpbLTE3NjUxMjkzMjIsMjA0NjMxNjA3MCwtMT
+U0NTEwNTA1MiwxOTgzNjY4NDQ3LDExOTgzMDIyNTAsMTY1NTk4
+NDk4MiwxOTE0MzMwMTA3LDIwNTMyMTEzNywtNTAwODAwMjM3LD
+c2MDkyODY0Myw4Nzg5NTMwMjMsLTUxNDAwNDU1MywtMTc0OTg1
+OTE3MSwyMTE2ODQ5MjkyLC04OTY0MzI0NDQsLTE5NzI2NDQ1Mz
+RdfQ==
 -->

@@ -6,6 +6,7 @@ UCSF General Surgery ~ 415 353 2161 ~ Dianna
 * https://general.surgery.ucsf.edu/
 * https://general.surgery.ucsf.edu/faculty.aspx?id=Acute_Care_Surgery
 *
+
 Dr Mary Martin ~ 415 514 6200
 	* Lindsay Grace Mann NP /
 Dr Marino
@@ -19,7 +20,6 @@ shingle shot > walgreens
 
 SilverScript Member #G6C825534 ~ 1-866-552-6106
 
-
 https://silverscript.com ~ payments 1 866 237 7373
 
 
@@ -28,7 +28,6 @@ https://silverscript.com ~ payments 1 866 237 7373
 
 
 An inguinal hernia occurs when tissue, such as part of the intestine, protrudes through a weak spot in the abdominal muscles.
-
 
 * https://en.wikipedia.org/wiki/Inguinal_hernia
 * https://en.wikipedia.org/wiki/Post_herniorraphy_pain_syndrome
@@ -147,6 +146,7 @@ Access to current stories and articles on recent research
 
 Web sites where you can ask questions about diet and receive replies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NDk5NTY2OCwtNTYzNjA4MDYsMTk4NT
-Q5ODMyMCwxNDg5NzYyMTYxLDIwNjc5MTk2NjFdfQ==
+eyJoaXN0b3J5IjpbMTc4NjQ2ODk5MCwtMjY0OTk1NjY4LC01Nj
+M2MDgwNiwxOTg1NDk4MzIwLDE0ODk3NjIxNjEsMjA2NzkxOTY2
+MV19
 -->

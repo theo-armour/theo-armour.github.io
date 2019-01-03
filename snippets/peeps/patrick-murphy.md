@@ -1,51 +1,27 @@
-
-
-
-
 # Patrick Murphy
 
+tadich ### [**415-391-1849**](tel:4153911849)
 
 
-
-
-
-# Career Advice
-
-
+## Career Advice
 
 * http://www.thepanetwork.com/
 
+## Errands/ Actions
+
+* Wax pieces into frames
 
 
-# Family
-
-* Sister 6'7"
-* Mother 78 Basque Bakersfield
-* Step-father: 60s
-
-girlfriend #1 crazy
-girlfriend #2 died
-girlfriend #3 died
-
-
-## Errands
-
-* Clean vent in Kitchen
-
-
-
-## Shoeboxed
+## Shoeboxed / Evernote
 
 * https://app.shoeboxed.com/member/v2/envelopes
 * More envelopes
-* Create our own envelopes
-
-
+* Export evernote docs to arvhives
+* 
 ## Accounts
-
 * Prepare more years of accounts
-dropobox
-
+* Export individual transactions
+* dropbox
 
 ## File Triage
 
@@ -54,24 +30,38 @@ dropobox
 
 ## Storage
 
-* Broadway Storage - pay Paula
-* Arrange for new storage space
+* **Arrange for new storage space**
 * organize van to pick up items from Vallejo
 * Movers
 
 ## Possessions
-* bench to Antonio's 
+* bench from Antonio's 
 * visit to storage
 	* work on triage
 
 
+### Done
+
+* Create our own envelopes
+* Broadway Storage - pay Paula
+* Clean vent in Kitchen
 
 
+# Family
+
+* Sister 6'7"
+* Mother 78 Basque Bakersfield
+* Step-father: 60s
+* Father San Diego
+* 
+girlfriend #1 crazy
+girlfriend #2 died
+girlfriend #3 died
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYwMTQ4NTMsLTIwNzI4NTU2MzcsNjQzNj
-g5OTg0LC0xNTAyMjg3MDAyLDIwNDA2MTcxOTAsLTIwMTcyMjE2
-NDZdfQ==
+eyJoaXN0b3J5IjpbLTIzMDg5MzgyNSwtNTMxNTc5NDksNzYyNj
+c2MTU1LDM2MDE0ODUzLC0yMDcyODU1NjM3LDY0MzY4OTk4NCwt
+MTUwMjI4NzAwMiwyMDQwNjE3MTkwLC0yMDE3MjIxNjQ2XX0=
 -->

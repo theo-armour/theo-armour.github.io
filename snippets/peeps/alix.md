@@ -2,6 +2,13 @@
 
 # Alix
 
+* Wikipedia entry
+* Diana
+* Chocolate Covered
+* museum wax
+* Ritz? Old Ship?
+* https://alixfa.weebly.com/ >> needs links
+
 
 
 ## Digital Marketing
@@ -25,9 +32,14 @@ Photo poster
 https://shop.gopro.com/cameras/fusion/CHDHZ-101.html
 * It's all about the software
 
+
+https://www.facebook.com/alixa
+http://alixarmour.com
+http://akinalighting.com
+
 ## Life ideas
 have:
-focus / desire for assembling people / project oriented / excellent multi-channel communications / sens of design
+focus / desire for assembling people / project oriented / excellent multi-channel communications / sense of design
 flexibility / perseverance /
 
 needs developing: antenna
@@ -41,4 +53,13 @@ the demand: ladies in Tech
 
 
 
-## Help plan Cynthia's wedding in France
+
+
+
+http://www.brille24.de/ ~ web site should be flatter / full screen images
+nimblescooters.com - The World's Original Cargo Scooter
+http://www.joshfire.com/en/home.html
+
+
+http://www.cg-mobile.com/ ~ 10/19/2011 report
+https://www.igo3d.com/

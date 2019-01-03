@@ -25,10 +25,18 @@
 
 ## Journal
 
+### 2018-12-20
+
+D:\1811wdmp4tb\archive-2018\ <> 1111wd1000/archive  << OK
+D:\1811wdmp4tb\archive-2018 <> 1111wd1000/archive2 << OK
+D:\1811wdmp4tb\archive-2018 <> 1111wd1000/archive-2013 << OK
 
 ### 2018-12-09
 
 D:\1811wdmp4tb\wdmycloud\ <> h:\1108wd1tb << looking good
+
+D:\1811wdmp4tb\archive-2018\archive-classic-2018-12-05\dropbox\dropbox-2018-11 <> H:\threodator-d-2018-11-20\archive-classic-2018-12-05\dropbox\dropbox-2018-11
+
 
 ### 2018-12-01
 
@@ -54,5 +62,7 @@ On threodator
 * E:\1811wdmp3tb\1111wd1000\Users-archive << verified rule compare
 * E:\1811wdmp3tb\1111wd1000\xampp << verified rule compare
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM2OTgwODYyXX0=
+eyJoaXN0b3J5IjpbMTU0OTg2MjY2LDE4NDY3NjgxNDQsLTgwMD
+cwMTMyNCwtMTE4OTkyNzQ5MywxMTQ1OTc0OTA3LC02NDMwMzU3
+ODcsMTY4ODA0MDQwLDMzNjk4MDg2Ml19
 -->

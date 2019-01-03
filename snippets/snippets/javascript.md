@@ -221,6 +221,7 @@ console.log( index, xhr.target.response );
 
 
 	var xmlhttp;
+
 	function requestFile() {
 		dataPlay = false;
 		xmlhttp = new XMLHttpRequest();
@@ -292,13 +293,29 @@ a.toString()
 a.toLocaleString()
 a.unshift([item]) Prepends items to the start of the array.
 
+a.next()
 
 ### ARRAY Duplicates
 
 * https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
 
-
 arr = arr.filter( (value, index, array) => array.indexOf (value) == index );
+
+### Array Random Values
+
+	arr = Array.from({length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
+
+
+### ARRAY Reduce
+
+	reduce = arr.reduce( ( acc, value, index ) => {
+
+		if ( value === 8 ) { acc.push( index ); }
+
+		return acc;
+
+	}, [] );
+
 
 ### ARRAY Split to Float
 
@@ -444,6 +461,11 @@ random gradient background
 
 
 ## CSS
+
+https://www.w3schools.com/css/css_howto.asp
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
 
@@ -707,10 +729,24 @@ console.log( thing );
 
 
 
+## FETCH
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+* https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+* https://github.com/mdn/fetch-examples/
+
+
+function fetchTextSimple( url, target ){
+
+	fetch( new Request( url ) )
+	.then( response => response.text() )
+	.then( text => target.innerHTML = text );
+
+}
 
 
 
-## Input Type File Open FILEREADER
+##  FILE READER Input Type File Open
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 		'<h3>file reader</h3>' +

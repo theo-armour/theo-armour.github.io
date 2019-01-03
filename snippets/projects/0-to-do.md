@@ -1,11 +1,11 @@
 
 
-Richard
-* Kathy
-* hernia
-* moab
-* furniture
 
+### Moab
+
+* non-slip shower mat
+* cast device
+* 
 ### Patrick
 
 Accounts
@@ -13,26 +13,27 @@ Accounts
 
 File archives
 
-
-
-
 ### Food
-
-* salads
+* Go store
 * 
 ## Email
 
-* David Naylor
-* Mostapha
+* donate wayback
+* donate wikipedia
+* Groups peeps message responses
+* Paula [x]
+* Wiki dude on ladybug discourse;;
+* Dusan
 * Juliette [x]
 * Three.js ~ https://discourse.threejs.org/t/three-js-r100-coming-soon-time-to-celebrate/5241
 * ace-it 
-* WSD
+* WSD . vanessa / Lent
 * theo-peeps [x][x]
 * Englehardts
 * Alfred
 
 ### Ray
+
 Is this about:
 * Wikipedia
 * Mark Levin
@@ -83,8 +84,6 @@ Taxes Josh
 * Where do all the crows go in the evening?
 * Terrance Deacon
 
-
-
 ## To buy
 
 For Moab
@@ -112,15 +111,11 @@ Amazon regulars
 ## Writing
 
 
-
-
 ## Waiting
 
-* RixhardS [x]
+* RichardSmith [x]
 * Shea[ x ]
 * Tony Banks [x]
-
-
 
 ### taxes / accounts
 
@@ -147,9 +142,7 @@ Don Shaw / Marcia / HR Block / Cristina
 
 2018-11-27
 
-
 2018-05-23
-
 
 Denise Law
 Cynthia M
@@ -157,34 +150,18 @@ BillB
 Charlotte
 * Alix / Leah
 
-
 SilverScript Member #G6C825534 ~ 1-866-552-6106
-
-
 silverscript.com ~ payments 1 866 237 7373
-
-
-
-
-
-
 * Isabelle: letter to Notaire
 * new checks
 pay anthem on 1 March $2,439
 Diana - club dinner OK - send email
 
-
 Book: For Ray
-
-
 What's the use of a conspiracy theory if Ray's not in it?
-
 
 your friend
 Theo
-
-
-
 
 * Chamois
 * Eagle Creek bags
@@ -205,13 +182,9 @@ Kalman = web site
 
 
 ## Andronik
-
-
 * Brooks article
 * Patrick
 * Peterson book
-
-
 reno ss
 * Succeed study
 	* Erin: test results to MyChart
@@ -331,11 +304,11 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNDk4MjgyNyw0MTMyMjcwODcsMTQ4Nz
-A5MTEzNiwtMTgzOTI3NDcwOSwtMjA0MTkxNDg1LDExNDA1MTg0
-MTEsLTUyODMxNzk3MiwtNjMzMzMyMDk4LC0xMDA4MjYwMTkxLC
-0xMzAwMjgzNzA3LC04MTM0NzE5OTIsMTM5NjY2MTk0OSwxNzI0
-NjQ4ODQzLC00NjEzNjQxLC0xMjc0NzUyMjEzLC0xMjc0NzUyMj
-EzLC0xMjQ2NzAxNDIzLDU2MTQ3NDQ5MCwtMTA0NDg3OTc1MCw3
-NDYwNTQ0MDZdfQ==
+eyJoaXN0b3J5IjpbODUxNzIxNTY0LC0xMzEwMjI0OTUwLC0xOD
+IzOTE5MjI5LDYwNzk4MzI3LC02MjMxNzk2MjcsMTg0MDgyNzAz
+OCwtMzA0MDU3NzgxLC02NDIwMjM5NDIsLTEwNjU5OTk3OTIsLT
+EwOTM1ODkwMjcsLTgxNDk4MjgyNyw0MTMyMjcwODcsMTQ4NzA5
+MTEzNiwtMTgzOTI3NDcwOSwtMjA0MTkxNDg1LDExNDA1MTg0MT
+EsLTUyODMxNzk3MiwtNjMzMzMyMDk4LC0xMDA4MjYwMTkxLC0x
+MzAwMjgzNzA3XX0=
 -->
