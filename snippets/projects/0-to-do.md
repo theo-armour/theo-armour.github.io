@@ -1,11 +1,11 @@
 
 
 
-### Moab
+weekly email
+tania to juilette
 
-* non-slip shower mat
-* cast device
-* 
+
+
 ### Patrick
 
 Accounts
@@ -15,7 +15,8 @@ File archives
 
 ### Food
 * Go store
-* 
+* 3 containers
+
 ## Email
 
 * donate wayback
@@ -304,11 +305,11 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUxNzIxNTY0LC0xMzEwMjI0OTUwLC0xOD
-IzOTE5MjI5LDYwNzk4MzI3LC02MjMxNzk2MjcsMTg0MDgyNzAz
-OCwtMzA0MDU3NzgxLC02NDIwMjM5NDIsLTEwNjU5OTk3OTIsLT
-EwOTM1ODkwMjcsLTgxNDk4MjgyNyw0MTMyMjcwODcsMTQ4NzA5
-MTEzNiwtMTgzOTI3NDcwOSwtMjA0MTkxNDg1LDExNDA1MTg0MT
-EsLTUyODMxNzk3MiwtNjMzMzMyMDk4LC0xMDA4MjYwMTkxLC0x
-MzAwMjgzNzA3XX0=
+eyJoaXN0b3J5IjpbOTgyMDU0MTU5LDEzNzY2NzAzMjQsLTE2OD
+c3NDYyODksNzE2MjMyOTM5LDg1MTcyMTU2NCwtMTMxMDIyNDk1
+MCwtMTgyMzkxOTIyOSw2MDc5ODMyNywtNjIzMTc5NjI3LDE4ND
+A4MjcwMzgsLTMwNDA1Nzc4MSwtNjQyMDIzOTQyLC0xMDY1OTk5
+NzkyLC0xMDkzNTg5MDI3LC04MTQ5ODI4MjcsNDEzMjI3MDg3LD
+E0ODcwOTExMzYsLTE4MzkyNzQ3MDksLTIwNDE5MTQ4NSwxMTQw
+NTE4NDExXX0=
 -->
