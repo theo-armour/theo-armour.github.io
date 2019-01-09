@@ -1,7 +1,8 @@
 # Patrick Murphy
 
-tadich ### [**415-391-1849**](tel:4153911849)
-
+scanning services
+public storage link
+balcony camera to charge 
 
 ## Career Advice
 
@@ -16,7 +17,7 @@ tadich ### [**415-391-1849**](tel:4153911849)
 
 * https://app.shoeboxed.com/member/v2/envelopes
 * More envelopes
-* Export evernote docs to arvhives
+* Export Evernote docs to archives
 * 
 ## Accounts
 * Prepare more years of accounts
@@ -61,7 +62,8 @@ girlfriend #3 died
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMDg5MzgyNSwtNTMxNTc5NDksNzYyNj
-c2MTU1LDM2MDE0ODUzLC0yMDcyODU1NjM3LDY0MzY4OTk4NCwt
-MTUwMjI4NzAwMiwyMDQwNjE3MTkwLC0yMDE3MjIxNjQ2XX0=
+eyJoaXN0b3J5IjpbLTgzODYyNzc5MywtMjMwODkzODI1LC01Mz
+E1Nzk0OSw3NjI2NzYxNTUsMzYwMTQ4NTMsLTIwNzI4NTU2Mzcs
+NjQzNjg5OTg0LC0xNTAyMjg3MDAyLDIwNDA2MTcxOTAsLTIwMT
+cyMjE2NDZdfQ==
 -->

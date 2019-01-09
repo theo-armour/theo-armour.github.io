@@ -1,9 +1,22 @@
 
 
+### taskettes
 
+
+### Juliette
+* add names
+* * Use API to gather messages
 weekly email
 tania to juilette
 
+### Alix
+alix <> andranik => portrait of a countess
+closet space 
+outdoor camera
+
+frame glue
+suitcases
+eloise mail
 
 
 ### Patrick
@@ -14,13 +27,14 @@ Accounts
 File archives
 
 ### Food
-* Go store
-* 3 containers
+Go store
+
+
+
 
 ## Email
 
-* donate wayback
-* donate wikipedia
+Patrick > public stor
 * Groups peeps message responses
 * Paula [x]
 * Wiki dude on ladybug discourse;;
@@ -45,7 +59,6 @@ Is this about:
 ## Errands
 
 * More keys
-* Masks
 
 ## Admin
 
@@ -67,6 +80,7 @@ Bill B ~ Diana ~
 Bill B ~ Fogg
 Denise Laws?
 Lent
+Vanessa
 Olivier
 Bob I
 David
@@ -97,16 +111,8 @@ For Moab
 * Wrinkle free pants
 * Anker battery ?
 
-Amazon regulars
-* Starbucks coffee
-* Omeprazole
-* chamois
-* Diapers
-* Nescafe
-* Bran buds
-* Hand soap
-* Seaweed
-* Protein powder
+
+
 
 
 ## Writing
@@ -125,6 +131,13 @@ Don Shaw / Marcia / HR Block / Cristina
 
 
 ## Done
+
+### 2019-01-09
+
+Safeway
+* 3 containers
+* Rice
+* Nuts
 
 ### 2018-12-06
 
@@ -305,11 +318,11 @@ What is a workable, minimal interventions?  I tried Zantac for ten days, but fel
 * cancel Google headphones
 * Angela Laffen cancer updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyMDU0MTU5LDEzNzY2NzAzMjQsLTE2OD
-c3NDYyODksNzE2MjMyOTM5LDg1MTcyMTU2NCwtMTMxMDIyNDk1
-MCwtMTgyMzkxOTIyOSw2MDc5ODMyNywtNjIzMTc5NjI3LDE4ND
-A4MjcwMzgsLTMwNDA1Nzc4MSwtNjQyMDIzOTQyLC0xMDY1OTk5
-NzkyLC0xMDkzNTg5MDI3LC04MTQ5ODI4MjcsNDEzMjI3MDg3LD
-E0ODcwOTExMzYsLTE4MzkyNzQ3MDksLTIwNDE5MTQ4NSwxMTQw
-NTE4NDExXX0=
+eyJoaXN0b3J5IjpbNTE1MDY4MDQ2LDE4NDMwNDM5MjUsMzE1NT
+Y3MTk4LDE4NDMwNDM5MjUsODMyOTYxMTQ3LDEwMTkwMzQ3NDcs
+LTExMTY3NDg5OTAsNTM4MzE4ODM4LC0xOTk1NDcyMzEsMTQ0OD
+AxMDUzNSwtMTI1NzcyMzQ1NywtMTcxODExNzQ4MSw4NjA3MjI3
+MTIsLTE5MTc3ODE0OTUsOTgyMDU0MTU5LDEzNzY2NzAzMjQsLT
+E2ODc3NDYyODksNzE2MjMyOTM5LDg1MTcyMTU2NCwtMTMxMDIy
+NDk1MF19
 -->

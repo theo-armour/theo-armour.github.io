@@ -1,6 +1,49 @@
 
+### 2019-01-07
+
+My difficulty in understanding what we do
 
 
+NREL politics
+
+JSON format??
+
+
+### agenda 2019-01-06 Mostapha
+
+
+Ladybug Tools website
+
+
+What is Spider?
+
+Spider is a coding cookbook providing easy-to use and easy-to-customize free open source JavaScript source code.
+The over-arching intent is to facilitate the transfer of data between CAD and energy analysis programs via real-time 3D visualization. Tools - mostly built upon the Three.js WebGL library - are available to view, examine and edit data files. Currently the scripts - and accompanying sample file libraries - provide good support for gbXML files and Radiance software data files. Many of the coding samples were written is response to user queries. All code is hosted on GitHub and runnable in the browser by clicking the link in the content management scripts.
+
+links will be added
+
+gbXML viewers
+
+gbXML generators
+
+gbXML reports
+
+gbXML repairs
+
+gbXML sample files
+
+Radiance viewers
+
+Radiance reports
+
+Radiance sample files
+
+
+
+
+
+
+### 2018-11-??
 
 What should we do to support Spider/keep Theo and Michal happy?
 Also, we should discuss:

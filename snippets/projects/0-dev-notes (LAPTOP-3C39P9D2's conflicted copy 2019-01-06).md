@@ -1,6 +1,8 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
 
+## 2019-01-06
+
 
 ### Chromium OS
 
@@ -10,14 +12,9 @@
 * https://www.neverware.com/freedownload
 * https://www.howtogeek.com/217659/how-to-get-a-chrome-os-like-operating-system-on-any-pc/
 
-neverware looks good
-
 ordered flashdrives
 
 #### Fujitsu lifebook
-
-* loading ubuntu
-* very slow
 
 ## 2018-12-15
 
@@ -508,10 +505,10 @@ Use Ubuntu to create a start disk with Ubuntu already on it.
 Pixel 2 now has Crouton/Ubuntu on it. But this Ubunto cannot play with HDs very well.
 So fire up old eee PC. It has Ubuntu. So let's get it up to date and use it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg2MTM4MDQsMTg2NzA4NTcxMiwtMT
-c2NTEyOTMyMiwyMDQ2MzE2MDcwLC0xNTQ1MTA1MDUyLDE5ODM2
-Njg0NDcsMTE5ODMwMjI1MCwxNjU1OTg0OTgyLDE5MTQzMzAxMD
-csMjA1MzIxMTM3LC01MDA4MDAyMzcsNzYwOTI4NjQzLDg3ODk1
-MzAyMywtNTE0MDA0NTUzLC0xNzQ5ODU5MTcxLDIxMTY4NDkyOT
-IsLTg5NjQzMjQ0NCwtMTk3MjY0NDUzNF19
+eyJoaXN0b3J5IjpbLTQwMTgzNDAwOSwtMTc2NTEyOTMyMiwyMD
+Q2MzE2MDcwLC0xNTQ1MTA1MDUyLDE5ODM2Njg0NDcsMTE5ODMw
+MjI1MCwxNjU1OTg0OTgyLDE5MTQzMzAxMDcsMjA1MzIxMTM3LC
+01MDA4MDAyMzcsNzYwOTI4NjQzLDg3ODk1MzAyMywtNTE0MDA0
+NTUzLC0xNzQ5ODU5MTcxLDIxMTY4NDkyOTIsLTg5NjQzMjQ0NC
+wtMTk3MjY0NDUzNF19
 -->
