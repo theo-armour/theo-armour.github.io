@@ -42,9 +42,10 @@ Chat with Richard Smith
 
 Actions
 * Left another message with UCSF General Surgery
-*
-## 2018-11-28
 
+
+
+## 2018-11-28
 
 Current symptoms
 * Must lie down every few minutes to let the intestinal protrusion recede

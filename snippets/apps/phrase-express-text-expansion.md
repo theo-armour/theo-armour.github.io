@@ -2,6 +2,9 @@
 
 ## Text Expansion
 
+https://blaze.today/
+https://github.com/GaurangTandon/ProKeys
+
 
 
 ## http://www.phraseexpress.com/
@@ -56,7 +59,6 @@ Known Issues
 * I can't get this to work in Google Docs due to how Docs is architected. T_T
 * Similarly, Facebook comments is unavailable due to ReactJS's system.
 * Also, this doesn't work in Google Hangouts due to cross-origin policies.
-
 
 ## About
 

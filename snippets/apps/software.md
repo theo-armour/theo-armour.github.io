@@ -28,6 +28,11 @@ http://www.phraseexpress.com/
 
 ### Beyond compare
 
+2019-01-14
+
+Windows icon > properties > compatibility > run as administrator
+
+
 * 2016-12-29 Still the best
 
 If you happen to have CRCs already calculated for files, then comparing them is quite fast.
@@ -51,6 +56,7 @@ Where to keep drawings?
 	* Keep as PNG files
 		* Redraw same thing frequently more than editing/revising the same drawing
 		* Practice makes perfect
+		
 Editable bitmap drawings
 * Inkscape?
 

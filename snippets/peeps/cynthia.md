@@ -4,6 +4,7 @@
 # Cynthia
 
 
+## 
 ## 2018-11-29 ~ C+K stop by in SF
 
 
@@ -38,7 +39,9 @@ Cynthia / Cal folder
 
 ## Autonomous Vehicles
 
+A friend of a friend suggests that the benefits of autonomous vehicle may be quite limited
 
+* Vehicles available 24/7
 
 
 ### Organizations

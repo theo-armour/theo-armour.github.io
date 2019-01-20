@@ -7,7 +7,7 @@ https://rawgit.com/
 
 ## Recommends
 
-[jsDelivr]( https://www.jsdelivr.com/ )
+### [jsDelivr]( https://www.jsdelivr.com/ )
 * https://www.cdnperf.com/
 * https://cdn.jsdelivr.net/npm/jquery/
 * https://www.jsdelivr.com/rawgit
@@ -17,8 +17,11 @@ https://rawgit.com/
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.min.js
 * https://cdn.jsdelivr.net/combine/gh/mrdoob/three.js@r100/build/three.min.js,gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js
 
+replace
+https://cdn.rawgit.com/mrdoob/three.js/r93/build/three.min.js
+https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
 
-CDNJS
+### CDNJS
 * https://cdnjs.com/
 * https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js
 * https://cdnjs.cloudflare.com/ajax/libs/three.js/71/three.min.js
