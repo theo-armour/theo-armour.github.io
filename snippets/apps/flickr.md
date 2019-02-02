@@ -1,5 +1,5 @@
-flickr
-===
+# flickr
+
 
 https://www.flickr.com/photos/bbn66
 
@@ -54,7 +54,7 @@ https://api.flickr.com/services/rest/?method=flickr.groups.getInfo&api_key=e788b
 
 <a data-flickr-embed="true" data-vr="true"  href="https://www.flickr.com/photos/kanalu/25058705923/in/pool-ricohtheta" title="A 360 degree equirectangular photospheric VR from the Diamond Head (Le&#x27;ahi State Monument) Summit Lookout taken with the Ricoh Theta S"><img src="https://farm2.staticflickr.com/1682/25058705923_01ce7c714a_o.jpg" width="5376" height="2688" alt="A 360 degree equirectangular photospheric VR from the Diamond Head (Le&#x27;ahi State Monument) Summit Lookout taken with the Ricoh Theta S"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/moulin360/13473224893/in/pool-ricohtheta/" title="Cathédrale Saint-André Bordeaux - THETA"><img src="https://farm8.staticflickr.com/7008/13473224893_1b8f499695_k.jpg" width="2048" height="1024" alt="Cathédrale Saint-André Bordeaux - THETA"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/moulin360/13473224893/in/pool-ricohtheta/" title="Cathedrale Saint-Andre Bordeaux - THETA"><img src="https://farm8.staticflickr.com/7008/13473224893_1b8f499695_k.jpg" width="2048" height="1024" alt="Cathedrale Saint-Andre Bordeaux - THETA"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 https://farm8.staticflickr.com/7008/13473224893_1b8f499695_k.jpg
 
