@@ -175,8 +175,10 @@ function lat2y( a ) { return 180 / Math.PI * Math.log( Math.tan( Math.PI / 4 + a
 // source http://en.wikipedia.org/wiki/Spherical_coordinate_system
 
 	function convertPosition( lat, lon, radius ) {
+
+		const d2r = pi / 180
 		var rc = radius * Math.cos( lat * d2r );
-		return v( rc * Math.cos( lon * d2r ), radius * Math.sin( lat * d2r ), rc * Math.sin( lon * d2r) );
+		return new THREE.Vector3( rc * Math.cos( lon * d2r ), radius * Math.sin( lat * d2r ), rc * Math.sin( lon * d2r) );
 	}
 
 	function latLonToXYZ( radius, latitude, longitude ) {

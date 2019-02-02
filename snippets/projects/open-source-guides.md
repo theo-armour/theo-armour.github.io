@@ -83,3 +83,14 @@ Your work becomes the acqui-hire of the future
 * 2017-03-04 ~ notices.md > broken link, (c) to ©
 * Missing woff files
 
+# Open Source Guides
+
+
+Titles of books, movies, novels, etc. are treated as singular and take a singular verb.
+
+See rule 19.
+
+Read more at http://grammar.yourdictionary.com/sentences/20-Rules-of-subject-verb-agreement.html#JK2vJJYF7aZfIVCV.99
+
+If 'Open Source Guides' or _Open Source Guides' is a title then a number of changes could be made throughout.
+

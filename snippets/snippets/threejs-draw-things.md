@@ -650,13 +650,13 @@ function getPointsStar() {
 
 function getSprite() {
 
-	cconst spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000 } );
+	const spriteMap = new THREE.TextureLoader().load( "sprite.png" );
+	const spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000, map: spriteMap } );
 	sprite = new THREE.Sprite( spriteMaterial );
 
-	scene.add( sprite );
 
 	return sprite;
-	
+
 }
 
 

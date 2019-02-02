@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>content-editable-localstorage-autosave</title>
+<meta charset="utf-8">
+<style>
+
+html,body{background:#FCFCFC;color:#444;height:100%;width:100%;margin:0;padding:0;overflow:hidden}
+
+#notepad{height:100%;width:100%;padding:10%;font-size:100%;line-height:125%;font-family:san-serif;box-sizing:border-box}
+::selection{background:#7D7}
+::-moz-selection{background:#7D7}
+
+</style>
+</head>
+<body>
+
+<textarea placeholder="Type here, see it here..."  id="notepad" >
+<!--
+  you could do any element w/ contentEditable, but that doesn't fire onchange
+-->
+</textarea>
+
+<script>
+
+// http://jkirchartz.com/demos/
+
+	/* the code */
+	var n = document.getElementById("notepad");
+
+	
+
+	/* save */
+	var s = function(){ localStorage.setItem( "notepad", n.value ); }
+
+	/* retrieve (only on page load) */
+	if ( window.localStorage ){ n.value = localStorage.getItem( "notepad" ); }
+
+	/* autosave onchange and every 500ms and when you close the window */
+	n.onchange = s();
+
+	setInterval( s, 500 );
+
+	window.onunload = s();
+
+</script>
+</body>
+</html>
