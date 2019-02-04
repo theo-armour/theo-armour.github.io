@@ -2,355 +2,188 @@
 <html lang = "en" >
 <head>
 <meta charset = "utf-8" >
-<meta name = "viewport" content= "width=device-width, initial-scale=1">
-<meta name = "description" content = "This menu script allows you to list, open and view the files in selected folders" >
-<meta name = "keywords" content = "JavaScript,Markdown,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-06-17" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1" >
+<meta name = "description" content = "This menu is a component of a basic html content management script with sliding menu, css theme selection, Markdown to HTML, drag and drop file reading capability, access to frequently used pages and more" >
+<meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
+<meta name = "date" content = "2019-01-19" >
+<meta name = "release" content = "10.0" >
 <title>Theo Armour</title>
-
-<style>
-/* Copyright 2018 pushMe-pullYou authors. MIT License / tootoo12.1 / 2018-06-17 */
-
-/* https://www.w3schools.com/colors/colors_names.asp // use colors and borders to help identify the scope of particular elements */
-
-	html { --mnu-color: MediumSlateBlue; --mnu-back-color: ivory; --mnu-width:300px; height: 100%; }
-
-	body, html { font: 12pt monospace; height: 100%; margin: 0; }
-
-	a { color: var( --mnu-color ); text-decoration: none; }
-	a:hover, a:focus, #hamburger:hover { background-color: yellow; color: #8888; }
-
-	blockquote, pre { background-color: #eee; padding: 10px; }
-	button, input[ type=button ] { background-color: #ddd; border: none; color: var( --mnu-color ); cursor: pointer; padding: 3px 20px; }
-	button:hover { background-color: #ccc; color: #fff }
-
-	iframe { width: 100%; }
-
-	input[ type = range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 100%; }
-	input[ type = range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
-	input[ type = range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
-
-	td { vertical-align: top; }
-
-	#divContainer { height: 100%; margin: 0 0 0 var( --mnu-width ); transition: margin-left .5s; position: relative; }
-	#divContents { height: 100%; left: 0; margin: 0 auto; right: 0;}
-
-	#divMenu { background-color: var( --mnu-back-color ); box-sizing: border-box; margin: 0; height: 100%;
-		overflow-x: hidden; padding: 30px 10px 0 10px; position: fixed; top: 0; width: var( --mnu-width ); z-index: 1; transition: 0.5s; }
-
-	#hamburger { background-color: pink; box-sizing: border-box; cursor: pointer; font-size: 30px; left: calc( var( --mnu-width ) - 100px );
-		line-height: 30px; margin: 0; padding: 5px 15px 8px 10px; position: fixed; top: 0; transition: left .5s; z-index: 10; }
-
-</style>
+<link rel="stylesheet" href="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/style.css">
 </head>
 <body>
-<script src = "https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js" ></script>
+
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/fob-file-open-basic.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/mnu-menu.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/ohc-on-hash-change.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/sfm-selected-files-markdown.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/thm-theme-select.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/tmp-template.js" ></script>
+<script>
+
+//Copyright 2019 pushMe-pullYou authors. MIT License
+
+MNU.currentStatusCore =
+	`
+		<h3>
+			Theo Armour R${ document.head.querySelector( '[ name=release ]' ).content }
+			~
+			${ document.head.querySelector( '[ name=date ]' ).content }
+		</h3>
+
+		<p>
+			Change log
+			<ul>
+				<li>Fork to new repo</li>
+				<li>2019-01-09 ~ R10 beginning to look OK.</li>
+			</ul>
+		</p>
+
+		${ MNU.descriptionTooToo }
+	`;
+
+MNU.description =
+	`
+		This menu script allows you to list, open and view the files in selected folders
+	`;
 
 
-	<div id = "divMenu" >
+const uriDefaultFile = 'README.md';
 
-		<div id = "divTitle" ></div>
+THM.cssBasic = "https://pushme-pullyou.github.io/tootoo13/js-tootoo13/style.css";
 
-		<div>
+// For main menu header
+MNU.urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io";
 
-			<a href=#pages2/about.md >about</a><br>
-			<a href=#https://theo-armour.github.io/pages2/contact.md >contact</a>
+MNU.homeText = ""; //"pushMe-pullYou";
+MNU.homeTitle = ""; //"Very simple JavaScript files to help you explore and build new tools on GitHub.";
+MNU.homeUrl = ""; //"https://pushme-pullyou.github.io";
 
-		</div>
-		<div id = "divBreadcrumbs"></div>
+MNU.repoText = ""; //"TooToo13";
+MNU.repoTitle = ""; //"Basic html templates with sliding menu, css selection, markdown capability and frequently used pages";
+MNU.repoUrl = ""; // "https://pushme-pullyou.github.io/tootoo13";
 
-		<div id = "divMenuItems" ></div>
+MNU.appText = "";// "CMS";
+MNU.appTitle = ""; //"Basic html content management script with sliding menu, css theme selection, Markdown to HTML, drag and drop file reading capability, access to frequently used pages and more";
+MNU.appUrl = ""; //"https://pushme-pullyou.github.io/#tootoo-templates/hamburger-theme-cms/README.md";
 
-		<a href=https://theo-armour.github.io/explayrimental >explayrimental</a>
-		
-		<hr>
+MNU.urlSourceCodeImage="https://status.github.com/images/invertocat.png";
+MNU.urlSourceCodeIcon=`<img src="${ MNU.urlSourceCodeImage }" height=18 >`;
 
-		<p>Click any <a id=aMenuSource ><span id=spnMenuOctoCat ></span></a> icon to view source code on GitHub.
+MNU.footerUrl = "#";
+MNU.footerTarget = ""; //"target=_blank";
+MNU.footerIssues = "https://github.com/pushme-pullyou/tootoo13/issues";
 
-		<p>Click any &#x2750; icon to go full screen & get link to individual file.</p>
+// for parsing
+OHC.user = 'theo-armour';
+OHC.repo = 'theo-armour.github.io';
+OHC.pathRepo = '';
+OHC.branch = '/gh-pages/';
 
-		<p>Tooltips provide file size.</p>
+// When running in dev folder
+//OHC.urlGitHubPage = location.href.includes( OHC.repo ) ? '../' : 'https://' + OHC.repo + "/";
+//OHC.urlGitHubPage = `https://${ OHC.repo }/`;
+// When running in build repo
+OHC.urlGitHubPage = "";
 
-		<hr>
+</script>
 
-		<div id= "divFooter" >
-			<!--
-			<div title='many thanks!' ><a href=#pages/credits.md >Credits</a></div>
-			<div title='' ><a href=#pages/about-this-cms.md >About this CMS</a></div>
-			<div><a href=#pages/code-of-conduct.md >Code of Conduct</a></div>
-			<div><a href=#pages/contributing.md >Contributing</a></div>
-			<div><a href=#pages/license.md >License</a></div>
-			<div><a href=#pages/markdown-help.md >Markdown Help</a></div>
-			<div><a href="javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()" title="Mr.doob's Stats.js appear in top left corner" >Show frames/second statistics</a></div>
-			<div><a href="https://api.github.com/rate_limit" target="_blank" title="Occasionaly this script breaks if you go over the GitHub API rate limit" >github rate limits</a></div>
-			-->
 
-			<p onclick=divMenu.scrollTop=0; style=cursor:pointer;text-align:center; title='go to top and, btw, my web is better than your web' >&#x1f578;</p>
+	<nav id="navMenu" >
 
-		</div>
+		<header>
+
+			<div id="MNUdivHeader" ></div>
+
+		</header>
+
+		<details open >
+
+				<summary class=divMenuTitle >File Menu</summary>
+
+				<section id=SFMsecPrototypes ></section>
+
+				<section id="OHCsecMenuRepoFilesFolders" ></section>
+
+				<section id=FOBsecFileOpenBasic ></section>
+
+				<section id=FILdivFileSave ></section>
+
+			</details>
+
+
+			<details id=detMenuHelp open >
+
+				<summary class=divMenuTitle >Help Menu </summary>
+
+				<section id=THMsecMenuThemeSelect ></section>
+
+				<section id=TMPsecMenuTemplate ></section>
+
+				<footer>
+
+					<section id = "MNUdivFooter" ></section>
+
+				</footer>
+
+		</details>
+
+		<h1 onclick=navMenu.scrollTop=0; style=cursor:pointer;text-align:center; title="go to top of menu" > ❦ </h1>
+
+	</nav>
+
+
+	<div>
+
+		<button id="butHamburger" onclick=MNU.toggleNavLeft(); title="click here to hide this menu"> slide &#9776; </button>
 
 	</div>
 
 
-	<div id = "divContainer" >
+	<nav id="navPopUp" >
 
-		<div id = "divContents" ></div>
+		<div id="divPopUpData" ></div>
+
+		<div id="divMessage" ></div>
+
+	</nav>
+
+
+	<div id="divContainer" >
+
+		<div id="divContents" ></div>
 
 	</div>
-
-	<div id = "hamburger" onclick=toggleNav(); > slide &#9776; </div>
 
 <script>
 
-	const user = 'theo-armour';
-	const repo = '/theo-armour.github.io';
-	const pathRepo = '';
-	const branch = '/master/'
 
-	const uriDefaultFile = 'README.md';
 
-	const iconInfo = '<img src="https://status.github.com/images/invertocat.png" height=18 >';
-	const urlGitHubSource = 'https://github.com/' + user + repo;
-	const urlGitHubApiContents = 'https://api.github.com/repos/' + user + repo + '/contents/' + pathRepo;
+init();
 
-	const urlGitHubPage = location.href.includes( '/' + user + '.github.io' ) ? '' : 'https://rawgit.com/' + user + repo + branch;
-	//const urlGitHubPage  = 'https://rawgit.com/' + user + repo + branch;
-	//console.log( 'urlGitHubPage', urlGitHubPage );
 
+function init() {
 
-	init();
+	MNUdivHeader.innerHTML = MNU.getNavHeader();
 
-	function init() {
+	SFM.getMarkdownFileContents( "highlights.md", SFMsecPrototypes );
 
-		divTitle.innerHTML =
-			`<h2>
-				<a href="${ urlGitHubSource }" target="_top" >${ iconInfo }</a>
-				<a href = "" >${ document.title }</a>
-			</h2>
+	OHCsecMenuRepoFilesFolders.innerHTML = OHC.getMenuRepoFilesFolders();
 
-			<p>
-				${ document.head.querySelector( '[name=description]' ).content }
-			</p>`;
+	FOBsecFileOpenBasic.innerHTML = FOB.getMenuFileOpenBasic( divContents, divPopUpData );
 
-		aMenuSource.href= urlGitHubSource;
-		spnMenuOctoCat.innerHTML = iconInfo;
+	THMsecMenuThemeSelect.innerHTML = THM.getMenuThemeSelect();
 
-		window.addEventListener ( 'hashchange', onHashChange, false );
+	TMPsecMenuTemplate.innerHTML = TMP.getMenuTemplate();
 
-		onHashChange();
+	MNUdivFooter.innerHTML = MNU.getNavFooter(); // not essential
 
-	}
+	THM.init();
 
+	OHC.onHashChange();
 
+}
 
-	function onHashChange() {
-
-		const url = location.hash.slice( 1 );
-		const ulc = url.toLowerCase();
-		//console.log( 'url', url );
-
-		const crumbs = url.slice( urlGitHubPage.length );
-		const pathCurrent = crumbs.lastIndexOf( '/' ) > 0 ? crumbs.slice( 0, crumbs.lastIndexOf( '/' ) ) : '';
-		//console.log( 'pathCurrent',  pathCurrent );
-
-		setMenuGitHubPathFilNames( pathCurrent );
-
-		if ( ulc.endsWith( '.md' ) ) {
-
-			requestFile( url, callbackMarkdown );
-
-		} else if ( ulc.endsWith( '.html' ) ) {
-
-			document.body.style.overflow = 'hidden';
-			divContents.style.maxWidth = '';
-			divContents.innerHTML = '<iframe src=' + url + ' style=border:none;height:100%;width100%; ></iframe>';
-
-		} else if ( ulc.endsWith( '.gif' ) || ulc.endsWith( '.png' ) || ulc.endsWith( '.jpg' ) || ulc.endsWith( '.svg' ) || ulc.endsWith( '.ico' ) ) {
-
-			divContents.innerHTML = '<img src=' + urlGitHubPage + url + ' style=margin:20px; >';
-
-		} else {
-
-			requestFile( urlGitHubPage + url, callbackToTextarea );
-
-		}
-
-	}
-
-
-
-	function setMenuGitHubPathFilNames( path = '' ) {
-
-		const url = urlGitHubApiContents + path;
-
-		requestFile( url, callbackGitHubPathFilNames );
-
-		setBreadcrumbs( path );
-
-	}
-
-
-
-	function setBreadcrumbs( path ) {
-
-		let txt =
-			'<b>' +
-				'<a href=JavaScript:setMenuGitHubPathFilNames(); >' +
-
-					( pathRepo ? pathRepo : '<span style=font-size:24px >&#x2302</span>' ) +
-
-				'</a> &raquo; ' +
-			'</b>';
-
-		const folders = path ? path.split( '/' ) : [] ;
-
-		let str = '';
-
-		for ( let folder of folders ) {
-
-			str += folder + '/';
-
-			txt += '<b><a href=JavaScript:setMenuGitHubPathFilNames("' + str.slice( 0, -1 ) + '"); >' + folder + '</a> &raquo; </b>';
-
-		}
-
-		divBreadcrumbs.innerHTML = txt;
-
-	}
-
-
-
-	function callbackGitHubPathFilNames( xhr ) {
-
-		const response = xhr.target.response;
-		const items = JSON.parse( response );
-		const len = pathRepo.length;
-
-		let txt = '';
-
-		if ( items.message ) { console.log( items.message ); return; }
-
-		const ignoreFolders = [ 'aceit','db-boilerplate', 'data', 'js', 'menu', 'plugin' ]; //, 'plugins'
-
-		for ( let item of items ) {
-
-			if ( item.type === 'dir' ) {
-
-				if ( ignoreFolders.includes( item.name ) ) { continue; }
-
-				txt +=
-					'<div style=margin-bottom:8px; >' +
-						'<a href=JavaScript:setMenuGitHubPathFilNames("' + item.path.slice( len )  + '"); >&#x1f4c1; ' +
-							item.name  +
-						'</a>' +
-					'</div>' +
-				'';
-
-			}
-
-		}
-
-		const ignoreFiles = [ '.gitattributes', '.gitignore', '.nojekyll', '404.html' ];
-
-		for ( let item of items ) {
-
-			if ( item.type === 'file' ) {
-
-				if ( ignoreFiles.includes( item.name ) ) { continue; }
-
-				itemPath = encodeURI( item.path.slice( len ) );
-
-				txt += // try grid or flexbox??
-					'<table><tr>' +
-
-						'<td><a href="' + urlGitHubSource + '/blob' + branch + itemPath + '" target=_top >' + iconInfo + '</a></td>' +
-						'<td>' +
-
-							'<a href=#' + urlGitHubPage + pathRepo + itemPath +
-							' title="' + item.size.toLocaleString() + ' bytes" > ' + item.name + '</a> ' +
-							( item.path.endsWith( 'html' ) ? '<a href=' + urlGitHubPage + pathRepo + itemPath + ' >&#x2750;</a>' : '' ) +
-
-						'</td>' +
-
-					'</tr></table>';
-
-				// simplify
-				if ( ( !location.hash || location.hash.toLowerCase().endsWith( 'readme.md' ) )
-					//&& item.path !== 'README.md'
-					&& item.name.toLowerCase() === 'readme.md' ) {
-
-					location.hash = urlGitHubPage + pathRepo + itemPath;
-
-				}
-
-			}
-
-		}
-
-		divMenuItems.innerHTML = txt;
-
-	}
-
-
-
-	function callbackMarkdown( xhr ){
-
-		showdown.setFlavor('github');
-		const converter = new showdown.Converter();
-		//const response = xhr.target.response;
-		const html = converter.makeHtml( xhr.target.responseText );
-
-		document.body.style.overflow = '';
-		divContents.style.maxWidth = '800px';
-		divContents.innerHTML = html;
-		window.scrollTo( 0, 0 );
-
-	}
-
-
-
-	function callbackToTextarea( xhr ){
-
-		const response = xhr.target.response;
-		divContents.innerHTML = '<textarea style=height:100%;width:100%; >' + response + '</textarea>';
-
-	}
-
-
-
-	function requestFile( url, callback ) {
-
-		const xhr = new XMLHttpRequest();
-		xhr.crossOrigin = 'anonymous';
-		xhr.open( 'GET', url, true );
-		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
-		//		xhr.onprogress = function( xhr ) { console.log(  'bytes loaded: ' + xhr.loaded.toLocaleString() ) }; /// or something
-		xhr.onload = callback;
-		xhr.send( null );
-
-	}
-
-
-
-	function toggleNav() {
-
-		const left = 'calc( var( --mnu-width ) - 100px )';
-
-		if ( hamburger.style.left === '' || hamburger.style.left === left ) {
-
-			divMenu.style.left = 'calc( -1 * var( --mnu-width ) - 20px )';
-			hamburger.style.left = '-100px';
-			divContainer.style.marginLeft = '0';
-
-		} else {
-
-			divMenu.style.left = 0;
-			hamburger.style.left = left;
-			divContainer.style.marginLeft = 'var( --mnu-width )';
-
-		}
-
-	}
 
 </script>
 </body>

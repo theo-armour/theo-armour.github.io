@@ -592,7 +592,7 @@ document.write("Hello World!");
 
 
 
-### DOM
+### DOM load script
 
 	var script= document.createElement('script');
 	script.type= 'text/javascript';
