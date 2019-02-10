@@ -7,7 +7,7 @@
 
 http://archives.chicagotribune.com/1881/06/14/page/9/article/george-armour
 The Chicago Tribune: Tuesday, June 14th, 1881, page 9
-[[[ sfn | Chicago Tribune | 1881 ]]]
+*** sfn | Chicago Tribune | 1881 ***
 First settled in Ottawa, Illinois
 
 Pease help me verify that the following is  valid transcription of the newspaper scan
@@ -93,7 +93,7 @@ Construction began October 1, 1851, in Chicago, and the first train was operated
 
 https://books.google.com/books?id=IpMUAAAAYAAJ&pg=PA57&lpg=PA57&dq=george+armour+railroad+contractor
 Chicago Yesterdays: A Sheaf of Reminiscences
-[[[ sfnRef | Kirkland | 1919 ]]]
+*** sfnRef | Kirkland | 1919 ***
 Steel  & GA
 The first large steam elevator that was ever built in Chicago for handling grain from railroad tracks was on the North side, on the river west of Wells Street. It was built by George A Gibbs and E W Griffin of Gibbs, Griffin & Company. Gibbs told me that people thought he was crazy to undertake such a thing and that it would not pay. A year or two later George Steel, a Scotchman, built another elevator just west of Gibbs, Griffin and Company. He sold out to Wesley Munger and George Armour. Munger add on a small meal at Waukegan, which had burned down, and George Armour had been a contractor on the canal. Both were at this time end of moderate means, but their early development of the grain-elevator business made for them  great fortunes.
 
@@ -222,7 +222,7 @@ Encyclopaedia of Biography of Illinois, Volume 3
 
 https://books.google.com/books?id=KPA1AQAAMAAJ&pg=PA152
 Volume 3, 1902
-[[[ sfnRef | MacGrath | Reed | 1902 | p = 152 ]]]
+*** sfnRef | MacGrath | Reed | 1902 | p = 152 ***
 James Dole (1824 - 1902) p152-154
 Brother of Charles
 Arrives Chicago 1847 works for Chicago & Galena RR
@@ -244,7 +244,7 @@ https://archive.org/details/encyclopaediaofb01macg
 
 Encyclopaedia of biography of Illinois, volume 1
 https://archive.org/stream/encyclopaediaofb01macg#page/n387/mode/2up
-[[[ sfn | MacGrath | Reed | 1892 | p = 227 ]]]
+*** sfn | MacGrath | Reed | 1892 | p = 227 ***
 1819 -
 Chicago 1847??
 Clerked for Chicago, Galena & Union RR
@@ -293,7 +293,7 @@ http://archives.chicagotribune.com/1875/01/13/page/4/article/enter-the-king
 P 4
 http://archives.chicagotribune.com/1875/01/14/page/7/
 P7 The Kanaka King ~ very sad article
-[[[ sfn | Chicago Tribune | 1875 ]]]
+*** sfn | Chicago Tribune | 1875 ***
 Levi Leiter
 
 https://en.wikipedia.org/wiki/Levi_Leiter
@@ -306,7 +306,7 @@ Wesley Munger
 http://www.encyclopedia.chicagohistory.org/pages/2783.html
 
 http://archives.chicagotribune.com/1868/01/26/page/1/article/death-of-wesley-munger-esq
-[[[ sfn | Chicago Tribune | 1868 ]]]
+*** sfn | Chicago Tribune | 1868 ***
 1854 ~ leased an  elevator from George Steel  at North Franklin and North Water/ burned in 1854
 Short time after joined with Armour. Builds new elevator at corner of North Franklin and North Water
 William Ogden
@@ -349,7 +349,7 @@ Andras V1
 P587
 
 http://www.marketswiki.com/wiki/George_Steel
- [[[ sfn  | Markets Wiki - George Steel | 2014 ]]]
+ *** sfn  | Markets Wiki - George Steel | 2014 ***
 George Steel was a Chicago building contractor born in Forfarshire, Scotland who was a founding member of the Chicago Board of Trade who served as the third president of the exchange.He followed Thomas Dyer and Charles Walker in the role.
 He came to Chicago in 1837, having engaged in a contract to for building a section of the Illinois & Michigan Canal. After stoppage of work on the canal, Steel became a general commission merchant in Chicago and established a pork-packing business on South Water Street.
 Steel came to Chicago from Scotland via Canada. He was born in Forfarshire, Scotland in 1797, one of a family of twelve sons and moved to Canada in 1828. Steel was the first President of the Illinois Saint Andrew Society in 1845.[5]
@@ -384,10 +384,10 @@ Hiram Wheeler
 http://industrywww.marketswiki.com/wiki/Hiram_Wheeler
 
 http://marketswiki.com/wiki/Hiram_Wheeler
- [[[ sfn | Markets Wiki - Hiram Wheeler | 2013 ]]]
+ *** sfn | Markets Wiki - Hiram Wheeler | 2013 ***
 The late Hiram Wheeler (1809-1892) was a Chicago warehouse owner who served as president of the Chicago Board of Trade in 1855. His firm was Munger, Wheeler & Company, Inc.
 Andreas
-[[[ sfn | Andreas Vol1 | 1884 | p 587 ]]]
+*** sfn | Andreas Vol1 | 1884 | p 587 ***
 
 Norman Williams
 http://www.glessnerhouse.org/story-of-a-house/2013/06/norman-williams-and-his-house-at-1836.html
@@ -413,25 +413,25 @@ Sojourner Truth donation
 
 http://www.encyclopedia.chicagohistory.org/pages/2555.html
 Armour, Dole & Co
-[[[ sfn | EncyclopediaChicago - Armour Dole & Co  | 2017 ]]]
+*** sfn | EncyclopediaChicago - Armour Dole & Co  | 2017 ***
 Armour, Dole & Co. was founded in 1860 by George Armour, Charles Dole, and Wesley Munger. The company owned a grain elevator at the depot of the Chicago, Burlington & Quincy Railroad with a capacity of 850,000 bushels. After the Civil War, Armour, Dole & Co. remained among the city's leading grain warehousers; their elevators had a combined capacity of 2.1 million bushels in 1871. By the early 1880s, this figure had grown to 6.3 million bushels.
 
 Munn & Scott /1873
 https://books.google.com/books?id=DDdGAQAAMAAJ&pg=PA669&lpg=PA669&dq=%22grain+kings%22+chicago&source=bl&ots=LqFq2Epjjf&sig=8k2ffy9bWSKs1Bv2Y-UpBeLPmo0&hl=en&sa=X&ved=0ahUKEwjH3LGg4erRAhVowFQKHZvgCZAQ6AEIOTAH#v=onepage&q=%22grain%20kings%22%20chicago&f=false
 
 http://www.encyclopedia.chicagohistory.org/pages/2784.html
-[[[ sfn | EncyclopediaChicago - Munn & Scott | 2017 ]]]
+*** sfn | EncyclopediaChicago - Munn & Scott | 2017 ***
 
 http://www.encyclopedia.chicagohistory.org/pages/2783.html
 
 Munger, Wheeler & Company  / 1854
 http://www.encyclopedia.chicagohistory.org/pages/2783.html
 Munger, Wheeler & Co.
-[[[ sfn |  EncyclopediaChicago - Munger, Wheeler & Co | 2017 ]]]
+*** sfn |  EncyclopediaChicago - Munger, Wheeler & Co | 2017 ***
 In 1854, Wesley Munger and George Armour started a Chicago grain-warehousing company called Munger & Armour. In 1863, Hiram Wheeler entered the firm, which became Munger, Wheeler & Co. The company owned large grain elevators next to the depot of the Chicago & North Western Railroad.
 
 Andreas: History of Chicago, Volume 2
-[[[ sfn | Andreas | 1885 | p = 374 ]]]
+*** sfn | Andreas | 1885 | p = 374 ***
 
 Infrastructure
 Illinois and Michigan Canal
@@ -557,7 +557,7 @@ P175 GA part of business delegation
 http://www.nytimes.com/1863/06/04/news/the-chicago-canal-convention.html
 
 http://www.nytimes.com/1863/05/24/news/affairs-west-canal-convention-case-mr-hager-indian-rebel-sympathizers-c-c.html
-[[[ sfnRef | nytimes | 1863 ]]]
+*** sfnRef | nytimes | 1863 ***
 
 http://onlinebooks.library.upenn.edu/webbin/book/lookupname?key=National%20Ship-Canal%20Convention%20(1863%20%3A%20Chicago%2C%20Ill.)
 
@@ -589,7 +589,7 @@ Munn & Scott Affair
 
 http://www.americanheritage.com/content/foot-door?page=show
 Munn & Scott affair
-[[[ sfn | Magrath | 1964 ]]]
+*** sfn | Magrath | 1964 ***
 
 http://archives.chicagotribune.com/1873/03/02/page/9/article/munn-and-scott
 
@@ -611,7 +611,7 @@ The Great_Republic By the Master Historians Vol III
 https://archive.org/details/greatrepublic03morrrich
 The Great Republic 1914
 Morris, Charles
-[[[ sfn | Morris | 1914 | p = 136 ]]]
+*** sfn | Morris | 1914 | p = 136 ***
 P136 ~ panic 1837 ~ 850 banks - 343 closed
 1847
 https://en.wikipedia.org/wiki/Panic_of_1847 ~ England
@@ -638,7 +638,7 @@ The Lakeside Annual Directory of the City of Chicago
 https://books.google.com/books?id=gLVwGNWDgsIC&pg=PA27
 1872
 Photo
-[[[ sfn | Tyre| 2008 | p = 27]]]
+*** sfn | Tyre| 2008 | p = 27***
 
 http://www.pdnachicago.com/page07.php
 
@@ -795,7 +795,7 @@ http://www.fundinguniverse.com/company-histories/chicago-board-of-trade-history/
 https://archive.org/details/historyofboardof01tayl
 https://archive.org/stream/historyofboardof01tayl#page/514/mode/2up/search/armour
 History of the Board of Trade of the City of Chicago, 1917, Vol 1
-[[[ sfn | taylor | 1917 ]]]
+*** sfn | taylor | 1917 ***
 P104 ~ 1839 ~ much work on canal because of scrip
 P109 ~ 1840 ~ canal work ~ 1843 work suspended
 P113 ~ 1843 ~ newberry & dole ~ image of warehouse
@@ -864,7 +864,7 @@ https://archive.org/details/5222970_1
 
 https://archive.org/details/5222970_18
 Eighteenth Annual report of the Trade and Commerce of Chicago for the year ended December 31, 1875 Compiled for the Chicago Board of Trade
-[[[ sfn | CBoT | 1876 ]]]
+*** sfn | CBoT | 1876 ***
 President GA
 P13 ~ Mint committee
 P18 ~ shipments to Europe
@@ -874,7 +874,7 @@ P223 ~ location of Chicago as a mint
 Standards
 http://www.encyclopedia.chicagohistory.org/pages/30.html
 Agriculture
- [[[ sfn | EncyclopediaChicago - Agriculture | 2017 ]]]
+ *** sfn | EncyclopediaChicago - Agriculture | 2017 ***
 This mass movement of grain resulted in the commingling of grain at railroad stops and barge tie-ups called elevators. There, a farmer's grain was carefully weighed and graded, with like grades being elevated into large commingled overhead bins. From these bins, gravity provided the impetus and wooden chutes quickly filled the waiting railroad cars and barges. While the elevator created another middleman between the farmer and the purchaser, it facilitated a more reliable delivery system, provided a means to accommodate a larger harvest, minimized the loss of grain to a single seller, and provided for the speculator, who could easily buy or sell the stored grain.
  Speculation on the price of grain and other agricultural commodities has been a critical component in Chicago's agriculture. The Chicago Board of Trade has been the platform allowing access to markets within the United States and throughout the world. Historically, it has provided price stability, setting the minimum price for agricultural commodities and stimulating interest and re-investment in agricultural businesses. While farmers saw speculators as making money off their labor, the Board of Trade facilitated working capital being available for farmers to utilize.
 
@@ -890,7 +890,7 @@ http://www.cmegroup.com/company/history/timeline-of-achievements.html
 
 http://eh.net/encyclopedia/a-history-of-futures-trading-in-the-united-states/
 A History of Futures Trading in the United States
-[[[ sfn | santos | 2008 ]]]
+*** sfn | santos | 2008 ***
 Very complete description of CBoT history - standards futures
 
 Chicago Board of Trade Light Artillery / 1862
@@ -920,7 +920,7 @@ http://www.illinoishsglorydays.com/id909.html
 Did the school burn down in the fire?
 Merchants Insurance Company
 Started 1861 or 1863?
-[[[ sfn | Andreas | 1885 ]]] pp 643, 644, 648
+*** sfn | Andreas | 1885 *** pp 643, 644, 648
 P721 ~ offices exploded office to make a fire break
 Merchants' Loan and Trust Company / Continental Illinois
 https://en.wikipedia.org/wiki/Continental_Illinois
@@ -932,7 +932,7 @@ George Armour one of the founders of what became 7th largest bank in US
 
 http://archive.org/stream/advancementofchi00merc/advancementofchi00merc#page/86/mode/2up
 The advancement of Chicago as a financial center up to the close of the nineteenth century ~ 1901 ~ published by ML&TC
-[[[ sfn | ML&TC| 1901 ]]]
+*** sfn | ML&TC| 1901 ***
 P76 Wildcat banks
 P80-90 ~ account of wildcat banking
 P92-100 ~ readable story of the fire
@@ -944,7 +944,7 @@ https://archive.org/stream/fiftyyearsofbank00harp#page/n155/mode/2up/search/armo
 
 https://ia600304.us.archive.org/BookReader/BookReaderImages.php?zip=/17/items/fiftyyearsofbank00harp/fiftyyearsofbank00harp_jp2.zip&file=fiftyyearsofbank00harp_jp2/fiftyyearsofbank00harp_0157.jp2&scale=4&rotate=0
 Harper: Fifty Years of Banking in Chicago, 1907
-[[[ sfnRef | Harper | Ravell | 1907 ]]]
+*** sfnRef | Harper | Ravell | 1907 ***
 P31 John High Dunham first president
 P32 ~ The creation of the Merchant’s… was the protest of Chicago’s soundest businessmen and financiers against the continuance of irresponsible and unscientific Banking, and alike in path of merchants and labor. To Chronicle the creators of this Bank is still is to list not a few of the builders of Chicago. It was in 1856 that among other prominent citizens the following came together to establish an institution that should serve the mercantile and manufacturing interests of the Chicago of that day. And of the  future Chicago which some foresaw.
 Law passes Jan 28 1957. Open for business June 10
@@ -986,7 +986,7 @@ https://www.academia.edu/9497933/_A_Better_Class_of_People_Protestants_in_the_Sh
 
 A Better Class of People: Protestants in the Shaping of Early Chicago, 1833- 1873
 1992
-[[[ sfn| Stockwell | 1992 ]]]
+*** sfn| Stockwell | 1992 ***
 P421-422 ~ 1867 ~ GA Trustee of the YMCA
 P364- ~ Seaman’s Bethel
 
@@ -1125,7 +1125,7 @@ https://archive.org/stream/historyofchicago01inandr#page/n15/mode/2up/search/arm
 
 https://books.google.com/books?id=R94_AQAAMAAJ&pg=PA372&dq=%27History+of+Chicago%27,+Volume+2+andreas&hl=en&sa=X&ved=0ahUKEwjeicr3g-7RAhUSw2MKHRF9CWoQ6AEIHzAB#v=onepage&q='History%20of%20Chicago'%2C%20Volume%202%20andreas&f=false
 Andreas: History of Chicago, Volume 1
-[[[ sfn | Andreas Vol1 | 1884 ]]]
+*** sfn | Andreas Vol1 | 1884 ***
 P159 ~ annual history 1957 ~ GA wounded
 P195 ~ street names ~ Armour St afte GA
 P579 ~ grain moved by men then by horses
@@ -1138,7 +1138,7 @@ https://archive.org/stream/historyofchicago02andr#page/n7/mode/2up/search/armour
 
 https://books.google.com/books?id=ZkxRAQAAMAAJ&printsec=frontcover&dq=%27History+of+Chicago%27,+Volume+2+andreas&hl=en&sa=X&ved=0ahUKEwjeicr3g-7RAhUSw2MKHRF9CWoQ6AEISjAJ#v=onepage&q='History%20of%20Chicago'%2C%20Volume%202%20andreas&f=false
 Andreas: History of Chicago, Volume 2
-[[[ sfn | Andreas | 1885 ]]]
+*** sfn | Andreas | 1885 ***
 P143-144 ~ CB&Q RR ~ Armour Dole & co
 P162 ~ CBoT Light Artillery
 P163 ~ 1861 ~ CBot ~ GA on War Finance committee
@@ -1163,7 +1163,7 @@ https://archive.org/stream/historyofchicago03andruoft#page/n11/mode/2up/search/a
 
 https://books.google.com/books?id=THd5AAAAMAAJ&pg=PA320&lpg=PA320&dq=%22george+armour%22&source=bl&ots=NzHxDvCe3x&sig=yskz9cseF-vPPqaSFzCWZAiizlo&hl=en&ei=s8B6TPWxLoeisAOh7YztCg&sa=X&oi=book_result&ct=result&resnum=3&ved=0CBwQ6AEwAjgU#v=onepage&q=%22george%20armour%22&f=false
 Andreas: History of Chicago, Volume 3
-[[[ sfnRef | Andreas | 1886 ]]]
+*** sfnRef | Andreas | 1886 ***
 P290 ~ Chicago Citizens League
 P320 ~ GA director 1872-1873 ~ 1875 pres
 P420-422 ~ Art Institute ~ GA first pres
@@ -1233,7 +1233,7 @@ http://www.newyorker.com/news/news-desk/wisconsin-the-cronon-affair
 
 Nature’s Metropolis: Chicago and the Great West
 
-[[[ sfn | Cronan | 1991 ]]]
+*** sfn | Cronan | 1991 ***
 
 
 P14 ~ The city at its founding, he argued, had none of the natural advantages found in great cities else-where around the world: built in the midst of a great level swamp, it had no fertile valleys, no great harbors, no broad rivers. Instead, its creationdepended solely on the force of human will. "Man,"
@@ -1310,7 +1310,7 @@ MacGrath
 Encyclopaedia of Biography of Illinois
 Volume 1
 https://archive.org/details/encyclopaediaofb01macg
-[[[ sfnRef | MacGrath | Reed | 1892 ]]]
+*** sfnRef | MacGrath | Reed | 1892 ***
 Cyrus McC p54
 George Smith p67
 Silas Cobb - father of Berthe Cobb
@@ -1321,14 +1321,14 @@ P D Armour 320
 Volume 2,
 https://archive.org/details/encyclopaediaofb02macg
 
-[[[ sfnRef | MacGrath | Reed | 1894 ]]]
+*** sfnRef | MacGrath | Reed | 1894 ***
 P16 George Smith
 
 Volume 3, 1902
 https://archive.org/details/encyclopaediaofb03macg  < not
 
 https://books.google.com/books?id=KPA1AQAAMAAJ
-[[[ sfnRef | MacGrath | Reed | 1902 ]]]
+*** sfnRef | MacGrath | Reed | 1902 ***
 James Dole (1824 - 1902)  ~ p152
 Brother of Charles
 Arrives Chicago 1847 works for Chicago & Galena RR
@@ -1345,7 +1345,7 @@ https://books.google.com/books?id=QZ1D4Q8uZuoC
 
 Michael Pollan
 Penguin, Apr 11, 2006
-[[[ sfn | Pollan | 2006 ]]]
+*** sfn | Pollan | 2006 ***
 P59 ~ corn in burlap sacks
 P60 ~ CBoT starts grading
 
@@ -1371,7 +1371,7 @@ https://archive.org/stream/chicagopastprese00wrig/chicagopastprese00wrig
 https://archive.org/stream/chicagopastprese00wrig/chicagopastprese00wrig#page/156/mode/2up/search/armour
 
 
-[[[ sfn | wright | 1868 ]]]
+*** sfn | wright | 1868 ***
 P157 ~ explanation of grain elevators
 P161 ~ grading and inspection system
 P162 ~ Gurney ~ inspector
