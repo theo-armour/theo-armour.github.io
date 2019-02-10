@@ -1,5 +1,4 @@
-George Armour ( 24 April 1812 - 13 June 1881 )
-===
+# George Armour ( 24 April 1812 - 13 June 1881 )
 
 
 ## George Armour
