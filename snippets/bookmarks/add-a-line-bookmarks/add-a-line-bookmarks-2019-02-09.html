@@ -139,75 +139,8 @@ function getTags() {
 	obj = {};
 	folders = [];
 
-	tags = [ "root" ];
-	//rootFolders = bookmarks.children.map( item => item.name );
-
-	traverse2( bookmarks, "Bookmarks bar" );
-
-	console.log( 'obj', obj );
-
-
-		function traverse2( json, name ) {
-
-			let tags = [];
-
-			for ( let key in json ) {
-
-				const data = json[ key ];
-
-				if ( !!data && typeof( data ) === "object" ) {
-
-					if ( data.type === "folder" ) {
-
-						//console.log( "key", key );
-						//console.log( "data", data );
-
-						index = tags.indexOf( data.name );
-						//console.log( 'name', data.name );
-
-						if ( index === -1 ) {
-
-							tags.push( data.name );
-
-						} else {
-
-							//tags = tags.slice( 0, index );
-
-							console.log( 'tags', tags );
-
-						}
-
-						//tags = []
-						//console.log( 'tags', tags );
-						//tags.push( data.name );
-						obj[ data.name ] = { tags: tags }
-
-
-					}
-
-					traverse2( data, data.name );
-
-				} else {
-
-					//console.log( 'data', data );
-
-				}
-
-			}
-
-		}
-
-}
-
-
-function getTagsXXX() { // OK
-
-	bookmarks = json.roots.bookmark_bar
-	obj = {};
-	folders = [];
-
 	let tags = [ "root" ];
-	//rootFolders = bookmarks.children.map( item => item.name );
+	rootFolders = bookmarks.children.map( item => item.name );
 
 	traverse2( bookmarks, "Bookmarks bar" );
 
@@ -266,11 +199,7 @@ function getSubSet() {
 	//console.log( 'opentecture', opentecture );
 
 	folders = [];
-	files = [];
-	let folder;
-	let parent;
-	let parentParent;
-
+	files = []
 
 	traverse( opentecture, "opentecture" );
 
@@ -281,10 +210,11 @@ function getSubSet() {
 	str =  str.slice( 1, -1 ).replace( /},{/g, "}\n{" )
 
 	divContents.innerText = str;
+	
 
+	function traverse( json, name ) {
 
-	function traverse( json ) {
-
+		console.log( 'name', name );
 
 		for ( let key in json ) {
 
@@ -297,21 +227,21 @@ function getSubSet() {
 					//console.log( "key", key );
 					console.log( "data", data );
 					folders.push( data.name );
-
 					folder = data.name;
+
 					//console.log( 'data', data );
 
 				}
 
 				if ( !!data && data.type === "url" ) {
 
-					data.tags = [ folder];
+					data.tags = folder;
 					//console.log( '', data );
 					files.push( data )
 
 				}
 
-				traverse( data );
+				traverse( data, data.name );
 
 			}
 

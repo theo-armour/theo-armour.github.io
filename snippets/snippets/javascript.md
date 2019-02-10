@@ -746,7 +746,7 @@ function fetchTextSimple( url, target ){
 
 
 
-##  FILE READER Input Type File Open
+##  FILEREADER Input Type File Open
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 		'<h3>file reader</h3>' +
