@@ -400,6 +400,13 @@ see cookbook/array/array-pop-while-switch
 		console.log( list.sort( function() { Math.random() - 0.5 } ) ); // [2,1,3]
 
 
+### ARRAY Sort
+
+* https://www.w3schools.com/jsref/jsref_sort.asp
+* https://www.w3schools.com/jsref/jsref_sort.asp
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+
 
 ## Bitwise / Boolean
 
@@ -746,7 +753,7 @@ function fetchTextSimple( url, target ){
 
 
 
-##  FILEREADER Input Type File Open
+##  FILE READER filereader Input Type File Open
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 		'<h3>file reader</h3>' +
@@ -1254,7 +1261,7 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 
 
 
-### Local Storage
+### Local Storage / localStorage
 
 		const apiKey = localStorage.getItem( 'apiKey' );
 		inpApiKey.value = apiKey ? apiKey : '' ;

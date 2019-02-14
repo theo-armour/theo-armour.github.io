@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1" >
+<meta name = "description" content = "Basic TooToo HTML template" >
+<meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
+<meta name = "date" content = "2018-12-15" >
+<title></title>
+<style>
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 90%; }
+	a { color: lightgrey; text-decoration: none; }
+	a:hover, a:focus, a:active { background-color: yellow; color: #aaa; text-decoration: underline }
+
+	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
+	button:hover { background: #ccc; color: #fff }
+
+	td  { color: #eeeaea; font: bold 200% monospace; max-width:11rem; outline: 1px solid #eee; vertical-align: top; }
+
+	.col { color: #eeeaea; display: inline-block;
+		font: bold 200% monospace; outline: 1px solid #eee; overflow: hidden; vertical-align: top; }
+
+	/*
+	#navMenu { background-color: #eee; left: 0; margin: 20px; max-width: 300px; padding: 0 10px; position: absolute; top: 0; }
+	*/
+
+	p { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<script src="https://rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js" ></script>
+
+
+	<div id=divContents ></div>
+
+<script>
+
+markdown =
+`
+<div id=header class=col style=margin:0;>
+	<a href="" >theoNewwwTab &#x2766;</a>
+	&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
+	&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
+	&nbsp; <a href=https://mail.google.com/mail/u/0/#inbox target=_blank > gmail </a>
+	&nbsp; <a href=https://stackedit.io/app# > 22 </a>
+	&nbsp; <a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/new-tab/getNewTabFile.html" target="_blank">ed</a>
+&nbsp; <input></div><table markdown style=margin:0;padding:0; ><tr><td>
+[nytimes]( https://nytimes.com/ ) [tk]( https://www.nytimes.com/pages/technology/ )<br>
+[drudge](http://drudgereport.com)
+[boing]( https://boingboing.net/blog/ )
+[lifehacker]( https://lifehacker.com/ )
+[slashdot]( http://slashdot.net/ )
+[techmeme]( https://techmeme.com/ )
+[reddit]( https://reddit.com )
+[hacker_news]( https://news.ycombinator.com/ )
+[kottke]( https://kottke.org )
+[swiss-miss]( https://swiss-miss.com )
+[goog news]( https://news.google.com/ )
+[tc]( https://techcrunch.com ) [eng]( https://engadget.com ) [giz]( href=https://gizmodo.com )
+[cnn lite]( https://lite.cnn.io )
+[feedly]( https://feedly.com )<br>
+<br>
+[g cal](https://calendar.google.com/)<br>
+[g contacts](https://contacts.google.com)<br>
+[g translate](https://translate.google.com/)
+[g compose](https://mail.google.com/mail/?view=cm&fs=1&tf=1)
+[g groups](https://groups.google.com)
+[g maps](https://google.com/maps/preview)
+[g youtube](https://youtube.com)  [g drive](https://drive.google.com/?authuser=0#my-drive)
+[g domains](https://domains.google/)
+[g mail](https://mail.google.com/mail/u/0/?tab=mm#inbox)
+[g oogle](https://google.com)
+[g sites](https://sites.google.com)
+</td>
+<td>[glitch](https://glitch.com/)
+[theo](https://glitch.com/edit/#!/theo)
+[ta-core](https://glitch.com/edit/#!/ta-core)
+[ta](https://glitch.com/edit/#!/ta)
+[evernote](https://www.evernote.com/Home.action)
+[dropbox](https://dropbox.com/home)
+[db.git-repo](https://www.dropbox.com/sh/mwonzj8s64f6mpr/q4CWBT1EDa)
+[blogger](https://blogger.com)  
+[wp](http://wordpress.com)
+[three.js](http://threejs.org) [gh](https://github.com/mrdoob/three.js)
+[• docs](https://threejs.org/docs/) [gh](https://github.com/mrdoob/three.js/tree/dev/docs)
+[exmpl](https://threejs.org/examples/) [gh](https://github.com/mrdoob/three.js/tree/dev/examples)
+[ta](http://jaanga.github.io/jaanga.github.io/documents/threejs-viewers/threejs-viewer-gallery/threejs-viewer-gallery-r1-@.html)
+[groups.io](https://groups.io) [facebook](https://facebook.com) [medium](https://medium.com)
+[nextdoor](https://nextdoor.com)
+[slack](https://slack.com)
+[twitter](https://twitter.com)
+[wikipdia](https://en.wikipedia.org/wiki/Main_Page) [ta](https://en.wikipedia.org/wiki/User:TheoA)
+[flickr](https://flickr.com)
+[bbn66](https://flickr.com/bbn66)
+[websight design](http://websightdesign.com)
+[stacko\'flow](http://stackoverflow.com/)
+[pandora](http://pandora.com)
+[wikihous](http://wikihouse.github.io/viewer-experiments/) [gh](https://github.com/wikihouse/viewer-experiments/)
+[opendesk](http://opendesk.github.io/design-playground/) [gh](https://github.com/opendesk/design-playground/tree/gh-pages)
+
+</td></tr></table>
+`;
+
+const urlSourceCode = "https://github.com/zzzzz/xxxxx.html";
+const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
+
+init();
+
+function init() {
+
+	//divTitle.innerHTML = getTitle();
+
+	showdown.setFlavor( 'github' );
+
+	const converter = new showdown.Converter( { 'openLinksInNewWindow': 'true' } );
+	const html = converter.makeHtml( markdown );
+
+	divContents.innerHTML = html;
+	window.scrollTo( 0, 0 );
+
+}
+
+
+
+</script>
+</body>
+</html>
