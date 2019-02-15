@@ -3,38 +3,38 @@
 <head>
 <meta charset = "utf-8" >
 <meta name = "viewport" content= "width=device-width, initial-scale=1" >
-<meta name = "description" content = "Basic TooToo HTML template" >
+<meta name = "description" content = "Theo browser new tab file" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
-<meta name = "date" content = "2018-12-15" >
-<title></title>
+<meta name = "date" content = "2019-02-15" >
+<title>Theo getNewTabFile2</title>
 <style>
 
-	body { font: 12pt monospace; margin: 0 auto; max-width: 90%; }
+	body { font: 12pt monospace; margin: 0 auto;  }
 	a { color: lightgrey; text-decoration: none; }
 	a:hover, a:focus, a:active { background-color: yellow; color: #aaa; text-decoration: underline }
 
 	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
 	button:hover { background: #ccc; color: #fff }
 
+	table {   border-collapse: separate; border-spacing: 15px;}
+
 	td  { color: #eeeaea; font: bold 200% monospace;  outline: 1px solid #eee; vertical-align: top; }
 
 	.col { color: #eeeaea; display: inline-block;
 		font: bold 200% monospace; outline: 1px solid #eee; overflow: hidden; vertical-align: top; }
 
-	#col5 { overflow: hidden; width: 5rem; }
-
 	/*
+	#col5 { overflow: hidden; width: 5rem; }
 	#navMenu { background-color: #eee; left: 0; margin: 20px; max-width: 300px; padding: 0 10px; position: absolute; top: 0; }
 	*/
 
-	p { margin: 0; padding: 0; }
+
 </style>
 </head>
 <body>
 <script src="https://rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js" ></script>
 
-
-	<div id=header class=col style=margin:0;>
+	<div id=header class=col >
 		<a href="" >theoNewwwTab &#x2766;</a>
 		&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
 		&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
@@ -44,17 +44,33 @@
 		&nbsp; <input>
 	</div>
 
-	<table markdown style=margin:0;padding:0; >
+	<table markdown  >
 		<tr>
 			<td id=col1 >abc</td>
 			<td id=col2 >def</td>
-			<td id=col3 ></td>
+			<td id=col3 >ghi</td>
 			<td id=col4 >jkl</td>
 			<td id=col5 >mno</td>
 			<td id=col6 >pqr</td>
+			<td id=col7 >pqr</td>
+			<td id=col8 >pqr</td>
+
 		</tr>
 	</table>
 
+	<table markdown style=margin:0;padding:0; >
+		<tr>
+			<td id=t2col1 >abc</td>
+			<td id=t2col2 >def</td>
+			<td id=t2col3 >ghi</td>
+			<td id=t2col4 >jkl</td>
+			<td id=t2col5 >mno</td>
+			<td id=t2col6 >pqr</td>
+			<td id=t2col7 >pqr</td>
+			<td id=t2col8 >pqr</td>
+			<td id=t2col9 >pqr</td>
+		</tr>
+	</table>
 
 
 	<div id=divContents ></div>
@@ -77,8 +93,10 @@ markdownColumn1 =
 [tc]( https://techcrunch.com ) [eng]( https://engadget.com ) [giz]( href=https://gizmodo.com )
 [cnn lite]( https://lite.cnn.io )
 [feedly]( https://feedly.com )
-<br>
+`;
 
+markdownColumn2 =
+`
 [g cal](https://calendar.google.com/)
 [g contacts](https://contacts.google.com)
 [g translate](https://translate.google.com/)
@@ -93,49 +111,61 @@ markdownColumn1 =
 [g sites](https://sites.google.com)
 `;
 
-markdownColumn2 =
+markdownColumn3 =
 `
-[glitch](https://glitch.com/)
-[theo](https://glitch.com/edit/#!/theo)
-[ta-core](https://glitch.com/edit/#!/ta-core)
-[ta](https://glitch.com/edit/#!/ta)
-[evernote](https://www.evernote.com/Home.action)
-[dropbox](https://dropbox.com/home)
-[db.git-repo](https://www.dropbox.com/sh/mwonzj8s64f6mpr/q4CWBT1EDa)
-[blogger](https://blogger.com)  
-[wp](http://wordpress.com)
-
 [groups.io](https://groups.io)
-[facebook](https://facebook.com)
 [medium](https://medium.com)
 [nextdoor](https://nextdoor.com)
-[slack](https://slack.com)
 [twitter](https://twitter.com)
+[facebook](https://facebook.com)
+[slack](https://slack.com)
 [wikipdia](https://en.wikipedia.org/wiki/Main_Page) [ta](https://en.wikipedia.org/wiki/User:TheoA)
 [flickr](https://flickr.com)
-[bbn66](https://flickr.com/bbn66)
-[websight<br>&nbsp; design](http://websightdesign.com)
+
 [stacko\'flow](http://stackoverflow.com/)
 [pandora](http://pandora.com)
+peeps
+[bbn66](https://flickr.com/bbn66)
+[websight<br>&nbsp; design](http://websightdesign.com)
+
 [wikihous](http://wikihouse.github.io/viewer-experiments/) [gh](https://github.com/wikihouse/viewer-experiments/)
 [opendesk](http://opendesk.github.io/design-playground/) [gh](https://github.com/opendesk/design-playground/tree/gh-pages)
 `;
 
 
-markdownColumn3 =
+
+markdownColumn4 =
 `
-[lbt spider](http://ladybug.tools/spider/)
-[spidr gbxml](http://ladybug.tools/spider-gbxml-tools/)
-[spidr rad](http://ladybug.tools/spider-rad-viewer/)<br>
+[ladybug](http://ladybug.tools/)
+[spider](http://ladybug.tools/spider/)
+[spider&nbsp;gbxml](http://ladybug.tools/spider-gbxml-tools/)
+[spider rad](http://ladybug.tools/spider-rad-viewer/)
+.
 [three.js](http://threejs.org)
 [• docs](https://threejs.org/docs/)
-[exmpl](https://threejs.org/examples/)
-[ta](http://jaanga.github.io/jaanga.github.io/documents/threejs-viewers/threejs-viewer-gallery/threejs-viewer-gallery-r1-@.html)
-<br>
+[example](https://threejs.org/examples/) [ta](http://jaanga.github.io/jaanga.github.io/documents/threejs-viewers/threejs-viewer-gallery/threejs-viewer-gallery-r1-@.html)
 
+[opentecture]( https://opentecture.com )
+&bull;[mindmapping]( https://opentecture.github.io/mindmapping/ )
+&bull;[bookmarks]( https://opentecture.github.io/mindmapping/#sandbox/opentecture-bookmarks/README.md )
+`;
+
+markdownColumn5 =
+`
+.
+[gh](https://github.com/ladybug-tools/spider)
+[gh](https://github.com/ladybug-tools/spider-gbxml-tools)
+[gh](https://github.com/ladybug-tools/spider-rad-viewer)<br>
+[gh](https://github.com/mrdoob/three.js)
+[gh](https://github.com/mrdoob/three.js/tree/dev/docs)
+[gh](https://github.com/mrdoob/three.js/tree/dev/examples)
+
+`;
+
+markdownColumn6 =
+`
 • [jaanga](http://jaanga.github.io/)
 [demo](http://jaanga.github.io/demo/)
-
 [blog](https://jaanga.github.io/request-jaanga-blog-posts.html)
 [cookbook](http://jaanga.github.io/cookbook/)
 [cookbook html](https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/)
@@ -145,18 +175,33 @@ markdownColumn3 =
 [outer space](https://github.com/jaanga/jaanga.github.io/tree/master/outer-space)
 [tutorials](https://github.com/jaanga/jaanga.github.io/tree/master/tutorials)
 `;
-markdownColumn4 =
+
+markdownColumn7 =
 `
-[gh](https://github.com/ladybug-tools/spider)
-[gh](https://github.com/ladybug-tools/spider-gbxml-tools)
-[gh](https://github.com/ladybug-tools/spider-rad-viewer)<br>
-[gh](https://github.com/mrdoob/three.js)
-[gh](https://github.com/mrdoob/three.js/tree/dev/docs)
-[gh](https://github.com/mrdoob/three.js/tree/dev/examples)
-<br>
 [gh](https://github.com/jaanga/jaanga.github.io/)
 [gh](https://github.com/jaanga/jaanga.github.io/tree/master/demo/)
+
 `;
+markdownColumn8 =
+`
+[evernote](https://www.evernote.com/Home.action)
+.
+[glitch](https://glitch.com/)
+[theo](https://glitch.com/edit/#!/theo)
+[ta-core](https://glitch.com/edit/#!/ta-core)
+[ta](https://glitch.com/edit/#!/ta)
+.
+[dropbox](https://dropbox.com/home)
+[db.git-repo](https://www.dropbox.com/sh/mwonzj8s64f6mpr/q4CWBT1EDa)
+.
+[blogger](https://blogger.com)  
+[wp](http://wordpress.com)
+`;
+
+
+
+
+
 
 const urlSourceCode = "https://github.com/zzzzz/xxxxx.html";
 const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
@@ -175,8 +220,16 @@ function init() {
 	col2.innerHTML = converter.makeHtml( markdownColumn2 );
 	col3.innerHTML = converter.makeHtml( markdownColumn3 );
 	col4.innerHTML = converter.makeHtml( markdownColumn4 );
+	col5.innerHTML = converter.makeHtml( markdownColumn5 );
+	col6.innerHTML = converter.makeHtml( markdownColumn6 );
+	col7.innerHTML = converter.makeHtml( markdownColumn7 );
+	col8.innerHTML = converter.makeHtml( markdownColumn8 );
 
 	requestFile( 'https://api.github.com/users/theo-armour/repos?per_page=100', callbackTheoArmour );
+
+	requestFile( 'https://api.github.com/users/theo-armour/orgs?per_page=100', callbackTheoOrgs );
+
+	requestFile( 'https://api.github.com/users/jaanga/repos?per_page=100', callbackJaangaRepos );
 
 	window.scrollTo( 0, 0 );
 
@@ -189,28 +242,11 @@ function callbackTheoArmour( xhr ) {
 	const response = JSON.parse( xhr.target.response );
 	//console.log( '', response );
 
-	const repos = [];
-
-	response.forEach( function( obj ) {
-
-		if ( obj.fork === false ) {
-
-			repos.push( obj.name );
-
-		}
-
-	} );
-
-	repos.sort();
-
+	const repos = response.filter( obj => obj.fork === false ).map( obj => obj.name ).sort();
 	const arr1 = [];
 	const arr2 = [];
 
-	for ( let i = 0; i < repos.length; i++ ) {
-
-		repo = repos[ i ]
-
-		//if ( repo.includes( 'heightmap' ) || repo.includes( '-de' )  ) { continue; }
+	for ( let repo of repos ) {
 
 		arr1.push( '<a href=https://theo-armour.github.io/' + repo + ' target=_blank > ' + repo.replace( /-/g, '&#8209;' ) + ' </a>' );
 
@@ -218,12 +254,86 @@ function callbackTheoArmour( xhr ) {
 
 	}
 
-	col5.innerHTML =
-		`<div style=margin-left:20px;width:250px;overflow:hidden; >
-			<a href=https://theo-armour.github.io/ target=_blank > &bull; theo-armour </a><br>${ arr1.join( "<br>" ) }
-		</div>`;
+	t2col1.innerHTML =
+		`
+			<div style=width:250px;overflow:hidden; >
+				<a href=https://theo-armour.github.io/ target=_blank > &bull; theo-armour</a><br>${ arr1.join( "<br>" ) }
+			</div>
+		`;
 
-	col6.innerHTML = '<a href=https://github.com/theo-armour/ target=_blank > gh </a><br>' + arr2.join( "<br>" );
+	t2col2.innerHTML = '<a href=https://github.com/theo-armour/ target=_blank > gh </a><br>' + arr2.join( "<br>" );
+
+}
+
+
+
+
+function callbackTheoOrgs( xhr ) {
+
+	let response, logins, login, arr1, arr2;
+
+	response = JSON.parse( xhr.target.response );
+
+	logins = response.map( function( obj ) { return obj.login; } ).sort();
+
+	arr1 = [];
+	arr2 = [];
+
+	for ( let i = 0; i < logins.length; i++ ) {
+
+		login = logins[ i ]
+
+		arr1.push( login.replace( /-/g, '&#8209;' ).link( 'https://' + login + '.github.io/' ) );
+
+		arr2.push( '<a href=https://github.com/' + login + '/' + login + '.github.io target=_blank >gh</a>' );
+
+	}
+
+	t2col3.innerHTML =
+		`
+			<div style=width:250px;overflow:hidden; >
+				&bull; theo orgs<br>
+				${ arr1.join( "<br>" ) }
+			</div>
+		`;
+
+	t2col4.innerHTML =
+		`
+			&nbsp;<br>
+			${ arr2.join( "<br>" ) }
+		`;
+
+}
+
+
+
+function callbackJaangaRepos( xhr ) {
+
+	const response = JSON.parse( xhr.target.response );
+
+	const repos = response.map( obj => obj.name ).sort();00
+	const arr1 = [];
+	const arr2 = [];
+
+	for ( let repo of repos ) {
+
+		if ( repo.includes( 'heightmap' ) || repo.includes( '-de' ) || repo.includes( '-srtm' ) || repo.includes( '-usgs' )  ) { continue; }
+
+		arr1.push( '<a href=https://jaanga.github.io/' + repo + ' target=_blank > ' + repo.replace( /-/g, '&#8209;' ) + ' </a>' );
+
+		arr2.push( '<a href=https://github.com/jaanga/' + repo + ' target=_blank > gh </a>' );
+
+	}
+
+	t2col5.innerHTML =
+		`
+			<div style=width:250px;overflow:hidden; >
+				&bull; <a href="https://jaanga.github.io/jaanga.github.io" target="_blank">jaanga</a> repos<br>
+				${ arr1.join( "<br>" ) }
+			</div>
+		`;
+
+	t2col6.innerHTML = arr2.join( "<br>" );
 
 }
 
