@@ -16,10 +16,12 @@
 	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
 	button:hover { background: #ccc; color: #fff }
 
-	td  { color: #eeeaea; font: bold 200% monospace; max-width:11rem; outline: 1px solid #eee; vertical-align: top; }
+	td  { color: #eeeaea; font: bold 200% monospace;  outline: 1px solid #eee; vertical-align: top; }
 
 	.col { color: #eeeaea; display: inline-block;
 		font: bold 200% monospace; outline: 1px solid #eee; overflow: hidden; vertical-align: top; }
+
+	#col5 { overflow: hidden; width: 5rem; }
 
 	/*
 	#navMenu { background-color: #eee; left: 0; margin: 20px; max-width: 300px; padding: 0 10px; position: absolute; top: 0; }
@@ -32,21 +34,36 @@
 <script src="https://rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js" ></script>
 
 
+	<div id=header class=col style=margin:0;>
+		<a href="" >theoNewwwTab &#x2766;</a>
+		&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
+		&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
+		&nbsp; <a href=https://mail.google.com/mail/u/0/#inbox target=_blank > gmail </a>
+		&nbsp; <a href=https://stackedit.io/app# > 22 </a>
+		&nbsp; <a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/new-tab/getNewTabFile.html" target="_blank">ed</a>
+		&nbsp; <input>
+	</div>
+
+	<table markdown style=margin:0;padding:0; >
+		<tr>
+			<td id=col1 >abc</td>
+			<td id=col2 >def</td>
+			<td id=col3 ></td>
+			<td id=col4 >jkl</td>
+			<td id=col5 >mno</td>
+			<td id=col6 >pqr</td>
+		</tr>
+	</table>
+
+
+
 	<div id=divContents ></div>
 
 <script>
 
-markdown =
+markdownColumn1 =
 `
-<div id=header class=col style=margin:0;>
-	<a href="" >theoNewwwTab &#x2766;</a>
-	&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
-	&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
-	&nbsp; <a href=https://mail.google.com/mail/u/0/#inbox target=_blank > gmail </a>
-	&nbsp; <a href=https://stackedit.io/app# > 22 </a>
-	&nbsp; <a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/new-tab/getNewTabFile.html" target="_blank">ed</a>
-&nbsp; <input></div><table markdown style=margin:0;padding:0; ><tr><td>
-[nytimes]( https://nytimes.com/ ) [tk]( https://www.nytimes.com/pages/technology/ )<br>
+[nytimes]( https://nytimes.com/ ) [tk]( https://www.nytimes.com/pages/technology/ )
 [drudge](http://drudgereport.com)
 [boing]( https://boingboing.net/blog/ )
 [lifehacker]( https://lifehacker.com/ )
@@ -59,21 +76,26 @@ markdown =
 [goog news]( https://news.google.com/ )
 [tc]( https://techcrunch.com ) [eng]( https://engadget.com ) [giz]( href=https://gizmodo.com )
 [cnn lite]( https://lite.cnn.io )
-[feedly]( https://feedly.com )<br>
+[feedly]( https://feedly.com )
 <br>
-[g cal](https://calendar.google.com/)<br>
-[g contacts](https://contacts.google.com)<br>
+
+[g cal](https://calendar.google.com/)
+[g contacts](https://contacts.google.com)
 [g translate](https://translate.google.com/)
 [g compose](https://mail.google.com/mail/?view=cm&fs=1&tf=1)
 [g groups](https://groups.google.com)
 [g maps](https://google.com/maps/preview)
-[g youtube](https://youtube.com)  [g drive](https://drive.google.com/?authuser=0#my-drive)
+[g youtube](https://youtube.com)
+[g drive](https://drive.google.com/?authuser=0#my-drive)
 [g domains](https://domains.google/)
 [g mail](https://mail.google.com/mail/u/0/?tab=mm#inbox)
 [g oogle](https://google.com)
 [g sites](https://sites.google.com)
-</td>
-<td>[glitch](https://glitch.com/)
+`;
+
+markdownColumn2 =
+`
+[glitch](https://glitch.com/)
 [theo](https://glitch.com/edit/#!/theo)
 [ta-core](https://glitch.com/edit/#!/ta-core)
 [ta](https://glitch.com/edit/#!/ta)
@@ -82,24 +104,58 @@ markdown =
 [db.git-repo](https://www.dropbox.com/sh/mwonzj8s64f6mpr/q4CWBT1EDa)
 [blogger](https://blogger.com)  
 [wp](http://wordpress.com)
-[three.js](http://threejs.org) [gh](https://github.com/mrdoob/three.js)
-[• docs](https://threejs.org/docs/) [gh](https://github.com/mrdoob/three.js/tree/dev/docs)
-[exmpl](https://threejs.org/examples/) [gh](https://github.com/mrdoob/three.js/tree/dev/examples)
-[ta](http://jaanga.github.io/jaanga.github.io/documents/threejs-viewers/threejs-viewer-gallery/threejs-viewer-gallery-r1-@.html)
-[groups.io](https://groups.io) [facebook](https://facebook.com) [medium](https://medium.com)
+
+[groups.io](https://groups.io)
+[facebook](https://facebook.com)
+[medium](https://medium.com)
 [nextdoor](https://nextdoor.com)
 [slack](https://slack.com)
 [twitter](https://twitter.com)
 [wikipdia](https://en.wikipedia.org/wiki/Main_Page) [ta](https://en.wikipedia.org/wiki/User:TheoA)
 [flickr](https://flickr.com)
 [bbn66](https://flickr.com/bbn66)
-[websight design](http://websightdesign.com)
+[websight<br>&nbsp; design](http://websightdesign.com)
 [stacko\'flow](http://stackoverflow.com/)
 [pandora](http://pandora.com)
 [wikihous](http://wikihouse.github.io/viewer-experiments/) [gh](https://github.com/wikihouse/viewer-experiments/)
 [opendesk](http://opendesk.github.io/design-playground/) [gh](https://github.com/opendesk/design-playground/tree/gh-pages)
+`;
 
-</td></tr></table>
+
+markdownColumn3 =
+`
+[lbt spider](http://ladybug.tools/spider/)
+[spidr gbxml](http://ladybug.tools/spider-gbxml-tools/)
+[spidr rad](http://ladybug.tools/spider-rad-viewer/)<br>
+[three.js](http://threejs.org)
+[• docs](https://threejs.org/docs/)
+[exmpl](https://threejs.org/examples/)
+[ta](http://jaanga.github.io/jaanga.github.io/documents/threejs-viewers/threejs-viewer-gallery/threejs-viewer-gallery-r1-@.html)
+<br>
+
+• [jaanga](http://jaanga.github.io/)
+[demo](http://jaanga.github.io/demo/)
+
+[blog](https://jaanga.github.io/request-jaanga-blog-posts.html)
+[cookbook](http://jaanga.github.io/cookbook/)
+[cookbook html](https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-html/)
+[ckbk three.js](https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs)
+[documents](http://jaanga.github.io/documents/) [gh](https://github.com/jaanga/jaanga.github.io/tree/master/documents)
+[equirec](http://jaanga.github.io/equirec/index.html)
+[outer space](https://github.com/jaanga/jaanga.github.io/tree/master/outer-space)
+[tutorials](https://github.com/jaanga/jaanga.github.io/tree/master/tutorials)
+`;
+markdownColumn4 =
+`
+[gh](https://github.com/ladybug-tools/spider)
+[gh](https://github.com/ladybug-tools/spider-gbxml-tools)
+[gh](https://github.com/ladybug-tools/spider-rad-viewer)<br>
+[gh](https://github.com/mrdoob/three.js)
+[gh](https://github.com/mrdoob/three.js/tree/dev/docs)
+[gh](https://github.com/mrdoob/three.js/tree/dev/examples)
+<br>
+[gh](https://github.com/jaanga/jaanga.github.io/)
+[gh](https://github.com/jaanga/jaanga.github.io/tree/master/demo/)
 `;
 
 const urlSourceCode = "https://github.com/zzzzz/xxxxx.html";
@@ -114,14 +170,75 @@ function init() {
 	showdown.setFlavor( 'github' );
 
 	const converter = new showdown.Converter( { 'openLinksInNewWindow': 'true' } );
-	const html = converter.makeHtml( markdown );
 
-	divContents.innerHTML = html;
+	col1.innerHTML = converter.makeHtml( markdownColumn1 );
+	col2.innerHTML = converter.makeHtml( markdownColumn2 );
+	col3.innerHTML = converter.makeHtml( markdownColumn3 );
+	col4.innerHTML = converter.makeHtml( markdownColumn4 );
+
+	requestFile( 'https://api.github.com/users/theo-armour/repos?per_page=100', callbackTheoArmour );
+
 	window.scrollTo( 0, 0 );
 
 }
 
 
+
+function callbackTheoArmour( xhr ) {
+
+	const response = JSON.parse( xhr.target.response );
+	//console.log( '', response );
+
+	const repos = [];
+
+	response.forEach( function( obj ) {
+
+		if ( obj.fork === false ) {
+
+			repos.push( obj.name );
+
+		}
+
+	} );
+
+	repos.sort();
+
+	const arr1 = [];
+	const arr2 = [];
+
+	for ( let i = 0; i < repos.length; i++ ) {
+
+		repo = repos[ i ]
+
+		//if ( repo.includes( 'heightmap' ) || repo.includes( '-de' )  ) { continue; }
+
+		arr1.push( '<a href=https://theo-armour.github.io/' + repo + ' target=_blank > ' + repo.replace( /-/g, '&#8209;' ) + ' </a>' );
+
+		arr2.push( '<a href=https://github.com/theo-armour/' + repo + ' target=_blank > gh </a>' );
+
+	}
+
+	col5.innerHTML =
+		`<div style=margin-left:20px;width:250px;overflow:hidden; >
+			<a href=https://theo-armour.github.io/ target=_blank > &bull; theo-armour </a><br>${ arr1.join( "<br>" ) }
+		</div>`;
+
+	col6.innerHTML = '<a href=https://github.com/theo-armour/ target=_blank > gh </a><br>' + arr2.join( "<br>" );
+
+}
+
+
+
+function requestFile( url, callback ) {
+
+	let xhr;
+	xhr = new XMLHttpRequest();
+	xhr.crossOrigin = 'anonymous';
+	xhr.open( 'GET', url, true );
+	xhr.onload = callback;
+	xhr.send( null );
+
+}
 
 </script>
 </body>

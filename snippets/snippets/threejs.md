@@ -1,26 +1,27 @@
 
-		let geometry, material, mesh;
-
-		const geometry = new THREE.BoxGeometry( 10, 10, 10 );
-		const material = new THREE.MeshNormalMaterial();
-		const mesh = new THREE.Mesh( geometry, material );
-		scene.add( mesh );
 
 
-		scene.add( new THREE.Mesh( new THREE.BoxGeometry( 10, 10, 10 ), new THREE.MeshNormalMaterial() ); );
+	const geometry = new THREE.BoxGeometry( 10, 10, 10 );
+	const material = new THREE.MeshNormalMaterial();
+	const mesh = new THREE.Mesh( geometry, material );
+	scene.add( mesh );
 
-		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
-		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 1, 1 ) );
-		geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, 0 ) );
 
-// CylinderGeometry( radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded )
-// SphereGeometry( radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength )
-// TorusGeometry( radius, tube, radialSegments, tubularSegments, arc )
+	scene.add( new THREE.Mesh( new THREE.BoxGeometry( 10, 10, 10 ), new THREE.MeshNormalMaterial() ) );
 
-		var color = new THREE.Color( 'grey' );
+	// CylinderGeometry( radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded )
+	// SphereGeometry( radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength )
+	// TorusGeometry( radius, tube, radialSegments, tubularSegments, arc )
 
-		const v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
-		const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
+	geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
+	geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 1, 1 ) );
+	geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, 0 ) );
+
+
+	var color = new THREE.Color( 'grey' );
+
+	const v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+	const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
 
 
 ## Changes
@@ -46,10 +47,58 @@ http://mrdoob.github.io/three.js/docs/#Reference/Loaders/XHRLoader
 spheresIndex = ( spheresIndex + 1 ) % spheres.length;
 
 webgl_loader_scene_blender.html# - simple object lister
-zoom extents - tony\''s book
 
 
-## TRAVERSE
+## Core
+
+
+## OBJECT3D
+
+http://mrdoob.github.io/three.js/docs/#Reference/Core/Object3D
+
+var obj = new THREE.Object3D();
+
+	.add()
+	.applyMatrix()
+	.castShadow()
+	.clone() - Creates a new clone of this object and all descendants.
+	.distanceTo( v )
+	.getDescendents( array ) - array - optional argument that returns the array with descendants.
+	.lookAt( vector )
+	.matrix()
+	.receiveShadow()
+	.remove()
+	.rotation()
+	.scale()
+		.scale.multiplyScalar( 2 );
+	.traverse( callback )
+	.up
+	.visible
+
+
+	Translates object along axis by distance.
+			.translateX
+			.translateY
+			.translateZ
+
+	.translateOnAxis( axis, distance ) Object3D
+	- axis -- A normalized vector in object space.
+	- distance -- The distance to translate.
+	- Translate an object by distance along an axis in object space. The axis is assumed to be normalized.
+
+	.rotateOnAxis( axis, angle ) Object3D
+	- axis -- A normalized vector in object space.
+	- angle -- The angle in radians.
+	- Rotate an object along an axis in object space. The axis is assumed to be normalized.
+
+	var axisOfMovement = v( 0, 0, 1 );
+	obj.translateOnAxis( axisOfMovement, delta );
+
+
+	obj.rotation.setFromVector3( startRotation );
+
+
+### Object3D TRAVERSE
 
 object.traverse( callback )
 * callback - An Function with as first argument an object3D object.
@@ -67,10 +116,31 @@ object.traverse( callback )
 // Learn
 
 
+### Object3D.localToWorld
+
+scene.updateMatrixWorld();
+
+		object.localToWorld ( point )
+
+* vector - A vector representing a position in local (object) space.
+* Converts the vector from local space to world space.
+
+Also
+
+			var vector = ceilingGeometry.vertices[ k ].clone();
+			vector.applyMatrix4( object.matrixWorld );
+
+
+### RAYCSTER
+
+* https://threejs.org/docs/#api/en/core/Raycaster
+	* Has good example
+* cookbook-threejs/examples/editing/find-intersection-line-to-mesh/find-intersection-line-to-mesh-r2.html
 
 
 
-## BASIC
+
+## CAMERA
 
 	function updateCamera() {
 
@@ -136,66 +206,6 @@ controls.reset();
 
 
 
-### COLORS / Random  ###
-
-trick
-		mesh.scale.z = -1;
-
-http://mrdoob.github.io/three.js/docs/#Reference/Math/Color
-
-	var color = new THREE.Color();
-	var color = new THREE.Color( 0xff0000 );
-	var color = new THREE.Color("rgb(255,0,0)");
-	var color = new THREE.Color( 1, 0, 0 );
-
-
-	material.color.setHSL( colors[i], 0.8, 0.5 );
-
-	var colors = generateColors( 100 ) ;
-
-	function generateColors( count) {
-
-		var delta = 1.0 / count;
-		var arr = [];
-
-		for (var i = 0; i < count; i++ ) {
-
-			arr.push( i *  delta );
-
-		}
-
-		return arr;
-
-	}
-
-
-THREE.ColorKeywords = { 'aliceblue': 0xF0F8FF, 'antiquewhite': 0xFAEBD7, 'aqua': 0x00FFFF, 'aquamarine': 0x7FFFD4, 'azure': 0xF0FFFF,
-'beige': 0xF5F5DC, 'bisque': 0xFFE4C4, 'black': 0x000000, 'blanchedalmond': 0xFFEBCD, 'blue': 0x0000FF, 'blueviolet': 0x8A2BE2,
-'brown': 0xA52A2A, 'burlywood': 0xDEB887, 'cadetblue': 0x5F9EA0, 'chartreuse': 0x7FFF00, 'chocolate': 0xD2691E, 'coral': 0xFF7F50,
-'cornflowerblue': 0x6495ED, 'cornsilk': 0xFFF8DC, 'crimson': 0xDC143C, 'cyan': 0x00FFFF, 'darkblue': 0x00008B, 'darkcyan': 0x008B8B,
-'darkgoldenrod': 0xB8860B, 'darkgray': 0xA9A9A9, 'darkgreen': 0x006400, 'darkgrey': 0xA9A9A9, 'darkkhaki': 0xBDB76B, 'darkmagenta': 0x8B008B,
-'darkolivegreen': 0x556B2F, 'darkorange': 0xFF8C00, 'darkorchid': 0x9932CC, 'darkred': 0x8B0000, 'darksalmon': 0xE9967A, 'darkseagreen': 0x8FBC8F,
-'darkslateblue': 0x483D8B, 'darkslategray': 0x2F4F4F, 'darkslategrey': 0x2F4F4F, 'darkturquoise': 0x00CED1, 'darkviolet': 0x9400D3,
-'deeppink': 0xFF1493, 'deepskyblue': 0x00BFFF, 'dimgray': 0x696969, 'dimgrey': 0x696969, 'dodgerblue': 0x1E90FF, 'firebrick': 0xB22222,
-'floralwhite': 0xFFFAF0, 'forestgreen': 0x228B22, 'fuchsia': 0xFF00FF, 'gainsboro': 0xDCDCDC, 'ghostwhite': 0xF8F8FF, 'gold': 0xFFD700,
-'goldenrod': 0xDAA520, 'gray': 0x808080, 'green': 0x008000, 'greenyellow': 0xADFF2F, 'grey': 0x808080, 'honeydew': 0xF0FFF0, 'hotpink': 0xFF69B4,
-'indianred': 0xCD5C5C, 'indigo': 0x4B0082, 'ivory': 0xFFFFF0, 'khaki': 0xF0E68C, 'lavender': 0xE6E6FA, 'lavenderblush': 0xFFF0F5, 'lawngreen': 0x7CFC00,
-'lemonchiffon': 0xFFFACD, 'lightblue': 0xADD8E6, 'lightcoral': 0xF08080, 'lightcyan': 0xE0FFFF, 'lightgoldenrodyellow': 0xFAFAD2, 'lightgray': 0xD3D3D3,
-'lightgreen': 0x90EE90, 'lightgrey': 0xD3D3D3, 'lightpink': 0xFFB6C1, 'lightsalmon': 0xFFA07A, 'lightseagreen': 0x20B2AA, 'lightskyblue': 0x87CEFA,
-'lightslategray': 0x778899, 'lightslategrey': 0x778899, 'lightsteelblue': 0xB0C4DE, 'lightyellow': 0xFFFFE0, 'lime': 0x00FF00, 'limegreen': 0x32CD32,
-'linen': 0xFAF0E6, 'magenta': 0xFF00FF, 'maroon': 0x800000, 'mediumaquamarine': 0x66CDAA, 'mediumblue': 0x0000CD, 'mediumorchid': 0xBA55D3,
-'mediumpurple': 0x9370DB, 'mediumseagreen': 0x3CB371, 'mediumslateblue': 0x7B68EE, 'mediumspringgreen': 0x00FA9A, 'mediumturquoise': 0x48D1CC,
-'mediumvioletred': 0xC71585, 'midnightblue': 0x191970, 'mintcream': 0xF5FFFA, 'mistyrose': 0xFFE4E1, 'moccasin': 0xFFE4B5, 'navajowhite': 0xFFDEAD,
-'navy': 0x000080, 'oldlace': 0xFDF5E6, 'olive': 0x808000, 'olivedrab': 0x6B8E23, 'orange': 0xFFA500, 'orangered': 0xFF4500, 'orchid': 0xDA70D6,
-'palegoldenrod': 0xEEE8AA, 'palegreen': 0x98FB98, 'paleturquoise': 0xAFEEEE, 'palevioletred': 0xDB7093, 'papayawhip': 0xFFEFD5, 'peachpuff': 0xFFDAB9,
-'peru': 0xCD853F, 'pink': 0xFFC0CB, 'plum': 0xDDA0DD, 'powderblue': 0xB0E0E6, 'purple': 0x800080, 'red': 0xFF0000, 'rosybrown': 0xBC8F8F,
-'royalblue': 0x4169E1, 'saddlebrown': 0x8B4513, 'salmon': 0xFA8072, 'sandybrown': 0xF4A460, 'seagreen': 0x2E8B57, 'seashell': 0xFFF5EE,
-'sienna': 0xA0522D, 'silver': 0xC0C0C0, 'skyblue': 0x87CEEB, 'slateblue': 0x6A5ACD, 'slategray': 0x708090, 'slategrey': 0x708090, 'snow': 0xFFFAFA,
-'springgreen': 0x00FF7F, 'steelblue': 0x4682B4, 'tan': 0xD2B48C, 'teal': 0x008080, 'thistle': 0xD8BFD8, 'tomato': 0xFF6347, 'turquoise': 0x40E0D0,
-'violet': 0xEE82EE, 'wheat': 0xF5DEB3, 'white': 0xFFFFFF, 'whitesmoke': 0xF5F5F5, 'yellow': 0xFFFF00, 'yellowgreen': 0x9ACD32 };
-
-var color = new THREE.Color( 'skyblue' );
-
 
 ### CLOCK ###
 
@@ -223,38 +233,6 @@ if ( ! Detector.webgl ) {
 } else {
 	renderer = new THREE.WebGLRenderer( { alpha: 1, antialias: true, clearColor: 0xffffff} );
 }
-
-
-### GEOMETRY / Edges
-
-
-			var edgesGeometry, edgesMaterial, edges,
-
-			edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
-			edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
-			edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
-			mesh.add( edges );
-
-
-
-// ### Events
-
-see assets
-
-
-
-
-## GEOMETRY MATRIX / Edits
-
-		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
-		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2, 3 ) );
-		geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, -30 ) );
-
-// https://discourse.threejs.org/t/how-to-convert-three-buffergeometry-coordinates-to-worlds-when-rotating/889
-// transform a local coordinate to a world coordinate
-		vertex.applyMatrix4( object.matrixWorld );
-
-
 
 ## GEOMETRY
 
@@ -298,6 +276,40 @@ see assets
 
 		.center();
 
+
+
+### GEOMETRY / Edges
+
+
+			var edgesGeometry, edgesMaterial, edges,
+
+			edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
+			edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
+			edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+			mesh.add( edges );
+
+
+
+// ### Events
+
+see assets
+
+
+
+
+### GEOMETRY MATRIX / Edits
+
+		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
+		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2, 3 ) );
+		geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, -30 ) );
+
+// https://discourse.threejs.org/t/how-to-convert-three-buffergeometry-coordinates-to-worlds-when-rotating/889
+// transform a local coordinate to a world coordinate
+		vertex.applyMatrix4( object.matrixWorld );
+
+
+
+
 #### GEOMETRY / EDGES edgesGEOMETRY
 
 let geometry = new THREE.BoxBufferGeometry( 100, 100, 100 );
@@ -315,7 +327,7 @@ scene.add( edges );
 		scene.add( line );
 
 
-## Dispose
+### GEOMETRY Dispose
 
 https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-way-to-dispose-and-release-memory-garbag
 
@@ -342,7 +354,7 @@ https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-w
 * .setFromPoints is cool
 
 
-## GEOMETRY / Lathe
+### GEOMETRY / Lathe
 // http://mrdoob.github.io/three.js/docs/#Reference/Extras.Geometries/LatheGeometry
 // Class for generating meshes with axial symmetry. Possible uses include donuts, pipes, vases etc. The lathe rotate around the Z axis.
 // LatheGeometry(points, segments, phiStart, phiLength) - does not close automatically
@@ -502,10 +514,6 @@ https://threejs.org/docs/#api/helpers/AxisHelper
 
 
 
-### Images
-
-		img.crossOrigin = 'Anonymous';
-
 
 
 ### JSON / save to file
@@ -585,7 +593,7 @@ Creates a light at a specific position in the scene. The light shines in all dir
 
 
 
-### MATERIALS / textures> see below
+## MATERIALS / textures> see below
 
 ambient: 0xffffff, 'gold'
 color: Math.random() * 0xffffff,
@@ -633,6 +641,9 @@ wireframe: false,
 		mesh.geometry.__dirtyVertices = true;
 		mesh.geometry.__dirtyNormals = true;
 
+### Images
+
+		img.crossOrigin = 'Anonymous';
 
 ### Vertex Colors
 
@@ -653,6 +664,50 @@ jaanga.github.io/cookbook-threejs/materials-sandbox/color/vertex-colors/vertex-c
 		}
 
 		material = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.DoubleSide, vertexColors: THREE.VertexColors } );
+
+
+### TEXTURES
+
+https://threejs.org/docs/#api/textures/Texture
+
+		var texture = new THREE.TextureLoader().load( "arrow-gray.png" );
+
+		loader = new THREE.TextureLoader();
+		loader.crossOrigin = '';
+
+		heightmap = loader.load( '../bitmaps/bathymetry_bw_composite_2k.png' );
+
+		texture = loader.load( '../bitmaps/2_no_clouds_4k.jpg' );
+
+
+***
+
+// http://jaanga.github.io/cookbook-threejs/materials-sandbox/load-texture/
+
+		loader = new THREE.TextureLoader();
+		loader.crossOrigin = 'anonymous';
+		loader.load( 'http://i.imgur.com/RPv6ofy.jpg', callback );
+
+		function callback ( texture ){
+
+				sphere1.material = new THREE.MeshBasicMaterial( { map: texture } );
+
+		}
+
+
+### textures must be 512x512 to repeat
+
+		THREE.ImageUtils.crossOrigin = 'anonymous';
+		texture = THREE.ImageUtils.loadTexture( "../../textures/im5.jpg" );
+		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+//		texture.repeat.set( 16, 16 );
+//		texture.anisotropy = 16;
+
+		texture.minFilter = texture.magFilter = THREE.NearestFilter;
+		texture.needsUpdate = true;
+
+		material = new THREE.MeshBasicMaterial( {  map: texture, side: THREE.DoubleSide } );
+
 
 
 
@@ -707,69 +762,6 @@ function setSomeBoxes( count = 50 ) {
 	}
 
 }
-
-
-## OBJECT3D ##
-
-http://mrdoob.github.io/three.js/docs/#Reference/Core/Object3D
-
-var obj = new THREE.Object3D();
-
-	.add()
-	.applyMatrix()
-	.castShadow()
-	.clone() - Creates a new clone of this object and all descendants.
-	.distanceTo( v )
-	.getDescendents( array ) - array - optional argument that returns the array with descendants.
-	.lookAt( vector )
-	.matrix()
-	.receiveShadow()
-	.remove()
-	.rotation()
-	.scale()
-		.scale.multiplyScalar( 2 );
-	.traverse( callback )
-	.up
-	.visible
-
-
-Translates object along axis by distance.
-		.translateX
-		.translateY
-		.translateZ
-
-.translateOnAxis( axis, distance ) Object3D
-- axis -- A normalized vector in object space.
-- distance -- The distance to translate.
-- Translate an object by distance along an axis in object space. The axis is assumed to be normalized.
-
-.rotateOnAxis( axis, angle ) Object3D
-- axis -- A normalized vector in object space.
-- angle -- The angle in radians.
-- Rotate an object along an axis in object space. The axis is assumed to be normalized.
-
-var axisOfMovement = v( 0, 0, 1 );
-obj.translateOnAxis( axisOfMovement, delta );
-
-
-		obj.rotation.setFromVector3( startRotation );
-
-
-
-
-### Object3D.localToWorld
-
-scene.updateMatrixWorld();
-
-		object.localToWorld ( point )
-
-* vector - A vector representing a position in local (object) space.
-* Converts the vector from local space to world space.
-
-Also
-
-			var vector = ceilingGeometry.vertices[ k ].clone();
-			vector.applyMatrix4( object.matrixWorld );
 
 
 
@@ -965,65 +957,123 @@ THREE.ShapeUtils.area( vertices ).toLocaleString();
 
 	}
 
-
+## OBJECTS
 
 ### SPRITE
 
+* https://threejs.org/docs/#api/en/objects/Sprite
+* https://threejs.org/docs/#api/en/materials/SpriteMaterial
 
-var spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000 } );
-var sprite = new THREE.Sprite( spriteMaterial );
+const spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000 } );
+const sprite = new THREE.Sprite( spriteMaterial );
+sprite.scale.set(200, 200, 1)
 scene.add( sprite );
 
 
-### TEXTURES
 
-https://threejs.org/docs/#api/textures/Texture
-
-		var texture = new THREE.TextureLoader().load( "arrow-gray.png" );
-
-		loader = new THREE.TextureLoader();
-		loader.crossOrigin = '';
-
-		heightmap = loader.load( '../bitmaps/bathymetry_bw_composite_2k.png' );
-
-		texture = loader.load( '../bitmaps/2_no_clouds_4k.jpg' );
-
-
-***
-
-// http://jaanga.github.io/cookbook-threejs/materials-sandbox/load-texture/
-
-		loader = new THREE.TextureLoader();
-		loader.crossOrigin = 'anonymous';
-		loader.load( 'http://i.imgur.com/RPv6ofy.jpg', callback );
-
-		function callback ( texture ){
-
-				sphere1.material = new THREE.MeshBasicMaterial( { map: texture } );
-
-		}
-
-
-### textures must be 512x512 to repeat
-
-		THREE.ImageUtils.crossOrigin = 'anonymous';
-		texture = THREE.ImageUtils.loadTexture( "../../textures/im5.jpg" );
-		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-//		texture.repeat.set( 16, 16 );
-//		texture.anisotropy = 16;
-
-		texture.minFilter = texture.magFilter = THREE.NearestFilter;
-		texture.needsUpdate = true;
-
-		material = new THREE.MeshBasicMaterial( {  map: texture, side: THREE.DoubleSide } );
-
-
-
-
-// TWEEN
+##TWEEN
 
 See files
 
+
+
+### WIREFRAME
+
+		<button onclick=mesh.material.wireframe=!mesh.material.wireframe; >wireframe</button>
+
+
+
+## MATH
+
+
+>> angles-normalize-r1.html
+
+		pt1 = geometry.vertices[ 0 ];
+		pt2 = geometry.vertices[ 2 ];
+
+		vectorDelta = pt2.clone().sub( pt1 );
+		angle = Math.atan2( vectorDelta.y, vectorDelta.x );
+
+		geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( - angle ) );
+
+
+Also: THREE.Math.degToRad https://threejs.org/docs/#api/math/Math
+
+
+### MATH COLOR / Random
+
+trick
+		mesh.scale.z = -1;
+
+http://mrdoob.github.io/three.js/docs/#Reference/Math/Color
+
+	var color = new THREE.Color();
+	var color = new THREE.Color( 0xff0000 );
+	var color = new THREE.Color("rgb(255,0,0)");
+	var color = new THREE.Color( 1, 0, 0 );
+
+
+	material.color.setHSL( colors[i], 0.8, 0.5 );
+
+	var colors = generateColors( 100 ) ;
+
+	function generateColors( count) {
+
+		var delta = 1.0 / count;
+		var arr = [];
+
+		for (var i = 0; i < count; i++ ) {
+
+			arr.push( i *  delta );
+
+		}
+
+		return arr;
+
+	}
+
+
+THREE.ColorKeywords = { 'aliceblue': 0xF0F8FF, 'antiquewhite': 0xFAEBD7, 'aqua': 0x00FFFF, 'aquamarine': 0x7FFFD4, 'azure': 0xF0FFFF,
+'beige': 0xF5F5DC, 'bisque': 0xFFE4C4, 'black': 0x000000, 'blanchedalmond': 0xFFEBCD, 'blue': 0x0000FF, 'blueviolet': 0x8A2BE2,
+'brown': 0xA52A2A, 'burlywood': 0xDEB887, 'cadetblue': 0x5F9EA0, 'chartreuse': 0x7FFF00, 'chocolate': 0xD2691E, 'coral': 0xFF7F50,
+'cornflowerblue': 0x6495ED, 'cornsilk': 0xFFF8DC, 'crimson': 0xDC143C, 'cyan': 0x00FFFF, 'darkblue': 0x00008B, 'darkcyan': 0x008B8B,
+'darkgoldenrod': 0xB8860B, 'darkgray': 0xA9A9A9, 'darkgreen': 0x006400, 'darkgrey': 0xA9A9A9, 'darkkhaki': 0xBDB76B, 'darkmagenta': 0x8B008B,
+'darkolivegreen': 0x556B2F, 'darkorange': 0xFF8C00, 'darkorchid': 0x9932CC, 'darkred': 0x8B0000, 'darksalmon': 0xE9967A, 'darkseagreen': 0x8FBC8F,
+'darkslateblue': 0x483D8B, 'darkslategray': 0x2F4F4F, 'darkslategrey': 0x2F4F4F, 'darkturquoise': 0x00CED1, 'darkviolet': 0x9400D3,
+'deeppink': 0xFF1493, 'deepskyblue': 0x00BFFF, 'dimgray': 0x696969, 'dimgrey': 0x696969, 'dodgerblue': 0x1E90FF, 'firebrick': 0xB22222,
+'floralwhite': 0xFFFAF0, 'forestgreen': 0x228B22, 'fuchsia': 0xFF00FF, 'gainsboro': 0xDCDCDC, 'ghostwhite': 0xF8F8FF, 'gold': 0xFFD700,
+'goldenrod': 0xDAA520, 'gray': 0x808080, 'green': 0x008000, 'greenyellow': 0xADFF2F, 'grey': 0x808080, 'honeydew': 0xF0FFF0, 'hotpink': 0xFF69B4,
+'indianred': 0xCD5C5C, 'indigo': 0x4B0082, 'ivory': 0xFFFFF0, 'khaki': 0xF0E68C, 'lavender': 0xE6E6FA, 'lavenderblush': 0xFFF0F5, 'lawngreen': 0x7CFC00,
+'lemonchiffon': 0xFFFACD, 'lightblue': 0xADD8E6, 'lightcoral': 0xF08080, 'lightcyan': 0xE0FFFF, 'lightgoldenrodyellow': 0xFAFAD2, 'lightgray': 0xD3D3D3,
+'lightgreen': 0x90EE90, 'lightgrey': 0xD3D3D3, 'lightpink': 0xFFB6C1, 'lightsalmon': 0xFFA07A, 'lightseagreen': 0x20B2AA, 'lightskyblue': 0x87CEFA,
+'lightslategray': 0x778899, 'lightslategrey': 0x778899, 'lightsteelblue': 0xB0C4DE, 'lightyellow': 0xFFFFE0, 'lime': 0x00FF00, 'limegreen': 0x32CD32,
+'linen': 0xFAF0E6, 'magenta': 0xFF00FF, 'maroon': 0x800000, 'mediumaquamarine': 0x66CDAA, 'mediumblue': 0x0000CD, 'mediumorchid': 0xBA55D3,
+'mediumpurple': 0x9370DB, 'mediumseagreen': 0x3CB371, 'mediumslateblue': 0x7B68EE, 'mediumspringgreen': 0x00FA9A, 'mediumturquoise': 0x48D1CC,
+'mediumvioletred': 0xC71585, 'midnightblue': 0x191970, 'mintcream': 0xF5FFFA, 'mistyrose': 0xFFE4E1, 'moccasin': 0xFFE4B5, 'navajowhite': 0xFFDEAD,
+'navy': 0x000080, 'oldlace': 0xFDF5E6, 'olive': 0x808000, 'olivedrab': 0x6B8E23, 'orange': 0xFFA500, 'orangered': 0xFF4500, 'orchid': 0xDA70D6,
+'palegoldenrod': 0xEEE8AA, 'palegreen': 0x98FB98, 'paleturquoise': 0xAFEEEE, 'palevioletred': 0xDB7093, 'papayawhip': 0xFFEFD5, 'peachpuff': 0xFFDAB9,
+'peru': 0xCD853F, 'pink': 0xFFC0CB, 'plum': 0xDDA0DD, 'powderblue': 0xB0E0E6, 'purple': 0x800080, 'red': 0xFF0000, 'rosybrown': 0xBC8F8F,
+'royalblue': 0x4169E1, 'saddlebrown': 0x8B4513, 'salmon': 0xFA8072, 'sandybrown': 0xF4A460, 'seagreen': 0x2E8B57, 'seashell': 0xFFF5EE,
+'sienna': 0xA0522D, 'silver': 0xC0C0C0, 'skyblue': 0x87CEEB, 'slateblue': 0x6A5ACD, 'slategray': 0x708090, 'slategrey': 0x708090, 'snow': 0xFFFAFA,
+'springgreen': 0x00FF7F, 'steelblue': 0x4682B4, 'tan': 0xD2B48C, 'teal': 0x008080, 'thistle': 0xD8BFD8, 'tomato': 0xFF6347, 'turquoise': 0x40E0D0,
+'violet': 0xEE82EE, 'wheat': 0xF5DEB3, 'white': 0xFFFFFF, 'whitesmoke': 0xF5F5F5, 'yellow': 0xFFFF00, 'yellowgreen': 0x9ACD32 };
+
+var color = new THREE.Color( 'skyblue' );
+
+
+### Spherical coordinates
+
+https://threejs.org/docs/#api/math/Spherical
+
+		phi - polar angle from the y (up) axis. Default is 0.
+		theta - equator angle around the y (up) axis. Default is 0.
+
+		spherical = new THREE.Spherical( radius : Float, phi : Float, theta : Float );
+		spherical = new THREE.Spherical().setFromVector3 ( new THREE.Vector3( 1, 1, 1 ) );
+
+		vector = new THREE.Vector3().setFromSpherical ( spherical );
+		mesh.position.setFromSpherical( spherical );
+		mesh.rotation.setFromVector3( vector );
 
 ###  Vector3
 http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
@@ -1047,11 +1097,8 @@ vecto to fixed string
 		var map2fixed = function( vect ) { return vect.toArray().map( function( num ){ return num.toFixed( 3 ); } ) };
 
 
-### VIREFRAME
 
-		<button onclick=mesh.material.wireframe=!mesh.material.wireframe; >wireframe</button>
-
-### THREE.JS SCRIPTS
+## THREE.JS SCRIPTS
 
 <script src=http://mrdoob.github.io/three.js/examples/js/Detector.js ></script>
 <script src=http://mrdoob.github.io/three.js/build/three.min.js ></script>
@@ -1084,38 +1131,8 @@ vecto to fixed string
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
 
-## MATH
 
-
->> angles-normalize-r1.html
-
-		pt1 = geometry.vertices[ 0 ];
-		pt2 = geometry.vertices[ 2 ];
-
-		vectorDelta = pt2.clone().sub( pt1 );
-		angle = Math.atan2( vectorDelta.y, vectorDelta.x );
-
-		geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( - angle ) );
-
-
-Also: THREE.Math.degToRad https://threejs.org/docs/#api/math/Math
-
-
-### Spherical coordinates
-
-https://threejs.org/docs/#api/math/Spherical
-
-		phi - polar angle from the y (up) axis. Default is 0.
-		theta - equator angle around the y (up) axis. Default is 0.
-
-		spherical = new THREE.Spherical( radius : Float, phi : Float, theta : Float );
-		spherical = new THREE.Spherical().setFromVector3 ( new THREE.Vector3( 1, 1, 1 ) );
-
-		vector = new THREE.Vector3().setFromSpherical ( spherical );
-		mesh.position.setFromSpherical( spherical );
-		mesh.rotation.setFromVector3( vector );
-
-
+## Tricks
 
 	function convertPosition( lat, lon, radius ) {
 		var rc =  radius * cos( lat );
