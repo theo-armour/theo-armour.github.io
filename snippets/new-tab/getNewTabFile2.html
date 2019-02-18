@@ -9,16 +9,18 @@
 <title>Theo getNewTabFile2</title>
 <style>
 
-	body { font: 12pt monospace; margin: 0 auto;  }
+	body { font: 12pt monospace; margin: 0 auto; max-width: 95% }
 	a { color: lightgrey; text-decoration: none; }
 	a:hover, a:focus, a:active { background-color: yellow; color: #aaa; text-decoration: underline }
 
 	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
 	button:hover { background: #ccc; color: #fff }
 
-	table {   border-collapse: separate; border-spacing: 15px;}
+	table { border-collapse: separate; border-spacing: 1rem; }
 
 	td  { color: #eeeaea; font: bold 200% monospace;  outline: 1px solid #eee; vertical-align: top; }
+
+	table p { margin: 0; padding: 0; }
 
 	.col { color: #eeeaea; display: inline-block;
 		font: bold 200% monospace; outline: 1px solid #eee; overflow: hidden; vertical-align: top; }
@@ -53,12 +55,12 @@
 			<td id=col5 >mno</td>
 			<td id=col6 >pqr</td>
 			<td id=col7 >pqr</td>
-			<td id=col8 >pqr</td>
+			<td id=col8 ></td>
 
 		</tr>
 	</table>
 
-	<table markdown style=margin:0;padding:0; >
+	<table markdown>
 		<tr>
 			<td id=t2col1 >abc</td>
 			<td id=t2col2 >def</td>
@@ -68,7 +70,20 @@
 			<td id=t2col6 >pqr</td>
 			<td id=t2col7 >pqr</td>
 			<td id=t2col8 >pqr</td>
-			<td id=t2col9 >pqr</td>
+		</tr>
+	</table>
+
+
+	<table markdown>
+		<tr>
+			<td id=t3col1 >abc</td>
+			<td id=t3col2 >def</td>
+			<td id=t3col3 >ghi</td>
+			<td id=t3col4 >jkl</td>
+			<td id=t3col5 >mno</td>
+			<td id=t3col6 >pqr</td>
+			<td id=t3col7 >pqr</td>
+			<td id=t3col8 >pqr</td>
 		</tr>
 	</table>
 
@@ -78,8 +93,7 @@
 <script>
 
 markdownColumn1 =
-`
-[nytimes]( https://nytimes.com/ ) [tk]( https://www.nytimes.com/pages/technology/ )
+`[nytimes]( https://nytimes.com/ ) [tk]( https://www.nytimes.com/pages/technology/ )
 [drudge](http://drudgereport.com)
 [boing]( https://boingboing.net/blog/ )
 [lifehacker]( https://lifehacker.com/ )
@@ -96,8 +110,7 @@ markdownColumn1 =
 `;
 
 markdownColumn2 =
-`
-[g cal](https://calendar.google.com/)
+`[g cal](https://calendar.google.com/)
 [g contacts](https://contacts.google.com)
 [g translate](https://translate.google.com/)
 [g compose](https://mail.google.com/mail/?view=cm&fs=1&tf=1)
@@ -112,8 +125,7 @@ markdownColumn2 =
 `;
 
 markdownColumn3 =
-`
-[groups.io](https://groups.io)
+`[groups.io](https://groups.io)
 [medium](https://medium.com)
 [nextdoor](https://nextdoor.com)
 [twitter](https://twitter.com)
@@ -124,19 +136,12 @@ markdownColumn3 =
 
 [stacko\'flow](http://stackoverflow.com/)
 [pandora](http://pandora.com)
-peeps
-[bbn66](https://flickr.com/bbn66)
-[websight<br>&nbsp; design](http://websightdesign.com)
-
-[wikihous](http://wikihouse.github.io/viewer-experiments/) [gh](https://github.com/wikihouse/viewer-experiments/)
-[opendesk](http://opendesk.github.io/design-playground/) [gh](https://github.com/opendesk/design-playground/tree/gh-pages)
 `;
 
 
 
 markdownColumn4 =
-`
-[ladybug](http://ladybug.tools/)
+`[ladybug](http://ladybug.tools/)
 [spider](http://ladybug.tools/spider/)
 [spider&nbsp;gbxml](http://ladybug.tools/spider-gbxml-tools/)
 [spider rad](http://ladybug.tools/spider-rad-viewer/)
@@ -144,6 +149,7 @@ markdownColumn4 =
 [three.js](http://threejs.org)
 [• docs](https://threejs.org/docs/)
 [example](https://threejs.org/examples/) [ta](http://jaanga.github.io/jaanga.github.io/documents/threejs-viewers/threejs-viewer-gallery/threejs-viewer-gallery-r1-@.html)
+<br>
 
 [opentecture]( https://opentecture.com )
 &bull;[mindmapping]( https://opentecture.github.io/mindmapping/ )
@@ -151,8 +157,7 @@ markdownColumn4 =
 `;
 
 markdownColumn5 =
-`
-.
+`.
 [gh](https://github.com/ladybug-tools/spider)
 [gh](https://github.com/ladybug-tools/spider-gbxml-tools)
 [gh](https://github.com/ladybug-tools/spider-rad-viewer)<br>
@@ -163,8 +168,7 @@ markdownColumn5 =
 `;
 
 markdownColumn6 =
-`
-• [jaanga](http://jaanga.github.io/)
+`• [jaanga](http://jaanga.github.io/)
 [demo](http://jaanga.github.io/demo/)
 [blog](https://jaanga.github.io/request-jaanga-blog-posts.html)
 [cookbook](http://jaanga.github.io/cookbook/)
@@ -182,9 +186,8 @@ markdownColumn7 =
 [gh](https://github.com/jaanga/jaanga.github.io/tree/master/demo/)
 
 `;
-markdownColumn8 =
-`
-[evernote](https://www.evernote.com/Home.action)
+markdownT3Column8 =
+`[evernote](https://www.evernote.com/Home.action)
 .
 [glitch](https://glitch.com/)
 [theo](https://glitch.com/edit/#!/theo)
@@ -196,10 +199,17 @@ markdownColumn8 =
 .
 [blogger](https://blogger.com)  
 [wp](http://wordpress.com)
+.
+[showdown.js]( http://showdownjs.com/ )
+
+peeps
+[bbn66](https://flickr.com/bbn66)
+[websight<br>&nbsp; design](http://websightdesign.com)
+
+[wikihous](http://wikihouse.github.io/viewer-experiments/) [gh](https://github.com/wikihouse/viewer-experiments/)
+[opendesk](http://opendesk.github.io/design-playground/) [gh](https://github.com/opendesk/design-playground/tree/gh-pages)
+
 `;
-
-
-
 
 
 
@@ -209,8 +219,6 @@ const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
 init();
 
 function init() {
-
-	//divTitle.innerHTML = getTitle();
 
 	showdown.setFlavor( 'github' );
 
@@ -223,8 +231,9 @@ function init() {
 	col5.innerHTML = converter.makeHtml( markdownColumn5 );
 	col6.innerHTML = converter.makeHtml( markdownColumn6 );
 	col7.innerHTML = converter.makeHtml( markdownColumn7 );
-	col8.innerHTML = converter.makeHtml( markdownColumn8 );
+	//col8.innerHTML = converter.makeHtml( markdownT3Column8 );
 
+	t3col1.innerHTML = converter.makeHtml( markdownT3Column8 );
 	requestFile( 'https://api.github.com/users/theo-armour/repos?per_page=100', callbackTheoArmour );
 
 	requestFile( 'https://api.github.com/users/theo-armour/orgs?per_page=100', callbackTheoOrgs );
