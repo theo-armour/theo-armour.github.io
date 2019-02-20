@@ -9,15 +9,23 @@ https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-ta
 
 ## To Do
 
-* 2019-02-18 ~ Use details elements to reduce need for scrolling
-
+* 2019-02-19 ~ Able to edit and update on Chromebook
 * 2019-02-18 ~ Place or link to area to keep bookmarks temporarily
-* 2019-02-18 ~ Make better fit on Pixel
 * 2016-12-07 ~ Add save to file ~ no github api calls
 * Wants re-building as an extension
 
 
 ## Change Log
+
+### 2019-02-19
+
+* Add more links
+* Work on CSS
+* Add thesaurus input
+
+Done
+* 2019-02-18 ~ Make better fit on Pixel
+* 2019-02-18 ~ Use details elements to reduce need for scrolling
 
 ### 2019-02-18 ~
 
