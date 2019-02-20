@@ -9,20 +9,20 @@
 <title>Theo getNewTabFile2 R2.0</title>
 <style>
 
-	body { font: 12pt monospace; margin: 0 auto; max-width: 95% }
+	body { border: 1px solid red; font: 12pt monospace; margin: 0 auto; width: 95%; }
+
 	a { color: lightgrey; text-decoration: none; }
 	a:hover, a:focus, a:active { background-color: yellow; color: #aaa; text-decoration: underline }
 
 	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
 	button:hover { background: #ccc; color: #fff }
 
-  summary { color: #aaa; font: bold 200% monospace; }
-  
-	table { border-collapse: separate; border-spacing: 1rem; }
+	summary { color: #aaa; font: bold 200% monospace; }
+
+	table { border-collapse: separate; border-spacing: 1rem; width:100%; }
+	table p { margin: 0; padding: 0; }
 
 	td  { color: #eeeaea; font: bold 200% monospace;  outline: 1px solid #eee; vertical-align: top; }
-
-	table p { margin: 0; padding: 0; }
 
 	.col { color: #eeeaea; display: inline-block; font: bold 200% monospace;
 		outline: 1px solid #eee; overflow: hidden; vertical-align: top; }
@@ -38,7 +38,7 @@
 <script src="https://rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js" ></script>
 
 	<div id=header class=col >
-		<a href="" >theoNewwwTab &#x2766;</a>
+		<a href="" >theoNewwwTab</a> &nbsp; <a href=file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/new-tab/getNewTabFile2.html > &#x2766;</a>
 		&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
 		&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
 		&nbsp; <a href=https://mail.google.com/mail/u/0/#inbox target=_blank > gmail </a>
@@ -62,7 +62,7 @@
 
 	<details>
 
-		<summary>Theo / Jaanga </summary>
+		<summary><a href=https://theo-armour.github.io >TheoA</a> / <a href=http://jaanga.github.io >Jaanga</a></summary>
 		<table markdown>
 			<tr>
 				<td id=t2col1 >abc</td>
@@ -113,6 +113,8 @@ markdownColumn1 =
 [feedly]( https://feedly.com )
 `;
 
+
+
 markdownColumn2 =
 `[g cal](https://calendar.google.com/)
 [g contacts](https://contacts.google.com)
@@ -126,7 +128,10 @@ markdownColumn2 =
 [g mail](https://mail.google.com/mail/u/0/?tab=mm#inbox)
 [g oogle](https://google.com)
 [g sites](https://sites.google.com)
+[g experimt]( https://experiments.withgoogle.com/experiments )
 `;
+
+
 
 markdownColumn3 =
 `[groups.io](https://groups.io)
@@ -160,7 +165,12 @@ markdownColumn4 =
 [opentecture]( https://opentecture.com )
 &bull;[mindmapping]( https://opentecture.github.io/mindmapping/ )
 &bull;[bookmarks]( https://opentecture.github.io/mindmapping/#sandbox/opentecture-bookmarks/README.md )
+
+[pushMe-pullU]( https://pushme-pullyou.github.io/ )
+[tootoo13]( https://pushme-pullyou.github.io/tootoo13/tootoo13.html )
 `;
+
+
 
 markdownColumn5 =
 `.
@@ -170,8 +180,13 @@ markdownColumn5 =
 [gh](https://github.com/mrdoob/three.js)
 [gh](https://github.com/mrdoob/three.js/tree/dev/docs)
 [gh](https://github.com/mrdoob/three.js/tree/dev/examples)
-
+<br>.
+.
+.
+.
+[tt]( https://github.com/pushme-pullyou/tootoo13 )
 `;
+
 
 markdownColumn6 =
 `• [jaanga](http://jaanga.github.io/)
@@ -186,15 +201,19 @@ markdownColumn6 =
 [tutorials](https://github.com/jaanga/jaanga.github.io/tree/master/tutorials)
 `;
 
+
 markdownColumn7 =
 `
 [gh](https://github.com/jaanga/jaanga.github.io/)
 [gh](https://github.com/jaanga/jaanga.github.io/tree/master/demo/)
 
 `;
-markdownT3Column8 =
+
+
+//////////
+
+markdownT3Column1 =
 `
-.
 [glitch](https://glitch.com/)
 [theo](https://glitch.com/edit/#!/theo)
 [ta-core](https://glitch.com/edit/#!/ta-core)
@@ -218,8 +237,19 @@ peeps
 `;
 
 
+markdownT3Column2 =
+`
+[amazon drive]( https://smile.amazon.com/clouddrive/folder/24e4d9HmTF6k7Q67a1z4n )
+[ms oneDrive]( https://onedrive.live.com )
+[validator]( https://validator.w3.org/ )
+[jsHint]( https://jshint.com/ )
+.
+[g sites/jaanga]( https://sites.google.com/jaanga.com/jaanga/home )
+[g sites/828-00]( https://sites.google.com/828-0000.com/828-0000/home)
+[g sites/theo-a]( https://sites.google.com/view/theo-armour/home )
+`
 
-const urlSourceCode = "https://github.com/zzzzz/xxxxx.html";
+const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-tab";
 const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
 
 init();
@@ -239,7 +269,10 @@ function init() {
 	col7.innerHTML = converter.makeHtml( markdownColumn7 );
 	//col8.innerHTML = converter.makeHtml( markdownT3Column8 );
 
-	t3col1.innerHTML = converter.makeHtml( markdownT3Column8 );
+	t3col1.innerHTML = converter.makeHtml( markdownT3Column1 );
+	t3col2.innerHTML = converter.makeHtml( markdownT3Column2 );
+
+
 	requestFile( 'https://api.github.com/users/theo-armour/repos?per_page=100', callbackTheoArmour );
 
 	requestFile( 'https://api.github.com/users/theo-armour/orgs?per_page=100', callbackTheoOrgs );
