@@ -9,10 +9,12 @@ https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-ta
 
 ## To Do
 
+* 2019-02-23 ~ Add Ladybug Tools icons
 * 2019-02-19 ~ Able to edit and update on Chromebook
 * 2019-02-18 ~ Place or link to area to keep bookmarks temporarily
 * 2016-12-07 ~ Add save to file ~ no github api calls
 * Wants re-building as an extension
+
 
 
 ## Change Log

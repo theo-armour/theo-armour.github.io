@@ -1153,8 +1153,10 @@ function parseFile( text, pattern ){
 
 >>> /xxx(.*?)xxx/gi
 
-* (.*?) Matches anything in between
+* (.*?) Parenthesis matches anything in between
+	* ? = match not remembered
 * May need to have a backslash: \(.*?)
+* choose g for global correctly
 
 .match( /<h1(.*?)>(.*?)<\/h1>/ )
 
