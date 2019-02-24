@@ -3,9 +3,33 @@
 ## Text Expansion
 
 https://blaze.today/
+
+
+
+## ProKeys
+
 https://github.com/GaurangTandon/ProKeys
 
+* Works on Chrome browser Windows, Chromebook
+* Works
+	* Gist meta but not main
+	* Evernote online but not Chromebook app
+	* Google sheets / Calendar
+	* Gmail
+	* GitHub Issues
+	* Medium
+	* StackEdit
+	* Twitter
 
+
+Not work
+* Caret
+* Hangouts
+* Facebook
+* Reddit
+
+Sync
+* Syncs across platforms
 
 ## http://www.phraseexpress.com/
 

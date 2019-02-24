@@ -35,6 +35,9 @@ look into
 bitLocker
 homeGroup
 
+### startup
+
+window-R > shell:startup
 ## Startup
 
 C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
