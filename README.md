@@ -25,7 +25,7 @@ Thinking out loud as I put the package together:
 
 * Eat your own dog food. If you call yourself a coder, then you should have a web site and code it yourself. If that's too difficult or would take too long then you can't really call yourself an effective coder, can you?
 
-* Be yousful. The web site you build should be useful to you. If web site is not that useful to you in some way, then why should it be useful to anybody else?
+* Be 'you'sful. The web site you build should be useful to you. If web site is not that useful to you in some way, then why should it be useful to anybody else?
 
 * Self-marketing code. I want my coding to do its own marketing. I don't want to switch back and forth during the day between a marketing and coding roles. I think a good use of the GitHub API to generate fun reports automatically will help make my sites fun for users and authors.
 
