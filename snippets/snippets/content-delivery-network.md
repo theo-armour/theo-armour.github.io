@@ -12,6 +12,7 @@ https://rawgit.com/
 * https://www.cdnperf.com/
 * https://cdn.jsdelivr.net/npm/jquery/
 * https://www.jsdelivr.com/rawgit
+
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js@dev/examples/js/controls/OrbitControls.js
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
@@ -23,6 +24,16 @@ multiple
 replace
 https://cdn.rawgit.com/mrdoob/three.js/r93/build/three.min.js
 https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
+
+
+<script src = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js" ></script>
+<script src = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js" ></script>
+
+cdn.rawgit.com/mrdoob/three.js/(.*?)/
+
+
+cdn.jsdelivr.net/gh/mrdoob/three.js@r100
+cdn.jsdelivr.net/gh/mrdoob/three.js@r100
 
 ### CDNJS
 * https://cdnjs.com/
