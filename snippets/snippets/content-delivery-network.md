@@ -32,8 +32,13 @@ https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
 cdn.rawgit.com/mrdoob/three.js/(.*?)/
 
 
-cdn.jsdelivr.net/gh/mrdoob/three.js@r100
-cdn.jsdelivr.net/gh/mrdoob/three.js@r100
+cdn.jsdelivr.net/gh/mrdoob/three.js@r100/
+
+
+
+https://cdn.rawgit.com/showdownjs/showdown/1.8.5/dist/showdown.min.js
+https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js
+https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js
 
 ### CDNJS
 * https://cdnjs.com/
