@@ -39,9 +39,9 @@
 
 	<div id=header class=col >
 		<a href="" >theoNewwwTab</a> &nbsp; <a href=file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/new-tab/getNewTabFile2.html > &#x2766;</a>
-		&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
-		&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
 		&nbsp; <a href=https://mail.google.com/mail/u/0/#inbox target=_blank > gmail </a>
+		&nbsp; <a href=../dashboard3/dashboard2.html target="_blank"> teodoro </a>
+		&nbsp; <a href=../fidgetty/fidgetty-r3.html target="_blank"> fidgetty</a>
 		&nbsp; <a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/new-tab/getNewTabFile.html" target="_blank" title="Edit on GitHub" >ed</a>
 		&nbsp; <input>
 	</div>
@@ -267,7 +267,12 @@ markdownT3Column2 =
 [g sites/jaanga]( https://sites.google.com/jaanga.com/jaanga/home )
 [g sites/828-00]( https://sites.google.com/828-0000.com/828-0000/home)
 [g sites/theo-a]( https://sites.google.com/view/theo-armour/home )
+`;
+
+markdownT3Column4 =
 `
+[ggta.g.io]( https://groups.io/g/ggta )
+`;
 
 const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-tab";
 const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
@@ -291,7 +296,7 @@ function init() {
 
 	t3col1.innerHTML = converter.makeHtml( markdownT3Column1 );
 	t3col2.innerHTML = converter.makeHtml( markdownT3Column2 );
-
+	t3col4.innerHTML = converter.makeHtml( markdownT3Column4 );
 
 	requestFile( 'https://api.github.com/users/theo-armour/repos?per_page=100', callbackTheoArmour );
 
