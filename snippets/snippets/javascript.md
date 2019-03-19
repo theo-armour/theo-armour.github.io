@@ -1,4 +1,4 @@
-
+.map
 		const div = document.body.appendChild( document.createElement( 'div' ) );
 		div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px; }
 
@@ -299,11 +299,11 @@ a.next()
 
 * https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
 
-arr = arr.filter( (value, index, array) => array.indexOf (value) == index );
+arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
 
 ### Array Random Values
 
-	arr = Array.from({length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
+	arr = Array.from( {length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
 
 
 ### ARRAY Reduce

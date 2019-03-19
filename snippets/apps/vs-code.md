@@ -6,6 +6,15 @@
 
 
 
+## Opening VS Code
+
+In terminal
+start vscode://file/d:/Google%20Drive/Theo/vscode-gdrive/AutoHotkey.ahk
+
+In browser
+vscode://file/d:/Google%20Drive/Theo/vscode-gdrive/AutoHotkey.ahk
+
+
 ## Chrome debug
 
 * https://code.visualstudio.com/docs/editor/debugging
