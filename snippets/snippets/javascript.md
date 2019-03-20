@@ -317,6 +317,11 @@ arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
 	}, [] );
 
 
+	ISSTI.buttonsSurfaceType = GBX.surfaceTypes.reduce(
+		( arr, item ) => arr + `<button onclick=ISSTI.setSurfaceType("${item}"); >${ item }</button><br>`,
+		''
+	);
+	
 ### ARRAY Split to Float
 
 		elevations = data.split( ',' ).map( function( item ) { return parseFloat( item ); } );
