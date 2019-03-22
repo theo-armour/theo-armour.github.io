@@ -2,6 +2,20 @@
 # Videos
 
 
+>Cleaning with water
+>Cleaning with cloth
+>Microwave article
+>Aesthetics: purpose of life
+>"We need to get rid of gun-free zones."
+>What is local shopping?
+>Microwave
+>Ray article
+>hernias
+> What is an academic article? What do I believe?
+> friends - what makes
+
+
+
 ## The primacy of the cohorts
 
 How do friendships come about?

@@ -100,7 +100,7 @@
 
 			</td>
 			<td id=t3col4 >jkl</td>
-			<td id=t3col5 >mno</td>
+			<td id=t3col5 ></td>
 			<td id=t3col6 >pqr</td>
 			<td id=t3col7 >pqr</td>
 			<td id=t3col8 >pqr</td>
@@ -156,7 +156,7 @@ markdownColumn3 =
 [nextdoor](https://nextdoor.com)
 [twitter](https://twitter.com)
 [facebook](https://facebook.com)
-[slack](https://slack.com)
+[slack](https://slack.com) [lb]( https://ladybug-analysis.slack.com )
 [wikipdia](https://en.wikipedia.org/wiki/Main_Page) [ta](https://en.wikipedia.org/wiki/User:TheoA)
 [flickr](https://flickr.com)
 .
@@ -282,8 +282,20 @@ markdownT3Column4 =
 [fogg]( https://friendsofgoldengateway.wordpress.com) [wp]( https://wordpress.com/view/friendsofgoldengateway.wordpress.com )
 `;
 
+
+
+markdownT3Column5 =
+`
+
+<a href="vscode://file/D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/projects/aerticles-to-write-video.md" >art 2 write</a>
+`;
+
+
+
+
+
 const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-tab";
-const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
+//const urlSourceCodeIcon = "https://status.github.com/images/invertocat.png";
 
 init();
 
@@ -305,6 +317,7 @@ function init() {
 	t3col1.innerHTML = converter.makeHtml( markdownT3Column1 );
 	t3col2.innerHTML = converter.makeHtml( markdownT3Column2 );
 	t3col4.innerHTML = converter.makeHtml( markdownT3Column4 );
+	t3col5.innerHTML = converter.makeHtml( markdownT3Column5 );
 
 	requestFile( 'https://api.github.com/users/theo-armour/repos?per_page=100', callbackTheoArmour );
 

@@ -67,7 +67,8 @@ MNU.currentStatusCore =
 
 
 
-const uriDefaultFile = 'README.md';
+//const uriDefaultFile = 'README.md';
+OHC.uriDefaultFile = 'README.md';
 
 THM.themeUrlStorage = 'theo-armour-ThemeUrl';
 THM.cssBasic = "https://pushme-pullyou.github.io/tootoo13/js-tootoo13-1/style.css";
@@ -87,8 +88,8 @@ MNU.appText  = ""; // "CMS";
 MNU.appTitle = ""; //"Basic html content management script with sliding menu, css theme selection, Markdown to HTML, drag and drop file reading capability, access to frequently used pages and more";
 MNU.appUrl   = ""; //"https://pushme-pullyou.github.io/#tootoo-templates/hamburger-theme-cms/README.md";
 
-MNU.urlSourceCodeImage="https://status.github.com/images/invertocat.png";
-MNU.urlSourceCodeIcon=`<img src="${ MNU.urlSourceCodeImage }" height=18 >`;
+//MNU.urlSourceCodeImage="https://status.github.com/images/invertocat.png";
+//MNU.urlSourceCodeIcon=`<img src="${ MNU.urlSourceCodeImage }" height=18 >`;
 
 MNU.footerUrl    = "#";
 MNU.footerTarget = ""; //"target=_blank";
@@ -102,9 +103,9 @@ OHC.branch = '/gh-pages/';
 
 // When running in dev folder
 //OHC.urlGitHubPage = location.href.includes( OHC.repo ) ? '../' : 'https://' + OHC.repo + "/";
-OHC.urlGitHubPage = `https://${ OHC.repo }/`;
+//OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 // When running in build repo
-//OHC.urlGitHubPage = "";
+OHC.urlGitHubPage = "";
 
 </script>
 

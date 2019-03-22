@@ -1,5 +1,60 @@
 
 
+## Bookmark menu bar folders
+ta ~ tech projects of current interest // web apps I use ??
+c ~ community - friends&family non-tech projects
+t ~ tech - web online
+apps > hw + hosts
+top ~ news
+browse ~ tools to help with browsing
+P ~ patterns
+J ~ jaanga
+G ~ google
+serve
+now ~ fresh bookmarks / future events / things I'm working on / temp / when
+code ~ programming
+host ~ data stored in places
+locate ~ place / where
+live
+network ~ who / people
+use ~ consume
+web ~ apps / internet
+Other bookmarks ~ money stuff
+
+
+
+Bookmark Action List
+
+Content
+
+Decide and define why to bookmark
+
+Evolve BM strategy
+
+What is the rationale for this endless task / personal ritual?
+
+A way of increasing/augmenting natural intuition. Look into Kant on this
+
+GTD
+
+Curate, curate and curate
+Streamline bookmarks
+
+Devote several TheoTimes per week to curating bookmarks
+Start at top levels first
+Move any items not in a folder into a folder
+Eschew mixed files and folders
+No more than about 25 folders or items in a folder
+
+What to do with bookmarks on 828-0000.com?
+
+Folders to Tackle
+
+Links > apps-web-services
+Toolbar > Sites?
+
+Started 2011-03-06
+
 ### lists of useful tags
 
 The current set of categories in 'Opentecture Bookmarks View-a-line' does not feel viable. If nothing else, a bookmark could and should be assigned multiple categories.
