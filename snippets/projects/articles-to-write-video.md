@@ -1,18 +1,17 @@
 
 # Videos
 
-
->Cleaning with water
->Cleaning with cloth
->Microwave article
->Aesthetics: purpose of life
->"We need to get rid of gun-free zones."
->What is local shopping?
->Microwave
->Ray article
->hernias
-> What is an academic article? What do I believe?
-> friends - what makes
+* Rededication of life from family to friends
+	* friends - what makes
+* Cleaning with water
+* Cleaning with cloth
+* Microwave article
+* Aesthetics: purpose of life
+* "We need to get rid of gun-free zones."
+* What is local shopping?
+* Ray food article
+* hernias
+* What is an academic article? What do I believe?
 
 
 
