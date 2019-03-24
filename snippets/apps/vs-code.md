@@ -141,3 +141,6 @@ https://code.visualstudio.com/docs/editor/userdefinedsnippets
 * Control space to view
 * tab to complete
 
+## Sync settings
+
+* https://github.com/shanalikhan/code-settings-sync
