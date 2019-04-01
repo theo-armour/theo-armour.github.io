@@ -62,7 +62,7 @@ from https://www.npmjs.org/doc/misc/npm-faq.html :
 npm installs apps in just under the current folder
 
 How do I install something on my computer in a central location?
->> npm install http-server -g
+>> cd 
 
 	* Install it globally by tacking -g or --global to the command.
 	* This is especially important for command line utilities that need to add their bins to the global system PATH.)

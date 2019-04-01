@@ -1,6 +1,9 @@
 
 # Videos
 
+* The speed at which people's brain is switching to quick reads - 100 characters or less -
+	* And the increasing inability to deal with long reads and multiple threads in a single message
+	* the carry over from the ways people read text messages is affecting the way people read emails
 * Rededication of life from family to friends
 	* friends - what makes
 * Cleaning with water
