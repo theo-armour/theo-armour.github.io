@@ -1,5 +1,22 @@
 
 
+
+### 2019-04-05
+
+my loss of focus
+
+Ladybug tools Website updates -my inability to complete on static 2D views of live 3D apps
+
+'community' repo - want
+
+multiple new spider reps
+- perhaps 3-5
+- alternative to 'tools' moniker
+
+Antoine is wonderful and can a coder and a designer work together
+
+
+
 ### 2019-01-30
 
 Add spider to Ladybug Tools Google Analytics
