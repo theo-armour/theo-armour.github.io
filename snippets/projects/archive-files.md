@@ -1,4 +1,23 @@
 
+## ace-it.us
+
+Cpanel
+* https://my.bluehost.com/hosting/cpanel
+
+Same password for cpanel and sftp://aceitus@ace-it.us
+
+ToDo
+* move memento-mori-to GitHub
+* move caper.ws to github
+* check for existing copies terrain files
+* check is sp500 files are needed
+
+
+## Dreamhost
+
+mailman data accessible only via admin
+
+
 
 
 ### neocities
@@ -37,6 +56,17 @@
 
 
 ## Journal
+
+
+### 2019-04-07
+
+ace-it.us
+* synced to thredator:d\2019-ace-it-us exept for
+* sp500 files
+* terrain elevations data
+
+coonecting easily with Bluehost and BC
+
 
 ### 2018-12-20
 

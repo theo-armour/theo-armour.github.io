@@ -1,5 +1,59 @@
 
 
+### 2019-04-09 ~
+
+* https://semver.org/
+* https://en.wikipedia.org/wiki/Software_versioning
+* https://medium.com/@jameshamann/a-brief-guide-to-semantic-versioning-c6055d87c90e
+* https://docs.npmjs.com/about-semantic-versioning
+* https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e
+	* Many interesting comments to a short gist
+
+
+### 2019-04-08 ~
+
+Branch- and release- driven development
+
+I would really like to move the Spider coding workflow over to a release- and branch-driven very git-oriented workflow. I do, however, have several stumbling blocks I have not figured out how to work-around
+
+* Links to scripts of every release are available
+* Clicking any link will run that script in your browser
+* No need for git or other tools to be used
+
+In other words the entire history of a project - from R1 to the latest release - is always viewable and runnable by non-technical users and every release is in its own branch.
+
+Using a CDN such as jsDelivr it is easy to link to any asset in any branch or release on GitHub.
+
+What is not so easy is to get a link to the the multiple primary HTML files that can run and load all the relevant scripts and other assets.
+
+
+
+
+
+Suggestions that could be added to the read me for this repo
+
+***
+
+This repo is a general starting-off space for the Ladybug Tools collaboration. Items may include:
+
+* Sandbox code and comments pre-repo stage - but that would otherwise clutter an existing repo
+* Issues and comments that might apply to multiple repos
+* Style guides and standards that might apply to multiple projects
+* General coding or technical issues not related to specific projects such as
+	* Calendars
+	* FAQs
+	* Utilities
+
+Items for this repo should allow for aging and archiving so as to prevent a clutter of old, no longer used stuff
+* Aging and archiving
+	* Use year folders for last years things no longer
+* Deprecation
+	* Links to forks with newer versions
+
+This repo does not replace:
+* End user discussion on the Discourse Forum
+* Project coding matters in their respective repos
+* ladybug-tools.github.io for home page code and assets of wide utility and long duration such as logos and licenses
 
 ### 2019-04-05
 
