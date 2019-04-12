@@ -295,11 +295,10 @@ a.unshift([item]) Prepends items to the start of the array.
 
 a.next()
 
-### ARRAY Duplicates
 
-* https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+return (foo || []).length;
 
-arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
+
 
 ### Array Random Values
 
@@ -321,7 +320,7 @@ arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
 		( arr, item ) => arr + `<button onclick=ISSTI.setSurfaceType("${item}"); >${ item }</button><br>`,
 		''
 	);
-	
+
 ### ARRAY Split to Float
 
 		elevations = data.split( ',' ).map( function( item ) { return parseFloat( item ); } );
@@ -412,6 +411,19 @@ see cookbook/array/array-pop-while-switch
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 
+### ARRAY Duplicates
+
+* https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+
+arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
+
+### Array unique
+
+const array = [1, 1, 2, 3, 5, 5, 1]
+const uniqueArray = [...new Set(array)];
+console.log(uniqueArray); // Result: [1, 2, 3, 5]
+
+
 
 ## Bitwise / Boolean
 
@@ -421,7 +433,7 @@ see cookbook/array/array-pop-while-switch
 
 
 
-### CANVAS >> see its own file: snippets.canvas.txt
+### CANVAS >> see its own file: snippets > canvas.md
 
 
 
@@ -431,8 +443,6 @@ see cookbook/array/array-pop-while-switch
 		String.fromCharCode(10) // LF
 		String.fromCharCode(13) // CR 32 = space
 		String.fromCharCode(0x24D8) // i inside circle
-
-
 
 
 
@@ -938,6 +948,18 @@ parseInt( string, 10 ) << include the radix
 
 
 
+### JSON
+
+JSON.stringify
+
+console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, '\t'));
+// Result:
+// '{
+//     "alpha": A,
+//     "beta": B
+// }'
+
+
 ### LOCATION.HASH
 
 		window.addEventListener ( 'hashchange', onHashChange, false );
@@ -973,6 +995,7 @@ parseInt( string, 10 ) << include the radix
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
+console.log(2 ** 3); // Result: 8
 
 >>> sin = Math.sin;
 
@@ -1225,6 +1248,13 @@ RegExp Modifiers
 // https://stackoverflow.com/questions/27318715/blob-url-with-utf-16le-encoding
 
 
+### Set
+
+const array = [1, 1, 2, 3, 5, 5, 1]
+const uniqueArray = [...new Set(array)];
+console.log(uniqueArray); // Result: [1, 2, 3, 5]
+
+
 ### setTimeout
 
 
@@ -1348,6 +1378,10 @@ Number( space.area.toFixed(4) )
 
 		}
 
+
+### ternary operator
+
+x > 100 ? 'Above 100' : 'Below 100';
 
 
 ### TIME

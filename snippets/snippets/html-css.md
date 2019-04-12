@@ -147,6 +147,19 @@ overflow-y visible|hidden|scroll|auto|no-display|no-content;
 h2:before { content:"❦ ";
 
 
+### CSS Flexbox
+
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* https://www.w3schools.com/css/css3_flexbox.asp
+* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+* https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34
+
+	.container { display: flex; }
+
+	.container > div { border: 1px solid red; margin: 5px; padding: 10px; }
+
+
+
 ### CSS Random Gradient Background
 
 // height not always necessary
@@ -226,7 +239,7 @@ function loadCss() {
 	css.rel = "stylesheet";
 	css.href = "style.css";
 	console.log( 'css', css );
-	
+
 }
 
 
@@ -234,6 +247,33 @@ function loadCss() {
 
 # HTML
 
+*  https://www.w3schools.com/tags/default.asp
+
+
+
+### Audio
+
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+### Cite
+
+<cite>The Scream</cite>
+
+### datalist
+
+<input list="browsers">
+
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
 
 ### DETAILS
 
@@ -256,19 +296,21 @@ div {
 }
 
 
-### CSS Flexbox
+### Figure
 
-* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-* https://www.w3schools.com/css/css3_flexbox.asp
-* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
-* https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34
-
-	.container { display: flex; }
-
-	.container > div { border: 1px solid red; margin: 5px; padding: 10px; }
+<figure>
+  <img src="../html/pic_trulli.jpg" alt="Trulli" style="width:100%">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure>
 
 
-
+### Kbd
+<em>Emphasized text</em><br>
+<strong>Strong text</strong><br>
+<code>A piece of computer code</code><br>
+<samp>Sample output from a computer program</samp><br>
+<kbd>Keyboard input</kbd><br>
+<var>Variable</var>
 
 ### FORM
 - see also Textarea
@@ -425,6 +467,9 @@ More
 https://gist.github.com/endolith/157796
 
 
+### Mark
+
+<p>Do not forget to buy <mark>milk</mark> today.</p>
 
 
 ### META
@@ -437,6 +482,25 @@ https://gist.github.com/endolith/157796
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' >
 
 
+### Output
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+<input type="range" id="a" value="50">100
++<input type="number" id="b" value="50">
+=<output name="x" for="a b"></output>
+
+
+### Picture
+
+<picture>
+  <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+### Template
+
+
 ### TEXTAREA
 
 
@@ -444,3 +508,17 @@ https://gist.github.com/endolith/157796
 		'Iteration system wide engenders economies of scale, cross-media technology, presentation action items and life cycle replication.'
 </textarea>
 
+
+### Time
+
+<time datetime="2008-02-14 20:00">Valentines day</time>
+
+
+
+### Video
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
