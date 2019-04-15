@@ -24,10 +24,26 @@ getEventListeners( menu )
 monitorEvents($('#menu'))
 inspect( menu )
 dir( menu )
+
+
+### Console
+
 console.table( scene )
 
+console.count(); // default: 1
+console.count(); // default: 2
+console.count(); // default: 3
+console.countReset();
+console.count();
+
 console.time('myTime');
+console.timeLog();
 console.timeEnd('myTime');
+
+console.trace("Logging the way down here!");
+
+console.assert(true, "This won't be logged!");
+console.assert(false, "This will be logged!");
 
 clear()
 
