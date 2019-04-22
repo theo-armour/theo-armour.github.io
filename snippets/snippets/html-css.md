@@ -96,8 +96,14 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 
 window.getComputedStyle()
 
-
 getComputedStyle
+
+### CSS Pseudo-classes
+
+https://www.w3schools.com/css/css_pseudo_classes.asp
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+
 
 ### CSS BORDERS
 
@@ -127,26 +133,6 @@ dotted solid double dashed
 dotted solid
 
 
-
-### CSS Center with CSS
-
-http://codepen.io/shshaw/full/gEiDt
-.Absolute-Center {
-  width: 50%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-
-overflow
-overflow-x
-overflow-y visible|hidden|scroll|auto|no-display|no-content;
-
-h2:before { content:"❦ ";
-
-
 ### CSS Flexbox
 
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
@@ -158,6 +144,96 @@ h2:before { content:"❦ ";
 
 	.container > div { border: 1px solid red; margin: 5px; padding: 10px; }
 
+
+### CSS Font-size
+
+* em is relative to the font-size of its direct or nearest parent,
+* rem is relative to the html (root) font-size.
+
+
+### CSS Font-family
+
+Google Fonts: https://fonts.google.com/
+Font Library: https://fontlibrary.org/
+Adobe Edge: https://edgewebfonts.adobe.com/
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+body {background-color: #ffffff; color: #555; font-family: 'inconsolata'; font-size: 15px; height: 100%;
+	line-height: 18px; margin: 0px; overflow: hidden; }
+	
+### CSS Overflow
+
+overflow
+overflow-x
+overflow-y visible|hidden|scroll|auto|no-display|no-content;
+
+
+### CSS Variables in JavaScript
+
+* https://www.w3schools.com/css/css3_variables.asp
+* https://developer.mozilla.org/en-US/docs/Web/CSS/var
+* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+* https://stackoverflow.com/questions/36088655/accessing-a-css-custom-property-aka-css-variable-through-javascript
+
+
+var bodyStyles = window.getComputedStyle(document.body);
+var fooBar = bodyStyles.getPropertyValue('--foo-bar'); //get
+
+document.body.style.setProperty('--foo-bar', newValue);//set
+
+
+// setter
+document.documentElement.style.setProperty('--myVariable', 'blue');
+// getter
+document.documentElement.style.getPropertyValue('--myVariable');
+
+
+
+## CSS Loading
+
+### CSS External style sheet
+
+https://www.w3schools.com/css/css_howto.asp
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
+### CSS Switch
+
+<link rel="stylesheet" id="stylesheet" type="text/css" href="style1.css">
+			<p><button onclick=stylesheet.href="style1.css"; >style 1</button></p>
+
+			<p><button onclick=stylesheet.href="style2.css"; >style 2</button></p>
+
+https://www.w3schools.com/w3css/w3css_color_themes.asp
+
+
+
+### CSS load with function
+
+function loadCss() {
+
+	const css = document.head.appendChild( document.createElement('link') );
+	css.rel = "stylesheet";
+	css.href = "style.css";
+	console.log( 'css', css );
+
+}
+
+
+## CSS Tips
+### CSS Center with CSS
+
+http://codepen.io/shshaw/full/gEiDt
+.Absolute-Center {
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
 
 
 ### CSS Random Gradient Background
@@ -187,60 +263,11 @@ h2:before { content:"❦ ";
 
 https://www.sitepoint.com/a-primer-on-css3-transforms/
 
-	.divIframe { border: 0px solid red; height: 960px; width: 960px; transform: scale( 0.25 ); transform-origin: 0 0; }  // or  top left instead og 0 0
+.divIframe { border: 0px solid red; height: 960px; width: 960px; transform: scale( 0.25 );
+	transform-origin: 0 0; }  // or  top left instead og 0 0
 
 
 
-### CSS External style sheet
-
-https://www.w3schools.com/css/css_howto.asp
-
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-
-
-### CSS Switch
-
-<link rel="stylesheet" id="stylesheet" type="text/css" href="style1.css">
-			<p><button onclick=stylesheet.href="style1.css"; >style 1</button></p>
-
-			<p><button onclick=stylesheet.href="style2.css"; >style 2</button></p>
-
-https://www.w3schools.com/w3css/w3css_color_themes.asp
-
-### CSS Font-size
-
-* em is relative to the font-size of its direct or nearest parent,
-* rem is relative to the html (root) font-size.
-
-### CSS Variables
-
-* https://www.w3schools.com/css/css3_variables.asp
-* https://developer.mozilla.org/en-US/docs/Web/CSS/var
-* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
-* https://stackoverflow.com/questions/36088655/accessing-a-css-custom-property-aka-css-variable-through-javascript
-
-
-var bodyStyles = window.getComputedStyle(document.body);
-var fooBar = bodyStyles.getPropertyValue('--foo-bar'); //get
-
-document.body.style.setProperty('--foo-bar', newValue);//set
-
-
-// setter
-document.documentElement.style.setProperty('--myVariable', 'blue');
-// getter
-document.documentElement.style.getPropertyValue('--myVariable');
-
-### CSS load with function
-
-function loadCss() {
-
-	const css = document.head.appendChild( document.createElement('link') );
-	css.rel = "stylesheet";
-	css.href = "style.css";
-	console.log( 'css', css );
-
-}
 
 
 **********

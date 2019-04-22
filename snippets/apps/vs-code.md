@@ -99,6 +99,19 @@ single-click or select a file in the Explorer, show file in a preview mode - reu
 
 Preview mode is indicated by italics in the Tab heading
 
+## Search and replace in files
+
+https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options
+
+ * * to match one or more characters in a path segment
+* ? to match on one character in a path segment
+* ** to match any number of path segments, including none
+* {} to group conditions (for example {**/*.html,**/*.txt} matches all HTML and text files)
+* [] to declare a range of characters to match (example.[0-9] to match on example.0, example.1, …)
+
+ From the Explorer, you can right-click on a folder and select Find in Folder to search inside a folder only.
+
+
 ## Selection
 
 Box Selection: ctrl-shift-alt-<arrow keys>
