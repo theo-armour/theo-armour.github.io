@@ -2,8 +2,6 @@
 
 
 
-
-
 ## Midnight things
 * try templates using \ instead of '' +
 
