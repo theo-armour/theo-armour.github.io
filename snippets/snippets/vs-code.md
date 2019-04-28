@@ -17,13 +17,15 @@
 * https://vscodecandothat.com/
 
 
-## To do
+### To do
 
+* Good workflow on Chromebook
+		*
 * https://github.com/shanalikhan/code-settings-sync
 * Try new line only setting no cr
 
 
-## Opening VS Code
+### Opening VS Code
 
 In terminal
 start vscode://file/d:/Google%20Drive/Theo/vscode-gdrive/AutoHotkey.ahk
@@ -90,6 +92,16 @@ Cmd+Option+1 (Mac)
 ## Formatting
 
 selection: Ctrl-K, Ctrl-F
+
+
+## GitHub integration
+
+* https://code.visualstudio.com/docs/editor/versioncontrol
+
+> ~/.ssh/id_rsa.pub
+> ssh-keygen -t rsa -b 4096 -C "Penguin Chromebook"
+> cat ~/.ssh/id_rsa.pub
+> git remote set-url origin git@github.com:charmor/charmor.github.io.git
 
 
 ## IntelliSense

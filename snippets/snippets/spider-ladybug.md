@@ -1,20 +1,21 @@
+# Spider Ladybug
+
+## 2019-04-11
 
 
-### 2019-04-11 ~
 
-
-
-### 2019-04-09 ~
+## 2019-04-09 ~
 
 * https://semver.org/
 * https://en.wikipedia.org/wiki/Software_versioning
 * https://medium.com/@jameshamann/a-brief-guide-to-semantic-versioning-c6055d87c90e
 * https://docs.npmjs.com/about-semantic-versioning
 * https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e
-	* Many interesting comments to a short gist
+		* Many interesting comments to a short gist
+		* tt
 
 
-### 2019-04-08 ~
+## 2019-04-08 ~
 
 Branch- and release- driven development
 
@@ -44,11 +45,12 @@ This repo is a general starting-off space for the Ladybug Tools collaboration. I
 * Issues and comments that might apply to multiple repos
 * Style guides and standards that might apply to multiple projects
 * General coding or technical issues not related to specific projects such as
-	* Calendars
-	* FAQs
-	* Utilities
+		* Calendars
+		* FAQs
+		* Utilities
 
 Items for this repo should allow for aging and archiving so as to prevent a clutter of old, no longer used stuff
+
 * Aging and archiving
 	* Use year folders for last years things no longer
 * Deprecation
@@ -59,7 +61,7 @@ This repo does not replace:
 * Project coding matters in their respective repos
 * ladybug-tools.github.io for home page code and assets of wide utility and long duration such as logos and licenses
 
-### 2019-04-05
+## 2019-04-05
 
 my loss of focus
 
@@ -75,13 +77,13 @@ Antoine is wonderful and can a coder and a designer work together
 
 
 
-### 2019-01-30
+## 2019-01-30
 
 Add spider to Ladybug Tools Google Analytics
 
 
 
-### 2019-01-07
+## 2019-01-07
 
 My difficulty in understanding what we do
 
@@ -125,7 +127,7 @@ Radiance sample files
 
 
 
-### 2018-11-??
+## 2018-11-??
 
 What should we do to support Spider/keep Theo and Michal happy?
 Also, we should discuss:
@@ -177,7 +179,7 @@ and conjugating quaternions / https://en.wikipedia.org/wiki/Quaternion#Conjugati
 
 ## Change Log
 
-### 2018-06-09
+## 2018-06-09
 
 gbXML Viewer Sun Range Next Generation
 
@@ -199,20 +201,23 @@ We are currently tackling the first part. Good progress is being made. So here a
 
 
 
-### 2018-04-15
+###2018-04-15
 
 REP
+
 * code cleanup - delete dead code
 
 ISS
+
 * Duplicate adjacent spaces
 * Duplicate Coordinates
 * lots of little fixes
 
 HUD2
+
 * Add buttons
 
-### 2018-04-11
+## 2018-04-11
 
 Coming soon
 
@@ -249,13 +254,14 @@ He asked if I could create a Sun Path for this file
 Sun Path definition >> https://en.wikipedia.org/wiki/Sun_path
 Using Lagybug Toools / Spider / gbXML Viewer. I instantiated the Sun Path menu and from which I created this screen
 
-Just for fun I also called the Sun Sahadow Range menu and grabbed this screenshot of the model taken at 12 noon on the shortest day of the year and showing the shadows for ten position of the sun. BTW I noted that the latitude and longitude of the the model is situated in my bedroom in San Francisco.
+Just for fun I also called the Sun Shadow Range menu and grabbed this screenshot of the model taken at 12 noon on the shortest day of the year and showing the shadows for ten position of the sun. BTW I noted that the latitude and longitude of the the model is situated in my bedroom in San Francisco.
 
 And, well, it would be nice to be even more technical so here is a screen grab showing the Window Wall Ratios of facades facing the eight canonical solar positions
 
 
 
 ## 2018-03-13
+
 * Aceit, tania, allison, diana, kyle, cynthiam, mia,rob
 * David Naylor, Tim Child, David Ellis, TGD
 
