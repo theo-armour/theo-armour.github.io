@@ -1,5 +1,4 @@
-Theo Armour Developer Notes
-===
+# Theo Armour Developer Notes
 
 
 ## Midnight things
