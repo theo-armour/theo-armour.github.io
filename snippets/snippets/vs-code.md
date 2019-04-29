@@ -97,6 +97,9 @@ selection: Ctrl-K, Ctrl-F
 ## GitHub integration
 
 * https://code.visualstudio.com/docs/editor/versioncontrol
+* http://www.notyourdadsit.com/blog/2018/4/3/cheatsheet-setup-github-on-visual-studio-code
+* https://github.com/settings/keys
+* https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
 
 > ~/.ssh/id_rsa.pub
 > ssh-keygen -t rsa -b 4096 -C "Penguin Chromebook"
