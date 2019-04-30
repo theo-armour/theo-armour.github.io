@@ -110,6 +110,14 @@ You have a market bag, don’t you?
 
 ***
 
+English language press in Franc
+
+* https://www.fusac.fr/
+* https://www.thelocal.fr/
+* https://www.connexionfrance.com/
+
+***
+
 Paris via the New York Times
 
 * https://en.wikipedia.org/wiki/Catacombs_of_Paris
