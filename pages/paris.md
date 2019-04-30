@@ -110,7 +110,7 @@ You have a market bag, don’t you?
 
 ***
 
-English language press in Franc
+English language press in France
 
 * https://www.fusac.fr/
 * https://www.thelocal.fr/
