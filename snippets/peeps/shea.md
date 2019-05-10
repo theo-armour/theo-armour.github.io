@@ -1,7 +1,64 @@
 
+# Shea
+
+## Links
+
+
+### Ethics & Tech
+
+* https://standards.ieee.org/content/dam/ieee-standards/standards/web/documents/other/ead_v2.pdf
+
+a vision for prioritizing human well-being with autonomous and intelligent systems.
+
+* https://firstround.com/review/the-indispensable-document-for-the-modern-manager/
+
+user guide — similar to the kind that’d accompany a rice cooker or bassinet — but this one deconstructed how he operated optimally, when he might malfunction, and how others could use him to their greatest success.
+
+* https://medium.com/@skamille/i-hate-manager-readmes-20a0dd9a70d0
+
+* A rebuttal of the previous
+
+### Communications / management
+
+* https://medium.com/@inowland/using-6-page-and-2-page-documents-to-make-organizational-decisions-3216badde909
+
+Using 6 Page and 2 Page Documents To Make Organizational Decisions (Ian Nowland) -- 6 pages and 60m meeting, or 2 pages and 30m meeting, with agenda designed to get to "disagree and commit." (via Simon Willison)
+
+*
+
+
+
+### Arriving at Consensus
+
+#### Paxos
+
+* https://en.wikipedia.org/wiki/Paxos_(computer_science)
+* https://medium.com/coinmonks/paxos-made-simple-3b83c05aac37
+* https://blog.acolyer.org/2019/03/08/a-generalised-solution-to-distributed-consensus/
+* https://blog.acolyer.org/2015/03/03/the-part-time-parliament/
+
+
+
+### Shea
+
+* https://github.com/amagiproject/the-law
+* https://en.wikipedia.org/wiki/Friedrich_Hayek
+* https://en.wikipedia.org/wiki/Ludwig_von_Mises
+
+### Posts
+
+* https://medium.com/@shammahchancellor/money-economies-states-taxation-and-bitcoin-for-dummies-fb35ca0d1d43
+		* https://shablag.com/article/money-economies-states-taxation-and-bitcoin-for-dummies/
+
+* https://medium.com/@shammahchancellor/a973577e3ba0
+
+The gentrification of payments
+
+* http://longreads.tni.org/state-of-power-2019/digital-payment-gentrification/
+* https://roarmag.org/essays/the-gentrification-of-payments/
+
 
 ## Sharon
-
 
 ## babs
 

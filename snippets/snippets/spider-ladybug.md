@@ -1,6 +1,10 @@
 # Spider Ladybug
 
-## 2019-04-11
+
+## 2019-05-06 ~
+
+* https://s3.amazonaws.com/openstudio-builds/2.8.0/OpenStudio-2.8.0-rc5.55665635f0-Windows.exe
+* https://s3.amazonaws.com/openstudio-builds/2.8.0/
 
 
 
