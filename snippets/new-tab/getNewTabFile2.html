@@ -5,8 +5,8 @@
 <meta name = "viewport" content= "width=device-width, initial-scale=1" >
 <meta name = "description" content = "Theo browser new tab file" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
-<meta name = "date" content = "2019-03-19" >
-<title>Theo getNewTabFile2 R2.0</title>
+<meta name = "date" content = "2019-05-11" >
+<title>Theo getNewTabFile2 R0.2.1</title>
 <style>
 
 	body { border: 1px solid lightgrey; font: 12pt monospace; margin: 0 auto; width: 95%; }
@@ -46,7 +46,7 @@
 		<a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/new-tab/getNewTabFile2.html" target="_blank" title="Edit on GitHub" >ed</a>
 		<a href="vscode://file/d:/Google%20Drive/Theo/vscode-gdrive/AutoHotkey.ahk" >ahk</a>
 		<a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/new-tab/getNewTabFile2.html" >nt2</a>
-		<textarea></textarea>
+		<textarea style=width:15rem; ></textarea>
 	</div>
 
 
@@ -90,8 +90,8 @@
 
 	<table markdown>
 		<tr>
-			<td id=t3col1 >abc</td>
-			<td id=t3col2 >def</td>
+			<td id=t3col1 ></td>
+			<td id=t3col2 ></td>
 			<td id=t3col3 >
 				thesaurus<br> <input onchange=window.open(`https://www.thesaurus.com/browse/${this.value}`,`_blank`) ><br>
 
@@ -100,11 +100,11 @@
 				wiki<br> <input onchange=window.open(`https://en.wikipedia.org/wiki/${this.value}`,`_blank`) ><br>
 
 			</td>
-			<td id=t3col4 >jkl</td>
+			<td id=t3col4 ></td>
 			<td id=t3col5 ></td>
-			<td id=t3col6 >pqr</td>
-			<td id=t3col7 >pqr</td>
-			<td id=t3col8 >pqr</td>
+			<td id=t3col6 ></td>
+			<td id=t3col7 ></td>
+			<td id=t3col8 ></td>
 		</tr>
 	</table>
 
@@ -153,18 +153,19 @@ markdownColumn2 =
 markdownColumn3 =
 `[:male_detective:]( https://www.evernote.com/client/web#?an=true&fs=true&n=dd2d3fe5-8936-483d-ac9b-a4c75eefecfc&s=s1& "evernote dashboard" )
 [groups.io](https://groups.io)
-[medium](https://medium.com)
+[slack](https://slack.com) [lb]( https://ladybug-analysis.slack.com )
 [nextdoor](https://nextdoor.com)
+.
+[medium](https://medium.com)
 [twitter](https://twitter.com)
 [facebook](https://facebook.com)
-[slack](https://slack.com) [lb]( https://ladybug-analysis.slack.com )
-[wikiped](https://en.wikipedia.org/wiki/Main_Page) [ta](https://en.wikipedia.org/wiki/User:TheoA)
+.
+[pandora](http://pandora.com)
+[spotify]( https://spotify.com) [*]( https://open.spotify.com/browse/featured )
 [flickr](https://flickr.com)
 .
 [evernote](https://www.evernote.com/Home.action)
-[stackdit]( https://stackedit.io/app# )
-[stackoflow](http://stackoverflow.com/)
-[pandora](http://pandora.com)
+
 `;
 
 
@@ -179,7 +180,7 @@ markdownColumn4 =
 [spdr react]( https://ladybug.tools/spider-react/ )
 .
 [pushMe-pullU]( https://pushme-pullyou.github.io/ )
-[tootoo13]( https://pushme-pullyou.github.io/tootoo13/tootoo13.html )
+[tootoo14]( https://pushme-pullyou.github.io/tootoo14/ )
 .
 [three.js](http://threejs.org)
 [• docs](https://threejs.org/docs/)
@@ -197,14 +198,12 @@ markdownColumn5 =
 [gh](https://github.com/ladybug-tools/spider-core)
 [gh](https://github.com/ladybug-tools/spider-react)
 .
-.
-[tt]( https://github.com/pushme-pullyou/tootoo13 )
+[pp]( https://github.com/pushme-pullyou/ )
+[tt]( https://github.com/pushme-pullyou/tootoo14 )
 .
 [gh](https://github.com/mrdoob/three.js)
 [gh](https://github.com/mrdoob/three.js/tree/dev/docs)
 [gh](https://github.com/mrdoob/three.js/tree/dev/examples)
-.
-
 `;
 
 
@@ -294,6 +293,15 @@ markdownT3Column2 =
 [g sites/theo-a]( https://sites.google.com/view/theo-armour/home )
 `;
 
+
+markdownT3Column3 =
+`
+[wikiped](https://en.wikipedia.org/wiki/Main_Page) [ta](https://en.wikipedia.org/wiki/User:TheoA)
+[stackdit]( https://stackedit.io/app# )
+[stackoflow](http://stackoverflow.com/)
+
+`;
+
 markdownT3Column4 =
 `
 [ggta.g.io]( https://groups.io/g/ggta )
@@ -309,8 +317,8 @@ markdownT3Column4 =
 markdownT3Column5 =
 `
 [charmor]( https://github.com/charmor/charmor.github.io )
-
-<a href="vscode://file/D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/projects/articles-to-write-video.md" >art 2 write</a>
+[ecumenopolis]( https://github.com/ecumenopolis/suggestions/blob/master/content/_index.md )
+<a href="vscode://file/D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/projects/articles-to-write-video.md" >artics2write</a>
 `;
 
 
@@ -339,6 +347,7 @@ function init() {
 
 	t3col1.innerHTML = converter.makeHtml( markdownT3Column1 );
 	t3col2.innerHTML = converter.makeHtml( markdownT3Column2 );
+	t3col3.innerHTML += converter.makeHtml( markdownT3Column3 );
 	t3col4.innerHTML = converter.makeHtml( markdownT3Column4 );
 	t3col5.innerHTML = converter.makeHtml( markdownT3Column5 );
 
