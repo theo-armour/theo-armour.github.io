@@ -1,34 +1,75 @@
 
 
+# CSS
 
-		var css = document.head.appendChild( document.createElement('style') );
-		css.innerHTML ='body { font: 600 12pt monospace; margin: 0; overflow: hidden; }';
-
-
-		title = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
+	var css = document.head.appendChild( document.createElement('style') );
+	css.innerHTML ='body { font: 600 12pt monospace; margin: 0; overflow: hidden; }';
 
 
-		<div>
-
-			<details>
-
-			<summary>About</summary>
-
-			<p>
-				Copyright &copy; <script> document.write( ( new Date() ).getFullYear() ); </script> Ladybug Tools authors.
-				<a href=http://github.com/ladybug-tools/spider/ >MIT license</a>.
-			</p>
-
-			<p>
-				Click the 'i in a circle' info icon for more <a href=#README.md title="Click here for help and information" >help</a>.
-			</p>
+	title = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
 
 
-			</details>
+## Useful things / LOOPs
 
-		</div>
+		for ( let i = 0; i < 2; i++ ) {
+
+			for ( let j = 0; j < 2; j++ ) {
+
+			}
+
+		}
+
+		for ( var i = 0; i < 2; i++ ) {
+			for ( var j = 0; j < 2; j++ ) {
+				for ( var k = 0; k < 2; k++ ) {
+
+				}
+			}
+		}
 
 
+		for ( let i = 0; i < iLength; i++ ) {
+			for ( var j = 0; j < jLength; j++ ) {
+
+			}
+		}
+
+		for ( var x = 0; x < xLen; x++ ) {
+			for ( var y = 0; y < yLen; y++ ) {
+
+			}
+		}
+
+
+
+# details
+
+	<div>
+
+		<details>
+
+		<summary>About</summary>
+
+		<p>
+			Copyright &copy; <script> document.write( ( new Date() ).getFullYear() ); </script> Ladybug Tools authors.
+			<a href=http://github.com/ladybug-tools/spider/ >MIT license</a>.
+		</p>
+
+		<p>
+			Click the 'i in a circle' info icon for more <a href=#README.md title="Click here for help and information" >help</a>.
+		</p>
+
+
+		</details>
+
+	</div>
+
+## div draggable
+
+// jaanga.github.io\cookbook-html\examples\ui-ue\div-draggable2\div-draggable2.html
+
+
+// jaanga.github.io/cookbook-html/examples/ui-ue/div-draggable2/div-draggable-snippet-test.html#
 	var menu, info;
 
 	function addCSS() {
@@ -128,6 +169,29 @@
 		event.target.style.left = ( event.clientX - offsetX ) + 'px';
 		event.target.style.top = ( event.clientY - offsetY ) + 'px';
 	}
+
+
+
+### GRADIENT RANDOM
+
+	function setRandomGradient() {
+
+		cssBackround = document.body.appendChild( document.createElement('style') );
+
+		var col1 = "#" + Math.random().toString(16).slice(2, 8);
+		var col2 = "#" + Math.random().toString(16).slice(2, 8);
+		var col3 = "#" + Math.random().toString(16).slice(2, 8);
+		var X = ( Math.random() * window.innerWidth ).toFixed(0);
+		var Y = ( Math.random() * window.innerHeight ).toFixed(0);
+		var center =  20 + ( Math.random() * 60 ).toFixed(0);
+
+		cssBackround.innerText = 'body { ' +
+			'background: -webkit-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
+			'background: -moz-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
+			'background: radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); }' +
+		'';
+
+	};
 
 
 

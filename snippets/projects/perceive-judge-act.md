@@ -1,6 +1,33 @@
 
 # perceive-judge-act
 
+## The Rules of Life
+
+* Your attitude is your life
+* Maximize your options
+* Don't let the seed stop you from enjoying the watermelon
+* Be nice
+
+Sources
+
+* https://books.google.com/books?id=8awkqcL91uMC
+* https://wiredcraft.com/blog/robin-williams-four-basic-design-principles-for-non-designers/
+* https://8-images.blogspot.com/2014/02/3-rules-of-life-your-attitude-is-your.html
+
+
+### More rules
+
+* http://albaab.free.fr/The%20Rules%20of%20Life.pdf
+* http://albaab.free.fr/The%20Rules%20of%20Life.pdf
+* https://en.wikipedia.org/wiki/12_Rules_for_Life
+* https://www.betterhelp.com/advice/how-to/how-to-make-the-7-rules-of-life-work-for-you/
+* https://medium.com/the-mission/6-golden-rules-for-living-a-good-life-now-c639ba15b8e
+* https://www.success.com/13-life-rules-to-keep-you-motivated/
+* https://www.inc.com/jessica-stillman/the-12-life-rules-everyone-should-make-for-themselves.html
+
+
+## Critical Thinking
+
 https://en.wikipedia.org/wiki/Critical_thinking
 
 Edward M. Glaser proposed that the ability to think critically involves three elements:[16]
@@ -8,6 +35,9 @@ Edward M. Glaser proposed that the ability to think critically involves three el
 * An attitude of being disposed to consider in a thoughtful way the problems and subjects that come within the range of one's experiences
 * Knowledge of the methods of logical inquiry and reasoning
 * Some skill in applying those methods.
+
+
+
 
 
 ## Apologies

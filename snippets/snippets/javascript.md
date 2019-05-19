@@ -1,6 +1,6 @@
-.map
-		const div = document.body.appendChild( document.createElement( 'div' ) );
-		div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px; }
+
+	const div = document.body.appendChild( document.createElement( 'div' ) );
+	div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px;'
 
 
 # requestIdleCallback
@@ -10,42 +10,43 @@ https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_so
 
 
 
-# Easily create an HTML editor with DesignMode and ContentEditable document.body.style.color
+## contentEditable
 
-https://hackernoon.com/easily-create-an-html-editor-with-designmode-and-contenteditable-7ed1c465d39b#.hh7gdokty
+* Easily create an HTML editor with DesignMode and ContentEditable document.body.style.color
+* https://hackernoon.com/easily-create-an-html-editor-with-designmode-and-contenteditable-7ed1c465d39b#.hh7gdokty
 
 very good:
-https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.g3fu2ql70
+* https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.g3fu2ql70
 
-document.designMode = true for the entire document
-element.contentEditable = 'true for just one element.
+	document.designMode = true for the entire document
+	element.contentEditable = 'true for just one element.
 
-getEventListeners( menu )
-monitorEvents($('#menu'))
-inspect( menu )
-dir( menu )
+	getEventListeners( menu )
+	monitorEvents($('#menu'))
+	inspect( menu )
+	dir( menu )
 
 
-### Console
+## Console
 
-console.table( scene )
+	console.table( scene )
 
-console.count(); // default: 1
-console.count(); // default: 2
-console.count(); // default: 3
-console.countReset();
-console.count();
+	console.count(); // default: 1
+	console.count(); // default: 2
+	console.count(); // default: 3
+	console.countReset();
+	console.count();
 
-console.time('myTime');
-console.timeLog();
-console.timeEnd('myTime');
+	console.time('myTime');
+	console.timeLog();
+	console.timeEnd('myTime');
 
-console.trace("Logging the way down here!");
+	console.trace("Logging the way down here!");
 
-console.assert(true, "This won't be logged!");
-console.assert(false, "This will be logged!");
+	console.assert(true, "This won't be logged!");
+	console.assert(false, "This will be logged!");
 
-clear()
+	clear()
 
 
 ## ES6 / ECMA 6
@@ -68,8 +69,8 @@ src=http://rawgit.com/mrdoob/three.js/dev/build/three.min.jsf
 
 ### Scroll into View
 
-		msg1.innerHTML = txt + '<p id=endof ></p>' ;
-		endof.scrollIntoView();
+	msg1.innerHTML = txt + '<p id=endof ></p>' ;
+	endof.scrollIntoView();
 
 
 ### CALLBACKS
@@ -80,37 +81,6 @@ use this inside a function when creating global variables...
 
 just use 'this' wherever possible
 
-
-## Useful things / LOOPs
-
-		for ( let i = 0; i < 2; i++ ) {
-
-			for ( let j = 0; j < 2; j++ ) {
-
-			}
-
-		}
-
-		for ( var i = 0; i < 2; i++ ) {
-			for ( var j = 0; j < 2; j++ ) {
-				for ( var k = 0; k < 2; k++ ) {
-
-				}
-			}
-		}
-
-
-		for ( let i = 0; i < iLength; i++ ) {
-			for ( var j = 0; j < jLength; j++ ) {
-
-			}
-		}
-
-		for ( var x = 0; x < xLen; x++ ) {
-			for ( var y = 0; y < yLen; y++ ) {
-
-			}
-		}
 
 
 
@@ -276,168 +246,6 @@ console.log('waiting...');
 		}
 	}
 
-
-
-## ARRAYS
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-// http://www.w3schools.com/jsref/jsref_obj_array.asp
-
-Array.from( An array-like or iterable object to convert to an array )
-
-	AA.doSomethingWithObjOrArrayOfObj = function( obj ) {
-
-		const obj = Array.isArray( obj ) ? obj : [ obj ];
-
-
-- add them all...
-
-a.concat(item[, itemN]) Returns a new array with the items added on to it.
-a.find( function ) http://www.w3schools.com/jsref/jsref_find.asp
-a.join( sep )
-a.map( function ) apply function to all elements
-a.pop() Removes and returns the last item.
-a.push(item[, itemN]) Push adds one or more items to the end.
-a.reverse()
-a.shift()
-a.slice( start, end) Returns a sub-array. Negative OK array.slice( -3 ) gets an array of last 3 elements
-
-a.sort( [cmpfn] ) Takes an optional comparison function.
-a.splice(start, delcount[ , itemN] ) Lets you modify an array by deleting a section and replacing it with more items.
-
-a.toString()
-a.toLocaleString()
-a.unshift([item]) Prepends items to the start of the array.
-
-a.next()
-
-
-return (foo || []).length;
-
-
-
-### Array Random Values
-
-	arr = Array.from( {length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
-
-
-### ARRAY Reduce
-
-	reduce = arr.reduce( ( acc, value, index ) => {
-
-		if ( value === 8 ) { acc.push( index ); }
-
-		return acc;
-
-	}, [] );
-
-
-	ISSTI.buttonsSurfaceType = GBX.surfaceTypes.reduce(
-		( arr, item ) => arr + `<button onclick=ISSTI.setSurfaceType("${item}"); >${ item }</button><br>`,
-		''
-	);
-
-### ARRAY Split to Float
-
-		elevations = data.split( ',' ).map( function( item ) { return parseFloat( item ); } );
-		txtline = lines[ i ].split( ',' ).map( parseFloat );
-
-		waypoints = xhr.responseText.split( '\n' ).map( function( point ) { return point.split( ',' ).map( parseFloat ); } );
-
-
-
-### ARRAY Min/Max
-
-		var max_of_array = Math.max.apply( Math, array);
-		var min_of_array = Math.min.apply( Math, array);
-
-// http://stackoverflow.com/questions/1669190/javascript-min-max-array-values
-
-			min = arrayMin( elevations );
-			max = arrayMax( elevations );
-
-	function arrayMin( arr ) {
-
-		var len = arr.length, min = Infinity;
-
-		while ( len-- ) {
-
-			if ( arr[ len ] < min) { min = arr[ len ]; }
-
-		}
-
-		return min;
-
-	}
-
-	function arrayMax( arr ) {
-
-		var len = arr.length, max = -Infinity;
-
-		while ( len-- ) {
-
-			if (arr[len] > max) { max = arr[len]; }
-
-		}
-
-		return max;
-
-	}
-
-
-
-
-### Array Multi Dim
-
-	var a = [];
-	for (i = 0; i < 4; i++) {
-	  a[i] = [];
-	  for (j = 0; j < 4; j++) {
-		a[i][j] = "[" + i + "," + j + "]";
-	  }
-	}
-	console.log( a );
-
-	for ( var i = 0, item; item = a[i++]; ) { << not
-		// Do something with item
-	}
-
-see cookbook/array/array-pop-while-switch
-
-
-### Array random
-
-		get_random = function ( list ) {
-
-			return list[ Math.floor( ( Math.random() * list.length ) ) ];
-
-		}
-
-		get_random( [ 2, 3, 5 ] )
-
-		var list = [1,2,3];
-
-		console.log( list.sort( function() { Math.random() - 0.5 } ) ); // [2,1,3]
-
-
-### ARRAY Sort
-
-* https://www.w3schools.com/jsref/jsref_sort.asp
-* https://www.w3schools.com/jsref/jsref_sort.asp
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-
-
-### ARRAY Duplicates
-
-* https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
-
-arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
-
-### Array unique
-
-const array = [1, 1, 2, 3, 5, 5, 1]
-const uniqueArray = [...new Set(array)];
-console.log(uniqueArray); // Result: [1, 2, 3, 5]
 
 
 
@@ -697,6 +505,7 @@ var parser = new DOMParser();
 doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 
+
 ## Escape / encodeURI()
 
 	var uri = 'https://mozilla.org/?x=шеллы';
@@ -785,7 +594,8 @@ function fetchTextSimple( url, target ){
 
 
 ##  FILE READER filereader Input Type File Open
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 		'<h3>file reader</h3>' +
 		'<p><input type=file id=inpFile onchange=openFile(this); accept = '.rad, .res, .pts' multiple ></p>' +
@@ -916,28 +726,6 @@ selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 
 parseInt( string, 10 ) << include the radix
 
-
-
-### GRADIENT RANDOM
-
-	function setRandomGradient() {
-
-		cssBackround = document.body.appendChild( document.createElement('style') );
-
-		var col1 = "#" + Math.random().toString(16).slice(2, 8);
-		var col2 = "#" + Math.random().toString(16).slice(2, 8);
-		var col3 = "#" + Math.random().toString(16).slice(2, 8);
-		var X = ( Math.random() * window.innerWidth ).toFixed(0);
-		var Y = ( Math.random() * window.innerHeight ).toFixed(0);
-		var center =  20 + ( Math.random() * 60 ).toFixed(0);
-
-		cssBackround.innerText = 'body { ' +
-			'background: -webkit-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
-			'background: -moz-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
-			'background: radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); }' +
-		'';
-
-	};
 
 
 /

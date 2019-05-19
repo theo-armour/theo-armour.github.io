@@ -1,4 +1,16 @@
 
+
+Yesterday I invited two of my friends who work the night shift at Safeway for breakfast at Fish and Farm with
+
+We met after they came off their shift at 6am. We talked for two and half hours. We finished bottle of Veuve Clicquot.
+
+Our lives in the Gateway would be a lot more difficult, less fun without a supermarket such as Safeway nearby. It was a pleasure to give thanks in a small way to people who serve to fulfill our daily needs yet work in a frequently fraught and stressful environment.
+
+***
+
+Bill Sario ~ 80 years old April 20
+
+
 # Bab Lowe
 
 
