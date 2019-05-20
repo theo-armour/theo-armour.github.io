@@ -485,12 +485,14 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
 
 
 ## document.querySelectorAll();
+
 * https://www.w3schools.com/jsref/met_document_queryselectorall.asp
 
 
 var x = document.querySelectorAll(".example");
 
 var x = document.querySelectorAll("button");
+
 
 ## DOMParser
 https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
@@ -756,7 +758,7 @@ parseInt( string, 10 ) << include the radix
 
 JSON.stringify
 
-console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, '\t'));
+console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, '\t' ) );
 // Result:
 // '{
 //     "alpha": A,
