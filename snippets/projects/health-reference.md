@@ -1,6 +1,11 @@
 
 
 
+Clarke Health Care Products
+www.clarkehealthcare.com
+
+Under the Products drop-down menu on this site you will see the Dolomite brand.  Under the Find a Rep drop-down menu you will see four sales representatives who represent Northern California (http://clarkehealthcare.com/find-a-rep/california-north/).  Of these four, the VA people deal with either Debra Gruttadauro or Jeff Hopson.
+
 
 UCSF General Surgery ~ 415 353 2161 ~ Dianna
 * https://general.surgery.ucsf.edu/

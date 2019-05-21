@@ -3,6 +3,10 @@
 
 ## Links
 
+Social capital broadly refers to those factors of effectively functioning social groups that include such things as interpersonal relationships, a shared sense of identity, a shared understanding, shared norms, shared values, trust, cooperation, and reciprocity. However, the many views of this complex subject make a single definition difficult.
+
+In economics, a public good is a good that is both non-excludable and non-rivalrous in that individuals cannot be excluded from use or could be enjoyed without paying for it, and where use by one individual does not reduce availability to others or the goods can be effectively consumed simultaneously by more than one person.[1] This is in contrast to a common good which is non-excludable but is rivalrous to a certain degree.
+
 
 ### Ethics & Tech
 
