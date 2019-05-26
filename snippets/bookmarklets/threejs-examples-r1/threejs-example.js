@@ -7,7 +7,7 @@
 	gal.repo = '/three.js';
 	gal.pathRepo = 'examples/';
 
-	var iconInfo = '<img src="https://status.github.com/images/invertocat.png" height=14 >';
+	var iconInfo = '<img src="https://pushme-pullyou.github.io/github-mark-64.png" height=14 >';
 
 	gal.urlGitHubApiContents = 'https://api.github.com/repos/' + gal.user + gal.repo + '/contents/' + gal.pathRepo;
 
@@ -29,7 +29,7 @@
 
 			const fileName = encodeURI( file.name );
 
-			txt += 
+			txt +=
 
 			'<div style=margin-bottom:8px; >' +
 
@@ -82,7 +82,7 @@ console.log( 'win', win );
 		if ( !divTooToo ) {
 
 			divTooToo = document.body.appendChild( document.createElement( 'div' ) );
-			divTooToo.style.cssText = 
+			divTooToo.style.cssText =
 				'background-color: white; border: 1px solid red; height: 90%; max-width: 350px; opacity: 0.85; ' +
 				'overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
 

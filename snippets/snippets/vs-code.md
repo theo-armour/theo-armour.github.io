@@ -1,7 +1,6 @@
-
-
 # VS Code
 
+* Keyboard shortcuts: Ctrl+K, Ctrl+s
 * https://code.visualstudio.com/
 * https://en.wikipedia.org/wiki/Visual_Studio_Code
 * https://twitter.com/hashtag/vscode?lang=en
@@ -113,6 +112,7 @@ Ctrl-space
 How to turn off quick suggestions?
 
 * edit settings.json
+
 
 ## Keyboard shortcuts
 

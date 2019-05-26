@@ -5,7 +5,7 @@
 	var repo = '/three.js';
 	var pathRepo = 'docs/api/';
 
-	var iconInfo = '<img src="https://status.github.com/images/invertocat.png" height=14 >';
+	var iconInfo = '<img src="https://pushme-pullyou.github.io/github-mark-64.png" height=14 >';
 
 	var urlGitHubApiContents = 'https://api.github.com/repos/' + user + repo + '/contents/' + pathRepo;
 

@@ -4,6 +4,30 @@
 Clarke Health Care Products
 www.clarkehealthcare.com
 
+Debra Gruttadauro
+831-224-2111
+dfg@adauro.com
+
+I am a happy owner of a Dolomite Alpha Advanced acquired several years ago via mail order.
+
+I have walked many miles with it and so the wheels are beginning to have issues.
+
+Do you know of anybody person or organization in the San Francisco Bay area that could service the wheels?
+
+Another possibility would be to order new wheels from you.
+
+In any case, it would be great to hear about yours suggestions for maintaining my "walking buddy".
+
+Theo
+
+***
+
+Theo Armour
+t.armour@gmail.com
+415 828 0000
+
+
+
 Under the Products drop-down menu on this site you will see the Dolomite brand.  Under the Find a Rep drop-down menu you will see four sales representatives who represent Northern California (http://clarkehealthcare.com/find-a-rep/california-north/).  Of these four, the VA people deal with either Debra Gruttadauro or Jeff Hopson.
 
 

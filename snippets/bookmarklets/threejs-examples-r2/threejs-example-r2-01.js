@@ -5,7 +5,7 @@
 	var repo = '/three.js';
 	var pathRepo = 'examples/';
 
-	var iconInfo = '<img src="https://status.github.com/images/invertocat.png" height=14 >';
+	var iconInfo = '<img src="https://pushme-pullyou.github.io/github-mark-64.png" height=14 >';
 
 	var urlGitHubApiContents = 'https://api.github.com/repos/' + user + repo + '/contents/' + pathRepo;
 
@@ -22,13 +22,13 @@
 		if ( !divTooToo ) {
 
 			divTooToo = document.body.appendChild( document.createElement( 'div' ) );
-			divTooToo.style.cssText = 
+			divTooToo.style.cssText =
 				'background-color: white; border: 1px solid red; max-height: 90%; max-width: 350px; opacity: 0.85; ' +
 				'overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
 
 		}
 
-		divTooToo.innerHTML = 
+		divTooToo.innerHTML =
 			'<h3>Three.js Examples</h3>' +
 			'<p><input id=inpGetFiles onkeyup=getFiles(); ></p>' +
 			'<div id=divSubMenu ></div>' +
@@ -50,7 +50,7 @@
 			file = files[ i ];
 console.log( '', file);
 
-			if ( !file.includes( txt ) ) { continue; } 
+			if ( !file.includes( txt ) ) { continue; }
 
 			page +=
 				'<div>' +
@@ -100,7 +100,7 @@ console.log( '', file);
 //		info.innerHTML = files.length + ' files';
 		divTooToo.innerHTML += text;
 
-		
+
 //		scope.ifrMenuSub.style.height = ( divMenu.scrollHeight + 10 ) + 'px';
 //		parent.document.body.style.overflow = 'hidden';
 
@@ -121,7 +121,7 @@ console.log( '', file);
 
 			const fileName = encodeURI( file.name );
 
-			txt += 
+			txt +=
 
 			'<div style=margin-bottom:8px; >' +
 

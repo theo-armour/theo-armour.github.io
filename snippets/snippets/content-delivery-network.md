@@ -19,11 +19,16 @@ https://rawgit.com/
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.min.js
 
 multiple
+
 * https://cdn.jsdelivr.net/combine/gh/mrdoob/three.js@r100/build/three.min.js,gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js
 
 replace
 https://cdn.rawgit.com/mrdoob/three.js/r93/build/three.min.js
 https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
+
+
+https://cdn.jsdelivr.net/gh/mrdoob/three.js@r93/examples/js/controls/OrbitControls.js
+https://cdn.jsdelivr.net/gh/mrdoob/three.js@r93/examples/js/controls/OrbitControls.js
 
 
 <script src = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js" ></script>
@@ -39,6 +44,9 @@ cdn.jsdelivr.net/gh/mrdoob/three.js@r100/
 https://cdn.rawgit.com/showdownjs/showdown/1.8.5/dist/showdown.min.js
 https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js
 https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js
+
+
+
 
 ### CDNJS
 * https://cdnjs.com/

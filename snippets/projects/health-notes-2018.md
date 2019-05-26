@@ -133,16 +133,6 @@ I look forward to hearing your thoughts on my observations. And, given that I am
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## 2018-11-26
 
 
@@ -197,9 +187,3 @@ Given the above, could you kindly help me with the responding to following quest
 	* My family is planning a Christmas holiday in Utah, how wary of travel should I be if I am in my current state?
 	* Would any procedures be likely to occur before the holidays?
 	* If so, would recovery be likely to affect the plans?
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTIyMzY2NTksLTYzNDgyODY1OSwtOD
-c5NTIzMDYyLC03NzEyNzAwMSwxNjk3NTQwODczLC01MzUzNDIz
-NDUsLTk3NDUzMTkwOCwtNDk5MDcwMDY3LC0yMDgyMTU2OTc1XX
-0=
--->
