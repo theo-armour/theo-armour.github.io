@@ -1,6 +1,36 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
+## Vanilla JavaScript
 
+* Awesome list of vanilla JavaScript projects
+* Libraries that encourage vanilla JavaScript - like Three.js
+* Books and courses that build in vanilla.js
+* CDNs you can use
+
+* Consulting
+* Teaching
+* Code reviews
+* Setting up templates/prototypes
+* Refactoring
+* Stackoverflow / debugginh
+
+## Shea
+
+* Road map
+	* What is envisaged scope of this work
+	* Timeframe
+	* Perticipants
+
+* Collaboration guidelines
+* Be the boss - not the milkman
+* Be out in the open
+	* The good stuff is all in privates / only the trolling and flaming is public
+
+Me
+* Currently '[blackboxing]( https://en.wikipedia.org/wiki/Blackboxing )' the technology
+	* Assuming insert something, get back public good + money
+	* Could dive in, but why? Maybe more useful to the overall cause as a naive
+* My role probably in the 'softer' bits
 
 ### Chromium OS
 
