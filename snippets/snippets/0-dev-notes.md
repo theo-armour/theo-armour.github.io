@@ -2,24 +2,81 @@
 
 ## Vanilla JavaScript
 
-* Awesome list of vanilla JavaScript projects
-* Libraries that encourage vanilla JavaScript - like Three.js
-* Books and courses that build in vanilla.js
-* CDNs you can use
+Chris
 
-* Consulting
-* Teaching
-* Code reviews
-* Setting up templates/prototypes
-* Refactoring
-* Stackoverflow / debugginh
+I am enjoying reading your thoughts via your frequent emails and tweets.  I plan to read even more as I have recently acquired a license to your "Pocket Guides: The Complete Set".
+
+We share a very fun common interest: we heart vanilla JavaScript.
+
+My question is: what can I do to help Chris in establishing the _epistome_ or common understanding that vanilla JavaScript may be an awesome way to proceed for certain projects and a delightful corpus of endeavors to explore always.
+
+Some missions and vision that have come to mind include:
+
+* Create an '[awesome list]( https://github.com/topics/awesome-list )' of vanilla JavaScript projects with:
+	* Curated libraries that encourage vanilla JavaScript - like Three.js
+	* Links to books and courses that build in vanilla.js
+	* Information on CDNs and other resources you may use to encourage usage
+* Build up a GitHub ( or wherever ) organization that promotes:
+	* Consulting
+	* Teaching
+	* Code reviews
+	* Setting up templates/prototypes
+	* Refactoring
+	* Stack Overflow / debugging support
+
+But, from what I can see, you have already put much thought into both the issues and opportunities of vanilla JavaScript. So what can I do to help you share this wonderful of creating code?
+
+Feel free to ask for efforts, know more or just banter for a bit. I am here to listen and act.
+
+Theo
+
 
 ## Shea
 
+I am very much in favor of a [release early, release often]( https://en.wikipedia.org/wiki/Release_early,_release_often ) frame of mind. So even though I don't think the flow of ideas in the following text is as smooth, cohesive and understandable as I would like, here it is:
+
+***
+
+
+I am very much in favor of a [release early, release often]( https://en.wikipedia.org/wiki/Release_early,_release_often ) way of doing things. So even though I don't feel the flow of ideas in the following text is as smooth, cohesive and understandable as I would like, here goes:
+
+***
+
+The 'suggestions' repository lacks a [README.md]( https://en.wikipedia.org/wiki/README ) file.
+
+A readme file is an introduction to a project. Some will even say that a readme may [help a project come alive]( http://tom.preston-werner.com/2010/08/23/readme-driven-development.html ).
+
+In any case there are typical structures for read me files to explain how to install the code and whatever. Unlike the typical GitHub project, this organization has a global, social and economic mission that goes well beyond a normal program or app. It makes sense that the readme for this repository skips some of the download and install jargon of most readme files and jumps into delineating the mission and vision, the features and benefits of this project.
+
+It is also worth considering that this project is kind of like a startup. ( Fingers crossed that we do not need VC money and that we can bootstrap this affair. ) And that means that we cannot succeed with random, higgledy-piggledy efforts. On the contrary, because we are using our weekend and evening time, we should be highly organized with our focus and duties. We will at least need some aspects of the following:
+
+* Elevator pitch
+* Executive summary
+* Gory details
+	* People
+	* Products
+	* Marketing
+	* Strategies
+	* Financials
+
+Even if this is a new endeavor we can build upon the past and [stand on the shoulders of giants]( https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants ). We can and should follow the guidelines for creating the pitch deck of a startup or the business plan of a startup.
+
+There is a vast array of business plan birthing tools available. Our first job is to agree which set of tools, which set of shoulders of which giants we wish stand upon.
+
+Please do reply with links to any startup documentation strategies that you admire and why we should follow them. Let's program the program to success.
+
+* https://piktochart.com/blog/startup-pitch-decks-what-you-can-learn/
+* https://en.wikipedia.org/wiki/Business_plan
+* https://www.sba.gov/course/how-write-business-plan/#course-content
+
+
+
+Start with a business plan
+
 * Road map
 	* What is envisaged scope of this work
-	* Timeframe
-	* Perticipants
+	* Time frame
+	* Participants
 
 * Collaboration guidelines
 * Be the boss - not the milkman

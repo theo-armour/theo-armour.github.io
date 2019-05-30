@@ -4,6 +4,7 @@ talk talk
 
 ### taskettes
 
+"The fundamental principle of science, the definition almost, is this: the sole test of the validity of any idea is experiment." -- Richard P. Feynman
 
 ### Juliette
 * add names
@@ -13,7 +14,7 @@ tania to juilette
 
 ### Alix
 alix <> andranik => portrait of a countess
-closet space 
+closet space
 outdoor camera
 
 frame glue
@@ -43,7 +44,7 @@ Patrick > public stor
 * Dusan
 * Juliette [x]
 * Three.js ~ https://discourse.threejs.org/t/three-js-r100-coming-soon-time-to-celebrate/5241
-* ace-it 
+* ace-it
 * WSD . vanessa / Lent
 * theo-peeps [x][x]
 * Englehardts
