@@ -125,3 +125,14 @@ Paris via the New York Times
 * https://www.nytimes.com/times-journeys/travel-experience/paris-the-tastes-of-the-left-bank/
 * https://www.nytimes.com/2018/04/24/travel/paris-walking-tips.html
 * https://www.nytimes.com/2018/10/22/travel/paris-on-foot.html
+
+***
+
+And more...
+
+* [The Bistro and the Promenade]( https://medium.com/@umairh/the-bistro-and-the-promenade-5a2c33393f5b )
+	* What We Can Learn from the French Way of Life]
+* https://www.thelocal.fr/20190521/what-you-need-to-know-about-the-french-taboos-you-should-never-break
+	* What Kyle nose
+
+	

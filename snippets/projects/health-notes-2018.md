@@ -187,3 +187,26 @@ Given the above, could you kindly help me with the responding to following quest
 	* My family is planning a Christmas holiday in Utah, how wary of travel should I be if I am in my current state?
 	* Would any procedures be likely to occur before the holidays?
 	* If so, would recovery be likely to affect the plans?
+
+
+### 2018-01-26
+
+Left hip generating significant pain
+
+Site – Left hip/femur joint
+Onset – Sudden onset about January 8th - probably while dancing to 19th Nervous Breakdown. Pain subsequently becoming progressively more intense
+Character – Aching, throbbing, covering a volume not just a point
+Radiation – Extends to lower leg calf and shin
+Associations – Tingling of left ankle/foot
+Time course –  Moderates when I sit, Increase when I stand or lie down. Mild in morning increase during the course of the day
+Exacerbating/Relieving factors – When in bed, lying on left side is position of least pain
+Severity – On the NIH 0-10 scale, the pain varies from 4 to 7 mostly 5 with periods of 7 being less than a minute. Disrupts sleep significantly.
+
+Right hip was replaced in 2015 - but had very different symptoms - stabbing pains only when in motion.
+
+I have taken, Aspirin, Ibuprofen and Acetaminophen. None seem to be of great help, but if you think one might be better please let me know.
+
+Kindly suggest a course of action.
+
+Theo
+

@@ -1,6 +1,19 @@
+# JavaScript
 
+## Vanilla JavaScript
 
-# CSS
+* https://github.com/topics/javascript
+* http://vanilla-js.com/
+* https://snipcart.com/blog/learn-vanilla-javascript-before-using-js-frameworks
+	* https://github.com/snipcart/learn-vanilla-js
+* https://plainjs.com/
+* https://30secondsofcode.org/
+
+Forums
+
+* https://www.freecodecamp.org/forum/c/javascript
+
+## CSS
 
 	var css = document.head.appendChild( document.createElement('style') );
 	css.innerHTML ='body { font: 600 12pt monospace; margin: 0; overflow: hidden; }';
