@@ -1,10 +1,29 @@
-
 # Activities
 
-Things to do of an evening
-* in 18 minute theodoros
+During the day
 
-The items
+Six hours of programming
+
+Things to do of an evening -  in 18 minute theodoros
+
+* Write an email to somebody
+
+
+## morning things
+
+paint nails
+hairy bits ear nose
+5 minute shampoo
+house cleaning
+left foot
+right foot
+wash truss
+update messages
+eating chart
+
+
+## The items
+
 * Paperwork
 * Email
 * Bookmarks
