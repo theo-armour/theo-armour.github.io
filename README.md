@@ -8,7 +8,7 @@ value="You are now in a GitHub web page view - Click this button to view this re
 
 ## concept
 
-This is the tenth significant update to theo-armour.github.io. None of them have been much good because I'm almost always anywhere but here.
+This is the eleventh significant update to theo-armour.github.io. None of them have been much good because I'm almost always anywhere but here.
 
 Here is a snapshot of what I - and some of my friends - have been playing with:
 
@@ -62,6 +62,12 @@ https://glitch.com/edit/#!/theo
 
 
 ## change Log
+
+### 2019-06-05 ~ Theo
+
+* V0.11.0
+
+see semver.org
 
 ### 2019-02-03 ~ Theo
 

@@ -1,6 +1,18 @@
 # Spider Ladybug
 
 
+## 2019-06-03 ~
+
+This message is to express the appreciation of BuroHappold oby the Ladybug Tools / Spider team for the ongoing contributions of Michal Dengusiak in helping us build better tools for viewing, editing and fixing gbXML files.
+
+Michal  has helped us design a better user interface, identify bugs and identify calculations issues. His devotion over evening and weekends since 2017 has helped us build web applications now used daily by dozens of professional engineers around the world to carry out building analysis products more quickly and effectively.
+
+We hope Michal's efforts to establish a vibrant AEC open source software community are recognized by firms such as BuruHappold and are seen to be helpful in keeping client fees where they belong: in the hands of the consultants rather than in the tax havens of the proprietary program vendors.
+
+
+
+
+
 ## 2019-05-06 ~
 
 * https://s3.amazonaws.com/openstudio-builds/2.8.0/OpenStudio-2.8.0-rc5.55665635f0-Windows.exe
