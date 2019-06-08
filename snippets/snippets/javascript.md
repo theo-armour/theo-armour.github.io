@@ -3,7 +3,14 @@
 	div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px;'
 
 
-# requestIdleCallback
+## base
+
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+	<base href="http://www.example.com/">
+	<base target="_blank" href="http://www.example.com/">
+
+## requestIdleCallback
 
 https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_source=javascriptweekly&utm_medium=email
 

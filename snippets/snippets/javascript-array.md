@@ -80,6 +80,11 @@ a.next()
 
 return (foo || []).length;
 
+
+## Spread Syntax
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
 ## Duplicates
 
 * https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
@@ -167,8 +172,7 @@ see cookbook/array/array-pop-while-switch
 
 	arr = Array.from( {length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
 
-
-
+	arr = Array.from( { length: arr1.length }, () => 0 )
 
 ## Reduce
 
