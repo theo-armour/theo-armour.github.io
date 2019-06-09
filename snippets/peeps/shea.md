@@ -1,6 +1,11 @@
 
 # Shea
 
+Unmarried male physicists raised as Jehovah's Witnesses with a presence on GitHub living in the west half of the Gateway
+
+https://github.com/schancel
+https://github.com/paulmasson
+
 ## Links
 
 Social capital broadly refers to those factors of effectively functioning social groups that include such things as interpersonal relationships, a shared sense of identity, a shared understanding, shared norms, shared values, trust, cooperation, and reciprocity. However, the many views of this complex subject make a single definition difficult.
