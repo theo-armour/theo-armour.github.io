@@ -1,9 +1,18 @@
 # health notes 2019
 
 
+## 2019-06-09 ~
+
+Dr lin
+
+* No longer herniating
+* Who makes the mesh
+* Minimum cutting - I'm paralyzed and aging
+* Recovery
+	* Pooing / stool softeners 
+
+
 ## 2019-05-26
-
-
 
 Clarke Health Care Products
 www.clarkehealthcare.com

@@ -40,6 +40,9 @@ cdn.rawgit.com/mrdoob/three.js/(.*?)/
 cdn.jsdelivr.net/gh/mrdoob/three.js@r100/
 
 
+"https://status.github.com/images/invertocat.png"
+"https://pushme-pullyou.github.io/github-mark-64.png
+
 
 https://cdn.rawgit.com/showdownjs/showdown/1.8.5/dist/showdown.min.js
 https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js
