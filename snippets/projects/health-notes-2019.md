@@ -9,13 +9,14 @@ Dr lin
 * Who makes the mesh
 * Minimum cutting - I'm paralyzed and aging
 * Recovery
-	* Pooing / stool softeners 
+	* Pooing / stool softeners
 
 
 ## 2019-05-26
 
 Clarke Health Care Products
 www.clarkehealthcare.com
+http://clarkehealthcare.com/find-a-rep/california-north/
 
 Debra Gruttadauro
 831-224-2111
