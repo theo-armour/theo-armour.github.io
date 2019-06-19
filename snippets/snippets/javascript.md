@@ -25,7 +25,8 @@ https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_so
 very good:
 * https://medium.freecodecamp.com/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329#.g3fu2ql70
 
-	document.designMode = true for the entire document
+	//document.designMode = true for the entire document
+	document.designMode = 'on';
 	element.contentEditable = 'true for just one element.
 
 	getEventListeners( menu )

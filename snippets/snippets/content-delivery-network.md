@@ -14,8 +14,8 @@ https://rawgit.com/
 * https://www.jsdelivr.com/rawgit
 
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js@dev/examples/js/controls/OrbitControls.js
-* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js
-* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
+* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r105/examples/js/controls/OrbitControls.js
+* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r105/build/three.min.js
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.min.js
 
 multiple
@@ -41,7 +41,7 @@ cdn.jsdelivr.net/gh/mrdoob/three.js@r100/
 
 
 "https://status.github.com/images/invertocat.png"
-"https://pushme-pullyou.github.io/github-mark-64.png
+"https://pushme-pullyou.github.io/github-mark-64.png"
 
 
 https://cdn.rawgit.com/showdownjs/showdown/1.8.5/dist/showdown.min.js
