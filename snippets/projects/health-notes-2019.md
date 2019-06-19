@@ -1,5 +1,34 @@
 # health notes 2019
 
+PT Coaching
+
+
+Lise/Kevin McCarthy
+415 665 4953 www.mipt.us
+> message to Dr Martin
+
+
+Dr Martin
+
+Recovery from my surgery is going well.
+
+Would you kindly arrange a referral for physical therapy with a medical diagnosis indicating medical necessity?
+
+The left hip replacement in 2015, colectomy in 2017 and recent inguinal hernia repair on top of my ongoing partial paraplegia and left hand amputation hand have left me me in a significantly weakened state and at greater risk of falling. For example, I now require the use of my hand in order to stand up from a chair and this was not an issue several years ago.
+
+It would be great if a physical therapist could look at how I work and live so as to help me develop a regimen that overcomes these issues.
+
+I have been in touch with this practice:
+
+McCarthy's Interactive Physical Therapy
+927 Vicente St.
+San Francisco, CA 94116
+Phone: (415) 665-4953
+Email: lise@mipt.us or kevin@mipt.us
+
+Dr Lise McCarthy is an Assistant Clinical Professor (volunteer faculty) in the Physical Therapy and Rehabilitation Science Department at UCSF
+
+
 
 ## 2019-06-09 ~
 
