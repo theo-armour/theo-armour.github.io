@@ -76,6 +76,7 @@ From my research Tamarindo - with Lock's assistance and help from Nancy Hovey - 
 "The fundamental principle of science, the definition almost, is this: the sole test of the validity of any idea is experiment." -- Richard P. Feynman
 
 ### Juliette
+
 * add names
 * * Use API to gather messages
 weekly email
@@ -125,6 +126,8 @@ Is this about:
 * Wikipedia
 * Mark Levin
 * Polemics versus Authoritative
+
+
 
 ## Tidy
 

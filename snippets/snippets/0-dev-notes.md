@@ -197,6 +197,7 @@ Activities
 
 
 ## 2018-05
+
 Song of Tony
 
 With apologies to the first line of Walt Whitman's 'Song of Myself'
@@ -368,7 +369,7 @@ And, so, if yhttps://github.com/absence/absence.github.ioou want a tasty meal in
 
 income 9660
 
-rent 3300
+### rent 3300
 loan 1300
 5234  800
 ----
@@ -573,7 +574,7 @@ the trick is that you have to install from one HD to another HD
 Otherwise you never get to the Allocate size screen.
 
 
-2016-11-15
+## 2016-11-15
 ===
 
 deciding to move my diary from google docs back to text.
