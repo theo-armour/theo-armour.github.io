@@ -104,7 +104,7 @@ Analysis
 * https://www.theatlantic.com/ideas/archive/2019/06/fake-news-republicans-democrats/591211/
 
 
-## cokkies
+## cookies
 
 * https://en.wikipedia.org/wiki/HTTP_cookie
 

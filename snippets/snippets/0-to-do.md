@@ -1,74 +1,6 @@
+# to do
 
-
-## 2019-06-04 ~
-
-Tamarindo
-
-
-What conditions or criteria make for a worthy Christmas holiday? What potential camaraderie could drag us out of our comfy houses? What possible venue can motivate us to poo-poo the issues of traveling during a holiday?
-
-Here are some thoughts:
-
-TL:DR Tamarindo might not be bad
-
-Geography
-
-* Ocean facing beaches good for surfing
-* Estuary and protected beaches: good for snorkeling
-* Rivers: good for jungle boats trips to see crocodiles
-* Volcanoes and mountains in the vicinity: good for hiking / exploring
-
-
-Concierge & experience curation service
-
-* Knows the prices and on our side of the table
-* Knows what doctor/clinic to see when one of the urchins steps on a sea urchin
-* Knows where to shop for fresh food and delicacies and good wines
-* Helps plan culture, history and geography excursions
-* Can organize transport for a group / airport pickups
-
-
-Accommodations
-
-* Bedroom and bathroom for every two peeps
-* Cooking and eating area for big enough for the group
-* Eminently walkable to beach and/or town
-* OK for bare feet
-
-
-Bonus Points
-
-* Somebody who knows youngsters with local language and English skills for the youngsters with us to play with
-* Family or old time friends in the neighborhood
-* Ways of getting out of the rich white people bubble
-* Talking to peeps in the locale who are not just serving the tourists
-* Single connection maximum flights to destination via major world airline from CDG/LHR/SFO/SBA/LAX/ATL
-
-
-Possible Tamarindo Venues
-
-https://www.rpmvacationrentals.com/tamarindo-gallery/?q=1253-22737
-* $8,500 for two of these for a week
-
-https://www.rpmvacationrentals.com/beachfront-vacation-rental-homes/?q=Courtyard
-* Same neighborhood as Lock
-
-https://www.stayintamarindo.com/rentals/properties/villa-concha/
-* 9 bedrooms / 9 bathrooms
-
-
-https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-0/p280x280/61708334_529146784286622_1832863377873960960_n.jpg?_nc_cat=101&_nc_ht=scontent-sjc3-1.xx&oh=7ee83b4b4a8a79ea9613983cb49b81d5&oe=5D8A004D
-* Lock in his office / wine bar
-
-
-### Conclusion
-
-The last times we were all together was fo Tania's 50th birthday at Chateau Brecourt in France and Isabelle and my 40/5Oth. I remember these as wonderful family gatherings that continued the traditions of all our families of origin. I would like to think that these gatherings may again now and onwards.
-
-From my research Tamarindo - with Lock's assistance and help from Nancy Hovey - could be a likely venue for passing the tradition on from my generation and siblings onto the next generation and cousins.
-
-
-
+## older
 
 
 ### taskettes
@@ -271,6 +203,7 @@ Kalman = web site
 
 
 ## Andronik
+
 * Brooks article
 * Patrick
 * Peterson book
@@ -288,6 +221,80 @@ from: alix.f.armour@gmail.com
 to: alixarmour@gmail.com
 
 
+
+## Diary
+
+
+## 2019-06-04 ~
+
+Tamarindo
+
+
+What conditions or criteria make for a worthy Christmas holiday? What potential camaraderie could drag us out of our comfy houses? What possible venue can motivate us to poo-poo the issues of traveling during a holiday?
+
+Here are some thoughts:
+
+TL:DR Tamarindo might not be bad
+
+Geography
+
+* Ocean facing beaches good for surfing
+* Estuary and protected beaches: good for snorkeling
+* Rivers: good for jungle boats trips to see crocodiles
+* Volcanoes and mountains in the vicinity: good for hiking / exploring
+
+
+Concierge & experience curation service
+
+* Knows the prices and on our side of the table
+* Knows what doctor/clinic to see when one of the urchins steps on a sea urchin
+* Knows where to shop for fresh food and delicacies and good wines
+* Helps plan culture, history and geography excursions
+* Can organize transport for a group / airport pickups
+
+
+Accommodations
+
+* Bedroom and bathroom for every two peeps
+* Cooking and eating area for big enough for the group
+* Eminently walkable to beach and/or town
+* OK for bare feet
+
+
+Bonus Points
+
+* Somebody who knows youngsters with local language and English skills for the youngsters with us to play with
+* Family or old time friends in the neighborhood
+* Ways of getting out of the rich white people bubble
+* Talking to peeps in the locale who are not just serving the tourists
+* Single connection maximum flights to destination via major world airline from CDG/LHR/SFO/SBA/LAX/ATL
+
+
+Possible Tamarindo Venues
+
+https://www.rpmvacationrentals.com/tamarindo-gallery/?q=1253-22737
+* $8,500 for two of these for a week
+
+https://www.rpmvacationrentals.com/beachfront-vacation-rental-homes/?q=Courtyard
+* Same neighborhood as Lock
+
+https://www.stayintamarindo.com/rentals/properties/villa-concha/
+* 9 bedrooms / 9 bathrooms
+
+
+https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-0/p280x280/61708334_529146784286622_1832863377873960960_n.jpg?_nc_cat=101&_nc_ht=scontent-sjc3-1.xx&oh=7ee83b4b4a8a79ea9613983cb49b81d5&oe=5D8A004D
+* Lock in his office / wine bar
+
+
+### Conclusion
+
+The last times we were all together was fo Tania's 50th birthday at Chateau Brecourt in France and Isabelle and my 40/5Oth. I remember these as wonderful family gatherings that continued the traditions of all our families of origin. I would like to think that these gatherings may again now and onwards.
+
+From my research Tamarindo - with Lock's assistance and help from Nancy Hovey - could be a likely venue for passing the tradition on from my generation and siblings onto the next generation and cousins.
+
+
+
+### More
 
 
 2018-01-11
