@@ -85,12 +85,12 @@ return (foo || []).length;
 
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
+
 ## Duplicates
 
 * https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
 
 arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
-
 
 
 
