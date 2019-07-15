@@ -4,7 +4,125 @@
 # Cynthia
 
 
-## 
+## 2019-07-13
+
+
+### Cynthia Visit
+
+* Yosemite
+* Missoula
+* Christmas
+
+
+
+### Should Law Subsidize Driving?
+
+My take
+
+* Given a well designed system, running in an optimal state, guided ny intelligent, well meaning people there may still be endemic causes, instances and perpetuation of injustice.
+
+
+* https://poseidon01.ssrn.com/delivery.php?ID=021112125089064109118113067108079024100018018060083089125001014097125118113121086078060055056035060023006069115111113102017118041066034086088125012105021071074120063030084111121120064114088006022075017113095065090112112114087117082118072084065024068&EXT=pdf
+* https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3345366
+* The cases of Allison Liao and Lauren Davis are not isolated injustices.
+It has been shown empirically that vulnerable road users (VRUs) are regularly
+blamed for their own deaths.183 After conducting a content analysis of 200 local
+news reports of crashes resulting in the deaths of people walking and biking,
+researchers concluded that “coverage tends to shift blame toward VRUs and
+away from drivers. Coverage almost always treats crashes as isolated incidents,
+obscuring the public health nature of the problem.”184 The scholars believe this
+“pattern of coverage likely contributes to the limited public outcry about
+pedestrian and bicyclist fatalities.”
+*  For example, an experienced personal injury lawyer in the
+space has stated that the NYPD follows an undocumented but rigid “observed
+violation” rule with regard to the law that requires motorists to yield to
+pedestrians.209 Under this rule, the police refuse to issue tickets under that law
+unless they personally observe a motorist violating it.210 Their stated justification
+is that judges would not uphold the citation unless an officer personally
+witnessed the incident.211 This rationale is absurd on its face; as the lawyer noted,
+it posits that a court would require “a higher quality of proof in order to establish
+a traffic violation” than to establish crimes like murder.
+* . In most places, street parking is given away free of
+charge without regard to the residency or taxpaying status of the user. Further,
+street parking is reserved for cars. T
+* The objective of central planners in establishing a minimum number of
+required spaces is to require private landowners to construct enough space “to
+satisfy the peak demand for free parking.”3
+* The shift towards light trucks has likely taken the lives of thousands of
+additional people who were walking, biking, or using mobility devices to get
+around town. Research shows that a pedestrian is 3.4 times as likely to be killed
+if struck by an SUV or other light truck than if hit by a passenger car.
+*  by motorists (and virtually never the other way around),491 and are often
+blamed for their own deaths by police and media casually and without basis, these groups are structurally disadvantaged by a rule that makes them prove the person who killed them did so while failing to exercise due care.
+* Say an SUV rolls over while the driver is making a turn, and severely
+injures a pedestrian and the driver. Assume that both victims believe this
+rollover to have been caused by a design failure of the manufacturer’s making,
+but cannot prove this.
+Claims for a defective product, such as an automobile, can be advanced
+on two similar but distinct grounds. First, the injured party may bring suit in
+tort, alleging the product was “not reasonably safe” or, similarly, was
+“unreasonably dangerous.” In principle, either victim could bring a tort suit on
+these facts. Second, a plaintiff harmed by a defective product may bring a breach
+of warranty claim in contract. Under this second option, a plaintiff may charge
+that an automobile manufacturer breached an implied or express warranty. The
+driver should be able to make this claim against the automobile manufacturer.
+A pedestrian who wants to sue a carmaker using the latter strategy,
+however, must confront his lack of privity. This requirement bars suits in
+contract where a plaintiff was not in a preexisting contractual relationship with
+the defendant.502 Thus, under a strict reading of this rule, an innocent bystander
+would be unable to sue an automobile manufacturer in contract. The lack of
+privity defense has been criticized for removing potential relief for innocent
+bystanders, who do not have any way of preventing or avoiding the risks caused
+by unsafe products.503 Even though it does not affect his tort claim, the lack of
+privity defense may prejudice the pedestrian’s rights in a few material ways.
+* The lack of privity defense will systematically restrict the type of plaintiff
+who can bring a lawsuit against a car manufacturer for breach of warranty claims
+to exclude pedestrians. U.C.C. § 2-318 Alternative A,504 which has been adopted
+by a majority of states,505 bars innocent bystanders injured by defective products
+from bringing breach of warranty claims because of a lack of privity.506
+The test for breach of contract (under an implied warranty of
+merchantability) requires only that plaintiff show the product was “not fit for
+the ordinary purposes such goods are used.”507 Thus, a plaintiff under a breach
+of warranty claim need not show the product was unreasonably dangerous. This
+difference can be dispositive.
+* Thus, in this case, neither victim has an effective tort remedy, but while the
+driver has a contract remedy against the carmaker, the pedestrian does not.
+Contract doctrine is not the most natural fit for redressing harms to third
+parties who are not intended beneficiaries. Nevertheless, as with insurance
+regulation, the operation of tort law, traffic regulation, tax law, and myriad other
+fields, in contract it is once again unprotected non-drivers who pay the steepest
+price for law’s subsidy to driving.
+* The most important subsidy for driving in the criminal law is in the area
+of enforcement. Enforcement of laws proscribing striking pedestrians are rarely
+enforced, even against hit-and-run motorists who kill their victims.509 In a recent
+study, even where motorists killed someone walking or using a wheelchair, they
+were charged with some form of homicide less than seven percent of the time.
+510
+In addition, car-related offenses are frequently defined as violations
+while ones relating to transit are crimes or otherwise result in graver
+consequences. Examples abound. In the ordinary course, the maximum penalty
+for a parking meter or HOV lane violation is a ticket, while boarding a subway
+or light rail without paying can trigger not only a fine but arrest.511 Ironically, delaying 50 bus passengers by temporarily parking in the bus lane is punishable
+by ticket, but boarding that same bus with an expired pass can trigger jail time.512
+Motorists also enjoy more constitutional privacy protection in their car trunks
+than people riding the subway or walking down the street with respect to their
+person or belongings.513 Given the demographic makeup of the transit user
+base,514 the increased legal jeopardy and physical intrusion by law enforcement
+to which transit riders are subject cannot be understood without reference to
+race.
+Finally, even when motorists kill while driving negligently or recklessly,
+it can be difficult to secure a jury verdict of homicide. 515 For this reason,
+legislatures created a special category of homicide—vehicular manslaughter—
+for homicides committed with a car,
+516 which is a lesser offense.
+
+Law’s function is not only substantive but expressive, and of course in
+the real world these roles feed on each other.
+518 Motorists today can make
+reckless choices that erase human life secure in the knowledge that they will not
+have to face the consequences.
+
+
 ## 2018-11-29 ~ C+K stop by in SF
 
 
