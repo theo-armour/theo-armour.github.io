@@ -448,6 +448,13 @@ document.write("Hello World!");
 
 ### DOM load script
 
+
+	var js = document.createElement('script');
+	js.setAttribute('src', fname);
+	document.body.appendChild(js);
+
+
+
 	var script= document.createElement('script');
 	script.type= 'text/javascript';
 	script.onreadystatechange= function () {
