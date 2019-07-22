@@ -123,6 +123,7 @@ function playSound( url ) {
 }
 
 
+
 function playRandomSoundJayButton() {
 
 	const number = Math.floor( 50 * Math.random() ) + 1;
@@ -134,19 +135,23 @@ function playRandomSoundJayButton() {
 }
 
 
+
 function playRandomFidget() {
 
 	const number = Math.floor( fidgets.length * Math.random() );
 	const text = fidgets[ number ];
+	const thing = () => String.fromCharCode( 65 + Math.floor( 6 * Math.random()));
 
-	r = String.fromCharCode( 65 + Math.floor( 6 * Math.random()));
-	g = String.fromCharCode( 65 + Math.floor( 6 * Math.random()));
-	b = String.fromCharCode( 65 + Math.floor( 6 * Math.random()));
-	console.log( '',  `#${ r }${ g }${ b }` );
-	divFidgets.style.backgroundColor = `#${ r }${ g }${ b }`;
+	r = thing();
+	g = thing();
+	b = thing();
+	//console.log( '',  "#" + r + g + b );
+
+	divFidgets.style.backgroundColor = "#" + r + g + b;
 	divFidgets.innerHTML = text;
 
 }
+
 
 
 function startNotices() {
@@ -181,7 +186,7 @@ function giveNotice() {
 
 	//console.log( 'delta', delta );
 
-	if ( delta > 300000 ) {
+	if ( delta > 3000 ) {
 
 		playRandomSoundJayButton();
 
