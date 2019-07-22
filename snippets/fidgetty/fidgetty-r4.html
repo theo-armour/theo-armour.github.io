@@ -208,12 +208,12 @@ function getTitle() {
 			<a href=${ urlSourceCode } target=_top title="Source code on GitHub" >
 				<img src=${ urlSourceCodeIcon } height=18 style=opacity:0.5; >
 			</a>
-			<a href="" title="Click to reload this page" >${ document.title } ${ version }</a>
+			<a href="" title="Click to reload this page" >${ document.title }</a>
 		</h2>
 
-		<p>
+/* 		<p>
 			${ document.head.querySelector( "[ name=description ]" ).content }
-		</p>
+		</p> */
 	`;
 
 	return htm;
