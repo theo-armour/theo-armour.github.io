@@ -4,11 +4,16 @@
 # Cynthia
 
 
-## 2019-07-13
+## 2019-07-20
 
 
 ### Cynthia Visit
 
+* Detroit
+* Butch
+* Conference summary
+	* About large vc-funded companies creating issues for cities - both good and bad -
+	* Left much on the table: for example: how can tech coding help build better cities
 * Yosemite
 * Missoula
 * Christmas

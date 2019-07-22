@@ -68,7 +68,7 @@
 				'Stretch arms up into air one at a time<br>' +
 				'Grab arms behind shoulders<br>' +
 				'Arch back<br>' +
-				'Cocyx curl<br>' +
+				'Coccyx curl<br>' +
 				'Wave arms to sides<br>' +
 			'<p>' +
 
@@ -111,10 +111,12 @@
 
 		countdown.innerHTML = ( 301000 - delta ).toFixed().slice( 0, -3 ) ;
 
-		if ( delta > 300000 ) {
+		if ( delta > 5000 ) {
 
-			sounds[ Math.floor( Math.random() * sounds.length ) ].play();
+			sound = sounds[ Math.floor( Math.random() * sounds.length ) ];
+			sound.play();
 
+			console.log( '', sound.src );
 			startTime = now;
 
 		}

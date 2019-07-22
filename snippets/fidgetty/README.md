@@ -1,12 +1,13 @@
 
 
-Fidegetty Read Me
-===
+# Fidegetty Read Me
 
 
-[Fidegetty R3]( fidgetty-r3.html )
+[Fidgetty R4]( https://theo-armour.github.io/snippets/fidgetty/fidgetty-r4.html )
 
-[Fidegetty R2]( fidgetty-r2.html )
+[Fidgetty R3]( https://theo-armour.github.io/snippets/fidgetty/fidgetty-r3.html )
+
+[Fidgetty R2]( https://theo-armour.github.io/snippets/fidgetty/fidgetty-r2.html )
 
 
 ## Tod
@@ -24,7 +25,17 @@ Fidegetty Read Me
 * harp http://www.soundjay.com/misc/sounds/dream-harp-06.mp3;
 
 
+
+## Links of interest
+
+* https://www.myinstants.com/instant/ka-ching/
+
+
 ## Change Log
+
+### 2019-07-21 ~ R4
+
+* F - F4: Add 50 random SoundJay button sounds
 
 
 ### 2016-12-15 ~ R3
