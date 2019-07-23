@@ -105,6 +105,7 @@ selection: Ctrl-K, Ctrl-F
 > cat ~/.ssh/id_rsa.pub
 > git remote set-url origin git@github.com:charmor/charmor.github.io.git
 
+C:\Users\tarmo\.ssh\github_rsa.pub
 
 ## IntelliSense
 

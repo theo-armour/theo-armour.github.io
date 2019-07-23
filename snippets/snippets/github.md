@@ -1,4 +1,4 @@
-
+# GitHub
 
 
 
@@ -7,7 +7,6 @@
 * http://jsbeautifier.org/
 
 ## Releases
-
 
 * https://help.github.com/categories/releases/
 * https://blog.github.com/2013-07-02-release-your-software/
@@ -62,7 +61,6 @@ fun look at issues
 
 
 # URL shortener github pages etc
-
 
 http://git.io provides a URL shortener for your GitHub repos.
 
