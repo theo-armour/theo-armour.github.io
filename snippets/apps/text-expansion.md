@@ -2,9 +2,7 @@
 
 ## Text Expansion
 
-https://blaze.today/
 
-tb+space: to use toolbar
 
 
 ## Auto Text Expander for Google Chrome
@@ -28,29 +26,58 @@ https://rawgit.com/ladybug-tools/spider/master/analemma3d/index.html#r20/analemm
 https://rawgit.com/ladybug-tools/spider/master/analemma3d/index.html#r20/analemma3d.html#latitude:38.7533629,longitude:-77.1994848,zoom:16,offsetUTC:-240
 
 38.7533629,-77.1994848,3057
-## ProKeys
+
+## https://blaze.today/
+
+Tips
+
+* $$$ ~ free but limits seem low
+* tb + spacebar: to use in browser address bar
+* Immediate response
+
+Works
+
+* GitLab Editor (both)
+
+## ProKeys ~ shift + space
 
 https://github.com/GaurangTandon/ProKeys
 
+Tips
+
+* FOSS
+
+Works
+
 * Works on Chrome browser Windows, Chromebook
-* Works
-	* Gist meta but not main
-	* Evernote online but not Chromebook app
-	* Google sheets / Calendar
-	* Gmail
-	* GitHub Issues
-	* Medium
-	* StackEdit
-	* Twitter
+* Gist meta but not main
+* Evernote online but not Chromebook app
+* Google sheets / Calendar
+* Gmail
+* GitHub Issues
+* Medium
+* StackEdit
+* Twitter
+* Reddit
+* GitLab snippets
 
 
 Not work
+
 * Caret
 * Hangouts
 * Facebook
-* Reddit
+* Keep
+* GitLab editors
+* All-in-one
+
+Editing
+
+* Has simple CSV format that can be used to export/import
+* Data can be merged
 
 Sync
+
 * Syncs across platforms
 
 
@@ -69,6 +96,8 @@ Sync
 	* Does work: Gmail, CodeAnywhere, Gists, Google spreadsheet
 
 See also: http://www.keyboard-and-mouse-sharing.com/index.html
+
+
 
 ### Create shortcut inStartup
 

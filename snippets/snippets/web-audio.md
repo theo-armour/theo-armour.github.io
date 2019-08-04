@@ -8,7 +8,7 @@ https://github.com/goldfire/howler.js
 
 Watch 289 Star 8,454 Fork 924
 
-Pays plays off the shelf: live radio stations  << stert here
+Pays plays off the shelf: live radio stations  << start here
 
 
 https://github.com/Tonejs/Tone.js

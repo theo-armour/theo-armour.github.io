@@ -3,6 +3,18 @@
 
 # Cynthia
 
+## 2019-07-28
+
+* https://www.tripadvisor.com/Hotel_Review-g42139-d7263062-Reviews-Aloft_Detroit_at_The_David_Whitney-Detroit_Michigan.html
+* https://www.tripadvisor.com/Hotel_Review-g42139-d95294-Reviews-The_Atheneum-Detroit_Michigan.html4
+* https://www.tripadvisor.com/Hotel_Review-g42139-d15121938-Reviews-Element_Detroit_At_The_Metropolitan-Detroit_Michigan.html
+* https://www.tripadvisor.com/Hotel_Review-g42139-d15558901-Reviews-The_Shinola_Hotel-Detroit_Michigan.html
+* https://www.tripadvisor.com/Hotel_Review-g42139-d12130393-Reviews-Detroit_Foundation_Hotel-Detroit_Michigan.html
+
+
+* Elizabeth Warren
+* Tech and the city - re-focus on my building
+
 
 ## 2019-07-20
 
@@ -24,7 +36,7 @@
 
 My take
 
-* Given a well designed system, running in an optimal state, guided ny intelligent, well meaning people there may still be endemic causes, instances and perpetuation of injustice.
+* Given a well designed system, running in an optimal state, guided by intelligent, well meaning people there may still be endemic causes, instances and perpetuation of injustice.
 
 
 * https://poseidon01.ssrn.com/delivery.php?ID=021112125089064109118113067108079024100018018060083089125001014097125118113121086078060055056035060023006069115111113102017118041066034086088125012105021071074120063030084111121120064114088006022075017113095065090112112114087117082118072084065024068&EXT=pdf

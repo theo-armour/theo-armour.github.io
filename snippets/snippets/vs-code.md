@@ -1,5 +1,11 @@
 # VS Code
 
+## Tips
+
+* Can drag and drop from Sidebar to browser
+* F1 for help
+
+## About
 * Keyboard shortcuts: Ctrl+K, Ctrl+s
 * https://code.visualstudio.com/
 * https://en.wikipedia.org/wiki/Visual_Studio_Code
@@ -7,7 +13,7 @@
 * https://code.visualstudio.com/docs
 * https://stackoverflow.com/questions/tagged/visual-studio-code
 
-### Configuration
+## Configuration
 
 * https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 * https://hackernoon.com/how-i-configure-vscode-for-everything-7df65a316a52
@@ -68,6 +74,7 @@ Rename symbol: F2
 
 * https://code.visualstudio.com/docs/editor/emmet
 * https://code.visualstudio.com/blogs/2017/08/07/emmet-2.0
+	*
 
 * https://docs.emmet.io/
 * https://docs.emmet.io/cheat-sheet/
@@ -134,10 +141,7 @@ Ones I like
 * Switch between views, press Ctrl+Shift+V in the editor.
 * View the preview side-by-side (Ctrl+K V)
 
-tips
 
-* Can drag and drop from Sidebar to browser
-* F1 for help
 
 
 ## Marketplace

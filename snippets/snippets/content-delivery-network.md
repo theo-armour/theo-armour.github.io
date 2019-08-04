@@ -23,8 +23,10 @@ multiple
 * https://cdn.jsdelivr.net/combine/gh/mrdoob/three.js@r100/build/three.min.js,gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js
 
 replace
-https://cdn.rawgit.com/mrdoob/three.js/r93/build/three.min.js
-https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js
+https://rawgit.com/mrdoob/three.js/dev/build/three.min.js
+vbuild/three.min.js
+
+https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/build/three.min.js
 
 
 https://cdn.jsdelivr.net/gh/mrdoob/three.js@r93/examples/js/controls/OrbitControls.js

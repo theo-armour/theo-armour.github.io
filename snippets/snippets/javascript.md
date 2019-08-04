@@ -313,7 +313,13 @@ random gradient background
 		'';
 
 
+## ContentEditable
 
+
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
+https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
+
+		divContents.contentEditable = true;
 ## CSS
 
 https://www.w3schools.com/css/css_howto.asp
@@ -491,10 +497,7 @@ document.write("Hello World!");
 
 
 
-https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
-https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
 
-		divContents.contentEditable = true;
 
 
 
