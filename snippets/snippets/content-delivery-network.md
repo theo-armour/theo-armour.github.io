@@ -50,7 +50,11 @@ https://cdn.rawgit.com/showdownjs/showdown/1.8.5/dist/showdown.min.js
 https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js
 https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js
 
+### leapmotiom
 
+* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r93/examples/js/controls/OrbitControls.js
+
+* https://cdn.jsdelivr.net/gh/leapmotion/leapjs-plugins@master/main/bone-hand/leap.bone-hand.js
 
 
 ### CDNJS

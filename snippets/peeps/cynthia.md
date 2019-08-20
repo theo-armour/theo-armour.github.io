@@ -3,6 +3,15 @@
 
 # Cynthia
 
+
+## 2019-08-18
+
+
+* ongoing dialog topic
+* beauty personal
+* city tech conference: left on table
+
+
 ## 2019-07-28
 
 * https://www.tripadvisor.com/Hotel_Review-g42139-d7263062-Reviews-Aloft_Detroit_at_The_David_Whitney-Detroit_Michigan.html

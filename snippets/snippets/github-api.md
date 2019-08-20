@@ -232,6 +232,7 @@ examples
 Get the README << finds any readme!!
 
 * https://api.github.com/repos/jaanga/jaanga.github.io/readme
+* https://api.github.com/repos/torvalds/linux/readme
 
 or
 * https://api.github.com/repos/jaanga/jaanga.github.io/contents/readme.md
