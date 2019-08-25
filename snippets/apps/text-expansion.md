@@ -9,6 +9,17 @@
 
 https://github.com/carlinyuen/ChromeAutoTextExpander
 
+Works
+
+* Evernote web
+
+Not work
+
+* GitLab editors
+
+
+
+
 Known Issues
 * I can't get this to work in Google Docs due to how Docs is architected. T_T
 * Similarly, Facebook comments is unavailable due to ReactJS's system.
@@ -27,17 +38,24 @@ https://rawgit.com/ladybug-tools/spider/master/analemma3d/index.html#r20/analemm
 
 38.7533629,-77.1994848,3057
 
+
+
 ## https://blaze.today/
 
 Tips
 
-* $$$ ~ free but limits seem low
-* tb + spacebar: to use in browser address bar
+* $$$36/year ~ free but limits seem low
 * Immediate response
+* type 'tb' + spacebar: to use in browser address bar
 
 Works
 
 * GitLab Editor (both)
+* gmail
+* slack
+* twitter
+
+
 
 ## ProKeys ~ shift + space
 
@@ -56,6 +74,7 @@ Works
 * Gmail
 * GitHub Issues
 * Medium
+* Slack
 * StackEdit
 * Twitter
 * Reddit
@@ -112,11 +131,14 @@ C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 ## https://textexpander.com/
 
+$40/year??
+
 * iPhone, Mac & Windows
 * Chromebook
 	* Gmail OK
 * Android
 
+TextExpander for Linux from within Chrome
 
 ## AutoHotKey ~ http://ahkscript.org/
 
