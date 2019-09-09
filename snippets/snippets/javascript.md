@@ -1003,6 +1003,14 @@ function parseFile( text, pattern ){
 
 }
 
+### File extension
+
+* https://stackoverflow.com/questions/6582171/javascript-regex-for-matching-extracting-file-extension
+
+const name = FSB.fileName.replace( /\.[0-9a-z]+$/i, ".zip" );
+
+
+### Match | Replace
 >>> /xxx(.*?)xxx/gi
 
 * (.*?) Parenthesis matches anything in between
