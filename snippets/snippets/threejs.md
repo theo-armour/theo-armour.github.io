@@ -44,6 +44,7 @@ http://mrdoob.github.io/three.js/docs/#Reference/Loaders/XHRLoader
 
 
 ## Notes
+
 spheresIndex = ( spheresIndex + 1 ) % spheres.length;
 
 webgl_loader_scene_blender.html# - simple object lister
@@ -331,6 +332,8 @@ scene.add( edges );
 
 https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-way-to-dispose-and-release-memory-garbag
 
+https://discourse.threejs.org/t/correctly-remove-mesh-from-scene-and-dispose-material-and-geometry/5448/2
+
 		if ( objects ) {
 
 			objects.traverse( function ( child ) {
@@ -347,6 +350,11 @@ https://stackoverflow.com/questions/33152132/three-js-collada-whats-the-proper-w
 			} );
 
 		}
+
+	renderer.renderLists.dispose();
+	renderer.getContext();
+	renderer.dispose( );
+	//scene.dispose();
 
 
 ### geometry BufferGeometry
@@ -971,7 +979,7 @@ scene.add( sprite );
 
 
 
-##TWEEN
+## TWEEN
 
 See files
 
@@ -1075,7 +1083,9 @@ https://threejs.org/docs/#api/math/Spherical
 		mesh.position.setFromSpherical( spherical );
 		mesh.rotation.setFromVector3( vector );
 
-###  Vector3
+
+### Vector3
+
 http://mrdoob.github.io/three.js/docs/#Reference/Math/Vector3
 
 

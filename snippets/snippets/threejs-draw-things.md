@@ -108,14 +108,15 @@ function drawMultipleMeshes( count = 50 ) {
 
 function addGeometry() {
 
-	var geometries = [
+	const  geometries = [
 
-		new THREE.BoxGeometry( 10, 10, 10 ),
-		new THREE.CylinderGeometry( 5, 5, 1, 12 ),
+		new THREE.BoxBufferGeometry( 10, 10, 10 ),
+		new THREE.CylinderBufferGeometry( 5, 5, 1, 12 ),
 		new THREE.DodecahedronGeometry( 05 ),
-		new THREE.SphereGeometry( 5, 12, 8 ),
-		new THREE.TorusGeometry( 10, 5 ),
-
+		new THREE.SphereBufferGeometry( 5, 12, 8 ),
+		new THREE.TorusBufferGeometry( 10, 5 ),
+		new THREE.TorusKnotBufferGeometry( 10, 5 ),
+		new THREE.PolyhedronBufferGeometry(),
 	];
 
 
@@ -128,17 +129,71 @@ function addGeometry() {
 		mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
 		mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
 		mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
-		scene.add( mesh );
 
 		const edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
 		const edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 5 } );
 		const edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+
 		mesh.add( edges );
+
+		scene.add( mesh );
 
 	}
 
 }
 
+
+
+function addGeometry() {
+
+	var verticesOfCube = [
+		-1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
+		-1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
+	];
+
+	var indicesOfFaces = [
+		2,1,0,    0,3,2,
+		0,4,7,    7,3,0,
+		0,1,5,    5,4,0,
+		1,2,6,    6,5,1,
+		2,3,7,    7,6,2,
+		4,5,6,    6,7,4
+	];
+
+	const geometries = [
+
+		new THREE.BoxBufferGeometry( 10, 10, 10 ),
+		new THREE.CylinderBufferGeometry( 5, 5, 1, 12 ),
+		new THREE.DodecahedronBufferGeometry( 05 ),
+		new THREE.SphereBufferGeometry( 5, 12, 8 ),
+		new THREE.TorusBufferGeometry( 10, 5 ),
+		new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 2 )
+
+	];
+
+
+	for ( let i = 0; i < 250; i++ ) {
+
+		const geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
+		const material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
+
+		const mesh = new THREE.Mesh( geometry, material );
+
+		mesh.position.set( Math.random() * 100 - 50, Math.random() * 100 - 50,  Math.random() * 100 - 50);
+		mesh.rotation.set( Math.random() * 6, Math.random() * 6, Math.random() * 6  )
+		mesh.scale.set( Math.random() * 3, Math.random() * 3, Math.random() * 3 );
+
+		const edgesGeometry = new THREE.EdgesGeometry( geometry ); // or WireframeGeometry
+		const edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 5 } );
+		const edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+
+		mesh.add( edges );
+
+		scene.add( mesh );
+
+	}
+
+}
 
 
 ### GEOMETRY / PlaneBufferGeometry
@@ -212,7 +267,30 @@ starts at top / left and goes right and down
 
 
 
+## LIGHT
+
+//https://github.com/mrdoob/three.js/issues/11387
+
+
+function addSomeLights() {
+
+	lightAmbient = new THREE.AmbientLight( 0x888888 );
+	lightAmbient.name = "lightAmbient";
+	scene.add( lightAmbient );
+
+	lightDirectional = new THREE.DirectionalLight( 0xffffff, 0.75 );
+	lightDirectional.name = "lightDirectional";
+	lightDirectional.position.set( 1, 1, 1 ).normalize();
+	scene.add( lightDirectional );
+
+	var helper = new THREE.DirectionalLightHelper( lightDirectional, 50, 0xff00ff  );
+
+	scene.add( helper );
+
+}
+
 ## Lights 1
+
 // https://threejs.org/docs/#api/lights/DirectionalLight
 // https://threejs.org/docs/#api/lights/shadows/DirectionalLightShadow
 
