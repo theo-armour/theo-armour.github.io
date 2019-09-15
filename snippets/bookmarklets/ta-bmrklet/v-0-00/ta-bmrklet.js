@@ -96,10 +96,10 @@ function init() {
 		</a>
 	</p>
 	<p>
-		<a href = "JavaScript:( () => {
+		<a href = 'JavaScript:( () => {
 			const script=document.head.appendChild( document.createElement( "script" ) );
 			script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/ascii-table.js";
-		} )()" >
+		} )()' >
 			ascii table
 		</a>
 	</p>
