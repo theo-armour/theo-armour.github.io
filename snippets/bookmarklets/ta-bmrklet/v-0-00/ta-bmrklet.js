@@ -46,7 +46,7 @@ function init() {
 			JavaScript:( () => {
 
 				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";
-				const windo = open( "https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor//mozilla-text-editor.html", "Windo", features );
+				const windo = open( "https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor/mozilla-text-editor-theo.html", "Windo", features );
 
 			} )()
 
@@ -54,7 +54,6 @@ function init() {
 			mozilla text editor
 		</a>
 	</p>
-
 	<p>
 		<a href="javascript:(function() {
 			function se(d) {
@@ -75,9 +74,6 @@ function init() {
 			&amp;e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})()
 		'>Get all external Links</a>
 	</p>
-
-
-
 	<p>
 		<a href = "
 			JavaScript:( () => {
