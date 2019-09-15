@@ -69,6 +69,10 @@ script.src='snippets/bookmarklets/theo-armour-bookmarklet.js'; } )()" >
 * https://superuser.com/questions/1053584/is-there-a-way-to-customise-bookmark-icons-in-chrome
 * https://www.minterest.com/how-to-change-chrome-bookmark-icon/
 
+### CORS
+
+* https://developer.chrome.com/extensions/contentSecurityPolicy#relaxing
+
 ### Bookmarks
 
 Chrome Bookmarks Recovery Tool

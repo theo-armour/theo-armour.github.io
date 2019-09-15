@@ -15,9 +15,7 @@ function init() {
 	}
 
 	divTooToo.innerHTML =
-
-`
-
+	`
 	<a href="https://theo-armour.github.io/snippets/bookmarklets/theo-armour-bookmarklet.html" title="on server" >theo armour bookmarklet</a>
 	/
 	<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-bmrklet-dashboard/v-0-00/ta-bmrklet-dashboard.html" >local</a>
@@ -29,15 +27,20 @@ function init() {
 			requestAnimationFrame(function loop(){stats.update();
 			requestAnimationFrame(loop)});};
 			script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';
-			document.head.appendChild(script);})()" title="Mr.doob's" >stat.js</a>
+			document.head.appendChild(script);})()"
+		title="Mr.doob's" >
+			stat.js
+		</a>
 		<br>
-
-
-		<a href="
-		javascript:(function(){var script=document.createElement('script');script.type='text/javascript';script.src='https://cdn.rawgit.com/zz85/zz85-bookmarklets/master/js/ThreeInspector.js';document.body.appendChild(script);})()
-		">zz85 three.js inspector</a>
+		<a href="javascript:(function(){
+			var script=document.createElement('script');
+			script.type='text/javascript';
+			script.src='https://cdn.rawgit.com/zz85/zz85-bookmarklets/master/js/ThreeInspector.js';
+			document.body.appendChild(script);})()
+		">
+			zz85 three.js inspector
+		</a>
 	</p>
-
 
 	<hr>
 
@@ -63,19 +66,19 @@ function init() {
 			for (i=0; i<frames.length && !s; i++) s = se(frames[i].document);
 			if (!s || s=='') s = prompt('Enter%20search%20terms%20for%20Wikipedia','');
 			open('http://en.wikipedia.org' + (s ? '/w/index.php?title=Special:Search&search=' + encodeURIComponent(s) : '')).focus();
-			})();" >search wikipedia</a>
-
+		})();" >
+			search wikipedia
+		</a>
 	</p>
 
 	<p>
-	<a href = "
-		JavaScript:( () => {
-			const script=document.head.appendChild( document.createElement( 'script' ) );
-			script.src='../../bookmarklets/window-local-storage.js'; } )()
-	" >
+	<a href = "JavaScript:( () => {
+		const script=document.head.appendChild( document.createElement( 'script' ) );
+		script.src='../../bookmarklets/window-local-storage.js';
+	} )()" >
 		window local storage
 	</a>
-</p>
+	</p>
 	<p>
 		<a href='javascript:(function(){
 			var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");
@@ -85,64 +88,66 @@ function init() {
 		'>Get all external Links</a>
 	</p>
 	<p>
-		<a href = "
-			JavaScript:( () => {
+		<a href = "JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/216-standard-colors.js'; } )()
-		" >
+				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/216-standard-colors.js';
+		} )()" >
 			216 standard colors
 		</a>
 	</p>
-
-
 	<p>
-		<a href = '
-			JavaScript:( () => {
-				const script=document.head.appendChild( document.createElement( "script" ) );
-				script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/ascii-table.js"; } )()
-		' >
+		<a href = "JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( "script" ) );
+			script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/ascii-table.js";
+		} )()" >
 			ascii table
 		</a>
 	</p>
 
+	<p>
+	<a id=aPageData href = 'JavaScript:( () => {
+		const script=document.head.appendChild( document.createElement( "script" ) );
+		script.src="../../bookmarklets/page-data-bookmark.js";
+	} )()' >
+		page-data-bookmark
+	</a>
+	<div id=divData ></div>
+</p>
 	<details>
 
 	<summary>testing</summary>
 
 	<p id=pGetInput >
-		<a href=
-		"
-			javascript:inp=pDoIt.appendChild(document.createElement('input'));
-			inp.value='thiking';
+		<a href= "javascript: inp=pDoIt.appendChild(document.createElement('input'));
+			inp.value='thinking';
 			inp.select();
 			document.execCommand('copy');
 			delete inp;
-		"
-		>get input</a>
+		">
+			get input
+		</a>
 	</p>
 
 	<p>
-		<a href = "
-			JavaScript:( () => {
-				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/test.js'; } )()
-		" >
+		<a href = "JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( 'script' ) );
+			script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/test.js';
+		} )()" >
 			test
 		</a>
 	</p>
 
 	<p>
-		<a href = "
-			JavaScript:( () => {
-				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-open.js'; } )()
-		" >
+		<a href = "JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( 'script' ) );
+			script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-open.js';
+		} )()" >
 			window open
 		</a>
 	</p>
 
 
-		Open new  pages easily - even with window location
+	Open new  pages easily - even with window location
 
 	<p><a href="https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor.html" target="_blank">text edit</a></p>
 
@@ -156,6 +161,7 @@ function init() {
 
 	<p><a href="javascript:(function(){window.open('data:text/html, <html contenteditable style=padding:10%; ></html>')})()" >open new editable page</a></p>
 
+
 	</details>
 
 	<p>
@@ -167,9 +173,7 @@ function init() {
 		<a href="https://github.com/theo-armour/qdata/blob/master/README.md" target="_blank">qdata</a>
 	</p>
 
-
 `;
 
 
 }
-
