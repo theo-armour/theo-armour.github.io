@@ -47,7 +47,7 @@ function init() {
 
 	divCaptureBookmark.innerHTML = htm;
 
-	inpFavicon.value = `https://www.google.com/s2/favicons?domain=${ inpUrl }`;
+	inpFavicon.value = `https://www.google.com/s2/favicons?domain=${ document.domain }`;
 
 	updateJson();
 
@@ -58,7 +58,7 @@ function updateJson() {
 
 	const tags = `["${ txtTags.value.slice().replace( /,/g, '","') }"]`;
 
-	inpFavicon.value = `https://www.google.com/s2/favicons?domain=${ inpUrl }`;
+	console.log( 'document.lastModified', document.lastModified );
 
 	const txt =
 `{
@@ -86,8 +86,10 @@ function getFileName() {
 
 	console.log( '', location.domain );
 
-	fName = location.pathname;
-	
+	domain = document.domain ? document.domain.replace( /\./g, "-") : "file"
+	const title = document.title ? document.title.replace( / /g, "-") : ""
+	fName = domain + "-" + title + ".json";
+
 	return fName;
 
 }
@@ -102,7 +104,6 @@ function getUuidv4() {
 };
 
 saveFile = function() {
-
 
 	//const strings = BOP.jsonLines.map( jsonl => JSON.stringify( jsonl ) ).join( "\n" );
 
