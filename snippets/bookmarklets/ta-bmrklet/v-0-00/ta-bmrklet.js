@@ -112,6 +112,7 @@ function init() {
 		page-data-bookmark
 	</a>
 
+	<p>
 	<a id=aPageData href = 'JavaScript:( () => {
 		const script=document.head.appendChild( document.createElement( "script" ) );
 		script.src="../../bookmarklets/page-data-bookmark.js";
