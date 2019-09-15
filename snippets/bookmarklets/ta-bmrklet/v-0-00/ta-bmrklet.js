@@ -16,8 +16,8 @@ function init() {
 		`
 		divTooToo = document.body.appendChild(document.createElement('div'));
 		divTooToo.style.cssText =
-			'background-color: white; border: 1px solid red; max-height: 90%; max-width: 350px; opacity: 0.85; ' +
-			' overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
+			'background-color: white; border: 1px solid red; max-height: 90%; width: 350px; opacity: 0.95; ' +
+			' overflow: auto; padding: 10px; position: fixed; right: 30px; resize: both; top: 20px; z-index:100000; ';
 
 	} else {
 
