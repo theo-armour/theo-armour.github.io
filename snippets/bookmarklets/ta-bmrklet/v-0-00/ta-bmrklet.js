@@ -1,21 +1,26 @@
 
-var divTooToo = divTooToo || undefined;
+//var divTooToo = divTooToo || undefined;
 
 init();
 
 function init() {
 
-	if ( !divTooToo ) {
+	if ( !window.divTooToo ) {
 
 		divTooToo = document.body.appendChild( document.createElement( 'div' ) );
 		divTooToo.style.cssText =
-			'background-color: white; border: 1px solid red; height: 90%; max-width: 350px; opacity: 0.85; ' +
+			'background-color: white; border: 1px solid red; max-height: 90%; max-width: 350px; opacity: 0.85; ' +
 			' overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
 
+	} else {
+
+		divTooToo.hidden = false;
 	}
 
 	divTooToo.innerHTML =
 	`
+	<button onclick=divTooToo.hidden=true; >x</button>
+
 	<a href="https://theo-armour.github.io/snippets/bookmarklets/theo-armour-bookmarklet.html" title="on server" >theo armour bookmarklet</a>
 	/
 	<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-bmrklet-dashboard/v-0-00/ta-bmrklet-dashboard.html" >local</a>
