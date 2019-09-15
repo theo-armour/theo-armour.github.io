@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>window-local-storage</title>
+	<meta charset="utf-8">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		:focus {
+			outline: none;
+			border: 0px solid red
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="notepad"></div>
+
+	<script>
+
+		// http://jkirchartz.com/demos/
+
+		function save() { localStorage.setItem("notepad", notepad.innerHTML); }
+
+		notepad.contentEditable = true;
+
+		if (window.localStorage) { notepad.innerHTML = localStorage.getItem("notepad"); }
+
+		notepad.onchange = save();
+
+		window.onunload = save();
+
+		setInterval(save, 500);
+
+	</script>
+
+</body>
+
+</html>

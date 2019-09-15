@@ -66,6 +66,16 @@ function init() {
 			})();" >search wikipedia</a>
 
 	</p>
+
+	<p>
+	<a href = "
+		JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( 'script' ) );
+			script.src='../../bookmarklets/window-local-storage.js'; } )()
+	" >
+		window local storage
+	</a>
+</p>
 	<p>
 		<a href='javascript:(function(){
 			var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");
@@ -130,6 +140,8 @@ function init() {
 			window open
 		</a>
 	</p>
+
+
 		Open new  pages easily - even with window location
 
 	<p><a href="https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor.html" target="_blank">text edit</a></p>

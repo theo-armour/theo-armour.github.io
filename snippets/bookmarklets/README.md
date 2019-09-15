@@ -69,6 +69,17 @@ script.src='snippets/bookmarklets/theo-armour-bookmarklet.js'; } )()" >
 * https://superuser.com/questions/1053584/is-there-a-way-to-customise-bookmark-icons-in-chrome
 * https://www.minterest.com/how-to-change-chrome-bookmark-icon/
 
+### Bookmarks
+
+Chrome Bookmarks Recovery Tool
+* C:\Users\%username%\AppData\Local\Google\Chrome\User Data into File Explorer.
+* In search bar, type Bookmarks, you will see a list of files named Bookmarks and/or Bookmarks.bak.
+
+Firefox
+* %APPDATA%\Mozilla\Firefox\Profiles\
+* Export as JSON
+
+
 ## Change Log
 
 
