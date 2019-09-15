@@ -5,9 +5,14 @@ init();
 
 function init() {
 
-	if ( !window.divTooToo ) {
+	if (!window.divTooToo) {
 
-		divTooToo = document.body.appendChild( document.createElement( 'div' ) );
+		style = document.body.appendChild(document.createElement('style'));
+		style.innerText =
+			`
+			a { color: blue; opacity: 0.85 }
+		`
+		divTooToo = document.body.appendChild(document.createElement('div'));
 		divTooToo.style.cssText =
 			'background-color: white; border: 1px solid red; max-height: 90%; max-width: 350px; opacity: 0.85; ' +
 			' overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
@@ -15,10 +20,13 @@ function init() {
 	} else {
 
 		divTooToo.hidden = false;
+
 	}
 
+
+
 	divTooToo.innerHTML =
-	`
+		`
 	<button onclick=divTooToo.hidden=true; >x</button>
 
 	<a href="https://theo-armour.github.io/snippets/bookmarklets/theo-armour-bookmarklet.html" title="on server" >theo armour bookmarklet</a>
@@ -50,15 +58,20 @@ function init() {
 	<hr>
 
 	<p>
-		<a href = '
-			JavaScript:( () => {
+		<a href = 'JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( "script" ) );
+			script.src="../../bookmarklets/capture-bookmark.js";
+		} )()' >
+			capture bookmark
+		</a>
+	<p>
 
+	<div id=divCaptureBookmark ></div>
+
+		<a href = 'JavaScript:( () => {
 				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";
 				const windo = open( "https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor/mozilla-text-editor-theo.html", "Windo", features );
-
-			} )()
-
-		' >
+		} )()' >
 			mozilla text editor
 		</a>
 	</p>
@@ -77,10 +90,10 @@ function init() {
 	</p>
 
 	<p>
-	<a href = "JavaScript:( () => {
-		const script=document.head.appendChild( document.createElement( 'script' ) );
-		script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-local-storage.js';
-	} )()" >
+		<a href = "JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( 'script' ) );
+			script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-local-storage.js';
+		} )()" >
 		window local storage
 	</a>
 	</p>
