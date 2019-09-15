@@ -107,10 +107,18 @@ function init() {
 	<p>
 	<a id=aPageData href = 'JavaScript:( () => {
 		const script=document.head.appendChild( document.createElement( "script" ) );
-		script.src="../../bookmarklets/page-data-bookmark.js";
+		script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/page-data-bookmark.js";
 	} )()' >
 		page-data-bookmark
 	</a>
+
+	<a id=aPageData href = 'JavaScript:( () => {
+		const script=document.head.appendChild( document.createElement( "script" ) );
+		script.src="../../bookmarklets/page-data-bookmark.js";
+	} )()' >
+		page-data-bookmark local
+	</a>
+
 	<div id=divData ></div>
 </p>
 	<details>
