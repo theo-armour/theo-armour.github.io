@@ -1,9 +1,10 @@
 # Mozilla Text Editor Read Me
 
+<iframe src="snippets/bookmarklets//mozilla-text-editor/mozilla-text-editor-theo.html" style=height:510px;width:100%;></iframe>
 ## Wish list
 
 * Format HTML
-* Add insert image? Other Midas command?
+* Add insert image? Other Midas commands?
 
 ## Links
 
