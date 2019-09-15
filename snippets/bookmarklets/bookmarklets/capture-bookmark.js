@@ -1,4 +1,6 @@
 
+let fileName;
+let domain
 init()
 
 console.log( '',  );
@@ -88,9 +90,9 @@ function getFileName() {
 
 	domain = document.domain ? document.domain.replace( /\./g, "-") : "file"
 	const title = document.title ? document.title.replace( / /g, "-") : ""
-	fName = domain + "-" + title + ".json";
+	fileName = domain + "-" + title + ".json";
 
-	return fName;
+	return fileName;
 
 }
 
