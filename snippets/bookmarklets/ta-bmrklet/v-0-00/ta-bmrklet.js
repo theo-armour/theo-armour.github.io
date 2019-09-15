@@ -46,7 +46,7 @@ function init() {
 			JavaScript:( () => {
 
 				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";
-				const windo = open( "../../mozilla-text-editor//mozilla-text-editor.html", "Windo", features );
+				const windo = open( "https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor//mozilla-text-editor.html", "Windo", features );
 
 			} )()
 
@@ -82,7 +82,7 @@ function init() {
 		<a href = "
 			JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='../../bookmarklets/216-standard-colors.js'; } )()
+				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/216-standard-colors.js'; } )()
 		" >
 			216 standard colors
 		</a>
@@ -93,7 +93,7 @@ function init() {
 		<a href = '
 			JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( "script" ) );
-				script.src="../../bookmarklets/ascii-table.js"; } )()
+				script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/ascii-table.js"; } )()
 		' >
 			ascii table
 		</a>
@@ -119,7 +119,7 @@ function init() {
 		<a href = "
 			JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='../../bookmarklets/test.js'; } )()
+				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/test.js'; } )()
 		" >
 			test
 		</a>
@@ -129,7 +129,7 @@ function init() {
 		<a href = "
 			JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='../../bookmarklets/window-open.js'; } )()
+				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-open.js'; } )()
 		" >
 			window open
 		</a>
