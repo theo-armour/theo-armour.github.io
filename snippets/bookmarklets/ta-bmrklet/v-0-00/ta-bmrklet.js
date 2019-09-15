@@ -9,8 +9,8 @@ function init() {
 
 		divTooToo = document.body.appendChild( document.createElement( 'div' ) );
 		divTooToo.style.cssText =
-			'background-color: white; border: 1px solid red; max-width: 350px; opacity: 0.85; ' +
-			' padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
+			'background-color: white; border: 1px solid red; height: 90%; max-width: 350px; opacity: 0.85; ' +
+			' overflow: auto; padding: 10px; position: fixed; right: 30px; top: 20px; z-index:100000; ';
 
 	}
 
@@ -74,7 +74,7 @@ function init() {
 	<p>
 	<a href = "JavaScript:( () => {
 		const script=document.head.appendChild( document.createElement( 'script' ) );
-		script.src='../../bookmarklets/window-local-storage.js';
+		script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-local-storage.js';
 	} )()" >
 		window local storage
 	</a>
