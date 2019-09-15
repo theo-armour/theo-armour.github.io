@@ -14,26 +14,31 @@ value='You are now in a GitHub web page view - Click this button to view this re
 * [theo-armour-bookmarklet.html]( snippets/bookmarklets/theo-armour-bookmarklet.html )
 
 
-<p>
 <a href = "JavaScript:( function(){
 const script=document.head.appendChild( document.createElement( 'script' ) );
 script.src='https://rawgit.com/theo-armour/theo-armour.github.io/master/snippets/bookmarklets/theo-armour-bookmarklet.js'; } )()" >
-theo armour bookmarklet</a>
-</p>
+	theo armour bookmarklet
+</a>
 
-<p>
-<a href = "JavaScript:( function(){
+<a href = "JavaScript:( () => {
 const script=document.head.appendChild( document.createElement( 'script' ) );
 script.src='snippets/bookmarklets/theo-armour-bookmarklet.js'; } )()" >
-theo armour bookmarklet local</a>
-</p>
+	theo armour bookmarklet local
+</a>
+
 
 
 ## Concept
-
+*
+* Do things while visiting or "inside" a web page
+* No need to open new tab
+* No need to leave current view or tab
 
 ## Lessons learned
 
+* Rename .js file to .html and it just runs
+* Markdown may contain bookmarklets when included as HTML anchor items
+* Arrow functions are OK in a bookmarklet
 * You cannot use window.open to fetch a web page and then apply new CSS to the freshly loaded pages
 	* It's a CORS thing
 
@@ -43,7 +48,7 @@ theo armour bookmarklet local</a>
 
 
 
-### Portals
+### Bookmerklet Portals
 
 * https://gist.github.com/TheFrostlixen/9e5c66dc8916e95e6065
 * http://tantek.com/favelets/ < many
@@ -57,6 +62,12 @@ theo armour bookmarklet local</a>
 * http://zz85.github.io/zz85-bookmarklets/
 * https://github.com/zz85/zz85-bookmarklets
 
+
+### Change bookmark favicon
+
+* https://beebom.com/how-change-bookmark-icons-chrome/
+* https://superuser.com/questions/1053584/is-there-a-way-to-customise-bookmark-icons-in-chrome
+* https://www.minterest.com/how-to-change-chrome-bookmark-icon/
 
 ## Change Log
 

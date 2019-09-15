@@ -892,9 +892,10 @@ function getShape( points ) {
 		let geometry, material, mesh;
 		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
+		const v2 = ( x, y ) => new THREE.Vector2( x, y );
 //
 
-		shape = new THREE.Shape( [ v2( 0, 10), v2( 0, 50), v2( 30, 60), v2( 40, 10) ] );
+		shape = new THREE.Shape( [ v2( 0, 10 ), v2( 0, 50 ), v2( 30, 60 ), v2( 40, 10 ) ] );
 		tee = new THREE.Shape( [ v2( 0, 0 ), v2( 0, 50 ), v2( 10, 50 ), v2( 10, 30 ), v2( 50, 30 ), v2( 50, 20 ) , v2( 10, 20 ), v2( 10, 0 ) ] );
 
 // not		geometry = shape.extrude( { amount: 10, bevelEnabled: false } );

@@ -106,7 +106,7 @@ function drawMultipleMeshes( count = 50 ) {
 
 ### GEOMETRY / Multiple
 
-function addGeometry() {
+function addGeometry( count = 250 ) {
 
 	const  geometries = [
 
@@ -115,12 +115,11 @@ function addGeometry() {
 		new THREE.DodecahedronGeometry( 05 ),
 		new THREE.SphereBufferGeometry( 5, 12, 8 ),
 		new THREE.TorusBufferGeometry( 10, 5 ),
-		new THREE.TorusKnotBufferGeometry( 10, 5 ),
-		new THREE.PolyhedronBufferGeometry(),
+		new THREE.TorusKnotBufferGeometry( 10, 5 )
 	];
 
 
-	for ( let j = 0; j < 250; j++ ) {
+	for ( let i = 0; j < count i++ ) {
 
 		const geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
 		const material = new THREE.MeshNormalMaterial();
@@ -314,7 +313,7 @@ function addSomeLights() {
 		scene.add( new THREE.CameraHelper( lightDirectional.shadow.camera ) );
 
 
-## Lights
+## Lights addlights
 
 		const lightAmbient = new THREE.AmbientLight( 0x444444 );
 		scene.add( lightAmbient );
