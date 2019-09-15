@@ -39,8 +39,7 @@ function init() {
 
 		<div class=titleCBM >description: </div><textarea style=width:100%; ></textarea>
 
-	`
-
+	`;
 
 	divCaptureBookmark.innerHTML = htm
 

@@ -5,6 +5,8 @@ init();
 
 function init() {
 
+	let path = location.protocol === "file:" ? "../../" : "https://theo-armour.github.io/snippets/bookmarklets/";
+
 	if (!window.divTooToo) {
 
 		style = document.body.appendChild(document.createElement('style'));
@@ -60,7 +62,7 @@ function init() {
 	<p>
 		<a href = 'JavaScript:( () => {
 			const script=document.head.appendChild( document.createElement( "script" ) );
-			script.src="../../bookmarklets/capture-bookmark.js";
+			script.src="${ path }bookmarklets/capture-bookmark.js";
 		} )()' >
 			capture bookmark
 		</a>
@@ -70,7 +72,7 @@ function init() {
 
 		<a href = 'JavaScript:( () => {
 				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";
-				const windo = open( "https://theo-armour.github.io/snippets/bookmarklets/mozilla-text-editor/mozilla-text-editor-theo.html", "Windo", features );
+				const windo = open( "${ path }/mozilla-text-editor/mozilla-text-editor-theo.html", "Windo", features );
 		} )()' >
 			mozilla text editor
 		</a>
@@ -92,7 +94,7 @@ function init() {
 	<p>
 		<a href = "JavaScript:( () => {
 			const script=document.head.appendChild( document.createElement( 'script' ) );
-			script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/window-local-storage.js';
+			script.src='${ path }bookmarklets/window-local-storage.js';
 		} )()" >
 		window local storage
 	</a>
@@ -108,7 +110,7 @@ function init() {
 	<p>
 		<a href = "JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/216-standard-colors.js';
+				script.src='${ path}bookmarklets/216-standard-colors.js';
 		} )()" >
 			216 standard colors
 		</a>
@@ -116,7 +118,7 @@ function init() {
 	<p>
 		<a href = 'JavaScript:( () => {
 			const script=document.head.appendChild( document.createElement( "script" ) );
-			script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/ascii-table.js";
+			script.src="${ path }bookmarklets/ascii-table.js";
 		} )()' >
 			ascii table
 		</a>
