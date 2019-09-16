@@ -1,5 +1,34 @@
+# Drawing
 
-// ### CANVAS
+## Android
+
+## Auodesk Sketchbook
+
+* Can set image size
+* Saves directly to Drive
+* Many cool brushes
+* UI complex though
+
+### Google Canvas
+
+* Can export png to Google Drive
+* Then open with irfanview
+
+### OneNotr
+
+* Export to PDF
+
+### Squid
+
+
+
+### Evernote
+
+
+
+
+
+### CANVAS
 
 		canvas = parent.locationMap.appendChild( document.createElement( 'canvas' ) );
 		canvas.width = canvas.height = size;
