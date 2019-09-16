@@ -7,41 +7,17 @@ console.log( '',  );
 
 function init() {
 
-	let path = location.protocol === "file:" ? "../../" : "https://theo-armour.github.io/snippets/bookmarklets/";
-
-	if (!window.divCaptureBookmark) {
-
-		style = document.body.appendChild(document.createElement('style'));
-		style.innerText =
-			`
-			a { color: blue; opacity: 0.85 }
-			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 7rem; }
-			.inputCBM { width:20rem; }
-
-			#divCaptureBookmark {background-color: white; border: 1px solid red; max-height: 90%; width: 350px; opacity: 0.95;
-				overflow: auto; padding:  10px; position: fixed; right: 30px; resize: both; top: 20px; z-index:100000; }
-
-		`;
-
-		divCaptureBookmark = document.body.appendChild(document.createElement('div'));
-		divCaptureBookmark.id = "divCaptureBookmark";
-
-	} else {
-
-		divTooToo.hidden = false;
-
-	}
-
-
 	styleCBM = document.body.appendChild(document.createElement('style'));
 	styleCBM.innerText =
 		`
-
+		.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 7rem; }
+		.inputCBM { width:20rem; }
 	`
 
-	divCaptureBookmark.style.width="30rem";
+	divTooToo.style.width="30rem";
 
 	const date = new Date().toISOString();
+
 
 
 	const htm =
@@ -125,11 +101,11 @@ function getUuidv4() {
 
 	return ( [ 1e7 ] + -1e3 + -4e3 + -8e3 + -1e11 ).replace( /[018]/g, c =>
 		( c ^ crypto.getRandomValues( new Uint8Array( 1 )  )[ 0 ] & 15 >> c / 4 ).toString( 16 )
-	)
+	);
 
 }
 
-function saveFile() {
+saveFile = function() {
 
 	//const strings = BOP.jsonLines.map( jsonl => JSON.stringify( jsonl ) ).join( "\n" );
 
@@ -143,4 +119,4 @@ function saveFile() {
 	a.click();
 	a = null;
 
-}
+};

@@ -62,7 +62,7 @@ function init() {
 	<p>
 		<a href = 'JavaScript:( () => {
 			const script=document.head.appendChild( document.createElement( "script" ) );
-			script.src="${ path }bookmarklets/capture-bookmark.js";
+			script.src="${ path }ta-bmrklet/v-0-00/capture-bookmark.js";
 		} )()' >
 			capture bookmark
 		</a>
