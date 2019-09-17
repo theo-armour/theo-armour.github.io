@@ -1,4 +1,5 @@
 
+var version = "0.00.00";
 var fileName;
 var domain;
 
@@ -80,13 +81,16 @@ function init() {
 		<div class=titleCBM >json: </div><textarea id=txtJson style=height:15rem;width:100%; ></textarea>
 
 		<button onclick=saveFile(); >save</button>
+
+		<span style=float:right >${ version }</span>
 	`;
 
 	divCaptureBookmark.innerHTML = htm;
 
 	let iconLink = document.head.querySelector( '[rel=icon]' );
-	console.log( 'iconLink', iconLink );
+	//console.log( 'iconLink', iconLink );
 
+	let iconHref;
 
 	if ( iconLink && iconLink.href.toLowerCase().startsWith( "http" ) ) {
 
@@ -97,7 +101,6 @@ function init() {
 		iconHref = `https://www.google.com/s2/favicons?domain=${ document.domain }`;
 
 	}
-
 
 	inpFavicon.value = iconHref;
 
@@ -210,7 +213,7 @@ function addTagSets() {
 
 	divTagSets.innerHTML = htm;
 
-};
+}
 
 
 function addTag( select ) {
