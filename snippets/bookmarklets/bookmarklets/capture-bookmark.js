@@ -1,5 +1,5 @@
 
-var version = "0.00.00";
+var version = "0.00.01";
 var fileName;
 var domain;
 
@@ -124,7 +124,7 @@ function init() {
 function updateJson() {
 
 
-	const tags = `["${ txtTags.value.slice().replace( /,/g, '","') }"]`;
+	const tags = `${ txtTags.value.split( ",").map( item => item.trim() )
 
 	//console.log( 'document.lastModified', document.lastModified );
 
