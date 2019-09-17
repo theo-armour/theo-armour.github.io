@@ -1,6 +1,6 @@
 
-let fileName;
-let domain;
+var fileName;
+var domain;
 
 type = ["article","documents","kits","manifesto","paper","pdf","post","primary","products","secondary","services","video"];
 
@@ -43,7 +43,7 @@ function init() {
 
 	} else {
 
-		divTooToo.hidden = false;
+		divCaptureBookmark.hidden = false;
 
 	}
 
@@ -53,6 +53,8 @@ function init() {
 
 	const htm =
 	`
+		<button onclick=divCaptureBookmark.hidden=true; style=float:right >x</button>
+
 		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" >
 
 		<div class=titleCBM >url: </div><input id=inpUrl oninput=updateJson(); class=inputCBM value="${ location.href }" >
