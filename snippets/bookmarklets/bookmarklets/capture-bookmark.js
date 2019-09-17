@@ -1,5 +1,5 @@
 
-var version = "0.00.02";
+var version = "0.00.03";
 var fileName;
 var domain;
 
@@ -31,10 +31,13 @@ function init() {
 			a { opacity: 1 }
 			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 5rem; }
 			.inputCBM { width:20rem; }
+			#divCaptureBookmark {background-color: white; border: 1px solid red;
 
-			#divCaptureBookmark {background-color: white; border: 1px solid red; max-height: 90%;
+				font-size: medium;
+				max-height: 90%;
 				width: 30rem; opacity: 0.95;
-				overflow: auto; padding:  10px; position: fixed; right: 30px; resize: both; top: 20px; z-index:100000; }
+				overflow: auto; padding: 10px; position: fixed; right: 30px; resize: both;
+				top: 20px; z-index:100000; }
 
 		`;
 
@@ -56,19 +59,19 @@ function init() {
 	`
 		<button onclick=divCaptureBookmark.hidden=true; style=float:right >x</button>
 
-		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" >
+		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" ></div>
 
 		<div><div class=titleCBM >url: </div><input id=inpUrl oninput=updateJson(); class=inputCBM value="${ location.href }" ></div>
 
-		<div class=titleCBM >filename: </div><input id=inpFileName oninput=updateJson(); class=inputCBM value="${  getFileName() }" >
+		<div><div class=titleCBM >filename: </div><input id=inpFileName oninput=updateJson(); class=inputCBM value="${  getFileName() }" ></div>
 
-		<div class=titleCBM >favicon: </div><input id=inpFavicon oninput=updateJson(); class=inputCBM >
+		<div><div class=titleCBM >favicon: </div><input id=inpFavicon oninput=updateJson(); class=inputCBM ></div>
 
-		<div class=titleCBM >images: </div><input id=inpImages oninput=updateJson(); class=inputCBM >
+		<div><div class=titleCBM >images: </div><input id=inpImages oninput=updateJson(); class=inputCBM ></div>
 
-		<div class=titleCBM >uuid: </div><input id=inpUuid class=inputCBM  value="${ getUuidv4() }" >
+		<div><div class=titleCBM >uuid: </div><input id=inpUuid class=inputCBM value="${ getUuidv4() }" ></div>
 
-		<div class=titleCBM >date:</div><input id=inpDateAdd style=width:12rem; value="${ date }" >
+		<div><div class=titleCBM >date:</div><input id=inpDateAdd class=inputCBM  value="${ date }" ></div>
 
 		<br>
 
