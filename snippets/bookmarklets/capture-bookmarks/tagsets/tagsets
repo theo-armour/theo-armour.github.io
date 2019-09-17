@@ -1,0 +1,9 @@
+{"name":"type","dateAdd":"2019-08-24T19:36:29.119Z","dateUpdate":"2019-08-24T19:36:29.119Z",
+"id":"c69cc10e-2c71-4394-a6e0-0fb8173e472f","type":"tagset",
+
+"tags":["article","documents","kits","manifesto","paper","pdf","post","primary","products","secondary","services","video"],"description":"tags"}
+{"name":"organization","dateAdd":"2019-08-24T19:52:08.782Z","dateUpdate":"2019-08-24T19:52:08.782Z","id":"edfc70cc-3cd3-4b14-bd94-06771ec3bf96","type":"tagset","tags":["american-institute-architects","autodesk","carnagie-mellon","eth-zurich","george-brown","hacker-news","mit","stanford","ted","wikihouse","wikipedia"],"description":"tags"}
+{"name":"people","dateAdd":"2019-08-24T20:03:23.522Z","dateUpdate":"2019-08-24T20:03:23.522Z","id":"596ed74d-5cbe-44c4-833c-be21b0a9800b","type":"tagset","tags":["alastair-parvin","mitchell-joachim","sebastien-lucas","thomas-lomee"],"description":"tags"}
+{"name":"products","dateAdd":"2019-08-24T20:18:28.033Z","dateUpdate":"2019-08-24T20:18:28.033Z","
+id":"2a8b6f56-4c6b-4484-abe7-67a08fb505de","type":"tagset",
+"tags":["lego","sketchup","spacegoo","thingiverse"],"description":"tags"}

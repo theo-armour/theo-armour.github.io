@@ -1,9 +1,22 @@
 
 let fileName;
-let domain
+let domain;
+
+type = ["article","documents","kits","manifesto","paper","pdf","post","primary","products","secondary","services","video"];
+
+year = ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"];
+
+source = ["academia","blog","designer","configurators","organization","person","portal","publisher","reference","vendor"];
+
+stats =  [ "iframe-ok", "noframe","deprecated","dead", "duplicate", "stale", "off-topic", "favorite"];
+
+tagSets = [ year, type, source, stats ];
+
+tagNames = ["year", "type", "source", "status" ];
+
+
 init()
 
-console.log( '',  );
 
 function init() {
 
@@ -14,11 +27,12 @@ function init() {
 		style = document.body.appendChild(document.createElement('style'));
 		style.innerText =
 			`
-			a { color: blue; opacity: 0.85 }
+			a { opacity: 1 }
 			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 7rem; }
 			.inputCBM { width:20rem; }
 
-			#divCaptureBookmark {background-color: white; border: 1px solid red; max-height: 90%; width: 350px; opacity: 0.95;
+			#divCaptureBookmark {background-color: white; border: 1px solid red; max-height: 90%;
+				width: 30rem; opacity: 0.95;
 				overflow: auto; padding:  10px; position: fixed; right: 30px; resize: both; top: 20px; z-index:100000; }
 
 		`;
@@ -32,14 +46,6 @@ function init() {
 
 	}
 
-
-	styleCBM = document.body.appendChild(document.createElement('style'));
-	styleCBM.innerText =
-		`
-
-	`
-
-	divCaptureBookmark.style.width="30rem";
 
 	const date = new Date().toISOString();
 
@@ -62,9 +68,11 @@ function init() {
 
 		<br>
 
-		<div class=titleCBM >tags: </div><textarea id=txtTags style=width:100%; ></textarea>
+		<div class=titleCBM >tags: </div><textarea id=txtTags oninput=updateJson(); style=width:100%; ></textarea>
 
-		<div class=titleCBM >description: </div><textarea id=txtDescription style=width:100%; ></textarea>
+		<div id=divTagSets ></div>
+
+		<div class=titleCBM >description: </div><textarea id=txtDescription oninput=updateJson(); style=width:100%; ></textarea>
 
 		<div class=titleCBM >json: </div><textarea id=txtJson style=height:15rem;width:100%; ></textarea>
 
@@ -73,18 +81,43 @@ function init() {
 
 	divCaptureBookmark.innerHTML = htm;
 
-	inpFavicon.value = `https://www.google.com/s2/favicons?domain=${ document.domain }`;
+	let iconLink = document.head.querySelector( '[rel=icon]' );
+	console.log( 'iconLink', iconLink );
+
+
+	if ( iconLink && iconLink.href.toLowerCase().startsWith( "http" ) ) {
+
+		iconHref = iconLink.href;
+
+	} else {
+
+		iconHref = `https://www.google.com/s2/favicons?domain=${ document.domain }`;
+
+	}
+
+
+	inpFavicon.value = iconHref;
+
+
+	addTagSets();
+
+	const descriptionMeta = document ? document.head.querySelector( '[name=description]' ) : "" ;
+	//console.log( 'descriptionMeta', descriptionMeta, descriptionMeta.content );
+
+	txtDescription.value = descriptionMeta ? descriptionMeta.content : "No description element found in HTML file";
 
 	updateJson();
 
 }
+
+
 
 function updateJson() {
 
 
 	const tags = `["${ txtTags.value.slice().replace( /,/g, '","') }"]`;
 
-	console.log( 'document.lastModified', document.lastModified );
+	//console.log( 'document.lastModified', document.lastModified );
 
 	const txt =
 `{
@@ -108,9 +141,9 @@ function updateJson() {
 
 function getFileName() {
 
-	console.log( '', location );
+	//console.log( '', location );
 
-	console.log( '', location.domain );
+	//console.log( '', location.domain );
 
 	domain = document.domain ? document.domain.replace( /\./g, "-") : "file"
 	const title = document.title ? document.title.replace( / /g, "-") : ""
@@ -144,3 +177,42 @@ function saveFile() {
 	a = null;
 
 }
+
+
+
+
+function addTagSets() {
+
+	let htm = "";
+
+	tagSets.forEach( ( tags, index ) => {
+
+		//console.log( 'tags', tags  );
+
+		const options = tags.map( tag => `<option>${ tag }</option>` ).join();
+		//console.log( 'options ', options );
+
+		htm +=
+		`<div style=display:inline-block title="${ tagNames[ index ] }" >
+
+			${ tagNames[ index ]  }<br>
+			<select id=TGSsel${ tagNames[ index ] } onclick=addTag(this); size=8>${ options }</select>
+
+		</div> &nbsp; `;
+
+	} );
+
+	divTagSets.innerHTML = htm;
+
+};
+
+
+function addTag( select ) {
+
+	const comma = txtTags.value === "" || txtTags.value.endsWith( ",") ? "" : ",";
+
+	txtTags.value += comma + select.value;
+
+	updateJson();
+
+};
