@@ -1,0 +1,13 @@
+{
+"url": "https://digg.com/",
+"title": "Digg - What the Internet is talking about right now",
+"name": "digg-com.json",
+"dateAdd": "2019-09-17T02:18:57.025Z",
+"dateUpdate": "2019-09-17T02:18:57.025Z",
+"id": "296ef2e3-1090-4bbd-bada-65a415cacec5",
+"type": "url",
+"images": [  ],
+"favicon": "https://digg.com/static/images/digg-favicon.png",
+"tags": "secondary,ggregator",
+"description": "Digg is the homepage of the internet, featuring the best articles, videos, and original content that the web is talking about right now."
+}
