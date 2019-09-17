@@ -1,5 +1,5 @@
 
-var version = "0.00.03";
+var version = "0.00.05";
 var fileName;
 var domain;
 
@@ -29,8 +29,8 @@ function init() {
 		style.innerText =
 			`
 			a { opacity: 1 }
-			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 5rem; }
-			.inputCBM { width:20rem; }
+			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 15%; }
+			.inputCBM { width:80%; }
 			#divCaptureBookmark {background-color: white; border: 1px solid red;
 
 				font-size: medium;
