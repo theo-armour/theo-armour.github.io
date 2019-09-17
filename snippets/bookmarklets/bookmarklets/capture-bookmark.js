@@ -178,7 +178,7 @@ function saveFile() {
 	const blob = new Blob( [ strings ] );
 	let a = document.body.appendChild( document.createElement( 'a' ) );
 	a.href = window.URL.createObjectURL( blob );
-	a.download = fileName;
+	a.download = inpFileName.value;
 	a.click();
 	a = null;
 
