@@ -57,7 +57,7 @@ function init() {
 
 		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" >
 
-		<div class=titleCBM >url: </div><input id=inpUrl oninput=updateJson(); class=inputCBM value="${ location.href }" >
+		<div><div class=titleCBM >url: </div><input id=inpUrl oninput=updateJson(); class=inputCBM value="${ location.href }" ></div>
 
 		<div class=titleCBM >filename: </div><input id=inpFileName oninput=updateJson(); class=inputCBM value="${  getFileName() }" >
 
