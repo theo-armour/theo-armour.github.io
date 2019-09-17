@@ -103,7 +103,7 @@ function init() {
 
 	const tags = document.head.querySelector( '[name=keywords]' );
 	//console.log( 'tags', tags, tags.content );
-	txtTags.value = tags.content;
+	txtTags.value = tags ?  tags.content : "";
 
 	addTagSets();
 
