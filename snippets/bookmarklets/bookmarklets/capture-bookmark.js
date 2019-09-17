@@ -52,15 +52,15 @@ function init() {
 
 	const htm =
 	`
-		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson() value="${ document.title }" >
+		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" >
 
-		<div class=titleCBM >url: </div><input id=inpUrl class=inputCBM value="${ location.href }" >
+		<div class=titleCBM >url: </div><input id=inpUrl oninput=updateJson(); class=inputCBM value="${ location.href }" >
 
-		<div class=titleCBM >filename: </div><input id=inpFileName class=inputCBM value="${  getFileName() }" >
+		<div class=titleCBM >filename: </div><input id=inpFileName oninput=updateJson(); class=inputCBM value="${  getFileName() }" >
 
-		<div class=titleCBM >favicon: </div><input id=inpFavicon class=inputCBM >
+		<div class=titleCBM >favicon: </div><input id=inpFavicon oninput=updateJson(); class=inputCBM >
 
-		<div class=titleCBM >images: </div><input id=inpImages class=inputCBM>
+		<div class=titleCBM >images: </div><input id=inpImages oninput=updateJson(); class=inputCBM >
 
 		<div class=titleCBM >uuid: </div><input id=inpUuid class=inputCBM  value="${ getUuidv4() }" >
 
@@ -98,10 +98,13 @@ function init() {
 
 	inpFavicon.value = iconHref;
 
+	const tags = document.head.querySelector( '[name=keywords]' );
+	//console.log( 'tags', tags, tags.content );
+	txtTags.value = tags.content;
 
 	addTagSets();
 
-	const descriptionMeta = document ? document.head.querySelector( '[name=description]' ) : "" ;
+	const descriptionMeta = document.head.querySelector( '[name=description]' );
 	//console.log( 'descriptionMeta', descriptionMeta, descriptionMeta.content );
 
 	txtDescription.value = descriptionMeta ? descriptionMeta.content : "No description element found in HTML file";
