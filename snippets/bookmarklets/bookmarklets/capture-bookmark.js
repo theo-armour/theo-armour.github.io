@@ -24,11 +24,11 @@ function init() {
 
 	if (!window.divCaptureBookmark) {
 
-		style = document.body.appendChild(document.createElement('style'));
+		style = document.head.appendChild(document.createElement('style'));
 		style.innerText =
 			`
 			a { opacity: 1 }
-			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 7rem; }
+			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 5rem; }
 			.inputCBM { width:20rem; }
 
 			#divCaptureBookmark {background-color: white; border: 1px solid red; max-height: 90%;
@@ -39,6 +39,7 @@ function init() {
 
 		divCaptureBookmark = document.body.appendChild(document.createElement('div'));
 		divCaptureBookmark.id = "divCaptureBookmark";
+
 
 	} else {
 
