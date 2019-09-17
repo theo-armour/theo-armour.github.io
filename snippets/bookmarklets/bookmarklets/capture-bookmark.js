@@ -152,7 +152,7 @@ function getFileName() {
 	const title = document.title ? document.title.replace( / /g, "-") : ""
 	fileName = domain + "-" + title + ".json";
 
-	return fileName;
+	return fileName.toLowerCase();
 
 }
 
