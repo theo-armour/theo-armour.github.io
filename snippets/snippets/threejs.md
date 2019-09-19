@@ -1041,6 +1041,9 @@ http://mrdoob.github.io/three.js/docs/#Reference/Math/Color
 
 	}
 
+* https://www.w3schools.com/colors/colors_names.asp
+* https://htmlcolorcodes.com/color-names/
+
 
 THREE.ColorKeywords = { 'aliceblue': 0xF0F8FF, 'antiquewhite': 0xFAEBD7, 'aqua': 0x00FFFF, 'aquamarine': 0x7FFFD4, 'azure': 0xF0FFFF,
 'beige': 0xF5F5DC, 'bisque': 0xFFE4C4, 'black': 0x000000, 'blanchedalmond': 0xFFEBCD, 'blue': 0x0000FF, 'blueviolet': 0x8A2BE2,

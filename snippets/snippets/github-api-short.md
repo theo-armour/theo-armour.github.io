@@ -43,6 +43,8 @@ download_url from file or tree
 * https://api.github.com/repos/jaanga/jaanga.github.io/git/trees/master?recursive=1
 * https://api.github.com/repos/ladybug-tools/spider/git/trees/master?recursive=1
 
+&per_page=100
+
 
 ## GrapQL
 

@@ -774,9 +774,16 @@ parseInt( string, 10 ) << include the radix
 
 ### JSON
 
-JSON.stringify
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 
-console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, '\t' ) );
+
+### JSON.stringify
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+* https://thecodebarbarian.com/the-80-20-guide-to-json-stringify-in-javascript.html
+
+console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, "\t" ) );
+
 // Result:
 // '{
 //     "alpha": A,
