@@ -100,6 +100,16 @@ Cmd+Option+1 (Mac)
 selection: Ctrl-K, Ctrl-F
 
 
+### Beautify
+
+* https://code.visualstudio.com/updates/vMarch
+* https://github.com/HookyQR/VSCodeBeautify
+* https://medium.com/@bretcameron/the-2019-guide-to-beautifying-visual-studio-code-32470910fc5b
+* https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode
+* https://code.visualstudio.com/docs/getstarted/settings
+	* see javascript.format.* and typescript.format.*). 
+
+
 ## GitHub integration
 
 * https://code.visualstudio.com/docs/editor/versioncontrol
