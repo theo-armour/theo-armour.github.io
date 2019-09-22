@@ -10,13 +10,14 @@
 		}
 
 		body {
-			margin: 0;
+
 		}
 
 		:focus {
 			outline: none;
 			border: 0px solid red;
 		}
+
 	</style>
 </head>
 
@@ -28,17 +29,17 @@
 
 		// http://jkirchartz.com/demos/
 
-		function save() { localStorage.setItem("notepad", notepad.innerHTML); }
+		function save() { localStorage.setItem( "notepad", notepad.innerHTML ); }
 
 		notepad.contentEditable = true;
 
-		if (window.localStorage) { notepad.innerHTML = localStorage.getItem("notepad"); }
+		if ( window.localStorage ) { notepad.innerHTML = localStorage.getItem( "notepad" ); }
 
 		notepad.onchange = save();
 
 		window.onunload = save();
 
-		setInterval(save, 500);
+		setInterval( save, 500 );
 
 	</script>
 
