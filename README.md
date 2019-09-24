@@ -12,7 +12,7 @@ This is the eleventh significant update to theo-armour.github.io. None of them h
 
 Here is a snapshot of what I - and some of my friends - have been playing with:
 
-[GubGub R2 for Theo Armour]( https://theo-armour.github.io/ta2.html )
+[GubGub for Theo Armour]( https://pushme-pullyou.github.io/gubgub )
 
 
 
