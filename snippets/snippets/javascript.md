@@ -1,6 +1,6 @@
 
 	const div = document.body.appendChild( document.createElement( 'div' ) );
-	div.style.cssText = ' max-width: 500px, position: absolute: right: 30px, top: 20px;'
+	div.style.cssText = ' width: 500px, position: absolute: right: 30px, top: 20px;'
 
 
 ## base
@@ -68,12 +68,6 @@ template strings.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
 
 
-### GitHub Source
-
-https://cdnjs.com/
-src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r66/three.min.js
-src=http://rawgit.com/mrdoob/three.js/dev/build/three.min.jsf
-
 
 ### Scroll into View
 
@@ -90,6 +84,20 @@ use this inside a function when creating global variables...
 just use 'this' wherever possible
 
 
+
+### Ajax
+
+
+function requestFile( url ) {
+
+	xhr = new XMLHttpRequest();
+	xhr.open( 'GET', url, true );
+	xhr.onerror = ( xhr ) => console.log( 'error:', xhr  );
+	xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
+	xhr.onload = ( xhr ) => console.log( 'response', xhr.target.response );
+	xhr.send( null );
+
+}
 
 
 ### AJAX 2
@@ -337,6 +345,11 @@ getComputedStyle(element).getPropertyValue("--my-var");
 
 // set variable on inline style
 element.style.setProperty("--my-var", jsVar + 4);
+
+
+### CLASS
+
+element.classList.add("mystyle");
 
 
 ### DATES
