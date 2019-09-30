@@ -549,11 +549,12 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ### EVENTS Key cursor
 
-https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+* https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+* https://developer.mozilla.org/en-US/docs/Web/API/Event
 
+	window.addEventListener( 'hashchange', onHashChange, false )
 
 	let event = new Event( "bingo", {"bubbles": true, "cancelable": false, detail: true } );
-
 
 //	window.addEventListener( "bingo", addAvatar );
 	window.addEventListener( "bingo", addControls, false );

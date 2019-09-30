@@ -18,6 +18,15 @@ https://rawgit.com/
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js@r105/build/three.min.js
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.min.js
 
+stats
+
+* https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js
+* https://cdn.jsdelivr.net/gh/mrdoob/stats.js@master/build/stats.min.js
+
+* https://rawgit.com/ladybug-tools/spider-gbxml-tools/
+* https://cdn.jsdelivr.net/gh/ladybug-tools/spider-gbxml-tools@
+
+
 multiple
 
 * https://cdn.jsdelivr.net/combine/gh/mrdoob/three.js@r100/build/three.min.js,gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js

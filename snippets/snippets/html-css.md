@@ -161,7 +161,7 @@ Adobe Edge: https://edgewebfonts.adobe.com/
 
 body {background-color: #ffffff; color: #555; font-family: 'inconsolata'; font-size: 15px; height: 100%;
 	line-height: 18px; margin: 0px; overflow: hidden; }
-	
+
 ### CSS Overflow
 
 overflow
@@ -223,6 +223,7 @@ function loadCss() {
 
 
 ## CSS Tips
+
 ### CSS Center with CSS
 
 http://codepen.io/shshaw/full/gEiDt
