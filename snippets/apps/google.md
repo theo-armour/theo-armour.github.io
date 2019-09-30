@@ -43,6 +43,10 @@ https://books.google.com/books?isbn=0738552127
 
 
 ## Google Drive
+
+keyboard shortcuts: ?
+add symlink: shift-z
+
 Google drive hosting files
 
 1. Make public
@@ -51,3 +55,5 @@ Google drive hosting files
 https://drive.google.com/folderview?id=0B0g809SWki8tUVZnWFZXSFgzSWM&usp=sharing
 
 https://googledrive.com/host/0B0g809SWki8tUVZnWFZXSFgzSWM/theo-logo.ico
+
+
