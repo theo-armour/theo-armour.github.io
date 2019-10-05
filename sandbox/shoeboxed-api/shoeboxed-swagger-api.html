@@ -85,7 +85,7 @@
 
 <script>
 
-const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/blob/master/sandbox/shoeboxed-api/shoeboxed-api.html";
+const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/blob/master/sandbox/shoeboxed-api/shoeboxed-swagger-api.html";
 const urlSourceCodeIcon = "https://pushme-pullyou.github.io/github-mark-32.png";
 
 init();
@@ -219,6 +219,8 @@ function getSearch( ) {
 
 	console.log( 'code', code );
 
+	const redirect = "https://api.shoeboxed.com/v2/explorer/o2c.html";
+
 	inpCredentials.value = code;
 
 	setStorageCredentials();
@@ -232,7 +234,7 @@ function getSearch( ) {
 curl -v -XPOST https://id.shoeboxed.com/oauth/token \
 -d code=${ code } \
 -d grant_type=authorization_code \
---data-urlencode redirect_uri='https://theo-armour.github.io/sandbox/shoeboxed-api/shoeboxed-api.html' \
+--data-urlencode redirect_uri='${ redirect }' \
 -u ${ id }:${ secret }
 	`
 
