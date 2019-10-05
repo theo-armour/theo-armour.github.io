@@ -111,14 +111,21 @@ function setIt() {
 	</p>
 	`;
 
-	if ( location.hash ) { getHash(); }
+	if ( location.search ) { getHash(); }
 }
 
 
 function getHash( ) {
 
-	console.log( 'hash', location.hash );
+	console.log( 'search', location.search );
 
+	codeArr = location.search.match( /code=(.*?)&/ );
+
+
+	code = codeArr ? codeArr[ 1 ] : "";
+
+	console.log( 'code', code );
+	
 }
 
 
