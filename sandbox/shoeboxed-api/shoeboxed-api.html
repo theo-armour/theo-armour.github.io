@@ -111,11 +111,16 @@ function setStorageSecret() {
 
 
 
-function setIt() {
+function restIt() {
 
 	const id = localStorage.getItem( 'sbId' );
+	const redirect = "";
 
-	link = `https://id.shoeboxed.com/oauth/authorize?client_id=${ id }&response_type=code&scope=all&redirect_uri=https://theo-armour.github.io/sandbox/showbarks-api/showbarks-api.html&state=01234567888`;
+	link =
+	`
+		https://id.shoeboxed.com/oauth/authorize?
+		client_id=${ id }&response_type=code&scope=all&redirect_uri=${ redirect }&state=01234567888
+	`;
 
 	divContents.innerHTML +=
 	`<p>
@@ -128,6 +133,7 @@ function setIt() {
 
 
 
+// looks like not possible
 
 function zzfetchIt(){
 
@@ -144,6 +150,7 @@ function zzfetchIt(){
 
 }
 
+
 function fetchIt(){
 
 	const id = localStorage.getItem( 'sbId' );
@@ -153,7 +160,7 @@ function fetchIt(){
 
 	)
 	.then( response => response.text() )
-	.then( text => console.log( 'text', text ); );;
+	.then( text => console.log( 'text', text ) );
 
 }
 
