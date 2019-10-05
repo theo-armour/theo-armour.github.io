@@ -135,6 +135,7 @@ function fetchIt(){
 
 	fetch( 'https://id.shoeboxed.com/oauth/authorize', {
 		method: 'POST',
+		mode: "no-cors",
 		body: `client_id=${ id }&response_type=code&scope=all&redirect_uri=https://theo-armour.github.io/sandbox/showbarks-api/showbarks-api.html&state=01234567888`,
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded'
