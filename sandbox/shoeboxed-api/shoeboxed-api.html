@@ -62,9 +62,15 @@
 
 		<p>
 
-			<button onclick=curlhUser() >curl user</button>
+			<button onclick=curlUser() >curl user</button>
+
 			<button onclick=fetchUser() >fetch user</button>
 
+		</p>
+
+		<p>
+			<button onclick=curlDocuments(); >curl documents</button>
+			
 		</p>
 	</nav>
 
@@ -238,20 +244,18 @@ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
 }
 
 
-// 08f91909-7833-4f7a-bd21-2ba74b8909b2
 function curlUser() {
-
 
 	accessToken = inpAccessToken.value;
 
 	divContents.innerHTML +=
 	`
-		curl https://api.shoeboxed.com/v2/user -X GET -H 'Authorization: Bearer ${ accessToken }
+		curl https://api.shoeboxed.com/v2/user -X GET -H "Authorization: Bearer ${ accessToken }"
 	`;
 
-
-
 }
+
+
 
 function fetchUser() {
 
@@ -270,6 +274,18 @@ function fetchUser() {
 
 }
 
+
+
+function curlDocuments() {
+
+accessToken = inpAccessToken.value;
+
+divContents.innerHTML +=
+`
+	curl https://api.shoeboxed.com/v2/accounts/1429733747/documents -X GET -H "Authorization: Bearer ${ accessToken }"
+`;
+
+}
 
 
 function getTitle() {
