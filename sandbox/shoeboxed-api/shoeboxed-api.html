@@ -60,7 +60,10 @@
 			<button id=but onclick=fetchIt(); >fetch it</button>
 		</p>
 
-		<p><button onclick=fetchUser() >fetch user</button>
+		<p>
+
+			<button onclick=curlhUser() >curl user</button>
+			<button onclick=fetchUser() >fetch user</button>
 
 		</p>
 	</nav>
@@ -206,7 +209,7 @@ function getSearch( ) {
 
 	codeArr = location.search.match( /code=(.*?)&/ );
 
-	code = codeArr ? codeArr[ 1 ] : "";
+	code = codeArr ? codeArr[ 1 ] : inpCredentials.value;
 
 	console.log( 'code', code );
 
