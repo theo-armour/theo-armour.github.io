@@ -78,13 +78,13 @@ function init() {
 
 	divContents.innerHTML += `${ ( new Date ) }<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>`;
 
-	if ( location.search ) { getHash(); }
-	
+	getSearch();
+
 }
 
 function setStorageId() {
 
-	id = inpId.value
+	id = inpId.value;
 	console.log( 'id', id );
 
 	localStorage.setItem('sbId', id );
@@ -117,17 +117,34 @@ function setIt() {
 }
 
 
-function getHash( ) {
+function getSearch( ) {
 
 	console.log( 'search', location.search );
 
 	codeArr = location.search.match( /code=(.*?)&/ );
 
-
-	code = codeArr ? codeArr[ 1 ] : "";
+	code = codeArr ? codeArr[ 1 ] : "29eba8d2-f2a0-4bb9-96ff-77ba82f2c5cd";
 
 	console.log( 'code', code );
 
+	id = inpId.value;
+
+	secret = inpSecret.value;
+
+	curl =
+	`
+curl -v -XPOST https://id.shoeboxed.com/oauth/token \
+-d code=${ code } \
+-d grant_type=authorization_code \
+--data-urlencode redirect_uri='https://theo-armour.github.io/sandbox/showbarks-api/showbarks-api.html' \
+-u ${ id }:${ secret }
+	`
+
+	divContents.innerHTML +=
+	`<p>
+		${ curl }
+	</p>
+	`;
 }
 
 
