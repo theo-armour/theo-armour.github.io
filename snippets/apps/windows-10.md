@@ -1,8 +1,21 @@
+# Microsoft Windows 10
+
+## Dictation
+
+https://support.microsoft.com/en-us/help/4042244/windows-10-use-dictation
+https://support.microsoft.com/en-us/help/12427/windows-speech-recognition-commands
+
+To start dictating, select a text field and press the Windows logo key  + H to open the dictation toolbar. Then say whatever’s on your mind.  To stop dictating at any time while you're dictating, say “Stop dictation.”
 
 
+### Keyboard shortcuts
+https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts
 
 
-
+Press Windows logo key  + period (.) to open an emoji panel.
+ake a snip of what's on your screen
+Press Windows logo key  + Shift + S to open the snipping bar, then drag the cursor over the area you want to capture.
+Open File Explorer quickly Press Windows logo key  + E, then open the folder you want in File Explorer.
 
 ### Table of Basic PowerShell Commands
 

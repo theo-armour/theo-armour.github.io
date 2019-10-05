@@ -328,11 +328,15 @@ https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
 https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
 
 		divContents.contentEditable = true;
-## CSS
 
+
+
+## CSS style
+
+https://developer.mozilla.org/en-US/docs/Web/CSS
 https://www.w3schools.com/css/css_howto.asp
 
-<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" href="mystyle.css" >
 
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
@@ -615,6 +619,8 @@ console.log( thing );
 * https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 * https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 * https://github.com/mdn/fetch-examples/
+* https://vanillajstoolkit.com/reference/ajax/fetch/
+* https://gomakethings.com/using-oauth-with-fetch-in-vanilla-js/
 
 
 function fetchTextSimple( url, target ){

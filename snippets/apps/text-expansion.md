@@ -17,9 +17,6 @@ Not work
 
 * GitLab editors
 
-
-
-
 Known Issues
 * I can't get this to work in Google Docs due to how Docs is architected. T_T
 * Similarly, Facebook comments is unavailable due to ReactJS's system.
@@ -54,8 +51,16 @@ Works
 * gmail
 * slack
 * twitter
+* groups.io
+* Google Docs
+* GitHub issues
+* Mozilla text editor
+* Evernote web
 
+Not work
 
+* Hangouts
+* All in one
 
 ## ProKeys ~ shift + space
 

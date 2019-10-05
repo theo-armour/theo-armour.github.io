@@ -30,6 +30,11 @@ Run 'Terminal' app
 * https://wiki.archlinux.org/index.php/Chrome_OS_devices/Crostini
 * https://github.com/Microsoft/vscode/wiki
 
+
+## Screen size
+
+Linux apps on Chromebooks now have a nifty scaling feature users can toggle right from the app shelf. With a right-click on your Linux app, a context menu will appear that will allow you to choose a “Use low density” option.
+
 ## Things to do
 
 sudo apt-get update

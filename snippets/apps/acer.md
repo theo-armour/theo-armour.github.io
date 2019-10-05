@@ -5,6 +5,9 @@ Product Name
 Predator G3-571
 
 
+BIOS access via settings recovery
+
+
 Serial number
 
 NHQ28AA0017190003A3400
