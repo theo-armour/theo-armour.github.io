@@ -48,6 +48,9 @@
 			secret:<br>
 			<input id=inpSecret onchange=setStorageSecret(); style=width:100%; >
 		</p>
+			<p>credentials:<br>
+			<input id=inpCredentials onchange=setStorageSecret(); style=width:100%; >
+		</p>
 		<p>
 			<button id=but onclick=restIt(); >rest it</button>
 
@@ -119,7 +122,7 @@ function restIt() {
 	link =
 	`
 		https://id.shoeboxed.com/oauth/authorize?
-		client_id=${ id }&response_type=code&scope=all&redirect_uri=${ redirect }&state=01234567888
+		client_id=${ id }&response_type=code&scope=all&redirect_uri=https://theo-armour.github.io/sandbox/shoeboxed-api/shoeboxed-api.html&state=01234567888
 	`;
 
 	divContents.innerHTML +=
@@ -127,7 +130,6 @@ function restIt() {
 		<a href="${ link }"" >${ link }</a>
 	</p>
 	`;
-
 
 }
 
@@ -165,16 +167,20 @@ function fetchIt(){
 }
 
 
+
+
 function getSearch( ) {
 
 	console.log( 'search', location.search );
 
 	codeArr = location.search.match( /code=(.*?)&/ );
 
-	code = codeArr ? codeArr[ 1 ] : "29eba8d2-f2a0-4bb9-96ff-77ba82f2c5cd";
+	code = codeArr ? codeArr[ 1 ] : "";
 
 	console.log( 'code', code );
 
+	inpCredentials.value = code;
+	
 	id = inpId.value;
 
 	secret = inpSecret.value;
