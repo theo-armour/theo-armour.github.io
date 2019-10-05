@@ -63,7 +63,7 @@
 
 <script>
 
-const urlSourceCode = "https://github.com/zzzzz/xxxxx.html";
+const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/blob/master/sandbox/showbarks-api/showbarks-api.html";
 const urlSourceCodeIcon = "https://pushme-pullyou.github.io/github-mark-32.png";
 
 init();
@@ -73,6 +73,8 @@ function init() {
 	divTitle.innerHTML = getTitle();
 
 	inpId.value = localStorage.getItem( 'sbId' );
+
+	inpSecret.value = localStorage.getItem( 'sbSecret' );
 
 	divContents.innerHTML += `${ ( new Date ) }<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>`;
 
@@ -101,13 +103,23 @@ function setIt() {
 
 	const id = localStorage.getItem( 'sbId' );
 
+	link = `https://id.shoeboxed.com/oauth/authorize?client_id=${ id }&response_type=code&scope=all&redirect_uri=https://theo-armour.github.io/sandbox/showbarks-api/showbarks-api.html&state=01234567888`;
+
 	divContents.innerHTML +=
-	`https://id.shoeboxed.com/oauth/authorize?client_id=${ id }&response_type=code&scope=all&redirect_uri=https://evereverland.gitlab.io/sandbox/showbarks-api/showbarks-api.html&state=01234567888
+	`<p>
+		<a href="${ link }"" >${ link }</a>
+	</p>
 	`;
 
+	if ( location.hash ) { getHash(); }
 }
 
 
+function getHash( ) {
+	
+	console.log( 'hash', location.hash );
+
+}
 
 function getTitle() {
 
