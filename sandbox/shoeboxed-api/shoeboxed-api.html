@@ -51,8 +51,8 @@
 			<p>credentials <span id=spnCredentials ></span>:<br>
 			<input id=inpCredentials onchange=setStorageCredentials(); style=width:100%; >
 		</p>
-		<p>access token:<br>
-			<input id=inpCredentials onchange=setStorageAccessToken(); style=width:100%; >
+		<p>access token <span id=spnAccessToken ></span>:<br>
+			<input id=inpAccessToken onchange=setStorageAccessToken(); style=width:100%; >
 		</p>
 		<p>
 			<button id=but onclick=restIt(); >rest it</button>
@@ -88,6 +88,10 @@ function init() {
 	inpId.value = localStorage.getItem( 'sbId' );
 
 	inpSecret.value = localStorage.getItem( 'sbSecret' );
+
+	inpCredentials.value = localStorage.getItem( 'sbCredentials' );
+
+	inpAccessToken.value = localStorage.getItem( 'sbAccessToken' );
 
 	divContents.innerHTML += `${ ( new Date ) }<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>`;
 
@@ -127,6 +131,19 @@ function setStorageCredentials() {
 	localStorage.setItem('sbCredentials', credentials );
 
 }
+
+
+function setStorageAccessToken() {
+
+	accessToken = inpAccessToken.value;
+	console.log( 'AccessToken', accessToken );
+
+	spnAccessToken.innerHTML = ( new Date() ).toISOString();
+
+	localStorage.setItem('sbAccessToken', accessToken );
+
+}
+
 
 function restIt() {
 
