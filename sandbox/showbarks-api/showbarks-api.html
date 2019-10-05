@@ -52,11 +52,16 @@
 			<button id=but onclick=setIt(); >set it</button>
 		</p>
 
+		<p><button onclick=fetchUser() >fetch user</button>
+
+		</p>
 	</nav>
 
 	<main>
 
 		<div id="divContents" ></div>
+
+		<div id=divResults ></div>
 
 	</main>
 
@@ -145,6 +150,24 @@ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
 		${ curl }
 	</p>
 	`;
+}
+
+
+
+function fetchUser() {
+
+	const urlCORS = "" //'https://cors-anywhere.herokuapp.com/';
+	url = "https://api.shoeboxed.com/v2/user";
+
+	fetch( new Request( urlCORS + url, {
+
+		header: { "Authorization": "Bearer 63863a33-17c1-455e-b453-794e9559f6c2" }
+
+	} ) )
+
+	.then( response => response.text() )
+	.then( text => divResults.innerHTML = text );
+
 }
 
 
