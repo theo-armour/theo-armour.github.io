@@ -49,7 +49,9 @@
 			<input id=inpSecret onchange=setStorageSecret(); style=width:100%; >
 		</p>
 		<p>
-			<button id=but onclick=setIt(); >set it</button>
+			<button id=but onclick=restIt(); >rest it</button>
+
+			<button id=but onclick=fetchIt(); >fetch it</button>
 		</p>
 
 		<p><button onclick=fetchUser() >fetch user</button>
@@ -87,6 +89,7 @@ function init() {
 
 }
 
+
 function setStorageId() {
 
 	id = inpId.value;
@@ -106,6 +109,8 @@ function setStorageSecret() {
 
 }
 
+
+
 function setIt() {
 
 	const id = localStorage.getItem( 'sbId' );
@@ -120,6 +125,25 @@ function setIt() {
 
 
 }
+
+
+
+
+function fetchIt(){
+
+	const id = localStorage.getItem( 'sbId' );
+
+	fetch( 'https://id.shoeboxed.com/oauth/authorize', {
+		method: 'POST',
+		body: `client_id=${ id }&response_type=code&scope=all&redirect_uri=https://theo-armour.github.io/sandbox/showbarks-api/showbarks-api.html&state=01234567888`,
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		}
+	});
+
+}
+
+
 
 
 function getSearch( ) {
