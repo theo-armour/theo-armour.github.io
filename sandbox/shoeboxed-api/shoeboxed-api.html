@@ -48,8 +48,11 @@
 			secret:<br>
 			<input id=inpSecret onchange=setStorageSecret(); style=width:100%; >
 		</p>
-			<p>credentials:<br>
-			<input id=inpCredentials onchange=setStorageSecret(); style=width:100%; >
+			<p>credentials <span id=spnCredentials ></span>:<br>
+			<input id=inpCredentials onchange=setStorageCredentials(); style=width:100%; >
+		</p>
+		<p>access token:<br>
+			<input id=inpCredentials onchange=setStorageAccessToken(); style=width:100%; >
 		</p>
 		<p>
 			<button id=but onclick=restIt(); >rest it</button>
@@ -113,6 +116,17 @@ function setStorageSecret() {
 }
 
 
+
+function setStorageCredentials() {
+
+	credentials = inpCredentials.value;
+	console.log( 'credentials', credentials );
+
+	spnCredentials.innerHTML = ( new Date() ).toISOString();
+
+	localStorage.setItem('sbCredentials', credentials );
+
+}
 
 function restIt() {
 
@@ -181,6 +195,8 @@ function getSearch( ) {
 
 	inpCredentials.value = code;
 
+	setStorageCredentials();
+
 	id = inpId.value;
 
 	secret = inpSecret.value;
@@ -202,12 +218,27 @@ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
 }
 
 
+// 08f91909-7833-4f7a-bd21-2ba74b8909b2
+function curlUser() {
+
+
+	accessToken = inpAccessToken.value;
+
+	divContents.innerHTML +=
+	`
+		curl https://api.shoeboxed.com/v2/user -X GET -H 'Authorization: Bearer ${ accessToken }
+	`;
+
+
+
+}
 
 function fetchUser() {
 
 	const urlCORS = "" //'https://cors-anywhere.herokuapp.com/';
 	url = "https://api.shoeboxed.com/v2/user";
 
+	accessToken = "08f91909-7833-4f7a-bd21-2ba74b8909b2"
 	fetch( new Request( urlCORS + url, {
 		mode: "no-cors",
 		headers: { "Authorization": "Bearer 63863a33-17c1-455e-b453-794e9559f6c2" }
