@@ -180,7 +180,7 @@ function getSearch( ) {
 	console.log( 'code', code );
 
 	inpCredentials.value = code;
-	
+
 	id = inpId.value;
 
 	secret = inpSecret.value;
@@ -190,7 +190,7 @@ function getSearch( ) {
 curl -v -XPOST https://id.shoeboxed.com/oauth/token \
 -d code=${ code } \
 -d grant_type=authorization_code \
---data-urlencode redirect_uri='https://theo-armour.github.io/sandbox/showbarks-api/showbarks-api.html' \
+--data-urlencode redirect_uri='https://theo-armour.github.io/sandbox/shoeboxed-api/shoeboxed-api.html' \
 -u ${ id }:${ secret }
 	`
 
