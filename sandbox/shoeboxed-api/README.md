@@ -2,7 +2,7 @@
 
 
 * https://theo-armour.github.io/sandbox/shoeboxed-api/shoeboxed-api.html
-* https://theo-armour.github.io/sandbox/shoeboxed-api/shoeboxed-swaggerapi.html
+* https://theo-armour.github.io/sandbox/shoeboxed-api/shoeboxed-swagger-api.html
 
 ## Shoeboxed
 
