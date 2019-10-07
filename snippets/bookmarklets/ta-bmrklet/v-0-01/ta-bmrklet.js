@@ -32,6 +32,9 @@ function init() {
 	<hr>
 
 
+	<iframe src="https://theo-armour.github.io/snippets/bookmarklets/ta-bmrklet/v-0-01/window-local-storage.html"></iframe>
+
+
 	<div id=notepad  contentEditable ></div>
 
 
