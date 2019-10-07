@@ -32,11 +32,9 @@ function init() {
 	<hr>
 
 
-	<iframe src="https://theo-armour.github.io/snippets/bookmarklets/ta-bmrklet/v-0-01/window-local-storage.html"></iframe>
-
-
-	<div id=notepad  contentEditable ></div>
-
+	<div id=notepad >
+	<iframe style=height:100%;width:100%; src="https://theo-armour.github.io/snippets/bookmarklets/ta-bmrklet/v-0-01/window-local-storage.html"></iframe>
+	</div>
 
 	<p>
 		<a href = 'JavaScript:( () => {
@@ -195,15 +193,6 @@ function init() {
 
 	notepad.style.cssText = "border:pink solid 1px; ; height: 10rem; overflow: hidden; resize: both; width:100%;";
 
-	notepad.innerHTML = localStorage.getItem( "notepad" );
-
-	notepad.onchange = save();
-
-	window.onunload = save();
-
-	setInterval( save, 500 );
-
-	function save() { localStorage.setItem( "notepad", notepad.innerHTML ); }
 
 
 }
