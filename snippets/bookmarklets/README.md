@@ -29,7 +29,7 @@ script.src='snippets/bookmarklets/theo-armour-bookmarklet.js'; } )()" >
 
 
 ## Concept
-*
+
 * Do things while visiting or "inside" a web page
 * No need to open new tab
 * No need to leave current view or tab

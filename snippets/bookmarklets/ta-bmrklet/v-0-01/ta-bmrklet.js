@@ -1,31 +1,24 @@
 
-//var divTooToo = divTooToo || undefined;
 
 init();
+
 
 function init() {
 
 	let path = location.protocol === "file:" ? "../../" : "https://theo-armour.github.io/snippets/bookmarklets/";
 
-	if (!window.divTooToo) {
+	if ( !window.divTooToo ) {
 
-		style = document.body.appendChild(document.createElement('style'));
-		style.innerText =
-			`
-				a { color: blue; opacity: 0.85 }
-			`;
-		
 		divTooToo = document.body.appendChild(document.createElement('div'));
 		divTooToo.style.cssText =
-			'background-color: white; border: 1px solid red; max-height: 90%; width: 350px; opacity: 0.95; ' +
-			' overflow: auto; padding: 10px; position: fixed; right: 30px; resize: both; top: 20px; z-index:100000; ';
+			'background-color: white; border: 1px solid red; max-height: 90%; width: 22rem; opacity: 0.95; ' +
+			' overflow: auto; padding: 10px; position: fixed; right: 1rem; resize: both; top: 1rem; z-index:100000; ';
 
 	} else {
 
 		divTooToo.hidden = false;
 
 	}
-
 
 
 	divTooToo.innerHTML =
@@ -35,6 +28,87 @@ function init() {
 	<a href="https://theo-armour.github.io/snippets/bookmarklets/theo-armour-bookmarklet.html" title="on server" >theo armour bookmarklet</a>
 	/
 	<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-bmrklet-dashboard/v-0-00/ta-bmrklet-dashboard.html" >local</a>
+
+	<hr>
+
+
+	<div id=notepad  contentEditable ></div>
+
+
+	<p>
+		<a href = 'JavaScript:( () => {
+				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";
+				const windo = open( "${ path }/mozilla-text-editor/mozilla-text-editor-theo.html", "Windo", features );
+		} )()' >
+			mozilla text editor
+		</a>
+	</p>
+
+	<!--
+	<p>
+
+	<a href="javascript:(function() {
+		function se(d) {
+			return d.selection ? d.selection.createRange().text : d.getSelection()
+		}
+		s = se(document);
+		for (i=0; i<frames.length && !s; i++) s = se(frames[i].document);
+		if (!s || s=='') s = prompt('Enter%20search%20terms%20for%20Wikipedia','');
+		open('http://en.wikipedia.org' + (s ? '/w/index.php?title=Special:Search&search=' + encodeURIComponent(s) : '')).focus();
+	})();" >
+	search wikipedia
+	</a>
+
+
+		thesaurus<br> <input onchange=window.open("https://www.thesaurus.com/browse/${this.value}","_blank") ><br>
+
+		define<br> <input onchange=window.open("https://www.google.com/search?q=define%3A${this.value}","_blank") ><br>
+
+		wiki<br> <input onchange=window.open("https://en.wikipedia.org/wiki/` + this.value + `","_blank") ><br>
+
+		</p>
+	-->
+
+	<p>
+		<a href = "JavaScript:( () => {
+				const script=document.head.appendChild( document.createElement( 'script' ) );
+				script.src='${ path}bookmarklets/216-standard-colors.js';
+		} )()" >
+			216 standard colors
+		</a>
+	</p>
+	<p>
+		<a href = 'JavaScript:( () => {
+			const script=document.head.appendChild( document.createElement( "script" ) );
+			script.src="${ path }bookmarklets/ascii-table.js";
+		} )()' >
+			ascii table
+		</a>
+	</p>
+
+	<!--
+	<p>
+	<a id=aPageData href = 'JavaScript:( () => {
+		const script=document.head.appendChild( document.createElement( "script" ) );
+		script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/page-data-bookmark.js";
+	} )()' >
+		page-data-bookmark
+	</a>
+
+	<p>
+	<a id=aPageData href = 'JavaScript:( () => {
+		const script=document.head.appendChild( document.createElement( "script" ) );
+		script.src="../../bookmarklets/page-data-bookmark.js";
+	} )()' >
+		page-data-bookmark local
+	</a>
+	-->
+
+	<div id=divData ></div>
+</p>
+	<details>
+
+	<summary>testing</summary>
 
 	<p>
 		<a href="javascript:(function(){var script=document.createElement('script');
@@ -57,95 +131,6 @@ function init() {
 			zz85 three.js inspector
 		</a>
 	</p>
-
-	<hr>
-
-	<p>
-		<a href = 'JavaScript:( () => {
-			const script=document.head.appendChild( document.createElement( "script" ) );
-			script.src="${ path }ta-bmrklet/v-0-00/capture-bookmark.js";
-		} )()' >
-			capture bookmark
-		</a>
-	<p>
-
-	<div id=divCaptureBookmark ></div>
-
-		<a href = 'JavaScript:( () => {
-				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";
-				const windo = open( "${ path }/mozilla-text-editor/mozilla-text-editor-theo.html", "Windo", features );
-		} )()' >
-			mozilla text editor
-		</a>
-	</p>
-	<p>
-		<a href="javascript:(function() {
-			function se(d) {
-				return d.selection ? d.selection.createRange().text : d.getSelection()
-			}
-			s = se(document);
-			for (i=0; i<frames.length && !s; i++) s = se(frames[i].document);
-			if (!s || s=='') s = prompt('Enter%20search%20terms%20for%20Wikipedia','');
-			open('http://en.wikipedia.org' + (s ? '/w/index.php?title=Special:Search&search=' + encodeURIComponent(s) : '')).focus();
-		})();" >
-			search wikipedia
-		</a>
-	</p>
-
-	<p>
-		<a href = "JavaScript:( () => {
-			const script=document.head.appendChild( document.createElement( 'script' ) );
-			script.src='${ path }bookmarklets/window-local-storage.js';
-		} )()" >
-		window local storage
-	</a>
-	</p>
-	<p>
-		<a href='javascript:(function(){
-			var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");
-			for(;n>0;n--){var i=t[n-1].getAttribute("href");t[n-1]!=null&amp;&amp;i!=null&amp;&amp;i.charAt(0)==="h"&amp;
-			&amp;i.indexOf(window.location.hostname)==-1&amp;
-			&amp;e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})()
-		'>Get all external Links</a>
-	</p>
-	<p>
-		<a href = "JavaScript:( () => {
-				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='${ path}bookmarklets/216-standard-colors.js';
-		} )()" >
-			216 standard colors
-		</a>
-	</p>
-	<p>
-		<a href = 'JavaScript:( () => {
-			const script=document.head.appendChild( document.createElement( "script" ) );
-			script.src="${ path }bookmarklets/ascii-table.js";
-		} )()' >
-			ascii table
-		</a>
-	</p>
-
-	<p>
-	<a id=aPageData href = 'JavaScript:( () => {
-		const script=document.head.appendChild( document.createElement( "script" ) );
-		script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/page-data-bookmark.js";
-	} )()' >
-		page-data-bookmark
-	</a>
-
-	<p>
-	<a id=aPageData href = 'JavaScript:( () => {
-		const script=document.head.appendChild( document.createElement( "script" ) );
-		script.src="../../bookmarklets/page-data-bookmark.js";
-	} )()' >
-		page-data-bookmark local
-	</a>
-
-	<div id=divData ></div>
-</p>
-	<details>
-
-	<summary>testing</summary>
 
 	<p id=pGetInput >
 		<a href= "javascript: inp=pDoIt.appendChild(document.createElement('input'));
@@ -204,6 +189,18 @@ function init() {
 	</p>
 
 `;
+
+	notepad.style.cssText = "border:pink solid 1px; ; height: 10rem; overflow: hidden; resize: both; width:100%;";
+
+	notepad.innerHTML = localStorage.getItem( "notepad" );
+
+	notepad.onchange = save();
+
+	window.onunload = save();
+
+	setInterval( save, 500 );
+
+	function save() { localStorage.setItem( "notepad", notepad.innerHTML ); }
 
 
 }
