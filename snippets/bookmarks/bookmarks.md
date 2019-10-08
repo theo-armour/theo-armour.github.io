@@ -1,6 +1,11 @@
 
 
+
+
 ## Bookmark menu bar folders
+
+💭 ~ of current interest || in the thought balloon
+
 ta ~ tech projects of current interest // web apps I use ??
 c ~ community - friends&family non-tech projects
 t ~ tech - web online
