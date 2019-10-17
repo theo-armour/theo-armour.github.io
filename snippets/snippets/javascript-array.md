@@ -223,7 +223,7 @@ Definition and Usage
 
 
 
-## Split to Float
+## Lines Split to Float
 
 	elevations = data.split( ',' ).map( function( item ) { return parseFloat( item ); } );
 	txtline = lines[ i ].split( ',' ).map( parseFloat );
@@ -231,6 +231,10 @@ Definition and Usage
 	waypoints = xhr.responseText.split( '\n' ).map( function( point ) { return point.split( ',' ).map( parseFloat ); } );
 
 
+
+* https://stackoverflow.com/questions/5034781/js-regex-to-split-by-line
+
+arrayOfLines = lineString.match(/[^\r\n]+/g);
 
 ## Unique / find
 

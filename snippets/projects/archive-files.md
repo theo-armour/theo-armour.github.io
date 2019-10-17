@@ -7,6 +7,7 @@ Cpanel
 Same password for cpanel and sftp://aceitus@ace-it.us
 
 ToDo
+
 * move memento-mori-to GitHub
 * move caper.ws to github
 * check for existing copies terrain files
@@ -96,6 +97,7 @@ On Thonelvo
 
 
 On threodator
+
 * E:\1811wdmp3tb\1111wd1000\archive\verified\history <> F:\archive\verified << verified rule compare
 * E:\1811wdmp3tb\1111wd1000\archive-2013 <> F:\archive-2013 << verified rule compare
 * E:\1811wdmp3tb\1111wd1000\dropbox-2013-verified <> F:\dropbox-2013-verified << verified rule compare

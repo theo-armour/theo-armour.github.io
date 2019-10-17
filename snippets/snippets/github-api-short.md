@@ -25,6 +25,7 @@ curl -i https://api.github.com/users/theo-armour
 ## File Contents
 
 * https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/2017-04-20/GOOG.txt';
+* https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/highlights.md
 * Contents base64 encoded
 
 

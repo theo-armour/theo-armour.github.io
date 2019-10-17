@@ -236,3 +236,17 @@ Forums
 	rightArea.style.cssText = 'border: 1px solid black; height: 90%; left: 50%; overflow-x: scroll; overflow-y: auto; ' +
 	'padding: 5px; position: absolute; top: 50px; width: 48%;';
 	rightArea.value = '';
+
+
+### uuid
+
+* https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+
+
+function uuidv4() {
+
+	return ( [ 1e7 ] + -1e3 + -4e3 + -8e3 + -1e11 ).replace( /[018]/g, c =>
+		( c ^ crypto.getRandomValues( new Uint8Array( 1 )  )[ 0 ] & 15 >> c / 4 ).toString( 16 )
+	);
+
+}

@@ -24,6 +24,9 @@ function init() {
 	let path = location.protocol === "file:" ? "../../" : "https://theo-armour.github.io/snippets/bookmarklets/";
 
 	if (!window.divCaptureBookmark) {
+		divCaptureBookmark = document.body.appendChild(document.createElement('div'));
+		divCaptureBookmark.id = "divCaptureBookmark";
+
 
 		style = document.head.appendChild(document.createElement('style'));
 		style.innerText =
@@ -41,8 +44,7 @@ function init() {
 
 		`;
 
-		divCaptureBookmark = document.body.appendChild(document.createElement('div'));
-		divCaptureBookmark.id = "divCaptureBookmark";
+
 
 
 	} else {
@@ -56,7 +58,7 @@ function init() {
 
 
 	const htm =
-	`
+	`bbbb
 		<button onclick=divCaptureBookmark.hidden=true; style=float:right >x</button>
 
 		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" ></div>
@@ -72,8 +74,6 @@ function init() {
 		<div><div class=titleCBM >uuid: </div><input id=inpUuid class=inputCBM value="${ getUuidv4() }" ></div>
 
 		<div><div class=titleCBM >date:</div><input id=inpDateAdd class=inputCBM  value="${ date }" ></div>
-
-		<br>
 
 		<div class=titleCBM >tags: </div><textarea id=txtTags oninput=updateJson(); style=width:100%; ></textarea>
 

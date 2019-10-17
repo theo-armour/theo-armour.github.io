@@ -156,6 +156,8 @@ function requestFile( url ) {
 	}
 
 
+
+
 ////////////////////
 
 
@@ -1158,6 +1160,9 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 
 
 ### Local Storage / localStorage
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+* pushme-pullyou/tootoo14/js-14-08/ffp-file-fetch-put
 
 		const apiKey = localStorage.getItem( 'apiKey' );
 		inpApiKey.value = apiKey ? apiKey : '' ;
