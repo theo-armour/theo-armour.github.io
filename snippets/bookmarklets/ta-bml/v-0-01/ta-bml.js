@@ -33,7 +33,7 @@ function init() {
 
 
 	<div id=divNotepad >
-	<iframe style=height:100%;overflow:hidden;width:95%; src="https://theo-armour.github.io/snippets/bookmarklets/ta-bmrklet/v-0-01/window-local-storage.html"></iframe>
+	<iframe style=height:100%;overflow:hidden;width:95%; src="https://theo-armour.github.io/snippets/bookmarklets/ta-bml/v-0-01/window-local-storage.html"></iframe>
 	</div>
 
 	<p>
