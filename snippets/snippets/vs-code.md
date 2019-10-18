@@ -1,11 +1,20 @@
 # VS Code
 
+### To do
+
+* Try prettifier
+* Good workflow on Chromebook
+		* 2019-04-29: Looking good
+* https://github.com/shanalikhan/code-settings-sync
+* Try new line only setting no cr
+
 ## Tips
 
 * Can drag and drop from Sidebar to browser
 * F1 for help
 
 ## About
+
 * Keyboard shortcuts: Ctrl+K, Ctrl+s
 * https://code.visualstudio.com/
 * https://en.wikipedia.org/wiki/Visual_Studio_Code
@@ -22,12 +31,6 @@
 * https://vscodecandothat.com/
 
 
-### To do
-
-* Good workflow on Chromebook
-		* 2019-04-29: Looking good
-* https://github.com/shanalikhan/code-settings-sync
-* Try new line only setting no cr
 
 
 ### Opening VS Code
@@ -107,7 +110,7 @@ selection: Ctrl-K, Ctrl-F
 * https://medium.com/@bretcameron/the-2019-guide-to-beautifying-visual-studio-code-32470910fc5b
 * https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode
 * https://code.visualstudio.com/docs/getstarted/settings
-	* see javascript.format.* and typescript.format.*). 
+	* see javascript.format.* and typescript.format.*).
 
 
 ## GitHub integration

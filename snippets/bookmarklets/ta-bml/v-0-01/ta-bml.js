@@ -25,15 +25,15 @@ function init() {
 `
 	<button onclick=divTooToo.hidden=true; >x</button>
 
-	<a href="https://theo-armour.github.io/snippets/bookmarklets/theo-armour-bookmarklet.html" title="on server" >theo armour bookmarklet</a>
-	/
-	<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-bmrklet-dashboard/v-0-00/ta-bmrklet-dashboard.html" >local</a>
+	<a href="https://theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" title="on server" >theo armour bookmarklet</a>
+	||
+	<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >local</a>
 
 	<hr>
 
 
-	<div id=notepad >
-	<iframe style=height:100%;width:100%; src="https://theo-armour.github.io/snippets/bookmarklets/ta-bmrklet/v-0-01/window-local-storage.html"></iframe>
+	<div id=divNotepad >
+	<iframe style=height:100%;overflow:hidden;width:95%; src="https://theo-armour.github.io/snippets/bookmarklets/ta-bmrklet/v-0-01/window-local-storage.html"></iframe>
 	</div>
 
 	<p>
@@ -191,7 +191,7 @@ function init() {
 
 `;
 
-	notepad.style.cssText = "border:pink solid 1px; ; height: 10rem; overflow: hidden; resize: both; width:100%;";
+	divNotepad.style.cssText = "border:pink solid 1px; height: 10rem; overflow: auto; resize: both; width:100%;";
 
 
 
