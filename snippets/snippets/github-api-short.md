@@ -20,6 +20,7 @@ curl -i https://api.github.com/users/theo-armour
 
 * https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/2017-04-20';
 * https://api.github.com/repos/ladybug-tools/spider/contents/
+* https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets
 
 
 ## File Contents

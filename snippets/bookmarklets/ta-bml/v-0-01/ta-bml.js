@@ -21,6 +21,7 @@ function init() {
 	}
 
 
+
 	divTooToo.innerHTML =
 `
 	<button onclick=divTooToo.hidden=true; >x</button>
@@ -30,13 +31,6 @@ function init() {
 	<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >local</a>
 
 	<hr>
-
-
-	<div  >
-
-
-
-	</div>
 
 	<div id=divNotepad style="border: 1px solid pink; height:30rem; overflow: auto; /* needed */ resize: both; width: 100%;" >
 
@@ -179,8 +173,24 @@ function init() {
 
 `;
 
-//	divNotepad.style.cssText = "border:pink solid 1px; height: 10rem; overflow: auto; resize: both; width:100%;";
-
-
-
+requestFile() 
 }
+
+	function requestFile() {
+
+		url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets"
+		xhr = new XMLHttpRequest();
+		xhr.open( 'GET', url, true );
+		xhr.onerror = ( xhr ) => console.log( 'error:', xhr  );
+		//xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
+		xhr.onload = ( xhr ) => console.log( 'response', xhr.target.response );
+		xhr.send( null );
+
+
+		function callback ( text ) {
+
+			htm = text.filter( item => item.type === "file" ).map( item => item.path );
+
+			console.log( 'httm', htm );
+		}
+	}
