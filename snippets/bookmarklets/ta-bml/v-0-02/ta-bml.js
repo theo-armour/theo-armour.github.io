@@ -83,7 +83,7 @@ function init () {
 
 function getaLine() {
 
-	const url = "https://api.github.com/repos/theo-armour/qdata/contents/ta-bml.txt";
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/ta-bml.txt";
 	//const url = "https://api.github.com/repos/pushme-pullyou/pushme-pullyou.github.io/add-a-line-bookmarks/bookmarks.json";
 
 	const request = new Request( url )
