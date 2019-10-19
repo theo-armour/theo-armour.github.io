@@ -32,8 +32,20 @@ function init() {
 	<hr>
 
 
-	<div id=divNotepad >
-	<iframe style=height:100%;overflow:hidden;width:95%; src="https://theo-armour.github.io/snippets/bookmarklets/ta-bml/v-0-01/window-local-storage.html"></iframe>
+	<div  >
+
+
+
+	</div>
+
+	<div id=divNotepad style="border: 1px solid pink; height:30rem; overflow: auto; /* needed */ resize: both; width: 100%;" >
+
+		<div style="height: calc( 100% - 0.5rem ); width: 100%;" >
+
+			<iframe id=ifr src="https://theo-armour.github.io/snippets/bookmarklets/ta-bml/v-0-01/window-local-storage.html" style="border-width:0;height:100%;overflow:hidden;width:100%;" ></iframe>
+
+		</div>
+
 	</div>
 
 	<p>
@@ -43,6 +55,7 @@ function init() {
 		} )()' >
 			mozilla text editor
 		</a>
+
 	</p>
 
 	<!--
@@ -61,19 +74,19 @@ function init() {
 	</a>
 
 
-		thesaurus<br> <input onchange=window.open("https://www.thesaurus.com/browse/${this.value}","_blank") ><br>
+	thesaurus<br> <input id=thes onchange=ff=this.value);window.open("https://www.thesaurus.com/browse/${ this.value }","_blank") ><br>
 
-		define<br> <input onchange=window.open("https://www.google.com/search?q=define%3A${this.value}","_blank") ><br>
+	define<br> <input onchange=window.open("https://www.google.com/search?q=define%3A${this.value}","_blank") ><br>
 
-		wiki<br> <input onchange=window.open("https://en.wikipedia.org/wiki/` + this.value + `","_blank") ><br>
+	wiki<br> <input onchange=window.open("https://en.wikipedia.org/wiki/` + this.value + `","_blank") ><br>
 
-		</p>
+	</p>
+
 	-->
-
 	<p>
 		<a href = "JavaScript:( () => {
 				const script=document.head.appendChild( document.createElement( 'script' ) );
-				script.src='${ path}bookmarklets/216-standard-colors.js';
+				script.src='${ path }bookmarklets/216-standard-colors.js';
 		} )()" >
 			216 standard colors
 		</a>
@@ -87,26 +100,8 @@ function init() {
 		</a>
 	</p>
 
-	<!--
-	<p>
-	<a id=aPageData href = 'JavaScript:( () => {
-		const script=document.head.appendChild( document.createElement( "script" ) );
-		script.src="https://theo-armour.github.io/snippets/bookmarklets/bookmarklets/page-data-bookmark.js";
-	} )()' >
-		page-data-bookmark
-	</a>
-
-	<p>
-	<a id=aPageData href = 'JavaScript:( () => {
-		const script=document.head.appendChild( document.createElement( "script" ) );
-		script.src="../../bookmarklets/page-data-bookmark.js";
-	} )()' >
-		page-data-bookmark local
-	</a>
-	-->
-
 	<div id=divData ></div>
-</p>
+
 	<details>
 
 	<summary>testing</summary>
@@ -130,17 +125,6 @@ function init() {
 			document.body.appendChild(script);})()
 		">
 			zz85 three.js inspector
-		</a>
-	</p>
-
-	<p id=pGetInput >
-		<a href= "javascript: inp=pDoIt.appendChild(document.createElement('input'));
-			inp.value='thinking';
-			inp.select();
-			document.execCommand('copy');
-			delete inp;
-		">
-			get input
 		</a>
 	</p>
 
@@ -186,12 +170,16 @@ function init() {
 		<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarks/" target="_blank">bookmarks</a><br>
 		<a href="https://github.com/theo-armour/theo-armour.github.io/edit/master/snippets/bookmarks/food.md" target="_blank" >food.md</a><br>
 
-		<a href="https://github.com/theo-armour/qdata/blob/master/README.md" target="_blank">qdata</a>
+		<a href="https://github.com/theo-armour/qdata/blob/master/README.md" target="_blank">qdata</a><br>
+
+		<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/snippets/0-dev-notes.md" target="_blank">dev notes</a><br>
+
+		<a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/snippets/vs-code.md" >vscode</a>
 	</p>
 
 `;
 
-	divNotepad.style.cssText = "border:pink solid 1px; height: 10rem; overflow: auto; resize: both; width:100%;";
+//	divNotepad.style.cssText = "border:pink solid 1px; height: 10rem; overflow: auto; resize: both; width:100%;";
 
 
 
