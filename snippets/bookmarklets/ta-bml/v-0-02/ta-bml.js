@@ -1,9 +1,13 @@
 
 
+const GAT = {}
+
 init();
 
 
 function init () {
+
+	GAT.accessToken = localStorage.getItem( 'githubAccessToken' ) || '';
 
 	let path = location.protocol === "file:" ? "../../" : "https://theo-armour.github.io/snippets/bookmarklets/";
 
@@ -23,7 +27,7 @@ function init () {
 	}
 
 	divTooToo.innerHTML =
-		`
+`
 	<button onclick=divTooToo.hidden=true; >x</button>
 
 	<a href="https://theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" title="on server" >theo armour bookmarklet</a>
@@ -32,23 +36,19 @@ function init () {
 
 	<hr>
 
-	<div id=divNotepad style="border: 1px solid pink; height:20rem; overflow: auto; /* needed */ resize: both; width: 100%;" >
+	<div style="border: 1px solid pink; height:20rem; overflow: auto; /* needed */ resize: both; width: 100%;" >
 
-		<div style="height: calc( 100% - 0.5rem ); width: 100%;" >
+		<div id=divNotepad style="height: calc( 100% - 0.5rem ); width: 100%;" >
 
-			<iframe id=ifr src="https://theo-armour.github.io/snippets/bookmarklets/ta-bml/v-0-01/window-local-storage.html" style="border-width:0;height:100%;overflow:hidden;width:100%;" ></iframe>
 
 		</div>
 
 	</div>
 
-	<div></div>
+	<div id=divToSend ></div>
 	<p>
 		<button id=but onclick=getaLine(); >getaLine</button>
-	</p>
 
-
-	<p>
 		<button id=but onclick=addaLine(logFileContent,logFileSha); >addaLine</button>
 	</p>
 	<p>
@@ -74,7 +74,13 @@ function init () {
 
 	<p id=pFiles ></p>
 
+	<div>Access token</div>
+		<input value="${ GAT.accessToken }" id=GATinpGitHubApiKey onclick=this.select(); onblur=GAT.setGitHubAccessToken(this.value); title="Obtain API Access Token" style=width:100%; >
+	</p>
+
 `;
+
+	getaLine();
 
 	requestFile();
 
@@ -83,7 +89,7 @@ function init () {
 
 function getaLine() {
 
-	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/ta-bml.txt";
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/ta-bml.html";
 	//const url = "https://api.github.com/repos/pushme-pullyou/pushme-pullyou.github.io/add-a-line-bookmarks/bookmarks.json";
 
 	const request = new Request( url )
@@ -110,11 +116,12 @@ function getaLine() {
 
 		decodedData = window.atob( data.content ); // decode the string
 
-		divContents.innerText += '<br><br>decodedData: ' + decodedData;
+		divNotepad.innerHTML= `<div >${ decodedData }</div>`;
+
+		divNotepad.contentEditable = true;
 
 		logFileContent = decodedData;
 		logFileSha = data.sha
-
 
 	} ).catch( ( err ) => {
 
@@ -127,7 +134,7 @@ function getaLine() {
 
 function addaLine( content = "", sha ) {
 
-	//const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/first-post.jsonl";
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/ta-bml.html";
 
 	const request = new Request( url );
 
@@ -137,15 +144,15 @@ function addaLine( content = "", sha ) {
 
 	//content +=`{ "index": "${ arrayOfLines.length + 1 }", "uuid": "${ uuid }", "date": "${ ( new Date() ).toISOString() }" }\n`;
 
-	content = decodedData;
+	content = divNotepad.innerHTML;
 
 	divToSend.innerHTML = content;
 
-	codedData = window.btoa( content ); // decode the string
+	codedData = window.btoa( content ); // encode the string
 
 	fetch( request, {
 		method: "PUT",
-		headers: { "Authorization": "token 5b1d286 vvvvvvvvvvvv ffcbb98aa8712d746a6e nnnnnnnnnnn 53301c8ddff25", "Content-Type": "application/json" },
+		headers: { "Authorization": "token " + GAT.accessToken, "Content-Type": "application/json" },
 		body: JSON.stringify( {
 			"branch": "master",
 			"committer": {
@@ -193,3 +200,13 @@ function requestFile () {
 	}
 
 }
+
+GAT.setGitHubAccessToken = function ( accessToken ) {
+
+	console.log( 'accessToken', accessToken );
+
+	localStorage.setItem( "githubAccessToken", accessToken );
+
+	GAT.accessToken = accessToken;
+
+};
