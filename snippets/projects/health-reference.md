@@ -3,6 +3,7 @@
 
 
 UCSF General Surgery ~ 415 353 2161 ~ Dianna
+
 * https://general.surgery.ucsf.edu/
 * https://general.surgery.ucsf.edu/faculty.aspx?id=Acute_Care_Surgery
 *
@@ -56,11 +57,11 @@ An inguinal hernia occurs when tissue, such as part of the intestine, protrudes 
 
 * https://en.wikipedia.org/wiki/OPQRST
 * Onset of the event
-	* What the patient was doing when it started (active, inactive, stressed), whether the patient believes that activity prompted the pain,[2] and whether the onset was sudden, gradual or part of an ongoing chronic problem.
+	* What the patient was doing when it started (active, inactive, stressed), whether the patient believes that activity prompted the pain, and whether the onset was sudden, gradual or part of an ongoing chronic problem.
 * Provocation or palliation
 	* Whether any movement, pressure (such as palpation) or other external factor makes the problem better or worse. This can also include whether the symptoms relieve with rest.
 * Quality of the pain
-	This is the patient's description of the pain. Questions can be open ended ("Can you describe it for me?") or leading.[9] Ideally, this will elicit descriptions of the patient's pain: whether it is sharp, dull, crushing, burning, tearing, or some other feeling, along with the pattern, such as intermittent, constant, or throbbing.
+	This is the patient's description of the pain. Questions can be open ended ("Can you describe it for me?") or leading. Ideally, this will elicit descriptions of the patient's pain: whether it is sharp, dull, crushing, burning, tearing, or some other feeling, along with the pattern, such as intermittent, constant, or throbbing.
 * Region and radiation
 	* Where the pain is on the body and whether it radiates (extends) or moves to any other area. This can give indications for conditions such as a myocardial infarction, which can radiate through the jaw and arms. Other referred pains can provide clues to underlying medical causes.
 * Severity
@@ -70,6 +71,7 @@ An inguinal hernia occurs when tissue, such as part of the intestine, protrudes 
 
 
 ### SOCRATES
+
 * https://en.wikipedia.org/wiki/SOCRATES_(pain_assessment)
 * Site – Where is the pain? Or the maximal site of the pain.
 * Onset – When did the pain start, and was it sudden or gradual? Include also whether it is progressive regressive.
@@ -79,10 +81,6 @@ An inguinal hernia occurs when tissue, such as part of the intestine, protrudes 
 * Time course – Does the pain follow any pattern?
 * Exacerbating/relieving factors – Does anything change the pain?
 * Severity – How bad is the pain?
-
-
-
-
 
 
 ## back behind me
@@ -105,7 +103,6 @@ An inguinal hernia occurs when tissue, such as part of the intestine, protrudes 
 
 ## Health
 
-
 * https://www11.anthem.com/ca/anthemextraspackages/
 * Angela Laffen
 * Dr Martin
@@ -121,34 +118,23 @@ An inguinal hernia occurs when tissue, such as part of the intestine, protrudes 
 
 ### UCSF Willed Body ~ (415) 476-1981
 
-
 Administration Offices 513 Parnassus Avenue, S-1334
-
 
 Address?
 
 
-
-
 ## Books
-Links to two or three books that provide up to date good diet guidelines.
 
+Links to two or three books that provide up to date good diet guidelines.
 
 I liked Willets' 'Eat Drink and be Healthy' and Weil's ''. I assume there are books of equal readability based on more recent studies.
 
 
 ## Bloggers and Sites
 
-
 Access to current stories and articles on recent research
 
 
 ## Forums
 
-
 Web sites where you can ask questions about diet and receive replies
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjQ2ODk5MCwtMjY0OTk1NjY4LC01Nj
-M2MDgwNiwxOTg1NDk4MzIwLDE0ODk3NjIxNjEsMjA2NzkxOTY2
-MV19
--->

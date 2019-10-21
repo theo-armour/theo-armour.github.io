@@ -4,10 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Bookmarklet dashboard">
+	<meta name="description" content="Theo dashboard">
 	<meta name="keywords" content="JavaScript,GitHub,FOSS">
-	<meta name="date" content="2019-10-19">
-	<meta name="version" content="0.00.00">
+	<meta name="date" content="2019-10-21">
+	<meta name="version" content="0.01.00">
 	<title></title>
 	<style>
 		* {
@@ -18,6 +18,18 @@
 			--mnu-width: 22rem;
 			--screen-width: calc(100vw);
 			--headerHeight: 6rem;
+
+			--background-color: #f7f6ee;
+			--secondary-color: #fbfefb;
+			--text-dark: #101010;
+			--text: #333333;
+			--text-light: #7b7b85;
+			--text-lighter: #ababab;
+			--blue: #3498db;
+			--green: #27ae60;
+			--yellow: #feca57;
+			--red: #c0392b;
+			--white: #ffffff;
 		}
 
 		html {
@@ -27,8 +39,12 @@
 		body {
 			font: 12pt monospace;
 			margin: 0 auto;
-			max-width: 800px;
+
 			padding: 0 0.5rem;
+
+			background: var(--background-color);
+			color: var(--text);
+
 		}
 
 		a {
@@ -58,7 +74,20 @@
 			color: #fff
 		}
 
-		/*
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--background-color: #1e1f23;
+			--secondary-color: #232428;
+			--text-dark: #efefef;
+			--text: #c4c5c9;
+			--text-light: #6c6d71;
+			--text-lighter: #8e8f93;
+		}
+
+	}
+
+
+	/*
 	main { border: 0px; height: 100%; left: var( --mnu-width ); margin: 0;
 		padding: 0 1rem; position: absolute; width: calc( 100% - var( --mnu-width ) );  }
 
@@ -66,7 +95,12 @@
 		position: absolute; top: 0; width: var( --mnu-width ); }
 	*/
 
-	#divNotepad { border: 1px solid #888; padding: 1rem; }
+	#divDashboard { border: 1px solid #888; padding: 1rem; }
+
+
+	main { display: flex; }
+
+	main > div { border: 1px solid red; margin: 5px; padding: 10px; 			max-width: 800px; }
 
 	</style>
 </head>
@@ -82,6 +116,8 @@
 
 		<a href="https://theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >github version</a>
 
+		edit <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >ta-bml-dashboard.html</a>
+
 		<hr>
 
 	</p>
@@ -91,7 +127,7 @@
 
 	<main>
 
-		<div id="divContents"></div>
+		<div>
 
 		<p>
 			<a href="JavaScript:( () => {
@@ -112,6 +148,11 @@
 		</p>
 
 		<p>
+			edit <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-bml/v-0-02/ta-bml.js" >ta-bml.js 0.02</a>
+		</p>
+
+		<hr>
+		<p>
 			<a href="JavaScript:( () => {
 					const script=document.head.appendChild( document.createElement( 'script' ) );
 					script.src='../../bookmark-capture/v-0-00/bookmark-capture.js';
@@ -131,30 +172,45 @@
 
 		<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/bookmark-capture/v-0-00/bookmark-capture.html" >bookmark-capture.html</a>
 
-		<p>
-			snippet <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/snippets/vs-code.md">vscode.md</a>
-		</p>
-
-		<p>
-			edit <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >ta-bml-dashboard.html</a>
-		</p>
-
-		<p>
-			edit <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-bml/v-0-02/ta-bml.js" >ta-bml.js 0.02</a>
-		</p>
-
-		<p>
-			<a href="https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts" target="_blank">Keyboard shortcuts in Windows</a>
-		</p>
-
 		<p contentEditable >
 			Should this dashboard be a Markdown page? or should I learn to use emmet?
 			and the Mozilla text editor? And by the way I can use voice recognition here.
-			Would it be nice to use columns here?
 		</p>
 
-		<div id="divNotepad"></div>
+		<div id="divDashboard"></div>
 
+
+	</div>
+
+
+	<div id="divFiles"></div>
+
+
+	<div id="divHelp">
+
+		<p>&#164; &curren; &times; &deg; &bull; &middot; &mdash; &euro; &hellip; &vellip; &#x1801; ❦ &#x2766;</p>
+		<p>win10:<br>
+			<a href="https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts" target="_blank">Keyboard shortcuts in Windows</a><br>
+			<a href="https://support.microsoft.com/en-us/help/4042244/windows-10-use-dictation" target="_blank">dictation</a><br>
+			¤ darkmode: settings > personalization<br>
+		<p>
+			gMail:<br>
+			¤ keyboard shortcuts: ?<br>
+			¤ spacebar: scroll preview
+			¤ cusor keys: scroll messages
+		</p>
+
+		<p>
+			chrome browser<br>
+			¤ close tab: ctrl-w
+		</p>
+		<p>chromebook: <br>
+			</b>¤ help: ctrl-alt-/</b><br>
+			¤  <a href="https://support.google.com/chromebook/answer/177893?hl=en" target="_blank">accessibility features - dication</a>
+		</p>
+
+		<p></p>
+	</div>
 	<script>
 
 		const urlSourceCode = 'https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/bookmarklets';
@@ -166,19 +222,45 @@
 
 			divTitle.innerHTML = getTitle();
 
-			divNotepad.contentEditable = true;
+			divDashboard.contentEditable = true;
 
-			if ( window.localStorage ) { divNotepad.innerHTML = localStorage.getItem( "notepad" ); }
+			if ( window.localStorage ) { divDashboard.innerHTML = localStorage.getItem( "dashboard" ); }
 
 			window.onunload = save();
 
 			setInterval( save, 500 );
 
+			requestSnippets ();
 
 		}
 
 
-		function save() { localStorage.setItem( "notepad", divNotepad.innerHTML ); }
+		function save() { localStorage.setItem( "dashboard", divDashboard.innerHTML ); }
+
+
+		function requestSnippets () {
+
+			url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets";
+
+			xhr = new XMLHttpRequest();
+			xhr.open( 'GET', url, true );
+			xhr.onerror = ( xhr ) => console.log( 'error:', xhr );
+			//xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
+			xhr.onload = callback;
+			xhr.send( null );
+
+
+			function callback ( xhr ) {
+
+				const text = JSON.parse( xhr.target.response );
+				const files = text.filter( item => item.type === "file" ).map( item => item.path.split( "/" ).pop() );
+				const htm = files.map( file => `<div><a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/snippets/${ file }" >${ file }</a></div>` ).join( "" );
+
+				divFiles.innerHTML = htm;
+
+			}
+
+		}
 
 		function getTitle() {
 
@@ -192,6 +274,8 @@
 						<img src=${ urlSourceCodeIcon} height=18 style=opacity:0.5; >
 					</a>
 					<a href="" title="Click to reload this page" >${ document.title} ${version}</a>
+
+					&#164; &curren; &times; &deg; &bull; &middot; &mdash; &euro; &hellip; &vellip; &#x1801; ❦ &#x2766;
 				</h2>
 
 				<p>

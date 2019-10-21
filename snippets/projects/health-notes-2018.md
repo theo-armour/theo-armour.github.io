@@ -41,6 +41,7 @@ Chat with Richard Smith
 	* Lying on side may help process
 
 Actions
+
 * Left another message with UCSF General Surgery
 
 
@@ -48,12 +49,14 @@ Actions
 ## 2018-11-28
 
 Current symptoms
+
 * Must lie down every few minutes to let the intestinal protrusion recede
 * Almost any activity seems to provoke the commencement of a protrusion
 * Being careful reduces painful incidents down to 6/7/8 level occurring just a few times an hour
 * Walking several hundred yards with walker is doable
 
 Adaptations
+
 * Carry a phone everywhere
 * Zero pushing when defecating
 * Be prepared to lie down for a few minutes every twenty minutes
@@ -64,25 +67,27 @@ Adaptations
 
 
 Activities
+
 * Phone call with health coordinator: Monday appointment
 * Phone call with Lindsay Mann: urgent referral to General Surgery
 * Message to GenSur
 
 
 Upcoming activities
+
 * Phone Richard
 * Email to peeps
 
 Lemons (the real thing ) from lemonade ( the sugary substitute )
+
 * Exercise while lying down
 	* Referral to PT?
 
 Family connections
+
 * Allison had two hernias repaired at birth
 * Tania had hernia repaired at age 4/5 / hiatal hernia
 * Grandma: hiatal hernia
-
-*
 
 
 ## 2018-11-27
@@ -112,11 +117,13 @@ The web pages I have visited include:
 
 
 Things I am planning:
+
 * Obtain a inguinal hernia truss tomorrow
 * Zero pushing when defecating
 
 
 As and when the symptoms reoccur, I plan to:
+
 * Lie down, preferably with my butt elevated with a pillow
 * Apply ice to the area
 * Press down on the bulge with my hand
@@ -124,6 +131,7 @@ As and when the symptoms reoccur, I plan to:
 
 
 Plan of action
+
 * See if I can live the rest of this week without significant re-occurrences of major episodes of protrusions and pain
 * If I cannot do so, you will hear me banging on the door the clinic
 * If I can keep things under control, I will pat myself on the back
@@ -190,6 +198,8 @@ Given the above, could you kindly help me with the responding to following quest
 
 
 ### 2018-01-26
+
+Bursitis
 
 Left hip generating significant pain
 

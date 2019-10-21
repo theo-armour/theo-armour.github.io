@@ -1,6 +1,27 @@
 # health notes 2019
 
 
+## 2019-10-21
+
+Dr Martin
+
+The more I don't see you the better, right? Life trundles on. Except for what I will describe in a bit, health feels quite good. The Google Fit app tells me I am walking over 45 minutes a day. Alcohol consumption is declining. Weight is stable/declining slightly. Diet is nicely Mediterraneanized. Still no Glaucoma drops needed. Inguinal hernia repair seems to be history. Ditto bursitis. Right hip and colon seem fine.
+
+The only significant current issues are the ongoing tingling feet (and sometimes lower body), occasional light-headed feeling, a weird "eyes heel heavy" symptom. These occur mostly in the morning before I have eaten much and while sitting at the computer. None of these seem to impede my daily routines in any significant manner - apart from the minor worry they cause.
+
+The symptoms do not cause me to be breathless, or disturb my ability to read small text on screen or stop me from coding or type all day. They may be more apparent the day after drinking four or five portions of alcohol.
+
+The other interesting symptom is soft loose stool with 2mm to 5mm air pockets ( think of the holes in a sponge or miniature Swiss cheese). It leaves a whitish scum or slick and has a slightly rancid smell and is occasionally expressed explosively.
+
+The less interesting symptoms are psoriasis and rashes in varying locations - which I medicate by slathering on Aquaphore cream.
+
+The single medication I take is 20 mg of Omeprazole a day - which I take to prevent dysphagia. I stopped taking probiotics, prebiotics, aspirin and vitamins some time last year.
+
+This all pretty much as I mentioned in a message to you last December. At that time, any investigation was postponed until after the hernia repair. Well, that time seems to have arrived. Your thoughts and suggestions as to what I can do will be appreciated.
+
+Theo
+
+
 ##  2019-06-20
 
 PT Coaching

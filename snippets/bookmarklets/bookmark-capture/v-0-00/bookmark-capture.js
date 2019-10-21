@@ -145,8 +145,7 @@ function updateJson() {
 	//console.log( 'document.lastModified', document.lastModified );
 
 	const txt =
-`{
-"url": "${inpUrl.value }",
+`{"url": "${inpUrl.value }",
 "title": "${ inpTitle.value }",
 "name": "${ inpFileName.value }",
 "dateAdd": "${ inpDateAdd.value }",
@@ -192,7 +191,7 @@ function getUuidv4() {
 
 function getaLine() {
 
-	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmarklets/bookmark-capture/bookmarks/file-ta-bmrklet-dashboard.json";
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmarklets/bookmark-capture/bookmarks/bookmarks-test.json";
 	//const url = "https://api.github.com/repos/pushme-pullyou/pushme-pullyou.github.io/add-a-line-bookmarks/bookmarks.json";
 
 	const request = new Request( url )
@@ -247,9 +246,9 @@ function addaLine( content = "", sha ) {
 
 	//content +=`{ "index": "${ arrayOfLines.length + 1 }", "uuid": "${ uuid }", "date": "${ ( new Date() ).toISOString() }" }\n`;
 
-	content = txtJson.value;
+	content = decodedData + "\n" +  txtJson.value.replace( /\n/g, " " ) + "\n";
 
-	divToSend.innerHTML = content;
+	divToSend.innerText = content;
 
 	codedData = window.btoa( content ); // encode the string
 
@@ -285,8 +284,8 @@ function saveFile() {
 
 	//const strings = BOP.jsonLines.map( jsonl => JSON.stringify( jsonl ) ).join( "\n" );
 
-	const strings = txtJson.value;
-	//console.log( 'str', strings );
+	const strings = decodedData + "\n" + txtJson.value.replace( /\n/g, " " ) + "\n";
+	console.log( 'str', strings );
 
 	const blob = new Blob( [ strings ] );
 	let a = document.body.appendChild( document.createElement( 'a' ) );
