@@ -14,7 +14,7 @@
 * Can export png to Google Drive
 * Then open with irfanview
 
-### OneNotr
+### OneNote
 
 * Export to PDF
 
