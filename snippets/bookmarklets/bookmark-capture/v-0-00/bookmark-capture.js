@@ -30,7 +30,7 @@ function init() {
 
 		style = document.head.appendChild(document.createElement('style'));
 		style.innerText =
-			`
+		`
 			a { opacity: 1 }
 			.titleCBM { color: green; display:inline-block; margin: 0.5rem 0 0 0; width: 15%; }
 			.inputCBM { width:80%; }
@@ -44,9 +44,6 @@ function init() {
 
 		`;
 
-
-
-
 	} else {
 
 		divCaptureBookmark.hidden = false;
@@ -58,7 +55,7 @@ function init() {
 
 
 	const htm =
-	`bbbb
+	`
 		<button onclick=divCaptureBookmark.hidden=true; style=float:right >x</button>
 
 		<div class=titleCBM >title: </div><input id=inpTitle class=inputCBM oninput=updateJson(); value="${ document.title }" ></div>

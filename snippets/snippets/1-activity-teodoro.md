@@ -1,23 +1,27 @@
-# Activities
+# Activity teodoro
 
 During the day
 
 Six hours of programming
 
-Things to do of an evening -  in 18 minute theodoros
+Things to do of an evening - in 18 minute teodoros
 
 * Write an email to somebody
+
+## Fidgetty
+
+* Try window open then window.close() to display a message on top of screen for a few seconds
+	* Click anywhere to close??
 
 
 ## morning things
 
-paint nails
-hairy bits ear nose
-5 minute shampoo
+* clean & paint nails
+* hairy bits ear nose
+* 5 minute shampoo
 house cleaning
 left foot
 right foot
-wash truss
 update messages
 eating chart
 
