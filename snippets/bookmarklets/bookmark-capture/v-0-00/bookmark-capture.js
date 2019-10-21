@@ -192,7 +192,7 @@ function getUuidv4() {
 
 function getaLine() {
 
-	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/ta-bml.html";
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmarklets/bookmark-capture/bookmarks/file-ta-bmrklet-dashboard.json";
 	//const url = "https://api.github.com/repos/pushme-pullyou/pushme-pullyou.github.io/add-a-line-bookmarks/bookmarks.json";
 
 	const request = new Request( url )
@@ -219,9 +219,9 @@ function getaLine() {
 
 		decodedData = window.atob( data.content ); // decode the string
 
-		divNotepad.innerHTML= `<div >${ decodedData }</div>`;
+		//divNotepad.innerHTML= `<div >${ decodedData }</div>`;
 
-		divNotepad.contentEditable = true;
+		//divNotepad.contentEditable = true;
 
 		logFileContent = decodedData;
 		logFileSha = data.sha
@@ -237,7 +237,7 @@ function getaLine() {
 
 function addaLine( content = "", sha ) {
 
-	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/ta-bml.html";
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmark-capture/bookmarks/bookmarks-test.json";
 
 	const request = new Request( url );
 
@@ -247,7 +247,7 @@ function addaLine( content = "", sha ) {
 
 	//content +=`{ "index": "${ arrayOfLines.length + 1 }", "uuid": "${ uuid }", "date": "${ ( new Date() ).toISOString() }" }\n`;
 
-	content = divNotepad.innerHTML;
+	content = txtJson.value;
 
 	divToSend.innerHTML = content;
 
