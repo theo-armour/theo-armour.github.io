@@ -1,6 +1,6 @@
 
 
-const GAT = {}
+const GAT = {};
 
 init();
 
@@ -46,11 +46,13 @@ function init () {
 	</div>
 
 	<div id=divToSend ></div>
+	
 	<p>
 		<button id=but onclick=getaLine(); >getaLine</button>
 
 		<button id=but onclick=addaLine(logFileContent,logFileSha); >addaLine</button>
 	</p>
+
 	<p>
 		<a href = 'JavaScript:( () => {
 				const features ="location=yes,menubar=no,status=1,width=500,height=600,left=0,top=0,resizable=yes,scrollbars=yes";

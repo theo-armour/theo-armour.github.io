@@ -15,11 +15,14 @@ tagSets = [ year, type, source, stats ];
 
 tagNames = ["year", "type", "source", "status" ];
 
+const GAT = {};
 
 init()
 
 
-function init() {
+function init () {
+
+	GAT.accessToken = localStorage.getItem( 'githubAccessToken' ) || '';
 
 	let path = location.protocol === "file:" ? "../../" : "https://theo-armour.github.io/snippets/bookmarklets/";
 
@@ -80,9 +83,22 @@ function init() {
 
 		<div class=titleCBM >json: </div><textarea id=txtJson style=height:15rem;width:100%; ></textarea>
 
-		<button onclick=saveFile(); >save</button>
+		<div id=divToSend ></div>
 
-		<span style=float:right >${ version }</span>
+		<p>
+			<button id=but onclick=getaLine(); >getaLine</button>
+
+			<button id=but onclick=addaLine(logFileContent,logFileSha); >addaLine</button>
+			||
+			<button onclick=saveFile(); >save</button>
+
+			<span style=float:right >${ version }</span>
+		</p>
+
+		<p>Access token<br>
+			<input value="${ GAT.accessToken }" id=GATinpGitHubApiKey onclick=this.select(); onblur=GAT.setGitHubAccessToken(this.value); title="Obtain API Access Token" style=width:100%; >
+		</p>
+
 	`;
 
 	divCaptureBookmark.innerHTML = htm;
@@ -171,6 +187,100 @@ function getUuidv4() {
 
 }
 
+
+
+
+function getaLine() {
+
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/ta-bml.html";
+	//const url = "https://api.github.com/repos/pushme-pullyou/pushme-pullyou.github.io/add-a-line-bookmarks/bookmarks.json";
+
+	const request = new Request( url )
+
+	fetch( request ).then( ( response ) => {
+
+		//if ( response.ok ) {
+
+			return response.json();
+
+		//} else {
+
+		//	return Promise.reject( response );
+
+		//}
+
+	} ).then( ( data ) => {
+
+		console.log( data );
+
+		//divContents.innerText += (JSON.stringify( data ) );
+
+		//console.log( 'data', data );
+
+		decodedData = window.atob( data.content ); // decode the string
+
+		divNotepad.innerHTML= `<div >${ decodedData }</div>`;
+
+		divNotepad.contentEditable = true;
+
+		logFileContent = decodedData;
+		logFileSha = data.sha
+
+	} ).catch( ( err ) => {
+
+		console.warn( 'Something went wrong.', err );
+
+	} );
+
+}
+
+
+function addaLine( content = "", sha ) {
+
+	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/ta-bml.html";
+
+	const request = new Request( url );
+
+	//arrayOfLines = content.match(/[^\r\n]+/g);
+
+	//uuid = getUuidv4();
+
+	//content +=`{ "index": "${ arrayOfLines.length + 1 }", "uuid": "${ uuid }", "date": "${ ( new Date() ).toISOString() }" }\n`;
+
+	content = divNotepad.innerHTML;
+
+	divToSend.innerHTML = content;
+
+	codedData = window.btoa( content ); // encode the string
+
+	fetch( request, {
+		method: "PUT",
+		headers: { "Authorization": "token " + GAT.accessToken, "Content-Type": "application/json" },
+		body: JSON.stringify( {
+			"branch": "master",
+			"committer": {
+				"name": "Theo Armour",
+				"email": "t.armour@gmail.com"
+			},
+			"content": codedData,
+			"message": "add to file",
+			"sha": logFileSha
+		} ),
+
+	} )
+	.then( response => response.json() )
+	.then( data => {
+
+		//divContents.innerText += (JSON.stringify( data ) );
+
+	} )
+	.catch(  err => console.warn( 'Something went wrong.', err ) );
+
+}
+
+
+
+
 function saveFile() {
 
 	//const strings = BOP.jsonLines.map( jsonl => JSON.stringify( jsonl ) ).join( "\n" );
@@ -223,5 +333,15 @@ function addTag( select ) {
 	txtTags.value += comma + select.value;
 
 	updateJson();
+
+};
+
+GAT.setGitHubAccessToken = function ( accessToken ) {
+
+	console.log( 'accessToken', accessToken );
+
+	localStorage.setItem( "githubAccessToken", accessToken );
+
+	GAT.accessToken = accessToken;
 
 };
