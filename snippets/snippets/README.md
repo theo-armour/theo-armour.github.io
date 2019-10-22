@@ -1,6 +1,7 @@
 # What should we have here
 
 
+Move to better place
 
 ## Standards
 
@@ -52,7 +53,7 @@ About
 * https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar
 
 
-WBS
+### WBS
 
 * https://en.wikipedia.org/wiki/Work_breakdown_structure
 * https://www.lucidchart.com/blog/how-to-create-a-work-breakdown-structure-and-why-you-should

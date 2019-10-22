@@ -6,7 +6,8 @@ Thinking about a faster way of getting to web pages for files on windows
 
 I looked at windows sticky notes but they are not always up On the desktop
 
-Probably need to use a bookmarklet. How to launch a bookmarklet using the keyboard? 
+Probably need to use a bookmarklet. How to launch a bookmarklet using the keyboard?
+
 
 ## Vanilla JavaScript
 

@@ -3,6 +3,8 @@
 
 ## 2019-10-21
 
+see pdf in gdrive
+
 Dr Martin
 
 The more I don't see you the better, right? Life trundles on. Except for what I will describe in a bit, health feels quite good. The Google Fit app tells me I am walking over 45 minutes a day. Alcohol consumption is declining. Weight is stable/declining slightly. Diet is nicely Mediterraneanized. Still no Glaucoma drops needed. Inguinal hernia repair seems to be history. Ditto bursitis. Right hip and colon seem fine.
@@ -55,7 +57,7 @@ Dr Lise McCarthy is an Assistant Clinical Professor (volunteer faculty) in the P
 
 
 
-## 2019-06-09 ~
+## 2019-06-09
 
 Dr lin
 

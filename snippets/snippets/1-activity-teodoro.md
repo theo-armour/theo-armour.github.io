@@ -1,14 +1,35 @@
 # Activity teodoro
 
+## daily
+
 During the day
 
-Six hours of programming
+* Six hours of programming
+* 5,000 steps, 45 minutes walk, 20 minutes brisk
 
-Things to do of an evening - in 18 minute teodoros
+Things to do of an evening
+
+* 18 minute teodoros
+
+
+
+
+## teodoro 18 minutes
 
 * Write an email to somebody
+* Bookmarklet
+* Internet Archive / EverEverLand
+* Add-a-line
+* GubGub
+* Tidy desk
+* Lenovo remote
+* Shoeboxed / Curl to Fetch
+* Shea >> eel
+* Omar
+* Food coach
 
-## Fidgetty
+
+## fidgetty
 
 * Try window open then window.close() to display a message on top of screen for a few seconds
 	* Click anywhere to close??
@@ -26,7 +47,7 @@ update messages
 eating chart
 
 
-## The items
+## The items / things I do
 
 * Paperwork
 * Email
@@ -66,6 +87,9 @@ eating chart
 * Possessions dispersal
 * Hardware maintenance
 
+## keeping lists
+
+* No more than three items per day
 
 ## Taking Notes
 

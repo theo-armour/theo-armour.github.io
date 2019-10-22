@@ -143,6 +143,7 @@ Don Shaw / Marcia / HR Block / Cristina
 ### 2019-01-09
 
 Safeway
+
 * 3 containers
 * Rice
 * Nuts
