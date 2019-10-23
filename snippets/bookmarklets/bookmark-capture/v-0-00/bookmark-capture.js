@@ -1,5 +1,5 @@
 
-var version = "0.00.05";
+var version = "0.00.06";
 var fileName;
 var domain;
 
