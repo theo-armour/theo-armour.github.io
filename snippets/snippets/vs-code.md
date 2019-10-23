@@ -40,6 +40,13 @@
 -   https://vscodecandothat.com/
 -   https://www.smashingmagazine.com/2018/01/visual-studio-code/ \* Visual Studio Code Can Do That?
 
+
+### Chrobook linux
+
+Access Gdrive files from Chromebook Linux
+
+* https://support.google.com/pixelbook/thread/1087442?msgid=17296031
+
 ### Opening VS Code
 
 In terminal

@@ -13,7 +13,11 @@ stats =  [ "iframe-ok", "noframe","deprecated","dead", "duplicate", "stale", "of
 
 tagSets = [ year, type, source, stats ];
 
-tagNames = ["year", "type", "source", "status" ];
+tagNames = [ "year", "type", "source", "status" ];
+
+
+const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmarklets/bookmark-capture/bookmarks/bookmarks-test.jsonl";
+
 
 const GAT = {};
 
@@ -190,8 +194,6 @@ function getUuidv4() {
 
 
 function getaLine() {
-
-	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmarklets/bookmark-capture/bookmarks/bookmarks-test.json";
 	//const url = "https://api.github.com/repos/pushme-pullyou/pushme-pullyou.github.io/add-a-line-bookmarks/bookmarks.json";
 
 	const request = new Request( url )
@@ -236,7 +238,7 @@ function getaLine() {
 
 function addaLine( content = "", sha ) {
 
-	const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmark-capture/bookmarks/bookmarks-test.json";
+	//const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/bookmark-capture/bookmarks/bookmarks-test.json";
 
 	const request = new Request( url );
 
@@ -246,7 +248,7 @@ function addaLine( content = "", sha ) {
 
 	//content +=`{ "index": "${ arrayOfLines.length + 1 }", "uuid": "${ uuid }", "date": "${ ( new Date() ).toISOString() }" }\n`;
 
-	content = decodedData + "\n" +  txtJson.value.replace( /\n/g, " " ) + "\n";
+	content = decodedData +  txtJson.value.replace( /\n/g, " " ) + "\n";
 
 	divToSend.innerText = content;
 
@@ -254,7 +256,7 @@ function addaLine( content = "", sha ) {
 
 	fetch( request, {
 		method: "PUT",
-		headers: { "Authorization": "token " + GAT.accessToken, "Content-Type": "application/json" },
+		headers: { "Authorization": "token " + GAT.accessToken, "Content-Type": "text/plain" },
 		body: JSON.stringify( {
 			"branch": "master",
 			"committer": {

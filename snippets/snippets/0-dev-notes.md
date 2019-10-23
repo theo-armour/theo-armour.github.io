@@ -1,5 +1,14 @@
 # To Do / * = idea / [] = doIt / [x] = done / more??
 
+
+### 2019-10-2
+
+I can now access Google Drive files in Linux on my Chromebook but the the problem is that I cannot use voice recognition nor can I use any of the text blaze speed up shortcuts.
+
+https://support.google.com/pixelbook/thread/1087442?msgid=17296031
+
+
+
 ### 2019-10-17
 
 Thinking about a faster way of getting to web pages for files on windows

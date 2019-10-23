@@ -2,7 +2,7 @@
 
 scanning services
 public storage link
-balcony camera to charge 
+balcony camera to charge
 
 ## Career Advice
 
@@ -18,8 +18,9 @@ balcony camera to charge
 * https://app.shoeboxed.com/member/v2/envelopes
 * More envelopes
 * Export Evernote docs to archives
-* 
+*
 ## Accounts
+
 * Prepare more years of accounts
 * Export individual transactions
 * dropbox
@@ -36,7 +37,7 @@ balcony camera to charge
 * Movers
 
 ## Possessions
-* bench from Antonio's 
+* bench from Antonio's
 * visit to storage
 	* work on triage
 
@@ -54,7 +55,7 @@ balcony camera to charge
 * Mother 78 Basque Bakersfield
 * Step-father: 60s
 * Father San Diego
-* 
+*
 girlfriend #1 crazy
 girlfriend #2 died
 girlfriend #3 died
