@@ -1,8 +1,8 @@
 # Patrick Murphy
 
-scanning services
-public storage link
-balcony camera to charge
+* scanning services
+* public storage link
+* balcony camera to charge
 
 ## Career Advice
 
@@ -18,7 +18,8 @@ balcony camera to charge
 * https://app.shoeboxed.com/member/v2/envelopes
 * More envelopes
 * Export Evernote docs to archives
-*
+
+
 ## Accounts
 
 * Prepare more years of accounts
@@ -37,6 +38,7 @@ balcony camera to charge
 * Movers
 
 ## Possessions
+
 * bench from Antonio's
 * visit to storage
 	* work on triage
@@ -59,12 +61,3 @@ balcony camera to charge
 girlfriend #1 crazy
 girlfriend #2 died
 girlfriend #3 died
-
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODYyNzc5MywtMjMwODkzODI1LC01Mz
-E1Nzk0OSw3NjI2NzYxNTUsMzYwMTQ4NTMsLTIwNzI4NTU2Mzcs
-NjQzNjg5OTg0LC0xNTAyMjg3MDAyLDIwNDA2MTcxOTAsLTIwMT
-cyMjE2NDZdfQ==
--->

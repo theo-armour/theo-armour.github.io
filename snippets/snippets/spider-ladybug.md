@@ -1,7 +1,17 @@
 # Spider Ladybug
 
-## 2019-09-24
 
+## 2019-10-23
+
+Try Antoine
+
+Stephen Roth
+
+* Would like more feedback / need to be in touch with someone
+* https://www.carmelsoft.com/ >> right up my alley
+
+
+## 2019-09-24
 
 Dr Krishnan Gowri
 Intertek – Building Science Solutions
