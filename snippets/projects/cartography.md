@@ -136,7 +136,7 @@ more nice lat lon
 
 	function lat2tile( lat, zoom ) {
 
-		var pi = Math.PI;
+		const pi = Math.PI;
 
 		return Math.floor( ( 1 - Math.log( Math.tan( lat * pi / 180 ) + 1 / Math.cos( lat * pi / 180 ) ) / pi ) / 2 * Math.pow( 2, zoom ) );
 

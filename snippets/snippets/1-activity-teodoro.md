@@ -9,7 +9,7 @@ During the day
 
 Things to do of an evening
 
-* 18 minute teodoros
+* 18 minute teodoro
 
 
 

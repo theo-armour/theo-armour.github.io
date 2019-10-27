@@ -18,6 +18,25 @@ https://rawgit.com/
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js@r105/build/three.min.js
 * https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.min.js
 
+three.js
+
+* https://cdn.rawgit.com/mrdoob/three.js/r90/build/three.min.js
+* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r109/build/three.min.js
+
+controls
+
+* https://cdn.rawgit.com/mrdoob/three.js/r90/examples/js/controls/OrbitControls.js
+* https://cdn.jsdelivr.net/gh/mrdoob/three.js@r109/examples/js/controls/OrbitControls.js
+
+showdown
+
+* https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js
+* https://cdn.jsdelivr.net/gh/showdownjs/showdown@1.9.0/dist/showdown.min.js
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/gh/showdownjs/showdown@1.9.0/dist/showdown.min.js" ></script>
+
 stats
 
 * https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js

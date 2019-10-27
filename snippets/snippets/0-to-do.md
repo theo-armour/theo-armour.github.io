@@ -10,8 +10,8 @@
 
 -   add names
 -   -   Use API to gather messages
-        weekly email
-        tania to juilette
+weekly email
+tania to juilette
 
 ### Alix
 
