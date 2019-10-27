@@ -97,7 +97,6 @@
 
 	#divDashboard { border: 1px solid #888; padding: 1rem; }
 
-	#divJsonBox { border: 1px solid blue; padding: 1rem; }
 
 	main { display: flex; }
 
@@ -113,7 +112,6 @@
 </head>
 
 <body>
-<script src="jsonbox-0-00.js" ></script>
 
 	<nav id="navMenu">
 
@@ -180,20 +178,9 @@
 
 			<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/bookmark-capture/v-0-00/bookmark-capture.html" >bookmark-capture.html</a>
 
-			<div id="divJsonBox" contentEditable ></div>
-
-			<div id="divJsonBoxResponse" ></div>
-
-			<p>
-				<button id=but onclick=JB.getJson(); >getJson</button>
-
-				<button id=but onclick=JB.putJson(); >putJson</button>
-
-				<button id=but onclick=JB.getJsonAll(); >JB.getJsonAll</button>
-
-				<button id=but onclick=JB.deleteJson(); >deleteJson</button>
-
-
+			<p contentEditable >
+				Should this dashboard be a Markdown page? or should I learn to use emmet?
+				and the Mozilla text editor? And by the way I can use voice recognition here.
 			</p>
 
 			<div id="divDashboard"></div>
@@ -263,8 +250,6 @@
 
 			divTitle.innerHTML = getTitle();
 
-			JB.getJson();
-			
 			divDashboard.contentEditable = true;
 
 			if ( window.localStorage ) { divDashboard.innerHTML = localStorage.getItem( "dashboard" ); }
