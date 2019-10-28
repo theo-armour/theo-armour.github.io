@@ -178,7 +178,8 @@
 				</a>bookmark capture - stand alone github
 			</p>
 
-			<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/bookmark-capture/v-0-00/bookmark-capture.html" >bookmark-capture.html</a>
+			test: <a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/bookmark-capture/v-0-00/bookmark-capture.html" >bookmark-capture.html</a>
+
 
 			<div id="divJsonBox" contentEditable ></div>
 
@@ -189,14 +190,12 @@
 
 				<button id=but onclick=JB.putJson(); >putJson</button>
 
-				<button id=but onclick=JB.getJsonAll(); >JB.getJsonAll</button>
+				<button id=but onclick=JB.getJsonAll(); >getAll</button>
 
-				<button id=but onclick=JB.deleteJson(); >deleteJson</button>
-
-
+				<button id=but onclick=JB.deleteJson(); >delete</button>
 			</p>
 
-			<div id="divDashboard"></div>
+			<!-- <div id="divDashboard"></div> -->
 
 
 		</div>
@@ -264,14 +263,6 @@
 			divTitle.innerHTML = getTitle();
 
 			JB.getJson();
-			
-			divDashboard.contentEditable = true;
-
-			if ( window.localStorage ) { divDashboard.innerHTML = localStorage.getItem( "dashboard" ); }
-
-			window.onunload = save();
-
-			setInterval( save, 500 );
 
 			requestSnippets();
 
@@ -279,6 +270,7 @@
 
 
 		function save() { localStorage.setItem( "dashboard", divDashboard.innerHTML ); }
+
 
 
 		function requestSnippets () {

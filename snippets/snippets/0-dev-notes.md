@@ -1,5 +1,12 @@
 # To Do / \* = idea / [] = doIt / [x] = done / more??
 
+
+## 2019-10-27
+
+Good question: should I keep my diary as markdown files or as HTML files?
+
+
+
 ## 2019-10-26
 
 vs code workspaces are quite nifty.
