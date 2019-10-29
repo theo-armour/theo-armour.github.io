@@ -1173,6 +1173,18 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 * pushme-pullyou/tootoo14/js-14-08/ffp-file-fetch-put
 * Storage keys and values are both stored in the UTF-16 DOMString format, which uses 2 bytes per character.
 
+Examples
+
+* localStorage.setItem('myCat', 'Tom');
+* var cat = localStorage.getItem('myCat');
+* localStorage.removeItem('myCat');
+* localStorage.clear();
+* obj = { "name": "theo, "age": 72 }
+* localStorage.setItem( "obj", JSON.stringify( obj ) );
+* obj = localStorage.setItem( "obj", JSON.parse( obj ) );
+
+
+
 		const apiKey = localStorage.getItem( 'apiKey' );
 		inpApiKey.value = apiKey ? apiKey : '' ;
 
