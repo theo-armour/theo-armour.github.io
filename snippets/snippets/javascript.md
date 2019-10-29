@@ -1162,7 +1162,16 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 ### Local Storage / localStorage
 
 * https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+* https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/
+	* Do not store sensitive user information in localStorage
+	* It is not a substitute for a server based database as information is only stored on the browser
+	* LocalStorage is limited to 5MB across all major browsers
+	* LocalStorage is quite insecure as it has no form of data protection and can be accessed by any code on your web page
+	* LocalStorage is synchronous. Meaning each operation called would only execute one after the other
+* https://medium.com/better-programming/how-to-use-local-storage-with-javascript-9598834c8b72
 * pushme-pullyou/tootoo14/js-14-08/ffp-file-fetch-put
+* Storage keys and values are both stored in the UTF-16 DOMString format, which uses 2 bytes per character.
 
 		const apiKey = localStorage.getItem( 'apiKey' );
 		inpApiKey.value = apiKey ? apiKey : '' ;

@@ -1,5 +1,19 @@
 # EverEverLand
 
+* Find new homes for your old things
+* Can we help you ...
+
+Santayana said: "Those who do not learn from history, wre doomed to repeat it." Shucks, I'm just her to provide the course material
+
+The historian of the future
+
+Age of Enlightenment, men of reason
+
+The more an organism knows itself, about itself the better it can coach itself
+
+I have over five thousand business cards. Just by knowing these names were associated with me you can connect the dots that create the business, cultural and political links
+
+Ditto books, bookmarks, baseball cards, collections and more
 
 ## Science Of Persuasion
 

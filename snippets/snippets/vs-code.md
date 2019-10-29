@@ -8,7 +8,7 @@
 -   Try new line only setting no cr
 
 ## Tips
-
+* settings.json
 -   Keyboard shortcuts: Ctrl+K, Ctrl+s
 -   F1 for help
 -   Can drag and drop from Sidebar to browser
@@ -20,6 +20,11 @@
 -   https://twitter.com/hashtag/vscode?lang=en
 -   https://code.visualstudio.com/docs
 -   https://stackoverflow.com/questions/tagged/visual-studio-code
+
+## Included but not 'supported'
+
+* Beautify
+* TypeScript
 
 ## Articles
 

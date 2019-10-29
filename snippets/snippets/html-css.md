@@ -39,9 +39,15 @@ width: calc( 100% - var( --menu-width ) )
 
 
 ### CHARACTERS
-http://unicode.org/emoji/charts/full-emoji-list.html
-http://www.unicode.org/charts/
-https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
+
+* ascii character name:
+	* https://cs.stanford.edu/people/miles/iso8859.html
+	* https://www.freeformatter.com/html-entities.html#math-symbols >> best
+	* https://www.w3schools.com/charsets/ref_html_8859.asp
+	* https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references >> all!
+* http://unicode.org/emoji/charts/full-emoji-list.html
+* http://www.unicode.org/charts/
+* https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 
 
 ☎
@@ -79,7 +85,7 @@ Hands: black: L &#x261A; R &#x261B; / White L &#x261C; U &#x261D; R &#x261E; D &
 
 http://fontawesome.io/icons/
 
-file:///C:/Dropbox/Public/code-cookbook/0-cookbook-general/string%20manipulation/characters-interesting.html
+* code-cookbook/0-cookbook-general/string%20manipulation/characters-interesting.html
 - see bottom for rotating characters by degrees.
 
 

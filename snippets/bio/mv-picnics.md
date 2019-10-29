@@ -4,6 +4,11 @@
 
 ## South Beach Playlist
 
+* I get a kick out of you
+* Putting on the ritz
+* Quando, Quando
+
+
 * Ciao Ciao Bambina
 * Volare
 * [Itsy-witsy teeny-weeny yellow polka-dot bikini]( https://en.wikipedia.org/wiki/Itsy_Bitsy_Teenie_Weenie_Yellow_Polkadot_Bikini )
@@ -14,6 +19,9 @@
 * [Goombay]( https://en.wikipedia.org/wiki/Goombay )
 	* https://www.youtube.com/watch?v=tQLa5VWLIRQ
 
+We always had a radio, but was it just to listen to:
+
+* [Paul Harvey]( https://en.wikipedia.org/wiki/Paul_Harvey )
 
 ## Accouterments
 
@@ -24,6 +32,7 @@
 * Umbrella, later yellow popup tent for Cynie
 * Bahamian cane mats
 * Emerson leatherette AM radio
+	* OR [GE]( https://commons.wikimedia.org/wiki/File:Vintage_General_Electric_6_Transistor_Radio,_Model_P750A,_Leather_Case,_Broadcast_Band_Only,_Made_In_USA,_Circa_1958_(14925114367).jpg )?
 * Swiss Army knife with corkscrew
 
 Occasionally

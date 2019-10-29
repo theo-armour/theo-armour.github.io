@@ -8,7 +8,7 @@ https://api.github.com/users/theo-armour
 
 curl -i https://api.github.com/users/theo-armour
 
-	fileName = 'https://api.github.com/repos/jaanga/sp500/contents/trades';
+fileName = 'https://api.github.com/repos/jaanga/sp500/contents/trades';
 
 
 ## Events

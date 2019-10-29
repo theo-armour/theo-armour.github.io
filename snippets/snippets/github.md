@@ -1,10 +1,15 @@
 # GitHub
 
 
+## Tips
+
+* You can write read me files in HTML because Markdown passes transparently almost all HTML
+
 
 ## JavaScript
 
 * http://jsbeautifier.org/
+
 
 ## Releases
 
@@ -14,6 +19,7 @@
 
 
 Tips
+
 * Right click on Latest Release and copy the URL to share it. The suffix of this URL is always /releases/latest.
 
 ## Notes GitHub API

@@ -1,6 +1,13 @@
 # Spider Ladybug
 
 
+## 2019-10-27
+
+
+Michal austria? / screen cap video
+stephen roth: interest in gbJson
+
+
 ## 2019-10-23
 
 Try Antoine
