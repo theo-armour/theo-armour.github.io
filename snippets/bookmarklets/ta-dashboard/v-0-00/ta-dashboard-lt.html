@@ -47,19 +47,19 @@
 
 	<main>
 
-			<div id="divJsonBox" contentEditable ></div>
+		<div id="divJsonBox" contentEditable ></div>
 
-			<div id="divJsonBoxResponse" ></div>
+		<p>
+			<button id=but onclick=JB.getJson(); >getJson</button>
 
-			<p>
-				<button id=but onclick=JB.getJson(); >getJson</button>
+			<button id=but onclick=JB.putJson(); >putJson</button>
 
-				<button id=but onclick=JB.putJson(); >putJson</button>
+			<button id=but onclick=JB.getJsonAll(); >getAll</button>
 
-				<button id=but onclick=JB.getJsonAll(); >getAll</button>
+			<!-- <button id=but onclick=JB.deleteJson(); >delete</button> -->
+		</p>
 
-				<!-- <button id=but onclick=JB.deleteJson(); >delete</button> -->
-			</p>
+		<div id="divJsonBoxResponse" ></div>
 
 		<div id="divContent" ></div>
 
