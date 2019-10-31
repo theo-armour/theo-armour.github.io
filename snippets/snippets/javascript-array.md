@@ -1,11 +1,22 @@
 
 # ARRAY
 
+## About
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 * http://www.w3schools.com/jsref/jsref_obj_array.asp
 * https://www.w3schools.com/js/js_arrays.asp
 * https://www.codingame.com/playgrounds/6181/javascript-arrays---tips-tricks-and-examples
 * https://medium.freecodecamp.org/https-medium-com-gladchinda-hacks-for-creating-javascript-arrays-a1b80cb372b
+
+
+## Tips
+
+### Naming
+
+* use "content" if talking about a single element
+* Using a plural indicates an array
+
+## Methods
 
 * Array.length
 * Array.from()

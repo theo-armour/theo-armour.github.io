@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1" >
+<meta name = "description" content = "Basic TooToo HTML template" >
+<meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
+<meta name = "date" content = "2019-09-21" >
+<meta name = "version" content = "0.00.0" >
+<title></title>
+<style>
+
+	:root { font: 12pt monospace; --mnu-width: 22rem; --screen-width: calc( 100vw ); --headerHeight: 6rem; }
+
+	* { box-sizing: border-box; margin: 0; }
+
+
+	html { height: 100%; }
+
+	body { margin: 0 auto; max-width: 800px; padding: 0 0.5rem; }
+
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus, a:active { background-color: yellow; color: #aaa; text-decoration: underline }
+
+	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
+	button:hover { background: #ccc; color: #fff }
+
+	#divJsonBox { border: 1px solid blue; padding: 1ch; }
+	/*
+	main { border: 0px; height: 100%; left: var( --mnu-width ); margin: 0;
+		padding: 0 1rem; position: absolute; width: calc( 100% - var( --mnu-width ) );  }
+
+	#navMenu { background-color: #eee; left: 0; margin: 0; padding: 0 1rem;
+		position: absolute; top: 0; width: var( --mnu-width ); }
+	*/
+
+</style>
+</head>
+<body>
+<script src="jsonbox-0-00.js" ></script>
+
+	<nav id="navMenu" >
+
+		<div id="divTitle" ></div>
+
+	</nav>
+
+	<main>
+
+			<div id="divJsonBox" contentEditable ></div>
+
+			<div id="divJsonBoxResponse" ></div>
+
+			<p>
+				<button id=but onclick=JB.getJson(); >getJson</button>
+
+				<button id=but onclick=JB.putJson(); >putJson</button>
+
+				<button id=but onclick=JB.getJsonAll(); >getAll</button>
+
+				<!-- <button id=but onclick=JB.deleteJson(); >delete</button> -->
+			</p>
+
+		<div id="divContent" ></div>
+
+	</main>
+
+
+<script>
+
+const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/bookmarklets/ta-dashboard";
+const urlSourceCodeIcon = "https://pushme-pullyou.github.io/github-mark-32.png";
+
+init();
+
+function init() {
+
+	divTitle.innerHTML = getTitle();
+
+	JB.getJson();
+
+}
+
+
+
+function getTitle() {
+
+	document.title = document.title ? document.title : location.href.split( '/' ).pop().slice( 0, - 5 ).replace( /-/g, ' ' );
+	const version = document.head.querySelector( "[ name=version ]" ).content;
+	const description = document.head.querySelector( "[ name=description ]" ).content;
+
+	const htm =
+	`
+		<h2>
+			<a href=${ urlSourceCode } target=_top title="Source code on GitHub" >
+				<img src=${ urlSourceCodeIcon } height=18 style=opacity:0.5; >
+			</a>
+			<a href="" title="Click to reload this page" >${ document.title } ${ version }</a>
+		</h2>
+
+		<!-- <p>${ description }</p> -->
+	`;
+
+	return htm;
+
+}
+
+</script>
+</body>
+</html>

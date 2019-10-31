@@ -12,6 +12,44 @@ Things to do of an evening
 * 18 minute teodoro
 
 
+## coffee breaks
+
+* every coffee I drink during the day has a number and a mission
+
+### #1
+
+* Experimental coffee
+* Do dishes
+* Clean counter tops
+* Take meds
+* One minute dance
+
+### #2
+
+* coffee: Starbucks Via
+* Pee
+* Prepare snacks for the day
+
+### #3
+
+* Coffee: Nescafe Classico
+* Do feet
+* Put on socks and get dressed
+
+### #4
+
+* Coffee: Nescafe Classico
+* First walk
+
+## After 6
+
+### Tea
+
+### After Midnight
+
+
+
+
 
 
 ## teodoro 18 minutes

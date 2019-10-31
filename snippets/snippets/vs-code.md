@@ -3,6 +3,8 @@
 ### To do
 
 -   Try prettier
+	* Reset settings.json
+	* Get rid of all typescript
 -   Good workflow on Chromebook \* 2019-04-29: Looking good
 -   https://github.com/shanalikhan/code-settings-sync
 -   Try new line only setting no cr
