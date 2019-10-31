@@ -1,5 +1,20 @@
 # EverEverLand
 
+## Sell then design then build
+
+* https://en.wikipedia.org/wiki/Conner_Peripherals
+* https://www.nytimes.com/1990/05/27/business/a-novel-idea-customer-satisfaction.html
+* http://www.fundinguniverse.com/company-histories/conner-peripherals-inc-history/
+	* Conner set about building a company--Conner Peripherals--around a 'sell, design, build' strategy.
+	* Conner continued its policy of not engineering a new product unless at least one major buyer had agreed to purchase it
+* https://archive.fortune.com/magazines/fortune/fortune_archive/1990/08/13/73904/index.htm
+	* Conner has learned to win by turning conventional wisdom upside down.
+	* 'Sell, design, build' is the company's business formula -- in that order.
+	* To marry itself to customers and justify R&D expense, Conner won't engineer a new product unless a major buyer has already spoken for it.
+
+## Old things new homes
+
+
 * Find new homes for your old things
 * Can we help you ...
 
