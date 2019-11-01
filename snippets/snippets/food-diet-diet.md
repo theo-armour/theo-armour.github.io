@@ -3,6 +3,9 @@
 
 ## Tips
 
+* 2019-10-31 ~ stopping cheese produced a significant overnight weight loss / or stopping omeprazole?
+
+
 ### Containers
 
 * Get food out of plastic and into glass as soon as open

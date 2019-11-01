@@ -1,5 +1,14 @@
 # Microsoft Windows 10
 
+## Quick access
+
+* keep exploring best ways of using quick acess
+* It's all about saving mouse clicks
+* name things so they sort nicely
+* use folders?
+
+
+
 ## Dictation
 
 https://support.microsoft.com/en-us/help/4042244/windows-10-use-dictation

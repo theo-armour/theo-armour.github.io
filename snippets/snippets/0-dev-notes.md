@@ -1,6 +1,19 @@
 # To Do / \* = idea / [] = doIt / [x] = done / more??
 
 
+
+## 2019-10-31
+
+My mew dashboard & diary & theoNotes are such fun!
+
+* performative
+* Easy to edit
+* Respond well to immediate needs
+
+
+There is a liveness to these apps I seem to have been seeking for a long time.
+
+
 ## 2019-10-27
 
 Good question: should I keep my diary as markdown files or as HTML files?
@@ -9,7 +22,7 @@ later: now that pp ext editor is working so nicely: HTML looks like more fun
 
 Added new HTML diary files - in Google Drive - so can edit in Windows and on Chromebook.
 
-Thinking about: moving snippets to gDrive / aand change to HTML??
+Thinking about: moving snippets to gDrive / and change to HTML??
 
 How best to combine new tab / dashboard / fidegetty / diary etc
 
