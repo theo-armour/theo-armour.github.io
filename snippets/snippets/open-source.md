@@ -1,6 +1,4 @@
-# What should we have here
-
-Move to better place
+# Open Source
 
 ## Standards
 
