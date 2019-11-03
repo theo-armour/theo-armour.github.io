@@ -3,17 +3,19 @@
 ### To do
 
 -   Try prettier
-	* Reset settings.json
-	* Get rid of all typescript
+    -   Reset settings.json
+    -   Get rid of all typescript
 -   Good workflow on Chromebook \* 2019-04-29: Looking good
 -   https://github.com/shanalikhan/code-settings-sync
 -   Try new line only setting no cr
 
 ## Tips
-* settings.json
--   Keyboard shortcuts: Ctrl+K, Ctrl+s
--   F1 for help
--   Can drag and drop from Sidebar to browser
+
+-   settings.json
+
+*   Keyboard shortcuts: Ctrl+K, Ctrl+s
+*   F1 for help
+*   Can drag and drop from Sidebar to browser
 
 ## About
 
@@ -25,8 +27,8 @@
 
 ## Included but not 'supported'
 
-* Beautify
-* TypeScript
+-   Beautify
+-   TypeScript
 
 ## Articles
 
@@ -47,12 +49,11 @@
 -   https://vscodecandothat.com/
 -   https://www.smashingmagazine.com/2018/01/visual-studio-code/ \* Visual Studio Code Can Do That?
 
-
 ### Chrobook linux
 
 Access Gdrive files from Chromebook Linux
 
-* https://support.google.com/pixelbook/thread/1087442?msgid=17296031
+-   https://support.google.com/pixelbook/thread/1087442?msgid=17296031
 
 ### Opening VS Code
 
@@ -126,6 +127,13 @@ Set default format tool with "Format document with..." in context menu
 -   https://code.visualstudio.com/docs/getstarted/settings
     _ see javascript.format._ and typescript.format.\*).
 
+
+### Prettier
+
+* https://prettier.io/docs/en/options.html
+* limited selection of options
+
+
 ## GitHub integration
 
 -   https://code.visualstudio.com/docs/editor/versioncontrol
@@ -179,7 +187,7 @@ Preview mode is indicated by italics in the Tab heading
 
 https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options
 
--   -   to match one or more characters in a path segment
+-   to match one or more characters in a path segment
 -   ? to match on one character in a path segment
 -   \*\* to match any number of path segments, including none
 -   {} to group conditions (for example {**/\*.html,**/\*.txt} matches all HTML and text files)
