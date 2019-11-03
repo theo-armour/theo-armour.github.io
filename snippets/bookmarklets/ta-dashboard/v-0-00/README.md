@@ -21,6 +21,10 @@ value='You are now in a GitHub web page view - Click this button to view this re
 <details open >
 <summary>To do</summary>
 
+* Multiple note files
+	* Select from list
+	* of 8
+	* Versions for phone single box and laptop with multiple columns
 
 </details>
 

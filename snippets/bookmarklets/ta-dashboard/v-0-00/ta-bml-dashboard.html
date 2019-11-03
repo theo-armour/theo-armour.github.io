@@ -6,13 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Theo dashboard">
 	<meta name="keywords" content="JavaScript,GitHub,FOSS">
-	<meta name="date" content="2019-10-21">
-	<meta name="version" content="0.01.00">
+	<meta name="date" content="2019-11-02">
+	<meta name="version" content="0.01.01">
 	<title></title>
 	<style>
-		* {
-			box-sizing: border-box;
-		}
 
 		:root {
 			--mnu-width: 22rem;
@@ -32,19 +29,20 @@
 			--white: #ffffff;
 		}
 
+		* {
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
+
 		html {
 			height: 100%;
 		}
 
 		body {
-			font: 12pt monospace;
-			margin: 0 auto;
-
-			padding: 0 0.5rem;
-
 			background: var(--background-color);
 			color: var(--text);
-
+			font: 12pt monospace;
+			padding: 0 0.5rem;
 		}
 
 		a {
@@ -119,17 +117,16 @@
 
 		<div id="divTitle"></div>
 
-	<p>
-		<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >local version</a>
+		<p>
+			<a href="file:///D:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >local version</a>
 
-		<a href="https://theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >github version</a>
+			<a href="https://theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >github version</a>
 
-		edit <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >ta-bml-dashboard.html</a>
+			edit <a href="vscode://file/d:/Dropbox/Public/git-repos/theo-armour.github.io/snippets/bookmarklets/ta-dashboard/v-0-00/ta-bml-dashboard.html" >ta-bml-dashboard.html</a>
 
-		<hr>
+			<hr>
 
-	</p>
-
+		</p>
 
 	</nav>
 
@@ -201,7 +198,7 @@
 		</div>
 
 
-		<div id="divLinks" >
+		<div id="divLinks" title="column 2">
 
 			<div><a href="https://www.google.com/collections/s/list/aC4sz9C4MSG7ImIoVgGN1w/pJGl3_zBt7I" target="_blank">google favorites</a></div>
 
@@ -214,6 +211,33 @@
 			<div><a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">w3schools.com/colors_names</a></div>
 
 			<div><a href="https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references" target="_blank">named character references all</a></div>
+
+			<br>
+
+			<div>
+				<a href="https://zapier.com/learn/customer-support/improv-customer-support/" target="_blank">4 rules of improv</a>
+				<button onclick=dia4rules.open=!dia4rules.open; >4r</button>
+
+				<dialog id=dia4rules onclick=this.open=false; >
+					<p>
+						4 Rules of Improv
+					</p>
+					<div>
+						Rule 1: Say Yes. The first rule of improvisation is AGREE. Always agree and SAY YES. ...
+					</div>
+					<div>
+						Rule 2: Say Yes AND. The second rule of improvisation is not only to say yes, but YES, AND. ...
+					</div>
+					<div>
+						Rule 3: Make Statements. The next rule is MAKE STATEMENTS. ...
+					</div>
+					<div>
+						Rule 4: There Are No Mistakes. THERE ARE NO MISTAKES, only opportunities.
+					</div>
+
+				</dialog>
+			</div>
+
 
 		</div>
 
@@ -279,7 +303,7 @@
 
 		function requestSnippets () {
 
-			url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets";
+			const url = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets";
 
 			xhr = new XMLHttpRequest();
 			xhr.open( 'GET', url, true );
@@ -301,6 +325,8 @@
 
 		}
 
+
+
 		function getTitle() {
 
 			document.title = document.title ? document.title : location.href.split( '/' ).pop().slice( 0, - 5 ).replace( /-/g, ' ' );
@@ -317,9 +343,9 @@
 					&#164; &curren; &times; &deg; &bull; &middot; &mdash; &euro; &hellip; &vellip; &#x1801; ❦ &#x2766; &phone; &spades; &starf; &bigstar; &xcirc; &block; &marker; &FilledSmallSquare;
 				</h2>
 
-				<div>
+				<summary>
 					${ document.head.querySelector( "[ name=description ]" ).content}
-				</div>
+				</summary>
 			`;
 
 			return htm;

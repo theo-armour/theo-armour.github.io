@@ -9,6 +9,7 @@ script.src='../../bookmarklets/capture-bookmark.js';
 CBM
 </a> stand alone local
 </p>
+
 ## Wish list
 
 * Bookmark file generator
