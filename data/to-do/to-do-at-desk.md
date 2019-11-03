@@ -1,3 +1,6 @@
-* try cal.new
-* SSD to Lenovo
-* new dropbox
+- try cal.new
+- SSD to Lenovo
+- new dropbox
+- good connection between notenote, github||gitlab and codesandbox
+  - move to-dos to GH until can use with GL?
+  - snippets and to-dos are close but different
