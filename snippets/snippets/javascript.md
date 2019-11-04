@@ -557,6 +557,9 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 * https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 * https://developer.mozilla.org/en-US/docs/Web/API/Event
+* https://www.w3schools.com/tags/ref_eventattributes.asp
+* oninput - with every keystroke
+* onchange - when loss of focus
 
 	window.addEventListener( 'hashchange', onHashChange, false )
 
@@ -1175,13 +1178,13 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 
 Examples
 
-* localStorage.setItem('myCat', 'Tom');
-* var cat = localStorage.getItem('myCat');
-* localStorage.removeItem('myCat');
+* localStorage.setItem('cat', "Tom");
+* const cat = localStorage.getItem("cat");
+* localStorage.removeItem('cat');
 * localStorage.clear();
-* obj = { "name": "theo, "age": 72 }
+* const obj = { "name": "theo, "age": 72 }
 * localStorage.setItem( "obj", JSON.stringify( obj ) );
-* obj = localStorage.setItem( "obj", JSON.parse( obj ) );
+* const obj = localStorage.getItem( "obj", JSON.parse( obj ) );
 
 
 

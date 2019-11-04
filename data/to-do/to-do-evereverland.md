@@ -4,9 +4,9 @@
 *  EEL update
 * put Alix on the mailing list
 
+Let your life live on after your death
 
-
-## https://gitlab.com/evereverland/evereverland.gitlab.io 
+## https://gitlab.com/evereverland/evereverland.gitlab.io
 
 
 ## 20 minute projects
@@ -23,5 +23,5 @@ Shoeboxed API
 ## Peeps
 
 * Jeff Ubois
-* Michael Walker 
+* Michael Walker
 

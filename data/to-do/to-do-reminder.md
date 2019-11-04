@@ -1,7 +1,7 @@
 ## To Do Reminders
 
-* clean uo hard disk
-* new dropbox
+* Given Eloise's level of abilities to communicate communication, I would be very wary about applying to graduate schools. I can't imagine having Eloise is a teammate and being able to get anything done. There must be career choices that might be a better fit for the time being. (Disclaimer: it me decades to become even a moderately reasonable communicator).
+* tiktok etc: turning peeps into zombies
 * gold toe support socks are good.
 * pianofight patreon
 * Pimm Foxx was right
@@ -17,11 +17,10 @@
 
 * Josh
     * Link to #1 announcement
-* WSD 
+* WSD
     * Vanessa
     * Lent
 * Evan web site issues
-* Henrik August??
 
 
 ### Amazon regulars
