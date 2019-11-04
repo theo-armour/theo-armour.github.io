@@ -10,8 +10,9 @@ You are not so special, please be a good neighbor
 * Pimm Foxx was right
 * Quando, quando
 * McKenzie method
-* Marimba Chapinlandia / Guatamala
-    * Music from Guatamala
+* Music from Guatamala
+	* Marimba Chapinlandia
+	* Internationales Conejos
 * Equifax claim number is:  PE7AH-SJKN2
 * everybody should do Outward Bound ~ with a three day solo
 
@@ -23,7 +24,9 @@ You are not so special, please be a good neighbor
 * WSD
     * Vanessa
     * Lent
-* Evan web site issues
+	* bug on site
+* GTD
+	* Evan web site issues
 
 
 ### Amazon regulars
