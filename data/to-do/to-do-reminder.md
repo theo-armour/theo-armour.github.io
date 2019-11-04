@@ -1,5 +1,8 @@
 ## To Do Reminders
 
+our good neighbors take the the big boxes down to recycling in the garage
+You are not so special, please be a good neighbor
+
 * clean uo hard disk
 * new dropbox
 * gold toe support socks are good.
@@ -21,7 +24,6 @@
     * Vanessa
     * Lent
 * Evan web site issues
-* Henrik August??
 
 
 ### Amazon regulars
