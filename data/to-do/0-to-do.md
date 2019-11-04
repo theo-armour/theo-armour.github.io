@@ -2,16 +2,10 @@
 
 2019-11-03
 
+- eel
 - AlexP
-- Stephen
+- StephenR
 - Hannah
-- Shea
-  - JavaScript
-  - RPOW
-  - Themer
-  - Ted Nelson
-  - jsonBox
-  - distributed web
 - Babs / mailing list / GGTA
 - Message to corine about Emmanuel
 - JulietteH
@@ -42,10 +36,10 @@
 
 ## Online / evening
 
-- Renew domains
+- Renew domains 
 - Confirm directing OK
 - Bookmarks
-- Dowload scans
+- Download scans
 
 ## Peeps in mind
 
@@ -83,8 +77,12 @@
 -
 
 ### Shea
-
-- Shea
+  - JavaScript
+  - RPOW
+  - Themer
+  - Ted Nelson
+  - jsonBox
+  - distributed web
   - FAQ for life, liberty and the pursuit of happiness
   - An app for youngsters and peeps needing help with answering ethical questions that heppen in the course of day to day activities
   - A Yelp for ethics
@@ -96,5 +94,3 @@
 
 ## Done
 
-our good neighbors take the the big boxes down to recycling in the garage
-You are not so special, please be a good neighbor
