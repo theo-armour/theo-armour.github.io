@@ -47,10 +47,7 @@ Things to do of an evening
 
 ### After Midnight
 
-
-
-
-
+* Do pushup
 
 ## teodoro 18 minutes
 
