@@ -12,29 +12,9 @@ http://www.w3schools.com/howto/howto_js_animate.asp
 
 
 ## Colors
+
 https://www.w3schools.com/colors/colors_names.asp
 
-
-## Button and Range
-
-	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
-	a { color: crimson; text-decoration: none; }
-	a:hover, a:focus { color: #f1f1f1; }
-
-
-	button, input[ type=button ] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 15px; }
-	button:hover { background: #ccc; color: #fff }
-
-	input[ type=range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; box-sizing: border-box; width: 100% }
-	input[ type=range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
-	input[ type=range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
-
-
-html { --mnu-back-col: lightgray; --menu-width: 250px; }
-
-width: calc( 100% - var( --menu-width ) )
-
-		const width = getComputedStyle(document.documentElement).getPropertyValue( '--mnu-width' );
 
 
 
@@ -91,14 +71,18 @@ http://fontawesome.io/icons/
 
 ### CSS Docs
 
- <link rel="stylesheet" href="style.css">
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
-https://www.w3schools.com/css/default.asp
+<link href="style.css" rel="stylesheet" >
+
+fit-content
+
+* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+* https://www.w3schools.com/css/default.asp
 
 
 element.getBoundingClientRect()
-https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 
 window.getComputedStyle()
 
@@ -292,6 +276,30 @@ https://www.sitepoint.com/a-primer-on-css3-transforms/
   <source src="horse.mp3" type="audio/mpeg">
   Your browser does not support the audio tag.
 </audio>
+
+
+
+## Button and Range
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus { color: #f1f1f1; }
+
+
+	button, input[ type=button ] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 15px; }
+	button:hover { background: #ccc; color: #fff }
+
+	input[ type=range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; box-sizing: border-box; width: 100% }
+	input[ type=range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+	input[ type=range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
+
+html { --mnu-back-col: lightgray; --menu-width: 250px; }
+
+width: calc( 100% - var( --menu-width ) )
+
+		const width = getComputedStyle(document.documentElement).getPropertyValue( '--mnu-width' );
+
 
 ### Cite
 

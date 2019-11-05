@@ -1,11 +1,7 @@
 # To Do
 
-2019-11-03
 
-- eel
 - AlexP
-- StephenR
-- Hannah
 - Babs / mailing list / GGTA
 - Message to corine about Emmanuel
 - JulietteH
@@ -14,7 +10,7 @@
 
 ## phone calls
 
-- Tania
+- Tania - tuesday
 
 ## Teodor 18 minutes
 
@@ -32,11 +28,11 @@
 
 - Mailbox key
 - Pills to walgreens
-- eye dropss
+- eye drops
 
 ## Online / evening
 
-- Renew domains 
+- Renew domains
 - Confirm directing OK
 - Bookmarks
 - Download scans
@@ -77,6 +73,8 @@
 -
 
 ### Shea
+
+
   - JavaScript
   - RPOW
   - Themer
