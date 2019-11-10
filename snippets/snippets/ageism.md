@@ -19,19 +19,32 @@ Yes. and
 
 
 
-—Have you personally felt the sting of ageism inside or outside of a work environment? Please explain.
+### Have you personally felt the sting of ageism inside or outside of a work environment? Please explain.
 
-* Oh you're that dude!
+* Oh you're that dude! when they see on me in real life after having known me only on the internet
 * Ater being 50 and being disabled, I never considered applying for any job ( bit involved in many failed startups)
 * So conscious of ageism, I know well enough not to put myself in a position where it occurs
 
 
-—Do you think San Francisco’s heavy tech presence, with a focus on innovation and newness, leads to a more pronounced ageism in the area?
+### Do you think San Francisco’s heavy tech presence, with a focus on innovation and newness, leads to a more pronounced ageism in the area?
+
+* Probably yes, makes the elderly feel more out-of-touch than in other cities
+* and this is probably true in any city with a specialty. See also example of Los Angeles being the center of media. the huge 
+* In Crowd only looks to itself. All others are invisible.
 
 
+### What would you tell younger people about the aging experience that might sway them from a negative attitude toward aging and older people?
 
 
-—What would you tell younger people about the aging experience that might sway them from a negative attitude toward aging and older people?
+* Talk to your future self
+* note that you are likely to be far happier than you are now 
+* Visit Assisted living centers
+* Note the great opportunites for elderly oriented websites and apps
+* Write a will, save lots of money
+* Note that most old people suck at getting old. Try not to be one of them.
+* played right aging can be a tremendous learning experience
+
+
 
 ## https://en.wikipedia.org/wiki/Ageism
 
