@@ -387,7 +387,7 @@ https://discourse.threejs.org/t/correctly-remove-mesh-from-scene-and-dispose-mat
 	}
 
 
-### GEOMETRY / LINE / LINES
+### line GEOMETRY / LINE / LINES
 
 		<button onclick=drawRandomLines(); >draw random lines</button>
 
