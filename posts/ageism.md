@@ -3,9 +3,17 @@
 
 ## 2019-11-10 ~ Questions from Geri for article
 
+
+### Links of possible interest
+
+During our talk I note that a study showed 59 americans took 3,000 steps a day
+
+But am now corrected
+
 * https://www.nytimes.com/2019/10/30/well/move/how-walking-might-affect-our-sleep.html
 > Correction: Nov. 1, 2019
-An earlier version of this article misstated the average daily step count of t
+> An earlier version of this article misstated the average daily step count of the study participants. It was about 7,000 steps a day, not 3,000.
+
 
 ### Do you feel younger people harbor negative stereotypes about older people in San Francisco? Why or why not?
 
@@ -23,7 +31,7 @@ The 25 to 50s
 * Envisage themselves as third-agers only
 
 
-
+An interesting thing is I cn go to any bar late at night have have great conversations with complete strangers half my age. But once we go home, we never ever see each other again. Even if exchange contact data.
 
 
 ### Have you personally felt the sting of ageism inside or outside of a work environment? Please explain.
@@ -37,7 +45,14 @@ The 25 to 50s
 
 * Probably yes, makes the elderly feel more out-of-touch than in other cities
 * and this is probably true in any city with a specialty. See also example of Los Angeles being the center of media. the huge
-* In Crowd only looks to itself. All others are invisible.
+* The In Crowd only looks to itself. All others are invisible.
+
+SF is a city of you and mddle age - frequently single. Mu guess is that you would find that a higher than normal percentage of SF elderly are singles. And therefore you might also find a higher index of loneliness among the aged here.
+
+* https://www.nytimes.com/2019/11/09/opinion/sunday/britain-loneliness-epidemic.html
+	* Let’s Wage a War on Loneliness - The condition isn’t just depressing. It can be deadly.
+
+
 
 
 ### What would you tell younger people about the aging experience that might sway them from a negative attitude toward aging and older people?
@@ -46,11 +61,13 @@ The 25 to 50s
 * Talk to your future self
 * note that you are likely to be far happier than you are now
 * Visit Assisted living centers
-* Note the great opportunittes for elderly oriented websites and apps
+* Note the great opportunities for elderly oriented websites and apps
 * Write a will, save lots of money
 * Note that most old people suck at getting old. Try not to be one of them.
 * played right aging can be a tremendous learning experience
 
+* https://www.nytimes.com/2019/09/07/opinion/sunday/friendship.html
+	* What my friendship with a woman 51 years my senior taught me about growing up.
 
 
 ## https://en.wikipedia.org/wiki/Ageism
