@@ -1,19 +1,26 @@
 # Ageism
 
-—Do you feel younger people harbor negative stereotypes about older people in San Francisco? Why or why not?
+
+## 2019-11-10 ~ Questions from Geri for article
+
+* https://www.nytimes.com/2019/10/30/well/move/how-walking-might-affect-our-sleep.html
+> Correction: Nov. 1, 2019
+An earlier version of this article misstated the average daily step count of t
+
+### Do you feel younger people harbor negative stereotypes about older people in San Francisco? Why or why not?
 
 Are positive and negative valid attributes for stereotypes? ;-)
 
 Yes. and
 
-25-50s
+The 25 to 50s
 
-* unconcscious of the eldery
-* elderly are invisible
-* elderly are of no use
-* elderly serve no purpose in society
+* unconscious of the elderly
+* treat elderly as invisible
+* consider elderly are of no use
+* consider elderly serve no purpose in society
 * Do not get third age fourth age
-* See thmselves as thirdagers only
+* Envisage themselves as third-agers only
 
 
 
@@ -22,14 +29,14 @@ Yes. and
 ### Have you personally felt the sting of ageism inside or outside of a work environment? Please explain.
 
 * Oh you're that dude! when they see on me in real life after having known me only on the internet
-* Ater being 50 and being disabled, I never considered applying for any job ( bit involved in many failed startups)
+* After being 50 and being disabled, I never considered applying for any job ( bit involved in many failed startups)
 * So conscious of ageism, I know well enough not to put myself in a position where it occurs
 
 
 ### Do you think San Francisco’s heavy tech presence, with a focus on innovation and newness, leads to a more pronounced ageism in the area?
 
 * Probably yes, makes the elderly feel more out-of-touch than in other cities
-* and this is probably true in any city with a specialty. See also example of Los Angeles being the center of media. the huge 
+* and this is probably true in any city with a specialty. See also example of Los Angeles being the center of media. the huge
 * In Crowd only looks to itself. All others are invisible.
 
 
@@ -37,9 +44,9 @@ Yes. and
 
 
 * Talk to your future self
-* note that you are likely to be far happier than you are now 
+* note that you are likely to be far happier than you are now
 * Visit Assisted living centers
-* Note the great opportunites for elderly oriented websites and apps
+* Note the great opportunittes for elderly oriented websites and apps
 * Write a will, save lots of money
 * Note that most old people suck at getting old. Try not to be one of them.
 * played right aging can be a tremendous learning experience
