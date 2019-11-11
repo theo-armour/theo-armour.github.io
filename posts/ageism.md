@@ -47,7 +47,7 @@ An interesting thing is I can go to any bar late at night have have great conver
 * and this is probably true in any city with a specialty. See also example of Los Angeles being the center of media. the huge
 * The In Crowd only looks to itself. All others are invisible.
 
-SF is a city of you and middle age - frequently single. Mu guess is that you would find that a higher than normal percentage of SF elderly are singles. And therefore you might also find a higher index of loneliness among the aged here.
+SF is a city of you and middle age - frequently single. My guess is that you would find that a higher than normal percentage of SF elderly are singles. And therefore you might also find a higher index of loneliness among the aged here.
 
 * https://www.nytimes.com/2019/11/09/opinion/sunday/britain-loneliness-epidemic.html
 	* Let’s Wage a War on Loneliness - The condition isn’t just depressing. It can be deadly.
