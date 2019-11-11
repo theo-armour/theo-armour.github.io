@@ -31,12 +31,12 @@ The 25 to 50s
 * Envisage themselves as third-agers only
 
 
-An interesting thing is I cn go to any bar late at night have have great conversations with complete strangers half my age. But once we go home, we never ever see each other again. Even if exchange contact data.
+An interesting thing is I can go to any bar late at night have have great conversations with complete strangers half my age. But once we go home, we never ever see each other again. Even if exchange contact data.
 
 
 ### Have you personally felt the sting of ageism inside or outside of a work environment? Please explain.
 
-* Oh you're that dude! when they see on me in real life after having known me only on the internet
+* "Oh. you're that dude!" when they see on me in real life after having known me only on the internet
 * After being 50 and being disabled, I never considered applying for any job ( bit involved in many failed startups)
 * So conscious of ageism, I know well enough not to put myself in a position where it occurs
 
@@ -47,7 +47,7 @@ An interesting thing is I cn go to any bar late at night have have great convers
 * and this is probably true in any city with a specialty. See also example of Los Angeles being the center of media. the huge
 * The In Crowd only looks to itself. All others are invisible.
 
-SF is a city of you and mddle age - frequently single. Mu guess is that you would find that a higher than normal percentage of SF elderly are singles. And therefore you might also find a higher index of loneliness among the aged here.
+SF is a city of you and middle age - frequently single. Mu guess is that you would find that a higher than normal percentage of SF elderly are singles. And therefore you might also find a higher index of loneliness among the aged here.
 
 * https://www.nytimes.com/2019/11/09/opinion/sunday/britain-loneliness-epidemic.html
 	* Let’s Wage a War on Loneliness - The condition isn’t just depressing. It can be deadly.
@@ -65,7 +65,6 @@ SF is a city of you and mddle age - frequently single. Mu guess is that you woul
 * Write a will, save lots of money
 * Note that most old people suck at getting old. Try not to be one of them.
 * played right aging can be a tremendous learning experience
-
 * https://www.nytimes.com/2019/09/07/opinion/sunday/friendship.html
 	* What my friendship with a woman 51 years my senior taught me about growing up.
 
