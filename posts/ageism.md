@@ -54,7 +54,6 @@ SF is a city of you and middle age - frequently single. My guess is that you wou
 
 
 
-
 ### What would you tell younger people about the aging experience that might sway them from a negative attitude toward aging and older people?
 
 
@@ -68,6 +67,7 @@ SF is a city of you and middle age - frequently single. My guess is that you wou
 * https://www.nytimes.com/2019/09/07/opinion/sunday/friendship.html
 	* What my friendship with a woman 51 years my senior taught me about growing up.
 
+***
 
 ## https://en.wikipedia.org/wiki/Ageism
 
@@ -104,20 +104,23 @@ SF is a city of you and middle age - frequently single. My guess is that you wou
 
 ## https://en.wikipedia.org/wiki/Stereotype_embodiment_theory
 
-Stereotype embodiment theory (SET) is a theoretical model first posited by psychologist Becca Levy to explain the process by which age stereotypes influence the health of older adults.[1] There are multiple well-documented effects of age stereotypes on a number of cognitive and physical outcomes (including memory, cardiovascular reactivity, and longevity).
+> Stereotype embodiment theory (SET) is a theoretical model first posited by psychologist Becca Levy to explain the process by which age stereotypes influence the health of older adults. There are multiple well-documented effects of age stereotypes on a number of cognitive and physical outcomes (including memory, cardiovascular reactivity, and longevity).
 
-SET explains these findings according to a three-step process:
+> SET explains these findings according to a three-step process:
 
 * Age stereotypes are internalized from the host culture at a young age.
 * At some point, these age stereotype become "self stereotypes" about oneself as an aging individual.
 * These self-stereotypes are then consciously and unconsciously activated to exert their effects on individual health.
 
 
+***
+
+
 ## What I see
 
 * In modern first world circumstances
 * the fourth age peeps recuse themselves from participation in the day-to-day world
-* Third age peeps prepare for the recusion be becoming consumeers - reading bboks, watching TV, attending performances and incessant traveling
+* Third age peeps prepare for the recusion be becoming consumers - reading books, watching TV, attending performances and incessant traveling
 
 The aged are
 
@@ -128,9 +131,16 @@ The aged are
 * No talk of aging health - just about the latest procedure
 * Mo movement of housing
 
-Opportunities for the aged
+Opportunities for the aged are limited
+
+What volunteer and cultural orgs look for:
 
 * Minimal opinion
 * Maximum check size
 * A wealth of talent is wasted
+
+Follow on articles
+
+* Articles about 18 to 21s - adults who cannot yet do adult things
+* Articles about fourth agers - adults who cannot do adult things
 
