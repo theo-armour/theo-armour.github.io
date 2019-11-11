@@ -110,6 +110,14 @@ SF is a city of you and middle age - frequently single. My guess is that you wou
 * At some point, these age stereotype become "self stereotypes" about oneself as an aging individual.
 * These self-stereotypes are then consciously and unconsciously activated to exert their effects on individual health.
 
+## Ikigai
+
+* https://en.wikipedia.org/wiki/Ikigai
+	* Ikigai is a Japanese concept that means "a reason for being." The word "ikigai" is usually used to indicate the source of value in one's life or the things that make one's life worthwhile.
+* https://ikigaitribe.com/ikigai/ikigai-misunderstood/
+
+I find very few old people in San Francisco that have a reason for being, or even an awareness that such thoughts exist, or even have any questions about the worthiness of a life. There are just so many programs to be watched today, there's nor a minute left just to ponder. ;-)
+
 
 ***
 
