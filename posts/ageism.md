@@ -6,9 +6,9 @@
 
 ### Links of possible interest
 
-During our talk I note that a study showed 59 americans took 3,000 steps a day
+During our talk I noted that a study showed 59 americans took 3,000 steps a day.
 
-But am now corrected
+But am now corrected:
 
 * https://www.nytimes.com/2019/10/30/well/move/how-walking-might-affect-our-sleep.html
 > Correction: Nov. 1, 2019
@@ -17,11 +17,9 @@ But am now corrected
 
 ### Do you feel younger people harbor negative stereotypes about older people in San Francisco? Why or why not?
 
-Are positive and negative valid attributes for stereotypes? ;-)
+Are 'positive' and 'negative' valid attributes for stereotypes? Is there such a thing as a 'good' stereotype? ;-)
 
-Yes. and
-
-The 25 to 50s
+Yes. and the 25 to 50s:
 
 * unconscious of the elderly
 * treat elderly as invisible
