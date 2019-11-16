@@ -1,6 +1,27 @@
 # To Do / \* = idea / [] = doIt / [x] = done / more??
 
 
+## 2019-11-15
+
+
+Things I like to do
+
+
+* Data viz on large numbers in 3D
+	* Math, maps, money
+* Internet art
+* Cataloging knowledge - bookmarks wikipedia
+* Civility and justice - from neighborhood to constitution
+* kinship ( other terms: family tribe, clan ): preserving, developing and enhancing
+* Generative AEC
+* Evereverland - new homes for old things - death 2.0
+* Oldenfit
+* WellFed
+* Publishing
+* Sex, drugs and rock&roll
+
+
+
 
 ## 2019-10-31
 

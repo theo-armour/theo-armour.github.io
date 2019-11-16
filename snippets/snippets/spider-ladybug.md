@@ -1,6 +1,20 @@
 # Spider Ladybug
 
 
+## 2019-11-14
+
+Stephen
+
+* Why so anonymous on CarmelSoft?
+* Try loading bif building on Adesk Viewer
+
+Add
+
+* Make buildings "water-tight"
+
+
+
+
 ## 2019-10-27
 
 

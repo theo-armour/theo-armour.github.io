@@ -2,6 +2,15 @@
 
 # Alix
 
+## 2019-11-12
+
+* eel
+* communication: Andronik / Portrait
+* Arrivals with no schedule or plan
+
+
+## March?
+
 * Wikipedia entry
 * Diana
 * Chocolate Covered

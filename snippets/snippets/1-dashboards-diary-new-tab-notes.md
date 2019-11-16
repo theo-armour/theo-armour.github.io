@@ -2,7 +2,7 @@
 
 
 * Need faster response times
-* better interplay with on chhromebook
+* better interplay with on chromebook
 	* Ignore vd code on Chromebook until there is voice recognition?
 	* or keep working on vs code in browser
 	* code sandbox.io?

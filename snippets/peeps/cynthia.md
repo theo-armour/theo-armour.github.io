@@ -1,5 +1,9 @@
 # Cynthia
 
+## 2019-11-12
+
+* number of steps
+* The Gaze issues
 
 ## 2019-08-18
 

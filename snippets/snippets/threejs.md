@@ -619,7 +619,7 @@ wireframe: false,
 
 		material = new THREE.MeshBasicMaterial( {color: Math.random() * 0xffffff, opacity: 0.7, side: THREE.DoubleSide, transparent: true } );
 
-		material = new THREE.MeshPhongMaterial( {map: mapTexture, side: THREE.DoubleSide, color: 0xffffff, emissive: 0xffffff, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
+		material = new THREE.MeshPhongMaterial( {map: textu, side: THREE.DoubleSide, color: 0xffffff, emissive: 0xffffff, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
 
 		material = new THREE.MeshBasicMaterial( { vertexColors: THREE.FaceColors } );
 
