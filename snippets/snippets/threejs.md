@@ -1142,8 +1142,8 @@ vecto to fixed string
 <script src = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js" ></script>
 <script src = "https://cdn.jsdelivr.net/gh/mrdoob/stats.js@master/build/stats.min.js" ></script>
 
-<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
-<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
+<script src = "https://raw.githack.com/mrdoob/three.js/r110/build/three.min.js" ></script>
+<script src = "https://raw.githack.com/mrdoob/three.js/r110/examples/js/controls/OrbitControls.js" ></script>
 
 
 ## Tricks

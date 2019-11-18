@@ -3,6 +3,21 @@
 
 ## 2019-11-15
 
+Dr Kattah
+
+Thank you for speedy and detailed response.  Bleeding from stomach" and "bleeding from diverticula" - perhaps could be some of both because there was a cocktail of black and red coming out. I even wondered if a hemorrhoid or two had  joined the party.
+
+From Thursday morning to Friday evening no significant stool.There was production this evening (5pm Friday) and it a very dark brown somewhat tarry but well formed. As I write this, I feel somewhat lightheaded.
+
+I am going out this evening. One of the peeps is a paramedic. I hear you on going to ER is symptoms flare.
+
+I will follow up on medications and appointments.
+
+Theo
+
+
+## 2019-11-15
+
 
 Things I like to do
 
