@@ -2,8 +2,10 @@
 
 ## 2019-11-20
 
-- Joanna 415 353
+- blood draw
 - Helen, Philip, Nicole
+
+## thinking
 
 - AlexP
 - Babs / mailing list / GGTA
@@ -11,8 +13,6 @@
 - JulietteH
 
 ## phone calls
-
-- Tania - tuesday
 
 ## Teodor 18 minutes
 
@@ -30,7 +30,6 @@
 
 - Mailbox key
 - Pills to walgreens
-- eye drops
 
 ## Online / evening
 
@@ -41,6 +40,9 @@
 
 ## Peeps in mind
 
+- Tania
+- John Grogg
+- -.. -..
 - RayG
 - Taelsen
 - Werner dinner?
@@ -63,9 +65,8 @@
 ### Juliette
 
 - Juliette.g.io
-- message replies
 - links to my UCSF projects
-  - Save replies
+- Save replies
 
 ### Paul
 
