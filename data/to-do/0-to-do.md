@@ -1,6 +1,6 @@
 # To Do
 
-## 2019-11-19
+## 2019-11-20
 
 - Joanna 415 353
 - Helen, Philip, Nicole
@@ -9,8 +9,6 @@
 - Babs / mailing list / GGTA
 - Message to corine about Emmanuel
 - JulietteH
-
-
 
 ## phone calls
 
@@ -79,16 +77,15 @@
 
 ### Shea
 
-
-  - JavaScript
-  - RPOW
-  - Themer
-  - Ted Nelson
-  - jsonBox
-  - distributed web
-  - FAQ for life, liberty and the pursuit of happiness
-  - An app for youngsters and peeps needing help with answering ethical questions that heppen in the course of day to day activities
-  - A Yelp for ethics
+- JavaScript
+- RPOW
+- Themer
+- Ted Nelson
+- jsonBox
+- distributed web
+- FAQ for life, liberty and the pursuit of happiness
+- An app for youngsters and peeps needing help with answering ethical questions that heppen in the course of day to day activities
+- A Yelp for ethics
 
 ## Thinking about
 
@@ -96,4 +93,3 @@
 - gitpod
 
 ## Done
-
