@@ -1,13 +1,16 @@
 # To Do
 
-## 2019-11-05
+## 2019-11-19
+
+- Joanna 415 353
+- Helen, Philip, Nicole
 
 - AlexP
 - Babs / mailing list / GGTA
 - Message to corine about Emmanuel
 - JulietteH
-- Werner dinner?
-- RayG mailing list
+
+
 
 ## phone calls
 
@@ -42,6 +45,7 @@
 
 - RayG
 - Taelsen
+- Werner dinner?
 
 ### Tania
 
