@@ -6,7 +6,54 @@
 - Helen, Philip, Nicole
 - Vinod
 
-## thinking
+## Englehardts
+
+* P & D
+  * Heart the printer
+* Four ladies and their voices
+  * Nicole - transormative love
+    * the voice of truthiness
+  * Benet ~ motherly love
+    * Odette's mother
+    * As a great grandmother
+  * Lea ~ Brotherly love
+    * the voice of Carol Bartz
+    * a commanding voice
+    * A voice that men listen to
+  * Helen ~ boss-love
+    * Speaking with her eyes
+    * As a boss
+    * As a mother
+    * As a judge
+
+Want speeches or transcript
+
+https://www.nytimes.com/2019/11/20/us/politics/women-voices-authority.html?searchResultPosition=1
+
+* good
+* But where are Taylor Swift and Lady GaGa?
+
+
+
+
+## Diana
+
+* message
+
+Met with Diana just before scheduled surery
+
+* Her support group is non-existent
+* Her social life and connection to humanity sucks
+* Her future is unplanned
+* Her admin support is weak
+* Her ability to do anything useful is compromised
+* Her connections to reality are weird
+
+Want
+
+* Access to an elder care case manager
+* An active support group - 5 or so peeps monitoring
+* A plan, a mission, a vision
 
 ## thinking
 
