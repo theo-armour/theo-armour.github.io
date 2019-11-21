@@ -55,8 +55,6 @@ Want
 * An active support group - 5 or so peeps monitoring
 * A plan, a mission, a vision
 
-
-
 ## thinking
 
 - AlexP
