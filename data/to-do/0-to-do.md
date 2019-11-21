@@ -4,13 +4,15 @@
 
 - blood draw
 - Helen, Philip, Nicole
+- Vinod
+
+## thinking
 
 ## thinking
 
 - AlexP
 - Babs / mailing list / GGTA
 - Message to corine about Emmanuel
-- JulietteH
 
 ## phone calls
 
