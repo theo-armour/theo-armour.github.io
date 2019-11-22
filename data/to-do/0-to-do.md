@@ -55,6 +55,11 @@ I observed the following
 * Her ability to do anything useful is compromised
 * Her connections to reality are weird
 
+Want
+
+* Access to an elder care case manager
+* An active support group - 5 or so peeps monitoring
+* A plan, a mission, a vision
 
 ## thinking
 
