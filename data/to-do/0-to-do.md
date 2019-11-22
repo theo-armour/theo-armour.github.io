@@ -5,6 +5,7 @@
 - blood draw
 - Helen, Philip, Nicole
 - Vinod
+- BillB
 
 ## Englehardts
 
@@ -38,9 +39,14 @@ https://www.nytimes.com/2019/11/20/us/politics/women-voices-authority.html?searc
 
 ## Diana
 
-* message
+The agenda  should include supporting Diana with
+* Access to an elder care case manager
+* An active support group - 5 or so peeps monitoring
+* A plan, a mission, a vision
 
-Met with Diana just before scheduled surery
+I propose this meeting because I have been with Dians several times recently just before her scheduled surgery - which thankfully was postponed.
+
+I observed the following
 
 * Her support group is non-existent
 * Her social life and connection to humanity sucks
