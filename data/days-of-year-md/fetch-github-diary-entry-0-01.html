@@ -48,6 +48,8 @@
 			<button id=but onclick=getHtmlFile(); >getHtmlFile</button>
 
 			<button id=but onclick=putHtmlFile(); >putHtmlFile</button>
+
+			<span id=spnUrlGithub ></span>
 		</p>
 
 		<div id=divUrlGet > </div>
@@ -70,6 +72,7 @@
 
 
 const url = "https://theo-armour.github.io/data/days-of-year-md/";
+const urlSource = "https://github.com/theo-armour/theo-armour.github.io/tree/master/data/days-of-year-md/"
 const urlApi = "https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/data/days-of-year-md/";
 
 const GAT = {};
@@ -93,12 +96,9 @@ function init() {
 	GATinpGitHubApiKey.value = GAT.accessToken;
 
 	const dd = new Date();
-
 	const mo = ( "0" + ( 1 + dd.getMonth() ) ).slice( -2 );
-
 	const da =  ( "0" + ( dd.getDate() ) ).slice( -2 );
-
-	const suffix = mo + "/" + mo + "-" + da + ".md";
+	suffix = mo + "/" + mo + "-" + da + ".md";
 
 	urlGet = url + suffix;
 	urlPut = urlApi + suffix;
@@ -113,7 +113,7 @@ function init() {
 
 function getHtmlFile() {
 
-
+	spnUrlGithub.innerHTML = `<a href="${ urlSource + suffix }" target="_blank">gh source</a>`;
 	divUrlGet.innerHTML = `<a href="${ urlGet }" target="_blank">${ urlGet }</a>`;
 
 	divUrlPut.innerHTML = `<a href="${ urlPut }" target="_blank">${ urlPut }</a>`;
