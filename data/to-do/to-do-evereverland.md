@@ -1,7 +1,7 @@
 # EverEverLand
 
 
-*  EEL update
+* EEL update
 * put Alix on the mailing list
 
 Let your life live on after your death
