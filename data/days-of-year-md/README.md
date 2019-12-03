@@ -3,7 +3,7 @@
 <div><input type=button onclick="window.location.href='https://github.com/theo-armour/theo-armour.github.io/blob/master/snippets/0-templates/README.md'";
 value='You are now in a GitHub web page view - Click this button to view this read me file as source code' ></div>
 
-# [Days of Year Read Me]( #snippets/0-templates/README.md )
+# [Days of Year Read Me]( #data/days-of-year-md/README.md )
 
 
 <!--
