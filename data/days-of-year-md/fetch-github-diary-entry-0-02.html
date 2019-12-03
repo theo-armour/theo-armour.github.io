@@ -92,7 +92,7 @@ let urlGet
 let urlPut;
 
 const urlSourceCode = "https://github.com/theo-armour/theo-armour.github.io/tree/master/data/days-of-year-md/";
-const urlSourceCodeIcon = "https://pushme-pullyou.github.io/github-mark-32.png";
+const urlSourceCodeIcon = "../github-mark-32.png";
 
 init();
 
@@ -207,7 +207,7 @@ function getTitle() {
 	`
 		<h2>
 			<a href=${ urlSourceCode } target=_top title="Source code on GitHub" >
-				<img src=${ urlSourceCodeIcon } width=12 style="opacity:0.5; vertical-align: middle;"; >
+				<img src=${ urlSourceCodeIcon } width=16 style="opacity:0.5; vertical-align: middle;"; >
 			</a>
 			<a href="" title="Click to reload this page" >${ document.title }</a>
 		</h2>

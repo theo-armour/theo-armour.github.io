@@ -21,6 +21,9 @@ value='You are now in a GitHub web page view - Click this button to view this re
 <details open >
 <summary>To do</summary>
 
+* 2019-12-03 ~ Add day of week
+* 2019-12-03 ~ Add save back up to local storage
+
 
 </details>
 
