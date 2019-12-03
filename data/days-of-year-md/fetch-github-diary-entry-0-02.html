@@ -108,18 +108,18 @@ function init() {
 	const mo = ( "0" + ( 1 + dd.getMonth() ) ).slice( -2 );
 	const da =  ( "0" + ( dd.getDate() ) ).slice( -2 );
 	suffix = mo + "/" + mo + "-" + da + ".md";
+	console.log( 'suffix', suffix );
 
 
 	dd.setDate( dd.getDate() - 1);
 	const ymo = ( "0" + ( 1 + dd.getMonth() ) ).slice( -2 );
 	const yda =  ( "0" + ( dd.getDate() ) ).slice( -2 );
 	yesterday = ymo + "/" + ymo + "-" + yda + ".md";
-	console.log( 'yesterday', yesterday );
+	//console.log( 'yesterday', yesterday );
 
 	urlGet = url + suffix;
 	urlPut = urlApi + suffix;
 
-	console.log( 'suffix', suffix );
 
 	getHtmlFile();
 
