@@ -471,20 +471,8 @@ document.write("Hello World!");
 
 
 
-### SCRIPT DOM load script
+### DOM load script
 
-
-	if ( !editor ) {
-
-		editor = document.body.appendChild( document.createElement( 'script' ) );
-		editor.onload = setEditContents;
-		editor.src = 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js';
-
-	} else {
-
-		setEditContents();
-
-	}
 
 	var js = document.createElement('script');
 	js.setAttribute('src', fname);
@@ -514,7 +502,17 @@ document.write("Hello World!");
 	js.src = fname;
 	document.body.appendChild( js );
 
+	if ( !editor ) {
 
+		editor = document.body.appendChild( document.createElement( 'script' ) );
+		editor.onload = setEditContents;
+		editor.src = 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js';
+
+	} else {
+
+		setEditContents();
+
+	}
 
 
 
