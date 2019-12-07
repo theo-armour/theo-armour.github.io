@@ -66,6 +66,7 @@ function zoomObjectBoundingSphere( obj = scene ) {
 	//console.log( 'center', center );
 	//console.log( 'radius', radius );
 
+	controls.reset();
 	controls.target.copy( center );
 	controls.maxDistance = 5 * radius;
 
@@ -251,7 +252,7 @@ console.log( '', buildings  );
 
 	function toggleEdges() {
 
-		
+
 
 		if ( !chartEdges ) {
 
@@ -267,6 +268,7 @@ console.log( '', buildings  );
 		chartEdges.visible = !chartEdges.visible;
 
 	}
+
 
 
 
