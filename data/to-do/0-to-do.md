@@ -1,9 +1,8 @@
 # To Do
 
-## 2019-11-20
+## 2019-12-06
 
-- blood draw
-- Vinod
+
 - Juliette
 
 
