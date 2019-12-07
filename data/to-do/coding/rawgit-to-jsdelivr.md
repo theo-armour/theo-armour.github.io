@@ -1,5 +1,7 @@
 # Rawgit to jsDeliver
 
+* Compare and contrast with githack
+
 ## To Do
 
 * SGT 141 results in 116 files

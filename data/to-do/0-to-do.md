@@ -1,16 +1,18 @@
 # To Do
 
-## 2019-11-20
+## 2019-12-06
 
-- blood draw
-- Helen, Philip, Nicole
+patrivck
+
+- Juliette
+
+nnnn
 
 ## thinking
 
 - AlexP
 - Babs / mailing list / GGTA
 - Message to corine about Emmanuel
-- JulietteH
 
 ## phone calls
 

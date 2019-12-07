@@ -179,11 +179,20 @@ see cookbook/array/array-pop-while-switch
 		console.log( list.sort( function() { Math.random() - 0.5 } ) ); // [2,1,3]
 
 
-## Random Values
+## Fill with Random Values
+
+* https://stackoverflow.com/questions/34966459/creating-array-of-length-n-with-random-numbers-in-javascript
+* https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n
+
+meshes = [ ...Array( 100 ) ].map( () => randomMesh()  )
 
 	arr = Array.from( {length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
 
 	arr = Array.from( { length: arr1.length }, () => 0 )
+
+	arr = Array.from( { length: 100}, () => Math.random() )
+
+
 
 ## Reduce
 

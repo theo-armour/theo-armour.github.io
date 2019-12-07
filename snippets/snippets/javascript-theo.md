@@ -22,7 +22,7 @@ Forums
 	title = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
 
 
-## Useful things / LOOPs
+## For / Useful things / LOOPs
 
 		for ( let i = 0; i < 2; i++ ) {
 

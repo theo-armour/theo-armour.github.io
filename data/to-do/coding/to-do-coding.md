@@ -16,7 +16,7 @@ Possibles
 * Wikipedia
 * Contacts
 * Passwords
-* Internet Arvhive
+* Internet Archive
     * Collections
     * API
 * Tidying
@@ -45,7 +45,7 @@ Possibles
 * ToDo lists as an AAL
 
 
-## Perceive Judge Act 
+## Perceive Judge Act
 
 * Mind the process
 

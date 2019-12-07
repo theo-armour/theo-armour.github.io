@@ -61,6 +61,55 @@ function drawGroundGridAxis() {
 
 
 
+## drawGeometries
+
+* cookbook-threejs/examples/geometry/group-points-of-intersection/group-points-of-intersection-0-02.html
+
+const geometries = [
+
+	["Box", 20, 20, 20 ],
+	["Cone", 20, 20, 30],
+	["Cylinder", 10, 5, 20 ],
+	["Sphere", 10, 50, 20 ],
+	["Tetrahedron", 10, 0],
+	["Dodecahedron", 10, 0],
+	["Icosahedron", 10, 0],
+	["Octahedron", 10, 0],
+	["Torus", 20, 5, 19, 32 ],
+	["TorusKnot", 10, 3 ]
+];
+
+let mesh;
+
+<div id=divGeometries ></div>
+
+divGeometries.innerHTML = getButtonsGeometries();
+
+
+function getButtonsGeometries() {
+
+	htm = geometries.map( ( geometry, index ) =>
+	`<p><button onclick="drawGeometries(${ index });" >${ geometry[ 0 ]}</button></p>`
+	).join( "" );
+
+	return htm;
+
+}
+
+function drawGeometries( index ) {
+
+	scene.remove( mesh );
+
+	const items = geometries[ index ];
+	const geometry = new THREE[ items.shift() + "Geometry" ]( ...items );
+	const material = new THREE.MeshNormalMaterial();
+	mesh = new THREE.Mesh( geometry, material );
+
+	scene.add( mesh );
+
+}
+
+
 ## drawMultipleMeshes
 
 
@@ -112,7 +161,7 @@ function addGeometry( count = 250 ) {
 
 		new THREE.BoxBufferGeometry( 10, 10, 10 ),
 		new THREE.CylinderBufferGeometry( 5, 5, 1, 12 ),
-		new THREE.DodecahedronGeometry( 05 ),
+		new THREE.DodecahedronGeometry( 5 ),
 		new THREE.SphereBufferGeometry( 5, 12, 8 ),
 		new THREE.TorusBufferGeometry( 10, 5 ),
 		new THREE.TorusKnotBufferGeometry( 10, 5 )
@@ -721,6 +770,8 @@ function getPointsStar() {
 	return points;
 
 }
+
+
 
 
 ## Sprites
