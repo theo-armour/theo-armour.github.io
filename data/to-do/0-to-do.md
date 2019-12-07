@@ -16,6 +16,8 @@ nnnn
 
 ## phone calls
 
+* Tania
+
 ## Teodor 18 minutes
 
 - door bumpers
@@ -67,6 +69,7 @@ nnnn
 ### Juliette
 
 - Juliette.g.io
+* message replies
 - links to my UCSF projects
 - Save replies
 
@@ -96,3 +99,9 @@ nnnn
 - gitpod
 
 ## Done
+
+
+
+our good neighbors take the the big boxes down to recycling in the garage
+You are not so special, please be a good neighbor
+
