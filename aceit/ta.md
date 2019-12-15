@@ -10,3 +10,13 @@ I want everybody to be just as rich and is happy and as intentional as I am if n
 
 growing old is a big challenge, I'm not sure I can live up to it
 
+
+## Links of interest
+
+* David Brroks
+* Caitlin Johnstone
+* Maureen
+* Ayedosha
+* Umair
+
+
