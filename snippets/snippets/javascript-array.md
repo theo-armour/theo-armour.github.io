@@ -184,7 +184,7 @@ see cookbook/array/array-pop-while-switch
 * https://stackoverflow.com/questions/34966459/creating-array-of-length-n-with-random-numbers-in-javascript
 * https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n
 
-meshes = [ ...Array( 100 ) ].map( () => randomMesh()  )
+	meshes = [ ...Array( 100 ) ].map( () => randomMesh()  )
 
 	arr = Array.from( {length: 100 }, ( value, index ) => Math.floor( 9 * Math.random() ) );
 

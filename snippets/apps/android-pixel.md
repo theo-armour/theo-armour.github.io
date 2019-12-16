@@ -1,7 +1,10 @@
 
 # Android
 
+* https://support.google.com/pixelphone/topic/7084095?hl=en&ref_topic=7078250
+
 ## Tips
+
 Double-tap the Recents button to switch right back to the last app you had open.
 
 Long-press the overview button to shrink your current app down to the top/left half of the screen (left half in landscape) and bring up a list of open apps to choose one for the other half.

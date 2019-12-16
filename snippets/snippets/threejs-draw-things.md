@@ -620,84 +620,83 @@ function addSomeLights() {
 
 // 2018-08-09 ~ https://github.com/jaanga/jaanga.github.io/tree/master/cookbook-threejs/examples/placards
 
-/*
+
 			placard = drawPlacard( '', 0.05, 120, 100, 10, 0 );
 			scene.add( placard );
 
 
-	function drawPlacard( text, scale, color, x, y, z ) {
+// 2019-12-14 theo-armour.github.io/snippets/snippets/threejs-draw-things.md
+
+function drawPlacard( text = "testing 123", scale = "0.2", color = "#ff0000", x = 20, y = 20, z = 20 ) {
 
 
-		var placard = new THREE.Object3D();
-		var v = function( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+	const placard = new THREE.Object3D();
+	const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
 
-		var texture = canvasMultilineText( text, { backgroundColor: color }   );
-		var spriteMaterial = new THREE.SpriteMaterial( { map: texture, opacity: 0.9, transparent: true } );
-		var sprite = new THREE.Sprite( spriteMaterial );
-		sprite.position.set( x, y, z ) ;
-		sprite.scale.set( scale * texture.image.width, scale * texture.image.height );
+	const texture = canvasMultilineText( text, { backgroundColor: 120}   );
+	const spriteMaterial = new THREE.SpriteMaterial( { map: texture, opacity: 0.9, transparent: true } );
+	const sprite = new THREE.Sprite( spriteMaterial );
+	sprite.position.set( x, y, z ) ;
+	sprite.scale.set( scale * texture.image.width, scale * texture.image.height );
 
-		var geometry = new THREE.Geometry();
-		geometry.vertices = [ v( 0, 0, 0 ),  v( x, y, z ) ];
-		var material = new THREE.LineBasicMaterial( { color: 0xaaaaaa } );
-		var line = new THREE.Line( geometry, material );
+	const geometry = new THREE.Geometry();
+	geometry.vertices = [ v( 0, 0, z ),  v( x, 0, z ) ];
+	const material = new THREE.LineBasicMaterial( { color: 0xaaaaaa } );
+	const line = new THREE.Line( geometry, material );
 
-		placard.add( sprite, line );
+	placard.add( sprite, line );
 
-		return placard;
+	return placard;
 
 
-		function canvasMultilineText( textArray, parameters ) {
+	function canvasMultilineText( textArray, parameters ) {
 
-			var parameters = parameters || {} ;
+		parameters = parameters || {} ;
 
-			var canvas = document.createElement( 'canvas' );
-			var context = canvas.getContext( '2d' );
-			var width = parameters.width ? parameters.width : 0;
-			var font = parameters.font ? parameters.font : '48px monospace';
-			var color = parameters.backgroundColor ? parameters.backgroundColor : 120 ;
+		const canvas = document.createElement( 'canvas' );
+		const context = canvas.getContext( '2d' );
+		let width = parameters.width ? parameters.width : 0;
+		const font = parameters.font ? parameters.font : '48px monospace';
+		const color = parameters.backgroundColor ? parameters.backgroundColor : 120 ;
 
-			if ( typeof textArray === 'string' ) textArray = [ textArray ];
+		if ( typeof textArray === 'string' ) textArray = [ textArray ];
 
-			context.font = font;
+		context.font = font;
 
-			for ( var i = 0; i < textArray.length; i++) {
+		for ( let i = 0; i < textArray.length; i++) {
 
-				width = context.measureText( textArray[ i ] ).width > width ? context.measureText( textArray[ i ] ).width : width;
-
-			}
-
-			canvas.width = width + 20;
-			canvas.height =  parameters.height ? parameters.height : textArray.length * 60;
-
-			context.fillStyle = 'hsl( ' + color + ', 80%, 50% )' ;
-			context.fillRect( 0, 0, canvas.width, canvas.height);
-
-			context.lineWidth = 1 ;
-			context.strokeStyle = '#000';
-			context.strokeRect( 0, 0, canvas.width, canvas.height );
-
-			context.fillStyle = '#000' ;
-			context.font = font;
-
-			for ( i = 0; i < textArray.length; i++) {
-
-				context.fillText( textArray[ i ], 10, 48  + i * 60 );
-
-			}
-
-			var texture = new THREE.Texture( canvas );
-			texture.minFilter = texture.magFilter = THREE.NearestFilter;
-			texture.needsUpdate = true;
-
-			return texture;
+			width = context.measureText( textArray[ i ] ).width > width ? context.measureText( textArray[ i ] ).width : width;
 
 		}
 
+		canvas.width = width + 20;
+		canvas.height =  parameters.height ? parameters.height : textArray.length * 60;
+
+		context.fillStyle = 'hsl( ' + color + ', 80%, 50% )' ;
+		context.fillRect( 0, 0, canvas.width, canvas.height);
+
+		context.lineWidth = 1 ;
+		context.strokeStyle = '#000';
+		context.strokeRect( 0, 0, canvas.width, canvas.height );
+
+		context.fillStyle = '#000' ;
+		context.font = font;
+
+		for ( let i = 0; i < textArray.length; i++) {
+
+			context.fillText( textArray[ i ], 10, 48  + i * 60 );
+
+		}
+
+		const texture = new THREE.Texture( canvas );
+		texture.minFilter = texture.magFilter = THREE.NearestFilter;
+		texture.needsUpdate = true;
+
+		return texture;
+
 	}
 
-*/
-
+}
 
 
 ## Draw Line & Points

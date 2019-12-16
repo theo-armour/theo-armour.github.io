@@ -1,4 +1,7 @@
+# Geri Koeppel
 
+
+## Ageism ~ 2019-12-16
 
 
 ## Investing

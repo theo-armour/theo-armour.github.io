@@ -1,6 +1,14 @@
 # Diana
 
+operation - Patrick - Rob
 
+## 2019-12-15
+
+BillB
+- Succession plan
+-Advanced healthcare directive
+- Diana's happiness
+- My stress
 
 ## 2019-11-11
 

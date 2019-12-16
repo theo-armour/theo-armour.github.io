@@ -2,7 +2,7 @@
 
 
 
-UCSF General Surgery ~ 415 353 2161 ~ Dianna
+UCSF General Surgery ~ 415 353 2161 ~ Diana
 
 * https://general.surgery.ucsf.edu/
 * https://general.surgery.ucsf.edu/faculty.aspx?id=Acute_Care_Surgery
