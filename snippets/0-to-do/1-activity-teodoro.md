@@ -1,15 +1,18 @@
 # Activity teodoro
 
+mantras are good
+
 ## daily
 
 During the day
 
 * Six hours of programming
-* 5,000 steps, 45 minutes walk, 20 minutes brisk
+* 5,000 steps, 45 minutes walk, 25 minutes brisk
 
 Things to do of an evening
 
 * 18 minute teodoro
+* Make a list for this weekend
 
 
 ## coffee breaks

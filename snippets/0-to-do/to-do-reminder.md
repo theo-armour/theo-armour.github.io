@@ -19,6 +19,7 @@ You are not so special, please be a good neighbor
 
 ### Nice to Do
 
+* Harrison / DD roland barthes
 * Josh
     * Link to #1 announcement
 * WSD

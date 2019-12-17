@@ -3,8 +3,11 @@
 ## 2019-12-10
 
 - Jason Allen
+- Diana
+- Josh regarding say giving money to ladies every year
+- Vinod
 - Bill Benk
-- Juliette
+
 - PaulM
 
 
@@ -26,13 +29,18 @@
 
 ## Emails
 
+- Shea
+- Andranik
 - Vincent
 - Lon & Juliana
 - Armour peeps
+- Juliette
+
 
 ## Errands
 
 - Mailbox key
+- toothbrush
 - Pills to walgreens
 
 ## Online / evening
@@ -72,6 +80,7 @@
 * message replies
 - links to my UCSF projects
 - Save replies
+- NY Times
 
 ### Paul
 
