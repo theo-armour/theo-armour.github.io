@@ -2,8 +2,16 @@
 
 ## 2019-12-10
 
+<<<<<<< HEAD
 - Madelyn
 - Michal
+=======
+- Jason Allen
+[x] Diana
+[x] Josh regarding say giving money to ladies every year
+- Vinod
+- Bill Benk
+>>>>>>> to do
 - PaulM
 
 

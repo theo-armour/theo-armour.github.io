@@ -407,6 +407,28 @@ https://discourse.threejs.org/t/correctly-remove-mesh-from-scene-and-dispose-mat
 	}
 
 
+// https://stackoverflow.com/questions/26790345/vertex-colors-in-three-line
+// see random walk 05
+
+	const geometry = new THREE.Geometry();
+	geometry.vertices = vertices;
+
+	//const material = new THREE.LineBasicMaterial( { color: 0xffffff * Math.random()  } );
+
+	for ( var i = 0; i < geometry.vertices.length; i +=2 ) {
+
+		geometry.colors[ i ] = new THREE.Color().setHSL( 0.5 * i / segments, 0.8, 0.5 );
+		geometry.colors[ i + 1 ] = geometry.colors[ i ];
+	}
+
+	var material = new THREE.LineBasicMaterial( {
+		color: 0xffffff,
+		vertexColors: THREE.VertexColors
+	} );
+
+	const line = new THREE.Line( geometry, material );
+
+
 		var geometry = new THREE.Geometry();
 		geometry.vertices = [ v( -10, 0, 0 ),  v( 0, 10, 0 ), v( 10, 0, 0 ) ];
 		material = new THREE.LineBasicMaterial( { color: 0x000000 } );
@@ -619,7 +641,7 @@ wireframe: false,
 
 		material = new THREE.MeshBasicMaterial( {color: Math.random() * 0xffffff, opacity: 0.7, side: THREE.DoubleSide, transparent: true } );
 
-		material = new THREE.MeshPhongMaterial( {map: textu, side: THREE.DoubleSide, color: 0xffffff, emissive: 0xffffff, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
+		material = new THREE.MeshPhongMaterial( {map: texture, side: THREE.DoubleSide, color: 0xffffff, emissive: 0xffffff, metal: true, specular: 0x888888, shininess: 200, shading: THREE.SmoothShading} );
 
 		material = new THREE.MeshBasicMaterial( { vertexColors: THREE.FaceColors } );
 
