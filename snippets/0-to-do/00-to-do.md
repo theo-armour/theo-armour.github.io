@@ -2,12 +2,8 @@
 
 ## 2019-12-10
 
-- Jason Allen
-- Diana
-- Josh regarding say giving money to ladies every year
-- Vinod
-- Bill Benk
-
+- Madelyn
+- Michal
 - PaulM
 
 
@@ -40,12 +36,12 @@
 ## Errands
 
 - Mailbox key
-- toothbrush
-- Pills to walgreens
+- Toothbrush
 
-## Online / evening
+## Online / evening / weekend
 
 - Renew domains
+- cancel zipcar / code thingy
 - Confirm directing OK
 - Bookmarks
 - Download scans
