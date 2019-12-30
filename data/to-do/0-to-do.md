@@ -1,9 +1,8 @@
 # To Do
 
-## 2019-12-06
+## 2019-12-30
 
-patrivck
-
+- patrick
 - Juliette
 
 nnnn
@@ -26,14 +25,19 @@ nnnn
 
 ## Emails
 
+- Liane
+- Juliette et al
+- Xmas card addresses
+- Smiths
 - Vincent
+- AlixP
 - Lon & Juliana
 - Armour peeps
 
 ## Errands
 
+- Iron pills
 - Mailbox key
-- Pills to walgreens
 
 ## Online / evening
 
