@@ -16,6 +16,7 @@ nnnn
 ## phone calls
 
 * Tania
+* Pay perio
 
 ## Teodor 18 minutes
 
@@ -29,6 +30,7 @@ nnnn
 - Juliette et al
 - Xmas card addresses
 - Smiths
+- Khoren
 - Vincent
 - AlixP
 - Lon & Juliana
