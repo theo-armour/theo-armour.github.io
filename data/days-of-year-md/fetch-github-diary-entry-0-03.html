@@ -99,7 +99,9 @@
 
 			<button onclick="suffix=yesterday;getHtmlFile();">yesterday</button>
 
+			<select id=selDay oninput=selectDay(this.value); ></select>
 		</p>
+
 
 		<p>
 
@@ -173,10 +175,31 @@
 
 		getHtmlFile();
 
+		getOptionsDays();
+
 	}
 
 
+	function getOptionsDays() {
+
+		selDay.innerHTML = Array( 31 ).fill().map( ( item, index ) => `<option>${ index + 1 }</option>` );
+
+	}
+
+	function selectDay( day ) {
+
+		const dd = new Date();
+		const mo = ( "0" + ( 1 + dd.getMonth() ) ).slice( -2 );
+
+		suffix = mo + "/" + mo + "-" + day + ".md";
+
+		getHtmlFile( suffix )
+
+	}
+
 	function getHtmlFile( file = suffix ) {
+
+		console.log( 'file', file );
 
 		spnUrlGithub.innerHTML = `<a href="${ urlSource + file }" target="_blank">gh source</a>`;
 
