@@ -1,5 +1,7 @@
 # EverEverLand
 
+deprecated - see gitlab
+
 ## Sell then design then build
 
 - https://en.wikipedia.org/wiki/Conner_Peripherals
