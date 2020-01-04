@@ -3,8 +3,6 @@
 our good neighbors take the the big boxes down to recycling in the garage
 You are not so special, please be a good neighbor
 
-* 'device zombies'
-* businesses that no longer exist: chaperone
 * Given Eloise's level of abilities to communicate communication, I would be very wary about applying to graduate schools. I can't imagine having Eloise is a teammate and being able to get anything done. There must be career choices that might be a better fit for the time being. (Disclaimer: it me decades to become even a moderately reasonable communicator).
 * tiktok etc: turning peeps into zombies
 * gold toe support socks are good.

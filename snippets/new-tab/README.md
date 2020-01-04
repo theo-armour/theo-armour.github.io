@@ -9,7 +9,6 @@ https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-ta
 
 ## To Do
 
-* 2020-01-04 ~ Move to FexBox
 * 2019-02-23 ~ Add Ladybug Tools icons
 * 2019-02-19 ~ Able to edit and update on Chromebook
 * 2019-02-18 ~ Place or link to area to keep bookmarks temporarily
@@ -19,12 +18,6 @@ https://github.com/theo-armour/theo-armour.github.io/tree/master/snippets/new-ta
 
 
 ## Change Log
-
-
-### 2020-01-04
-
-
-
 
 ### 2019-02-19
 
