@@ -3,9 +3,7 @@
 ## 2019-12-30
 
 - patrick
-- Juliette
-
-nnnn
+- Allens
 
 ## thinking
 
@@ -27,7 +25,6 @@ nnnn
 ## Emails
 
 - Liane
-- Juliette et al
 - Xmas card addresses
 - Smiths
 - Khoren
