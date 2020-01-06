@@ -69,6 +69,31 @@ http://fontawesome.io/icons/
 - see bottom for rotating characters by degrees.
 
 
+## Emoji
+
+For GitHub Pages sites built on GitHub.com, emoji images are served from the GitHub.com CDN, with a base URL of https://assets-cdn.github.com, which results in emoji image URLs like https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png.
+
+Complete list of github markdown emoji markup
+* https://gist.github.com/rxaviers/7360908 -
+* https://assets-cdn.github.com/images/icons/emoji/octocat.png
+* https://www.webpagefx.com/tools/emoji-cheat-sheet/
+
+Unicode
+* https://api.github.com/emojis
+	* https://platform.github.community/t/add-ability-to-query-raw-text-with-unicode-emojis/4603
+* https://yutannihilation.github.io/list_of_github_emojis/github_emojis.html
+
+Compare
+* https://emojipedia.org/
+
+Purposeful
+* https://github.com/dannyfritz/commit-message-emoji
+* https://gist.github.com/parmentf/035de27d6ed1dce0b36a
+
+More
+https://gist.github.com/endolith/157796
+
+
 ### CSS Docs
 
 
@@ -346,7 +371,8 @@ div {
 </figure>
 
 
-### Kbd
+### KBD
+
 <em>Emphasized text</em><br>
 <strong>Strong text</strong><br>
 <code>A piece of computer code</code><br>
@@ -354,7 +380,10 @@ div {
 <kbd>Keyboard input</kbd><br>
 <var>Variable</var>
 
+
+
 ### FORM
+
 - see also Textarea
 
 <input type="text" id="inp" onclick=this.select(); placeholder="Display name" size=20 />
@@ -416,10 +445,11 @@ Use oninput: handles both mouse and touch
 https://www.w3.org/TR/2011/WD-html5-20110525/common-input-element-attributes.html#dom-input-valueasnumber
 
 
-Still not working in Edge maybe. Use parseFloat...
+Still not working in Edge maybe. Use parseFloat... or +
 
 
 ### Range stepUp / stepDown
+
 // Where is there a good use example?
 
 https://www.w3schools.com/jsref/met_range_stepup.asp
@@ -427,6 +457,7 @@ https://www.w3schools.com/jsref/met_range_stepdown.asp
 
 
 ### FORM SELECT
+
 // http://www.w3schools.com/jsref/met_select_add.asp << add by code!
 
 <select onchange="" title="select the filed that the colors indicate" size=5  >
@@ -483,31 +514,23 @@ Random image
 
 
 
+### LABEL
 
-## Emoji
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
 
-For GitHub Pages sites built on GitHub.com, emoji images are served from the GitHub.com CDN, with a base URL of https://assets-cdn.github.com, which results in emoji image URLs like https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png.
+<div class="preference">
+	<label for="cheese">Do you like cheese?</label>
+	<input type="checkbox" name="cheese" id="cheese">
+</div>
 
-Complete list of github markdown emoji markup
-* https://gist.github.com/rxaviers/7360908 -
-* https://assets-cdn.github.com/images/icons/emoji/octocat.png
-* https://www.webpagefx.com/tools/emoji-cheat-sheet/
+<div class="preference">
+	<label for="peas">Do you like peas?</label>
+	<input type="checkbox" name="peas" id="peas">
+</div>
 
-Unicode
-* https://api.github.com/emojis
-	* https://platform.github.community/t/add-ability-to-query-raw-text-with-unicode-emojis/4603
-* https://yutannihilation.github.io/list_of_github_emojis/github_emojis.html
-
-Compare
-* https://emojipedia.org/
-
-Purposeful
-* https://github.com/dannyfritz/commit-message-emoji
-* https://gist.github.com/parmentf/035de27d6ed1dce0b36a
-
-More
-https://gist.github.com/endolith/157796
-
+<label>Do you like peas?
+  <input type="checkbox" name="peas">
+</label>
 
 ### Mark
 
