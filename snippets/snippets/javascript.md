@@ -626,11 +626,12 @@ console.log( thing );
 * https://github.com/mdn/fetch-examples/
 * https://vanillajstoolkit.com/reference/ajax/fetch/
 * https://gomakethings.com/using-oauth-with-fetch-in-vanilla-js/
+* https://medium.com/chuans-blog/how-to-read-a-local-file-with-the-browser-using-fetch-api-c8a69e8294cd
 
 
 function fetchTextSimple( url, target ){
 
-	fetch( new Request( url ) )
+	fetch( new Request( url, {mode: 'no-cors'} ) )
 	.then( response => response.text() )
 	.then( text => target.innerHTML = text );
 
