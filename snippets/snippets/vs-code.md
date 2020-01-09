@@ -184,6 +184,13 @@ Ones I like
 
 ESLint ~ easier to use JSHInt online
 
+
+## Quick Open Control-P
+
+Clear Recently Opened" also clears editor quick open history
+
+* https://github.com/microsoft/vscode/issues/35935
+
 ## Preview Mode
 
 single-click or select a file in the Explorer, show file in a preview mode - reuses an existing Tab.

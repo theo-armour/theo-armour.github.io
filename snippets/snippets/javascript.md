@@ -3,6 +3,15 @@
 	div.style.cssText = ' width: 500px, position: absolute: right: 30px, top: 20px;'
 
 
+## anchor
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement
+
+const a = document.createElement( 'a' );
+a.href = url;
+const site = a.hostname;
+
+
 ## base
 
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
@@ -561,15 +570,18 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 * oninput - with every keystroke
 * onchange - when loss of focus
 
-	window.addEventListener( 'hashchange', onHashChange, false )
 
 	let event = new Event( "bingo", {"bubbles": true, "cancelable": false, detail: true } );
 
 //	window.addEventListener( "bingo", addAvatar );
 	window.addEventListener( "bingo", addControls, false );
+	window.addEventListener( 'hashchange', onHashChange, false )
 
 
 	window.dispatchEvent( event );
+
+window.addEventListener( 'xhr.onload', console.log( '', 23 ), false )
+
 
 
 
@@ -844,6 +856,7 @@ console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, "\t" ) );
 		xhr.send( null );
 
 	}
+
 
 
 
