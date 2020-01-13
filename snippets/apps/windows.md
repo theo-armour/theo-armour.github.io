@@ -16,6 +16,7 @@ Don't forget DropBox takes forever.
 * Start with just one or two folders
 
 Create a recovery drive in a USB drive
+
 * Needs 8GB
 
 
@@ -29,6 +30,7 @@ findstr /p /s /i "word word"  *.html
 
 
 ### Start Menus
+
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 
 look into
@@ -37,13 +39,15 @@ homeGroup
 
 ### startup
 
-window-R > shell:startup
+**window-R > shell:startup** <<<
+
 ## Startup
 
 C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 
 ## Speed Keys
+
 Win + E = My Computer
 Win + F = Search
 Win + M = minimize windows
@@ -52,6 +56,7 @@ Shift + Del = Bypass Recycle
 Control + Shift + Escape = Windows Task Manager
 
 ## Windows Shutdown
+
 C:\WINDOWS\system32\shutdown.exe -i -r -f -t15
 
 C:\WINDOWS\system32\shutdown.exe /s -/t 60 << the one to use.
