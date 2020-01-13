@@ -1,6 +1,6 @@
 # Spider
 
-* Michal >> screen capture 
+* Michal >> screen capture
 * good morning in polish: dzień dobry
 
 
@@ -8,7 +8,7 @@
 
 ### gbXML rules
 
-* 20 vendors and 30 apps support gbXML 
+* 20 vendors and 30 apps support gbXML
 * creates the essence of the design - the schematic of a building
 
 ### gbXML.org viewer
