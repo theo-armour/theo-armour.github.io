@@ -3,6 +3,18 @@
 * https://www.dropbox.com/home
 * https://help.dropbox.com/
 
+## Lessons learned
+
+- Start a new folder every year
+- It's all very tricky
+
+
+### Rember
+
+- portable apps
+- autohotkey
+- beyond compare
+
 ## Sync
 
 ### Smart sync
@@ -19,3 +31,4 @@
 
 	* https://spaces.uncc.edu/pages/viewpage.action?pageId=23790562
 	* https://www.dropboxforum.com/t5/Files-folders/Can-you-explain-the-difference-between-Smart-Sync-and-Selective/td-p/319218
+
