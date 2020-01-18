@@ -291,10 +291,13 @@ https://www.sitepoint.com/a-primer-on-css3-transforms/
 
 **********
 
-# HTML
+## HTML
 
 *  https://www.w3schools.com/tags/default.asp
 
+### Article
+
+* https://www.smashingmagazine.com/2020/01/html5-article-section/
 
 
 ### Audio
@@ -414,6 +417,7 @@ if ( check.checked ) { doIt(); }
 
 
 ### FORM Type=Range
+
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
 // http://danielstern.ca/range.css/#/
 
@@ -534,6 +538,9 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
 <label>Do you like peas?
   <input type="checkbox" name="peas">
 </label>
+
+### <main>, <header>, <footer> and <nav>
+
 
 ### Mark
 
