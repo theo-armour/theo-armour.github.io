@@ -9,7 +9,7 @@
 - It's all very tricky
 
 
-### Rember
+### Remember
 
 - portable apps
 - autohotkey

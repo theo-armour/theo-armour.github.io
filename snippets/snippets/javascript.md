@@ -651,33 +651,32 @@ function fetchTextSimple( url, target ){
 
 
 
-##  FILE READER filereader Input Type File Open
+## FILE READER filereader Input Type File Open
 
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 		'<h3>file reader</h3>' +
 		'<p><input type=file id=inpFile onchange=openFile(this); accept = '.rad, .res, .pts' multiple ></p>' +
-		'<textarea id=textArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
+		'<textarea id=txtArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
 
 
 
 	function openFile( files ) {
 
-		var fileData, reader, data;
-
-		reader = new FileReader();
+		const reader = new FileReader();
 		reader.onload = function( event ) {
 
 			txtArea.innerHTML = reader.result;
 
-			divLog.innerHTML =
-				'name: ' + files.files[0].name + '<br>' +
-				'size: ' + files.files[0].size.toLocaleString() + ' bytes<br>' +
-				'type: ' + files.files[0].type + '<br>' +
-				'modified: ' + files.files[0].lastModifiedDate.toLocaleDateString() +
-			'';
+			divStats.innerHTML = `
+				name: ${ files.files[ 0 ].name }<br>
+				size: ${ files.files[ 0 ].size.toLocaleString() } bytes<br>
+				type: ${ files.files[ 0 ].type }<br>
+				modified: ${files.files[ 0 ].lastModifiedDate.toLocaleDateString() }<br>
+				time to load: ${ ( performance.now() - FRT.timeStart ).toLocaleString() } ms`;
 
-console.log( '', files );
+			console.log( '', files.files );
+			console.log( '', event );
 
 		}
 
