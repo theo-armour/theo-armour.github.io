@@ -1,10 +1,12 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://theo-armour.github.io/pages/paris/ "View file as a web page." ) </span>
 
-<div><input type=button onclick="window.location.href='https://github.com/theo-armour/pages/paris/'";
+<div><input type=button onclick="window.location.href=https://github.com/theo-armour/theo-armour.github.io/blob/master/pages/paris/paris.md";
 value='You are now in a GitHub web page view - Click this button to view this read me file as source code' ></div>
 
 
-***
+<br>
+
+# [Paris]( index.html )
 
 ## History
 
@@ -32,6 +34,7 @@ Bring a GSM phone with you and purchase a pre-paid phone chip with cheap data pl
 
 June 21. http://en.wikipedia.org/wiki/F%C3%AAte_de_la_Musique
 
+
 ## Transport
 
 Learn to Velib. Your credit card has no chip? Not to worry: http://en.velib.paris.fr/
@@ -47,9 +50,9 @@ What is the number for Taxi Bleu? Have a look at http://www.taxis-bleus.com/
 
 ## Things to see and do
 
-There are not that many circuses in Paris, but many more than most cities.
+There are not that [many circuses]( https://en.parisinfo.com/what-to-do-in-paris/info/guides/going-to-the-circus-in-paris "The capital has several big tops and other venues where you can discover circus arts with the family" )in Paris, but many more than most cities.
 
-There is one of the 163 museum in Paris close by to almost anywhere.
+There is one of the ~[163 museums in Paris]( https://en.wikipedia.org/wiki/List_of_museums_in_Paris) close by to almost anywhere.
 
 Boats are for exploring sewers, the Seine and canals.
 
@@ -61,7 +64,7 @@ Go see Jean Tinguely’s “Cyclops”. http://www.lecyclop.com/en/index.html
 
 ## Sunday
 
-Everything closes on Sunday. Except in the 4th arrondissement. Where everything closes on Saturday and opens on Sunday.
+Everything closes on Sunday. Except in the 4th arrondissement, where everything closes on Saturday and opens on Sunday.
 
 On Sunday, somewhere in your arrondissement, there is a pharmacy and a boulanger that opens at least briefly.
 
@@ -76,7 +79,7 @@ Your arrondissement is divided into _quartiers_. Learn their four names. Wonder 
 
 There are twenty _arrondissements_ in Paris. Learn that the _arrondissements_ are laid out as a clockwise spiral starting from, doh, the Louvre.
 
-Every arrondissement has a swimming pool and a town hall where fun stuff happens
+Every arrondissement has a swimming pool and a town hall where fun stuff happens.
 
 The closer you are to the 1st arrondissement, the thinner and better-dressed the people are. The further away you go, the easier it is to find parking spaces.
 
@@ -177,3 +180,8 @@ And more...
 ### 2019-04-30
 
 The following tips on Paris were originally written in 2012. I am in the process of updating them
+
+***
+
+# <center title="hello!" ><a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > ❦ </a></center>
+
