@@ -96,6 +96,8 @@ just use 'this' wherever possible
 
 ### Ajax
 
+// urlDefaultFile = "https://cdn.jsdelivr.net/gh/GreenBuildingXML/Sample-gbXML-Files@master/gbXML_TRK.xml";
+
 
 function requestFile( url ) {
 
@@ -151,6 +153,7 @@ function requestFile( url ) {
 			//console.log( 'json', json );
 			// JSON.stringify( dxf, null, ' ' )
 			// or
+			// string = response.replace( /[ {4}\t\n\r]/gm, "" );
 			//			lines = response.split(/\r\n|\n/);
 			///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
 
