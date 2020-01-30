@@ -153,6 +153,8 @@ selection: Ctrl-K, Ctrl-F Set default format tool with "Format document with..."
 
 > ~/.ssh/id_rsa.pub ssh-keygen -t rsa -b 4096 -C "Penguin Chromebook" cat ~/.ssh/id_rsa.pub git remote set-url origin git@github.com:charmor/charmor.github.io.git
 
+> ~/.ssh/id_rsa.pub ssh-keygen -t rsa -b 4096 -C "Penguin Chromebook" cat ~/.ssh/id_rsa.pub git remote set-url origin git@github.com:theo-armour/qdata.git
+
 C:\Users\tarmo.ssh\github_rsa.pub
 
 ## IntelliSense
