@@ -1,3 +1,2 @@
-# [Paris]
-
-* https://theo-armour.github.io/pages/parid
+# Paris]
+* https://theo-armour.github.io/pages/paris
