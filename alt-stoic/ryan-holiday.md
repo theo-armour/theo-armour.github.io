@@ -251,6 +251,7 @@ In trying all the wrong ways, you my discover a new way
 Unity of purpose, deafness to doubt and the desire to stay at it
 
 Consider this mind=set:
+
 * Never in a hurry
 * Never worried
 * Never desperate
@@ -288,6 +289,7 @@ Everything is a chance to do and be your best.
 When action is our priority, vanity falls away.
 
 Our job
+
 * hard work
 * honesty
 * helping others as best we can
@@ -302,7 +304,7 @@ Think progress not perfection
 
 ## In Praise of the Flank Attack / p100
 
-Take a step back, then go around the problem. Find some leverage. Approch fron the 'line of leat resistence'
+Take a step back, then go around the problem. Find some leverage. Approach fron the 'line of leat resistence'
 
 
 ## Use Obstacles Against Themselves
@@ -353,7 +355,8 @@ And prepare to start the cycle once more / Prepare to Start Again / p172
 
 
 ## Build Your Inner Citadel p131
-DIY. Mental athletics. Toughen yourself. To be great takes practice. Armor-plating: may not make you invincible but it helps. 
+
+DIY. Mental athletics. Toughen yourself. To be great takes practice. Armor-plating: may not make you invincible but it helps.
 
 ## Anticipation (Thing Negatively ) p139
 
