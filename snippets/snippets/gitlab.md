@@ -65,3 +65,33 @@ Edit files
 * https://gitlab.com/pages
 * https://pages.gitlab.io/emscripten/
 
+
+### evereverland.gitlab.io
+
+
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Nothing to do...'
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+
+### puhya bhai
+
+pages:
+  stage: deploy
+  script:
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
