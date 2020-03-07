@@ -700,8 +700,14 @@ function fetchTextSimple( url, target ){
 		['radio', 'Radio'], ['text','Tra lala la ']
 	];
 
+	<p>
+		<button id=but onclick=setIt(); >set it</button>
+		<input type=range >
+		<label><input type=checkbox > checkbox</label>
+	</p>
+	
+### FORM Input Range
 
-### FORM Range
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
 
 
@@ -787,8 +793,6 @@ selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 parseInt( string, 10 ) << include the radix
 
 
-
-/
 
 ### IMAGE
 

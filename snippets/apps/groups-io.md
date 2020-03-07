@@ -1,12 +1,29 @@
+# https://Groups.io
 
 
 ### About
 
+* https://groups.io/static/transfer
 * No API, but some nice integrations
 
 
+### Mailing lists Compare
 
-kyle_smith@nps.gov
+* https://mail-list.com/4-alternatives-to-yahoo-groups/
+* https://themeisle.com/blog/best-free-email-marketing-services/
+* https://www.emailtooltester.com/en/blog/free-email-marketing-services/
+
+Vendor
+
+Mailchimp free plan
+
+* Single user
+
+MailerLite
+
+* Multi-user
+
+
 
 # Theo Peeps
 
@@ -21,6 +38,8 @@ Tania Becker <taniabecker8@gmail.com>
 
 
 # Our More Christmas 19
+
+kyle_smith@nps.gov
 
 ### Peeps
 
