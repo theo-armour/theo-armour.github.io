@@ -7,6 +7,15 @@
 * No API, but some nice integrations
 
 
+### Lessons learned
+
+* It can take a few hours before a group is approved
+* Messages sent before approval are discarded
+* Wiki and calendar can be visible to public
+
+
+
+
 ### Mailing lists Compare
 
 * https://mail-list.com/4-alternatives-to-yahoo-groups/
