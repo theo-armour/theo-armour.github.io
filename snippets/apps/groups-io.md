@@ -34,17 +34,63 @@ MailerLite
 
 
 
-# Theo Peeps
+# ta@groups.io Peeps
+
+They don't call us old farts for nothing. We can make hot air come out both ends.
+
+Hi friends and family.
+
+I am adding you to my private mailing list. You may unsubscribe or change your messaging preferences at any time.
+
+The objectives of this mailing list include:
+
+* Inform you of the opportunities and challenges of being elderly
+* Help you plan and take reasonable actions during a pandemic
+* Re-mix and share "Play nice, work hard, stay kind." with "Stay hungry. Stay foolish." with "OK Boomer"
+
+ox ox
+
+Theo
 
 
 Alix Ferté Armour <alixarmour@gmail.com>
 Allison Armour <allison@allisonarmour.com>
 Cynthia Burrage Armour <armour.cb@gmail.com>
+Douglas Dwyer <douglas.dwyer@me.com>
 Isabelle Armour <zazaarmour@yahoo.com>
 Eloise Armour <armour.eloise@gmail.com>
+Jason Allen <utilitiesman@gmail.com>
 Kyle Alden Smith <aldensmith@gmail.com>
+Patrick Murphy <pmbusiness.service@gmail.com>,
 Tania Becker <taniabecker8@gmail.com>
+Vinod Sheth <jayama12@hotmail.com>
 
+
+
+
+Raymond Gordon <raygor@sonic.net>
+Raymond Stone <RaymondStoneDotCom@gmail.com>
+Arvind Saxena <sequelny@gmail.com>
+Eleanor Burke <eleanorgeorgeburke@gmail.com>
+Karin Corfee <Karin.Corfee@navigant.com>
+Paul Masson <paulmasson@comcast.net>
+Dan Hurtardo <danvargashurtado@gmail.com>
+Bernie Burke <bernieburke@comcast.net>
+Alberto Tono <albertotono3@gmail.com>
+Babs Lowe <babs.lowe7@gmail.com>
+Dusan Bosnjak <bodu3d@gmail.com>
+Harald Reingruber <harald.reingruber@gmail.com>
+Richard Smith <rcsjr12@gmail.com>
+Kathleen Smith <fergiesmith@gmail.com>
+Shammah Chancellor <Shammah.chancellor@gmail.com>
+Alix Paine <alixpaine@gmail.com>
+Abby Paine Taylor <abbyptaylor4@gmail.com>
+Helen Engelhardt <helen.engelhardt@gmail.com>
+Philip Engelhardt <ple@ple.us>
+
+
+
+tgdpro <tgd@tgdpro.com>
 
 # Our More Christmas 19
 

@@ -33,6 +33,7 @@ fileName = 'https://api.github.com/repos/jaanga/sp500/contents/trades';
 ## Contents
 
 download_url from file or tree
+
 * https://raw.githubusercontent.com/prediqtiv/prediqtiv.github.io/master/trades-dev/2017-05-20/GOOG.txt
 * https://cdn.rawgit.com/prediqtiv/prediqtiv.github.io/master/trades-dev/2017-05-10/GOOG.txt
 

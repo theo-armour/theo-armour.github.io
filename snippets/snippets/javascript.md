@@ -101,7 +101,7 @@ just use 'this' wherever possible
 
 function requestFile( url ) {
 
-	xhr = new XMLHttpRequest();
+	const xhr = new XMLHttpRequest();
 	xhr.open( 'GET', url, true );
 	xhr.onerror = ( xhr ) => console.log( 'error:', xhr  );
 	xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
@@ -705,7 +705,7 @@ function fetchTextSimple( url, target ){
 		<input type=range >
 		<label><input type=checkbox > checkbox</label>
 	</p>
-	
+
 ### FORM Input Range
 
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
@@ -1144,6 +1144,7 @@ console.log(uniqueArray); // Result: [1, 2, 3, 5]
 
 setTimeout( function(){ controls.autoRotate = true; }, 3000);
 
+setTimeout( () => controls.autoRotate = true, 3000);
 See
 
 https://developers.google.com/web/updates/2015/08/using-requestidlecallback
