@@ -107,6 +107,8 @@ arr = arr.filter( (value, index, array ) => array.indexOf (value) == index );
 
 ## Min/Max
 
+console.log(Math.max(...array1));
+
 	var max_of_array = Math.max.apply( Math, array);
 	var min_of_array = Math.min.apply( Math, array);
 

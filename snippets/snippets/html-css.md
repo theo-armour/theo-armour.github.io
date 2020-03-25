@@ -94,6 +94,12 @@ More
 https://gist.github.com/endolith/157796
 
 
+### CSS External style sheet
+
+https://www.w3schools.com/css/css_howto.asp
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
 ### CSS Docs
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/unset
@@ -207,14 +213,6 @@ document.documentElement.style.setProperty('--myVariable', 'blue');
 document.documentElement.style.getPropertyValue('--myVariable');
 
 
-
-## CSS Loading
-
-### CSS External style sheet
-
-https://www.w3schools.com/css/css_howto.asp
-
-<link rel="stylesheet" type="text/css" href="mystyle.css">
 
 
 ### CSS Switch
