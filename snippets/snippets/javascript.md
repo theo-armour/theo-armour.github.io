@@ -97,7 +97,7 @@ just use 'this' wherever possible
 ### Ajax
 
 // urlDefaultFile = "https://cdn.jsdelivr.net/gh/GreenBuildingXML/Sample-gbXML-Files@master/gbXML_TRK.xml";
-
+https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets
 
 function requestFile( url ) {
 

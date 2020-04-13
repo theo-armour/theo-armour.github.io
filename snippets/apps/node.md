@@ -4,6 +4,14 @@ http://nodejs.org
 
 https://nodejs.org/api/
 
+
+### 2020-03-30
+
+Node installed in C:\Program Files\nodejs\
+
+Chocolatey installs Python 2.7!!!!
+
+
 ## My Node and NPM
 
 D:\Dropbox\Public\code-cookbook\0-node
@@ -40,7 +48,7 @@ runs it
 
 
 
-##  Update Node
+## Update Node
 
 got to https://nodejs.org/en/ click install.
 x64 msi version is good
@@ -62,7 +70,7 @@ from https://www.npmjs.org/doc/misc/npm-faq.html :
 npm installs apps in just under the current folder
 
 How do I install something on my computer in a central location?
->> cd 
+>> cd
 
 	* Install it globally by tacking -g or --global to the command.
 	* This is especially important for command line utilities that need to add their bins to the global system PATH.)

@@ -240,8 +240,10 @@ Definition and Usage
 ### Sort
 
 * https://www.w3schools.com/jsref/jsref_sort.asp
-* https://www.w3schools.com/jsref/jsref_sort.asp
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+	* Has nice sort array of objects
+* https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
+
 
 
 
