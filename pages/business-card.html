@@ -13,52 +13,21 @@
 
 * { box-sizing: border-box; }
 
-:root { font: 100% monospace; --mnu-width: 25rem; --screen-width: calc( 100vw ); --headerHeight: 6rem; }
+:root { font: 100% monospace; }
 
 html { height: 100%; }
 
 body { margin: 0 auto; max-width: 80ch; padding: 0 0.5rem; }
 
-a { color: crimson; text-decoration: none; }
-a:hover, a:focus, a:active { background-color: yellow; color: #aaa; text-decoration: underline }
-
-aside { border: 1px solid lightgray; margin-top: 15px; padding: 2px; }
-
-blockquote { background-color: #ddd; padding: 1ch; }
-
-button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
-button:hover { background: #ccc; color: #fff }
-
-code { background-color: #eee; }
-pre { background-color: #eee; padding: 5px; }
-
-input[type="range"] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; height: 2ch;
-	width: 100%; }
-
-input[type="range"]::-moz-range-thumb { background-color: #888; border-radius: 0; height: 3ch; width: 10px; }
-
-input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 3ch; width: 10px; }
-
-summary { cursor: pointer; font-size: 2.5ch; font-weight: bold; }
-
-.info { float: right }
-
-.info:hover>.infotooltip { display: block; }
-
-.infotooltip { border: 0.8ch double #888; background: white; display: none;
-	font: 100% monospace; font-size: 1rem; font-weight: normal; /* unset summary settings */
-	margin-left: -28ch; padding: 10px; position: absolute; z-index: 1000; }
-
-
-.sumMenuTitle { background-color: #ccc; color: #777; margin: 10px 0; text-align: center; } }
-
 
 main { border: 0px; height: 100%; left: var( --mnu-width ); margin: 0;
-	padding: 0 1rem; position: absolute; width: calc( 100% - var( --mnu-width ) );  }
+	padding: 0 1rem; width: 100%;  }
 
-#navMenu { background-color: #eee; left: 0; margin: 0; padding: 0 1rem;
-	position: absolute; top: 0; width: var( --mnu-width ); }
+h1 { font-size: 4rem; }
 
+h2 { font-size: 3rem; }
+
+footer { font-size: 3rem; }
 
 </style>
 </head>
@@ -72,11 +41,12 @@ main { border: 0px; height: 100%; left: var( --mnu-width ); margin: 0;
 
 <h1>Theo Armour</h1>
 
-<h2>440 Davis Court #2101<br>San Francisco CA 94111-2458</h2>
+<h2>440 Davis Court #2101<br>San Francisco CA 94111</h2>
 
 <h2>t.armour@gmail.com</h2>
 
 <h2>415 828 0000</h2>
+
 </main>
 
 <footer >
