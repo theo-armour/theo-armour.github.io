@@ -988,7 +988,7 @@ THREE.ShapeUtils.area( vertices ).toLocaleString();
 
 	}
 
-## OBJECTS
+
 
 ### SPRITE
 
@@ -1000,7 +1000,19 @@ const sprite = new THREE.Sprite( spriteMaterial );
 sprite.scale.set(200, 200, 1)
 scene.add( sprite );
 
+## STATS
 
+
+	<p>
+		<a href="javascript:( () => { const script=document.head.appendChild( document.createElement( 'script' ) ); script.onload=() => { const stats=new Stats(); document.body.appendChild(stats.dom); requestAnimationFrame( function loop(){ stats.update(); requestAnimationFrame(loop) } ); } ; script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js'; } )()" >load stats.js</a>
+	</p>
+
+WIP
+
+
+	<p>
+		<a href="javascript:( () => { const script=document.head.appendChild( document.createElement('script') ); script.onload=() => {const rS=new rStats(); requestAnimationFrame( function loop(){  rS( 'frame' ).start();rS( 'frame' ).end();rS().update(); requestAnimationFrame(loop) } ); } ; script.src='https://raw.githack.com/spite/rstats/master/src/rStats.js'; })()" >load rStats</a>
+	</p>
 
 ## TWEEN
 

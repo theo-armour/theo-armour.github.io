@@ -62,6 +62,10 @@ Arrows in circle: CCW &#8634; CW &#8635;
 Dingbats &#10070; &#10087; ❦ nice: &#x2766;
 ❧ ❦
 Hands: black: L &#x261A; R &#x261B; / White L &#x261C; U &#x261D; R &#x261E; D &#x261F; / V=sign &#x270C;
+&malt;
+&spades;
+&xcirc;
+&phone;
 
 http://fontawesome.io/icons/
 
@@ -92,6 +96,9 @@ Purposeful
 
 More
 https://gist.github.com/endolith/157796
+
+
+## CSS
 
 
 ### CSS External style sheet
@@ -157,6 +164,35 @@ dotted solid double dashed
 dotted solid
 
 
+### CSS Dark mode
+
+* https://tombrow.com/dark-mode-website-css
+* https://gosink.in/javascript-css-toggle-dark-light-theme-based-on-your-users-preferred-scheme/
+
+:root {
+	font-size: 80%;
+	font-family: 'Lato', sans-serif;
+	--color: #6ec071; /* #4a9d36; */
+	--colorLight: #b7dfb8; /* #93cf95; hsla(79, 61%, 70%, 1); #9bcc31; */
+	--background-color:  #f7f6ee; /* #f7f8f9; */
+	--secondary-color: rgb(240, 250, 244);
+	--mnu-width: 22rem;
+
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	  --background-color: #1e1f23;
+	  --secondary-color: #235528;
+	  --text-dark: #efefef;
+	  --text: #c4c5c9;
+	  --text-light: #6c6d71;
+	  --text-lighter: #8e8f93;
+	}
+  }
+
+
+
 ### CSS Flexbox
 
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
@@ -185,6 +221,7 @@ Adobe Edge: https://edgewebfonts.adobe.com/
 
 body {background-color: #ffffff; color: #555; font-family: 'inconsolata'; font-size: 15px; height: 100%;
 	line-height: 18px; margin: 0px; overflow: hidden; }
+
 
 ### CSS Overflow
 
@@ -535,6 +572,15 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
 
 <label>Do you like peas?
   <input type="checkbox" name="peas">
+</label>
+
+
+<label>Do you like peas?
+  <input type="radio" name="type"> big
+</label>
+
+<label>Do you like peas?
+  <input type="radio" name="type"> small
 </label>
 
 ### <main>, <header>, <footer> and <nav>

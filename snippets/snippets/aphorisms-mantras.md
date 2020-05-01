@@ -17,6 +17,7 @@
 ### [Drucker quotes]( https://succeedfeed.com/peter-drucker-quotes/ )
 
 * What gets measured gets improved
+* You can’t manage what you don’t measure.
 * There is nothing so useless as doing efficiently that which should not be done at all.
 * Doing the right thing is more important than doing the thing right
 * if you want something new, you have to stop doing something old.

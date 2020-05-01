@@ -157,6 +157,8 @@ function requestFile( url ) {
 			//			lines = response.split(/\r\n|\n/);
 			///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
 
+// lines = response.split( /\n/ ).map( line => line.split( "," ) );
+
 			//			console.log( 'line 8',lines[ 8 ] );
 			//			console.log( 'length', lines.length );
 
@@ -1103,6 +1105,10 @@ RegExp Modifiers
 
 //file:///C:/Users/Theo/Dropbox/Public/code-cookbook/0-cookbook-general/file-save-api/file-saver-2015-02-26/file-saver.html
 //http://ausdemmaschinenraum.wordpress.com/2012/12/06/how-to-save-a-file-from-a-url-with-javascript/
+
+
+<p><button onclick=saveFile(); >Save File</button></p>
+
 
 	var info = document.body.appendChild( document.createElement( 'div' ) );
 	info.innerHTML = '<a href="" ><h1>' + document.title + '</h1></a>' +
