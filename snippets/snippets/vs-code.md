@@ -55,7 +55,7 @@
 - <https://vscodecandothat.com/>
 - <https://www.smashingmagazine.com/2018/01/visual-studio-code/> * Visual Studio Code Can Do That?
 
-### Chrobook linux
+### Chromebook linux
 
 Access Gdrive files from Chromebook Linux
 
@@ -223,29 +223,64 @@ Create cursors on all occurrences of a string: Ctrl+Shift+L</arrow></arrow>
 
 ## Settings
 
-%APPDATA%\Code\User\settings.json
+* User: user\%APPDATA%\Roaming\Code\User\settings.json
+* Workspace: in workspace root
+* Folder:
+
+theo
+
+fodd
+
 
 ```
 {
 
+
+    "cSpell.userWords": [
+        "foss",
+        "Chromebook",
+        "Evereverland",
+        "Theo's",
+        "foss",
+        "polylines",
+        "raycaster",
+        "scrollbar",
+        "spacebar",
+        "teodoro",
+        "theo",
+        "wireframe"
+    ],
+
+	"editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "editor.detectIndentation": false,
     "editor.insertSpaces": false,
     "editor.tabCompletion": "on"
     "editor.trimAutoWhitespace": true,
+    "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
+
+"eslint.format.enable": true,
+
+    "explorer.confirmDragAndDrop": false,
+	  "explorer.openEditors.visible": 10,
 
     "files.autoSave": "afterDelay",
     "files.trimTrailingWhitespace": true,
 
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 
-    "workbench.colorTheme": "Visual Studio Light",
+
+
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true,
-    "cSpell.userWords": [
-        "foss"
-    ]
+
+"sync.forceUpload": true,
+
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+        "workbench.colorTheme": "Visual Studio Light"
 }
 ```
 
