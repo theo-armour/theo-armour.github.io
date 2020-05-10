@@ -374,6 +374,8 @@ element.classList.add("mystyle");
 
 ### DATES
 
+	dd = new Date().toISOString().slice( 0, 10 );
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 	var daysOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
@@ -708,7 +710,7 @@ function fetchTextSimple( url, target ){
 		<label><input type=checkbox > checkbox</label>
 	</p>
 
-### FORM Input Range
+## FORM Input Range
 
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
 
@@ -735,7 +737,7 @@ oninput="validity.valid||(value='');"
 
 
 
-### FORM TEXTAREA
+## FORM TEXTAREA
 
 // '<textarea id=txtItem cols=25 rows=5>bits</textarea>' +
 	var textarea = document.body.appendChild( document.createElement( 'textarea' ) );
@@ -754,7 +756,7 @@ input file + reader : see cookbook
 
 
 
-### FORM SELECT
+## FORM SELECT
 
 // http://stackoverflow.com/questions/9895082/javascript-populate-drop-down-list-with-array
 
@@ -788,15 +790,27 @@ selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 		selXXX.selectedIndex = 3;
 
 
+## FUNCTION
+
+### parameters
+
+Objects as parameters
+
+* https://www.smashingmagazine.com/2016/07/how-to-use-arguments-and-parameters-in-ecmascript-6/
+	* Nice list of parameters type
+* https://simonsmith.io/destructuring-objects-as-function-parameters-in-es6
+
+function initiateTransfer({ protocol = 'http', longPropertyName: port = 800, delay = 150, retries = 10, timeout = 500, log = true } = {} ) {}
 
 
-### GLOBAL FUNCTIONS
+
+## GLOBAL FUNCTIONS
 
 parseInt( string, 10 ) << include the radix
 
 
 
-### IMAGE
+## IMAGE
 
 		var image = document.body.appendChild( document.createElement( 'img' ) );
 		image.crossOrigin = 'anonymous';  // before source, needs an onload
@@ -964,6 +978,9 @@ Old school: number with commas
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
+( { a = 0, b = 1, c = 2 } = {} )
+
+
 Array.from( obj )
 
 		var object = object || {};
@@ -1122,10 +1139,10 @@ RegExp Modifiers
 
 	function saveFile() {
 
-		let blob = new Blob( [ txtArea.innerHTML ] );
+		const blob = new Blob( [ txtArea.innerHTML ] );
 		let a = document.body.appendChild( document.createElement( 'a' ) );
 		a.href = window.URL.createObjectURL( blob );
-		a.download = 'hello-world.txt';
+		a.download = `hello-world-${ new Date().toISOString().slice( 0, 10 ) }.txt';
 		a.click();
 //		delete a;
 		a = null;

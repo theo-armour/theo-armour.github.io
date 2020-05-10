@@ -194,7 +194,9 @@ see cookbook/array/array-pop-while-switch
 
 	arr = Array.from( { length: 100}, () => Math.random() )
 
-
+	let array = Array.from(Array(5).keys()); // Result: [0, 1, 2, 3, 4]
+	// Using the spread operator
+	let array = [...Array(5).keys()] // Result: [0, 1, 2, 3, 4]
 
 ## Reduce
 
