@@ -5,14 +5,17 @@
 ## Likes
 
 * Multi-disciplinary or discipline agnostic
+* Large to small scale approach
+* Full lifespan aware
+* Data driven
 * Features organizations want
 
 
-## Want
+## Wants ( a shortlist of )
 
 * More insights into Digital Twins on web site
 * XR/VR/AR approach
-*
+* Outlines of potential benefits
 
 
 ## Links of interest
