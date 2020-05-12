@@ -21,5 +21,4 @@
 ## Links of interest
 
 * https://en.wikipedia.org/wiki/Digital_twin
-* [The Impact of COVID-19 on the Implementation of Digital Twins in the Global Building Industry]( https://s3.us-east-2.amazonaws.com/repo.cityzenith.com/Cityzenith+Whitepaper-The+Impact+of+COVID-19+on+the+Implementation+of+Digital+Twins+in+the+Global+Building+Industry_+screen+res.pdf
-)
+* [The Impact of COVID-19 on the Implementation of Digital Twins in the Global Building Industry]( https://s3.us-east-2.amazonaws.com/repo.cityzenith.com/Cityzenith+Whitepaper-The+Impact+of+COVID-19+on+the+Implementation+of+Digital+Twins+in+the+Global+Building+Industry_+screen+res.pdf )
