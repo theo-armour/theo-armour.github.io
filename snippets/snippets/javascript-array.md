@@ -198,6 +198,9 @@ see cookbook/array/array-pop-while-switch
 	// Using the spread operator
 	let array = [...Array(5).keys()] // Result: [0, 1, 2, 3, 4]
 
+
+	const geometries = Array( count).fill().map( () => Math.random() )
+
 ## Reduce
 
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce

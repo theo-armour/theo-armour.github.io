@@ -393,15 +393,16 @@ https://discourse.threejs.org/t/correctly-remove-mesh-from-scene-and-dispose-mat
 
 	function addLine( vertices ) {
 
-		let geometry, material, line;
-		const v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+		let line = new THREE.Line();
+		scene.add( line );
 
-		geometry = new THREE.Geometry();
+		const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
+
+		const geometry = new THREE.Geometry();
 		geometry.vertices = vertices || [ v( -10, 0, 0 ),  v( 0, 10, -10 ), v( 10, 0, 0 ) ];
-		material = new THREE.LineBasicMaterial( { color: 0x000000 } );
+		const material = new THREE.LineBasicMaterial( { color: 0x000000 } );
 		line = new THREE.Line( geometry, material );
 
-//		scene.add( line );
 		return line;
 
 	}
@@ -892,12 +893,13 @@ https://threejs.org/docs/#api/extras/core/Path
 
 #### Quick Shapes
 
-function getShape( points ) {
+function getShape( vertices ) {
 
-		const v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
-		points = points || [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
+		const v2 = ( x, y ) => new THREE.Vector2( x, y );
+
+		vertices = vertices || [ v2( 0, 0 ), v2( 50, 0 ), v2( 30, 60 ), v2( 0, 40 ) ];
 		const shape = new THREE.Shape( points );
-		const geometry = new THREE.ShapeGeometry( shape );
+		const geometry = new THREE.ShapeGeometry( vertices );
 
 		const material = new THREE.MeshNormalMaterial( { side: 2 } );
 		const mesh = new THREE.Mesh( geometry, material );

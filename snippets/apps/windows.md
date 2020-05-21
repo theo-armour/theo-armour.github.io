@@ -3,6 +3,8 @@
 ### God Mode
 http://www.howtogeek.com/howto/8711/stupid-geek-tricks-enable-the-secret-how-to-geek-mode-in-windows/
 
+
+
 ## Access Denied
 http://windows.microsoft.com/en-US/windows-vista/Troubleshoot-access-denied-when-opening-files-or-folders
 use lock hunter...
@@ -43,7 +45,7 @@ homeGroup
 
 ## Startup
 
-C:\Users\tarmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+C:\Users\theo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 
 ## Speed Keys

@@ -1,6 +1,14 @@
 # Git
 
+## Install
 
+Need to run in terminal on first run
+```
+git config --global user.email "t.armour@gmail.com"
+git config --global user.name "Theo Armour"
+```
+
+## Usage
 
 $ git add -vA . << verbose and All
 $ git commit -am “updated experimental”
@@ -123,7 +131,4 @@ $ git checkout dev [master]g
 
 Updates
 git pull origin dev
-
-
-
 
