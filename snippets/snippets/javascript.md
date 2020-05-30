@@ -578,6 +578,15 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 * onchange - when loss of focus
 
 
+interesting | look at
+
+ document.onvisibilitychange = function () {
+          document.visibilityState === "visible"
+             ? (document.title = "👋 Hello")
+             : (document.title = "😟 Bye!");
+       };
+
+
 	let event = new Event( "bingo", {"bubbles": true, "cancelable": false, detail: true } );
 
 //	window.addEventListener( "bingo", addAvatar );

@@ -2,8 +2,32 @@
 
 ## To do
 
+2020-05-23
+
+* styelint has online demo that seems nice - but in use may have learning curve issues
+* https://stylelint.io/demo
+* This whole linting and beautifying thing is a big issue. Much bigger than I thought.
+
+Some thoughts
+
+* Start with simple: CSS
+* First explore VS Code defaults
+* perhaps let Glitch do it
+    * Glitch both formats and fixes CSS
+    * Uses spaces not tabs - but only two - so maybe I can get used to this
+
+To do
+
+Redefine Alt Home and Alt End to go home and end
+2020-05-22
+
+Using https://github.com/HookyQR/VSCodeBeautify
+
+- styelint looks interesting
+
 - Try prettier
 
+  - Works on css, js  
   - Reset settings.json
   - Get rid of all typescript
 

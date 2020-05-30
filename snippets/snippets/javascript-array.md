@@ -285,7 +285,7 @@ items.sort(function(a, b) {
 
 arrayOfLines = lineString.match(/[^\r\n]+/g);
 
-## Unique / find
+## Unique / find /set
 
 	const array = [1, 1, 2, 3, 5, 5, 1]
 	const uniqueArray = [...new Set(array)];
