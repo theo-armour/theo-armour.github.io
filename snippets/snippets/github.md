@@ -4,7 +4,8 @@
 ## Tips
 
 * You can write read me files in HTML because Markdown passes transparently almost all HTML
-
+* https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/
+* https://github.blog/2020-04-02-github-protips-tips-tricks-hacks-and-secrets-from-vitor-monteiro/
 
 ## JavaScript
 
