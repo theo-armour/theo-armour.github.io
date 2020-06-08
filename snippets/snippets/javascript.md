@@ -1094,7 +1094,8 @@ const name = FSB.fileName.replace( /\.[0-9a-z]+$/i, ".zip" );
 >>> /xxx(.*?)xxx/gi
 
 * (.*?) Parenthesis matches anything in between
-	* ? = match not remembered
+* ? = match not remembered
+* ? = first match and not greedy match
 * May need to have a backslash: \(.*?)
 * choose g for global correctly
 
