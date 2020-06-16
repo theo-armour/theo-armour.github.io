@@ -1052,9 +1052,10 @@ Conditional Operator
 
 ### REGEXP
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-// http://www.w3schools.com/jsref/jsref_obj_regexp.asp
-// http://www.w3schools.com/jsref/jsref_replace.asp
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+* http://www.w3schools.com/jsref/jsref_obj_regexp.asp
+* http://www.w3schools.com/jsref/jsref_replace.asp
 
 // Shortcuts
 

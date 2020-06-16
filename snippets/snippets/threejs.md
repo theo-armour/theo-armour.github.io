@@ -1020,6 +1020,36 @@ WIP
 
 See files
 
+## TROIKA
+
+    <script src="https://cdn.jsdelivr.net/npm/troika-three-utils@0.27.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/troika-worker-utils@0.27.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/troika-3d-text@0.27.0/dist/textmesh-standalone.umd.min.js"></script>
+
+
+          for ( let i = 0; i < 1000; i++ ) {
+             
+            addText( Math.random(), new THREE.Vector3( Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50 ));
+          
+          }
+		  
+      function addText( text = "Hello world!\n123", position = new THREE.Vector3() ) {
+
+        textMesh = new troika_3d_text.TextMesh();
+
+        scene.add(textMesh);
+
+        // set properties to configure:
+        textMesh.text = text;
+        textMesh.fontSize = 20;
+        textMesh.rotation.x = 0.5 * Math.PI;
+        textMesh.position.copy( position )
+        textMesh.color = 0xffffff * Math.random()
+
+        // be sure to call sync() after all properties are set to update the rendering:
+        //textMesh.sync();
+
+      }
 
 
 ### WIREFRAME
