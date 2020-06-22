@@ -1,5 +1,7 @@
 ﻿//
 
+<link href="mystyle.css" rel="stylesheet" >
+
 It’s much easier to recover from no abstraction than the wrong abstraction
 
 From Quick Tip: What Are Factory Functions in JavaScript
