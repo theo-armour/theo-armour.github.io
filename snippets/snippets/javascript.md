@@ -765,7 +765,7 @@ input file + reader : see cookbook
 
 
 
-## FORM SELECT
+### FORM SELECT
 
 // http://stackoverflow.com/questions/9895082/javascript-populate-drop-down-list-with-array
 
@@ -799,7 +799,7 @@ selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 		selXXX.selectedIndex = 3;
 
 
-## FUNCTION
+### FUNCTION
 
 ### parameters
 
@@ -813,13 +813,13 @@ function initiateTransfer({ protocol = 'http', longPropertyName: port = 800, del
 
 
 
-## GLOBAL FUNCTIONS
+### GLOBAL FUNCTIONS
 
 parseInt( string, 10 ) << include the radix
 
 
 
-## IMAGE
+### IMAGE
 
 		var image = document.body.appendChild( document.createElement( 'img' ) );
 		image.crossOrigin = 'anonymous';  // before source, needs an onload
