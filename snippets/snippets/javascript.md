@@ -958,7 +958,10 @@ Where
 So when you see aabb.doIt() in code you know exactly which file to go to.
 
 
+### NAVIGATOR
 
+function success( loc) { console.log( "location", loc ) };
+navigator.geolocation.getCurrentPosition( success )
 
 ### NUMBER
 

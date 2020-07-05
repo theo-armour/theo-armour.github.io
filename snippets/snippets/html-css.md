@@ -248,8 +248,13 @@ document.body.style.setProperty('--foo-bar', newValue);//set
 
 // setter
 document.documentElement.style.setProperty('--myVariable', 'blue');
+
 // getter
 document.documentElement.style.getPropertyValue('--myVariable');
+
+root = document.querySelector(":root");
+
+getComputedStyle(element).getPropertyValue("--my-var");
 
 
 
