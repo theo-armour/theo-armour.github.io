@@ -561,6 +561,11 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 
 
+## Element
+
+The HTMLFormElement.reset() method resets all fields in a form back to their default values. This means that if you had a specified value property on a field, and the user changed it, it would revert to the original instead of emptying completely.
+
+
 ## Escape / encodeURI()
 
 	var uri = 'https://mozilla.org/?x=шеллы';
