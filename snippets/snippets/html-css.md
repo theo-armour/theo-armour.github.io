@@ -351,6 +351,16 @@ https://www.sitepoint.com/a-primer-on-css3-transforms/
 </audio>
 
 
+## BASE
+
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+* https://stackoverflow.com/questions/3494954/how-do-i-set-a-pages-base-href-in-javascript
+* It all gets too complicated if you are using location.hash
+
+	<base href="http://www.example.com/">
+	<base target="_blank" href="http://www.example.com/">
+
+
 
 ## Button and Range
 
@@ -562,6 +572,9 @@ Random image
 * https://unsplash.com/
 
 
+### INPUT type SEARCH
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search
 
 ### LABEL
 

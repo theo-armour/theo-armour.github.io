@@ -12,15 +12,6 @@ a.href = url;
 const site = a.hostname;
 
 
-## BASE
-
-* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-* https://stackoverflow.com/questions/3494954/how-do-i-set-a-pages-base-href-in-javascript
-* It all gets too complicated if you are using location.hash
-
-	<base href="http://www.example.com/">
-	<base target="_blank" href="http://www.example.com/">
-
 
 
 ## requestIdleCallback
