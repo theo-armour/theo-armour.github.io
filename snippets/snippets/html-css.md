@@ -136,6 +136,8 @@ getComputedStyle
 https://www.w3schools.com/css/css_pseudo_classes.asp
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
+### CSS Blur
+
 
 
 ### CSS BORDERS
@@ -164,6 +166,13 @@ inset
 outset
 dotted solid double dashed
 dotted solid
+
+### CSS Center
+
+.thing {
+  display: grid;
+  place-items: center;
+}
 
 
 ### CSS Dark mode
