@@ -1,10 +1,15 @@
 # VS Code
 
+* my workspace: file:///C:/Users/theo/Dropbox/Public/git-repos/github.code-workspace
+* settings: control + , >> file:///C:/Users/theo/AppData/Roaming/Code/User/settings.json
+* keyboard shortcuts: control + K + S
+
+
 ## To do
 
 2020-05-23
 
-* styelint has online demo that seems nice - but in use may have learning curve issues
+* stylelint has online demo that seems nice - but in use may have learning curve issues
 * https://stylelint.io/demo
 * This whole linting and beautifying thing is a big issue. Much bigger than I thought.
 
@@ -19,11 +24,12 @@ Some thoughts
 To do
 
 Redefine Alt Home and Alt End to go home and end
+
 2020-05-22
 
 Using https://github.com/HookyQR/VSCodeBeautify
 
-- styelint looks interesting
+- stylelint looks interesting
 
 - Try prettier
 
@@ -68,6 +74,8 @@ Using https://github.com/HookyQR/VSCodeBeautify
 
 ### Tips
 
+- https://medium.com/better-programming/12-vscode-shortcuts-and-tactics-to-ease-development-f9d5d5f8b76
+- https://medium.com/better-programming/21-vscode-shortcuts-to-make-coding-faster-and-more-fun-b18b25083def
 - <https://github.com/viatsko/awesome-vscode?WT.mc_id=vscode-smashing-buhollan>
 
 ### Configuration

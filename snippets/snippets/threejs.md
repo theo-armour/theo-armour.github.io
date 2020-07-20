@@ -701,7 +701,7 @@ jaanga.github.io/cookbook-threejs/materials-sandbox/color/vertex-colors/vertex-c
 
 https://threejs.org/docs/#api/textures/Texture
 
-		var texture = new THREE.TextureLoader().load( "arrow-gray.png" );
+		const texture = new THREE.TextureLoader().load( "arrow-gray.png" );
 
 		loader = new THREE.TextureLoader();
 		loader.crossOrigin = '';
