@@ -3,7 +3,7 @@
 * my workspace: file:///C:/Users/theo/Dropbox/Public/git-repos/github.code-workspace
 * settings: control + , >> file:///C:/Users/theo/AppData/Roaming/Code/User/settings.json
 * keyboard shortcuts: control + K + S
-
+* F1 for help
 
 ## To do
 
@@ -46,10 +46,7 @@ Using https://github.com/HookyQR/VSCodeBeautify
 ## Tips
 
 - settings.json
-
 - Keyboard shortcuts: Ctrl+K, Ctrl+s
-
-- F1 for help
 
 - Can drag and drop from Sidebar to browser
 
@@ -68,24 +65,15 @@ Using https://github.com/HookyQR/VSCodeBeautify
 
 ## Articles
 
-### Extensions
 
-- <https://github.com/viatsko/awesome-vscode?>
 
 ### Tips
 
+- https://medium.com/@bretcameron/7-essential-features-of-visual-studio-code-for-web-developers-be77e235bf62
 - https://medium.com/better-programming/12-vscode-shortcuts-and-tactics-to-ease-development-f9d5d5f8b76
 - https://medium.com/better-programming/21-vscode-shortcuts-to-make-coding-faster-and-more-fun-b18b25083def
 - <https://github.com/viatsko/awesome-vscode?WT.mc_id=vscode-smashing-buhollan>
 
-### Configuration
-
-- <https://code.visualstudio.com/docs/getstarted/tips-and-tricks>
-- <https://hackernoon.com/how-i-configure-vscode-for-everything-7df65a316a52>
-- <https://www.granneman.com/webdev/editors/visual-studio-code/setting-configuring>
-- <https://dev.to/thegeoffstevens/vs-code-settings-you-should-customize-5e75>
-- <https://vscodecandothat.com/>
-- <https://www.smashingmagazine.com/2018/01/visual-studio-code/> * Visual Studio Code Can Do That?
 
 ### Chromebook linux
 
@@ -149,6 +137,7 @@ Rename symbol: F2
       div
   ```
 
+
 ## Editor layout
 
 Changes editor split layout from horizontal to vertical
@@ -159,9 +148,25 @@ Alt+Shift+1 (PC)
 
 Cmd+Option+1 (Mac)
 
+
+## Extensions
+
+* https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap
+    * Wraps your selection in HTML tags. Can wrap inline selections and selections that span multiple lines (works with both single selections and multiple selections at once).
+    * To use, select one or many chunks of code and press "Alt + W" ("Option + W" for Mac).
+* https://marketplace.visualstudio.com/items?itemName=jevakallio.vscode-hacker-typer
+    * replay macros at typing speed
+
+- <https://github.com/viatsko/awesome-vscode?>
+- https://marketplace.visualstudio.com/items?itemName=nicoespeon.slides
+
 ## Formatting
 
 selection: Ctrl-K, Ctrl-F Set default format tool with "Format document with..." in context menu
+
+### HTML
+
+* https://code.visualstudio.com/docs/languages/html
 
 ### Beautify
 
@@ -208,10 +213,9 @@ Ones I like
 
 ## Markdown
 
-- <https://githubengineering.com/a-formal-spec-for-github-markdown/>
-
+* https://github.com/DavidAnson/vscode-markdownlint#configure
+- https://githubengineering.com/a-formal-spec-for-github-markdown/
 - Switch between views, press Ctrl+Shift+V in the editor.
-
 - View the preview side-by-side (Ctrl+K V)
 
 ## Marketplace
@@ -253,15 +257,22 @@ Box Selection: ctrl-shift-alt-
 Add a cursor: press Ctrl+Alt+<arrow keys="">
 Create cursors on all occurrences of a string: Ctrl+Shift+L</arrow></arrow>
 
+
+### Settings
+
+- https://jessitron.com/2019/12/02/do-things-right-in-vscode/
+- <https://code.visualstudio.com/docs/getstarted/tips-and-tricks>
+- <https://hackernoon.com/how-i-configure-vscode-for-everything-7df65a316a52>
+- <https://www.granneman.com/webdev/editors/visual-studio-code/setting-configuring>
+- <https://dev.to/thegeoffstevens/vs-code-settings-you-should-customize-5e75>
+- <https://vscodecandothat.com/>
+- <https://www.smashingmagazine.com/2018/01/visual-studio-code/> * Visual Studio Code Can Do That?
+
 ## Settings
 
 * User: user\%APPDATA%\Roaming\Code\User\settings.json
 * Workspace: in workspace root
 * Folder:
-
-theo
-
-fodd
 
 
 ```
@@ -286,6 +297,7 @@ fodd
 	"editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+
     "editor.detectIndentation": false,
     "editor.insertSpaces": false,
     "editor.tabCompletion": "on"
@@ -293,12 +305,13 @@ fodd
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
 
-"eslint.format.enable": true,
+    "xxxeslint.format.enable": true,
 
     "explorer.confirmDragAndDrop": false,
-	  "explorer.openEditors.visible": 10,
+	"explorer.openEditors.visible": 10,
 
     "files.autoSave": "afterDelay",
+    "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
 
 
@@ -320,7 +333,7 @@ fodd
 
 - <https://code.visualstudio.com/docs/editor/userdefinedsnippets>
 - <https://medium.freecodecamp.org/the-most-powerful-tool-to-boost-your-coding-productivity-2dc80e0eff00>
-
+* https://gist.github.com/rsgranne/de8f406066dc2f198b277843b255516d
 - <https://snippet-generator.app>
 
 Tips
