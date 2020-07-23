@@ -30,7 +30,7 @@
 ## Coding
 
 * Don't make me think
-* Don't make me change
+	* Don't make me change
 
 
 ## Life
@@ -47,5 +47,14 @@
 * There is never any need to get worked up or to trouble your soul about things you can’t control. Ryan Holiday
 * Focus on the things you can control, let go of everything else. Emma Pattee
 * God, grant me the serenity to accept the things I cannot change, courage to change the things I can And wisdom to know the difference. Reinhold Niebuhr
-	* https://en.wikipedia.org/wiki/Serenity_Prayer
+    * https://en.wikipedia.org/wiki/Serenity_Prayer
+
+## Agency
+
+* https://en.wikipedia.org/wiki/Sense_of_agency
+* _What Is the Sense of Agency and Why Does it Matter?_
+	* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5002400/
+	* When we make voluntary actions we tend not to feel as though they simply happen to us, instead we feel as though we are in charge. The sense of agency refers to this feeling of being in the driving seat when it comes to our actions.
+
+## Esteem
 
