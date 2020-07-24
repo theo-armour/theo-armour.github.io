@@ -9,7 +9,7 @@
 
 2020-05-23
 
-* stylelint has online demo that seems nice - but in use may have learning curve issues
+* StyleLint has online demo that seems nice - but in use may have learning curve issues
 * https://stylelint.io/demo
 * This whole linting and beautifying thing is a big issue. Much bigger than I thought.
 
