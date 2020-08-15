@@ -22,6 +22,10 @@
 * Doing the right thing is more important than doing the thing right
 * if you want something new, you have to stop doing something old.
 
+## Vonnegut
+
+And I urge you to please notice when you are happy, and exclaim or murmur or think at some point, 'If this isn't nice, I don't know what is.” Kurt Vonnegut Jr
+
 ## Measure things
 
 * Measure twice. Cut once
@@ -30,7 +34,7 @@
 ## Coding
 
 * Don't make me think
-	* Don't make me change
+* Don't make me change
 
 
 ## Life
@@ -48,6 +52,7 @@
 * Focus on the things you can control, let go of everything else. Emma Pattee
 * God, grant me the serenity to accept the things I cannot change, courage to change the things I can And wisdom to know the difference. Reinhold Niebuhr
     * https://en.wikipedia.org/wiki/Serenity_Prayer
+
 
 ## Agency
 
