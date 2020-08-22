@@ -1,11 +1,11 @@
 # https://Groups.io
 
 
-### About
+## About
 
 * https://groups.io/static/transfer
-* No API, but some nice integrations
-
+* some nice integrations
+* API
 
 ### Lessons learned
 
