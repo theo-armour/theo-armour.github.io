@@ -13,14 +13,24 @@
 
 * gather quotes as aphorisms, rules
 
+## ashleigh brilliant
 
-### [Drucker quotes]( https://succeedfeed.com/peter-drucker-quotes/ )
+* https://www.ashleighbrilliant.com/
+
+## [Drucker quotes]( https://succeedfeed.com/peter-drucker-quotes/ )
 
 * What gets measured gets improved
 * You can’t manage what you don’t measure.
 * There is nothing so useless as doing efficiently that which should not be done at all.
 * Doing the right thing is more important than doing the thing right
 * if you want something new, you have to stop doing something old.
+
+## Rochefoucauld
+
+* https://www.gutenberg.org/files/9105/9105-h/9105-h.htm
+* https://www.goodreads.com/work/quotes/783296-r-flexions-ou-sentences-et-maximes-morales
+* https://www.pinterest.com/BetsyMalee/ashleigh-brilliant-is/
+* https://twitter.com/ashlebrilliant?lang=en
 
 ## Vonnegut
 
