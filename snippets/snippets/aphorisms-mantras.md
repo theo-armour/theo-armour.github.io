@@ -16,6 +16,10 @@
 ## ashleigh brilliant
 
 * https://www.ashleighbrilliant.com/
+* https://www.goodreads.com/author/quotes/15038.Ashleigh_Brilliant
+* https://www.pinterest.com/BetsyMalee/ashleigh-brilliant-is/
+* https://twitter.com/ashlebrilliant?lang=en
+
 
 ## [Drucker quotes]( https://succeedfeed.com/peter-drucker-quotes/ )
 
@@ -29,8 +33,7 @@
 
 * https://www.gutenberg.org/files/9105/9105-h/9105-h.htm
 * https://www.goodreads.com/work/quotes/783296-r-flexions-ou-sentences-et-maximes-morales
-* https://www.pinterest.com/BetsyMalee/ashleigh-brilliant-is/
-* https://twitter.com/ashlebrilliant?lang=en
+
 
 ## Vonnegut
 
