@@ -1,6 +1,42 @@
 # https://Groups.io
 
 
+## Mailing list
+
+
+### benefits
+
+The benefits include:
+
+* A permanent record of outbound and inbound messages - all readily accessible to all members old and new
+* Multiple owners - avoids the creation of dictators
+* Full admin control - exclude trolls etc
+* Members can manage their profile, passwords and preferences
+* No charge for a basic plan
+
+### Collaboration and communicating
+
+Problem: Not everybody has a slack, trello, whatsapp, jira, telegram, basecamp, twitter, messenger, notion and roam account. And even when they do, they often are not export users.
+
+Solution: Everybody has an email account and knows how to deal with it.
+
+### Groups.io
+
+* Almost as good as a forum
+* Handles multiple threads moderately well
+* Handles sub-groups very well
+* Messages may be formatted using Markdown
+
+### Growth path
+
+Groups.io is fine for the core members of an early-stage organization.
+
+As projects become more complex Groups.io morphs into the way of communicating with dozens, hundred and even larger numbers of members.
+
+At the same time the core team moves its messaging to a GitHub organization
+
+
+
 ## About
 
 * https://groups.io/static/transfer

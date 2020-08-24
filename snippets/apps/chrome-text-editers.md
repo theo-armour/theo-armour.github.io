@@ -1,5 +1,4 @@
-
-
+# Editors
 
 ## Caret
 
@@ -11,10 +10,12 @@
 
 
 ## ShiftEdit
+
 Tab
 
 
 ## SourceKit
+
 Tab
 Chrome Extension
 
@@ -28,6 +29,7 @@ https://github.com/kenotron/sourcekit
 6.26 MB
 
 ## Text
+
 Standalone
 Chrome Extension
 Google Drive only
@@ -38,12 +40,14 @@ https://github.com/GoogleChrome/text-app/issues
 197 KN
 
 ## TextDown
+
 Saves to Google Drive
 
 Full and powerful markdown editor
 
 
 ## StackEdit
+
 * See own file here in apps
 * Works in tab
 * Good
