@@ -13,7 +13,7 @@
 
 * gather quotes as aphorisms, rules
 
-## ashleigh brilliant
+## Ashleigh Brilliant
 
 * https://www.ashleighbrilliant.com/
 * https://en.wikipedia.org/wiki/Ashleigh_Brilliant
@@ -80,7 +80,7 @@ And I urge you to please notice when you are happy, and exclaim or murmur or thi
 * There is never any need to get worked up or to trouble your soul about things you can’t control. Ryan Holiday
 * Focus on the things you can control, let go of everything else. Emma Pattee
 * God, grant me the serenity to accept the things I cannot change, courage to change the things I can And wisdom to know the difference. Reinhold Niebuhr
-    * https://en.wikipedia.org/wiki/Serenity_Prayer
+  * https://en.wikipedia.org/wiki/Serenity_Prayer
 
 
 ## Agency
