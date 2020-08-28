@@ -16,9 +16,17 @@
 ## ashleigh brilliant
 
 * https://www.ashleighbrilliant.com/
+* https://en.wikipedia.org/wiki/Ashleigh_Brilliant
 * https://www.goodreads.com/author/quotes/15038.Ashleigh_Brilliant
 * https://www.pinterest.com/BetsyMalee/ashleigh-brilliant-is/
 * https://twitter.com/ashlebrilliant?lang=en
+
+
+So it may not be readily apparent, there is a structure dash some rules dash underlying the pot shopfirst is brevity: no longer than 17 wordbecause at the time he began formulating rules, he had already formulated many potshots and the longest was 17 wordalso, Japanese haiku poetry uses exactly 17 syllablesnot words so 17 it is
+
+### pot shots
+
+* https://www.ashleighbrilliant.com/WhatIsaPotShot.html
 
 
 ## [Drucker quotes]( https://succeedfeed.com/peter-drucker-quotes/ )
