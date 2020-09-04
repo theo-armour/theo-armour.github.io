@@ -371,7 +371,7 @@ element.classList.add("mystyle");
 
 	dd = new Date().toISOString().slice( 0, 10 );
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 	var daysOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
 	var daysOfMonth = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -380,8 +380,14 @@ element.classList.add("mystyle");
 
 	var startTime = Date.now(); // in milliseconds
 
+yesterday
+
+	const date = new Date();
+	date.setDate(date.getDate() - 1);
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Performance
-	var t = performnce.now();
+
+	var t = performance.now();
 
 
 	var hours = ('0' + date.getHours()).slice( -2 );
@@ -556,9 +562,6 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 
 
-## Element
-
-The HTMLFormElement.reset() method resets all fields in a form back to their default values. This means that if you had a specified value property on a field, and the user changed it, it would revert to the original instead of emptying completely.
 
 
 ## Escape / encodeURI()
@@ -567,6 +570,13 @@ The HTMLFormElement.reset() method resets all fields in a form back to their def
 	var encoded = encodeURI(uri);
 
 
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+
+	encodeURIComponent('&');
+	// "%26”
+
+
+.
 
 
 ### EVENTS Key cursor
@@ -718,6 +728,11 @@ function fetchTextSimple( url, target ){
 		<input type=range >
 		<label><input type=checkbox > checkbox</label>
 	</p>
+
+## Form Element
+
+The HTMLFormElement.reset() method resets all fields in a form back to their default values. This means that if you had a specified value property on a field, and the user changed it, it would revert to the original instead of emptying completely.
+
 
 ## FORM Input Range
 
@@ -1343,21 +1358,25 @@ setTimeout( function(){alert("Hello")},3000);
 
 ### TRY /CATCH
 
-try {
- throw 'myException'; // generates an exception
-}
-catch (e) {
+	try {
+	throw 'myException'; // generates an exception
+	}
+	catch (e) {
 
-// statements to handle any exceptions
-	logMyErrors(e); // pass exception object to error handler
-}
+	// statements to handle any exceptions
+		logMyErrors(e); // pass exception object to error handler
+	}
 
+### URL
+
+* https://developer.mozilla.org/en-US/docs/Web/API/URL
+
+	new URL(string);
 
 ### Validity
 
-https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
-
-https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
+* https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
+* https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
 
 oninput="validity.valid||(value='');"
 
