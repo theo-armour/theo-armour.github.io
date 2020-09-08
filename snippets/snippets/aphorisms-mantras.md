@@ -13,6 +13,15 @@
 
 * gather quotes as aphorisms, rules
 
+## Me
+
+* Given my evil past, their Heritage is as close to Heaven as I will probably get
+* Being at the Heritage, I don't have to worry about growing old anymore
+
+## ?
+
+* Do you know how weird it is being the same age as old people?
+
 ## Ashleigh Brilliant
 
 * https://www.ashleighbrilliant.com/
@@ -20,7 +29,6 @@
 * https://www.goodreads.com/author/quotes/15038.Ashleigh_Brilliant
 * https://www.pinterest.com/BetsyMalee/ashleigh-brilliant-is/
 * https://twitter.com/ashlebrilliant?lang=en
-
 
 
 ### pot shots
