@@ -88,7 +88,7 @@ And I urge you to please notice when you are happy, and exclaim or murmur or thi
 * There is never any need to get worked up or to trouble your soul about things you can’t control. Ryan Holiday
 * Focus on the things you can control, let go of everything else. Emma Pattee
 * God, grant me the serenity to accept the things I cannot change, courage to change the things I can And wisdom to know the difference. Reinhold Niebuhr
-  * https://en.wikipedia.org/wiki/Serenity_Prayer
+	* https://en.wikipedia.org/wiki/Serenity_Prayer
 
 
 ## Agency
@@ -100,3 +100,31 @@ And I urge you to please notice when you are happy, and exclaim or murmur or thi
 
 ## Esteem
 
+
+## Mission
+
+
+
+## Sayings and proverbs
+
+* https://en.wikipedia.org/wiki/List_of_proverbial_phrases
+* https://www.phrases.org.uk/meanings/proverbs.html
+* https://lemongrad.com/proverbs-with-meanings-and-examples/
+
+
+Items
+
+* Beauty is only skin deep.
+* Birds of a feather flock together.
+* Actions speak louder than words.
+* Opportunity seldom knocks twice.
+* Blood is thicker than water.
+* Dead men tell no Tales.
+* Two heads are better than one.
+* Good fences make good neighbors.
+* It takes two to tango.
+* A man's home is his castle.
+* Your credit where credit is due.
+* Honesty is the best policy.
+* Money is the root of all evil.
+* All is fair in Love and War.
