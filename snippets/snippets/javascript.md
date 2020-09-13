@@ -75,9 +75,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strin
 
 ### Scroll into View
 
+* https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+
 	msg1.innerHTML = txt + '<p id=endof ></p>' ;
 	endof.scrollIntoView();
 
+* https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo
+
+	window.scrollTo( 0, 0 );
 
 ### CALLBACKS
 
