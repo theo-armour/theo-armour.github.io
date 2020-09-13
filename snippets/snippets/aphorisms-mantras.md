@@ -22,6 +22,13 @@
 
 * Do you know how weird it is being the same age as old people?
 
+## Ayodeji Awosika
+
+* https://forge.medium.com/the-5-year-rule-how-to-create-the-future-you-want-e25e00770612
+	* it takes five years to fully reinvent yourself.
+	* Rule of 100: Do something 100 times to get good at it
+	* What’s the one thing you can do, such that by doing it, everything else will be easier or unnecessary?
+
 ## Ashleigh Brilliant
 
 * https://www.ashleighbrilliant.com/
