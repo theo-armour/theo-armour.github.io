@@ -63,13 +63,14 @@ very good:
 
 ## ES6 / ECMA 6
 
-vasco3/es6-cheatsheet.markdown
+* vasco3/es6-cheatsheet.markdown
 * https://gist.github.com/vasco3/22b09ef0ca5e0f8c5996#modules
 
 		let x = 6
 
 template strings.
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
 
 
 
