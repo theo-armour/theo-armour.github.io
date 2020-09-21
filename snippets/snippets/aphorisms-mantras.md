@@ -17,6 +17,7 @@
 
 * Given my evil past, their Heritage is as close to Heaven as I will probably get
 * Being at the Heritage, I don't have to worry about growing old anymore
+* There is always a more complicated way of doing it
 
 ## ?
 
