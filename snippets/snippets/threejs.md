@@ -135,9 +135,12 @@ Also
 ### RAYCSTER
 
 * https://threejs.org/docs/#api/en/core/Raycaster
+
 	* Has good example
 * cookbook-threejs/examples/editing/find-intersection-line-to-mesh/find-intersection-line-to-mesh-r2.html
 
+
+var raycaster = new THREE.Raycaster();
 
 
 
@@ -1028,11 +1031,11 @@ See files
 
 
           for ( let i = 0; i < 1000; i++ ) {
-             
+
             addText( Math.random(), new THREE.Vector3( Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50 ));
-          
+
           }
-		  
+
       function addText( text = "Hello world!\n123", position = new THREE.Vector3() ) {
 
         textMesh = new troika_3d_text.TextMesh();

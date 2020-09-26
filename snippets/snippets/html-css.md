@@ -1,4 +1,4 @@
-﻿//
+﻿
 
 <link href="mystyle.css" rel="stylesheet" >
 
@@ -431,6 +431,10 @@ div {
 
 
 ### Figure
+
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
+* https://www.w3schools.com/tags/tag_figure.asp
+
 
 <figure>
   <img src="../html/pic_trulli.jpg" alt="Trulli" style="width:100%">
