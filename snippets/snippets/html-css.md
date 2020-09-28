@@ -393,6 +393,17 @@ width: calc( 100% - var( --menu-width ) )
 		const width = getComputedStyle(document.documentElement).getPropertyValue( '--mnu-width' );
 
 
+
+## Canvas
+
+* https://www.w3schools.com/html/html5_canvas.asp
+* https://www.w3schools.com/graphics/canvas_reference.asp
+* https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas
+
+
+
+
 ### Cite
 
 <cite>The Scream</cite>
@@ -649,6 +660,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
   <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
   <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
 </picture>
+
 
 ### Template
 
