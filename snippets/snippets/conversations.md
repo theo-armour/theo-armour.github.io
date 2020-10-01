@@ -16,3 +16,4 @@ Person 1: but has not actually completed their thought yet but now has to respon
   * conversational narcisism
 * https://integralcentered.com/3-levels-of-conversation/
 * https://medium.com/@DavidWAngel/the-four-types-of-conversations-debate-dialogue-discourse-and-diatribe-898d19eccc0a
+* https://www.oreilly.com/library/view/the-art-of/9780857085399/c07.xhtml
