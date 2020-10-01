@@ -39,7 +39,7 @@ Thinking out loud as I put the package together:
 
 * Snippets of code. I would be lost without my snippets.
 
-* Easy Peasy Pleasey. Writing code for beginners is a good thing. If you can explain it to student, then why go further?
+* Easy Peasy Pleasey. Writing code for beginners is a good thing. If you can explain it to a student, then why go further?
 
 * Self-garbage collecting. When we talk about about cleaning up the memory on a computer, we call it 'garbage collection'. We humans need to do it too. We need to erase all the established practices, well-known 'gotchas' ans rules-of-thumb. Contemporary computing is moving so fast that every thing we do from habit can and should be questioned. Those who code from history are doomed.
 
@@ -48,7 +48,7 @@ Thinking out loud as I put the package together:
 
 ## links of interest
 
-Code is all inspired by:
+Codes are all inspired by:
 
 https://www.w3schools.com/howto/
 
