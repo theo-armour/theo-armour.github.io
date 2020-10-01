@@ -499,6 +499,11 @@ if ( check.checked ) { doIt(); }
 
 Use oninput: handles both mouse and touch
 
+	<label title="hi there">Do you like peas?
+		<output id=out ></output>
+		<input type="range" id=inp name="inp" oninput=out.value=this.value style=width:300px >
+	</label>
+
 		'<input type="range" id="rangeinput" value="50" onmousemove="rangevalue.value=value"/> '  +
 		'<output id="rangevalue">50</output><br>' +
 
@@ -626,6 +631,13 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
 <label>Do you like peas?
   <input type="radio" name="type"> small
 </label>
+
+
+<label>Do you like peas?
+<output>
+  <input type="range" >
+</label>
+
 
 ### <main>, <header>, <footer> and <nav>
 
