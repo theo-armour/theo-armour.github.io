@@ -686,6 +686,7 @@ function fetchTextSimple( url, target ){
 ## FILE READER filereader Input Type File Open
 
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+* https://dev.to/atapas/10-useful-html-file-upload-tips-for-web-developers-2d1d?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
 
 		'<h3>file reader</h3>' +
 		'<p><input type=file id=inpFile onchange=openFile(this); accept = '.rad, .res, .pts' multiple ></p>' +
