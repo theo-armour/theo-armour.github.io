@@ -2,6 +2,15 @@
 
 ## Journal
 
+### 2020-11-08
+
+* When computer wakes up, external monitor does not wake up. ;-(
+* MyAsus:
+  * phone calls & messages
+  * share files
+  * Mirror phone screen to PC
+  * Extend PC screen to mobile device
+
 ### 2020-05-23
 
 The "panel" is interesting. So far I am not using it. Mostly because the display of text is small and Screen is quite dark.But perhaps give it in old fashion multiple monitor ways.There may be ways to sing about it as an entirely new device or just a  thing in its own right.
