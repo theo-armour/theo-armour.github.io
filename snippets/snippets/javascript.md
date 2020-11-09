@@ -97,6 +97,8 @@ just use 'this' wherever possible
 
 ### Ajax
 
+// https://raw.githack.com/
+// https://raw.githack.com/jaanga/jaanga.github.io/master/README.md
 // urlDefaultFile = "https://cdn.jsdelivr.net/gh/GreenBuildingXML/Sample-gbXML-Files@master/gbXML_TRK.xml";
 https://api.github.com/repos/theo-armour/theo-armour.github.io/contents/snippets/snippets
 
@@ -104,6 +106,7 @@ function requestFile( url ) {
 
 	const xhr = new XMLHttpRequest();
 	xhr.open( 'GET', url, true );
+	//xhr.responseType = "json";
 	xhr.onerror = ( xhr ) => console.log( 'error:', xhr  );
 	xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
 	xhr.onload = ( xhr ) => console.log( 'response', xhr.target.response );

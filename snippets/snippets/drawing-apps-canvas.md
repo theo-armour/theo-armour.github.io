@@ -2,7 +2,7 @@
 
 ## Android
 
-## Auodesk Sketchbook
+## Autodesk Sketchbook
 
 * Can set image size
 * Saves directly to Drive
