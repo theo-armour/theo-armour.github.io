@@ -39,6 +39,10 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/abo
 
 function prompt {$null}
 
+## Quick Access
+
+https://answers.microsoft.com/en-us/windows/forum/windows_10-start-winpc/can-no-longer-reorder-quick-access-folders-in-list/255377fd-fce7-4523-b372-a22b838a656a#:~:text=Yes%2C%20you%20CAN%20re%2Dorder,the%20entries%20to%20another%20position.
+
 
 
 https://lifehacker.com/how-to-turn-any-part-of-your-windows-desktop-into-a-gif-1825787640
