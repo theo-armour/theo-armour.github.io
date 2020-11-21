@@ -2,6 +2,11 @@
 	const div = document.body.appendChild( document.createElement( 'div' ) );
 	div.style.cssText = ' width: 500px, position: absolute: right: 30px, top: 20px;'
 
+## Modules
+
+* https://lea.verou.me/2020/11/the-case-for-weak-dependencies-in-js/
+
+> However, with ESM, there doesn’t seem to be a way to detect whether a module is imported, without actually importing it yourself.
 
 ## anchor
 
@@ -586,7 +591,9 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 
 .
+## Events
 
+* https://medium.com/dailyjs/whats-the-difference-between-event-handlers-addeventlistener-in-js-963431f05c34
 
 ### EVENTS Key cursor
 
