@@ -1188,7 +1188,7 @@ RegExp Modifiers
 		const blob = new Blob( [ txtArea.innerHTML ] );
 		let a = document.body.appendChild( document.createElement( 'a' ) );
 		a.href = window.URL.createObjectURL( blob );
-		a.download = `hello-world-${ new Date().toISOString().slice( 0, 10 ) }.txt';
+		a.download = `hello-world-${ new Date().toISOString().slice( 0, 10 ) }.txt`;
 		a.click();
 //		delete a;
 		a = null;
