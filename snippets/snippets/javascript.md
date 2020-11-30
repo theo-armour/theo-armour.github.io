@@ -166,7 +166,7 @@ function requestFile( url ) {
 			//			lines = response.split(/\r\n|\n/);
 			///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
 
-// lines = response.split( /\n/ ).map( line => line.split( "," ) );
+			// lines = response.split( /\n/ ).map( line => line.split( "," ) );
 
 			//			console.log( 'line 8',lines[ 8 ] );
 			//			console.log( 'length', lines.length );
