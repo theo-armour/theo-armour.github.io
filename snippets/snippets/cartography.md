@@ -1,3 +1,30 @@
+# Cartography
+
+## MATH
+
+
+	var pi = Math.PI, pi05 = pi * 0.5, pi2 = pi + pi;
+	var d2r = pi / 180, r2d = 180 / pi;  // degrees / radians
+
+	var sin = Math.sin;
+	var cos = Math.cos;
+
+	var v = new THREE.Vector3;
+	var v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
+
+
+	var cos = function ( a ){ return Math.cos( a ); }
+	var sin = function ( a ){ return Math.sin( a ); }
+
+	function cos( a ){ return Math.cos( a ); }
+	function sin( a ){ return Math.sin( a ); }
+
+	function pow( a, b ){ return Math.pow( a, b ); }
+	function ran(){ return Math.random(); }
+
+	v( x, y, z ) => new THREE.Vector3( x, y, z );
+	v2( x, y ) => new THREE.Vector2( x, y );
+
 
 ## MapBox
 
@@ -97,36 +124,11 @@ more nice lat lon
 
 
 
-## MATH
-
-
-	var pi = Math.PI, pi05 = pi * 0.5, pi2 = pi + pi;
-	var d2r = pi / 180, r2d = 180 / pi;  // degrees / radians
-
-	var sin = Math.sin;
-	var cos = Math.cos;
-
-	var v = new THREE.Vector3;
-	var v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); };
-
-
-	var cos = function ( a ){ return Math.cos( a ); }
-	var sin = function ( a ){ return Math.sin( a ); }
-
-	function cos( a ){ return Math.cos( a ); }
-	function sin( a ){ return Math.sin( a ); }
-
-	function pow( a, b ){ return Math.pow( a, b ); }
-	function ran(){ return Math.random(); }
-
-	function v( x, y, z ){ return new THREE.Vector3( x, y, z ); };
-	function v2( x, y ){ return new THREE.Vector2( x, y ); }
-
 
 
 ## TMS
 
-// Source http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#ECMAScript_.28JavaScript.2FActionScript.2C_etc..29
+* Source http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#ECMAScript_.28JavaScript.2FActionScript.2C_etc..29
 
 	function lon2tile( lon, zoom ) {
 
@@ -159,7 +161,7 @@ more nice lat lon
 
 http://wiki.openstreetmap.org/wiki/Zoom_levels
 
-###
+### Mercator
 
 http://wiki.openstreetmap.org/wiki/Mercator
 
@@ -170,7 +172,7 @@ function lat2y( a ) { return 180 / Math.PI * Math.log( Math.tan( Math.PI / 4 + a
 
 
 
-### XYZ
+## XYZ
 
 // source http://en.wikipedia.org/wiki/Spherical_coordinate_system
 
@@ -192,14 +194,9 @@ function lat2y( a ) { return 180 / Math.PI * Math.log( Math.tan( Math.PI / 4 + a
 	}
 
 
-
-
-### Google Maps
-
-
+## Google Maps
 
 Google Maps Time Zone API
-https://developers.google.com/maps/documentation/timezone/start
-
-https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000
+* https://developers.google.com/maps/documentation/timezone/start
+* https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000
 
