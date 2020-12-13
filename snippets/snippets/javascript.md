@@ -755,6 +755,11 @@ The HTMLFormElement.reset() method resets all fields in a form back to their def
 
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
 
+		<label title="Slide me">
+			value: <output id=out>40</output>
+			<input id=rngFieldOfView type=range oninput=setValue(this);out.value=this.value;
+				min=1 max=88 value=40>
+		</label>
 
 		var input body.appendChild( document.createElement( 'input' ) );
 		input.type = 'text';

@@ -379,10 +379,10 @@ function addSomeLights() {
 		scene.add( camera );
 
 ## Lights 2
+// 2017-04-02 ~ http://jaanga.github.io/cookbook-threejs/templates/add-lights/template-threejs-lights-r2.html
 
 	function addLights( size ) {
 
-// 2017-04-02 ~ http://jaanga.github.io/cookbook-threejs/templates/add-lights/template-threejs-lights-r2.html
 
 		let lightAmbient, lightDirectional, lightPoint;
 		size = size ? size : 100;
