@@ -17,13 +17,9 @@ a.href = url;
 const site = a.hostname;
 
 
-
-
 ## requestIdleCallback
 
 https://www.sitepoint.com/how-to-schedule-background-tasks-in-javascript/?utm_source=javascriptweekly&utm_medium=email
-
-
 
 
 ## contentEditable
@@ -78,7 +74,6 @@ template strings.
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
 
 
-
 ### Scroll into View
 
 * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
@@ -97,7 +92,6 @@ use this inside a function when creating global variables...
 
 
 just use 'this' wherever possible
-
 
 
 ### Ajax
@@ -164,7 +158,7 @@ function requestFile( url ) {
 			// or
 			// string = response.replace( /[ {4}\t\n\r]/gm, "" );
 			//			lines = response.split(/\r\n|\n/);
-			///			lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+			///			lines = response.split( "\n" ).map( function( line ) { return line.split( ',' ); } );
 
 			// lines = response.split( /\n/ ).map( line => line.split( "," ) );
 
@@ -177,8 +171,6 @@ function requestFile( url ) {
 		}
 
 	}
-
-
 
 
 ////////////////////
@@ -288,8 +280,6 @@ console.log('waiting...');
 	}
 
 
-
-
 ## Bitwise / Boolean
 
 ~~ = Math.floor()
@@ -297,9 +287,7 @@ console.log('waiting...');
 !!thing = turns thing into a boolean
 
 
-
 ### CANVAS >> see its own file: snippets > canvas.md
-
 
 
 ## CHARACTERS
@@ -308,7 +296,6 @@ console.log('waiting...');
 		String.fromCharCode(10) // LF
 		String.fromCharCode(13) // CR 32 = space
 		String.fromCharCode(0x24D8) // i inside circle
-
 
 
 ## COLORS
@@ -321,7 +308,6 @@ console.log('waiting...');
 			return '#'+Math.floor(Math.random()*16777215).toString(16);
 
 		}
-
 
 
 ## COLORS
@@ -353,7 +339,6 @@ https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
 https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Midas
 
 		divContents.contentEditable = true;
-
 
 
 ## CSS style
@@ -445,7 +430,6 @@ date.setMinutes( date.getMinutes() + date.getTimezoneOffset() + differenceInMinu
 console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 
 
-
 ## DETAILS
 
 * https://developer.mozilla.org/en-US/docs/Web/API/FileReader
@@ -483,7 +467,6 @@ function toggleOpen() {
 }
 
 
-
 ### DOCUMENT
 
 
@@ -493,13 +476,11 @@ function toggleOpen() {
 var css = document.body.appendChild( document.createElement('style') );
 
 
-
 ### DOCUMENT Write
 
 https://www.w3schools.com/jsref/met_doc_write.asp
 
 document.write("Hello World!");
-
 
 
 ### DOM load script
@@ -546,13 +527,7 @@ document.write("Hello World!");
 	}
 
 
-
-
-
-
-
-
-## document.querySelectorAll();
+## document.querySelectorAll()
 
 * https://www.w3schools.com/jsref/met_document_queryselectorall.asp
 
@@ -573,9 +548,6 @@ doc = parser.parseFromString(stringContainingSVGSource, "image/svg+xml");
 
 var parser = new DOMParser();
 doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
-
-
-
 
 
 ## Escape / encodeURI()
@@ -623,8 +595,6 @@ interesting | look at
 	window.dispatchEvent( event );
 
 window.addEventListener( 'xhr.onload', console.log( '', 23 ), false )
-
-
 
 
 https://stackoverflow.com/questions/2381336/detect-click-into-iframe-using-javascript/23231136#23231136
@@ -692,7 +662,6 @@ function fetchTextSimple( url, target ){
 }
 
 
-
 ## FILE READER filereader Input Type File Open
 
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
@@ -701,7 +670,6 @@ function fetchTextSimple( url, target ){
 		'<h3>file reader</h3>' +
 		'<p><input type=file id=inpFile onchange=openFile(this); accept = '.rad, .res, .pts' multiple ></p>' +
 		'<textarea id=txtArea style=height:500px;overflow:auto;width:100%; ></textarea>' +
-
 
 
 	function openFile( files ) {
@@ -726,7 +694,6 @@ function fetchTextSimple( url, target ){
 		reader.readAsText( files.files[0] );
 
 	}
-
 
 
 ## FORM ELEMENTS
@@ -782,7 +749,6 @@ The HTMLFormElement.reset() method resets all fields in a form back to their def
 oninput="validity.valid||(value='');"
 
 
-
 ## FORM TEXTAREA
 
 // '<textarea id=txtItem cols=25 rows=5>bits</textarea>' +
@@ -797,9 +763,6 @@ oninput="validity.valid||(value='');"
 	textarea.autofocus = true;
 
 input file + reader : see cookbook
-
-
-
 
 
 ### FORM SELECT
@@ -849,11 +812,9 @@ Objects as parameters
 function initiateTransfer({ protocol = 'http', longPropertyName: port = 800, delay = 150, retries = 10, timeout = 500, log = true } = {} ) {}
 
 
-
 ### GLOBAL FUNCTIONS
 
 parseInt( string, 10 ) << include the radix
-
 
 
 ### IMAGE
@@ -875,7 +836,6 @@ parseInt( string, 10 ) << include the radix
 			context.drawImage( image, 250, 250, 25, 25, 0, 0, 512, 512 );
 
 		}
-
 
 
 ### JSON
@@ -926,9 +886,6 @@ console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, "\t" ) );
 	}
 
 
-
-
-
 ### MATH
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -968,7 +925,6 @@ Math.atan2() is passed separate x and y arguments, and Math.atan() is passed the
 	function sech( a ){ return Math.sech( a ); }
 
 
-
 ### META
 
 See theo-armour.github.io/ucsf2/pookeepon-go/
@@ -976,8 +932,6 @@ See https://github.com/ladybug-analysis-tools/ladybug-web/blob/gh-pages/ladybug-
 See http://stackoverflow.com/questions/7524585/how-do-i-get-the-information-from-a-meta-tag-with-javascript
 
 	document.head.querySelector( '[name=description]' ).content;
-
-
 
 
 ### NAMESPACE
@@ -1021,8 +975,6 @@ Old school: number with commas
 	};
 
 
-
-
 ### OBJECTS
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
@@ -1051,7 +1003,6 @@ http://stackoverflow.com/questions/208016/how-to-list-the-properties-of-a-javasc
 
 
 	if ( 'speechSynthesis' in window )
-
 
 
 https://stackoverflow.com/questions/722668/traverse-all-the-nodes-of-a-json-object-tree-with-javascript
@@ -1085,9 +1036,6 @@ Conditional Operator
 		var index = ( parent.$ !== undefined ) ? parent.$.elements.thm.mapGlobe : 2;
 
 		var thing = ( x !== undefined ) ? x : 1;
-
-
-
 
 
 ### REGEXP
@@ -1147,7 +1095,6 @@ stringWithQuotes.replace(/["']/g, "");
 		MNU.files = MNU.tableOfContents.replace( /(.*)\((.*)\)(.*)/gi, '$2' ).split( '\n' );
 
 
-
 RegExp Modifiers
 [0-9] replace class of number
 
@@ -1166,7 +1113,6 @@ RegExp Modifiers
 
 
 (x) Matches 'x' and remembers the match, as the following example shows. The parentheses are called capturing parentheses.
-
 
 
 ### SAVE FILE
@@ -1256,7 +1202,6 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 	}
 
 
-
 ### Local Storage / localStorage
 
 * https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
@@ -1282,7 +1227,6 @@ Examples
 * const obj = localStorage.getItem( "obj", JSON.parse( obj ) );
 
 
-
 		const apiKey = localStorage.getItem( 'apiKey' );
 		inpApiKey.value = apiKey ? apiKey : '' ;
 
@@ -1301,7 +1245,6 @@ Examples
 		divContents.innerHTML += thing + b;
 
 	}
-
 
 
 ### STRING
@@ -1339,7 +1282,6 @@ Number(x).toLocaleString();
 
 
 Number( space.area.toFixed(4) )
-
 
 
 ### SWITCH CASE
@@ -1401,7 +1343,6 @@ setTimeout( function(){alert("Hello")},3000);
 * https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
 
 oninput="validity.valid||(value='');"
-
 
 
 ### WINDOW
