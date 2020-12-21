@@ -18,6 +18,7 @@
 * Given my evil past, their Heritage is as close to Heaven as I will probably get
 * Being at the Heritage, I don't have to worry about growing old anymore
 * There is always a more complicated way of doing it
+* How I program: copy and change
 
 ## ?
 
@@ -66,6 +67,10 @@ Third is originality: though they must sound like everyday speech, they must not
 * https://www.gutenberg.org/files/9105/9105-h/9105-h.htm
 * https://www.goodreads.com/work/quotes/783296-r-flexions-ou-sentences-et-maximes-morales
 
+## Harry
+
+
+* Apple pie without cheese is like a kiss without a squeeze
 
 ## Vonnegut
 
@@ -127,7 +132,7 @@ Items
 * Actions speak louder than words.
 * Opportunity seldom knocks twice.
 * Blood is thicker than water.
-* Dead men tell no Tales.
+* Dead men tell no tales.
 * Two heads are better than one.
 * Good fences make good neighbors.
 * It takes two to tango.
