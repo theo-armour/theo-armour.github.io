@@ -7,6 +7,7 @@ Warren Buffet has a saying "Never rely on the kindness of strangers."
 * Mantras
 * Maxims
 * Sayings
+* Adages
 
 
 ## Mantras are good
@@ -123,6 +124,7 @@ And I urge you to please notice when you are happy, and exclaim or murmur or thi
 * https://en.wikipedia.org/wiki/List_of_proverbial_phrases
 * https://www.phrases.org.uk/meanings/proverbs.html
 * https://lemongrad.com/proverbs-with-meanings-and-examples/
+* https://silgro.com/fortunes.htm
 
 
 Items
