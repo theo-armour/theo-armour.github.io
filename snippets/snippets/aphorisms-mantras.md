@@ -1,5 +1,5 @@
 # Aphorisms
-
+Warren Buffet has a saying "Never rely on the kindness of strangers." 
 ## Words
 
 * Slogans
