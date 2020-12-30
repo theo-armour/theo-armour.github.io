@@ -23,6 +23,19 @@ chrome://hardware ??
 chrome://history/
 chrome://internals/
 
+## PDF edit online
+
+### Portals
+
+* https://www.lifewire.com/best-free-pdf-editors-4147622
+* https://www.lifewire.com/edit-pdf-on-chromebook-4783263
+
+
+### Online apps
+
+* https://pdfbob.com/editor/
+* https://smallpdf.com/ ~ 2 documents per day
+
 
 ## PDFs on ChromeSettings > Show advanced settings > Privacy > Content Settings > PDF Documents > Un-check checkbox
 
