@@ -114,6 +114,7 @@ more nice lat lon
 ## Links of Interest
 
 * http://oms.wff.ch/calc.php?baseurl=cylce&lat=47.629000&long=7.262000&longto=7.906000&latto=47.354000
+* https://stackoverflow.com/questions/23017766/google-maps-tile-url-for-hybrid-maptype-tiles
 
 
 ## Tile Servers
@@ -200,3 +201,11 @@ Google Maps Time Zone API
 * https://developers.google.com/maps/documentation/timezone/start
 * https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000
 
+
+h = roads only
+m = standard roadmap
+p = terrain
+r = somehow altered roadmap
+s = satellite only
+t = terrain only
+y = hybrid

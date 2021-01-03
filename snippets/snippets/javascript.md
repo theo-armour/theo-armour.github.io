@@ -2,6 +2,11 @@
 	const div = document.body.appendChild( document.createElement( 'div' ) );
 	div.style.cssText = ' width: 500px, position: absolute: right: 30px, top: 20px;'
 
+## jsHint
+
+/* globals THREE */
+/* jshint esversion: 6 */
+
 ## Modules
 
 * https://lea.verou.me/2020/11/the-case-for-weak-dependencies-in-js/
