@@ -49,7 +49,7 @@ https://api.mapbox.com/v4/mapbox.streets/14/4823/6160.png?access_token=pk.eyJ1Ij
 http://tile.openstreetmap.org/7/20/49.png
 
 
-##
+## JSON
 {
 	"vicinity": "xxx",
 	"latitude": 0,
@@ -124,9 +124,6 @@ more nice lat lon
 * http://mc.bbbike.org/mc/?num=2&mt0=mapnik&mt1=public_transport_lines
 
 
-
-
-
 ## TMS
 
 * Source http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#ECMAScript_.28JavaScript.2FActionScript.2C_etc..29
@@ -171,8 +168,6 @@ function y2lat( a ) { return 180 / Math.PI * ( 2 * Math.atan( Math.exp( a * Math
 function lat2y( a ) { return 180 / Math.PI * Math.log( Math.tan( Math.PI / 4 + a * ( Math.PI / 180 ) / 2 ) ); }
 
 
-
-
 ## XYZ
 
 // source http://en.wikipedia.org/wiki/Spherical_coordinate_system
@@ -209,3 +204,9 @@ r = somehow altered roadmap
 s = satellite only
 t = terrain only
 y = hybrid
+
+
+## Bitmaps & Height Maps
+
+* Calculate the lower zoom before the higher zoom - then easier to calculate the correct common top left
+
