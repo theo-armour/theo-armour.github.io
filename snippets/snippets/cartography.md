@@ -14,6 +14,7 @@ Mapbox
 	* StackOverflow 5,070 questions
 Cesium
 	* StackOverflow 685 questions
+* https://github.com/tangrams/tangram ~ current
 three.js
 	* StackOverflow 17,018 questions
 esri
@@ -33,8 +34,6 @@ Compare
 
 ## Libraries
 
-
-*
 * https://3dmr.eu/
 * https://cesium.com/
 * https://deck.gl/
@@ -49,6 +48,7 @@ Compare
 * https://mappa.js.org/
 	* https://mappa.js.org/docs/examples-three-js.html
 * https://maptalks.org/
+	* 3,100 GH stars
 * https://www.openglobus.org/
 * https://Help.openstreetmap.org
 * https://osmbuildings.org/
@@ -81,7 +81,6 @@ Compare
 * http://oms.wff.ch/calc.php?baseurl=cylce&lat=47.629000&long=7.262000&longto=7.906000&latto=47.354000
 * https://www.researchgate.net/figure/Google-Maps-Tiling-Scheme-the-first-three-zoom-levels-the-tiles-and-their-numbering_fig1_321064657
 * https://cfis.savagexi.com/2006/05/03/google-maps-deconstructed/
-
 
 
 ## OSM & Tile Servers
@@ -117,9 +116,6 @@ teams
 * https://maproulette.org/
 * https://www.mapillary.com/
 
-## MapBox
-
-* https://docs.mapbox.com/mapbox-gl-js/api/
 
 
 ## https://leafletjs.com/ Leaflet.js
@@ -132,16 +128,21 @@ teams
 more
 
 * https://osmbuildings.org/
-* http://geommills.github.io/esrileaflet3JS/ ~ 2d * 3d
+* http://geommills.github.io/esrileaflet3JS/ ~ 2015 ~ 2d & 3d
 * https://www.wrld3d.com/ ~ $$$
 * https://mocainfo.thm.de/building-3d/
 * https://github.com/geommills/esrileaflet3JS ~ 2015
-* https://github.com/tangrams/tangram ~ current
+
 
 mourner agafonkin
 
 * https://observablehq.com/@mourner
 * https://observablehq.com/search?page=2&query=three.js
+
+
+## MapBox
+
+* https://docs.mapbox.com/mapbox-gl-js/api/
 
 ### 3D Globe & flat Three.js
 
@@ -222,12 +223,14 @@ mourner agafonkin
 https://api.mapbox.com/v4/mapbox.terrain-rgb/15/5242/12663.pngraw?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
 
 https://api.mapbox.com/v4/mapbox.terrain-rgb/0/0/0.pngraw?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
 https://api.mapbox.com/v4/mapbox.terrain-rgb/7/20/49.pngraw?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
 
 
 height = -10000 + ((R * 256 * 256 + G * 256 + B) * 0.1)
 
 key from https://www.mapbox.com/mapbox-gl-js/example/map-tiles/
+
 http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v6/14/4823/6160.vector.pbf?access_token=pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
 
 works!!!

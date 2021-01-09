@@ -30,6 +30,7 @@
 
 ### CANVAS
 
+		const size = 512;
 		canvas = parent.locationMap.appendChild( document.createElement( 'canvas' ) );
 		canvas.width = canvas.height = size;
 		canvas.style.cssText = 'border: 1px solid gray; ';
