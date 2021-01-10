@@ -1,5 +1,6 @@
 # Cartography
 
+lat 37.8031325,-122.4309479
 
 ## trends
 
@@ -50,10 +51,9 @@ Compare
 * https://maptalks.org/
 	* 3,100 GH stars
 * https://www.openglobus.org/
-* https://Help.openstreetmap.org
 * https://osmbuildings.org/
 * https://www.osgeo.org/
-	* https://openlayers.org/
+* https://openlayers.org/
 	* https://giscience.github.io/GIScene.js/
 		* update 2016 A 3D WebGIS framework. Based on Three.js. Easy to learn and customize.
 * https://github.com/potree/potree/
@@ -66,9 +66,6 @@ Compare
 * https://www.wrld3d.com/
 * https://worldwind.arc.nasa.gov/web/examples/#anchor
 
-### planet textures
-
-* https://www.solarsystemscope.com/textures/
 
 ### OSGeo
 
@@ -86,36 +83,36 @@ Compare
 ## OSM & Tile Servers
 
 * https://www.openstreetmap.org/#map=17/49.43734/11.12898
+* https://blog.openstreetmap.org/
 * https://forum.openstreetmap.org/viewforum.php?id=42
 * https://Help.openstreetmap.org
 * https://lists.openstreetmap.org/listinfo
 
 Wiki
 
+* https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services
 * https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_servers
+* https://wiki.openstreetmap.org/wiki/OSM-3D.org
 * https://wiki.openstreetmap.org/wiki/TMS
 * https://wiki.openstreetmap.org/wiki/Tiles
 
-more
-
-* http://mc.bbbike.org/mc/ <<< map compare ****
+OSM Domains
+* https://healthsites.io/map#!/locality/node/2340008551
+* https://maproulette.org/
+* https://www.openstreetmap.us/
+* https://osmus.civicrm.org/user/login?destination=civicrm/dashboard%3Freset%3D1
 * http://fieldpapers.org/
+* https://www.hotosm.org/
+
+
+OSM Tools
+* http://mc.bbbike.org/mc/ <<< map compare ****
 * https://switch2osm.org/
 * http://osm2world.org/
 * https://github.com/vvoovv/blender-osm#openstreetmap-importer-for-blender
-* https://wiki.openstreetmap.org/wiki/OSM-3D.org
 * http://osmgo.org/
-* https://github.com/UDST/vizicities
 * https://github.com/rastapasta/mapscii
-
-teams
-
-* https://www.hotosm.org/
-* https://healthsites.io/map#!/locality/node/2340008551
-* https://www.openstreetmap.us/
-* https://maproulette.org/
 * https://www.mapillary.com/
-
 
 
 ## https://leafletjs.com/ Leaflet.js
@@ -125,38 +122,96 @@ teams
 * https://stackoverflow.com/questions/tagged/leaflet
 * https://twitter.com/LeafletJS
 
-more
+### Leaflet users
 
 * https://osmbuildings.org/
-* http://geommills.github.io/esrileaflet3JS/ ~ 2015 ~ 2d & 3d
 * https://www.wrld3d.com/ ~ $$$
+
+
+### Leaflet + Three.js
+
+* http://geommills.github.io/esrileaflet3JS/
+	* 2015 ~ 2d & 3d ~ no 3d Terrain ~ esri / leaflet
+	* Creates a large JPG uses as texture
+* https://mappa.js.org/
+	* Three.js as a layer over Leaflet
+	* https://jsfiddle.net/hg474d6r/7/
 * https://mocainfo.thm.de/building-3d/
-* https://github.com/geommills/esrileaflet3JS ~ 2015
+	* Adds a Three.js layer of 3D buildings over Leaflet map
+	* http://bl.ocks.org/Sumbera/c6fed35c377a46ff74c3
+* https://github.com/UDST/vizicities
+	* 2016 ~ lots of features ~ complex ui
 
 
-mourner agafonkin
+### Leaflet + Three.js + 3D Globe
 
-* https://observablehq.com/@mourner
-* https://observablehq.com/search?page=2&query=three.js
+* http://www.webglearth.com/#ll=0.00000,0.00000;alt=17000000
+* http://examples.webglearth.com/
 
 
 ## MapBox
 
+public access token
+* pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
+
+* https://en.wikipedia.org/wiki/Mapbox
+* https://www.mapbox.com/
+* https://twitter.com/Mapbox
+* https://www.linkedin.com/company/mapbox/
+* https://www.crunchbase.com/organization/mapbox/people
+* https://www.instagram.com/mapbox/?hl=en
+* https://www.mapbox.com/blog?utm_campaign=medium_notice_2020
+* https://wiki.openstreetmap.org/wiki/Mapbox
+* https://www.youtube.com/channel/UCIHl9sd2brgvjBlSETKYDcg
+* https://www.mapbox.com/community/
+* https://docs.mapbox.com/help/
+
+Docs
+* https://github.com/mapbox
+* https://docs.mapbox.com/help/how-mapbox-works/web-apps/
 * https://docs.mapbox.com/mapbox-gl-js/api/
 
-### 3D Globe & flat Three.js
+Stackoverflow
 
-* http://www.webglearth.com/#ll=0.00000,0.00000;alt=17000000
-* http://examples.webglearth.com/
-* https://github.com/w3reality/three-geo
+* https://stackoverflow.com/questions/tagged/mapbox
+
+
+## Forks
+
+* https://carto.com/developers/mapbox/guides/getting-started/
+* https://maptalks.org/
+	* Uses mapbox
+	* https://maptalks.org/maptalks.three/demo/index.html
 * https://github.com/peterqliu/threebox
+	* 2019
+	* https://codepen.io/MannyMeadows/pen/qoZWEM
+* https://github.com/w3reality/three-geo
+	* Mapbox + three.js
 
+## articles
+
+* https://www.forbes.com/sites/bizcarson/2018/05/08/mapbox-maps-developers/?sh=50b6a681164d
+* https://www.codementor.io/@victorgerardtemprano/pros-and-cons-of-using-mapbox-for-your-project-dx04pfgxw
+
+## mourner agafonkin
+
+* https://observablehq.com/@mourner
+* https://observablehq.com/search?page=2&query=three.js
+
+### planet textures
+
+* https://www.solarsystemscope.com/textures/
 
 ### Stackoverflow
 
+* https://stackoverflow.com/questions/17682551/three-js-leaflet-3d-maps
 * https://stackoverflow.com/questions/38339961/how-to-put-a-mapboxgl-map-in-three-js-without-requiring-two-canvases'
 * https://stackoverflow.com/questions/25559222/leaflet-osm-tiles-shown-as-a-ground-plane-in-a-2d-environment
-
+* https://stackoverflow.com/questions/60075700/three-js-positionning-objects-according-their-coordinates
+* https://stackoverflow.com/questions/45805193/three-js-layer-for-leaflet/47200362#47200362
+* https://stackoverflow.com/questions/16830824/google-maps-using-three-js-and-webgl/27653983#27653983
+* https://stackoverflow.com/questions/59733455/location-based-ar-with-three-js-react-camera-configuration/60265551#60265551
+* https://stackoverflow.com/questions/59733455/location-based-ar-with-three-js-react-camera-configuration/60265551#60265551
 
 
 ## Articles
@@ -168,6 +223,7 @@ mourner agafonkin
 * http://science.geof.unizg.hr/cmc2018/wp-content/uploads/2019/10/Proceedings_ICA_11CMC.pdf
 * https://bachasoftware.com/custom-software-development/
 * https://dev.to/camptocamp-geo/the-3-best-open-source-web-mapping-libraries-57o7
+
 
 ## Associations
 

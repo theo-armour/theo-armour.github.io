@@ -29,9 +29,9 @@ Redefine Alt Home and Alt End to go home and end
 
 * stylelint looks interesting
 * Try prettier
-    * Works on css, js  
-    * Reset settings.json
-    * Get rid of all typescript
+	* Works on css, js
+	* Reset settings.json
+	* Get rid of all typescript
 
 * Good workflow on Chromebook * 2019-04-29: Looking good
 * https://github.com/shanalikhan/code-settings-sync
@@ -173,7 +173,7 @@ I don't think I need this
 * <https://github.com/HookyQR/VSCodeBeautify>
 * <https://medium.com/@bretcameron/the-2019-guide-to-beautifying-visual-studio-code-32470910fc5b>
 * <https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode>
-* <https://code.visualstudio.com/docs/getstarted/settings> 
+* <https://code.visualstudio.com/docs/getstarted/settings>
 
 
 ### Prettier
@@ -295,6 +295,8 @@ Create cursors on all occurrences of a string: Ctrl+Shift+L</arrow></arrow>
 	"editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+	 "editor.fontSize": 12
+
 
     "editor.detectIndentation": false,
     "editor.insertSpaces": false,
@@ -319,6 +321,7 @@ Create cursors on all occurrences of a string: Ctrl+Shift+L</arrow></arrow>
     "git.confirmSync": false,
     "git.autofetch": true,
 
+	"window.zoomLevel": 0.25
 "sync.forceUpload": true,
 
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
