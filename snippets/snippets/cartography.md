@@ -154,6 +154,7 @@ OSM Tools
 public access token
 * pk.eyJ1IjoidGhlb2EiLCJhIjoiY2o1YXFra3V2MGIzbzJxb2lneDUzaWhtZyJ9.7bYFAQabMXiYmcqW8NLfwg
 
+Sites
 * https://en.wikipedia.org/wiki/Mapbox
 * https://www.mapbox.com/
 * https://twitter.com/Mapbox
@@ -188,7 +189,7 @@ Stackoverflow
 * https://github.com/w3reality/three-geo
 	* Mapbox + three.js
 
-## articles
+## Articles
 
 * https://www.forbes.com/sites/bizcarson/2018/05/08/mapbox-maps-developers/?sh=50b6a681164d
 * https://www.codementor.io/@victorgerardtemprano/pros-and-cons-of-using-mapbox-for-your-project-dx04pfgxw
