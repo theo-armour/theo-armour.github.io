@@ -60,6 +60,7 @@ Compare
 	* https://github.com/pnext/three-loader
 * https://github.com/tangrams/tangram
 * https://terria.io/applications
+* https://www.thunderforest.com/
 * https://vis.gl/
 * https://github.com/UDST/vizicities ~ 2016
 * https://github.com/w3reality/three-geo
@@ -88,15 +89,18 @@ Compare
 * https://Help.openstreetmap.org
 * https://lists.openstreetmap.org/listinfo
 
+
 Wiki
 
 * https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services
 * https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_servers
 * https://wiki.openstreetmap.org/wiki/OSM-3D.org
+* https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services
 * https://wiki.openstreetmap.org/wiki/TMS
 * https://wiki.openstreetmap.org/wiki/Tiles
 
 OSM Domains
+* https://osmtools.de/osmlinks/
 * https://healthsites.io/map#!/locality/node/2340008551
 * https://maproulette.org/
 * https://www.openstreetmap.us/
