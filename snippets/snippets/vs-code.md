@@ -3,7 +3,7 @@
 * my workspace: file:///C:/Users/theo/Dropbox/Public/git-repos/github.code-workspace
 * settings: control + , >> file:///C:/Users/theo/AppData/Roaming/Code/User/settings.json
 * keyboard shortcuts: control + K + S
-    * F1 for help
+ * F1 for help
 
 ## To do
 
@@ -18,8 +18,8 @@ Some thoughts
 * Start with simple: CSS
 * First explore VS Code defaults
 * perhaps let Glitch do it
-    * Glitch both formats and fixes CSS
-    * Uses spaces not tabs - but only two - so maybe I can get used to this
+ * Glitch both formats and fixes CSS
+ * Uses spaces not tabs - but only two - so maybe I can get used to this
 
 To do
 
@@ -114,7 +114,7 @@ Matching bracket: Ctrl+Shift+\
 
 Rename symbol: F2
 
-## Emmet < wow!
+## Emmet < wow
 
 * <https://code.visualstudio.com/docs/editor/emmet>
 * <https://code.visualstudio.com/blogs/2017/08/07/emmet-2.0>
@@ -137,14 +137,13 @@ Alt+Shift+1 (PC)
 Cmd+Option+1 (Mac)
 
 
-
 ## Extensions
 
 * https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap
-    * Wraps your selection in HTML tags. Can wrap inline selections and selections that span multiple lines (works with both single selections and multiple selections at once).
-    * To use, select one or many chunks of code and press "Alt + W" ("Option + W" for Mac).
+ * Wraps your selection in HTML tags. Can wrap inline selections and selections that span multiple lines (works with both single selections and multiple selections at once).
+ * To use, select one or many chunks of code and press "Alt + W" ("Option + W" for Mac).
 * https://marketplace.visualstudio.com/items?itemName=jevakallio.vscode-hacker-typer
-    * replay macros at typing speed
+ * replay macros at typing speed
 * <https://github.com/viatsko/awesome-vscode?>
 * https://marketplace.visualstudio.com/items?itemName=nicoespeon.slides
 
