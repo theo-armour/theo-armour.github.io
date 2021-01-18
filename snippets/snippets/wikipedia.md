@@ -86,6 +86,3 @@ WORLDS BEST ELECTRIC BIKE *GIVEAWAY*
 * Well listed in all portals and projects
 * Make sure well-represented in Wikipedia Commons
 * Make sure your images are the canonical images
-
-
-
