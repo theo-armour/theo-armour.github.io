@@ -1,6 +1,11 @@
 
 # ARRAY
 
+## Links of interest
+
+* https://1loc.dev/
+	* 222 JavaScript one liners
+
 ## About
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 * http://www.w3schools.com/jsref/jsref_obj_array.asp

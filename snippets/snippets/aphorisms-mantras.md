@@ -1,5 +1,5 @@
 # Aphorisms
-Warren Buffet has a saying "Never rely on the kindness of strangers." 
+Warren Buffet has a saying "Never rely on the kindness of strangers."
 ## Words
 
 * Slogans
@@ -16,6 +16,7 @@ Warren Buffet has a saying "Never rely on the kindness of strangers."
 
 ## Me
 
+* 2021-01-17 ~ better to arrive informed then to arrive ignorant
 * Given my evil past, their Heritage is as close to Heaven as I will probably get
 * Being at the Heritage, I don't have to worry about growing old anymore
 * There is always a more complicated way of doing it
