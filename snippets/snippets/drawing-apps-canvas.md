@@ -21,11 +21,7 @@
 ### Squid
 
 
-
 ### Evernote
-
-
-
 
 
 ### CANVAS
