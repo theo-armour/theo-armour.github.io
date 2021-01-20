@@ -5,12 +5,26 @@ value="You are now in a GitHub web page view - Click this button to view this re
 
 # [Theo Armour]( #README.md )
 
-2020-09-09
 
 
 ***
-
 ## concept
+
+Deprecated. This repository is one for this history books. It is a reminder that whatever we want to do may take time and care and patience. And then it is over. And then we go on to whatever is next.
+
+Below are links to some of my more recent efforts:
+
+### [Theo Armour 2021]( https://theo-armour.github.io/2021/ )
+
+### [Theo Armour Maps 2021]( https://theo-armour.github.io/maps-2021/ )
+
+### [Theo Armour 2020]( https://theo-armour.github.io/2020/ )
+
+### [pushMe-pullYou / tooToo 2021]( http://pushme-pullyou.github.io/tootoo-2021/ )
+
+### [Ladybug Tools / Spider 2021 ](https://www.ladybug.tools/spider-2021/ )
+
+### 2020-09-09
 
 This is the eleventh significant update to theo-armour.github.io. None of them have been much good because I'm almost always anywhere but here.
 
@@ -66,6 +80,10 @@ https://glitch.com/edit/#!/theo
 
 
 ## change Log
+
+### 2021-01-20
+
+* Update the content manager to [tootoo-2021-01-20]( https://pushme-pullyou.github.io/tootoo-2021/ )
 
 ### 2019-06-05 ~ Theo
 
