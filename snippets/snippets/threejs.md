@@ -283,7 +283,7 @@ if ( ! Detector.webgl ) {
 
 
 ### GEOMETRY / Edges
-
+// https://threejs.org/docs/?q=edg#api/en/geometries/EdgesGeometry
 
 			var edgesGeometry, edgesMaterial, edges,
 
