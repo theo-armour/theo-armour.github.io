@@ -593,6 +593,12 @@ onload
 
 ### IMG Images IMG
 
+
+// https://javascript.plainenglish.io/image-lazy-loading-using-html-without-any-javascript-8cbae93f7aea
+
+<img src="https://rb.gy/9xufc2" loading="lazy"/>
+
+
 Random image
 
 * https://commons.wikimedia.org/wiki/Special:Random/Image
