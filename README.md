@@ -1,16 +1,11 @@
-<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/#README.md "View file as a web page." ) </span>
-
-<div><input type=button onclick="window.location.href='https://github.com/theo-armour/theo-armour.github.io/blob/master/README.md'"
-value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ></div>
-
-# [Theo Armour]( #README.md )
+# [![](https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg )](https://github.com/theo-armour/ "Source code on GitHub" ) [Theo Armour Read Me]( https://theo-armour.github.io "Home page" )
 
 
 
 ***
 ## concept
 
-Deprecated. This repository is one for the history books. It is a reminder that whatever we want to do may take time and care and patience. And then it is over. And then we go on to whatever is next.
+Deprecated. This repository is one for the history books. It is a reminder that whatever we want to do may take time and care and patience. And then it is over. And then we go on to whatever is next. Nonetheless, it remains alive, available and reviewable. 
 
 Below are links to some of my more recent efforts:
 
