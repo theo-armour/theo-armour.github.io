@@ -1,4 +1,4 @@
-# Asus Zenbook Duo Pro 
+# Asus Zenbook Duo Pro
 
 ## Journal
 
@@ -6,10 +6,10 @@
 
 * When computer wakes up, external monitor does not wake up. ;-(
 * MyAsus:
-  * phone calls & messages
-  * share files
-  * Mirror phone screen to PC
-  * Extend PC screen to mobile device
+	* phone calls & messages
+	* share files
+	* Mirror phone screen to PC
+	* Extend PC screen to mobile device
 
 ### 2020-05-23
 
@@ -17,17 +17,17 @@ The "panel" is interesting. So far I am not using it. Mostly because the display
 
 First thought. The issue is that if you have multiple windows of a browser then all windows have the same zoom setting.
 
-if the issue is small text is then use a second browser like Firefox for the panel. then you can set a size in fact browser which may be different than the font size in the Chrome browser. 
+if the issue is small text is then use a second browser like Firefox for the panel. then you can set a size in fact browser which may be different than the font size in the Chrome browser.
 
-13:36 ~ 
+13:36 ~
 
 Firefox in the panel is looking really really good!
 
-The text is large invisible. 
+The text is large invisible.
 
 The second issue is what do you use the panel for. I think I will need to build a special app just for the panel. I should be able to dictate, right, and draw. Perhaps in 3 different panels
 
-14:05 ~ 
+14:05 ~
 
 Looks like Firefox allows different tabs to have different zoom settings which is interesting
 
