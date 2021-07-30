@@ -123,7 +123,7 @@ function requestFile( url ) {
 
 // http://www.html5rocks.com/en/tutorials/file/xhr2/
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_binary_data
-
+// https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe
 
 // https://crossorigin.me/
 // https://cors-anywhere.herokuapp.com/
