@@ -141,6 +141,7 @@ function requestFile( url ) {
 //		let xhr;
 
 		xhr = new XMLHttpRequest();
+		xhr.responseType = "json";
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', url, true );
 		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
