@@ -13,6 +13,7 @@ Forums
 
 * https://www.freecodecamp.org/forum/c/javascript
 
+
 ## CSS
 
 	var css = document.head.appendChild( document.createElement('style') );
@@ -54,8 +55,7 @@ Forums
 		}
 
 
-
-# details
+## details
 
 	<div>
 
@@ -186,7 +186,7 @@ Forums
 
 
 
-### GRADIENT RANDOM
+## GRADIENT RANDOM
 
 	function setRandomGradient() {
 
@@ -206,6 +206,25 @@ Forums
 		'';
 
 	};
+
+// older ??
+check on FF....
+
+random gradient background
+
+		css = document.body.appendChild( document.createElement('style') );
+		var col1 = "#" + Math.random().toString(16).slice(2, 8);
+		var col2 = "#" + Math.random().toString(16).slice(2, 8);
+		var col3 = "#" + Math.random().toString(16).slice(2, 8);
+		var X = ( Math.random() * window.innerWidth ).toFixed(0);
+		var Y = ( Math.random() * window.innerHeight ).toFixed(0);
+		var center =  20 + ( Math.random() * 60 ).toFixed(0);
+
+		css.innerHTML = 'body { color: #888; font: 600 14pt monospace; margin: 0; height: 1000px; overflow: hidden; text-align: center; ' +
+			'background: -webkit-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
+			'background: -moz-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
+			'background: radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); }' +
+		'';
 
 
 

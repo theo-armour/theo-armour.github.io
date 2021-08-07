@@ -316,28 +316,6 @@ console.log('waiting...');
 		}
 
 
-## COLORS
-
-check on FF....
-
-
-random gradient background
-
-		css = document.body.appendChild( document.createElement('style') );
-		var col1 = "#" + Math.random().toString(16).slice(2, 8);
-		var col2 = "#" + Math.random().toString(16).slice(2, 8);
-		var col3 = "#" + Math.random().toString(16).slice(2, 8);
-		var X = ( Math.random() * window.innerWidth ).toFixed(0);
-		var Y = ( Math.random() * window.innerHeight ).toFixed(0);
-		var center =  20 + ( Math.random() * 60 ).toFixed(0);
-
-		css.innerHTML = 'body { color: #888; font: 600 14pt monospace; margin: 0; height: 1000px; overflow: hidden; text-align: center; ' +
-			'background: -webkit-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
-			'background: -moz-radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); ' +
-			'background: radial-gradient(' + X + 'px ' + Y + 'px, farthest-corner, ' + col1 + ' 0%, ' + col2 + ' 50%, ' + col3 + ' 100%); }' +
-		'';
-
-
 ## ContentEditable
 
 
@@ -372,7 +350,7 @@ element.style.setProperty("--my-var", jsVar + 4);
 element.classList.add("mystyle");
 
 
-### DATES
+## DATES
 
 	dd = new Date().toISOString().slice( 0, 10 );
 
@@ -456,7 +434,7 @@ console.log( date.toString() ); // Tue Oct 13 2015 17:00:00 GMT+0530 (IST)
 		return txt;
 
 
-## Details
+### Details open
 
 function toggleOpen() {
 
@@ -533,8 +511,9 @@ document.write("Hello World!");
 	}
 
 
-## document.querySelectorAll()
+## document.querySelectorAll() WebAPIs
 
+* https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 * https://www.w3schools.com/jsref/met_document_queryselectorall.asp
 
 
@@ -558,20 +537,22 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ## Escape / encodeURI()
 
-	var uri = 'https://mozilla.org/?x=шеллы';
-	var encoded = encodeURI(uri);
-
-
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
+	var uri = 'https://mozilla.org/?x=шеллы';
+	var encoded = encodeURI(uri);
 	encodeURIComponent('&');
 	// "%26”
 
 
-.
-## Events
+## EVENTS
 
 * https://medium.com/dailyjs/whats-the-difference-between-event-handlers-addeventlistener-in-js-963431f05c34
+
+### Loading
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+* https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
 
 ### EVENTS Key cursor
 
@@ -646,7 +627,6 @@ console.log( 'key', event.keyCode );
 console.log( thing );
 
 	}
-xh
 
 
 ## FETCH
@@ -719,7 +699,7 @@ function fetchTextSimple( url, target ){
 		<label><input type=checkbox > checkbox</label>
 	</p>
 
-## Form Element
+### Form Element
 
 The HTMLFormElement.reset() method resets all fields in a form back to their default values. This means that if you had a specified value property on a field, and the user changed it, it would revert to the original instead of emptying completely.
 
@@ -805,7 +785,7 @@ selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
 		selXXX.selectedIndex = 3;
 
 
-### FUNCTION
+## FUNCTION
 
 ### parameters
 
@@ -823,7 +803,7 @@ function initiateTransfer({ protocol = 'http', longPropertyName: port = 800, del
 parseInt( string, 10 ) << include the radix
 
 
-### IMAGE
+## IMAGE
 
 		var image = document.body.appendChild( document.createElement( 'img' ) );
 		image.crossOrigin = 'anonymous';  // before source, needs an onload
@@ -844,7 +824,7 @@ parseInt( string, 10 ) << include the radix
 		}
 
 
-### JSON
+## JSON
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 
@@ -863,7 +843,7 @@ console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, "\t" ) );
 // }'
 
 
-### LOCATION.HASH
+## LOCATION.HASH
 
 		window.addEventListener ( 'hashchange', onHashChange, false );
 
@@ -892,7 +872,7 @@ console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, "\t" ) );
 	}
 
 
-### MATH
+## MATH
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
@@ -931,7 +911,7 @@ Math.atan2() is passed separate x and y arguments, and Math.atan() is passed the
 	function sech( a ){ return Math.sech( a ); }
 
 
-### META
+## META
 
 See theo-armour.github.io/ucsf2/pookeepon-go/
 See https://github.com/ladybug-analysis-tools/ladybug-web/blob/gh-pages/ladybug-web-via-github-api-r2.html#L188-L200
@@ -940,7 +920,7 @@ See http://stackoverflow.com/questions/7524585/how-do-i-get-the-information-from
 	document.head.querySelector( '[name=description]' ).content;
 
 
-### NAMESPACE
+## NAMESPACE
 
 
 files
@@ -955,12 +935,13 @@ Where
 So when you see aabb.doIt() in code you know exactly which file to go to.
 
 
-### NAVIGATOR
+## NAVIGATOR
 
 function success( loc) { console.log( "location", loc ) };
 navigator.geolocation.getCurrentPosition( success )
 
-### NUMBER
+
+## NUMBER
 
 Formatting
 
@@ -981,7 +962,7 @@ Old school: number with commas
 	};
 
 
-### OBJECTS
+## OBJECTS
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
@@ -1032,7 +1013,7 @@ console.log( i, obj[ i ]);
 	}
 
 
-### OPERATORS
+## OPERATORS
 
 Conditional Operator
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
@@ -1044,19 +1025,14 @@ Conditional Operator
 		var thing = ( x !== undefined ) ? x : 1;
 
 
-### REGEXP
+## REGEXP
 
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 * http://www.w3schools.com/jsref/jsref_obj_regexp.asp
 * http://www.w3schools.com/jsref/jsref_replace.asp
 
-// Shortcuts
-
-		fileName = heightMap.src.split( '/' ).pop().toLowerCase();
-		var extension = fileName.split( '.' ).pop().toLowerCase();
-
-SEE spider / gbxml viewer / assets / get read me files
+### Using variables
 
 function parseFile( text, pattern ){
 
@@ -1067,8 +1043,6 @@ function parseFile( text, pattern ){
 		match = regex.exec( text );
 		//console.log( 'match', match );
 
-
-
 		if ( match && match.length ) {
 
 			//divContents.innerText += match[ 0 ].slice( match[ 0 ].indexOf( '\n'), -3 );
@@ -1078,12 +1052,18 @@ function parseFile( text, pattern ){
 
 }
 
-### File extension
 
-* https://stackoverflow.com/questions/6582171/javascript-regex-for-matching-extracting-file-extension
+		list = ["South", "North", "Ciudad", "City", "The", "Federat", "Avtonomn", "Misto",
+		"Hlavní", "And", "Republika", "Ascension", "Village", "Grad", "And", "British", "Mourne", "Banbridge", "Antártida" ];
 
-const name = FSB.fileName.replace( /\.[0-9a-z]+$/i, ".zip" );
+		for ( let word of list ) {
 
+			const str = `, (${word })`;
+			const re = new RegExp( str, "g" );
+			console.log( "re", re );
+			response = response.replace( re, "- $1" );
+
+		}
 
 ### Match | Replace
 >>> /xxx(.*?)xxx/gi
@@ -1100,6 +1080,7 @@ stringWithQuotes.replace(/["']/g, "");
 
 		MNU.files = MNU.tableOfContents.replace( /(.*)\((.*)\)(.*)/gi, '$2' ).split( '\n' );
 
+### Modifiers
 
 RegExp Modifiers
 [0-9] replace class of number
@@ -1121,7 +1102,21 @@ RegExp Modifiers
 (x) Matches 'x' and remembers the match, as the following example shows. The parentheses are called capturing parentheses.
 
 
-### SAVE FILE
+### File extension
+
+// Shortcuts
+
+		fileName = heightMap.src.split( '/' ).pop().toLowerCase();
+		var extension = fileName.split( '.' ).pop().toLowerCase();
+
+SEE spider / gbxml viewer / assets / get read me files
+
+* https://stackoverflow.com/questions/6582171/javascript-regex-for-matching-extracting-file-extension
+
+?? const name = FSB.fileName.replace( /\.[0-9a-z]+$/i, ".zip" );
+
+
+## SAVE FILE
 
 //file:///C:/Users/Theo/Dropbox/Public/code-cookbook/0-cookbook-general/file-save-api/file-saver-2015-02-26/file-saver.html
 //http://ausdemmaschinenraum.wordpress.com/2012/12/06/how-to-save-a-file-from-a-url-with-javascript/
@@ -1158,25 +1153,31 @@ RegExp Modifiers
 // https://stackoverflow.com/questions/27318715/blob-url-with-utf-16le-encoding
 
 
-### Set
+## SET
 
 const array = [1, 1, 2, 3, 5, 5, 1]
 const uniqueArray = [ ...new Set( array ) ];
 console.log(uniqueArray); // Result: [1, 2, 3, 5]
 
 
-### setTimeout
+## setTimeout / idleCallback
 
 
 setTimeout( function(){ controls.autoRotate = true; }, 3000);
 
 setTimeout( () => controls.autoRotate = true, 3000);
+
+### requestidlecallback
+
 See
+
+
 
 https://developers.google.com/web/updates/2015/08/using-requestidlecallback
 
+		window.requestIdleCallback( () => console.log( `idelCallback Time elapsed ${ ( performance.now() - timeStart ).toLocaleString() } ms`) );
 
-### SPEECH SYNTH
+## SPEECH SYNTH
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance
 // http://stackoverflow.com/questions/21513706/getting-the-list-of-voices-in-speechsynthesis-of-chrome-web-speech-api
@@ -1208,7 +1209,7 @@ console.log( 'Ah man, speech synthesis isn\'t supported.' );
 	}
 
 
-### Local Storage / localStorage
+## Local Storage / localStorage
 
 * https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 * https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
@@ -1253,7 +1254,7 @@ Examples
 	}
 
 
-### STRING
+## STRING
 
 'my string'.startsWith('my'); //true
 'my string'.endsWith('my'); // false
@@ -1315,7 +1316,7 @@ Number( space.area.toFixed(4) )
 x > 100 ? 'Above 100' : 'Below 100';
 
 
-### TIME
+## TIME
 
 http://www.w3schools.com/js/js_timing.asp
 
@@ -1326,7 +1327,7 @@ setTimeout( function(){alert("Hello")},3000);
 		if ( parseInt( timer,10 ) %2 === 0 ){ ...
 
 
-### TRY /CATCH
+## TRY /CATCH
 
 	try {
 	throw 'myException'; // generates an exception
@@ -1337,13 +1338,13 @@ setTimeout( function(){alert("Hello")},3000);
 		logMyErrors(e); // pass exception object to error handler
 	}
 
-### URL
+## URL
 
 * https://developer.mozilla.org/en-US/docs/Web/API/URL
 
 	new URL(string);
 
-### Validity
+## Validity
 
 * https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
 * https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
@@ -1351,7 +1352,7 @@ setTimeout( function(){alert("Hello")},3000);
 oninput="validity.valid||(value='');"
 
 
-### WINDOW
+## WINDOW
 
 http://www.w3schools.com/jsref/obj_window.asp
 
