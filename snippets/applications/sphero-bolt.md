@@ -1,2 +1,0 @@
-# Sphereo Bolt
-
