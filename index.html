@@ -1,0 +1,3651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="revised" content="2026-10-19 17:14">
+  <title>TooToo</title>
+  <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
+       (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
+  <link rel="icon" href="theo-logo.ico">
+
+  <!-- External deps (same as the real app). -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <link id="hljsTheme" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.1/dist/purify.min.js"></script>
+
+  <!-- TooToo Simple — a single-user build, dedicated to theo-armour. The identity is
+       baked in (no tootoo.config.js, no unknown owners). ta-data.js carries the
+       agent-refreshed list of every repo and organization for the sidebar shelf. -->
+  <script>
+    window.TOOTOO_CONFIG = {
+      appName: 'TooToo Simple',
+      subtitle: 'Theo Armour ~ every repo, one place',
+      owner: 'theo-armour',
+      repo: 'theo-armour.github.io',
+      sourceRepoUrl: 'https://github.com/theo-armour',   // header brand icon → Theo's GitHub account
+    };
+  </script>
+  <script src="ta-data.js"></script>
+
+  <style>
+    /* TooToo — shared stylesheet.
+   The standard CSS file every component page links, inlined into index.html by the
+   assembler. Sections: tokens + dark mode, header, sidebar, content, footer,
+   responsive / print / reduced-motion, self-test. */
+
+/* ── Custom Properties ── */
+:root {
+  --primary-bg: #f3f4f6;
+  --secondary-bg: #ffffff;
+  --text-color: #1f2937;
+  --border-color: #d1d5db;
+  --highlight-color: #2563eb;
+  --highlight-fg: var(--highlight-color);
+  /* highlight as a legible foreground/fill — lightens in dark mode */
+  --on-highlight: #ffffff;
+  /* text/icon sitting on a highlight-colored fill (button hover/active) */
+  --hover-bg: #e5e7eb;
+  /* selected tree row — a bg/fg pair that clears WCAG-AA in both modes (see dark override) */
+  --active-bg: #2563eb;
+  --active-fg: #ffffff;
+  --font-family: system-ui, sans-serif;
+  --sidebar-width: 300px;
+  --font-size: 16px;
+  --warning-bg: #fff3cd;
+  --warning-border: #ffc107;
+  --error-bg: #fff0f0;
+  --error-border: #dc3545;
+  --iframe-bg: #ffffff;
+}
+
+/* ── Dark Mode Overrides ── */
+body.dark-mode {
+  --primary-bg: #1f2937;
+  --secondary-bg: #111827;
+  --text-color: #f3f4f6;
+  --border-color: #374151;
+  --highlight-color: #3b82f6;
+  --highlight-fg: color-mix(in srgb, var(--highlight-color) 65%, white);
+  --on-highlight: var(--primary-bg);
+  --hover-bg: #374151;
+  --active-bg: #1d4ed8;   /* darker than light mode: white text on it is ~6.7:1 (light's #3b82f6 was ~3.7:1, failing) */
+  --warning-bg: #3a3000;
+  --warning-border: #665200;
+  --error-bg: #2d0000;
+  --error-border: #ff6b6b;
+}
+
+/* ── Font size on html so rem units scale ── */
+html {
+  font-size: var(--font-size);
+  scrollbar-color: color-mix(in srgb, var(--highlight-color), transparent 65%) transparent;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Keyboard focus ring ── a clear, theme-colored indicator on any control reached by
+   keyboard. :focus-visible (not :focus) means pointer clicks don't draw it. Covers buttons,
+   links, tree rows ([role=button]) and folder <summary>s, which otherwise had only the UA
+   default; the filter/token inputs keep their own border-color focus cue. */
+:focus-visible {
+  outline: 2px solid var(--highlight-color);
+  outline-offset: 2px;
+}
+
+/* Every heading + title picks up the optional heading font. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#headerTitle {
+  font-family: var(--heading-font, var(--font-family));
+}
+
+/* ── Body ── */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* lock the shell to the viewport so the sidebar + content scroll INTERNALLY
+     (sidebar footer pins to the sidebar bottom; tree scroll-to-top works) */
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--primary-bg);
+  /* Per-fork brand stripe across the very top of the viewport. */
+  border-top: 3px solid var(--highlight-color);
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  /* left 0.5rem: ☰ flush with the sidebar's left edge */
+  background: var(--primary-bg);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+#headerGitHub {
+  display: flex;
+  align-items: center;
+  color: var(--highlight-fg);
+  text-decoration: none;
+  padding: 0.15rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+#headerGitHub:hover {
+  background: color-mix(in srgb, var(--highlight-color), transparent 80%);
+}
+
+#headerGitHub:hover img {
+  transform: scale(1.15);
+}
+
+/* Size the brand mark in rem so it scales with A−/A+ (the img's width/height
+   attributes are fixed px; CSS overrides them). */
+#headerGitHub img {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
+  transition: transform 0.15s;
+}
+
+#headerTitle {
+  font-weight: normal;
+  font-size: 1.35rem;
+  text-decoration: none;
+  color: var(--highlight-fg);
+  cursor: pointer;
+  white-space: normal;
+  padding: 0.05rem 0.35rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+#headerTitle:hover {
+  color: var(--highlight-color);
+  background: color-mix(in srgb, var(--highlight-color), transparent 85%);
+  text-decoration: underline;
+}
+
+.header-subtitle {
+  opacity: 0.6;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: var(--highlight-fg);
+  white-space: nowrap;
+}
+
+/* Keep owner and repo each on one line, so a long "owner / repo" title may break
+   only at the slash between them (either side) rather than mid-name or as one long
+   unbreakable line — saves vertical space on a narrow header. */
+.title-seg {
+  white-space: nowrap;
+}
+
+/* Narrow screens: drop the subtitle to reclaim vertical space, and shrink the title
+   so "owner / repo" fits beside the logo on one line instead of dropping to its own
+   row and leaving the logo row half-empty. It still breaks at the slash (never
+   mid-name) if it is ever too wide to fit. */
+@media (max-width: 600px) {
+  .header-subtitle {
+    display: none;
+  }
+
+  #headerTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #headerTitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 340px) {
+  #headerTitle {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Buttons ── ghost pill that fills with the theme color on hover. */
+.header-btn,
+button.primary,
+button.secondary,
+.file-btn {
+  background: transparent;
+  color: var(--highlight-fg);
+  border: 1px solid var(--highlight-fg);
+  padding: 0.1rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+/* Uniform button box: fixed height + square-ish min-width + centered content, so
+   emoji and text glyphs yield the same-sized button. */
+.header-btn,
+.file-btn {
+  box-sizing: border-box;
+  height: 1.7rem;
+  min-width: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem;
+  line-height: 1;
+}
+
+.header-btn:hover,
+button.primary:hover,
+button.secondary:hover,
+.file-btn:hover {
+  background: var(--highlight-fg);
+  color: var(--on-highlight);
+  transform: translateY(-1px);
+}
+
+.header-btn:active,
+button.primary:active,
+button.secondary:active,
+.file-btn:active {
+  transform: translateY(0);
+}
+
+/* Pressed/active state for the About (?) and Token toggle buttons. */
+.header-btn.active {
+  background: var(--highlight-fg);
+  color: var(--on-highlight);
+}
+
+.dark-mode-btn {
+  margin-left: auto;
+}
+
+/* Sidebar toggle (☰): hide sidebar + resizer when body.sidebar-hidden. */
+body.sidebar-hidden .sidebar,
+body.sidebar-hidden .resizer {
+  display: none;
+}
+
+/* ── Rate limit badge ── */
+.rate-limit-badge {
+  display: none;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--hover-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.rate-limit-badge.low {
+  background: var(--warning-bg);
+  border-color: var(--warning-border);
+}
+
+.rate-limit-badge.critical {
+  background: var(--error-bg);
+  border-color: var(--error-border);
+}
+
+/* ===================================================================
+   SIDEBAR  (carved 2026-06-21)
+   =================================================================== */
+
+/* ── Main (sidebar + content row) ── */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-bg);
+  padding: 0;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+@container (max-width: 220px) {
+  .tree-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tree-item-size {
+    margin-left: 0;
+    padding-left: 1.4rem;
+  }
+}
+
+/* ── Panel Headers (shared) ── */
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  min-height: 2.25rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--primary-bg);
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--highlight-fg);
+}
+
+#hFiles {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#btnExpandAll {
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ── Branch switcher (in the header; menu anchored to its chip) ── */
+.branch-control {
+  position: relative;
+  display: inline-flex;
+}
+
+.branch-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.branch-switcher:hover,
+.branch-switcher[aria-expanded="true"] {
+  border-color: var(--highlight-color);
+  color: var(--highlight-color);
+}
+
+.branch-glyph {
+  color: var(--highlight-color);
+}
+
+.branch-caret {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.branch-menu {
+  position: absolute;
+  top: 100%;
+  left: 0.5rem;
+  z-index: 20;
+  min-width: 12rem;
+  max-width: calc(100% - 1rem);
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.branch-option,
+.branch-menu-loading,
+.branch-menu-error {
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.branch-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-color);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.branch-option:hover {
+  background: var(--hover-bg);
+}
+
+.branch-option.is-current {
+  color: var(--highlight-color);
+  font-weight: 600;
+}
+
+.branch-menu-loading,
+.branch-menu-error {
+  padding: 0.3rem 0.5rem;
+  opacity: 0.8;
+}
+
+.branch-menu-error {
+  color: var(--error-border);
+}
+
+/* ── Filter wrap ── */
+.filter-wrap {
+  position: relative;
+  margin: 0.4rem 0.5rem 0 0.5rem;
+}
+
+#treeFilter {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 1.6rem 0.3rem 0.5rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  outline: none;
+}
+
+#treeFilter:focus {
+  border-color: var(--highlight-color);
+}
+
+#btnFilterClear {
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 0.9rem;
+  display: none;
+  padding: 0;
+}
+
+#btnFilterClear:hover {
+  opacity: 1;
+}
+
+/* ── Tree list ── */
+#treeList {
+  padding: 0 0.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ── Sidebar footer ── */
+.sidebar-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.15rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--primary-bg);
+  flex-shrink: 0;
+}
+
+/* ── Resizer ── */
+.resizer {
+  width: 8px;
+  background: color-mix(in srgb, var(--highlight-color), transparent 75%);
+  cursor: col-resize;
+  touch-action: none;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.resizer:hover,
+.resizer.dragging {
+  background: var(--highlight-color);
+}
+
+/* ── Treeview ── */
+.tree-folder {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.4rem 0.2rem 0;
+  /* left flush with the filter input edge */
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  user-select: none;
+  list-style: none;
+}
+
+.tree-folder::-webkit-details-marker {
+  display: none;
+}
+
+.tree-folder:hover {
+  background: var(--hover-bg);
+}
+
+.tree-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.4rem 0.2rem 0;
+  /* left flush with the filter input edge */
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+details .tree-item {
+  padding-left: 1.2rem;
+}
+
+.tree-item:hover {
+  background: var(--hover-bg);
+}
+
+.tree-item.active {
+  background: var(--active-bg);
+  color: var(--active-fg);
+}
+
+.tree-item-size {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  margin-left: 0.75rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tree-item-folder {
+  display: none;
+}
+
+#treeList.filtering .tree-folder {
+  display: none;
+}
+
+#treeList.filtering details,
+#treeList.filtering details details {
+  padding-left: 0;
+}
+
+#treeList.filtering details .tree-item {
+  padding-left: 0.4rem;
+}
+
+#treeList.filtering .tree-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+}
+
+#treeList.filtering .tree-item-size {
+  display: none;
+}
+
+#treeList.filtering .tree-item-folder {
+  display: block;
+  padding-left: 1.4rem;
+  font-size: 0.72rem;
+  opacity: 0.6;
+}
+
+details details {
+  padding-left: 0.8rem;
+}
+
+details {
+  padding-left: 0;
+}
+
+/* ── Helpers ── */
+.is-hidden {
+  display: none !important;
+}
+
+/* The hidden ATTRIBUTE relies on the browser's own [hidden] { display: none } rule, which
+   any author display: on the same element silently overrides (e.g. .branch-switcher's
+   inline-flex). Restate it with !important so `el.hidden = true` always wins. */
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===================================================================
+   CONTENT PANEL  (carved 2026-06-21)
+   =================================================================== */
+
+/* ── Content Area ── */
+.content-area {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  overflow-y: auto;
+  background: var(--secondary-bg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#contentBody {
+  padding: 0 1rem 1rem 1rem;
+  background: var(--secondary-bg);
+  flex: 1 0 auto;
+  /* grow so the in-pane footer sits at the bottom on short content */
+}
+
+/* ── Back to Top ── */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+  background-color: var(--highlight-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Content Viewer ── */
+.markdown-body {
+  max-width: 700px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--highlight-fg);
+  font-weight: normal;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+#contentBody a {
+  color: color-mix(in srgb, var(--highlight-color) 80%, black);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border-radius: 3px;
+  transition: color 0.15s, background-color 0.15s, text-decoration-thickness 0.15s;
+}
+
+#contentBody a:hover {
+  color: var(--highlight-color);
+  background: color-mix(in srgb, var(--highlight-color), transparent 85%);
+  text-decoration-thickness: 2px;
+}
+
+body.dark-mode #contentBody a {
+  color: color-mix(in srgb, var(--highlight-color) 65%, white);
+}
+
+body.dark-mode #contentBody a:hover {
+  color: color-mix(in srgb, var(--highlight-color) 90%, white);
+  background: color-mix(in srgb, var(--highlight-color), transparent 78%);
+}
+
+.markdown-body a.internal-link {
+  cursor: pointer;
+}
+
+pre {
+  max-width: 700px;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 6px;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+body.dark-mode .markdown-body {
+  color: var(--text-color);
+}
+
+body.dark-mode pre {
+  background-color: var(--secondary-bg);
+}
+
+/* ── Content sticky header (breadcrumbs + actions) ── */
+.file-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem;
+}
+
+.file-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.file-title>a {
+  color: var(--highlight-fg);
+}
+
+/* svg sizes in rem so it scales with A−/A+ */
+.file-title>a svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+#breadcrumbs {
+  display: flex;
+  align-items: baseline;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.crumb-path {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.crumb-file {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.crumb-collapsed {
+  cursor: default;
+}
+
+.file-title a.breadcrumb-link {
+  color: var(--highlight-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.file-title a.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.media-content {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.iframe-content {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--iframe-bg);
+}
+
+/* PDFs fill the pane's available height (between the file-header and the in-pane
+   footer) instead of the fixed 70vh that previews use. :has() flips #contentBody
+   into a flex column when it holds a PDF so the iframe can flex to fill; min-height
+   keeps a sane floor when the column has no definite height (print). Reverts itself
+   for any other content. */
+#contentBody:has(> .iframe-pdf) {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.iframe-pdf {
+  height: auto;
+  flex: 1;
+  min-height: 70vh;
+}
+
+.md-error {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* .file-btn shares the .header-btn pill look, so it joins those selector groups above
+   (base + :hover + :active) rather than re-declaring them here. Its box sizing comes from
+   the shared `.header-btn, .file-btn` uniform-box rule. */
+
+/* ===================================================================
+   FOOTER  (carved 2026-06-21 — a new page-level footer the component
+   model makes easy; the current single-file app has no <footer> yet)
+   =================================================================== */
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* brand left · status right */
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--primary-bg);
+  color: var(--text-color);
+  flex-shrink: 0;
+}
+
+.app-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.app-footer-mark {
+  border-radius: 4px;
+}
+
+.app-footer a {
+  color: var(--highlight-fg);
+}
+
+/* ── Inline form (token panel, repo entry) ── */
+.repo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 700px;
+  line-height: 1.6;
+  padding: 1rem;
+  word-wrap: break-word;
+}
+
+.repo-form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.repo-form input[type="password"],
+.repo-form input[type="text"] {
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  outline: none;
+}
+
+.repo-form input:focus {
+  border-color: var(--highlight-color);
+}
+
+/* ── Spreadsheet tables ── */
+.xlsx-sheet table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.xlsx-sheet td,
+.xlsx-sheet th {
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.xlsx-sheet th {
+  background: var(--primary-bg);
+  font-weight: bold;
+}
+
+/* ===================================================================
+   RESPONSIVE / PRINT / REDUCED-MOTION  (carved 2026-06-21)
+   =================================================================== */
+
+@media (max-width: 768px) {
+  .resizer {
+    width: 4px;
+  }
+
+  .file-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Print: only the current file's content, with its name as a title. */
+.print-only {
+  display: none;
+}
+
+@media print {
+
+  header,
+  .sidebar,
+  .resizer,
+  .file-header,
+  .back-to-top,
+  .app-footer {
+    display: none !important;
+  }
+
+  body,
+  main,
+  .content-area,
+  #contentBody {
+    display: block;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  body {
+    border-top: none;
+  }
+
+  #contentBody {
+    padding: 0;
+  }
+
+  .markdown-body,
+  pre {
+    max-width: none;
+  }
+
+  body,
+  body.dark-mode {
+    --primary-bg: #fff;
+    --secondary-bg: #fff;
+    --text-color: #000;
+    --border-color: #999;
+    --highlight-color: #000;
+    background: #fff;
+    color: #000;
+  }
+
+  body.dark-mode pre,
+  body.dark-mode code,
+  body.dark-mode .hljs,
+  body.dark-mode .hljs * {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  #printTitle {
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ── Self-test report table ── */
+.selftest-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.selftest-table th,
+.selftest-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.selftest-table td:first-child {
+  width: 1.5rem;
+  text-align: center;
+}
+
+.selftest-table tr.st-fail {
+  background: var(--error-bg);
+}
+
+.selftest-table tr.st-skip {
+  background: var(--warning-bg);
+}
+
+.error-panel {
+  background: var(--error-bg);
+  border: 2px solid var(--error-border);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem;
+  font-size: 0.9rem;
+}
+    /* ── TooToo Simple: repo shelf (single-user build) ── */
+    :root {
+      --font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+    }
+
+    #repoShelf {
+      border-bottom: 1px solid var(--border-color);
+      max-height: 45vh;
+      overflow-y: auto;
+    }
+
+    #repoShelf summary {
+      color: var(--text-color);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      user-select: none;
+    }
+
+    .shelf-row {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      cursor: pointer;
+      display: block;
+      font-family: inherit;
+      font-size: 0.85rem;
+      overflow: hidden;
+      padding: 0.25rem 0.75rem 0.25rem 1.6rem;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .shelf-row:hover { background: var(--hover-bg); }
+
+    .shelf-row.active {
+      background: var(--active-bg);
+      color: var(--active-fg);
+    }
+
+    #shelfResizer {
+      background: var(--border-color);
+      cursor: row-resize;
+      flex: 0 0 auto;
+      height: 5px;
+      touch-action: none;
+    }
+
+    #shelfResizer:hover { background: var(--highlight-color); }
+
+    /* header title segments are live links, styled like the plain title */
+    #headerTitle a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #headerTitle a:hover { text-decoration: underline; }
+
+    /* the sidebar's files header matches the shelf summary above it */
+    #filesPanelHeader { padding: 0.25rem 0.75rem; }
+
+    #filesPanelHeader h3 {
+      color: var(--text-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <button id="btnToggleSidebar" class="header-btn" title="Close sidebar (Ctrl/⌘ B)" aria-label="Toggle sidebar"
+      aria-controls="sidebar" aria-expanded="true">☰</button>
+    <a id="headerGitHub" href="." title="theo-armour on GitHub" aria-label="theo-armour on GitHub">
+      <!-- App brand mark: the deployment's favicon.ico (static; the standalone
+           harness rewrites the src to ../../favicon.ico). aria-hidden: the anchor's
+           aria-label names the link. -->
+      <img id="headerBrand" src="theo-logo.ico" width="18" height="18" alt="" aria-hidden="true">
+    </a>
+
+    <span id="headerTitle">TooToo</span>
+
+    <!-- Branch switcher: hidden in markup until branches load, then sidebar.js fills
+         #branchName + the menu and unhides it (header markup, sidebar.js owns the
+         behavior). The dev harness below toggles it standalone for preview. -->
+    <span class="branch-control">
+      <button id="btnBranch" class="branch-switcher" type="button" hidden aria-haspopup="listbox" aria-expanded="false"
+        title="Switch branch">
+        <span class="branch-glyph" aria-hidden="true">⎇</span>
+        <span id="branchName"></span>
+        <span class="branch-caret" aria-hidden="true">▾</span>
+      </button>
+      <div id="branchMenu" class="branch-menu" role="listbox" aria-label="Branches" hidden></div>
+    </span>
+
+    <span id="headerSubtitle" class="header-subtitle" hidden></span>
+
+    <button id="btnDarkMode" class="header-btn dark-mode-btn" title="Toggle Dark Mode"
+      aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+    <button id="btnFontDec" class="header-btn" title="Decrease Font Size" aria-label="Decrease font size">A−</button>
+    <button id="btnFontInc" class="header-btn" title="Increase Font Size" aria-label="Increase font size">A+</button>
+    <button id="btnHelp" class="header-btn" title="About this app" aria-label="About this app"
+      aria-pressed="false">?</button>
+    <button id="btnToken" class="header-btn" title="GitHub API rate limit — click to set a token"
+      aria-label="Set GitHub personal access token" aria-pressed="false">⚙️</button>
+    <div id="rateBadge" class="rate-limit-badge" title="API Rate Limit" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <div class="sidebar" id="sidebar">
+      <div id="repoShelf"></div>
+      <div id="shelfResizer" title="Drag to resize the repo shelf · double-click to reset"></div>
+      <div class="panel-header" id="filesPanelHeader">
+        <h3 id="hFiles">Files</h3>
+        <button id="btnExpandAll" class="file-btn" style="display: none;" title="Expand all folders"
+          aria-label="Expand all folders">⊞</button>
+      </div>
+      <div class="filter-wrap">
+        <label for="treeFilter" class="sr-only">Filter files by name</label>
+        <input type="text" id="treeFilter" placeholder="Filter files…" title="Filter files by name">
+        <button id="btnFilterClear" title="Clear filter" aria-label="Clear filter">✕</button>
+      </div>
+      <div id="treeList"></div>
+      <div class="sidebar-footer">
+        <button id="btnScrollTreeTop" type="button" title="Scroll sidebar to top" aria-label="Scroll sidebar to top">
+          <img src="theo-logo.ico" alt="" width="20" height="20">
+        </button>
+      </div>
+    </div>
+    <div class="resizer" id="resizer" title="Drag to Resize Sidebar"></div>
+    <div class="content-area" id="contentArea">
+      <div class="panel-header file-header">
+        <h3 id="contentTitle">Content</h3>
+      </div>
+      <div id="printTitle" class="print-only"></div>
+      <div id="contentBody">
+        <p>Select a file from the list to preview it here.</p>
+      </div>
+      <button id="btnBackToTop" class="back-to-top" aria-label="Back to top" title="Back to Top">↑</button>
+      <footer class="app-footer">
+    <span class="app-footer-brand">
+      <img class="app-footer-mark" src="theo-logo.ico" width="18" height="18" alt="">
+      <span id="footerCopyright"></span>
+    </span>
+    <a class="app-footer-license" href="https://opensource.org/licenses" target="_blank" rel="noopener">License</a>
+  </footer>
+    </div>
+  </main>
+
+  <script>
+    /* TooToo — core.js  (shared services, no DOM, no UI).
+   In the real app these live in the core layer (reference §1, §15, §16, §18-helpers).
+   Only the helpers the carved components need are here for now; this file grows
+   as we carve. Per ARCHITECTURE.md, core is the single owner of CONFIG + state
+   and the shared utilities every component reads. */
+
+/* ── CONFIG + state (core OWNS these; populated by config.js for the assembled
+   live build, or by mock-data.js for the offline standalone component pages) ── */
+const CONFIG = {
+  owner: '', repo: '', branch: '',
+  appName: 'TooToo', subtitle: '',
+  themeColor: '',           // empty = the CSS default (blue) — and lets body.dark-mode's
+  // brighter #3b82f6 win; a fork's explicit color applies to both modes
+  headingFontUrl: '', headingFont: '',
+  sourceRepoUrl: 'https://github.com/pushme-pullyou/tootoo',
+  storagePrefix: 'tootoo',
+  hiddenFolders: [], hiddenFiles: [ 'tootoo.config.js' ],
+  autoOpenFolderReadme: true,  // expanding a folder opens its own README the first time (set false to disable)
+  // Footer rights line appended after "© <year> <owner>". rightsOwners scopes WHICH
+  // owners it shows for: null = every repo (default), an array = only those owner logins
+  // (case-insensitive), [] = never. So a fork can assert its rights only on its own repos.
+  rightsText: 'No rights reserved', rightsOwners: null,
+};
+const state = { owner: '', repo: '', branch: '', tree: null, currentFilePath: '', repoUpdated: '', oversized: false };
+
+/* ── escape for safe innerHTML ── */
+const escapeHTML = ( s ) =>
+  String( s ).replace( /[&<>"']/g, ( c ) =>
+    ( { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ c ] ) );
+
+/* ── folder/file display name: hyphens shown as spaces ── */
+const displayTreeName = ( name ) => name.replace( /-/g, ' ' );
+
+/* ── file type icons ── */
+const getFileIcon = ( fileName ) => {
+  const ext = fileName.includes( '.' ) ? '.' + fileName.split( '.' ).pop().toLowerCase() : '';
+  const iconMap = {
+    '.md': '📝',
+    '.js': '🟨', '.mjs': '🟨', '.cjs': '🟨',
+    '.ts': '🟦', '.tsx': '🟦',
+    '.py': '🐍',
+    '.html': '🌐', '.htm': '🌐',
+    '.css': '🎨', '.scss': '🎨', '.less': '🎨',
+    '.png': '🖼️', '.jpg': '🖼️', '.jpeg': '🖼️', '.gif': '🖼️', '.webp': '🖼️', '.svg': '🖼️', '.ico': '🖼️',
+    '.mp3': '🎵', '.wav': '🎵', '.ogg': '🎵',
+    '.mp4': '🎬', '.webm': '🎬',
+    '.pdf': '📕',
+    '.xlsx': '📊', '.xls': '📊', '.csv': '📊', '.ods': '📊',
+    '.yaml': '⚙️', '.yml': '⚙️', '.toml': '⚙️',
+    '.zip': '📦', '.tar': '📦', '.gz': '📦', '.7z': '📦',
+    '.json': '{ }',
+  };
+  return iconMap[ ext ] || '📄';
+};
+
+/* ── human file size ── */
+const formatFileSize = ( bytes ) => {
+  if ( bytes == null ) return '';
+  if ( bytes < 1024 ) return `${ bytes } B`;
+  if ( bytes < 1024 * 1024 ) return `${ ( bytes / 1024 ).toFixed( 1 ) } KB`;
+  return `${ ( bytes / ( 1024 * 1024 ) ).toFixed( 1 ) } MB`;
+};
+
+/* ── friendly file-type label (for tooltips) ── */
+const FILE_TYPE_LABELS = {
+  md: 'Markdown', markdown: 'Markdown', mkd: 'Markdown', mdown: 'Markdown',
+  js: 'JavaScript', mjs: 'JavaScript', cjs: 'JavaScript', jsx: 'JavaScript',
+  ts: 'TypeScript', tsx: 'TypeScript',
+  py: 'Python', rb: 'Ruby', go: 'Go', rs: 'Rust', java: 'Java', kt: 'Kotlin',
+  c: 'C', h: 'C header', cpp: 'C++', cc: 'C++', hpp: 'C++ header', cs: 'C#', php: 'PHP', swift: 'Swift',
+  sh: 'Shell', bash: 'Shell', zsh: 'Shell', pl: 'Perl', lua: 'Lua', r: 'R', sql: 'SQL',
+  html: 'HTML', htm: 'HTML', css: 'CSS', scss: 'Sass', less: 'Less',
+  json: 'JSON', xml: 'XML', yaml: 'YAML', yml: 'YAML', toml: 'TOML', ini: 'INI',
+  csv: 'CSV', tsv: 'TSV', txt: 'Text', log: 'Log',
+  png: 'PNG image', jpg: 'JPEG image', jpeg: 'JPEG image', gif: 'GIF image',
+  webp: 'WebP image', svg: 'SVG image', ico: 'Icon',
+  mp3: 'Audio', wav: 'Audio', ogg: 'Audio', mp4: 'Video', webm: 'Video',
+  pdf: 'PDF', xlsx: 'Spreadsheet', xls: 'Spreadsheet', ods: 'Spreadsheet',
+  zip: 'Archive', tar: 'Archive', gz: 'Archive', '7z': 'Archive',
+};
+const getFileTypeLabel = ( name ) => {
+  const ext = name.includes( '.' ) ? name.split( '.' ).pop().toLowerCase() : '';
+  return FILE_TYPE_LABELS[ ext ] || ( ext ? `${ ext.toUpperCase() } file` : 'File' );
+};
+
+/* ── hidden-from-tree config (CONFIG.hiddenFolders / hiddenFiles) ── */
+const hiddenFolderSet = () => new Set( ( CONFIG.hiddenFolders || [] ).map( ( s ) => s.toLowerCase() ) );
+const hiddenFileSet = () => new Set( ( CONFIG.hiddenFiles || [] ).map( ( s ) => s.toLowerCase() ) );
+
+/* Dotfiles/dotfolders and CONFIG-hidden names are dropped from the sidebar. A hiddenFiles
+   entry hides that bare name wherever it appears, unless it starts with '/', which anchors
+   it to the repo root — so '/index.html' hides only the root file, not nested ones. */
+const isVisibleTreeItem = ( item, folders, files ) => {
+  const parts = item.path.split( '/' );
+  if ( parts.some( ( p ) => p.startsWith( '.' ) || folders.has( p.toLowerCase() ) ) ) return false;
+  if ( item.type !== 'blob' ) return true;
+  const name = parts[ parts.length - 1 ].toLowerCase();
+  return !( files.has( name ) || files.has( '/' + item.path.toLowerCase() ) );
+};
+
+/* ── extension constants (reference §3) — used by the content file-header ── */
+const IMAGE_EXTS = [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico' ];
+const AUDIO_EXTS = [ 'mp3', 'wav', 'ogg' ];
+const VIDEO_EXTS = [ 'mp4', 'webm' ];
+const SHEET_EXTS = [ 'xlsx', 'xls', 'csv', 'ods' ];
+const STREAMABLE_EXTS = [ ...IMAGE_EXTS, ...AUDIO_EXTS, ...VIDEO_EXTS, 'pdf' ];
+const NO_COPY_EXTS = [ ...STREAMABLE_EXTS, ...SHEET_EXTS ];
+const MARKDOWN_EXTS = [ 'md', 'markdown', 'mkd', 'mdown', 'mkdn' ];
+const TAB_VIEWABLE_EXTS = [
+  'html', 'htm', 'pdf', 'txt', 'text', ...MARKDOWN_EXTS,
+  ...IMAGE_EXTS, ...AUDIO_EXTS, ...VIDEO_EXTS,
+  'js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'css', 'scss', 'less',
+  'xml', 'yaml', 'yml', 'toml', 'ini', 'cfg', 'conf', 'env',
+  'py', 'rb', 'go', 'rs', 'java', 'kt', 'c', 'h', 'cpp', 'cc', 'hpp',
+  'cs', 'php', 'sh', 'bash', 'zsh', 'sql', 'pl', 'lua', 'r', 'swift', 'log',
+];
+const isDownloadAction = ( ext ) => !TAB_VIEWABLE_EXTS.includes( ext );
+const isTextOpenAsPlain = ( ext ) =>
+  !ext || MARKDOWN_EXTS.includes( ext ) || [ 'obj', 'stl', 'mtl' ].includes( ext );
+
+/* ── encode an in-repo path for a URL (keep the slashes) ── */
+const encodePath = ( p ) => p.split( '/' ).map( encodeURIComponent ).join( '/' );
+
+/* ── extension of a repo path, from the FILE NAME only — a dotted folder name must
+   not bleed into the ext of an extensionless file (notes.2026/README ≠ ext "2026/readme"). ── */
+const extOf = ( path ) => {
+  const name = path.split( '/' ).pop();
+  return name.includes( '.' ) ? name.split( '.' ).pop().toLowerCase() : '';
+};
+
+/* ── blob URL tracking + revocation (reference §5) — revoked on each navigate
+   so media/PDF blobs don't leak as you browse. ── */
+const blobUrls = new Set();
+const createBlobUrl = ( blob ) => { const u = URL.createObjectURL( blob ); blobUrls.add( u ); return u; };
+const revokeAllBlobUrls = () => {
+  for ( const u of blobUrls ) { try { URL.revokeObjectURL( u ); } catch ( _ ) { /* noop */ } }
+  blobUrls.clear();
+};
+
+/* ── GitHub mark, for the content file-header link ── */
+const GITHUB_SVG_ICON =
+  `<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>`;
+
+/* ── favicon: nothing is generated anymore. A real favicon.ico is assumed to sit
+   next to index.html in every deployment (the <head> link and the header/footer/
+   sidebar brand <img>s all point at it statically). assemble.ps1 creates a TT-mark
+   placeholder when the dev folder lacks one; forks ship their own. ── */
+
+/* ── optional heading typeface (reference §11): load CONFIG.headingFontUrl into
+   <head> and set --heading-font, which the h1–h6/#headerTitle CSS already consumes.
+   Omitting either knob is a no-op (the var falls back to the body font). ── */
+const applyHeadingFont = () => {
+  if ( CONFIG.headingFontUrl ) {
+    const link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.href = CONFIG.headingFontUrl;
+    document.head.appendChild( link );
+  }
+  if ( CONFIG.headingFont ) {
+    document.documentElement.style.setProperty( '--heading-font', CONFIG.headingFont );
+  }
+};
+
+/* ── per-extension Rendered/Raw preference (reference §7) ──
+   '.htm' and '.html' are the same format with the same renderer, so they share
+   one stored preference (keyed as 'html'); Markdown extensions share 'md'. ── */
+const viewPrefKey = ( ext ) => `${ CONFIG.storagePrefix || 'tootoo' }:viewPref:${ MARKDOWN_EXTS.includes( ext ) ? 'md' : ext === 'htm' ? 'html' : ext }`;
+const getPreferredView = ( ext ) => {
+  try { return localStorage.getItem( viewPrefKey( ext ) ) || 'rendered'; } catch ( _ ) { return 'rendered'; }
+};
+const setPreferredView = ( ext, view ) => {
+  try { localStorage.setItem( viewPrefKey( ext ), view ); } catch ( _ ) { /* storage disabled */ }
+};
+
+/* ===================================================================
+   DATA LAYER  (carved 2026-06-21) — GitHub services + repo detection.
+   Includes: GitHub REST (tree + default branch), raw.githubusercontent file
+   fetch (text / blob / arraybuffer) with an in-memory cache + request abort,
+   optional token auth, hash routing, and a simplified local file:// mode.
+   Repo detection is query-param / CONFIG / .git/config — NOT yet GitHub Pages
+   hostname detection (see PARITY.md blockers).
+   =================================================================== */
+
+/* ── request abort (cancel in-flight fetch when navigating away) ── */
+// Tree and content loads get separate controllers: opening a file must never cancel
+// a tree load still in flight (that left the sidebar stuck on "Loading tree…").
+const requests = { tree: null, content: null };
+const newAbort = ( forContent = true ) => {
+  requests.content?.abort();             // any new load replaces the file view
+  if ( !forContent ) requests.tree?.abort();
+  const controller = new AbortController();
+  requests[ forContent ? 'content' : 'tree' ] = controller;
+  return controller.signal;
+};
+// Opening an info panel cancels content without interrupting the repository tree.
+const cancelContentLoad = () => requests.content?.abort();
+
+/* ── in-memory file-text cache (per session; capped, FIFO eviction) ── */
+const fileTextCache = new Map();
+const cacheKey = ( path ) => `${ state.owner }/${ state.repo }/${ state.branch }/${ path }`;
+const cachePut = ( key, text ) => {
+  fileTextCache.set( key, text );
+  if ( fileTextCache.size > 50 ) fileTextCache.delete( fileTextCache.keys().next().value );
+};
+const clearFileCache = () => fileTextCache.clear();
+
+/* ── GitHub token (optional, from localStorage) ── */
+const tokenStorageKey = () => `${ CONFIG.storagePrefix }:${ location.pathname }:githubToken`;
+const getToken = () => {
+  try { return localStorage.getItem( tokenStorageKey() ) || ''; } catch ( _ ) { return ''; }
+};
+const ghHeaders = () => {
+  const h = { Accept: 'application/vnd.github+json' };
+  const t = getToken();
+  if ( t ) h.Authorization = `token ${ t }`;
+  return h;
+};
+
+/* ── live API rate badge ── */
+const updateRateBadge = ( res ) => {
+  const remaining = res.headers.get( 'X-RateLimit-Remaining' );
+  const limit = res.headers.get( 'X-RateLimit-Limit' );
+  if ( remaining === null || limit === null ) return;
+  const n = parseInt( remaining, 10 );
+
+  // Live count lives in the ⚙️ tooltip; the header badge surfaces it when low.
+  const tokenBtn = document.getElementById( 'btnToken' );
+  if ( tokenBtn ) tokenBtn.title = `${ remaining }/${ limit } GitHub API requests left this hour — click to set a token`;
+
+  // The header badge only surfaces as a warning when low (≤30) / critical (≤10).
+  const badge = document.getElementById( 'rateBadge' );
+  if ( badge ) {
+    badge.textContent = `${ remaining }/${ limit }`;
+    badge.classList.toggle( 'critical', n <= 10 );
+    badge.classList.toggle( 'low', n > 10 && n <= 30 );
+    badge.style.display = n <= 30 ? 'inline-block' : 'none';
+  }
+};
+
+/* ── GitHub REST call (JSON) ── */
+const ghApi = async ( url, signal ) => {
+  const res = await fetch( url, { headers: ghHeaders(), signal } );
+  updateRateBadge( res );
+  if ( res.status === 403 ) {
+    const err = new Error( 'Rate limited. Add a GitHub token for higher limits.' );
+    err.status = 403;
+    throw err;
+  }
+  if ( res.status === 404 ) {
+    const err = new Error( 'Not found (private repo, or wrong owner/repo/branch).' );
+    err.status = 404;
+    throw err;
+  }
+  if ( !res.ok ) throw new Error( `GitHub API error: ${ res.status }` );
+  return res.json();
+};
+
+/* ── file URLs + fetchers ── */
+const rawUrl = ( path ) =>
+  `https://raw.githubusercontent.com/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/${ encodeURIComponent( state.branch ) }/${ encodePath( path ) }`;
+
+// Contents API URL (used WITH a token): returns file content the token is authorized
+// for — including PRIVATE repos, which raw.githubusercontent.com refuses to serve.
+const contentsApiUrl = ( path ) =>
+  `https://api.github.com/repos/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/contents/${ encodePath( path ) }?ref=${ encodeURIComponent( state.branch ) }`;
+
+/* Fetch a file's Response — local-first (file:// drop-in), then GitHub. With a token
+   we go through the Contents API (Accept: raw) so PRIVATE repos work — raw.github
+   usercontent.com only serves public content; anonymous falls back to raw. */
+const fetchFileResponse = async ( path, signal ) => {
+  const local = localUrlFor( path );
+  if ( local ) {
+    try { const r = await fetch( local, { signal } ); if ( r.ok ) return r; }
+    catch ( e ) { if ( e.name === 'AbortError' ) throw e; /* fall through to GitHub */ }
+  }
+  let res;
+  if ( getToken() ) {
+    res = await fetch( contentsApiUrl( path ), { headers: { ...ghHeaders(), Accept: 'application/vnd.github.raw+json' }, signal } );
+    updateRateBadge( res );   // counts against the API quota, unlike raw
+  } else {
+    res = await fetch( rawUrl( path ), { signal } );
+  }
+  if ( !res.ok ) throw new Error( `Failed to load ${ path }: ${ res.status }` );
+  return res;
+};
+
+const fetchFileText = async ( path, signal ) => {
+  // Offline standalone pages define mockFiles; never hit the network there.
+  if ( typeof mockFiles !== 'undefined' ) {
+    if ( mockFiles[ path ] != null ) return mockFiles[ path ];
+    throw new Error( `File not found: ${ path }` );
+  }
+  const key = cacheKey( path );
+  if ( fileTextCache.has( key ) ) return fileTextCache.get( key );
+  const text = await ( await fetchFileResponse( path, signal ) ).text();
+  cachePut( key, text );
+  return text;
+};
+
+/* Media src for <img>/<audio>/<video>. Local → local path; with a token → fetch via
+   the Contents API and hand back a blob: URL (so PRIVATE-repo media loads); anonymous
+   → the public raw URL. Async because the token path fetches the bytes. */
+const resolveMediaUrl = async ( path, signal ) =>
+  localUrlFor( path ) || ( getToken() ? await fetchFileBlob( path, null, signal ) : rawUrl( path ) );
+
+/* ── binary fetch for media / spreadsheets, with correct MIME for inline view
+   (raw.githubusercontent serves octet-stream, which the browser would download;
+   re-wrapping the blob with the right type lets <audio>/<video>/<iframe> play). ── */
+const MIME = {
+  wav: 'audio/wav', mp3: 'audio/mpeg', ogg: 'audio/ogg',
+  mp4: 'video/mp4', webm: 'video/webm', pdf: 'application/pdf',
+};
+const fetchFileBlob = async ( path, mime, signal ) => {
+  let blob = await ( await fetchFileResponse( path, signal ) ).blob();
+  if ( mime ) blob = new Blob( [ blob ], { type: mime } );
+  return createBlobUrl( blob );
+};
+const fetchFileArrayBuffer = async ( path, signal ) =>
+  new Uint8Array( await ( await fetchFileResponse( path, signal ) ).arrayBuffer() );
+
+/* ── local file:// mode (drop-in next to a checkout) ──
+   Assumes the app sits at the repo ROOT, so files are siblings ('./path') and
+   .git/config is './.git/config'. The tree still comes from the GitHub API (a
+   directory can't be enumerated over file://); local mode sources FILE CONTENTS
+   from disk and seeds owner/repo from .git/config. Needs a GitHub remote + a
+   browser that allows file:// fetches (Chrome --allow-file-access-from-files). ── */
+let localMode = false;
+const localRepo = { owner: '', repo: '', branch: '' };
+let fileAccessBlocked = false;   // file:// reads denied (Chrome missing --allow-file-access-from-files)
+const detectLocalMode = async () => {
+  if ( location.protocol !== 'file:' ) return;
+  try {
+    const res = await fetch( '.git/config' );
+    if ( !res.ok ) return;
+    const text = await res.text();
+    // Match the origin URL — https + ssh (git@), repo names with dots, an optional
+    // .git suffix and trailing slash, anchored to the end of the line.
+    const m = text.match( /github\.com[:/]+([\w.-]+)\/([\w.-]+?)(?:\.git)?\/?\s*$/im );
+    // Local .git/config wins over the static CONFIG default (canonical precedence:
+    // .git/config beats CONFIG_DEFAULTS). Query params still override in detectRepo.
+    if ( m ) {
+      localRepo.owner = m[ 1 ]; localRepo.repo = m[ 2 ];
+      // Use the checked-out branch (or detached commit), not the remote default.
+      // If HEAD is unreadable, use remote files rather than guess what's on disk.
+      try {
+        const headResponse = await fetch( '.git/HEAD' );
+        const head = headResponse.ok ? ( await headResponse.text() ).trim() : '';
+        localRepo.branch = head.startsWith( 'ref: refs/heads/' )
+          ? head.slice( 'ref: refs/heads/'.length ) : /^[a-f0-9]{40,64}$/i.test( head ) ? head : '';
+      } catch ( _ ) { localRepo.branch = ''; }
+      CONFIG.owner = localRepo.owner; CONFIG.repo = localRepo.repo; CONFIG.branch = localRepo.branch;
+    }
+    else { CONFIG.owner = ''; CONFIG.repo = ''; }   // in a git repo but no GitHub remote → ask, don't silently load tootoo
+    localMode = true;
+  } catch ( _ ) {
+    // .git/config wasn't readable. Over file:// that's ambiguous: either there's no
+    // git repo here, or Chrome is blocking ALL local reads (no --allow-file-access-
+    // from-files). Disambiguate by probing a file we KNOW exists — this very page.
+    // If even that read is blocked, the flag is missing → flag it so the UI explains
+    // instead of silently browsing the configured default repo (the confusing case).
+    try { await fetch( location.href.split( '#' )[ 0 ] ); /* readable → genuinely no .git here */ }
+    catch ( _e ) { fileAccessBlocked = true; }
+  }
+};
+const isLocalRepo = () => localMode && state.owner.toLowerCase() === localRepo.owner.toLowerCase()
+  && state.repo.toLowerCase() === localRepo.repo.toLowerCase();
+const localUrlFor = ( path ) => isLocalRepo() && localRepo.branch && state.branch === localRepo.branch
+  ? './' + encodePath( path ) : null;
+
+/* ── per-pathname storage + repo cache (reference §4) ── */
+const storageKey = ( suffix ) => `${ CONFIG.storagePrefix }:${ location.pathname }:${ suffix }`;
+const repoCacheKey = () => storageKey( 'repo' );
+const cacheRepo = () => {
+  try { localStorage.setItem( repoCacheKey(), JSON.stringify( { owner: state.owner, repo: state.repo, branch: state.branch, updated: state.repoUpdated } ) ); }
+  catch ( _ ) { /* storage disabled */ }
+};
+/* ── home repo: what this page browses with no URL params (tootoo.config.js / .git seed),
+   captured before params apply. Permalinks leave out ?owner/repo/branch that match it. ── */
+const homeRepo = { owner: '', repo: '', branch: '', defaultBranch: '' };
+const isHomeRepo = () => !!homeRepo.owner && !!homeRepo.repo
+  && state.owner.toLowerCase() === homeRepo.owner.toLowerCase()
+  && state.repo.toLowerCase() === homeRepo.repo.toLowerCase();
+// '' while unknown (no seeded branch and the default not yet fetched).
+const homeBranch = () => homeRepo.branch || homeRepo.defaultBranch;
+
+const applyRepo = () => { state.owner = CONFIG.owner; state.repo = CONFIG.repo; state.branch = CONFIG.branch; };
+
+/* ── repo detection (reference §9): params → CONFIG (incl. the local .git/config
+   seed) → GitHub Pages hostname → localStorage cache → manual entry form. The host
+   beats the cache so a bare Pages URL always returns to the repo it's served from,
+   not the last ?owner=… permalink opened there. ── */
+const detectRepo = async () => {
+  const p = new URLSearchParams( location.search );
+  Object.assign( homeRepo, { owner: CONFIG.owner, repo: CONFIG.repo, branch: CONFIG.branch } );
+  if ( p.get( 'owner' ) ) CONFIG.owner = p.get( 'owner' );
+  if ( p.get( 'repo' ) ) CONFIG.repo = p.get( 'repo' );
+  // A different requested repository must not inherit the checkout's branch.
+  if ( localMode && ( CONFIG.owner.toLowerCase() !== localRepo.owner.toLowerCase()
+    || CONFIG.repo.toLowerCase() !== localRepo.repo.toLowerCase() ) ) CONFIG.branch = '';
+  if ( p.get( 'branch' ) ) CONFIG.branch = p.get( 'branch' );
+  if ( CONFIG.owner && CONFIG.repo ) { applyRepo(); return; }
+
+  // Deployed forks: <owner>.github.io/<repo>/ → browse the repo it's served from.
+  if ( location.hostname.endsWith( '.github.io' ) ) {
+    const owner = location.hostname.split( '.' )[ 0 ];
+    const segs = location.pathname.split( '/' ).filter( Boolean );
+    CONFIG.owner = owner;
+    CONFIG.repo = segs[ 0 ] || `${ owner }.github.io`;
+    applyRepo(); cacheRepo(); return;
+  }
+
+  try {
+    const cached = JSON.parse( localStorage.getItem( repoCacheKey() ) || 'null' );
+    if ( cached?.owner && cached?.repo ) {
+      CONFIG.owner = cached.owner; CONFIG.repo = cached.repo;
+      if ( cached.branch && !p.get( 'branch' ) ) CONFIG.branch = cached.branch;   // explicit ?branch= wins over cache
+      applyRepo();
+      if ( cached.updated ) state.repoUpdated = cached.updated;   // keep the title tooltip's repo date on cached loads
+      return;
+    }
+  } catch ( _ ) { /* malformed cache */ }
+
+  return promptForRepo();   // nothing detected — ask the user
+};
+
+const promptForRepo = () => new Promise( ( resolve ) => {
+  setContentHeader( makeSimpleHeader( 'Choose a repository' ) );
+  document.getElementById( 'contentBody' ).innerHTML = `
+    <div class="repo-form">
+      <p>Couldn't auto-detect a repository — enter one:</p>
+      <label for="inpOwner">GitHub owner</label>
+      <input id="inpOwner" type="text" placeholder="e.g. octocat" autocomplete="off">
+      <label for="inpRepo">Repository</label>
+      <input id="inpRepo" type="text" placeholder="e.g. hello-world" autocomplete="off">
+      <button id="btnSetRepo" class="primary">Open repository</button>
+    </div>`;
+  const go = () => {
+    const owner = document.getElementById( 'inpOwner' ).value.trim();
+    const repo = document.getElementById( 'inpRepo' ).value.trim();
+    if ( !owner || !repo ) return;
+    CONFIG.owner = owner; CONFIG.repo = repo; applyRepo(); cacheRepo(); resolve();
+  };
+  document.getElementById( 'btnSetRepo' ).addEventListener( 'click', go );
+  [ 'inpOwner', 'inpRepo' ].forEach( ( id ) =>
+    document.getElementById( id ).addEventListener( 'keydown', ( e ) => { if ( e.key === 'Enter' ) go(); } ) );
+} );
+
+/* ── resolve a repo-relative path against a directory (Markdown links/images).
+   Segments are percent-decoded: marked emits hrefs URL-encoded (spaces → %20), but
+   tree paths and fetch helpers work with the real file names. ── */
+const resolveRepoPath = ( href, currentDir ) => {
+  // Remove URL suffixes before decoding: an encoded '?' or '#' can belong to a filename.
+  const path = href.split( /[?#]/, 1 )[ 0 ];
+  const stack = !path.startsWith( '/' ) && currentDir ? currentDir.split( '/' ) : [];
+  for ( const part of path.split( '/' ) ) {
+    if ( part === '' || part === '.' ) continue;
+    if ( part === '..' ) stack.pop();
+    else stack.push( safeDecode( part ) );
+  }
+  return stack.join( '/' );
+};
+
+/* ── the file served LIVE on GitHub Pages, so index.html runs instead of showing
+   source (the app's own render/source toggle covers reading code). The special
+   <owner>.github.io repo serves from the domain root. ── */
+const pagesUrl = ( path ) => {
+  const owner = state.owner.toLowerCase();
+  const base = state.repo.toLowerCase() === `${ owner }.github.io`
+    ? `https://${ owner }.github.io`
+    : `https://${ owner }.github.io/${ encodeURIComponent( state.repo ) }`;
+  return `${ base }/${ encodePath( path ) }`;
+};
+
+/* ── URL to open in a new tab / download (reference §31, simplified): the local file
+   in drop-in mode; downloads keep the raw URL (direct save); everything else opens
+   the live GitHub Pages copy. ── */
+const getNewTabUrl = ( path ) => {
+  const local = localUrlFor( path );
+  if ( local ) return local;
+  const ext = path.includes( '.' ) ? path.split( '.' ).pop().toLowerCase() : '';
+  const willDownload = isDownloadAction( ext ) && !isTextOpenAsPlain( ext );
+  return willDownload ? rawUrl( path ) : pagesUrl( path );
+};
+
+const getDefaultBranch = async ( signal ) => {
+  const data = await ghApi( `https://api.github.com/repos/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }`, signal );
+  // Capture the repo's real last-push date so the header tooltip reflects the
+  // repo being viewed (incl. drop-in mode), not this file's static build date.
+  state.repoUpdated = data.pushed_at || '';
+  if ( isHomeRepo() ) homeRepo.defaultBranch = data.default_branch;
+  return data.default_branch;
+};
+
+/* ── hash routing ──
+   Address-bar format: #<path>#<anchor> — real slashes and readable characters, so the
+   URL is a clean permalink. Only characters that would break parsing or get silently
+   re-encoded by the browser are escaped ('%', '#', whitespace, '"<>`'). The FIRST raw
+   '#' inside the hash separates the file path from an in-file heading anchor. */
+const encodeHash = ( p ) => p.replace( /[%#"<>`\s]/g, ( c ) => encodeURIComponent( c ) );
+const safeDecode = ( s ) => { try { return decodeURIComponent( s ); } catch ( _ ) { return s; } };
+const parseHash = () => {
+  const raw = location.hash.replace( /^#/, '' );
+  const sep = raw.indexOf( '#' );
+  return sep >= 0
+    ? { path: safeDecode( raw.slice( 0, sep ) ), anchor: safeDecode( raw.slice( sep + 1 ) ) }
+    : { path: safeDecode( raw ), anchor: '' };
+};
+// Assigning location.hash (vs replaceState) creates a history entry so browser
+// back/forward navigate between files; the != guard avoids a redundant set/loop.
+// The FIRST navigation of a page load uses replaceState instead: the automatic
+// README/last-file open must not stack an entry on top of the hashless entry URL —
+// Back would land on that empty-hash state, which the router ignores, so the
+// button looked dead. Replacing keeps Back meaning "leave the page" until the
+// user has actually navigated between files.
+let hashNavigated = false;
+const updateHash = ( path, anchor = '' ) => {
+  const target = '#' + encodeHash( path ) + ( anchor ? '#' + encodeHash( anchor ) : '' );
+  if ( location.hash !== target ) {
+    try {
+      if ( hashNavigated ) location.hash = target;
+      else history.replaceState( null, '', target );
+    } catch ( _ ) { /* noop */ }
+  }
+  hashNavigated = true;
+};
+
+/* ── last-opened file (sessionStorage, per owner/repo/branch) ── */
+const getCurrentFileKey = () => storageKey( `currentFile:${ state.owner }/${ state.repo }/${ state.branch }` );
+const saveCurrentFile = ( path ) => { try { sessionStorage.setItem( getCurrentFileKey(), path ); } catch ( _ ) { /* storage off */ } };
+const clearCurrentFile = () => { try { sessionStorage.removeItem( getCurrentFileKey() ); } catch ( _ ) { /* storage off */ } };
+
+/* ── page-left timestamp (sessionStorage) — lets init tell a reload from a session-restore (main.js) ── */
+const sessionBeatKey = () => storageKey( 'sessionBeat' );
+
+/* ── repo statistics (reference §17) — for the About panel ── */
+const getRepoStats = () => {
+  if ( !state.tree ) return null;
+  const blobs = state.tree.filter( ( i ) => i.type === 'blob' );
+  const trees = state.tree.filter( ( i ) => i.type === 'tree' );
+  const totalSize = blobs.reduce( ( s, i ) => s + ( i.size || 0 ), 0 );
+  const extCounts = {};
+  for ( const b of blobs ) {
+    const name = b.path.split( '/' ).pop();
+    const ext = name.includes( '.' ) ? '.' + name.split( '.' ).pop().toLowerCase() : '(no ext)';
+    extCounts[ ext ] = ( extCounts[ ext ] || 0 ) + 1;
+  }
+  const topTypes = Object.entries( extCounts ).sort( ( a, b ) => b[ 1 ] - a[ 1 ] ).slice( 0, 10 );
+  const largest = [ ...blobs ].sort( ( a, b ) => ( b.size || 0 ) - ( a.size || 0 ) ).slice( 0, 5 );
+  return { fileCount: blobs.length, folderCount: trees.length, totalSize, topTypes, largest };
+};
+
+/* ── highlight.js theme follows dark mode (reference §10) ── */
+const setHljsTheme = ( isDark ) => {
+  const link = document.getElementById( 'hljsTheme' );
+  if ( !link ) return;
+  link.href = isDark
+    ? 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css'
+    : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css';
+};
+    /* TooToo — production config (used by `assemble.ps1 -Prod`).
+
+   Intentionally empty. Canonical index.html stays byte-identical across every fork;
+   each repo customizes via its own tootoo.config.js (window.TOOTOO_CONFIG), merged
+   over the CONFIG defaults at init.
+
+   The dev build uses config.js instead, which bakes a default repo + dev identity so
+   the standalone assembled file is testable without a tootoo.config.js sibling or a
+   .git/config to detect. */
+    /* TooToo — header.js  (the "where are we?" component).
+   Ported from reference §8 (updateHeaderFromConfig) + appearance controls (§11).
+   Reads: CONFIG + meta[revised]. Writes: state.owner/repo/branch (repo/branch
+   pickers not built yet). Depends on globals CONFIG/state. */
+
+// Header title tooltip. Prefers the VIEWED repo's last-push date (set by
+// getDefaultBranch) so a dropped-in copy reflects that repo, not this file's static
+// build date; falls back to meta[revised] before the repo loads / if the API fails.
+const setHeaderTimestamp = () => {
+  const titleEl = document.getElementById( 'headerTitle' );
+  if ( !titleEl ) return;
+  let when;
+  if ( state.repoUpdated ) {
+    const d = new Date( state.repoUpdated );
+    when = isNaN( d.getTime() ) ? state.repoUpdated : d.toLocaleString();
+  } else {
+    when = document.querySelector( 'meta[name="revised"]' )?.content || 'unknown';
+  }
+  titleEl.title = `Last updated: ${ when }`;
+};
+
+const updateHeaderFromConfig = () => {
+  if ( CONFIG.themeColor ) {
+    document.documentElement.style.setProperty( '--highlight-color', CONFIG.themeColor );
+    document.body?.style.setProperty( '--highlight-color', CONFIG.themeColor );
+  }
+  // Once a repo is known, the header shows owner / repo; appName is the fallback
+  // shown only before detection (reference §8 uses APP_ORIGIN for the same effect).
+  const label = ( state.owner && state.repo ) ? `${ state.owner } / ${ state.repo }` : CONFIG.appName;
+  const titleEl = document.getElementById( 'headerTitle' );
+  const subtitleEl = document.getElementById( 'headerSubtitle' );
+  document.title = CONFIG.subtitle ? `${ label } · ${ CONFIG.subtitle }` : label;
+  // Render owner / repo as two nowrap segments so a narrow header can wrap at the
+  // slash (either side) instead of forcing one long unbreakable line.
+  // Each segment is a live link: owner → the owner's github.io home, repo → that
+  // repo's live GitHub Pages site (the brand icon beside them → github.com).
+  if ( state.owner && state.repo ) {
+    const ownerSite = `https://${ state.owner.toLowerCase() }.github.io`;
+    const repoSite = state.repo.toLowerCase() === `${ state.owner.toLowerCase() }.github.io`
+      ? ownerSite
+      : `${ ownerSite }/${ encodeURIComponent( state.repo ) }`;
+    titleEl.innerHTML =
+      `<a class="title-seg" href="${ ownerSite }" target="_blank" rel="noopener" title="${ escapeHTML( ownerSite ) }">${ escapeHTML( state.owner ) }</a>` +
+      ` / ` +
+      `<a class="title-seg" href="${ repoSite }" target="_blank" rel="noopener" title="${ escapeHTML( repoSite ) }">${ escapeHTML( state.repo ) }</a>`;
+  } else {
+    titleEl.textContent = CONFIG.appName;
+  }
+  setHeaderTimestamp();
+  if ( subtitleEl ) {
+    if ( CONFIG.subtitle ) {
+      subtitleEl.textContent = '· ' + CONFIG.subtitle;
+      subtitleEl.hidden = false;
+    } else {
+      subtitleEl.textContent = '';
+      subtitleEl.hidden = true;
+    }
+  }
+};
+
+/* Header owns the sidebar toggle (Ctrl/⌘ B + the ☰ button both call this). */
+const updateSidebarToggle = ( hidden ) => {
+  const btn = document.getElementById( 'btnToggleSidebar' );
+  if ( !btn ) return;
+  btn.setAttribute( 'aria-expanded', String( !hidden ) );
+  btn.title = hidden ? 'Open sidebar (Ctrl/⌘ B)' : 'Close sidebar (Ctrl/⌘ B)';
+};
+const toggleSidebar = () => {
+  const hidden = document.body.classList.toggle( 'sidebar-hidden' );
+  updateSidebarToggle( hidden );
+  try { localStorage.setItem( storageKey( 'sidebarHidden' ), hidden ); } catch ( _ ) { /* storage off */ }
+};
+
+const initHeaderControls = () => {
+  document.getElementById( 'btnDarkMode' )?.addEventListener( 'click', ( e ) => {
+    const isDark = document.body.classList.toggle( 'dark-mode' );
+    e.currentTarget.textContent = isDark ? '☀️' : '🌙';
+    e.currentTarget.setAttribute( 'aria-pressed', String( isDark ) );   // tell AT the toggle's on/off state
+    setHljsTheme( isDark );
+    try { localStorage.setItem( storageKey( 'darkMode' ), isDark ); } catch ( _ ) { /* storage off */ }
+  } );
+
+  // Font size: read the live value, step ±2 (10–36), persist, and show the
+  // current size in the A−/A+ tooltips.
+  const getFontSize = () => parseInt( getComputedStyle( document.documentElement ).getPropertyValue( '--font-size' ), 10 ) || 16;
+  const updateFontTitles = ( sz ) => {
+    const dec = document.getElementById( 'btnFontDec' );
+    const inc = document.getElementById( 'btnFontInc' );
+    if ( dec ) dec.title = `Decrease text size — currently ${ sz }px`;
+    if ( inc ) inc.title = `Increase text size — currently ${ sz }px`;
+  };
+  const setFont = ( sz ) => {
+    document.documentElement.style.setProperty( '--font-size', sz + 'px' );
+    try { localStorage.setItem( storageKey( 'fontSize' ), sz + 'px' ); } catch ( _ ) { /* storage off */ }
+    updateFontTitles( sz );
+  };
+  document.getElementById( 'btnFontDec' )?.addEventListener( 'click', () => setFont( Math.max( getFontSize() - 2, 10 ) ) );
+  document.getElementById( 'btnFontInc' )?.addEventListener( 'click', () => setFont( Math.min( getFontSize() + 2, 36 ) ) );
+  updateFontTitles( getFontSize() );   // seed the tooltips with the current size
+
+  document.getElementById( 'btnHelp' )?.addEventListener( 'click', () => toggleInfoPanel( 'about' ) );
+  document.getElementById( 'btnToken' )?.addEventListener( 'click', () => toggleInfoPanel( 'token' ) );
+  document.getElementById( 'btnToggleSidebar' )?.addEventListener( 'click', toggleSidebar );
+
+  // (tootoo-simple: the title is no longer a reset-to-home link — its owner/repo
+  // segments are live links to the github.io sites; the shelf's home row resets.)
+  document.getElementById( 'headerGitHub' )?.setAttribute( 'href', CONFIG.sourceRepoUrl || '#' );
+};
+
+/* ── token panel (header owns the dialog; it renders into the content area) ── */
+const showTokenPanel = ( reasonHtml = '' ) => {
+  const cb = document.getElementById( 'contentBody' );
+  if ( !cb ) return;   // standalone header page has no content area
+  const current = getToken();
+  const hasToken = current.length > 0;
+  setContentHeader( makeSimpleHeader( 'GitHub Token' ) );
+  cb.innerHTML = `
+    ${ reasonHtml }
+    <div class="markdown-body">
+      <div class="repo-form">
+        <label for="inpToken">Token${ hasToken ? ' (currently set)' : '' }</label>
+        <input id="inpToken" type="password" placeholder="${ hasToken ? '•••••••• (leave blank to keep)' : 'ghp_…' }" autocomplete="off" spellcheck="false">
+        <label><input id="inpTokenShow" type="checkbox"> Show token</label>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button id="btnTokenSave" class="primary" title="Save token and reload">Save</button>
+          <button id="btnTokenClear" class="secondary" title="Clear stored token">Clear</button>
+        </div>
+      </div>
+      <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-color);">
+      <p>${ escapeHTML( CONFIG.appName ) } reads the GitHub REST API to list and fetch repository contents. GitHub limits anonymous (un-authenticated) access to <strong>60 requests per hour per IP address</strong>. Once you exceed that limit you cannot read more files until the limit resets, unless you provide a Personal Access Token (PAT). With a token the limit rises to <strong>5,000 requests per hour</strong>, and you can also access private repositories the token has read scope for.</p>
+      <p><strong>Where do I get a token?</strong></p>
+      <ul>
+        <li><strong>Public repositories:</strong> create a token at <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">github.com/settings/tokens</a>. A classic token with no scopes is enough for read-only access, or use a fine-grained token.</li>
+        <li><strong>Private repositories:</strong> ask the repository owner to issue a fine-grained personal access token scoped to that repository, with at minimum <em>Contents: Read</em> permission, and to share it with you securely.</li>
+      </ul>
+      <p>Your token is stored in this browser's <code>localStorage</code> only. It is never sent anywhere except <code>api.github.com</code>, and it is not shared with the developers of ${ escapeHTML( CONFIG.appName ) }. When ${ escapeHTML( CONFIG.appName ) } runs from a local file (<code>file://</code>), any other local HTML page opened in this browser can read it too — prefer a read-only, narrowly scoped token.</p>
+      <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-color);">
+      <p>Wipe every preference, cached file, and the GitHub token from this browser. Useful when testing a fork or starting fresh.</p>
+      <button id="btnResetAll" class="secondary" title="Wipe all ${ escapeHTML( CONFIG.appName ) } data from this browser">Reset all ${ escapeHTML( CONFIG.appName ) } data</button>
+    </div>`;
+  const inp = document.getElementById( 'inpToken' );
+  inp.focus();
+  document.getElementById( 'inpTokenShow' ).addEventListener( 'change', ( e ) => { inp.type = e.target.checked ? 'text' : 'password'; } );
+  const save = () => {
+    const v = inp.value;
+    if ( v === '' && hasToken ) return;   // blank = keep existing
+    try { localStorage.setItem( tokenStorageKey(), v ); } catch ( _ ) { /* storage disabled */ }
+    clearFileCache();
+    location.reload();
+  };
+  document.getElementById( 'btnTokenSave' ).addEventListener( 'click', save );
+  inp.addEventListener( 'keydown', ( e ) => { if ( e.key === 'Enter' ) save(); } );
+  document.getElementById( 'btnTokenClear' ).addEventListener( 'click', () => {
+    try {
+      localStorage.removeItem( tokenStorageKey() );
+    } catch ( _ ) { /* storage disabled */ }
+    clearFileCache();
+    location.reload();
+  } );
+  document.getElementById( 'btnResetAll' )?.addEventListener( 'click', () => {
+    if ( !window.confirm( `Wipe all ${ CONFIG.appName } preferences, cached files, and the GitHub token from this browser?` ) ) return;
+    try {
+      const prefix = `${ CONFIG.storagePrefix }:`;
+      const keys = [];
+      for ( let i = 0; i < localStorage.length; i++ ) { const k = localStorage.key( i ); if ( k && k.startsWith( prefix ) ) keys.push( k ); }
+      for ( const k of keys ) localStorage.removeItem( k );
+    } catch ( _ ) { /* storage disabled */ }
+    clearFileCache();
+    location.reload();
+  } );
+
+  // Keep ⚙️ pressed-state and aria in sync even when this panel was opened
+  // directly by an auth error path (not via toggleInfoPanel).
+  activePanel = 'token';
+  updateInfoButtonState();
+};
+
+const RATE_LIMIT_REASON_HTML = '<div class="error-panel">⚠️ <strong>GitHub API rate limit reached.</strong> You\'ve exceeded the anonymous request quota and cannot load more files until you add a token below or wait for the limit to reset.</div>';
+const PRIVATE_REPO_MESSAGE = 'Repository not found. Double-check the owner, repository, and branch names for typos. If the repository is private, add a GitHub token with read access below.';
+const privateRepoReasonHtml = () =>
+  `<div class="error-panel">⚠️ <strong>Repository not found</strong> (GitHub returned 404). First, check the owner, repository, and branch names for a typo — that\'s the most common cause. If the repository really is private, add a GitHub access token with read access below. If you already have a token saved, make sure it covers ${ escapeHTML( state.owner ) }/${ escapeHTML( state.repo ) }.</div>`;
+
+/* ── About panel + About/Token toggle (reference §12c). ? / ⚙️ open their panel;
+   clicking again returns to the file you were on (panelReturnPath). ── */
+let activePanel = null;       // 'about' | 'token' | null
+let panelReturnPath = '';
+
+const updateInfoButtonState = () => {
+  const help = document.getElementById( 'btnHelp' );
+  const token = document.getElementById( 'btnToken' );
+  help?.classList.toggle( 'active', activePanel === 'about' );
+  help?.setAttribute( 'aria-pressed', String( activePanel === 'about' ) );
+  token?.classList.toggle( 'active', activePanel === 'token' );
+  token?.setAttribute( 'aria-pressed', String( activePanel === 'token' ) );
+};
+
+const renderAboutPanel = () => {
+  const revised = document.querySelector( 'meta[name="revised"]' )?.content || 'unknown';
+  const sourceUrl = CONFIG.sourceRepoUrl;
+  const repoUrl = state.owner && state.repo ? `https://github.com/${ state.owner }/${ state.repo }` : sourceUrl;
+  const token = getToken();
+
+  const tokenStatus = token ? 'Set' : 'Not set (anonymous — 60 requests/hour)';
+
+  const branchHtml = ( state.owner && state.repo && state.branch )
+    ? `<li><strong>Branch:</strong> <a href="https://github.com/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/tree/${ encodeURIComponent( state.branch ) }" target="_blank" rel="noopener">${ escapeHTML( state.branch ) }</a> · <a href="https://github.com/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/branches" target="_blank" rel="noopener">all branches</a></li>`
+    : '';
+
+  setContentHeader( makeSimpleHeader( 'About' ) );
+  document.getElementById( 'contentBody' ).innerHTML = `
+    <div class="markdown-body">
+      <h2>${ escapeHTML( CONFIG.appName ) }</h2>
+      <p>A lightweight single-file GitHub repository browser.</p>
+      <ul>
+        <li><strong>Source code:</strong> <a href="${ escapeHTML( sourceUrl ) }" target="_blank" rel="noopener">${ escapeHTML( sourceUrl ) }</a></li>
+        <li><strong>Repository:</strong> <a href="${ escapeHTML( repoUrl ) }" target="_blank" rel="noopener">${ escapeHTML( repoUrl ) }</a></li>
+        ${ branchHtml }
+        <li><strong>Copyright:</strong> pushme-pullyou authors</li>
+        <li><strong>License:</strong> See the repository's LICENSE file</li>
+        <li><strong>Updated:</strong> ${ escapeHTML( revised ) }</li>
+      </ul>
+      <h3>GitHub API</h3>
+      <ul>
+        <li><strong>Repo visibility:</strong> Public (private repos require a token)</li>
+        <li><strong>Token:</strong> ${ escapeHTML( tokenStatus ) }</li>
+        <li><strong>Rate limit:</strong> <span id="aboutRateLimit">checking…</span></li>
+        <li><strong>GitHub Pages:</strong> Supported — auto-detects repos hosted on GitHub Pages</li>
+      </ul>
+      ${ ( () => {
+      const stats = getRepoStats();
+      if ( !stats ) return '<h3>Repository Statistics</h3><p>No tree data loaded yet.</p>';
+      const typesHtml = stats.topTypes.map( ( [ ext, count ] ) =>
+        `<li>${ escapeHTML( ext ) }: ${ count } file${ count !== 1 ? 's' : '' }</li>`
+      ).join( '' );
+      const largestHtml = stats.largest.map( ( f ) =>
+        `<li>${ escapeHTML( f.path ) } — ${ formatFileSize( f.size ) }</li>`
+      ).join( '' );
+      return `<h3>Repository Statistics</h3>
+              <ul>
+                <li><strong>Files:</strong> ${ stats.fileCount }</li>
+                <li><strong>Folders:</strong> ${ stats.folderCount }</li>
+                <li><strong>Total size:</strong> ${ formatFileSize( stats.totalSize ) }</li>
+              </ul>
+              <h4>Top file types</h4>
+              <ol>${ typesHtml }</ol>
+              <h4>Largest files</h4>
+              <ol>${ largestHtml }</ol>`;
+    } )() }
+      <h3>Tips</h3>
+      <ul>
+        <li>Use the filter input in the sidebar to search file names</li>
+        <li>Click the title in the header to reload</li>
+        <li>Use <strong>A−</strong> / <strong>A+</strong> to adjust font size — helpful on phones and small screens</li>
+        <li>Click <strong>🌙</strong> to toggle dark mode — your choice is saved across visits</li>
+        <li>Click <strong>?</strong> or <strong>⚙️ Token</strong> again to close the panel and return to your file</li>
+      </ul>
+      <h3>Keyboard shortcuts</h3>
+      <ul>
+        <li><kbd>Ctrl/⌘ B</kbd> — toggle sidebar</li>
+        <li><kbd>/</kbd> — focus the filter box</li>
+        <li><kbd>Esc</kbd> — clear the filter (when it's focused)</li>
+        <li><kbd>\\</kbd> — focus the sidebar tree (jumps to the current selection)</li>
+        <li><kbd>↑</kbd> <kbd>↓</kbd> — move one item up / down</li>
+        <li><kbd>Home</kbd> <kbd>End</kbd> — jump to first / last visible item</li>
+        <li><kbd>PgUp</kbd> <kbd>PgDn</kbd> — jump about one viewport</li>
+        <li><kbd>→</kbd> — open folder / step into</li>
+        <li><kbd>←</kbd> — close folder / step out</li>
+        <li><kbd>Enter</kbd> <kbd>Space</kbd> — toggle folder or select file</li>
+      </ul>
+      <h3>Maintenance</h3>
+      <p>Render every file in this repo off-screen and report which ones fail to display — markdown that won't parse, images that won't decode, spreadsheets that won't open. Best run locally (<code>file://</code>) or with a token.</p>
+      <button id="btnSelfTest" class="secondary">🧪 Run self-test</button>
+    </div>`;
+  document.getElementById( 'btnSelfTest' )?.addEventListener( 'click', runSelfTest );
+
+  // The rate-limit lookup fills in AFTER the panel renders. Patching the placeholder
+  // span (gone if the user has already navigated on) means a slow response can never
+  // clobber a file the user opened while the fetch was in flight.
+  const fillRateLimit = ( text ) => {
+    const el = document.getElementById( 'aboutRateLimit' );
+    if ( el ) el.textContent = text;
+  };
+  fetch( 'https://api.github.com/rate_limit', { headers: ghHeaders() } )
+    .then( ( res ) => res.ok ? res.json() : null )
+    .then( ( data ) => {
+      if ( !data ) { fillRateLimit( 'Unable to fetch' ); return; }
+      const core = data.resources.core;
+      const reset = new Date( core.reset * 1000 ).toLocaleTimeString();
+      fillRateLimit( `${ core.remaining } / ${ core.limit } remaining (resets at ${ reset })` );
+    } )
+    .catch( () => fillRateLimit( 'Unable to fetch' ) );   /* offline or blocked */
+};
+
+const closeInfoPanel = () => {
+  activePanel = null;
+  updateInfoButtonState();
+  const path = panelReturnPath;
+  panelReturnPath = '';
+  if ( path && state.tree?.some( ( i ) => i.path === path && i.type === 'blob' ) ) selectFile( path );
+  else autoSelectReadme();
+};
+
+const toggleInfoPanel = async ( panel ) => {
+  // No content area to render into (e.g. the standalone header component page) →
+  // the ?/⚙️ buttons are inert rather than throwing. Mirrors showTokenPanel's guard,
+  // but here it also avoids leaving the button stuck pressed + a broken close path.
+  if ( !document.getElementById( 'contentBody' ) ) return;
+  if ( activePanel === panel ) { closeInfoPanel(); return; }
+  if ( !activePanel ) panelReturnPath = state.currentFilePath || '';
+  cancelContentLoad();
+  state.currentFilePath = '';
+  activePanel = panel;
+  updateInfoButtonState();
+  if ( panel === 'about' ) await renderAboutPanel();
+  else showTokenPanel();
+};
+
+/* Restore persisted appearance (reference §11 initAppearance): dark mode (else OS
+   preference), font size, sidebar width (+ narrow default), theme color, collapse. */
+const initAppearance = () => {
+  // localStorage access THROWS when storage is blocked (cookies off, some private
+  // modes) — a bare read here would abort the whole boot, so guard every read.
+  const read = ( key ) => { try { return localStorage.getItem( storageKey( key ) ); } catch ( _ ) { return null; } };
+  const stored = read( 'darkMode' );
+  const isDark = stored === null ? window.matchMedia( '(prefers-color-scheme: dark)' ).matches : stored === 'true';
+  if ( isDark ) document.body.classList.add( 'dark-mode' );
+  const darkBtn = document.getElementById( 'btnDarkMode' );
+  if ( darkBtn ) {
+    darkBtn.setAttribute( 'aria-pressed', String( isDark ) );
+    darkBtn.textContent = isDark ? '☀️' : '🌙';
+  }
+  setHljsTheme( isDark );
+
+  const savedFont = read( 'fontSize' );
+  if ( savedFont ) document.documentElement.style.setProperty( '--font-size', savedFont );
+
+  const savedWidth = read( 'sidebarWidth' );
+  if ( savedWidth ) document.documentElement.style.setProperty( '--sidebar-width', savedWidth );
+  else if ( window.innerWidth <= 768 ) document.documentElement.style.setProperty( '--sidebar-width', Math.round( window.innerWidth * 0.25 ) + 'px' );
+
+  if ( CONFIG.themeColor ) {
+    document.documentElement.style.setProperty( '--highlight-color', CONFIG.themeColor );
+    document.body.style.setProperty( '--highlight-color', CONFIG.themeColor );
+  }
+
+  const hidden = read( 'sidebarHidden' ) === 'true';
+  document.body.classList.toggle( 'sidebar-hidden', hidden );
+  updateSidebarToggle( hidden );
+};
+
+const initHeader = () => { updateHeaderFromConfig(); initAppearance(); initHeaderControls(); };
+    /* TooToo — sidebar.js  (the "what files exist & how they're shown" component).
+   Ported from reference §18-§26. Reads: state.tree, CONFIG.hidden*.
+   Writes: nothing global — display only. Hands off via Content's selectFile(path).
+   Depends on core.js helpers + globals CONFIG/state (mock-data.js).
+
+   NOTE: the real renderTree batches with a "% rendered" status for huge repos;
+   here it's synchronous for clarity. Re-add batching when we carve for real. */
+
+/* README matcher — shared by root auto-open, folder auto-open, and bold styling. */
+const README_RE = /^readme(\.\w+)?$/i;   // README, README.md, readme.txt — not README-2026-….md backups
+
+/* ── build nested tree from the flat GitHub list ── */
+const buildNestedTree = ( flatTree ) => {
+  const root = { children: Object.create( null ) };
+  const hidFolders = hiddenFolderSet();
+  const hidFiles = hiddenFileSet();
+  for ( const item of flatTree ) {
+    if ( !isVisibleTreeItem( item, hidFolders, hidFiles ) ) continue;
+    const parts = item.path.split( '/' );
+    let current = root;
+    for ( let i = 0; i < parts.length; i++ ) {
+      const part = parts[ i ];
+      if ( !current.children[ part ] ) {
+        current.children[ part ] = { children: Object.create( null ), type: null, size: null, path: null };
+      }
+      if ( i === parts.length - 1 ) {
+        current.children[ part ].type = item.type;
+        current.children[ part ].size = item.size;
+        current.children[ part ].path = item.path;
+      }
+      current = current.children[ part ];
+    }
+  }
+  return root;
+};
+
+/* ── blog mode (auto, by convention) ──
+   A folder named "blog" holding NN-Month subfolders becomes a reverse-chronological
+   logbook: newest post on top, newest month/year first, and the path to the latest
+   post pre-expanded. Patterns: month "06-June", year "2025", post "2026-06-28-title". */
+const BLOG_MONTH_RE = /^(\d{2})-/;
+const BLOG_YEAR_RE = /^(\d{4})$/;
+const BLOG_DATE_RE = /^(\d{4}-\d{2}-\d{2})/;
+const isFolderNode = ( node ) => node.type === 'tree' || Object.keys( node.children ).length > 0;
+const monthNum = ( name ) => { const m = name.match( BLOG_MONTH_RE ); return m ? +m[ 1 ] : -1; };
+const yearNum = ( name ) => { const m = name.match( BLOG_YEAR_RE ); return m ? +m[ 1 ] : -1; };
+const postDate = ( name ) => { const m = name.match( BLOG_DATE_RE ); return m ? m[ 1 ] : null; };
+const hasMonthChild = ( node ) =>
+  Object.entries( node.children ).some( ( [ n, c ] ) => isFolderNode( c ) && monthNum( n ) >= 0 );
+
+/* default order: folders first, then alphabetical (the non-blog behavior). */
+const cmpDefault = ( [ aName, aNode ], [ bName, bNode ] ) => {
+  const af = isFolderNode( aNode ), bf = isFolderNode( bNode );
+  if ( af && !bf ) return -1;
+  if ( !af && bf ) return 1;
+  return aName.toLowerCase().localeCompare( bName.toLowerCase() );
+};
+/* blog root: current-year month folders (desc) → past-year folders (desc) → other
+   folders (alpha) → files. */
+const cmpBlogRoot = ( [ aN, aNode ], [ bN, bNode ] ) => {
+  const rank = ( n, node ) => !isFolderNode( node ) ? 3 : monthNum( n ) >= 0 ? 0 : yearNum( n ) >= 0 ? 1 : 2;
+  const ra = rank( aN, aNode ), rb = rank( bN, bNode );
+  if ( ra !== rb ) return ra - rb;
+  if ( ra === 0 ) return monthNum( bN ) - monthNum( aN );   // months descending
+  if ( ra === 1 ) return yearNum( bN ) - yearNum( aN );     // years descending
+  return aN.toLowerCase().localeCompare( bN.toLowerCase() );
+};
+/* year folder: its month folders descending, then anything else. */
+const cmpYearFolder = ( [ aN, aNode ], [ bN, bNode ] ) => {
+  const rank = ( n, node ) => isFolderNode( node ) && monthNum( n ) >= 0 ? 0 : isFolderNode( node ) ? 1 : 2;
+  const ra = rank( aN, aNode ), rb = rank( bN, bNode );
+  if ( ra !== rb ) return ra - rb;
+  if ( ra === 0 ) return monthNum( bN ) - monthNum( aN );   // months descending
+  return aN.toLowerCase().localeCompare( bN.toLowerCase() );
+};
+/* month folder: dated posts newest-first (same date → title asc), then the rest below. */
+const cmpMonthFolder = ( [ aN, aNode ], [ bN, bNode ] ) => {
+  const ad = !isFolderNode( aNode ) && postDate( aN );
+  const bd = !isFolderNode( bNode ) && postDate( bN );
+  if ( ad && bd ) return ad !== bd ? bd.localeCompare( ad ) : aN.toLowerCase().localeCompare( bN.toLowerCase() );
+  if ( ad ) return -1;          // dated posts above non-dated files + folders
+  if ( bd ) return 1;
+  return cmpDefault( [ aN, aNode ], [ bN, bNode ] );
+};
+const BLOG_CMP = { blogRoot: cmpBlogRoot, yearFolder: cmpYearFolder, monthFolder: cmpMonthFolder };
+
+/* Newest dated post in a blog subtree → the file to auto-open + the chain of
+   year/month folders to pre-expand down to it (blog root itself stays collapsed). */
+const collectDatedPosts = ( node, path, out ) => {
+  for ( const [ name, child ] of Object.entries( node.children ) ) {
+    const childPath = path ? `${ path }/${ name }` : name;
+    if ( isFolderNode( child ) ) collectDatedPosts( child, childPath, out );
+    else if ( postDate( name ) ) out.push( { date: postDate( name ), name, path: childPath } );
+  }
+  return out;
+};
+const findLatestPost = ( blogNode, blogPath ) => {
+  const posts = collectDatedPosts( blogNode, blogPath, [] );
+  if ( !posts.length ) return { expandPaths: new Set(), postPath: '' };
+  posts.sort( ( a, b ) => a.date !== b.date ? b.date.localeCompare( a.date ) : a.name.toLowerCase().localeCompare( b.name.toLowerCase() ) );
+  const parts = posts[ 0 ].path.split( '/' );
+  const depth = blogPath.split( '/' ).length;
+  const expandPaths = new Set();
+  for ( let i = depth + 1; i < parts.length; i++ ) expandPaths.add( parts.slice( 0, i ).join( '/' ) );
+  return { expandPaths, postPath: posts[ 0 ].path };
+};
+
+/* ── sort entries; `mode` (blog context) picks the comparator, else default. ── */
+const sortedEntries = ( children, mode ) =>
+  Object.entries( children ).sort( BLOG_CMP[ mode ] || cmpDefault );
+
+/* ── recursive folder contents (for the folder tooltip) ──
+   Memoized per node: renderNode renders children before asking a parent for its stats, so
+   each node's children are already cached by the time the parent sums them — keeping the
+   whole tree's tooltip stats a single O(n) pass instead of re-walking each subtree per level.
+   The WeakMap is keyed by the (freshly rebuilt) node objects, so it clears itself on re-render. */
+const folderStatsCache = new WeakMap();
+const folderStats = ( node ) => {
+  const cached = folderStatsCache.get( node );
+  if ( cached ) return cached;
+  let files = 0, folders = 0, bytes = 0;
+  for ( const child of Object.values( node.children ) ) {
+    if ( isFolderNode( child ) ) {
+      folders++;
+      const s = folderStats( child );
+      files += s.files; folders += s.folders; bytes += s.bytes;
+    } else {
+      files++; bytes += ( child.size || 0 );
+    }
+  }
+  const stats = { files, folders, bytes };
+  folderStatsCache.set( node, stats );
+  return stats;
+};
+
+/* ── one tree node -> HTML (recursive for folders) ──
+   `blog` carries the blog context once we're inside a "blog" folder
+   ({ expandPaths }), so descendant year/month folders sort reverse-chrono and the
+   path to the latest post renders pre-expanded. */
+const renderNode = ( name, node, parentPath, blog ) => {
+  const fullPath = parentPath ? `${ parentPath }/${ name }` : name;
+  const isFolder = isFolderNode( node );
+  const displayName = displayTreeName( name );
+
+  if ( isFolder ) {
+    // Blog detection + per-folder sort mode. The "blog" folder itself becomes the
+    // root; year/month folders beneath it get their own ordering.
+    let childBlog = blog, mode = null, blogAttr = '';
+    if ( !blog && name.toLowerCase() === 'blog' && hasMonthChild( node ) ) {
+      const latest = findLatestPost( node, fullPath );
+      childBlog = { expandPaths: latest.expandPaths };
+      mode = 'blogRoot';
+      blogAttr = ` data-blog-root data-blog-latest="${ escapeHTML( latest.postPath ) }"`;
+    } else if ( blog ) {
+      mode = yearNum( name ) >= 0 ? 'yearFolder' : monthNum( name ) >= 0 ? 'monthFolder' : null;
+    }
+    const open = ( blog && blog.expandPaths.has( fullPath ) ) ? ' open' : '';
+
+    // Auto-open this folder's own README the first time it's expanded. Skipped for blog
+    // roots (they open their latest post instead) and inside the blog subtree.
+    let readmeAttr = '';
+    if ( CONFIG.autoOpenFolderReadme !== false && !blog && !blogAttr ) {
+      const readme = Object.entries( node.children ).find(
+        ( [ n, c ] ) => c.type === 'blob' && README_RE.test( n ) );
+      if ( readme ) readmeAttr = ` data-readme="${ escapeHTML( readme[ 1 ].path ) }"`;
+    }
+
+    const childrenHtml = sortedEntries( node.children, mode )
+      .map( ( [ childName, childNode ] ) => renderNode( childName, childNode, fullPath, childBlog ) )
+      .join( '' );
+    // Tooltip: what's inside — recursive file/folder counts + total size.
+    const s = folderStats( node );
+    const tip = `${ fullPath } — ${ s.files } file${ s.files === 1 ? '' : 's' }` +
+      ( s.folders ? ` · ${ s.folders } folder${ s.folders === 1 ? '' : 's' }` : '' ) +
+      ` · ${ formatFileSize( s.bytes ) }`;
+    return `<details${ open }${ blogAttr }${ readmeAttr } data-folder-path="${ escapeHTML( fullPath ) }">` +
+      `<summary class="tree-folder" tabindex="0" title="${ escapeHTML( tip ) }">` +
+      `<span aria-hidden="true">📁</span> <span class="folder-name">${ escapeHTML( displayName ) }</span>` +
+      `</summary>` + childrenHtml + `</details>`;
+  }
+
+  const icon = getFileIcon( name );
+  const isReadme = README_RE.test( name );
+  const nameHtml = isReadme ? `<strong>${ escapeHTML( displayName ) }</strong>` : escapeHTML( displayName );
+  const folderDisplay = parentPath ? parentPath.split( '/' ).map( displayTreeName ).join( ' / ' ) : '';
+  const folderHtml = folderDisplay ? `<span class="tree-item-folder">${ escapeHTML( folderDisplay ) }</span>` : '';
+  // Tooltip: path on line 1, then "Type · size" — the size now lives here, not on the row.
+  const tip = `${ fullPath }\n${ getFileTypeLabel( name ) } · ${ formatFileSize( node.size || 0 ) }`;
+
+  return `<div class="tree-item" role="button" tabindex="0" data-action="select-file" data-path="${ escapeHTML( fullPath ) }" title="${ escapeHTML( tip ) }">` +
+    `<span class="tree-item-name"><span aria-hidden="true">${ icon }</span> ${ nameHtml }</span>` + folderHtml + `</div>`;
+};
+
+/* ── expand-all glyph state ── */
+const setExpandAllButton = ( expanded ) => {
+  const btn = document.getElementById( 'btnExpandAll' );
+  if ( !btn ) return;
+  btn.textContent = expanded ? '⊟' : '⊞';
+  const label = expanded ? 'Collapse all folders' : 'Expand all folders';
+  btn.title = label;
+  btn.setAttribute( 'aria-label', label );
+};
+
+/* ── auto-open on first manual expand. Triggered only by a real user gesture — the
+   summary click below, or keyboard expansion in setupKeyboardNav — so the filter /
+   expand-all opening a folder programmatically doesn't hijack the content pane.
+   A blog root opens its latest post; any other folder opens its own README. ── */
+const autoOpenFolder = ( d ) => {
+  if ( !d || d.dataset.autoOpened ) return;
+  const path = d.dataset.blogLatest || d.dataset.readme;
+  if ( !path ) return;
+  // Let the native <details> toggle finish, then open the target if it expanded.
+  setTimeout( () => {
+    if ( d.open && typeof selectFile === 'function' ) { d.dataset.autoOpened = '1'; selectFile( path ); }
+  }, 0 );
+};
+const wireFirstOpen = ( selector ) => {
+  document.querySelectorAll( selector ).forEach( ( d ) => {
+    const summary = d.querySelector( ':scope > summary' );
+    if ( summary ) summary.addEventListener( 'click', () => autoOpenFolder( d ) );
+  } );
+};
+const wireBlogAutoOpen = () => wireFirstOpen( 'details[data-blog-root]' );
+const wireFolderReadmeAutoOpen = () => wireFirstOpen( 'details[data-readme]' );
+
+/* ── render the whole tree ── */
+const renderTree = ( treeArray ) => {
+  const treeList = document.getElementById( 'treeList' );
+  preFilterOpenState = null;
+  setExpandAllButton( false );
+  const nested = buildNestedTree( treeArray );
+  const entries = sortedEntries( nested.children, null );
+  treeList.innerHTML = entries.map( ( [ name, node ] ) => renderNode( name, node, '', null ) ).join( '' );
+  refreshTreeCache();
+  wireBlogAutoOpen();
+  wireFolderReadmeAutoOpen();
+};
+
+/* ── filter (reference §23) ── */
+let preFilterOpenState = null;
+let treeSummaryText = '';
+let cachedTreeItems = [];
+let cachedTreeFolders = [];
+
+const refreshTreeCache = () => {
+  const treeList = document.getElementById( 'treeList' );
+  cachedTreeItems = Array.from( treeList.querySelectorAll( '.tree-item' ) );
+  cachedTreeFolders = Array.from( treeList.querySelectorAll( 'details' ) );
+};
+
+const runFilter = () => {
+  const treeList = document.getElementById( 'treeList' );
+  const query = document.getElementById( 'treeFilter' ).value.trim().toLowerCase();
+  const btnFilterClear = document.getElementById( 'btnFilterClear' );
+  const normalizedQuery = query.replace( /[-\s]+/g, ' ' );
+  btnFilterClear.style.display = query ? 'block' : 'none';
+
+  const items = cachedTreeItems;
+  const folders = cachedTreeFolders;
+
+  if ( !query ) {
+    treeList.classList.remove( 'filtering' );
+    if ( treeSummaryText ) document.getElementById( 'hFiles' ).textContent = treeSummaryText;
+    items.forEach( ( el ) => el.classList.remove( 'is-hidden' ) );
+    folders.forEach( ( el ) => el.classList.remove( 'is-hidden' ) );
+    if ( preFilterOpenState ) {
+      folders.forEach( ( details ) => {
+        const key = details.dataset.folderPath;
+        if ( preFilterOpenState.has( key ) ) details.open = preFilterOpenState.get( key );
+      } );
+      preFilterOpenState = null;
+    }
+    return;
+  }
+
+  if ( preFilterOpenState === null ) {
+    preFilterOpenState = new Map();
+    folders.forEach( ( details ) => preFilterOpenState.set( details.dataset.folderPath, details.open ) );
+  }
+
+  let matchCount = 0;
+  items.forEach( ( el ) => {
+    const name = ( el.dataset.path || '' ).split( '/' ).pop().toLowerCase();
+    const normalizedName = name.replace( /[-\s]+/g, ' ' );
+    const matches = name.includes( query ) || normalizedName.includes( normalizedQuery );
+    el.classList.toggle( 'is-hidden', !matches );
+    if ( matches ) matchCount++;
+  } );
+
+  folders.slice().reverse().forEach( ( details ) => {
+    const hasVisible = details.querySelector( '.tree-item:not(.is-hidden)' );
+    if ( hasVisible ) { details.classList.remove( 'is-hidden' ); details.open = true; }
+    else { details.classList.add( 'is-hidden' ); }
+  } );
+
+  treeList.classList.add( 'filtering' );
+  document.getElementById( 'hFiles' ).textContent =
+    `${ matchCount.toLocaleString() } match${ matchCount === 1 ? '' : 'es' }`;
+};
+
+/* ── debounce ── */
+const debounce = ( fn, ms ) => {
+  let timer;
+  return ( ...args ) => { clearTimeout( timer ); timer = setTimeout( () => fn( ...args ), ms ); };
+};
+
+/* ── expand/collapse all ── */
+const setupExpandAll = () => {
+  const btn = document.getElementById( 'btnExpandAll' );
+  btn.addEventListener( 'click', () => {
+    const allDetails = document.getElementById( 'treeList' ).querySelectorAll( 'details' );
+    const expand = btn.textContent.trim() !== '⊟';
+    allDetails.forEach( ( d ) => { d.open = expand; } );
+    setExpandAllButton( expand );
+  } );
+};
+
+/* ── selection: hand off to Content (reference §26) ── */
+const setupFileSelection = () => {
+  document.getElementById( 'treeList' ).addEventListener( 'click', ( e ) => {
+    const target = e.target.closest( '[data-action="select-file"]' );
+    if ( !target ) return;
+    selectFile( target.dataset.path );   // Content owns currentFilePath
+  } );
+};
+
+// Bail out when GitHub truncates the tree response (over 100,000 entries or 7 MB):
+// keep sidebar concise and show a clear explanation + link in the content pane.
+const showOversizedRepoPanel = () => {
+  const repoUrl = `https://github.com/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }`;
+
+  document.getElementById( 'treeList' ).innerHTML =
+    '<div style="padding: 0.6rem 0.5rem; font-size: 0.85rem; opacity: 0.8;">Repository too large to browse here.</div>';
+
+  const cb = document.getElementById( 'contentBody' );
+  cb.innerHTML = `
+        <div class="error-panel">
+          <h3 style="margin-top: 0;">Repository too large for ${ escapeHTML( CONFIG.appName ) }</h3>
+          <p><strong>${ escapeHTML( state.owner ) }/${ escapeHTML( state.repo ) }</strong> is over GitHub's limit of 100,000 files or 7 MB for a single tree listing, so GitHub returned only part of it.</p>
+          <p><a href="${ escapeHTML( repoUrl ) }" target="_blank" rel="noopener">Browse this repository on github.com →</a></p>
+        </div>
+      `;
+};
+
+/* ── fetchTree: load the repo tree from GitHub (writes state.tree) ── */
+const fetchTree = async () => {
+  const signal = newAbort( false );   // tree loading can continue while an info panel is open
+  const treeList = document.getElementById( 'treeList' );
+  treeList.innerHTML = '<p style="padding:0.5rem;">Loading tree…</p>';
+  try {
+    if ( !state.branch ) state.branch = await getDefaultBranch( signal );
+    // Home repo, explicit branch, default not yet known → look it up so ?branch= can be dropped.
+    else if ( isHomeRepo() && !homeBranch() ) await getDefaultBranch( signal );
+    // Pin the repository and branch in permalinks (incl. history entries) only where they
+    // differ from the page's home repo; a plain home link stays index.html#file.
+    const url = new URL( location.href );
+    const home = isHomeRepo();
+    const pin = ( key, value, keep ) => keep ? url.searchParams.set( key, value ) : url.searchParams.delete( key );
+    pin( 'owner', state.owner, !home );
+    pin( 'repo', state.repo, !home );
+    pin( 'branch', state.branch, !home || state.branch !== homeBranch() );
+    history.replaceState( null, '', url );
+    cacheRepo();   // persist owner/repo/branch now that the branch is resolved
+    setHeaderTimestamp();   // refresh the title tooltip with this repo's last-push date
+    updateBranchControl();   // show the branch chip in the sidebar header
+    const data = await ghApi( `https://api.github.com/repos/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/git/trees/${ encodeURIComponent( state.branch ) }?recursive=1`, signal );
+    if ( data.truncated ) {
+      state.tree = null;
+      state.oversized = true;
+      showOversizedRepoPanel();
+      return;
+    }
+    state.oversized = false;
+    state.tree = data.tree;
+    renderTree( state.tree );
+
+    // Sidebar summary: 📁 folders · 📄 files · size (matches what renders).
+    const hidF = hiddenFolderSet(), hidf = hiddenFileSet();
+    const vis = state.tree.filter( ( i ) => isVisibleTreeItem( i, hidF, hidf ) );
+    const folders = vis.filter( ( i ) => i.type === 'tree' ).length;
+    const files = vis.filter( ( i ) => i.type === 'blob' ).length;
+    const bytes = vis.reduce( ( s, i ) => s + ( i.type === 'blob' ? ( i.size || 0 ) : 0 ), 0 );
+    const h = document.getElementById( 'hFiles' );
+    h.textContent = `${ files.toLocaleString() } file${ files === 1 ? '' : 's' } · ${ formatFileSize( bytes ) }`;
+    // Spelled-out tooltip (includes the folder count + truncated summary on a narrow sidebar).
+    h.title = `${ folders.toLocaleString() } folder${ folders === 1 ? '' : 's' }, ` +
+      `${ files.toLocaleString() } file${ files === 1 ? '' : 's' }, ${ formatFileSize( bytes ) } total`;
+    treeSummaryText = h.textContent;
+    runFilter();   // re-apply a query typed while the tree was loading (or clear 'filtering')
+  } catch ( err ) {
+    if ( err.name === 'AbortError' ) return;
+    if ( err.status === 403 ) {
+      treeList.innerHTML = `<p style="padding:0.5rem;color:red;">Rate limited. Add a GitHub token for higher limits.</p>`;
+      showTokenPanel( RATE_LIMIT_REASON_HTML );
+      return;
+    }
+    if ( err.status === 404 ) {
+      treeList.innerHTML = `<p style="padding:0.5rem;color:red;">${ escapeHTML( PRIVATE_REPO_MESSAGE ) }</p>`;
+      showTokenPanel( privateRepoReasonHtml() );
+      return;
+    }
+    treeList.innerHTML = `<p style="padding:0.5rem;color:red;">${ escapeHTML( err.message ) }</p>`;
+  }
+};
+
+/* ── pick the root README on first load ── */
+const autoSelectReadme = () => {
+  if ( !state.tree ) return;
+  const readme = state.tree.find( ( i ) => i.type === 'blob' && !i.path.includes( '/' ) && README_RE.test( i.path ) );
+  if ( readme ) selectFile( readme.path );
+};
+
+/* ── keyboard navigation (reference §27) ── */
+const getVisibleTreeItems = () => {
+  const treeList = document.getElementById( 'treeList' );
+  const all = treeList.querySelectorAll( '.tree-folder, .tree-item' );
+  const filtering = treeList.classList.contains( 'filtering' );
+  return Array.from( all ).filter( ( el ) => {
+    if ( el.classList.contains( 'is-hidden' ) ) return false;
+    if ( filtering && el.classList.contains( 'tree-folder' ) ) return false;
+    const start = el.classList.contains( 'tree-folder' ) ? el.parentElement : el;
+    if ( el.classList.contains( 'tree-folder' ) && start?.classList.contains( 'is-hidden' ) ) return false;
+    let ancestor = el.classList.contains( 'tree-folder' ) ? start?.parentElement : el.parentElement;
+    while ( ancestor && ancestor !== treeList ) {
+      if ( ancestor.tagName === 'DETAILS' && ( !ancestor.open || ancestor.classList.contains( 'is-hidden' ) ) ) return false;
+      ancestor = ancestor.parentElement;
+    }
+    return true;
+  } );
+};
+
+const selectFileItem = ( el ) => { if ( el.classList.contains( 'tree-item' ) ) selectFile( el.dataset.path ); };
+
+const setupKeyboardNav = () => {
+  document.addEventListener( 'keydown', ( e ) => {
+    const treeList = document.getElementById( 'treeList' );
+    const active = document.activeElement;
+
+    if ( ( e.ctrlKey || e.metaKey ) && !e.altKey && ( e.key === 'b' || e.key === 'B' ) ) {
+      e.preventDefault();
+      if ( typeof toggleSidebar === 'function' ) toggleSidebar();
+      return;
+    }
+    if ( e.key === '/' && active.tagName !== 'INPUT' && active.tagName !== 'TEXTAREA' ) {
+      e.preventDefault(); document.getElementById( 'treeFilter' ).focus(); return;
+    }
+    // `\` focuses the tree. Allowed from the filter input too, so / and \ toggle
+    // between filter and tree (in the filter we must preventDefault so it isn't typed).
+    if ( e.key === '\\' && ( active.id === 'treeFilter' || ( active.tagName !== 'INPUT' && active.tagName !== 'TEXTAREA' ) ) ) {
+      e.preventDefault();
+      const visible = getVisibleTreeItems();
+      if ( !visible.length ) return;
+      const activeItem = document.querySelector( '#treeList .tree-item.active' );
+      const target = ( activeItem && visible.includes( activeItem ) ) ? activeItem : visible[ 0 ];
+      target.focus(); target.scrollIntoView( { block: 'nearest' } );
+      return;
+    }
+
+    if ( !treeList || !treeList.contains( active ) ) return;
+    if ( !active.classList.contains( 'tree-folder' ) && !active.classList.contains( 'tree-item' ) ) return;
+    const visible = getVisibleTreeItems();
+    const idx = visible.indexOf( active );
+    if ( idx === -1 ) return;
+
+    switch ( e.key ) {
+      case 'ArrowDown': { e.preventDefault(); const n = visible[ idx + 1 ]; if ( n ) { n.focus(); selectFileItem( n ); } break; }
+      case 'ArrowUp': { e.preventDefault(); const p = visible[ idx - 1 ]; if ( p ) { p.focus(); selectFileItem( p ); } break; }
+      case 'Home': { e.preventDefault(); const f = visible[ 0 ]; if ( f && f !== active ) { f.focus(); selectFileItem( f ); } break; }
+      case 'End': { e.preventDefault(); const l = visible[ visible.length - 1 ]; if ( l && l !== active ) { l.focus(); selectFileItem( l ); } break; }
+      case 'PageDown':
+      case 'PageUp': {
+        e.preventDefault();
+        const h = active.getBoundingClientRect().height || 24;
+        const page = Math.max( 1, Math.floor( treeList.clientHeight / h ) - 1 );
+        const ni = Math.max( 0, Math.min( idx + ( e.key === 'PageDown' ? 1 : -1 ) * page, visible.length - 1 ) );
+        const t = visible[ ni ]; if ( t && t !== active ) { t.focus(); selectFileItem( t ); }
+        break;
+      }
+      case 'Enter':
+      case ' ': {
+        e.preventDefault();
+        if ( active.classList.contains( 'tree-folder' ) ) {
+          const d = active.parentElement;
+          d.open = !d.open;
+          if ( d.open ) autoOpenFolder( d );   // keyboard expand gets the same first-open behavior as a click
+        } else selectFileItem( active );
+        break;
+      }
+      case 'ArrowRight': {
+        e.preventDefault();
+        if ( active.classList.contains( 'tree-folder' ) ) {
+          const d = active.parentElement;
+          if ( !d.open ) { d.open = true; autoOpenFolder( d ); }
+          else { const c = d.querySelector( ':scope > .tree-item, :scope > details > summary' ); if ( c && c !== active ) { c.focus(); selectFileItem( c ); } }
+        }
+        break;
+      }
+      case 'ArrowLeft': {
+        e.preventDefault();
+        if ( active.classList.contains( 'tree-folder' ) ) {
+          const d = active.parentElement;
+          if ( d.open ) d.open = false;
+          else { const ps = d.parentElement?.closest( 'details' )?.querySelector( ':scope > summary' ); if ( ps ) ps.focus(); }
+        } else {
+          const ps = active.closest( 'details' )?.querySelector( ':scope > summary' ); if ( ps ) ps.focus();
+        }
+        break;
+      }
+    }
+  } );
+};
+
+/* ── branch switcher (reference §branch) — the chip lists the repo's branches
+   and switches in place (re-fetch tree + re-open README, no reload). ── */
+let branchList = null;
+const updateBranchControl = () => {
+  const btn = document.getElementById( 'btnBranch' );
+  const name = document.getElementById( 'branchName' );
+  if ( !btn || !name ) return;
+  if ( !state.branch ) { btn.hidden = true; return; }
+  name.textContent = state.branch;
+  btn.title = `Branch: ${ state.branch } — click to switch`;
+  btn.hidden = false;
+};
+const closeBranchMenu = ( restoreFocus = false ) => {
+  const menu = document.getElementById( 'branchMenu' );
+  if ( menu ) menu.hidden = true;
+  const btn = document.getElementById( 'btnBranch' );
+  btn?.setAttribute( 'aria-expanded', 'false' );
+  // Keyboard close (Escape / picking an option) hands focus back to the chip —
+  // otherwise focus dies with the hidden menu. Click-outside close leaves focus alone.
+  if ( restoreFocus ) btn?.focus();
+};
+const fetchBranchList = async () => {
+  if ( branchList ) return branchList;
+  const data = await ghApi( `https://api.github.com/repos/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/branches?per_page=100` );
+  branchList = data.map( ( b ) => b.name );
+  branchList.capped = data.length === 100;
+  return branchList;
+};
+const openBranchMenu = async () => {
+  const menu = document.getElementById( 'branchMenu' );
+  const btn = document.getElementById( 'btnBranch' );
+  if ( !menu || !btn ) return;
+  menu.hidden = false;
+  btn.setAttribute( 'aria-expanded', 'true' );
+  menu.innerHTML = '<div class="branch-menu-loading">Loading branches…</div>';
+  try {
+    const branches = await fetchBranchList();
+    menu.innerHTML = branches.map( ( b ) =>
+      `<button type="button" role="option" class="branch-option${ b === state.branch ? ' is-current' : '' }" data-branch="${ escapeHTML( b ) }">${ b === state.branch ? '✓ ' : '' }${ escapeHTML( b ) }</button>`
+    ).join( '' ) + ( branches.capped ? '<div class="branch-menu-error">Showing the first 100 branches; more may exist.</div>' : '' );
+    // Focus the current branch so arrow keys / Enter work immediately on open.
+    ( menu.querySelector( '.branch-option.is-current' ) || menu.querySelector( '.branch-option' ) )?.focus();
+  } catch ( _ ) {
+    menu.innerHTML = '<div class="branch-menu-error">Could not load branches.</div>';
+  }
+};
+const toggleBranchMenu = () => {
+  const menu = document.getElementById( 'branchMenu' );
+  if ( menu && !menu.hidden ) closeBranchMenu(); else openBranchMenu();
+};
+/* Keyboard support while the menu is open (listener sits on .branch-control, so it
+   covers the chip and the menu): Escape closes and returns focus to the chip;
+   ArrowDown/ArrowUp move through the options (wrapping); Home/End jump to the
+   first/last. Enter/Space need no handling — the options are real <button>s. */
+const branchMenuKeydown = ( e ) => {
+  const menu = document.getElementById( 'branchMenu' );
+  if ( !menu || menu.hidden ) return;
+  if ( e.key === 'Escape' ) { e.preventDefault(); closeBranchMenu( true ); return; }
+  const options = Array.from( menu.querySelectorAll( '.branch-option' ) );
+  if ( !options.length ) return;
+  const idx = options.indexOf( document.activeElement );
+  let next = null;
+  if ( e.key === 'ArrowDown' ) next = options[ idx + 1 ] || options[ 0 ];
+  else if ( e.key === 'ArrowUp' ) next = idx > 0 ? options[ idx - 1 ] : options[ options.length - 1 ];
+  else if ( e.key === 'Home' ) next = options[ 0 ];
+  else if ( e.key === 'End' ) next = options[ options.length - 1 ];
+  if ( next ) { e.preventDefault(); next.focus(); }
+};
+const switchBranch = async ( branch, path = '', anchor = '' ) => {
+  closeBranchMenu( true );   // the picked option is about to be destroyed — focus the chip
+  if ( !branch || branch === state.branch ) return;
+  // Leaving this branch's view: clear any active filter first. renderTree rebuilds the rows
+  // for the new branch but leaves the filter input, its 'filtering' class, and the clear
+  // button as-is — which would otherwise show a stale query over an unfiltered tree.
+  const filter = document.getElementById( 'treeFilter' );
+  if ( filter && filter.value ) { filter.value = ''; runFilter(); }
+  state.branch = branch;
+  state.tree = null;
+  state.currentFilePath = '';
+  activePanel = null;
+  updateInfoButtonState();
+  setContentHeader( makeSimpleHeader( 'Content' ) );
+  document.getElementById( 'contentBody' ).innerHTML = '<p>Select a file from the list to preview it here.</p>';
+  // A branch switch starts a new file history; never keep an old branch's file hash.
+  history.replaceState( null, '', location.pathname + location.search );
+  hashNavigated = false;
+  branchList = null;          // re-list for the new branch context if reopened
+  cacheRepo();
+  clearFileCache();
+  updateBranchControl();
+  await fetchTree();
+  if ( state.branch !== branch || activePanel ) return;
+  if ( path ) selectFile( path, anchor );
+  else autoSelectReadme();
+};
+
+/* ── init: render + wire ── */
+const initSidebar = () => {
+  if ( state.tree ) renderTree( state.tree );
+  treeSummaryText = document.getElementById( 'hFiles' ).textContent;
+  const filter = document.getElementById( 'treeFilter' );
+  filter.addEventListener( 'input', debounce( runFilter, 120 ) );
+  filter.addEventListener( 'keydown', ( e ) => { if ( e.key === 'Escape' ) { filter.value = ''; runFilter(); } } );
+  document.getElementById( 'btnFilterClear' ).addEventListener( 'click', () => {
+    filter.value = ''; runFilter(); filter.focus();
+  } );
+  setupKeyboardNav();
+  setupExpandAll();
+  setupFileSelection();
+  const exp = document.getElementById( 'btnExpandAll' );
+  if ( exp ) exp.style.display = '';
+
+  // Branch switcher chip + menu.
+  document.getElementById( 'btnBranch' )?.addEventListener( 'click', toggleBranchMenu );
+  document.querySelector( '.branch-control' )?.addEventListener( 'keydown', branchMenuKeydown );
+  document.getElementById( 'branchMenu' )?.addEventListener( 'click', ( e ) => {
+    const opt = e.target.closest( '[data-branch]' );
+    if ( opt ) switchBranch( opt.dataset.branch );
+  } );
+  document.addEventListener( 'click', ( e ) => {
+    if ( !e.target.closest( '.branch-control' ) ) closeBranchMenu();
+  } );
+
+  // Sidebar footer scroll-to-top (its brand mark is static markup → favicon.ico).
+  document.getElementById( 'btnScrollTreeTop' )?.addEventListener( 'click', () =>
+    document.getElementById( 'treeList' ).scrollTo( { top: 0, behavior: 'smooth' } ) );
+
+  // Resizer drag (real app does this in setupListeners; minimal version here).
+  const resizer = document.getElementById( 'resizer' );
+  if ( resizer ) {
+    let dragging = false;
+    resizer.addEventListener( 'pointerdown', ( e ) => { dragging = true; resizer.classList.add( 'dragging' ); resizer.setPointerCapture( e.pointerId ); } );
+    resizer.addEventListener( 'pointermove', ( e ) => { if ( dragging ) document.documentElement.style.setProperty( '--sidebar-width', Math.min( window.innerWidth - 100, Math.max( 100, e.clientX ) ) + 'px' ); } );
+    resizer.addEventListener( 'pointerup', () => {
+      dragging = false; resizer.classList.remove( 'dragging' );
+      const w = getComputedStyle( document.documentElement ).getPropertyValue( '--sidebar-width' ).trim();
+      try { localStorage.setItem( storageKey( 'sidebarWidth' ), w ); } catch ( _ ) { /* storage off */ }
+    } );
+  }
+};
+    /* TooToo — content.js  (the "show the file & act on it" component).
+   Ported from reference §32, §33, §37, §38. Reads: state.owner/repo/branch,
+   CONFIG. Writes: state.currentFilePath (Content owns this). Depends on core.js
+   + marked/hljs/DOMPurify (CDN, same as the real app).
+
+  DEV SIMPLIFICATIONS vs the real app:
+   - selectFile reads `mockFiles` instead of fetching GitHub/local.
+   - audio/video/pdf/spreadsheet renderers are omitted for now (need real blobs).
+   - markdown image/relative-link resolution against the repo is dropped (mock). */
+
+let lastRawText = '';
+
+/* ── file-header: breadcrumbs + action buttons (reference §32) ── */
+const buildFileHeader = ( path, ext ) => {
+  const segments = path.split( '/' );
+  const fileName = segments.pop();
+
+  const folderLink = ( seg, fPath ) =>
+    `<a class="breadcrumb-link" href="#" data-action="scroll-folder" data-folder="${ escapeHTML( fPath ) }" title="${ escapeHTML( fPath ) }">${ escapeHTML( seg ) }</a>`;
+
+  const cumulative = [];
+  segments.forEach( ( seg ) => {
+    const prev = cumulative[ cumulative.length - 1 ];
+    cumulative.push( prev ? `${ prev }/${ seg }` : seg );
+  } );
+
+  let pathHtml = '';
+  if ( segments.length > 2 ) {
+    const last = segments.length - 1;
+    pathHtml =
+      `<span class="crumb-collapsed" title="${ escapeHTML( segments.slice( 0, last ).join( ' / ' ) ) }">…</span> / ` +
+      folderLink( segments[ last ], cumulative[ last ] ) + ' / ';
+  } else if ( segments.length > 0 ) {
+    pathHtml = segments.map( ( seg, i ) => folderLink( seg, cumulative[ i ] ) ).join( ' / ' ) + ' / ';
+  }
+
+  const breadcrumbHtml =
+    `<span class="crumb-path">${ pathHtml }</span>` +
+    `<strong class="crumb-file">${ escapeHTML( fileName ) }</strong>`;
+
+  const githubUrl = `https://github.com/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/blob/${ encodeURIComponent( state.branch ) }/${ encodePath( path ) }`;
+
+  const hasToggle = MARKDOWN_EXTS.includes( ext ) || [ 'html', 'htm', 'svg' ].includes( ext );
+  const hasCopy = !NO_COPY_EXTS.includes( ext ) || ext === 'svg';
+  const preferredView = hasToggle ? getPreferredView( ext ) : 'rendered';
+
+  let actionsHtml = '';
+  if ( hasToggle ) {
+    const showingRaw = preferredView === 'raw';
+    const otherIcon = showingRaw ? '👁' : '&lt;/&gt;';
+    const otherTitle = showingRaw ? 'Show rendered view' : 'Show raw source';
+    actionsHtml += `<button class="file-btn" data-action="view-toggle" title="${ otherTitle }" aria-label="${ otherTitle }">${ otherIcon }</button>`;
+  }
+  if ( hasCopy ) {
+    actionsHtml += `<button class="file-btn" data-action="copy-file" title="Copy file contents to clipboard" aria-label="Copy file contents to clipboard">📋</button>`;
+  }
+  actionsHtml += `<button class="file-btn" data-action="print" title="Print this file" aria-label="Print this file">🖨</button>`;
+  const willDownload = isDownloadAction( ext ) && !isTextOpenAsPlain( ext );
+  const newTabIcon = willDownload ? '⬇' : '↗';
+  const newTabTitle = willDownload ? 'Download this file' : 'Open in new tab';
+  actionsHtml += `<button class="file-btn" data-action="new-tab" data-path="${ escapeHTML( path ) }" title="${ newTabTitle }" aria-label="${ newTabTitle }">${ newTabIcon }</button>`;
+
+  return `<div class="panel-header file-header">` +
+    `<div class="file-title">` +
+    `<a href="${ escapeHTML( githubUrl ) }" target="_blank" rel="noopener" title="View on GitHub" aria-label="View this file on GitHub">${ GITHUB_SVG_ICON }</a>` +
+    `<h3 id="breadcrumbs" title="${ escapeHTML( path ) }">${ breadcrumbHtml }</h3>` +
+    `</div>` +
+    `<div class="file-actions">${ actionsHtml }</div>` +
+    `</div>`;
+};
+
+/* ── renderers (reference §33) ── */
+const buildToggleHtml = ( ext, renderedHtml, rawText, { prefix = '', renderedClass = '' } = {} ) => {
+  const preferredView = getPreferredView( ext );
+  const renderedDisplay = preferredView === 'rendered' ? '' : 'display:none';
+  const rawDisplay = preferredView === 'raw' ? '' : 'display:none';
+  const classAttr = renderedClass ? ` class="${ renderedClass }"` : '';
+  return prefix +
+    `<div${ classAttr } id="viewRendered" style="${ renderedDisplay }">${ renderedHtml }</div>` +
+    `<pre id="viewRaw" style="${ rawDisplay }">${ escapeHTML( rawText ) }</pre>`;
+};
+
+const MD_PURIFY = { FORBID_TAGS: [ 'style', 'form', 'button', 'textarea', 'select' ], FORBID_ATTR: [ 'style' ] };
+
+const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
+  let renderedHtml, errorHtml = '';
+  // Strip what GitHub strips: page-wide styles, inline styles (a README could cover the app
+  // with a fake form) and form controls (task-list checkboxes stay).
+  try { renderedHtml = DOMPurify.sanitize( marked.parse( text ), MD_PURIFY ); }
+  catch ( err ) { errorHtml = `<div class="md-error">⚠️ Markdown rendering failed: ${ escapeHTML( err.message ) }</div>`; renderedHtml = ''; }
+
+  document.getElementById( 'contentBody' ).innerHTML =
+    buildToggleHtml( 'md', renderedHtml, text, { prefix: errorHtml, renderedClass: 'markdown-body' } );
+
+  const mdBody = document.querySelector( '#contentBody > #viewRendered' );
+  if ( !mdBody ) return;
+  const currentDir = filePath.includes( '/' ) ? filePath.slice( 0, filePath.lastIndexOf( '/' ) ) : '';
+
+  // GitHub-style heading ids (marked v12 no longer generates them), so in-file
+  // #anchor links and #path#anchor permalinks have something to scroll to.
+  const slugCounts = {};
+  mdBody.querySelectorAll( 'h1, h2, h3, h4, h5, h6' ).forEach( ( h ) => {
+    if ( h.id ) return;
+    let slug = h.textContent.trim().toLowerCase().replace( /[^\w\s-]/g, '' ).replace( /\s+/g, '-' );
+    if ( !slug ) return;
+    if ( slugCounts[ slug ] != null ) slug += '-' + ( ++slugCounts[ slug ] );
+    else slugCounts[ slug ] = 0;
+    h.id = slug;
+  } );
+
+  // Links: in-file #anchor → scroll + reflect in the routing hash (never let the
+  // browser replace the file hash — that would be treated as a file path);
+  // external → new tab; in-repo → resolve against currentDir + load via selectFile,
+  // carrying any #fragment along as the anchor to scroll to.
+  mdBody.querySelectorAll( 'a[href]' ).forEach( ( a ) => {
+    const href = a.getAttribute( 'href' );
+    if ( !href ) return;
+    if ( href.startsWith( '#' ) ) {
+      const anchor = safeDecode( href.slice( 1 ) );
+      a.href = '#' + encodeHash( filePath ) + ( anchor ? '#' + encodeHash( anchor ) : '' );
+      a.classList.add( 'internal-link' );
+      a.addEventListener( 'click', ( e ) => {
+        if ( e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey ) return;
+        e.preventDefault();
+        scrollToAnchor( anchor );
+        updateHash( state.currentFilePath, anchor );
+      } );
+      return;
+    }
+    if ( /^https?:\/\//.test( href ) || href.startsWith( '//' ) ) { a.target = '_blank'; a.rel = 'noopener'; return; }
+    // Any other explicit scheme (mailto:, tel:, ftp:, …) — already DOMPurify-approved — is an
+    // external link, not a repo path; leave its href and open it rather than trying to fetch it.
+    if ( /^[a-z][a-z0-9+.-]*:/i.test( href ) ) { a.target = '_blank'; a.rel = 'noopener'; return; }
+    const frag = href.indexOf( '#' );
+    const clean = frag >= 0 ? href.slice( 0, frag ) : href;
+    if ( !clean ) return;
+    const repoPath = clean.startsWith( '?' ) ? filePath : resolveRepoPath( clean, currentDir );
+    const anchor = frag >= 0 ? safeDecode( href.slice( frag + 1 ) ) : '';
+    a.href = '#' + encodeHash( repoPath ) + ( anchor ? '#' + encodeHash( anchor ) : '' );
+    a.classList.add( 'internal-link' );
+    a.addEventListener( 'click', ( e ) => {
+      if ( e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey ) return;
+      e.preventDefault(); selectFile( repoPath, anchor );
+    } );
+  } );
+
+  // Images: resolve repo-relative src against the current file's directory. The URL
+  // resolves async (token → blob via the Contents API for private repos), so set it
+  // when ready and leave the image broken if the fetch fails.
+  mdBody.querySelectorAll( 'img[src]' ).forEach( async ( img ) => {
+    const src = img.getAttribute( 'src' );
+    if ( !src || /^(https?:)?\/\//.test( src ) || src.startsWith( 'data:' ) || src.startsWith( 'blob:' ) ) return;
+    const frag = src.indexOf( '#' );
+    const clean = frag >= 0 ? src.slice( 0, frag ) : src;
+    if ( !clean ) return;
+    img.setAttribute( 'loading', 'lazy' );
+    // A repo image resolving above the target heading shifts layout down after the initial
+    // scroll; re-scroll once it settles so #path#anchor deep links land accurately. The
+    // signal guard avoids yanking the view if the user has already navigated away.
+    if ( anchor ) img.addEventListener( 'load', () => { if ( !signal.aborted ) scrollToAnchor( anchor ); }, { once: true } );
+    try { img.setAttribute( 'src', await resolveMediaUrl( resolveRepoPath( clean, currentDir ), signal ) ); }
+    catch ( _ ) { /* repo image missing/private fetch failed — or aborted by navigation */ }
+  } );
+
+  mdBody.querySelectorAll( 'pre code' ).forEach( ( el ) => {
+    try { hljs.highlightElement( el ); } catch ( _ ) { /* plain fallback */ }
+  } );
+};
+
+const renderCode = ( text, ext ) => {
+  const skipHighlight = !ext || text.length > 500 * 1024;
+  const code = document.createElement( 'code' );
+  code.textContent = text;
+  if ( !skipHighlight ) { try { hljs.highlightElement( code ); } catch ( _ ) { /* plain */ } }
+  const pre = document.createElement( 'pre' );
+  pre.appendChild( code );
+  const body = document.getElementById( 'contentBody' );
+  body.innerHTML = '';
+  body.appendChild( pre );
+};
+
+const renderHtml = ( text, ext ) => {
+  const url = createBlobUrl( new Blob( [ text ], { type: 'text/html' } ) );
+  const note = `<div class="md-error">ℹ️ Preview is sandboxed: scripts and relative assets are disabled.<br>Click <strong>&lt;/&gt;</strong> to show the raw source, or <strong>↗ New Tab</strong> to open the file directly (renders from a local copy; GitHub's raw host shows source).</div>`;
+  document.getElementById( 'contentBody' ).innerHTML =
+    buildToggleHtml( ext, `${ note }<iframe class="iframe-content" sandbox src="${ escapeHTML( url ) }"></iframe>`, text );
+};
+
+const renderSvg = ( text, fileName = 'SVG image' ) => {
+  const url = createBlobUrl( new Blob( [ text ], { type: 'image/svg+xml' } ) );
+  document.getElementById( 'contentBody' ).innerHTML =
+    buildToggleHtml( 'svg', `<img class="media-content" src="${ escapeHTML( url ) }" alt="${ escapeHTML( fileName ) }">`, text );
+};
+
+const renderImage = ( url, alt ) => {
+  document.getElementById( 'contentBody' ).innerHTML =
+    `<img class="media-content" src="${ escapeHTML( url ) }" alt="${ escapeHTML( alt ) }">`;
+};
+
+const renderAudio = ( url ) => {
+  document.getElementById( 'contentBody' ).innerHTML =
+    `<audio controls class="media-content" src="${ escapeHTML( url ) }">Your browser does not support audio.</audio>`;
+};
+
+const renderVideo = ( url ) => {
+  document.getElementById( 'contentBody' ).innerHTML =
+    `<video controls class="media-content" src="${ escapeHTML( url ) }">Your browser does not support video.</video>`;
+};
+
+const renderPdf = ( url ) => {
+  // iframe-pdf (vs the shared iframe-content) lets the CSS fill the pane's height
+  // for PDFs while the HTML preview keeps its fixed 70vh.
+  document.getElementById( 'contentBody' ).innerHTML =
+    `<iframe class="iframe-content iframe-pdf" src="${ escapeHTML( url ) }"></iframe>`;
+};
+
+// SheetJS (~700KB) is injected on first spreadsheet open, not on every page.
+let xlsxLoader = null;
+const ensureXLSX = () => {
+  if ( window.XLSX ) return Promise.resolve();
+  if ( xlsxLoader ) return xlsxLoader;
+  xlsxLoader = new Promise( ( resolve, reject ) => {
+    const s = document.createElement( 'script' );
+    s.src = 'https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js';
+    s.onload = resolve;
+    s.onerror = () => { xlsxLoader = null; reject( new Error( 'Failed to load the spreadsheet library (SheetJS).' ) ); };
+    document.head.appendChild( s );
+  } );
+  return xlsxLoader;
+};
+
+const renderSpreadsheet = async ( data, signal ) => {
+  try {
+    await ensureXLSX();
+    if ( signal?.aborted ) return;
+    const workbook = XLSX.read( data, { type: 'array' } );
+    let html = '';
+    for ( const sheetName of workbook.SheetNames ) {
+      html += `<div class="xlsx-sheet"><h3>${ escapeHTML( sheetName ) }</h3>${ XLSX.utils.sheet_to_html( workbook.Sheets[ sheetName ] ) }</div>`;
+    }
+    document.getElementById( 'contentBody' ).innerHTML = DOMPurify.sanitize( html );
+  } catch ( err ) {
+    if ( signal?.aborted ) return;
+    document.getElementById( 'contentBody' ).innerHTML =
+      `<p style="color: red;">Failed to parse spreadsheet: ${ escapeHTML( err.message ) }</p>`;
+  }
+};
+
+// A plain content header (no breadcrumbs/actions) — used by panels like the token form.
+const makeSimpleHeader = ( title ) => {
+  const d = document.createElement( 'div' );
+  d.className = 'panel-header file-header';
+  d.innerHTML = `<div class="file-title"><h3 id="breadcrumbs">${ escapeHTML( title ) }</h3></div>`;
+  return d;
+};
+
+/* ── swap the sticky file-header in place ── */
+const setContentHeader = ( el ) => {
+  const area = document.getElementById( 'contentArea' );
+  const existing = area.querySelector( '.file-header' );
+  if ( existing ) existing.replaceWith( el ); else area.prepend( el );
+};
+
+/* ── scroll the rendered content to an in-file anchor (heading id / name) ── */
+const scrollToAnchor = ( anchor ) => {
+  if ( !anchor ) return false;
+  const body = document.getElementById( 'contentBody' );
+  const el = body?.querySelector( `[id="${ CSS.escape( anchor ) }"], [name="${ CSS.escape( anchor ) }"]` );
+  if ( el ) el.scrollIntoView( { block: 'start', behavior: 'auto' } );
+  return !!el;
+};
+
+/* ── selectFile: build header, fetch, dispatch by type (reference §37).
+   fetchFileText reads mockFiles on standalone pages, raw GitHub in the live
+   build — so the same selectFile works offline and online. An optional anchor
+   (from #path#anchor or a link's #fragment) is scrolled to after render. ── */
+const selectFile = async ( path, anchor = '' ) => {
+  const ext = extOf( path );
+  state.currentFilePath = path;               // Content owns this
+  // Opening a real file dismisses any About/Token panel highlight (assembled build).
+  if ( typeof updateInfoButtonState === 'function' ) { activePanel = null; updateInfoButtonState(); }
+  const signal = newAbort();                  // cancel any in-flight load
+  revokeAllBlobUrls();                         // free the previous file's blob URLs
+
+  // Highlight the matching tree row, open its ancestor folders, scroll it in view.
+  // Sidebar's cached row list (refreshed on each renderTree) saves re-querying the
+  // whole tree per navigation; standalone content pages (no sidebar.js) fall back.
+  const treeRows = ( typeof cachedTreeItems !== 'undefined' && cachedTreeItems.length )
+    ? cachedTreeItems
+    : Array.from( document.querySelectorAll( '.tree-item' ) );
+  let activeRow = null;
+  treeRows.forEach( ( el ) => {
+    const isActive = el.dataset.path === path;
+    el.classList.toggle( 'active', isActive );
+    if ( isActive ) activeRow = el;
+  } );
+  if ( activeRow ) {
+    let ancestor = activeRow.closest( 'details' );
+    while ( ancestor ) { ancestor.open = true; ancestor = ancestor.parentElement?.closest( 'details' ); }
+    activeRow.scrollIntoView( { block: 'center', behavior: 'auto' } );
+  }
+
+  const hdr = document.createElement( 'div' );
+  hdr.innerHTML = buildFileHeader( path, ext );
+  setContentHeader( hdr.firstElementChild );
+  const pt = document.getElementById( 'printTitle' );   // file name on the printout
+  if ( pt ) pt.textContent = path.split( '/' ).pop();
+
+  const body = document.getElementById( 'contentBody' );
+  body.innerHTML = '<p>Loading…</p>';
+
+  try {
+    if ( IMAGE_EXTS.includes( ext ) && ext !== 'svg' ) {
+      lastRawText = '';
+      const url = await resolveMediaUrl( path, signal );
+      if ( signal.aborted ) return;
+      renderImage( url, path.split( '/' ).pop() );
+    } else if ( AUDIO_EXTS.includes( ext ) ) {
+      lastRawText = '';
+      const url = await fetchFileBlob( path, MIME[ ext ], signal );
+      if ( signal.aborted ) { URL.revokeObjectURL( url ); return; }
+      renderAudio( url );
+    } else if ( VIDEO_EXTS.includes( ext ) ) {
+      lastRawText = '';
+      const url = await fetchFileBlob( path, MIME[ ext ], signal );
+      if ( signal.aborted ) { URL.revokeObjectURL( url ); return; }
+      renderVideo( url );
+    } else if ( ext === 'pdf' ) {
+      lastRawText = '';
+      const url = await fetchFileBlob( path, 'application/pdf', signal );
+      if ( signal.aborted ) { URL.revokeObjectURL( url ); return; }
+      renderPdf( url );
+    } else if ( SHEET_EXTS.includes( ext ) ) {
+      lastRawText = '';
+      const data = await fetchFileArrayBuffer( path, signal );
+      if ( signal.aborted ) return;
+      await renderSpreadsheet( data, signal );
+    } else {
+      const text = await fetchFileText( path, signal );
+      if ( signal.aborted ) return;
+      lastRawText = text;
+      if ( MARKDOWN_EXTS.includes( ext ) ) renderMarkdown( text, path, signal, anchor );
+      else if ( ext === 'svg' ) renderSvg( text, path.split( '/' ).pop() );
+      else if ( ext === 'html' || ext === 'htm' ) renderHtml( text, ext );
+      else renderCode( text, ext );
+    }
+    if ( signal.aborted ) return;
+    updateHash( path, anchor );
+    saveCurrentFile( path );   // remember last-opened file for this repo (sessionStorage)
+  } catch ( err ) {
+    if ( signal.aborted || err.name === 'AbortError' ) return;   // superseded by a newer view
+    lastRawText = '';
+    // Un-claim the path: leaving a failed load as "current" would make the
+    // hashchange guard in main.js swallow a retry of the same permalink.
+    state.currentFilePath = '';
+    body.innerHTML = `<p style="color:red;">${ escapeHTML( err.message ) }</p>`;
+  }
+  // Land on the requested anchor when there is one; otherwise start at the top.
+  if ( !( anchor && scrollToAnchor( anchor ) ) ) {
+    document.getElementById( 'contentArea' ).scrollTo( { top: 0 } );
+  }
+};
+
+/* ── content actions: view toggle, copy, print, new-tab (reference §38) ── */
+const setupContentActions = () => {
+  document.getElementById( 'contentArea' ).addEventListener( 'click', async ( e ) => {
+    // Breadcrumb folder link → open + scroll that folder in the sidebar.
+    const folderLink = e.target.closest( '[data-action="scroll-folder"]' );
+    if ( folderLink ) {
+      e.preventDefault();
+      const d = document.querySelector( `details[data-folder-path="${ CSS.escape( folderLink.dataset.folder ) }"]` );
+      if ( d ) { let a = d; while ( a ) { a.open = true; a = a.parentElement?.closest( 'details' ); } d.scrollIntoView( { block: 'center', behavior: 'auto' } ); }
+      return;
+    }
+    const toggleBtn = e.target.closest( '[data-action="view-toggle"]' );
+    if ( toggleBtn ) {
+      // Scoped to direct children: rendered Markdown may carry its own id="viewRaw".
+      const viewRendered = document.querySelector( '#contentBody > #viewRendered' );
+      const viewRaw = document.querySelector( '#contentBody > #viewRaw' );
+      const ext = extOf( state.currentFilePath );
+      const goingToRaw = getPreferredView( ext ) === 'rendered';
+      if ( viewRendered ) viewRendered.style.display = goingToRaw ? 'none' : '';
+      if ( viewRaw ) viewRaw.style.display = goingToRaw ? '' : 'none';
+      toggleBtn.textContent = goingToRaw ? '👁' : '</>';
+      const t = goingToRaw ? 'Show rendered view' : 'Show raw source';
+      toggleBtn.title = t; toggleBtn.setAttribute( 'aria-label', t );
+      setPreferredView( ext, goingToRaw ? 'raw' : 'rendered' );
+      return;
+    }
+    const copyBtn = e.target.closest( '[data-action="copy-file"]' );
+    if ( copyBtn ) {   // button only shows for text files, so lastRawText is this file's text (may be '')
+      try {
+        await navigator.clipboard.writeText( lastRawText || '' );
+        const orig = copyBtn.textContent; copyBtn.textContent = '✓';
+        setTimeout( () => { copyBtn.textContent = orig; }, 1200 );
+      } catch ( _ ) { /* clipboard blocked */ }
+      return;
+    }
+    const printBtn = e.target.closest( '[data-action="print"]' );
+    if ( printBtn ) { window.print(); return; }
+
+    const newTabBtn = e.target.closest( '[data-action="new-tab"]' );
+    if ( newTabBtn ) {
+      window.open( getNewTabUrl( newTabBtn.dataset.path ), '_blank', 'noopener' );
+      return;
+    }
+  } );
+};
+
+/* ── self-test (reference §12b): render every visible file the way the viewer
+   would — off-screen — and report pass/fail/skip. A pass means it loaded and
+   parsed/decoded without throwing, not that it looks perfect. ── */
+const runSelfTest = async () => {
+  const cb = document.getElementById( 'contentBody' );
+  setContentHeader( makeSimpleHeader( 'Self-test' ) );
+  if ( !state.tree ) { cb.innerHTML = '<div class="markdown-body"><p>No repository tree loaded yet.</p></div>'; return; }
+
+  const files = state.tree.filter( ( i ) => i.type === 'blob' && isVisibleTreeItem( i, hiddenFolderSet(), hiddenFileSet() ) );
+  const signal = newAbort();
+  const total = files.length;
+  const results = [];
+  let done = 0, pass = 0, fail = 0, skip = 0;
+  const LARGE_SKIP = 5 * 1024 * 1024;
+
+  const render = () => {
+    const rows = results.map( ( r ) => {
+      const icon = r.status === 'pass' ? '✅' : r.status === 'fail' ? '❌' : '⏭';
+      return `<tr class="st-${ r.status }"><td>${ icon }</td><td>${ escapeHTML( r.path ) }</td><td>${ escapeHTML( r.detail || '' ) }</td></tr>`;
+    } ).join( '' );
+    const heading = done < total ? `Testing… <strong>${ done }</strong> / ${ total }`
+      : `<strong>${ fail ? 'Some failures' : 'All passed' }</strong> — ${ done } of ${ total } checked`;
+    cb.innerHTML = '<div class="markdown-body"><h2>Self-test</h2>' +
+      '<p>Renders every file the way the viewer would, off-screen, to confirm it displays.</p>' +
+      `<p>${ heading } &middot; ✅ ${ pass } &middot; ❌ ${ fail } &middot; ⏭ ${ skip }</p>` +
+      `<table class="selftest-table"><thead><tr><th></th><th>File</th><th>Result</th></tr></thead><tbody>${ rows }</tbody></table></div>`;
+  };
+  render();
+
+  const decodeImage = ( url ) => new Promise( ( resolve, reject ) => {
+    const img = new Image();
+    const timer = setTimeout( () => { img.src = ''; reject( new Error( 'timed out' ) ); }, 15000 );
+    img.onload = () => { clearTimeout( timer ); resolve(); };
+    img.onerror = () => { clearTimeout( timer ); reject( new Error( 'failed to decode' ) ); };
+    img.src = url;
+  } );
+  const revokeIfBlob = ( u ) => { if ( typeof u === 'string' && u.startsWith( 'blob:' ) ) URL.revokeObjectURL( u ); };
+
+  const testFile = async ( item ) => {
+    const path = item.path;
+    const ext = extOf( path );
+    if ( ( item.size || 0 ) > LARGE_SKIP ) return { path, status: 'skip', detail: `${ formatFileSize( item.size ) } — too large` };
+    try {
+      if ( MARKDOWN_EXTS.includes( ext ) ) { DOMPurify.sanitize( marked.parse( await fetchFileText( path, signal ) ) ); return { path, status: 'pass', detail: 'markdown parsed' }; }
+      if ( ext === 'svg' ) {
+        const url = createBlobUrl( new Blob( [ await fetchFileText( path, signal ) ], { type: 'image/svg+xml' } ) );
+        try { await decodeImage( url ); } finally { revokeIfBlob( url ); }
+        return { path, status: 'pass', detail: 'svg decoded' };
+      }
+      if ( IMAGE_EXTS.includes( ext ) ) {
+        const url = await resolveMediaUrl( path, signal );
+        try { await decodeImage( url ); } finally { revokeIfBlob( url ); }
+        return { path, status: 'pass', detail: 'image decoded' };
+      }
+      if ( SHEET_EXTS.includes( ext ) ) {
+        await ensureXLSX();
+        const wb = XLSX.read( await fetchFileArrayBuffer( path, signal ), { type: 'array' } );
+        return { path, status: 'pass', detail: `${ wb.SheetNames.length } sheet${ wb.SheetNames.length === 1 ? '' : 's' }` };
+      }
+      if ( AUDIO_EXTS.includes( ext ) || VIDEO_EXTS.includes( ext ) || ext === 'pdf' ) {
+        revokeIfBlob( await fetchFileBlob( path, MIME[ ext ], signal ) );   // confirm it downloads
+        return { path, status: 'pass', detail: `${ ext } reachable` };
+      }
+      await fetchFileText( path, signal );   // text / code / html / json / other
+      return { path, status: 'pass', detail: ext ? `${ ext } loaded` : 'loaded' };
+    } catch ( err ) {
+      if ( err?.name === 'AbortError' ) throw err;
+      return { path, status: 'fail', detail: err?.message || 'error' };
+    }
+  };
+
+  const CONCURRENCY = localMode ? 8 : 4;
+  let cursor = 0;
+  const worker = async () => {
+    while ( cursor < files.length ) {
+      const item = files[ cursor++ ];
+      let res;
+      try { res = await testFile( item ); }
+      catch ( err ) { if ( err?.name === 'AbortError' ) return; res = { path: item.path, status: 'fail', detail: err?.message || 'error' }; }
+      results.push( res );
+      done++;
+      if ( res.status === 'pass' ) pass++; else if ( res.status === 'fail' ) fail++; else skip++;
+      if ( !signal.aborted && done % 5 === 0 ) render();
+    }
+  };
+  await Promise.all( Array.from( { length: Math.max( 1, Math.min( CONCURRENCY, files.length ) ) }, worker ) );
+  if ( !signal.aborted ) render();
+};
+
+const initContent = () => {
+  setupContentActions();
+  // Floating back-to-top: appears after scrolling, click returns the content to top.
+  const area = document.getElementById( 'contentArea' );
+  const toTop = document.getElementById( 'btnBackToTop' );
+  if ( area && toTop ) {
+    area.addEventListener( 'scroll', () => { toTop.style.display = area.scrollTop > 200 ? 'flex' : 'none'; } );
+    toTop.addEventListener( 'click', () => area.scrollTo( { top: 0, behavior: 'smooth' } ) );
+  }
+};
+    /* TooToo — footer.js  (repo-owner copyright + license link).
+   Left: favicon mark (static markup) + "© <year> <owner>", plus CONFIG.rightsText
+   when the owner is in scope (see rightsOwners). Right: License link. */
+
+const renderFooter = () => {
+  updateFooterCopyright();
+};
+
+/* Copyright by the repo owner, e.g. "© 2026 pushme-pullyou · No rights reserved".
+   The rights phrase (CONFIG.rightsText) is appended only when CONFIG.rightsOwners
+   covers this repo's owner — null = all owners, an array = just those, [] = none —
+   so a fork asserts its rights on its own repos but stays blank on others. */
+const updateFooterCopyright = () => {
+  const el = document.getElementById( 'footerCopyright' );
+  if ( !el ) return;
+  if ( !state.owner ) { el.textContent = ''; return; }
+  const owns = !CONFIG.rightsOwners ||
+    CONFIG.rightsOwners.some( ( o ) => o.toLowerCase() === state.owner.toLowerCase() );
+  const rights = ( CONFIG.rightsText && owns ) ? ` · ${ CONFIG.rightsText }` : '';
+  el.textContent = `© ${ new Date().getFullYear() } ${ state.owner }${ rights }.`;
+};
+
+/* Point the license link at the repo's own root LICENSE file (opened in-app via the
+   hash) when present; otherwise fall back to the opensource.org license list. Call
+   after the tree loads. */
+const updateFooterLicense = () => {
+  const el = document.querySelector( '.app-footer-license' );
+  if ( !el ) return;
+  const lic = state.tree?.find( ( i ) =>
+    i.type === 'blob' && /^(licen[sc]e|copying)(\.\w+)?$/i.test( i.path ) );
+  if ( lic ) {
+    el.href = '#' + encodeHash( lic.path );   // opens it in TooToo via hash routing
+    el.removeAttribute( 'target' );
+    el.removeAttribute( 'rel' );
+    el.title = `View ${ lic.path }`;
+  } else {
+    el.href = 'https://opensource.org/licenses';
+    el.target = '_blank';
+    el.rel = 'noopener';
+    el.title = 'Open source licenses (opensource.org)';
+  }
+};
+    /* TooToo — main.js  (init + wiring) for the ASSEMBLED live build.
+   Init order per ARCHITECTURE.md: header → content → footer → detect repo →
+   sidebar → fetch tree → route to a file (hash or README). Reference §40. */
+
+/* ── global error handlers (reference §39) ── */
+window.addEventListener( 'error', ( e ) => console.error( 'TooToo error:', e.message ) );
+window.addEventListener( 'unhandledrejection', ( e ) => console.error( 'TooToo unhandled rejection:', e.reason ) );
+
+const initApp = async () => {
+  // Per-repo branding: tootoo.config.js (loaded in <head>, if present) sets
+  // window.TOOTOO_CONFIG; merge it over the built-in + baked config so a dropped-in
+  // repo can override theme/appName/hidden files (canonical's fork model).
+  if ( window.TOOTOO_CONFIG && typeof window.TOOTOO_CONFIG === 'object' ) Object.assign( CONFIG, window.TOOTOO_CONFIG );
+
+  // Heartbeat for reload-vs-restore detection (read during hash routing below): stamp the
+  // time whenever this page is navigated away from. A reload re-reads it moments later; a
+  // session-restore re-reads a stale one. Registered before any early return so every exit
+  // path stamps. (CONFIG is merged first so a fork's storagePrefix is already in effect.)
+  window.addEventListener( 'pagehide', () => {
+    try { sessionStorage.setItem( sessionBeatKey(), String( Date.now() ) ); } catch ( _ ) { /* storage off */ }
+  } );
+
+  initHeader();     // header.js  — branding + appearance controls
+  initContent();    // content.js — wire Copy / view-toggle / etc.
+  renderFooter();   // footer.js  — brand bar
+  applyHeadingFont(); // core.js  — load + apply CONFIG.headingFont(Url) for headings/title
+
+  await detectLocalMode();  // core.js — file:// drop-in: seed owner/repo, read files from disk
+  // Can't read local files → explain, don't silently browse the baked default. But if a
+  // repo is explicitly chosen — URL ?owner=… or a per-repo tootoo.config.js — browse it
+  // over GitHub (https needs no flag) instead of showing the help.
+  const haveExplicitRepo = new URLSearchParams( location.search ).get( 'owner' )
+    || ( window.TOOTOO_CONFIG && window.TOOTOO_CONFIG.owner );
+  if ( fileAccessBlocked && !haveExplicitRepo ) { showFileAccessHelp(); return; }
+  await detectRepo();       // core.js — params → CONFIG → Pages host → cache → manual form
+  updateHeaderFromConfig(); // header.js — repo now known, so refresh the title (owner / repo)
+  updateFooterCopyright();  // footer.js — repo owner now known, set the © line
+  initSidebar();    // sidebar.js — wire filter/expand/select (tree fills next)
+  renderRepoShelf();  // tootoo-simple — the single-user repo shelf above the tree
+
+  if ( !state.owner || !state.repo ) {
+    document.getElementById( 'contentBody' ).innerHTML =
+      '<p style="padding:1rem;">Add <code>?owner=…&amp;repo=…</code> to the URL to load a repository.</p>';
+    return;
+  }
+
+  await fetchTree();                       // sidebar.js — GitHub tree → state.tree → render
+  updateFooterLicense();                   // footer.js — link to the repo's own LICENSE (tree now loaded)
+
+  // No tree here means fetchTree already rendered an explanation — the oversized
+  // notice, or the rate-limit/404 token panel. Stop before the hash routing below
+  // clobbers that panel with a bare fetch error (the permalink-while-rate-limited case).
+  if ( !state.tree ) return;
+
+  // Back/forward + address-bar hash edits re-open the file (and/or scroll to the
+  // in-file anchor after the first raw '#').
+  const routeLocation = () => {
+    const { path, anchor } = parseHash();
+    // No ?branch= means the home branch (permalinks leave it out — see fetchTree).
+    const branch = new URLSearchParams( location.search ).get( 'branch' ) || ( isHomeRepo() ? homeBranch() : '' );
+    if ( branch && branch !== state.branch ) { switchBranch( branch, path, anchor ); return; }
+    if ( !path ) return;
+    if ( path === state.currentFilePath ) { if ( anchor ) scrollToAnchor( anchor ); return; }
+    selectFile( path, anchor );
+  };
+  window.addEventListener( 'hashchange', routeLocation );
+  window.addEventListener( 'popstate', routeLocation );   // branch changes also change the query
+
+  // Keep a panel opened during startup visible when the repository tree finishes.
+  if ( activePanel ) return;
+
+  // Distinguish a RELOAD (keep your place) from a browser SESSION-RESTORE (go home).
+  // Both bring back the URL hash and sessionStorage, so we time it instead: on pagehide
+  // the app stamps the time it last left the page (see initApp top). performance.timeOrigin
+  // is this load's navigation start — and, like Date.now(), it is Unix-epoch milliseconds, so
+  // the two are directly comparable: `timeOrigin - leftAt` is the gap since we last left,
+  // sub-second for a reload (back-to-back) but seconds+ for a restore (browser was closed).
+  // No stamp at all → a genuinely fresh context (new tab / directly opened permalink).
+  const RELOAD_GRACE_MS = 3000;          // a reload's gap is sub-second; restores far exceed this
+  // A followed link or typed/pasted permalink ('navigate') is never a restore, even in a tab
+  // that showed TooToo earlier — otherwise its #file would be swapped for the README.
+  const navType = performance.getEntriesByType?.( 'navigation' )[ 0 ]?.type;
+  let restored = false;
+  try {
+    const leftAt = sessionStorage.getItem( sessionBeatKey() );
+    restored = navType !== 'navigate' && leftAt !== null &&
+      ( performance.timeOrigin - Number( leftAt ) ) > RELOAD_GRACE_MS;
+  } catch ( _ ) { restored = false; }    // storage off → not a restore, so permalinks still open
+
+  if ( restored ) {
+    autoSelectReadme();                  // restored session → always the home page
+  } else {
+    // Fresh open or reload — File-open priority: URL hash → last-opened (this session) → README.
+    const { path: hashPath, anchor: hashAnchor } = parseHash();
+    if ( hashPath ) {
+      selectFile( hashPath, hashAnchor );
+    } else {
+      let last = null;
+      try { last = sessionStorage.getItem( getCurrentFileKey() ); } catch ( _ ) { /* storage off */ }
+      if ( last && state.tree?.some( ( i ) => i.path === last && i.type === 'blob' ) ) selectFile( last );
+      else autoSelectReadme();
+    }
+  }
+};
+
+/* file:// + local reads blocked → tell the user how to enable the flag instead of
+   silently browsing the configured default repo (which looks like a bug). */
+const showFileAccessHelp = () => {
+  const cb = document.getElementById( 'contentBody' );
+  if ( !cb ) return;
+  cb.innerHTML = `
+    <div style="padding:1rem; max-width:46rem; line-height:1.55;">
+      <h2 style="margin-top:0;">Can't read local files</h2>
+      <p>This page is running from <code>file://</code> inside what looks like a git
+      repository, but the browser blocked reading local files — so TooToo can't tell
+      which repo this is, and won't guess.</p>
+      <p>To browse the local repo, Chrome needs the file-access flag:</p>
+      <ol>
+        <li><strong>Quit Chrome completely</strong> — every window. (Chrome reuses a
+        running process and ignores new flags, which is the usual culprit.)</li>
+        <li>Relaunch it with <code>--allow-file-access-from-files</code>.</li>
+        <li>Confirm at <code>chrome://version</code> → “Command Line” that the flag is
+        listed, then reopen this file.</li>
+      </ol>
+      <p style="opacity:0.7;">Or add <code>?owner=…&amp;repo=…</code> to the URL to browse a repo over the network.</p>
+    </div>`;
+};
+
+/* ════ TooToo Simple — single-user repo shelf ════
+   Every repo of ONE owner, listed above the file tree from the baked ta-data.js
+   (no API calls to draw the list). Clicking a repo re-points the whole app at it
+   via the normal fetchTree machinery. A pinned "organizations" row renders the
+   local organizations.md. */
+
+const SHELF_OWNER = 'theo-armour';
+const SHELF_HOME = 'theo-armour.github.io';
+const SHELF_ORGS_ROW = '~organizations~';
+
+/* ── all repos + forks from ta-data.js: home repo first, then most recently pushed ── */
+const shelfRepoList = () => {
+  const repos = TA_DATA.entries.filter( ( e ) => e.type === 'repo' || e.type === 'fork' );
+  repos.sort( ( a, b ) => b.updated.localeCompare( a.updated ) );
+  const home = repos.findIndex( ( r ) => r.name === SHELF_HOME );
+  if ( home > 0 ) repos.unshift( repos.splice( home, 1 )[ 0 ] );
+  return repos;
+};
+
+const markShelfActive = ( name ) => {
+  document.querySelectorAll( '#repoShelf .shelf-row' ).forEach( ( el ) =>
+    el.classList.toggle( 'active', el.dataset.repo === name ) );
+};
+
+/* ── point the whole app at another of the owner's repos ── */
+const openShelfRepo = async ( name ) => {
+  if ( state.repo === name && state.tree ) { markShelfActive( name ); return; }
+  state.owner = SHELF_OWNER;
+  state.repo = name;
+  state.branch = '';            // repos vary between main and master — let fetchTree resolve it
+  state.currentFilePath = '';
+  const url = new URL( location.href );
+  url.hash = '';                // a file path from the previous repo must not route into this one
+  history.replaceState( null, '', url );
+  markShelfActive( name );
+  updateHeaderFromConfig();
+  await fetchTree();
+  if ( state.tree ) { updateFooterLicense(); autoSelectReadme(); }
+};
+
+/* ── the pinned organizations row: render the local organizations.md ── */
+const showOrganizations = async () => {
+  markShelfActive( SHELF_ORGS_ROW );
+  setContentHeader( makeSimpleHeader( 'Organizations' ) );
+  const body = document.getElementById( 'contentBody' );
+  try {
+    const response = await fetch( 'organizations.md' );
+    if ( !response.ok ) throw new Error( `HTTP ${ response.status }` );
+    const text = await response.text();
+    body.innerHTML = DOMPurify.sanitize( marked.parse( text ) );
+  } catch ( err ) {
+    body.innerHTML = `<p style="padding:1rem;">Could not load <code>organizations.md</code> — ` +
+      `${ escapeHTML( err.message ) }. The file must sit next to index.html.</p>`;
+  }
+};
+
+const renderRepoShelf = () => {
+  const shelf = document.getElementById( 'repoShelf' );
+  if ( typeof TA_DATA === 'undefined' ) {
+    shelf.innerHTML = '<p style="padding:0.5rem;">ta-data.js missing — the repo shelf needs it.</p>';
+    return;
+  }
+  const repos = shelfRepoList();
+
+  // Summary line: count + year span; the fuller numbers live in the tooltip.
+  const years = repos.map( ( r ) => r.created.slice( 0, 4 ) );
+  const span = `${ Math.min( ...years ) }→${ Math.max( ...years ) }`;
+  const forkCount = repos.filter( ( r ) => r.type === 'fork' ).length;
+  const orgCount = TA_DATA.entries.filter( ( e ) => e.type === 'org' ).length;
+  const starTotal = repos.reduce( ( sum, r ) => sum + ( r.stars || 0 ), 0 );
+  const shelfTip = `${ repos.length - forkCount } repos · ${ forkCount } forks · ${ orgCount } orgs · ` +
+    `★ ${ starTotal } total · data as of ${ TA_DATA.meta.snapshot }`;
+
+  const rows = repos.map( ( r ) => `
+    <button type="button" class="shelf-row" data-repo="${ escapeHTML( r.name ) }" title="${ escapeHTML( r.description || '' ) }">
+      ${ r.name === SHELF_HOME ? '📘' : '📁' } ${ escapeHTML( r.name ) }
+    </button>` ).join( '' );
+  shelf.innerHTML = `
+    <details id="shelfDetails" open>
+      <summary title="${ escapeHTML( shelfTip ) }">${ repos.length } repos · ${ span }</summary>
+      <button type="button" class="shelf-row" data-repo="${ SHELF_ORGS_ROW }"
+        title="The organizations Theo belongs to — descriptions and links">🏛️ organizations</button>
+      ${ rows }
+    </details>`;
+  shelf.addEventListener( 'click', ( e ) => {
+    const row = e.target.closest( '.shelf-row' );
+    if ( !row ) return;
+    if ( row.dataset.repo === SHELF_ORGS_ROW ) { showOrganizations(); return; }
+    openShelfRepo( row.dataset.repo );
+  } );
+  markShelfActive( state.repo || SHELF_HOME );
+  initShelfResizer();
+};
+
+/* ── the horizontal bar under the shelf: drag to resize it, double-click to reset ── */
+const initShelfResizer = () => {
+  const divider = document.getElementById( 'shelfResizer' );
+  const shelf = document.getElementById( 'repoShelf' );
+  const heightKey = storageKey( 'shelfHeight' );
+  const setHeight = ( px ) => { shelf.style.maxHeight = 'none'; shelf.style.height = px + 'px'; };
+  try {
+    const saved = Number( localStorage.getItem( heightKey ) );
+    if ( saved ) setHeight( saved );
+  } catch ( _ ) { /* storage off */ }
+
+  let dragging = false, startY = 0, startHeight = 0;
+  divider.addEventListener( 'pointerdown', ( e ) => {
+    dragging = true;
+    startY = e.clientY;
+    startHeight = shelf.getBoundingClientRect().height;
+    divider.setPointerCapture( e.pointerId );
+    e.preventDefault();
+  } );
+  divider.addEventListener( 'pointermove', ( e ) => {
+    if ( !dragging ) return;
+    setHeight( Math.max( 0, Math.min( window.innerHeight * 0.7, startHeight + e.clientY - startY ) ) );
+  } );
+  divider.addEventListener( 'pointerup', () => {
+    if ( !dragging ) return;
+    dragging = false;
+    try { localStorage.setItem( heightKey, String( Math.round( shelf.getBoundingClientRect().height ) ) ); }
+    catch ( _ ) { /* storage off */ }
+  } );
+  divider.addEventListener( 'dblclick', () => {
+    shelf.style.height = '';
+    shelf.style.maxHeight = '';
+    try { localStorage.removeItem( heightKey ); } catch ( _ ) { /* storage off */ }
+  } );
+};
+
+initApp();
+  </script>
+
+</body>
+
+</html>
