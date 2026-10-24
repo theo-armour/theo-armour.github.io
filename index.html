@@ -175,17 +175,8 @@ header {
   font-size: 1.35rem;
   text-decoration: none;
   color: var(--highlight-fg);
-  cursor: pointer;
   white-space: normal;
-  padding: 0.05rem 0.35rem;
-  border-radius: 6px;
-  transition: color 0.15s, background-color 0.15s;
-}
-
-#headerTitle:hover {
-  color: var(--highlight-color);
-  background: color-mix(in srgb, var(--highlight-color), transparent 85%);
-  text-decoration: underline;
+  padding: 0.05rem 0;
 }
 
 .header-subtitle {
@@ -1163,13 +1154,26 @@ body.dark-mode pre {
 
     #shelfResizer:hover { background: var(--highlight-color); }
 
-    /* header title segments are live links, styled like the plain title */
+    /* header title segments are live links; each highlights on its own */
     #headerTitle a {
+      border-radius: 6px;
       color: inherit;
+      padding: 0.05rem 0.35rem;
       text-decoration: none;
+      transition: color 0.15s, background-color 0.15s;
     }
 
-    #headerTitle a:hover { text-decoration: underline; }
+    #headerTitle a:hover {
+      background: color-mix(in srgb, var(--highlight-color), transparent 85%);
+      color: var(--highlight-color);
+      text-decoration: underline;
+    }
+
+    /* a visible break between the two links */
+    .title-sep {
+      margin: 0 0.35rem;
+      opacity: 0.5;
+    }
 
     /* the sidebar's files header matches the shelf summary above it */
     #filesPanelHeader { padding: 0.25rem 0.75rem; }
@@ -1875,7 +1879,7 @@ const updateHeaderFromConfig = () => {
       : `${ ownerSite }/${ encodeURIComponent( state.repo ) }`;
     titleEl.innerHTML =
       `<a class="title-seg" href="${ ownerSite }" target="_blank" rel="noopener" title="${ escapeHTML( ownerSite ) }">${ escapeHTML( state.owner ) }</a>` +
-      ` / ` +
+      `<span class="title-sep">/</span>` +
       `<a class="title-seg" href="${ repoSite }" target="_blank" rel="noopener" title="${ escapeHTML( repoSite ) }">${ escapeHTML( state.repo ) }</a>`;
   } else {
     titleEl.textContent = CONFIG.appName;
