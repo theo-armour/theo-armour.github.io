@@ -975,12 +975,6 @@ body.dark-mode pre {
   .resizer {
     width: 4px;
   }
-
-  .file-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
 }
 
 /* Print: only the current file's content, with its name as a title. */
@@ -1234,10 +1228,23 @@ body.dark-mode pre {
       text-overflow: ellipsis;
     }
 
+    /* content header: same one-line behavior — the breadcrumb title truncates,
+       the action icons never wrap or stack */
+    .file-header { flex-wrap: nowrap; }
+
+    #breadcrumbs {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
     /* the sidebar's files header matches the shelf summary above it */
     #filesPanelHeader { padding: 0.25rem 0.75rem; }
 
-    #filesPanelHeader h3 {
+    /* …and the content header's text matches both sidebar headers */
+    #filesPanelHeader h3,
+    .file-header h3 {
       color: var(--text-color);
       font-size: 0.85rem;
       font-weight: 600;
