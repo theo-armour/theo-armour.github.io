@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-24 21:22">
+  <meta name="revised" content="2026-10-24 21:32">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -3642,7 +3642,26 @@ const renderRepoShelf = () => {
     if ( row.dataset.repo === SHELF_ORGS_ROW ) { showOrganizations(); return; }
     openShelfRepo( row.dataset.repo );
   } );
+  shelf.addEventListener( 'keydown', onShelfKeydown );
   markShelfActive( state.repo || homeRepo.repo );
+};
+
+/* ── arrow keys on the shelf, like the file tree below: ↑/↓ move between rows,
+   → opens the focused row (Enter/Space also activate — the rows are buttons) ── */
+const onShelfKeydown = ( event ) => {
+  const row = event.target.closest( '.shelf-row' );
+  if ( !row ) return;
+  if ( event.key === 'ArrowRight' ) {
+    event.preventDefault();
+    if ( row.dataset.repo === SHELF_ORGS_ROW ) { showOrganizations(); return; }
+    openShelfRepo( row.dataset.repo );
+    return;
+  }
+  if ( event.key !== 'ArrowDown' && event.key !== 'ArrowUp' ) return;
+  event.preventDefault();
+  const rows = Array.from( document.querySelectorAll( '#repoShelf .shelf-row' ) );
+  const next = rows[ rows.indexOf( row ) + ( event.key === 'ArrowDown' ? 1 : -1 ) ];
+  if ( next ) { next.focus(); next.scrollIntoView( { block: 'nearest' } ); }
 };
 
 /* ── the two sidebar panels get the same floating ↑ as the content area ── */
