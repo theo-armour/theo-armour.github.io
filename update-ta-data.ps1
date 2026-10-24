@@ -14,7 +14,10 @@ $ErrorActionPreference = 'Stop'
 $owner = 'theo-armour'
 $here = $PSScriptRoot
 $dataPath = Join-Path $here 'ta-data.js'
-$alsoCopyTo = @( 'G:\My Drive\2026-theo-github\theo-armour-2026-ta-gh-io-refactor\ta-data.js' )
+$alsoCopyTo = @(
+    'G:\My Drive\2026-theo-github\theo-armour-sandbox\tootoo-simple\ta-data.js',
+    'G:\My Drive\2026-theo-github\theo-armour-2026-ta-gh-io-refactor\ta-data.js'
+)
 
 $headers = @{ 'User-Agent' = 'ta-data-refresh'; 'Accept' = 'application/vnd.github+json' }
 if ($env:GH_TOKEN) { $headers['Authorization'] = "Bearer $env:GH_TOKEN"; Write-Output 'Using GH_TOKEN.' }
