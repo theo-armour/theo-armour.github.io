@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-19 17:14">
+  <meta name="revised" content="2026-10-24 21:22">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -117,8 +117,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* lock the shell to the viewport so the sidebar + content scroll INTERNALLY
-     (sidebar footer pins to the sidebar bottom; tree scroll-to-top works) */
+  /* lock the shell to the viewport so the sidebar + content scroll INTERNALLY */
   margin: 0;
   overflow-x: hidden;
   font-family: var(--font-family);
@@ -508,17 +507,6 @@ main {
   padding: 0 0.5rem;
   flex: 1;
   overflow-y: auto;
-}
-
-/* ── Sidebar footer ── */
-.sidebar-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.15rem;
-  border-top: 1px solid var(--border-color);
-  background: var(--primary-bg);
-  flex-shrink: 0;
 }
 
 /* ── Resizer ── */
@@ -1107,10 +1095,7 @@ body.dark-mode pre {
     }
 
     #repoShelf summary {
-      color: var(--text-color);
       cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 600;
       padding: 0.4rem 0.75rem;
       user-select: none;
     }
@@ -1169,23 +1154,14 @@ body.dark-mode pre {
       opacity: 0.5;
     }
 
-    /* small back-to-top buttons for the two sidebar panels, matching the content's */
+    /* the sidebar panels' ↑ buttons share .back-to-top's look; this modifier only
+       shrinks them and repositions them inside/over their panels */
     .sidebar { position: relative; }
 
     .panel-to-top {
-      align-items: center;
-      background-color: var(--highlight-color);
-      border: none;
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-      color: #ffffff;
-      cursor: pointer;
-      display: none;
       font-size: 1rem;
       height: 1.9rem;
-      justify-content: center;
       width: 1.9rem;
-      z-index: 20;
     }
 
     /* shelf button rides inside its own scrolling panel */
@@ -1193,6 +1169,7 @@ body.dark-mode pre {
       bottom: 0.4rem;
       margin: 0 0.5rem 0.4rem auto;
       position: sticky;
+      right: auto;
     }
 
     /* tree button floats over the lower panel */
@@ -1228,23 +1205,18 @@ body.dark-mode pre {
       text-overflow: ellipsis;
     }
 
-    /* content header: same one-line behavior — the breadcrumb title truncates,
-       the action icons never wrap or stack */
+    /* content header: same one-line behavior — the built-in crumb truncation
+       (path shrinks, filename stays) handles narrow widths; just never wrap */
     .file-header { flex-wrap: nowrap; }
-
-    #breadcrumbs {
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
 
     /* the sidebar's files header matches the shelf summary above it */
     #filesPanelHeader { padding: 0.25rem 0.75rem; }
 
-    /* …and the content header's text matches both sidebar headers */
+    /* …and all three panel headers share one text treatment
+       (h3#breadcrumbs outranks the base #breadcrumbs font rules) */
+    #repoShelf summary,
     #filesPanelHeader h3,
-    .file-header h3 {
+    h3#breadcrumbs {
       color: var(--text-color);
       font-size: 0.85rem;
       font-weight: 600;
@@ -1307,7 +1279,7 @@ body.dark-mode pre {
         <button id="btnFilterClear" title="Clear filter" aria-label="Clear filter">✕</button>
       </div>
       <div id="treeList"></div>
-      <button id="btnTreeTop" class="panel-to-top" title="Scroll files to top" aria-label="Scroll files to top">↑</button>
+      <button id="btnTreeTop" class="back-to-top panel-to-top" title="Scroll files to top" aria-label="Scroll files to top">↑</button>
     </div>
     <div class="resizer" id="resizer" title="Drag to Resize Sidebar"></div>
     <div class="content-area" id="contentArea">
@@ -1792,24 +1764,23 @@ const resolveRepoPath = ( href, currentDir ) => {
   return stack.join( '/' );
 };
 
-/* ── the file served LIVE on GitHub Pages, so index.html runs instead of showing
-   source (the app's own render/source toggle covers reading code). The special
-   <owner>.github.io repo serves from the domain root. ── */
-const pagesUrl = ( path ) => {
-  const owner = state.owner.toLowerCase();
-  const base = state.repo.toLowerCase() === `${ owner }.github.io`
-    ? `https://${ owner }.github.io`
-    : `https://${ owner }.github.io/${ encodeURIComponent( state.repo ) }`;
-  return `${ base }/${ encodePath( path ) }`;
-};
+/* ── tootoo-simple: the live GitHub Pages addresses, so index.html runs instead of
+   showing source (the app's render/source toggle covers reading code). The special
+   <owner>.github.io repo serves from the domain root. One source of truth — the
+   header links reuse these. ── */
+const ownerSiteUrl = () => `https://${ encodeURIComponent( state.owner.toLowerCase() ) }.github.io`;
+const pagesBase = () => state.repo.toLowerCase() === `${ state.owner.toLowerCase() }.github.io`
+  ? ownerSiteUrl()
+  : `${ ownerSiteUrl() }/${ encodeURIComponent( state.repo ) }`;
+const pagesUrl = ( path ) => `${ pagesBase() }/${ encodePath( path ) }`;
 
-/* ── URL to open in a new tab / download (reference §31, simplified): the local file
-   in drop-in mode; downloads keep the raw URL (direct save); everything else opens
-   the live GitHub Pages copy. ── */
+/* ── tootoo-simple: URL to open in a new tab / download: the local file in drop-in
+   mode; downloads keep the raw URL (direct save); everything else opens the live
+   GitHub Pages copy. ── */
 const getNewTabUrl = ( path ) => {
   const local = localUrlFor( path );
   if ( local ) return local;
-  const ext = path.includes( '.' ) ? path.split( '.' ).pop().toLowerCase() : '';
+  const ext = extOf( path );
   const willDownload = isDownloadAction( ext ) && !isTextOpenAsPlain( ext );
   return willDownload ? rawUrl( path ) : pagesUrl( path );
 };
@@ -1935,14 +1906,15 @@ const updateHeaderFromConfig = () => {
   // Each segment is a live link: owner → the owner's github.io home, repo → that
   // repo's live GitHub Pages site (the brand icon beside them → github.com).
   if ( state.owner && state.repo ) {
-    const ownerSite = `https://${ state.owner.toLowerCase() }.github.io`;
-    const repoSite = state.repo.toLowerCase() === `${ state.owner.toLowerCase() }.github.io`
-      ? ownerSite
-      : `${ ownerSite }/${ encodeURIComponent( state.repo ) }`;
+    // tootoo-simple: owner/repo can arrive from the URL (?owner=…), so they are
+    // untrusted — ownerSiteUrl/pagesBase URL-encode them, and every attribute they
+    // land in is HTML-escaped.
+    const ownerSite = ownerSiteUrl();
+    const repoSite = pagesBase();
     titleEl.innerHTML =
-      `<a class="title-seg" href="${ ownerSite }" target="_blank" rel="noopener" title="${ escapeHTML( ownerSite ) }">${ escapeHTML( state.owner ) }</a>` +
+      `<a class="title-seg" href="${ escapeHTML( ownerSite ) }" target="_blank" rel="noopener" title="${ escapeHTML( ownerSite ) }">${ escapeHTML( state.owner ) }</a>` +
       `<span class="title-sep">/</span>` +
-      `<a class="title-seg" href="${ repoSite }" target="_blank" rel="noopener" title="${ escapeHTML( repoSite ) }">${ escapeHTML( state.repo ) }</a>`;
+      `<a class="title-seg" href="${ escapeHTML( repoSite ) }" target="_blank" rel="noopener" title="${ escapeHTML( repoSite ) }">${ escapeHTML( state.repo ) }</a>`;
   } else {
     titleEl.textContent = CONFIG.appName;
   }
@@ -2149,7 +2121,7 @@ const renderAboutPanel = () => {
       <h3>Tips</h3>
       <ul>
         <li>Use the filter input in the sidebar to search file names</li>
-        <li>Click the title in the header to reload</li>
+        <li>Click the 📘 home row at the top of the repo shelf to return home</li>
         <li>Use <strong>A−</strong> / <strong>A+</strong> to adjust font size — helpful on phones and small screens</li>
         <li>Click <strong>🌙</strong> to toggle dark mode — your choice is saved across visits</li>
         <li>Click <strong>?</strong> or <strong>⚙️ Token</strong> again to close the panel and return to your file</li>
@@ -2884,7 +2856,6 @@ const initSidebar = () => {
     if ( !e.target.closest( '.branch-control' ) ) closeBranchMenu();
   } );
 
-  // Sidebar footer scroll-to-top (its brand mark is static markup → favicon.ico).
   // Resizer drag (real app does this in setupListeners; minimal version here).
   const resizer = document.getElementById( 'resizer' );
   if ( resizer ) {
@@ -3486,7 +3457,9 @@ const initApp = async () => {
   updateHeaderFromConfig(); // header.js — repo now known, so refresh the title (owner / repo)
   updateFooterCopyright();  // footer.js — repo owner now known, set the © line
   initSidebar();    // sidebar.js — wire filter/expand/select (tree fills next)
-  renderRepoShelf();  // tootoo-simple — the single-user repo shelf above the tree
+  renderRepoShelf();      // tootoo-simple — the single-user repo shelf above the tree
+  initShelfResizer();     // tootoo-simple — one-time wiring, independent of shelf data
+  initPanelTopButtons();  // tootoo-simple — ↑ buttons for both sidebar panels
 
   if ( !state.owner || !state.repo ) {
     document.getElementById( 'contentBody' ).innerHTML =
@@ -3582,15 +3555,15 @@ const showFileAccessHelp = () => {
    via the normal fetchTree machinery. A pinned "organizations" row renders the
    local organizations.md. */
 
-const SHELF_OWNER = 'theo-armour';
-const SHELF_HOME = 'theo-armour.github.io';
+// The baked identity lives in ONE place — the TOOTOO_CONFIG block in <head> — and
+// detectRepo captures it into canonical homeRepo before the shelf renders.
 const SHELF_ORGS_ROW = '~organizations~';
 
 /* ── all repos + forks from ta-data.js: home repo first, then most recently pushed ── */
 const shelfRepoList = () => {
   const repos = TA_DATA.entries.filter( ( e ) => e.type === 'repo' || e.type === 'fork' );
   repos.sort( ( a, b ) => b.updated.localeCompare( a.updated ) );
-  const home = repos.findIndex( ( r ) => r.name === SHELF_HOME );
+  const home = repos.findIndex( ( r ) => r.name === homeRepo.repo );
   if ( home > 0 ) repos.unshift( repos.splice( home, 1 )[ 0 ] );
   return repos;
 };
@@ -3600,17 +3573,18 @@ const markShelfActive = ( name ) => {
     el.classList.toggle( 'active', el.dataset.repo === name ) );
 };
 
-/* ── point the whole app at another of the owner's repos ── */
+/* ── point the whole app at another of the owner's repos, through the canonical
+   CONFIG → applyRepo path so the two state stores never diverge ── */
 const openShelfRepo = async ( name ) => {
-  if ( state.repo === name && state.tree ) { markShelfActive( name ); return; }
-  state.owner = SHELF_OWNER;
-  state.repo = name;
-  state.branch = '';            // repos vary between main and master — let fetchTree resolve it
-  state.currentFilePath = '';
-  const url = new URL( location.href );
-  url.hash = '';                // a file path from the previous repo must not route into this one
-  history.replaceState( null, '', url );
   markShelfActive( name );
+  if ( state.repo === name && state.tree ) return;
+  CONFIG.owner = homeRepo.owner;
+  CONFIG.repo = name;
+  CONFIG.branch = '';           // repos vary between main and master — let fetchTree resolve it
+  applyRepo();
+  state.currentFilePath = '';
+  // a file path from the previous repo must not route into this one (switchBranch's idiom)
+  history.replaceState( null, '', location.pathname + location.search );
   updateHeaderFromConfig();
   await fetchTree();
   if ( state.tree ) { updateFooterLicense(); autoSelectReadme(); }
@@ -3625,7 +3599,8 @@ const showOrganizations = async () => {
     const response = await fetch( 'organizations.md' );
     if ( !response.ok ) throw new Error( `HTTP ${ response.status }` );
     const text = await response.text();
-    body.innerHTML = DOMPurify.sanitize( marked.parse( text ) );
+    // same hardened sanitize profile + typography class as every repo-file render
+    body.innerHTML = `<div class="markdown-body">${ DOMPurify.sanitize( marked.parse( text ), MD_PURIFY ) }</div>`;
   } catch ( err ) {
     body.innerHTML = `<p style="padding:1rem;">Could not load <code>organizations.md</code> — ` +
       `${ escapeHTML( err.message ) }. The file must sit next to index.html.</p>`;
@@ -3651,7 +3626,7 @@ const renderRepoShelf = () => {
 
   const rows = repos.map( ( r ) => `
     <button type="button" class="shelf-row" data-repo="${ escapeHTML( r.name ) }" title="${ escapeHTML( r.description || '' ) }">
-      ${ r.name === SHELF_HOME ? '📘' : '📁' } ${ escapeHTML( r.name ) }
+      ${ r.name === homeRepo.repo ? '📘' : '📁' } ${ escapeHTML( r.name ) }
     </button>` ).join( '' );
   shelf.innerHTML = `
     <details id="shelfDetails" open>
@@ -3660,24 +3635,26 @@ const renderRepoShelf = () => {
         title="The organizations Theo belongs to — descriptions and links">🏛️ organizations</button>
       ${ rows }
     </details>
-    <button id="btnShelfTop" class="panel-to-top" title="Scroll repos to top" aria-label="Scroll repos to top">↑</button>`;
+    <button id="btnShelfTop" class="back-to-top panel-to-top" title="Scroll repos to top" aria-label="Scroll repos to top">↑</button>`;
   shelf.addEventListener( 'click', ( e ) => {
     const row = e.target.closest( '.shelf-row' );
     if ( !row ) return;
     if ( row.dataset.repo === SHELF_ORGS_ROW ) { showOrganizations(); return; }
     openShelfRepo( row.dataset.repo );
   } );
-  markShelfActive( state.repo || SHELF_HOME );
-  initShelfResizer();
-  initPanelTopButtons();
+  markShelfActive( state.repo || homeRepo.repo );
 };
 
 /* ── the two sidebar panels get the same floating ↑ as the content area ── */
 const initPanelTopButtons = () => {
   const wire = ( scroller, btn ) => {
     if ( !scroller || !btn ) return;
+    let shown = false;   // write style only on show/hide transitions, not every scroll frame
     scroller.addEventListener( 'scroll', () => {
-      btn.style.display = scroller.scrollTop > 150 ? 'flex' : 'none';
+      const want = scroller.scrollTop > 150;
+      if ( want === shown ) return;
+      shown = want;
+      btn.style.display = want ? 'flex' : 'none';
     } );
     btn.addEventListener( 'click', ( e ) => {
       e.stopPropagation();
