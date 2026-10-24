@@ -1062,10 +1062,10 @@ const TA_DATA =
     },
     {
       "type": "repo",
-      "name": "theo-armour.github.io",
-      "url": "https://github.com/theo-armour/theo-armour.github.io",
+      "name": "2022-theo-armour-github-io",
+      "url": "https://github.com/theo-armour/2022-theo-armour-github-io",
       "description": "Theo Armour GitHub home page",
-      "homepage": "theo-armour.github.io",
+      "homepage": "https://theo-armour.github.io/2022-theo-armour-github-io/",
       "created": "2012-01-04",
       "updated": "2026-04-30",
       "stars": 6,
@@ -1519,16 +1519,6 @@ const TA_DATA =
       "note": "Environmental design tools I helped along early on",
       "repoList": [
         {
-          "name": "honeybee-idaice",
-          "url": "https://github.com/ladybug-tools/honeybee-idaice",
-          "description": ":bee: :red_circle: Honeybee extension for exporting to IDA-ICE IDM file format",
-          "homepage": "https://www.ladybug.tools/honeybee-idaice/docs/",
-          "created": "2023-05-28",
-          "updated": "2026-10-22",
-          "stars": 3,
-          "fork": false
-        },
-        {
           "name": "dragonfly-idaice",
           "url": "https://github.com/ladybug-tools/dragonfly-idaice",
           "description": "🐉 :red_circle: Dragonfly extension for exporting to IDA-ICE IDM file format",
@@ -1539,43 +1529,13 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "dragonfly-radiance",
-          "url": "https://github.com/ladybug-tools/dragonfly-radiance",
-          "description": "🐉⚡️ Dragonfly extension for Radiance simulation",
-          "homepage": "https://www.ladybug.tools/dragonfly-radiance/docs/",
-          "created": "2023-02-22",
-          "updated": "2026-10-21",
-          "stars": 4,
-          "fork": false
-        },
-        {
-          "name": "lbt-honeybee",
-          "url": "https://github.com/ladybug-tools/lbt-honeybee",
-          "description": "🐝 🐝 🐝 Collection of all Honeybee Python libraries",
-          "homepage": "",
-          "created": "2020-06-06",
-          "updated": "2026-10-21",
-          "stars": 5,
-          "fork": false
-        },
-        {
-          "name": "honeybee-core",
-          "url": "https://github.com/ladybug-tools/honeybee-core",
-          "description": ":honeybee: honeybee core library for working with detailed building geometry",
-          "homepage": "https://www.ladybug.tools/honeybee-core/docs/",
-          "created": "2019-01-26",
-          "updated": "2026-10-21",
-          "stars": 24,
-          "fork": false
-        },
-        {
-          "name": "dragonfly-core",
-          "url": "https://github.com/ladybug-tools/dragonfly-core",
-          "description": ":dragon: dragonfly core library",
-          "homepage": "https://www.ladybug.tools/dragonfly-core/docs/",
-          "created": "2019-09-19",
-          "updated": "2026-10-21",
-          "stars": 19,
+          "name": "honeybee-idaice",
+          "url": "https://github.com/ladybug-tools/honeybee-idaice",
+          "description": ":bee: :red_circle: Honeybee extension for exporting to IDA-ICE IDM file format",
+          "homepage": "https://www.ladybug.tools/honeybee-idaice/docs/",
+          "created": "2023-05-28",
+          "updated": "2026-10-22",
+          "stars": 3,
           "fork": false
         },
         {
@@ -1589,23 +1549,13 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "lbt-dragonfly",
-          "url": "https://github.com/ladybug-tools/lbt-dragonfly",
-          "description": ":dragon: :dragon: :dragon: Collection of all Dragonfly core Python libraries",
-          "homepage": null,
+          "name": "lbt-honeybee",
+          "url": "https://github.com/ladybug-tools/lbt-honeybee",
+          "description": "🐝 🐝 🐝 Collection of all Honeybee Python libraries",
+          "homepage": "",
           "created": "2020-06-06",
           "updated": "2026-10-21",
-          "stars": 6,
-          "fork": false
-        },
-        {
-          "name": "honeybee-radiance-postprocess",
-          "url": "https://github.com/ladybug-tools/honeybee-radiance-postprocess",
-          "description": "🐝 ⚡️ :bar_chart: postprocessing of Radiance results and matrices",
-          "homepage": "https://www.ladybug.tools/honeybee-radiance-postprocess/",
-          "created": "2021-06-25",
-          "updated": "2026-10-21",
-          "stars": 1,
+          "stars": 5,
           "fork": false
         },
         {
@@ -1619,16 +1569,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "lbt-grasshopper",
-          "url": "https://github.com/ladybug-tools/lbt-grasshopper",
-          "description": ":green_book: Collection of all Ladybug Tools plugins for Grasshopper",
-          "homepage": "",
-          "created": "2020-06-04",
-          "updated": "2026-10-21",
-          "stars": 81,
-          "fork": false
-        },
-        {
           "name": "lbt-recipes",
           "url": "https://github.com/ladybug-tools/lbt-recipes",
           "description": ":bookmark_tabs: :bookmark_tabs: :bookmark_tabs: Collection of recipes that ship with Ladybug Tools plugins.",
@@ -1636,6 +1576,46 @@ const TA_DATA =
           "created": "2019-06-30",
           "updated": "2026-10-21",
           "stars": 8,
+          "fork": false
+        },
+        {
+          "name": "dragonfly-core",
+          "url": "https://github.com/ladybug-tools/dragonfly-core",
+          "description": ":dragon: dragonfly core library",
+          "homepage": "https://www.ladybug.tools/dragonfly-core/docs/",
+          "created": "2019-09-19",
+          "updated": "2026-10-21",
+          "stars": 19,
+          "fork": false
+        },
+        {
+          "name": "dragonfly-radiance",
+          "url": "https://github.com/ladybug-tools/dragonfly-radiance",
+          "description": "🐉⚡️ Dragonfly extension for Radiance simulation",
+          "homepage": "https://www.ladybug.tools/dragonfly-radiance/docs/",
+          "created": "2023-02-22",
+          "updated": "2026-10-21",
+          "stars": 4,
+          "fork": false
+        },
+        {
+          "name": "honeybee-core",
+          "url": "https://github.com/ladybug-tools/honeybee-core",
+          "description": ":honeybee: honeybee core library for working with detailed building geometry",
+          "homepage": "https://www.ladybug.tools/honeybee-core/docs/",
+          "created": "2019-01-26",
+          "updated": "2026-10-21",
+          "stars": 24,
+          "fork": false
+        },
+        {
+          "name": "lbt-dragonfly",
+          "url": "https://github.com/ladybug-tools/lbt-dragonfly",
+          "description": ":dragon: :dragon: :dragon: Collection of all Dragonfly core Python libraries",
+          "homepage": null,
+          "created": "2020-06-06",
+          "updated": "2026-10-21",
+          "stars": 6,
           "fork": false
         },
         {
@@ -1649,13 +1629,23 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "ladybug-comfort",
-          "url": "https://github.com/ladybug-tools/ladybug-comfort",
-          "description": "🐞 :tired_face: :smile: :sweat: Ladybug extension for thermal comfort",
-          "homepage": "https://www.ladybug.tools/ladybug-comfort/docs/",
-          "created": "2019-03-01",
-          "updated": "2026-10-19",
-          "stars": 17,
+          "name": "honeybee-radiance-postprocess",
+          "url": "https://github.com/ladybug-tools/honeybee-radiance-postprocess",
+          "description": "🐝 ⚡️ :bar_chart: postprocessing of Radiance results and matrices",
+          "homepage": "https://www.ladybug.tools/honeybee-radiance-postprocess/",
+          "created": "2021-06-25",
+          "updated": "2026-10-21",
+          "stars": 1,
+          "fork": false
+        },
+        {
+          "name": "lbt-grasshopper",
+          "url": "https://github.com/ladybug-tools/lbt-grasshopper",
+          "description": ":green_book: Collection of all Ladybug Tools plugins for Grasshopper",
+          "homepage": "",
+          "created": "2020-06-04",
+          "updated": "2026-10-21",
+          "stars": 81,
           "fork": false
         },
         {
@@ -1666,6 +1656,16 @@ const TA_DATA =
           "created": "2020-06-05",
           "updated": "2026-10-19",
           "stars": 3,
+          "fork": false
+        },
+        {
+          "name": "ladybug-comfort",
+          "url": "https://github.com/ladybug-tools/ladybug-comfort",
+          "description": "🐞 :tired_face: :smile: :sweat: Ladybug extension for thermal comfort",
+          "homepage": "https://www.ladybug.tools/ladybug-comfort/docs/",
+          "created": "2019-03-01",
+          "updated": "2026-10-19",
+          "stars": 17,
           "fork": false
         },
         {
@@ -1689,6 +1689,16 @@ const TA_DATA =
           "fork": false
         },
         {
+          "name": "dragonfly-doe2",
+          "url": "https://github.com/ladybug-tools/dragonfly-doe2",
+          "description": ":dragon: :tokyo_tower: Dragonfly extension for energy simulation with DOE2 ",
+          "homepage": "https://www.ladybug.tools/dragonfly-doe2/docs/",
+          "created": "2021-09-25",
+          "updated": "2026-10-09",
+          "stars": 4,
+          "fork": false
+        },
+        {
           "name": "honeybee-grasshopper-energy",
           "url": "https://github.com/ladybug-tools/honeybee-grasshopper-energy",
           "description": ":honeybee: :green_book: :fire: Honeybee Energy plugin for Grasshopper",
@@ -1706,16 +1716,6 @@ const TA_DATA =
           "created": "2022-10-03",
           "updated": "2026-10-09",
           "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "dragonfly-doe2",
-          "url": "https://github.com/ladybug-tools/dragonfly-doe2",
-          "description": ":dragon: :tokyo_tower: Dragonfly extension for energy simulation with DOE2 ",
-          "homepage": "https://www.ladybug.tools/dragonfly-doe2/docs/",
-          "created": "2021-09-25",
-          "updated": "2026-10-09",
-          "stars": 4,
           "fork": false
         },
         {
@@ -1769,6 +1769,26 @@ const TA_DATA =
           "fork": false
         },
         {
+          "name": "honeybee-grasshopper-radiance",
+          "url": "https://github.com/ladybug-tools/honeybee-grasshopper-radiance",
+          "description": ":honeybee: :green_book: ⚡️ Honeybee Radiance plugin for Grasshopper",
+          "homepage": null,
+          "created": "2020-04-26",
+          "updated": "2026-09-25",
+          "stars": 6,
+          "fork": false
+        },
+        {
+          "name": "honeybee-schema-dotnet",
+          "url": "https://github.com/ladybug-tools/honeybee-schema-dotnet",
+          "description": ":honeybee: :scroll:  C# version of honeybee-schema for Data Model Objects",
+          "homepage": "https://ladybug-tools.github.io/honeybee-schema/index.html",
+          "created": "2020-01-21",
+          "updated": "2026-09-25",
+          "stars": 5,
+          "fork": false
+        },
+        {
           "name": "dragonfly-schema-dotnet",
           "url": "https://github.com/ladybug-tools/dragonfly-schema-dotnet",
           "description": ":dragon: :scroll: C#",
@@ -1799,16 +1819,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "honeybee-grasshopper-radiance",
-          "url": "https://github.com/ladybug-tools/honeybee-grasshopper-radiance",
-          "description": ":honeybee: :green_book: ⚡️ Honeybee Radiance plugin for Grasshopper",
-          "homepage": null,
-          "created": "2020-04-26",
-          "updated": "2026-09-25",
-          "stars": 6,
-          "fork": false
-        },
-        {
           "name": "artwork",
           "url": "https://github.com/ladybug-tools/artwork",
           "description": ":art: Collection of logos and icons for ladybug tools projects",
@@ -1819,16 +1829,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "honeybee-schema-dotnet",
-          "url": "https://github.com/ladybug-tools/honeybee-schema-dotnet",
-          "description": ":honeybee: :scroll:  C# version of honeybee-schema for Data Model Objects",
-          "homepage": "https://ladybug-tools.github.io/honeybee-schema/index.html",
-          "created": "2020-01-21",
-          "updated": "2026-09-25",
-          "stars": 5,
-          "fork": false
-        },
-        {
           "name": "ladybug",
           "url": "https://github.com/ladybug-tools/ladybug",
           "description": "🐞 Core ladybug library for weather data analysis and visualization",
@@ -1836,6 +1836,16 @@ const TA_DATA =
           "created": "2015-10-02",
           "updated": "2026-09-22",
           "stars": 228,
+          "fork": false
+        },
+        {
+          "name": "fairyfly-therm",
+          "url": "https://github.com/ladybug-tools/fairyfly-therm",
+          "description": ":ant: :rainbow: Fairyfly extension for THERM simulation",
+          "homepage": "https://www.ladybug.tools/fairyfly-therm/docs/",
+          "created": "2025-12-20",
+          "updated": "2026-09-22",
+          "stars": 3,
           "fork": false
         },
         {
@@ -1859,13 +1869,13 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "fairyfly-therm",
-          "url": "https://github.com/ladybug-tools/fairyfly-therm",
-          "description": ":ant: :rainbow: Fairyfly extension for THERM simulation",
-          "homepage": "https://www.ladybug.tools/fairyfly-therm/docs/",
-          "created": "2025-12-20",
+          "name": "honeybee-display",
+          "url": "https://github.com/ladybug-tools/honeybee-display",
+          "description": "🐝 :computer: Adds methods to translate honeybee objects to VisualizationSets",
+          "homepage": "https://www.ladybug.tools/honeybee-display/docs",
+          "created": "2022-11-11",
           "updated": "2026-09-22",
-          "stars": 3,
+          "stars": 1,
           "fork": false
         },
         {
@@ -1874,16 +1884,6 @@ const TA_DATA =
           "description": ":dragon: 💻 Adds methods to translate dragonfly objects to VisualizationSets",
           "homepage": "https://www.ladybug.tools/dragonfly-display/docs",
           "created": "2024-03-19",
-          "updated": "2026-09-22",
-          "stars": 1,
-          "fork": false
-        },
-        {
-          "name": "honeybee-display",
-          "url": "https://github.com/ladybug-tools/honeybee-display",
-          "description": "🐝 :computer: Adds methods to translate honeybee objects to VisualizationSets",
-          "homepage": "https://www.ladybug.tools/honeybee-display/docs",
-          "created": "2022-11-11",
           "updated": "2026-09-22",
           "stars": 1,
           "fork": false
@@ -1899,16 +1899,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "ladybug-geometry-polyskel",
-          "url": "https://github.com/ladybug-tools/ladybug-geometry-polyskel",
-          "description": "🐞 📦 :skull: A library with poly skeleton methods using ladybug-geometry",
-          "homepage": "http://ladybug-tools.github.io/ladybug-geometry-polyskel/docs",
-          "created": "2020-02-12",
-          "updated": "2026-09-16",
-          "stars": 3,
-          "fork": false
-        },
-        {
           "name": "ladybug-display-schema-dotnet",
           "url": "https://github.com/ladybug-tools/ladybug-display-schema-dotnet",
           "description": "Dotnet version of  Ladybug Display Schema",
@@ -1916,6 +1906,16 @@ const TA_DATA =
           "created": "2022-07-20",
           "updated": "2026-09-16",
           "stars": 0,
+          "fork": false
+        },
+        {
+          "name": "ladybug-geometry-polyskel",
+          "url": "https://github.com/ladybug-tools/ladybug-geometry-polyskel",
+          "description": "🐞 📦 :skull: A library with poly skeleton methods using ladybug-geometry",
+          "homepage": "http://ladybug-tools.github.io/ladybug-geometry-polyskel/docs",
+          "created": "2020-02-12",
+          "updated": "2026-09-16",
+          "stars": 3,
           "fork": false
         },
         {
@@ -1939,16 +1939,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "dragonfly-grasshopper",
-          "url": "https://github.com/ladybug-tools/dragonfly-grasshopper",
-          "description": ":dragon: :green_book: Dragonfly plugin for Grasshopper.",
-          "homepage": "https://docs.ladybug.tools/dragonfly-primer/",
-          "created": "2019-03-07",
-          "updated": "2026-08-13",
-          "stars": 3,
-          "fork": false
-        },
-        {
           "name": "dragonfly-openstudio",
           "url": "https://github.com/ladybug-tools/dragonfly-openstudio",
           "description": ":dragon: :blue_book: Python package for translating between Dragonfly and OpenStudio",
@@ -1956,6 +1946,16 @@ const TA_DATA =
           "created": "2026-03-26",
           "updated": "2026-08-13",
           "stars": 0,
+          "fork": false
+        },
+        {
+          "name": "dragonfly-grasshopper",
+          "url": "https://github.com/ladybug-tools/dragonfly-grasshopper",
+          "description": ":dragon: :green_book: Dragonfly plugin for Grasshopper.",
+          "homepage": "https://docs.ladybug.tools/dragonfly-primer/",
+          "created": "2019-03-07",
+          "updated": "2026-08-13",
+          "stars": 3,
           "fork": false
         },
         {
@@ -2039,16 +2039,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "honeybee-radiance-folder",
-          "url": "https://github.com/ladybug-tools/honeybee-radiance-folder",
-          "description": "🐝⚡️📂 Honeybee Radiance folder is a python library to read, write and validate Radiance folder structure",
-          "homepage": "https://www.ladybug.tools/honeybee-radiance-folder/docs/",
-          "created": "2019-07-18",
-          "updated": "2026-04-13",
-          "stars": 1,
-          "fork": false
-        },
-        {
           "name": "honeybee-standards",
           "url": "https://github.com/ladybug-tools/honeybee-standards",
           "description": "🐝 :books:  Default standards and templates used throughout honeybee extensions.",
@@ -2059,6 +2049,16 @@ const TA_DATA =
           "fork": false
         },
         {
+          "name": "honeybee-radiance-folder",
+          "url": "https://github.com/ladybug-tools/honeybee-radiance-folder",
+          "description": "🐝⚡️📂 Honeybee Radiance folder is a python library to read, write and validate Radiance folder structure",
+          "homepage": "https://www.ladybug.tools/honeybee-radiance-folder/docs/",
+          "created": "2019-07-18",
+          "updated": "2026-04-13",
+          "stars": 1,
+          "fork": false
+        },
+        {
           "name": "lbt-measures",
           "url": "https://github.com/ladybug-tools/lbt-measures",
           "description": ":straight_ruler: :straight_ruler: :straight_ruler: Collection of measures that ship with Ladybug Tools plugins.",
@@ -2066,6 +2066,16 @@ const TA_DATA =
           "created": "2021-08-24",
           "updated": "2026-03-10",
           "stars": 0,
+          "fork": false
+        },
+        {
+          "name": "ladybug-display-schema",
+          "url": "https://github.com/ladybug-tools/ladybug-display-schema",
+          "description": "🐞 :computer: :scroll: Ladybug-display Data Model Objects",
+          "homepage": "https://ladybug-tools.github.io/ladybug-display-schema",
+          "created": "2022-07-11",
+          "updated": "2026-02-24",
+          "stars": 2,
           "fork": false
         },
         {
@@ -2089,26 +2099,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "ladybug-display-schema",
-          "url": "https://github.com/ladybug-tools/ladybug-display-schema",
-          "description": "🐞 :computer: :scroll: Ladybug-display Data Model Objects",
-          "homepage": "https://ladybug-tools.github.io/ladybug-display-schema",
-          "created": "2022-07-11",
-          "updated": "2026-02-24",
-          "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "ladybug-primer",
-          "url": "https://github.com/ladybug-tools/ladybug-primer",
-          "description": "📖 🐞",
-          "homepage": "https://ladybug-tools.gitbooks.io/ladybug-primer/content/",
-          "created": "2017-07-26",
-          "updated": "2026-02-23",
-          "stars": 2,
-          "fork": false
-        },
-        {
           "name": "hb-energy-primer",
           "url": "https://github.com/ladybug-tools/hb-energy-primer",
           "description": "📖 :honeybee: :fire:",
@@ -2119,13 +2109,13 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "fairyfly-primer",
-          "url": "https://github.com/ladybug-tools/fairyfly-primer",
-          "description": "📖 :ant:",
-          "homepage": "https://ladybug-tools.gitbooks.io/fairyfly-primer/content/",
-          "created": "2026-02-18",
+          "name": "ladybug-primer",
+          "url": "https://github.com/ladybug-tools/ladybug-primer",
+          "description": "📖 🐞",
+          "homepage": "https://ladybug-tools.gitbooks.io/ladybug-primer/content/",
+          "created": "2017-07-26",
           "updated": "2026-02-23",
-          "stars": 0,
+          "stars": 2,
           "fork": false
         },
         {
@@ -2144,6 +2134,16 @@ const TA_DATA =
           "description": "📖 :dragon:",
           "homepage": "https://docs.ladybug.tools/dragonfly-primer/",
           "created": "2021-05-20",
+          "updated": "2026-02-23",
+          "stars": 0,
+          "fork": false
+        },
+        {
+          "name": "fairyfly-primer",
+          "url": "https://github.com/ladybug-tools/fairyfly-primer",
+          "description": "📖 :ant:",
+          "homepage": "https://ladybug-tools.gitbooks.io/fairyfly-primer/content/",
+          "created": "2026-02-18",
           "updated": "2026-02-23",
           "stars": 0,
           "fork": false
@@ -2179,16 +2179,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "ladybug-grasshopper-dotnet",
-          "url": "https://github.com/ladybug-tools/ladybug-grasshopper-dotnet",
-          "description": "🐞 📗 C# - .gha files of the Ladybug plugin for Grasshopper",
-          "homepage": "",
-          "created": "2020-08-12",
-          "updated": "2026-01-14",
-          "stars": 6,
-          "fork": false
-        },
-        {
           "name": "fairyfly-therm-standards",
           "url": "https://github.com/ladybug-tools/fairyfly-therm-standards",
           "description": ":ant:  :books:  Standard materials and conditions used in the fairyfly-therm extension.",
@@ -2196,6 +2186,16 @@ const TA_DATA =
           "created": "2026-01-14",
           "updated": "2026-01-14",
           "stars": 0,
+          "fork": false
+        },
+        {
+          "name": "ladybug-grasshopper-dotnet",
+          "url": "https://github.com/ladybug-tools/ladybug-grasshopper-dotnet",
+          "description": "🐞 📗 C# - .gha files of the Ladybug plugin for Grasshopper",
+          "homepage": "",
+          "created": "2020-08-12",
+          "updated": "2026-01-14",
+          "stars": 6,
           "fork": false
         },
         {
@@ -2249,16 +2249,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "ladybug-tools-template",
-          "url": "https://github.com/ladybug-tools/ladybug-tools-template",
-          "description": "Use this repository as a template to start a new ladybug tools python module",
-          "homepage": "",
-          "created": "2019-01-27",
-          "updated": "2024-10-16",
-          "stars": 4,
-          "fork": false
-        },
-        {
           "name": "ladybug-charts",
           "url": "https://github.com/ladybug-tools/ladybug-charts",
           "description": "🐞 📊 Ladybug extension to generate 2D charts",
@@ -2266,6 +2256,16 @@ const TA_DATA =
           "created": "2021-12-13",
           "updated": "2024-10-16",
           "stars": 3,
+          "fork": false
+        },
+        {
+          "name": "ladybug-tools-template",
+          "url": "https://github.com/ladybug-tools/ladybug-tools-template",
+          "description": "Use this repository as a template to start a new ladybug tools python module",
+          "homepage": "",
+          "created": "2019-01-27",
+          "updated": "2024-10-16",
+          "stars": 4,
           "fork": false
         },
         {
@@ -2429,16 +2429,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "honeybee-grasshopper",
-          "url": "https://github.com/ladybug-tools/honeybee-grasshopper",
-          "description": ":honeybee: :green_book: Honeybee library and plugin for Grasshopper, also known as honeybee[+]",
-          "homepage": "",
-          "created": "2017-07-05",
-          "updated": "2021-09-22",
-          "stars": 17,
-          "fork": false
-        },
-        {
           "name": ".github",
           "url": "https://github.com/ladybug-tools/.github",
           "description": "The Github metadata repository for Ladybug Tools",
@@ -2449,113 +2439,13 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "bsdf-viewer",
-          "url": "https://github.com/ladybug-tools/bsdf-viewer",
-          "description": "🎇 A web-based viewer for BSDF files",
-          "homepage": "https://www.ladybug.tools/bsdf-viewer/",
-          "created": "2019-08-27",
-          "updated": "2021-09-21",
-          "stars": 4,
-          "fork": false
-        },
-        {
-          "name": "butterfly-primer",
-          "url": "https://github.com/ladybug-tools/butterfly-primer",
-          "description": ":book: :butterfly:",
-          "homepage": "https://ladybug-tools.gitbooks.io/butterfly-primer/content/",
-          "created": "2017-02-26",
-          "updated": "2021-09-21",
-          "stars": 4,
-          "fork": false
-        },
-        {
-          "name": "benmap",
-          "url": "https://github.com/ladybug-tools/benmap",
-          "description": "A map interface to display the Building Energy (BEn) use.",
-          "homepage": "https://ladybug-tools.github.io/benmap/",
-          "created": "2016-11-22",
-          "updated": "2021-09-21",
-          "stars": 3,
-          "fork": false
-        },
-        {
-          "name": "honeybee-resources",
-          "url": "https://github.com/ladybug-tools/honeybee-resources",
-          "description": "A repository to collect useful resources for honeybee daylight and or energy simulation",
-          "homepage": null,
-          "created": "2017-03-12",
-          "updated": "2021-09-21",
-          "stars": 3,
-          "fork": false
-        },
-        {
-          "name": "honeybee-viewer",
-          "url": "https://github.com/ladybug-tools/honeybee-viewer",
-          "description": "Web-based viewer to visualize honeyebee schema",
-          "homepage": "https://www.ladybug.tools/honeybee-viewer/",
-          "created": "2020-01-10",
-          "updated": "2021-09-21",
-          "stars": 3,
-          "fork": false
-        },
-        {
-          "name": "spider",
-          "url": "https://github.com/ladybug-tools/spider",
-          "description": ":spider_web: 3D interactive analysis in your browser mostly written around the Three.js JavaScript library",
-          "homepage": "http://www.ladybug.tools/spider",
-          "created": "2017-08-24",
-          "updated": "2021-09-21",
-          "stars": 51,
-          "fork": false
-        },
-        {
-          "name": "spider-2020",
-          "url": "https://github.com/ladybug-tools/spider-2020",
-          "description": "Your 2020 3D happy place for online browsing of building data files ",
-          "homepage": "http://ladybug.tools/spider-2020/",
-          "created": "2020-03-02",
-          "updated": "2021-09-21",
-          "stars": 5,
-          "fork": false
-        },
-        {
-          "name": "design_explorer_lite",
-          "url": "https://github.com/ladybug-tools/design_explorer_lite",
-          "description": "A light version of design explorer meant to display sliders for the inputs and simple images + charts for outputs: http://www.ladybug.tools/design_explorer_lite/",
+          "name": "honeybee-grasshopper",
+          "url": "https://github.com/ladybug-tools/honeybee-grasshopper",
+          "description": ":honeybee: :green_book: Honeybee library and plugin for Grasshopper, also known as honeybee[+]",
           "homepage": "",
-          "created": "2018-07-20",
-          "updated": "2021-09-21",
-          "stars": 4,
-          "fork": false
-        },
-        {
-          "name": "ladybug-legacy",
-          "url": "https://github.com/ladybug-tools/ladybug-legacy",
-          "description": ":beetle: Ladybug is an environmental plugin for Grasshopper.",
-          "homepage": "http://ladybug.tools",
-          "created": "2012-11-28",
-          "updated": "2021-09-21",
-          "stars": 205,
-          "fork": false
-        },
-        {
-          "name": "honeybee-legacy",
-          "url": "https://github.com/ladybug-tools/honeybee-legacy",
-          "description": ":bee: Honeybee is a free and open source plugin to connect Grasshopper3D to EnergyPlus, Radiance, Daysim and OpenStudio for building energy and daylighting simulation",
-          "homepage": "http://ladybug.tools",
-          "created": "2013-11-15",
-          "updated": "2021-09-21",
-          "stars": 130,
-          "fork": false
-        },
-        {
-          "name": "ladybug-dynamo",
-          "url": "https://github.com/ladybug-tools/ladybug-dynamo",
-          "description": ":beetle: :blue_book: Ladybug library and plugin for DynamoBIM",
-          "homepage": "http://www.ladybug.tools/ladybug.html",
-          "created": "2015-10-02",
-          "updated": "2021-09-21",
-          "stars": 32,
+          "created": "2017-07-05",
+          "updated": "2021-09-22",
+          "stars": 17,
           "fork": false
         },
         {
@@ -2566,116 +2456,6 @@ const TA_DATA =
           "created": "2019-04-08",
           "updated": "2021-09-21",
           "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "dc-studies",
-          "url": "https://github.com/ladybug-tools/dc-studies",
-          "description": "Daylight coefficient studies",
-          "homepage": null,
-          "created": "2017-05-22",
-          "updated": "2021-09-21",
-          "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "ladybugvizzz",
-          "url": "https://github.com/ladybug-tools/ladybugvizzz",
-          "description": "A cross-platform weather data visualization interface (using all python)",
-          "homepage": null,
-          "created": "2017-10-21",
-          "updated": "2021-09-21",
-          "stars": 8,
-          "fork": false
-        },
-        {
-          "name": "contributing",
-          "url": "https://github.com/ladybug-tools/contributing",
-          "description": "Guidelines for contributing to Ladybug Tools projects ",
-          "homepage": null,
-          "created": "2017-12-13",
-          "updated": "2021-09-21",
-          "stars": 9,
-          "fork": false
-        },
-        {
-          "name": "spider-rad-viewer",
-          "url": "https://github.com/ladybug-tools/spider-rad-viewer",
-          "description": "View RAD files produced by Radiance scripts in interactive 3D in your browser",
-          "homepage": "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html",
-          "created": "2018-08-28",
-          "updated": "2021-09-21",
-          "stars": 7,
-          "fork": false
-        },
-        {
-          "name": "community",
-          "url": "https://github.com/ladybug-tools/community",
-          "description": "Ladybug Tools community content",
-          "homepage": null,
-          "created": "2019-04-05",
-          "updated": "2021-09-21",
-          "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "ladybug-web",
-          "url": "https://github.com/ladybug-tools/ladybug-web",
-          "description": "Ladybug for web provides weather data visualization and analysis on the web",
-          "homepage": "http://ladybug-tools.github.io/ladybug-web/",
-          "created": "2015-10-02",
-          "updated": "2021-09-21",
-          "stars": 10,
-          "fork": false
-        },
-        {
-          "name": "honeybee-wiki",
-          "url": "https://github.com/ladybug-tools/honeybee-wiki",
-          "description": "Wiki pages for honeybee legacy",
-          "homepage": "https://docs.ladybug.tools/honeybee-wiki/",
-          "created": "2019-03-13",
-          "updated": "2021-09-21",
-          "stars": 6,
-          "fork": false
-        },
-        {
-          "name": "ladybug-rhino-plugin",
-          "url": "https://github.com/ladybug-tools/ladybug-rhino-plugin",
-          "description": "Ladybug plugin for Rhino 6",
-          "homepage": null,
-          "created": "2017-11-16",
-          "updated": "2021-09-21",
-          "stars": 1,
-          "fork": false
-        },
-        {
-          "name": "apidoc",
-          "url": "https://github.com/ladybug-tools/apidoc",
-          "description": "API documentation for all the Ladybug Tools",
-          "homepage": null,
-          "created": "2017-09-04",
-          "updated": "2021-09-21",
-          "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "spider-rad-resources",
-          "url": "https://github.com/ladybug-tools/spider-rad-resources",
-          "description": null,
-          "homepage": null,
-          "created": "2018-09-11",
-          "updated": "2021-09-21",
-          "stars": 1,
-          "fork": false
-        },
-        {
-          "name": "butterfly-plus",
-          "url": "https://github.com/ladybug-tools/butterfly-plus",
-          "description": "Butterfly[+] plugins...",
-          "homepage": null,
-          "created": "2017-03-14",
-          "updated": "2021-09-21",
-          "stars": 12,
           "fork": false
         },
         {
@@ -2699,16 +2479,6 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "honeybee-anvil",
-          "url": "https://github.com/ladybug-tools/honeybee-anvil",
-          "description": "Honeybee Anvil Docker image",
-          "homepage": null,
-          "created": "2017-12-20",
-          "updated": "2021-09-21",
-          "stars": 1,
-          "fork": false
-        },
-        {
           "name": "spider-covid-19-viz-3d",
           "url": "https://github.com/ladybug-tools/spider-covid-19-viz-3d",
           "description": "Speedy access to the latest, local COVID-19 data with a familiar interface: the Globe",
@@ -2716,6 +2486,156 @@ const TA_DATA =
           "created": "2020-03-16",
           "updated": "2021-09-21",
           "stars": 22,
+          "fork": false
+        },
+        {
+          "name": "benmap",
+          "url": "https://github.com/ladybug-tools/benmap",
+          "description": "A map interface to display the Building Energy (BEn) use.",
+          "homepage": "https://ladybug-tools.github.io/benmap/",
+          "created": "2016-11-22",
+          "updated": "2021-09-21",
+          "stars": 3,
+          "fork": false
+        },
+        {
+          "name": "spider",
+          "url": "https://github.com/ladybug-tools/spider",
+          "description": ":spider_web: 3D interactive analysis in your browser mostly written around the Three.js JavaScript library",
+          "homepage": "http://www.ladybug.tools/spider",
+          "created": "2017-08-24",
+          "updated": "2021-09-21",
+          "stars": 51,
+          "fork": false
+        },
+        {
+          "name": "honeybee-resources",
+          "url": "https://github.com/ladybug-tools/honeybee-resources",
+          "description": "A repository to collect useful resources for honeybee daylight and or energy simulation",
+          "homepage": null,
+          "created": "2017-03-12",
+          "updated": "2021-09-21",
+          "stars": 3,
+          "fork": false
+        },
+        {
+          "name": "honeybee-legacy",
+          "url": "https://github.com/ladybug-tools/honeybee-legacy",
+          "description": ":bee: Honeybee is a free and open source plugin to connect Grasshopper3D to EnergyPlus, Radiance, Daysim and OpenStudio for building energy and daylighting simulation",
+          "homepage": "http://ladybug.tools",
+          "created": "2013-11-15",
+          "updated": "2021-09-21",
+          "stars": 130,
+          "fork": false
+        },
+        {
+          "name": "ladybug-legacy",
+          "url": "https://github.com/ladybug-tools/ladybug-legacy",
+          "description": ":beetle: Ladybug is an environmental plugin for Grasshopper.",
+          "homepage": "http://ladybug.tools",
+          "created": "2012-11-28",
+          "updated": "2021-09-21",
+          "stars": 205,
+          "fork": false
+        },
+        {
+          "name": "ladybug-dynamo",
+          "url": "https://github.com/ladybug-tools/ladybug-dynamo",
+          "description": ":beetle: :blue_book: Ladybug library and plugin for DynamoBIM",
+          "homepage": "http://www.ladybug.tools/ladybug.html",
+          "created": "2015-10-02",
+          "updated": "2021-09-21",
+          "stars": 32,
+          "fork": false
+        },
+        {
+          "name": "ladybug-rhino-plugin",
+          "url": "https://github.com/ladybug-tools/ladybug-rhino-plugin",
+          "description": "Ladybug plugin for Rhino 6",
+          "homepage": null,
+          "created": "2017-11-16",
+          "updated": "2021-09-21",
+          "stars": 1,
+          "fork": false
+        },
+        {
+          "name": "butterfly-plus",
+          "url": "https://github.com/ladybug-tools/butterfly-plus",
+          "description": "Butterfly[+] plugins...",
+          "homepage": null,
+          "created": "2017-03-14",
+          "updated": "2021-09-21",
+          "stars": 12,
+          "fork": false
+        },
+        {
+          "name": "apidoc",
+          "url": "https://github.com/ladybug-tools/apidoc",
+          "description": "API documentation for all the Ladybug Tools",
+          "homepage": null,
+          "created": "2017-09-04",
+          "updated": "2021-09-21",
+          "stars": 2,
+          "fork": false
+        },
+        {
+          "name": "design_explorer_lite",
+          "url": "https://github.com/ladybug-tools/design_explorer_lite",
+          "description": "A light version of design explorer meant to display sliders for the inputs and simple images + charts for outputs: http://www.ladybug.tools/design_explorer_lite/",
+          "homepage": "",
+          "created": "2018-07-20",
+          "updated": "2021-09-21",
+          "stars": 4,
+          "fork": false
+        },
+        {
+          "name": "bsdf-viewer",
+          "url": "https://github.com/ladybug-tools/bsdf-viewer",
+          "description": "🎇 A web-based viewer for BSDF files",
+          "homepage": "https://www.ladybug.tools/bsdf-viewer/",
+          "created": "2019-08-27",
+          "updated": "2021-09-21",
+          "stars": 4,
+          "fork": false
+        },
+        {
+          "name": "butterfly-primer",
+          "url": "https://github.com/ladybug-tools/butterfly-primer",
+          "description": ":book: :butterfly:",
+          "homepage": "https://ladybug-tools.gitbooks.io/butterfly-primer/content/",
+          "created": "2017-02-26",
+          "updated": "2021-09-21",
+          "stars": 4,
+          "fork": false
+        },
+        {
+          "name": "spider-2020",
+          "url": "https://github.com/ladybug-tools/spider-2020",
+          "description": "Your 2020 3D happy place for online browsing of building data files ",
+          "homepage": "http://ladybug.tools/spider-2020/",
+          "created": "2020-03-02",
+          "updated": "2021-09-21",
+          "stars": 5,
+          "fork": false
+        },
+        {
+          "name": "honeybee-wiki",
+          "url": "https://github.com/ladybug-tools/honeybee-wiki",
+          "description": "Wiki pages for honeybee legacy",
+          "homepage": "https://docs.ladybug.tools/honeybee-wiki/",
+          "created": "2019-03-13",
+          "updated": "2021-09-21",
+          "stars": 6,
+          "fork": false
+        },
+        {
+          "name": "community",
+          "url": "https://github.com/ladybug-tools/community",
+          "description": "Ladybug Tools community content",
+          "homepage": null,
+          "created": "2019-04-05",
+          "updated": "2021-09-21",
+          "stars": 2,
           "fork": false
         },
         {
@@ -2729,13 +2649,83 @@ const TA_DATA =
           "fork": false
         },
         {
-          "name": "honeybee-server-daylight",
-          "url": "https://github.com/ladybug-tools/honeybee-server-daylight",
-          "description": "🐝❤️🐳 Honeybee docker image for daylight studies",
-          "homepage": "",
-          "created": "2017-12-27",
-          "updated": "2020-08-13",
+          "name": "dc-studies",
+          "url": "https://github.com/ladybug-tools/dc-studies",
+          "description": "Daylight coefficient studies",
+          "homepage": null,
+          "created": "2017-05-22",
+          "updated": "2021-09-21",
+          "stars": 2,
+          "fork": false
+        },
+        {
+          "name": "honeybee-viewer",
+          "url": "https://github.com/ladybug-tools/honeybee-viewer",
+          "description": "Web-based viewer to visualize honeyebee schema",
+          "homepage": "https://www.ladybug.tools/honeybee-viewer/",
+          "created": "2020-01-10",
+          "updated": "2021-09-21",
+          "stars": 3,
+          "fork": false
+        },
+        {
+          "name": "spider-rad-resources",
+          "url": "https://github.com/ladybug-tools/spider-rad-resources",
+          "description": null,
+          "homepage": null,
+          "created": "2018-09-11",
+          "updated": "2021-09-21",
+          "stars": 1,
+          "fork": false
+        },
+        {
+          "name": "ladybugvizzz",
+          "url": "https://github.com/ladybug-tools/ladybugvizzz",
+          "description": "A cross-platform weather data visualization interface (using all python)",
+          "homepage": null,
+          "created": "2017-10-21",
+          "updated": "2021-09-21",
+          "stars": 8,
+          "fork": false
+        },
+        {
+          "name": "contributing",
+          "url": "https://github.com/ladybug-tools/contributing",
+          "description": "Guidelines for contributing to Ladybug Tools projects ",
+          "homepage": null,
+          "created": "2017-12-13",
+          "updated": "2021-09-21",
+          "stars": 9,
+          "fork": false
+        },
+        {
+          "name": "ladybug-web",
+          "url": "https://github.com/ladybug-tools/ladybug-web",
+          "description": "Ladybug for web provides weather data visualization and analysis on the web",
+          "homepage": "http://ladybug-tools.github.io/ladybug-web/",
+          "created": "2015-10-02",
+          "updated": "2021-09-21",
           "stars": 10,
+          "fork": false
+        },
+        {
+          "name": "honeybee-anvil",
+          "url": "https://github.com/ladybug-tools/honeybee-anvil",
+          "description": "Honeybee Anvil Docker image",
+          "homepage": null,
+          "created": "2017-12-20",
+          "updated": "2021-09-21",
+          "stars": 1,
+          "fork": false
+        },
+        {
+          "name": "spider-rad-viewer",
+          "url": "https://github.com/ladybug-tools/spider-rad-viewer",
+          "description": "View RAD files produced by Radiance scripts in interactive 3D in your browser",
+          "homepage": "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html",
+          "created": "2018-08-28",
+          "updated": "2021-09-21",
+          "stars": 7,
           "fork": false
         },
         {
@@ -2757,6 +2747,26 @@ const TA_DATA =
           "updated": "2020-08-13",
           "stars": 3,
           "fork": false
+        },
+        {
+          "name": "honeybee-server-daylight",
+          "url": "https://github.com/ladybug-tools/honeybee-server-daylight",
+          "description": "🐝❤️🐳 Honeybee docker image for daylight studies",
+          "homepage": "",
+          "created": "2017-12-27",
+          "updated": "2020-08-13",
+          "stars": 10,
+          "fork": false
+        },
+        {
+          "name": "ladybug-contributor-license-agreement",
+          "url": "https://github.com/ladybug-tools/ladybug-contributor-license-agreement",
+          "description": null,
+          "homepage": "",
+          "created": "2020-01-21",
+          "updated": "2019-11-19",
+          "stars": 0,
+          "fork": true
         }
       ]
     },
@@ -4047,6 +4057,16 @@ const TA_DATA =
           "updated": "2023-07-02",
           "stars": 2,
           "fork": false
+        },
+        {
+          "name": "huskandstone.com",
+          "url": "https://github.com/huskandstone/huskandstone.com",
+          "description": null,
+          "homepage": null,
+          "created": "2023-02-27",
+          "updated": "2023-02-27",
+          "stars": 1,
+          "fork": false
         }
       ]
     },
@@ -4143,6 +4163,18 @@ const TA_DATA =
       "created": "2026-10-09",
       "updated": "2026-10-23",
       "stars": 1,
+      "pick": false,
+      "note": ""
+    },
+    {
+      "type": "repo",
+      "name": "theo-armour.github.io",
+      "url": "https://github.com/theo-armour/theo-armour.github.io",
+      "description": "Theo Armour's home page ~ every repo, one place",
+      "homepage": null,
+      "created": "2026-10-24",
+      "updated": "2026-10-24",
+      "stars": 0,
       "pick": false,
       "note": ""
     }
