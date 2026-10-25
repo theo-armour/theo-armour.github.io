@@ -10,10 +10,13 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 
 🌐 [3D Happy Place](https://theo-armour.github.io/2026-ta-gh-io-refactor/sphere.html): everything on one spinning sphere
 
-## Links
+## About
 
 * About me: a work-in-progress [bio](about/theo.md)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
+
+
+## Links
 
 * https://www.github.com/theo-armour
 * https://www.x.com/ta
@@ -28,7 +31,12 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * https://www.tumblr.com/blog/ta
 * https://bsky.app/profile/theo-armour.bsky.social
 * My house: https://heritageonthemarina.org/
+
+* WhatsApp: @armour.theo
 * tarmour at gmail dot com
+
+## GitHub Efforts
+
 
 
 ### WordPress Sites
@@ -104,17 +112,37 @@ Authoring Wikipedia articles is a skill I would be delighted to develop further.
 * [Third Brain](blog/2026-09-13-third-brain.md) ~ 2026-09-13
 * [AI Refactor](blog/2026-09-13-ai-refactor.md) ~ 2026-09-13
 
-## 2026-10-25
+## Change Log
+
+### 2026-10-25
 
 A new home page. Everything I've made on GitHub is now in one place: every repository and every organization is in the menu on the left. My favorites are at the top. Start with the bio or the blog above.
 
-## 2026-09-30
+This begins to cover the recent third of my life since the internet era began. Another third of my life is stuck on hard drives. And the final third is stuck on bits of paper in storage. 
+
+Added "budding ancestor" to the tagline to indicate that I very much enjoy being a father and grandfather. 
+
+### 2026-09-30
 
 Former architect, perpetual software developer, and lifelong learner.
 
 I'm currently working on what may be my final design: my afterlife. ;-)
 
-## 2025-05-24
+### 2026-08-10
+
+I am a true scatterbrain. My brain's scatters stuff all over the place.
+
+**Problem** Over the decades, I have started so many projects and so many writings and so many efforts. Every fresh idea needs a fresh starting place.
+
+This makes it really difficult for me, let alone anybody else, to decide what the heck did he ever do?
+
+**Solution** So the idea of this place is to gather together bits and pieces from all those decades into one place.
+
+Curated list of what Theo has done that he likes today. At the same time, the existing places are also to be kept as part of the archive to watch development.
+
+The major benefit would be to help me identify what needs to be done and how to combine multiple of my ideas into one thing to be worked on at a time. In other words, to build sums that are greater than the parts.
+
+### 2025-05-24
 
 Slowly moving content over here.
 
