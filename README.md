@@ -7,6 +7,13 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 <iframe src="https://theo-armour.github.io/2026-ta-gh-io-refactor/sphere.html" width="100%" height="600" style="border:none;"></iframe
 >
 
+🌐 [3D Happy Place](https://theo-armour.github.io/2026-ta-gh-io-refactor/sphere.html): everything on one spinning sphere
+
+<!--@@@
+<div class=iframe-resize ><iframe src=https://theo-armour.github.io/qdata/ xxxxx/ height=100% width=100% ></iframe></div>
+_"HTML" in a resizable window. One finger to rotate. Two to zoom._
+@@@-->
+
 * About me: a work-in-progress [bio](about/theo.md)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
 * https://github.com/theo-armour
