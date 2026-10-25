@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-25 06:18">
+  <meta name="revised" content="2026-10-25 06:27">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -3088,11 +3088,9 @@ const renderCode = ( text, ext ) => {
 const renderHtml = ( text, ext, path ) => {
   const local = localUrlFor( path );
   const url = local || pagesUrl( path );
-  const where = local ? 'your local copy' : 'the published version';
   const sandbox = local ? '' : 'sandbox="allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox" ';
-  const note = `<div class="md-error">ℹ️ Live page: <a href="${ escapeHTML( url ) }" target="_blank" rel="noopener">${ escapeHTML( url.replace( /^https?:\/\//, '' ) ) }</a> — ${ where }. Click <strong>&lt;/&gt;</strong> for the source.</div>`;
   document.getElementById( 'contentBody' ).innerHTML =
-    buildToggleHtml( ext, `${ note }<iframe class="iframe-content" ${ sandbox }src="${ escapeHTML( url ) }"></iframe>`, text );
+    buildToggleHtml( ext, `<iframe class="iframe-content" ${ sandbox }src="${ escapeHTML( url ) }"></iframe>`, text );
 };
 
 const renderSvg = ( text, fileName = 'SVG image' ) => {
