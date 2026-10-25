@@ -126,19 +126,6 @@ const TA_DATA =
       "note": ""
     },
     {
-      "name": "2022-qdata",
-      "url": "https://github.com/theo-armour/2022-qdata",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/2022-qdata/",
-      "private": true,
-      "fork": false,
-      "created": "2018-06-12",
-      "updated": "2023-10-15",
-      "stars": 1,
-      "pick": false,
-      "note": ""
-    },
-    {
       "name": "test-release",
       "url": "https://github.com/theo-armour/test-release",
       "description": "a repo for me to learn about and test Git/GitHub releases and tags",
@@ -204,32 +191,6 @@ const TA_DATA =
       "note": ""
     },
     {
-      "name": "chance",
-      "url": "https://github.com/theo-armour/chance",
-      "description": "",
-      "homepage": null,
-      "private": true,
-      "fork": false,
-      "created": "2019-11-04",
-      "updated": "2019-11-04",
-      "stars": 1,
-      "pick": false,
-      "note": ""
-    },
-    {
-      "name": "qdata2",
-      "url": "https://github.com/theo-armour/qdata2",
-      "description": "",
-      "homepage": null,
-      "private": true,
-      "fork": false,
-      "created": "2020-02-11",
-      "updated": "2020-02-11",
-      "stars": 0,
-      "pick": false,
-      "note": ""
-    },
-    {
       "name": "pair-programming-with-theo-armour",
       "url": "https://github.com/theo-armour/pair-programming-with-theo-armour",
       "description": "This repo will be used for discussing and prioritizing collaboration topics.",
@@ -277,19 +238,6 @@ const TA_DATA =
       "fork": false,
       "created": "2020-06-12",
       "updated": "2021-07-09",
-      "stars": 1,
-      "pick": false,
-      "note": ""
-    },
-    {
-      "name": "aa",
-      "url": "https://github.com/theo-armour/aa",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/aa/",
-      "private": true,
-      "fork": false,
-      "created": "2020-07-17",
-      "updated": "2026-10-20",
       "stars": 1,
       "pick": false,
       "note": ""
@@ -347,19 +295,6 @@ const TA_DATA =
       "note": ""
     },
     {
-      "name": "reference",
-      "url": "https://github.com/theo-armour/reference",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/reference",
-      "private": true,
-      "fork": false,
-      "created": "2021-10-08",
-      "updated": "2023-12-04",
-      "stars": 1,
-      "pick": false,
-      "note": ""
-    },
-    {
       "name": "2022",
       "url": "https://github.com/theo-armour/2022",
       "description": "Here I am!",
@@ -399,32 +334,6 @@ const TA_DATA =
       "note": "My digital commonplace book"
     },
     {
-      "name": "2023-agenda",
-      "url": "https://github.com/theo-armour/2023-agenda",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/2023-agenda",
-      "private": true,
-      "fork": false,
-      "created": "2023-01-02",
-      "updated": "2024-01-21",
-      "stars": 1,
-      "pick": false,
-      "note": ""
-    },
-    {
-      "name": "2023-qdata",
-      "url": "https://github.com/theo-armour/2023-qdata",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/2023-qdata",
-      "private": true,
-      "fork": false,
-      "created": "2023-01-02",
-      "updated": "2024-02-17",
-      "stars": 1,
-      "pick": false,
-      "note": ""
-    },
-    {
       "name": "2023",
       "url": "https://github.com/theo-armour/2023",
       "description": null,
@@ -461,32 +370,6 @@ const TA_DATA =
       "updated": "2025-03-17",
       "stars": 1,
       "pick": false,
-      "note": ""
-    },
-    {
-      "name": "agenda",
-      "url": "https://github.com/theo-armour/agenda",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/agenda",
-      "private": true,
-      "fork": false,
-      "created": "2024-01-05",
-      "updated": "2026-10-23",
-      "stars": 1,
-      "pick": true,
-      "note": ""
-    },
-    {
-      "name": "qdata",
-      "url": "https://github.com/theo-armour/qdata",
-      "description": "",
-      "homepage": "https://theo-armour.github.io/qdata/",
-      "private": true,
-      "fork": false,
-      "created": "2024-01-07",
-      "updated": "2026-10-25",
-      "stars": 0,
-      "pick": true,
       "note": ""
     },
     {
@@ -3461,17 +3344,6 @@ const TA_DATA =
           "updated": "2020-08-13",
           "stars": 3,
           "fork": false
-        },
-        {
-          "name": "ladybug-contributor-license-agreement",
-          "url": "https://github.com/ladybug-tools/ladybug-contributor-license-agreement",
-          "description": "",
-          "homepage": "",
-          "private": true,
-          "created": "2020-01-21",
-          "updated": "2019-11-19",
-          "stars": 0,
-          "fork": true
         }
       ]
     },
@@ -4538,17 +4410,6 @@ const TA_DATA =
           "created": "2023-01-24",
           "updated": "2023-07-02",
           "stars": 2,
-          "fork": false
-        },
-        {
-          "name": "huskandstone.com",
-          "url": "https://github.com/huskandstone/huskandstone.com",
-          "description": "",
-          "homepage": null,
-          "private": true,
-          "created": "2023-02-27",
-          "updated": "2023-02-27",
-          "stars": 1,
           "fork": false
         }
       ]

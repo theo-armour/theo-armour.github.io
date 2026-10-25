@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Rebuild ta-data.js from the GitHub API, keeping hand-made picks and notes">
-<meta name="revised" content="2026-10-25 04:08">
+<meta name="revised" content="2026-10-25 06:18">
 <title>ta-data refresh</title>
 <link rel="icon" href="theo-logo.ico">
 
@@ -110,7 +110,7 @@
 	<h1>🔄 ta-data refresh</h1>
 	<p class="intro">Rebuilds <code>ta-data.js</code> from the GitHub API — every repo, organization and
 		organization repo — keeping your hand-made <code>pick</code> and <code>note</code> curation.
-		Private repos contribute their names only.</p>
+		Public repos only: this file is published, and the app adds private repos live for whoever has a token.</p>
 </header>
 
 <main>
@@ -120,7 +120,7 @@
 
 		<label for="inpToken">GitHub token (optional)</label>
 		<input id="inpToken" type="password" autocomplete="off" placeholder="none — public repos only, 60 API calls/hour">
-		<p class="hint" id="tokenHint">With a token, private repos are included and the run is fast.</p>
+		<p class="hint" id="tokenHint">A token makes the run fast and avoids the 60-calls-an-hour limit.</p>
 
 		<button id="btnRun">▶ Fetch from GitHub</button>
 	</section>
@@ -252,10 +252,8 @@ function repoEntry ( repo, kept ) {
 	return {
 		name: repo.name,
 		url: repo.html_url,
-		// ta-data.js is published on a public site: a private repo gives its NAME only
-		description: repo.private ? "" : repo.description,
+		description: repo.description,
 		homepage: repo.homepage,
-		private: !!repo.private,
 		fork: !!repo.fork,
 		created: day( repo.created_at ),
 		updated: day( repo.pushed_at || repo.created_at ),
@@ -286,10 +284,8 @@ function orgRepoEntry ( repo ) {
 	return {
 		name: repo.name,
 		url: repo.html_url,
-		// with a token, search also returns private repos inside orgs — names only for those too
-		description: repo.private ? "" : repo.description,
+		description: repo.description,
 		homepage: repo.homepage,
-		private: !!repo.private,
 		created: day( repo.created_at ),
 		updated: day( repo.pushed_at || repo.created_at ),
 		stars: repo.stargazers_count,
@@ -319,6 +315,8 @@ async function fetchOrgRepos ( orgLogins ) {
 			const result = await api( `https://api.github.com/search/repositories?q=${ query }&per_page=100&page=${ page }` );
 
 			for ( const repo of result.items ) {
+
+				if ( repo.private ) { continue; }   // with a token, search also finds private org repos
 
 				const login = repo.owner.login;
 				if ( !byOrg.has( login ) ) { byOrg.set( login, [] ); }
@@ -360,35 +358,15 @@ async function refresh () {
 	log( state.token ? "Using token." : "No token: public data only." );
 
 	// 1. existing data
-	const { old, curation, oldOrgs } = readOldData();
+	const { curation, oldOrgs } = readOldData();
 	log( `Curation carried over: ${ [ ...curation.values() ].filter( ( c ) => c.pick ).length } picks.` );
 
-	// 2. the owner's repos — as the signed-in user with a token, so private ones are included
-	const repoUrl = state.token
-		? "https://api.github.com/user/repos?affiliation=owner"
-		: `https://api.github.com/users/${ encodeURIComponent( state.owner ) }/repos?sort=created`;
-	const repos = await apiAllPages( repoUrl );
-	log( `My repos: ${ repos.length } (${ repos.filter( ( r ) => r.private ).length } private)` );
+	// 2. the owner's PUBLIC repos only — this file is published. (The app fetches private
+	//    repos live for a viewer with a token.)
+	const repos = await apiAllPages( `https://api.github.com/users/${ encodeURIComponent( state.owner ) }/repos?sort=created` );
+	log( `My public repos: ${ repos.length }` );
 
 	const myRepos = repos.map( ( repo ) => repoEntry( repo, curation.get( `repo|${ repo.name }` ) ) );
-
-	// an anonymous run can't see private repos — keep the ones a token run found earlier
-	if ( !state.token ) {
-
-		const names = new Set( myRepos.map( ( r ) => r.name ) );
-
-		for ( const repo of old.repos ) {
-
-			if ( repo.private && !names.has( repo.name ) ) {
-
-				myRepos.push( repo );
-				log( `Kept private repo from previous data: ${ repo.name }` );
-
-			}
-
-		}
-
-	}
 
 	// 3. organizations, each profile with a fallback to the previous data
 	const orgLogins = ( await api( `https://api.github.com/users/${ encodeURIComponent( state.owner ) }/orgs?per_page=100` ) )
@@ -547,7 +525,7 @@ function init () {
 
 		document.getElementById( "inpToken" ).value = token;
 		document.getElementById( "tokenHint" ).textContent =
-			"Using the token you saved in the app (⚙️). Private repos will be included.";
+			"Using the token you saved in the app (⚙️).";
 
 	}
 

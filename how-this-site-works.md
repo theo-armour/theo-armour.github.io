@@ -13,7 +13,7 @@ The left side has two panels:
   - then the ⭐ favorites
   - then everything else, most recently active first
 
-  Private repos appear by name with a 🔒. A 🏛️ **organizations** row opens [`organizations.md`](organizations.md), which has a description and site and GitHub links for every organization.
+  Private repos (🔒) appear only for a viewer who has saved a GitHub token: the app fetches them live from GitHub, and they're never in the public data. To make one a ⭐ favorite, give it the topic `favorite` on GitHub. A 🏛️ **organizations** row opens [`organizations.md`](organizations.md), which has a description and site and GitHub links for every organization.
 - **File tree** (bottom): the files of whichever repo you picked. Dated backups and housekeeping files are hidden.
 
 The right side shows the selected file, rendered. Each repo opens on its README, preferring `README <reponame>.md` when it exists.
@@ -22,7 +22,7 @@ The right side shows the selected file, rendered. Each repo opens on its README,
 
 - **Click** a repo to browse it, or a file to read it.
 - **Keyboard:** ↑/↓ move through the shelf or the tree; → or Enter opens the selection; `/` jumps to the file filter.
-- **↗** opens the file's live GitHub Pages copy, so an `index.html` runs instead of showing source. Use the `</>` button to read source inside the app.
+- **HTML pages run** right in the content pane: the published copy from GitHub Pages, scripts and all. ↗ opens it full-size; `</>` shows the source. The pane can't read the app's storage, so your token stays private.
 - **Header links:** the logo goes to github.com/theo-armour, the owner name to the home site, and the repo name to that repo's live site.
 - **Deep links:** `theo-armour.github.io/?repo=<name>` opens any repo directly.
 - **Private repos** need a GitHub token: click ⚙️ and paste one. A read-only, fine-grained token is all the app needs.
@@ -44,14 +44,14 @@ The right side shows the selected file, rendered. Each repo opens on its README,
 ```js
 const TA_DATA = {
   meta:  { owner, snapshot, source },
-  repos: [ { name, url, description, homepage, private, fork, created, updated, stars, pick, note } ],
+  repos: [ { name, url, description, homepage, fork, created, updated, stars, pick, note } ],
   orgs:  [ { name, url, description, homepage, created, pick, note, repoList: [ … ] } ]
 };
 ```
 
 - **Yours to edit:** `pick` (true makes it a ⭐ favorite) and `note`. Refreshes keep them.
 - **From GitHub:** everything else. A refresh overwrites hand edits there.
-- **Private repos** contribute their name only. Descriptions are left blank because this file is public.
+- **Public repos only.** This file is published, so private repos are left out entirely.
 
 ### Refreshing the data
 
@@ -72,6 +72,8 @@ Changes are made and tested in the `tootoo-simple` folder of the [sandbox repo](
 
 ### 2026-10-25
 
+- Private repos leave the public data: the app fetches them live when a token is saved; ⭐ via a `favorite` topic
+- HTML files run live in the content pane (sandboxed published copy); root `index.html` visible again
 - README.md becomes the personal front page again; this file holds the technical notes
 - Bring in `about/` and `blog/` from the 2026-ta-gh-io-refactor repo
 - Add `ta-data-refresh.html`: refresh the data from any browser; retire `update-ta-data.ps1`
