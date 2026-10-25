@@ -14,16 +14,18 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 
 * About me: a work-in-progress [bio](about/theo.md)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
-* https://github.com/theo-armour
-* https://x.com/ta
+* https://www.github.com/theo-armour
+* https://www.x.com/ta
 * https://www.instagram.com/armour.theo/
 * https://www.linkedin.com/in/theoa/
 * https://www.reddit.com/user/theo/
-* https://substack.com/@theoarmour
-* https://medium.com/@ta
-* https://wordpress.com/reader/users/theoa
+* https://wwwsubstack.com/@theoarmour
+* https://www.medium.com/@ta
 * https://www.youtube.com/@theoarmour
-* https://t.me/theo_armour
+* https://www.t.me/theo_armour
+* https://www.threads.com/@armour.theo
+* https://www.tumblr.com/blog/ta
+* https://bsky.app/profile/theo-armour.bsky.social
 * My house: https://heritageonthemarina.org/
 * tarmour at gmail dot com
 
@@ -56,15 +58,32 @@ Over the years, I've built many WordPress "starter" websites for people. Most of
 
 ### Blogger Sites
 
-Did I start with Blogger in 2004?
+Did I start with Blogger in 2003?
 
 * https://artofthenet.blogspot.com/
-* http://bbn66.blogspot.com/
+* https://bbn66.blogspot.com/
 * https://bowmeowwow.blogspot.com/
 * https://caper-ws.blogspot.com/
 * https://data-home.blogspot.com/
 * https://dominique-g.blogspot.com/
+* https://gatewayra.blogspot.com/
+* https://incomplete-nature.blogspot.com/
+* https://itdiligence.blogspot.com/
+* https://itdds.blogspot.com/
+* https://jon-strand.blogspot.com/
+* https://kipbecker.blogspot.com/
+* https://mangjang.blogspot.com/
+* https://newdoublehung.blogspot.com/
+* https://putchkie.blogspot.com/
+* https://sf-wish.blogspot.com/
+* https://sps65.blogspotcom/
+* https://taniabecker.blogspot.com/
 * https://try-blogger-archive.blogspot.com/
+* https://theo-admin.blogspot.com/
+* https://theo-jaanga.blogspot.com/
+* https://theoarmour.blogspot.com/
+* https://theofirst.blogspot.com/ ~ 2003
+* https://www.kudashev.com/
 
 ## Recent blog posts
 
