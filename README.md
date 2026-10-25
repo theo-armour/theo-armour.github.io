@@ -4,6 +4,9 @@ Former architect, perpetual software developer, and lifelong learner.
 
 I'm currently working on what may be my final design: my afterlife. ;-)
 
+<iframe src="https://theo-armour.github.io/2026-ta-gh-io-refactor/sphere.html" width="100%" height="600" style="border:none;"></iframe
+>
+
 * About me: a work-in-progress [bio](about/theo.md)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
 * https://github.com/theo-armour
