@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-24 23:01">
+  <meta name="revised" content="2026-10-25 02:53">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -27,6 +27,11 @@
       owner: 'theo-armour',
       repo: 'theo-armour.github.io',
       sourceRepoUrl: 'https://github.com/theo-armour',   // header brand icon → Theo's GitHub account
+      themeColor: '#880000',
+      // the hub's own plumbing and page furniture stay out of every file tree
+      hiddenFiles: [ 'tootoo.config.js', 'ta-data.js', 'update-ta-data.ps1',
+        'theo-logo.ico', 'favicon.ico', 'dingbat.ico', 'CNAME', '404.html', 'LICENSE' ],
+      hideDatedBackups: true,   // hide "name-2026-10-24…" style backups (dates AFTER a name; date-FIRST blog posts stay)
     };
   </script>
   <script src="ta-data.js"></script>
@@ -1086,6 +1091,15 @@ body.dark-mode pre {
     /* ── TooToo Simple: repo shelf (single-user build) ── */
     :root {
       --font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+      /* selection + hover follow the baked themeColor instead of the stock blue/grey */
+      --active-bg: var(--highlight-color);
+      --active-fg: #ffffff;
+      --hover-bg: color-mix(in srgb, var(--highlight-color), transparent 88%);
+    }
+
+    body.dark-mode {
+      --active-bg: var(--highlight-color);
+      --hover-bg: color-mix(in srgb, var(--highlight-color), transparent 72%);
     }
 
     #repoShelf {
@@ -1318,7 +1332,7 @@ const CONFIG = {
   headingFontUrl: '', headingFont: '',
   sourceRepoUrl: 'https://github.com/pushme-pullyou/tootoo',
   storagePrefix: 'tootoo',
-  hiddenFolders: [], hiddenFiles: [ 'index.html', '404.html', 'favicon.ico', 'tootoo.config.js', 'theo-logo.ico', 'ta-data.js', 'update-ta-data.ps1' ],
+  hiddenFolders: [], hiddenFiles: [ 'tootoo.config.js' ],
   autoOpenFolderReadme: true,  // expanding a folder opens its own README the first time (set false to disable)
   // Footer rights line appended after "© <year> <owner>". rightsOwners scopes WHICH
   // owners it shows for: null = every repo (default), an array = only those owner logins
@@ -1394,11 +1408,17 @@ const hiddenFileSet = () => new Set( ( CONFIG.hiddenFiles || [] ).map( ( s ) => 
 /* Dotfiles/dotfolders and CONFIG-hidden names are dropped from the sidebar. A hiddenFiles
    entry hides that bare name wherever it appears, unless it starts with '/', which anchors
    it to the repo root — so '/index.html' hides only the root file, not nested ones. */
+
+/* tootoo-simple: a date AFTER a name marks a backup snapshot ("index-2026-10-24….html",
+   "README 2026 09 18.md"); a date at the START is content ("2026-01-04-essay.md"). */
+const DATED_BACKUP_RE = /^.+20\d\d[-_ .]\d\d/;
+
 const isVisibleTreeItem = ( item, folders, files ) => {
   const parts = item.path.split( '/' );
   if ( parts.some( ( p ) => p.startsWith( '.' ) || folders.has( p.toLowerCase() ) ) ) return false;
   if ( item.type !== 'blob' ) return true;
   const name = parts[ parts.length - 1 ].toLowerCase();
+  if ( CONFIG.hideDatedBackups && DATED_BACKUP_RE.test( name ) ) return false;
   return !( files.has( name ) || files.has( '/' + item.path.toLowerCase() ) );
 };
 
@@ -2626,10 +2646,18 @@ const fetchTree = async () => {
   }
 };
 
-/* ── pick the root README on first load ── */
+/* ── pick the root README on first load (tootoo-simple rules):
+   1. "README <reponame>.md" — Theo's named readmes win
+   2. a plain README.md / readme.txt
+   3. any other "README <words>.md" with NO digits — dated backups like
+      "README 2026 09 18.md" never auto-open ── */
 const autoSelectReadme = () => {
   if ( !state.tree ) return;
-  const readme = state.tree.find( ( i ) => i.type === 'blob' && !i.path.includes( '/' ) && README_RE.test( i.path ) );
+  const roots = state.tree.filter( ( i ) => i.type === 'blob' && !i.path.includes( '/' ) );
+  const namedRe = new RegExp( `^readme[ _-]${ state.repo.replace( /[.*+?^${}()|[\]\\]/g, '\\$&' ) }\\.\\w+$`, 'i' );
+  const readme = roots.find( ( i ) => namedRe.test( i.path ) )
+    || roots.find( ( i ) => README_RE.test( i.path ) )
+    || roots.find( ( i ) => /^readme\b/i.test( i.path ) && !/\d/.test( i.path ) );
   if ( readme ) selectFile( readme.path );
 };
 
