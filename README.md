@@ -85,6 +85,11 @@ Did I start with Blogger in 2003?
 * https://theofirst.blogspot.com/ ~ 2003
 * https://www.kudashev.com/
 
+## Wikipedia articles
+
+* [Theo Armour](https://en.wikipedia.org/wiki/George_Armour)
+
+
 ## Recent blog posts
 
 * [Your Edge Is Patience, Not Genius](blog/2026-09-15-westenberg-patience.md) ~ 2026-09-15
