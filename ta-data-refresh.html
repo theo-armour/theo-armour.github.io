@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rebuild ta-data.js from the GitHub API, keeping hand-made picks and notes">
+<meta name="revised" content="2026-10-25 04:08">
+<title>ta-data refresh</title>
+<link rel="icon" href="theo-logo.ico">
+
+<!-- the current data: supplies curation (pick/note) and fallbacks. Missing → first run. -->
+<script src="ta-data.js" onerror="void 0"></script>
+
+<style>
+	:root {
+		--color-bg: #faf7f5;
+		--color-panel: #ffffff;
+		--color-text: #2a2220;
+		--color-soft: #7a6a66;
+		--color-accent: #880000;
+		--color-border: #e2d6d2;
+		--color-ok: #2e7d32;
+		--color-warn: #b26a00;
+		--color-error: #c62828;
+		--font-mono: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-bg: #1d1918;
+			--color-panel: #262120;
+			--color-text: #eee6e3;
+			--color-soft: #a89995;
+			--color-accent: #e06a6a;
+			--color-border: #3d3432;
+		}
+	}
+
+	* { box-sizing: border-box; }
+
+	body {
+		background: var(--color-bg);
+		color: var(--color-text);
+		font-family: var(--font-mono);
+		line-height: 1.5;
+		margin: 0 auto;
+		max-width: 52rem;
+		padding: 1.5rem 1rem 3rem;
+	}
+
+	h1 { color: var(--color-accent); font-size: 1.4rem; margin: 0 0 0.3rem; }
+	.intro { color: var(--color-soft); font-size: 0.85rem; margin: 0 0 1.5rem; }
+
+	.panel {
+		background: var(--color-panel);
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		margin-bottom: 1rem;
+		padding: 1rem;
+	}
+
+	label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem; }
+
+	input {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 6px;
+		color: var(--color-text);
+		font-family: inherit;
+		font-size: 0.9rem;
+		margin-bottom: 0.3rem;
+		padding: 0.4rem 0.6rem;
+		width: 100%;
+	}
+
+	.hint { color: var(--color-soft); font-size: 0.75rem; margin: 0 0 0.8rem; }
+
+	button {
+		background: var(--color-accent);
+		border: none;
+		border-radius: 6px;
+		color: #ffffff;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 0.9rem;
+		margin: 0.2rem 0.4rem 0.2rem 0;
+		padding: 0.5rem 1rem;
+	}
+
+	button:disabled { cursor: default; opacity: 0.45; }
+
+	#log {
+		font-size: 0.8rem;
+		max-height: 22rem;
+		overflow-y: auto;
+		white-space: pre-wrap;
+	}
+
+	.line-ok { color: var(--color-ok); }
+	.line-warn { color: var(--color-warn); }
+	.line-error { color: var(--color-error); font-weight: 600; }
+	#summary { font-weight: 600; }
+</style>
+</head>
+
+<body>
+
+<header>
+	<h1>🔄 ta-data refresh</h1>
+	<p class="intro">Rebuilds <code>ta-data.js</code> from the GitHub API — every repo, organization and
+		organization repo — keeping your hand-made <code>pick</code> and <code>note</code> curation.
+		Private repos contribute their names only.</p>
+</header>
+
+<main>
+	<section class="panel">
+		<label for="inpOwner">GitHub owner</label>
+		<input id="inpOwner" type="text" value="theo-armour" autocomplete="off">
+
+		<label for="inpToken">GitHub token (optional)</label>
+		<input id="inpToken" type="password" autocomplete="off" placeholder="none — public repos only, 60 API calls/hour">
+		<p class="hint" id="tokenHint">With a token, private repos are included and the run is fast.</p>
+
+		<button id="btnRun">▶ Fetch from GitHub</button>
+	</section>
+
+	<section class="panel">
+		<p id="summary">Ready.</p>
+		<div id="log"></div>
+	</section>
+
+	<section class="panel">
+		<button id="btnSave" disabled>💾 Save ta-data.js</button>
+		<button id="btnCopy" disabled>📋 Copy</button>
+		<p class="hint">Save over the <code>ta-data.js</code> in your home repo folder, then commit as usual.</p>
+	</section>
+</main>
+
+<script>
+
+// ~ one object for the page state ~
+const state = {
+	owner: "theo-armour",
+	token: "",
+	output: "",
+	running: false,
+};
+
+// ~ the app keeps its token in localStorage under its own page path; look beside us ~
+function findAppToken () {
+
+	const folder = location.pathname.replace( /[^/]*$/, "" );
+	const candidates = [ folder + "index.html", folder ];
+
+	for ( const path of candidates ) {
+
+		try {
+
+			const token = localStorage.getItem( `tootoo:${ path }:githubToken` );
+			if ( token ) { return token; }
+
+		} catch ( _ ) { /* storage off */ }
+
+	}
+
+	return "";
+
+}
+
+function log ( text, kind = "" ) {
+
+	const line = document.createElement( "div" );
+	line.className = kind ? `line-${ kind }` : "";
+	line.textContent = text;
+	const box = document.getElementById( "log" );
+	box.appendChild( line );
+	box.scrollTop = box.scrollHeight;
+
+}
+
+function setSummary ( text ) {
+
+	document.getElementById( "summary" ).textContent = text;
+
+}
+
+const sleep = ( ms ) => new Promise( ( resolve ) => setTimeout( resolve, ms ) );
+
+const day = ( iso ) => ( iso || "" ).slice( 0, 10 );
+
+async function api ( url ) {
+
+	const headers = { Accept: "application/vnd.github+json" };
+	if ( state.token ) { headers.Authorization = `Bearer ${ state.token }`; }
+
+	const response = await fetch( url, { headers } );
+
+	if ( !response.ok ) {
+
+		const error = new Error( `${ response.status } ${ response.statusText } — ${ url }` );
+		error.status = response.status;
+		throw error;
+
+	}
+
+	return response.json();
+
+}
+
+// ~ fetch every page of a list endpoint ~
+async function apiAllPages ( baseUrl ) {
+
+	const all = [];
+
+	for ( let page = 1; ; page++ ) {
+
+		const batch = await api( `${ baseUrl }&per_page=100&page=${ page }` );
+		all.push( ...batch );
+		if ( batch.length < 100 ) { return all; }
+
+	}
+
+}
+
+// ~ what the existing ta-data.js already knows: curation + entries to fall back on ~
+function readOldData () {
+
+	const old = typeof TA_DATA === "undefined" ? { repos: [], orgs: [] } : TA_DATA;
+	const curation = new Map();
+	const oldOrgs = new Map();
+
+	for ( const repo of old.repos ) {
+
+		curation.set( `repo|${ repo.name }`, { pick: !!repo.pick, note: repo.note || "" } );
+
+	}
+
+	for ( const org of old.orgs ) {
+
+		curation.set( `org|${ org.name }`, { pick: !!org.pick, note: org.note || "" } );
+		oldOrgs.set( org.name, org );
+
+	}
+
+	return { old, curation, oldOrgs };
+
+}
+
+function repoEntry ( repo, kept ) {
+
+	return {
+		name: repo.name,
+		url: repo.html_url,
+		// ta-data.js is published on a public site: a private repo gives its NAME only
+		description: repo.private ? "" : repo.description,
+		homepage: repo.homepage,
+		private: !!repo.private,
+		fork: !!repo.fork,
+		created: day( repo.created_at ),
+		updated: day( repo.pushed_at || repo.created_at ),
+		stars: repo.stargazers_count,
+		pick: kept ? kept.pick : false,
+		note: kept ? kept.note : "",
+	};
+
+}
+
+function orgEntry ( org, kept ) {
+
+	return {
+		name: org.login,
+		url: org.html_url,
+		description: org.description,
+		homepage: org.blog,
+		created: day( org.created_at ),
+		pick: kept ? kept.pick : false,
+		note: kept ? kept.note : "",
+		repoList: [],
+	};
+
+}
+
+function orgRepoEntry ( repo ) {
+
+	return {
+		name: repo.name,
+		url: repo.html_url,
+		// with a token, search also returns private repos inside orgs — names only for those too
+		description: repo.private ? "" : repo.description,
+		homepage: repo.homepage,
+		private: !!repo.private,
+		created: day( repo.created_at ),
+		updated: day( repo.pushed_at || repo.created_at ),
+		stars: repo.stargazers_count,
+		fork: repo.fork,
+	};
+
+}
+
+// ~ every org's repos via the search API: 5 orgs per query, paced between queries ~
+async function fetchOrgRepos ( orgLogins ) {
+
+	const byOrg = new Map();
+	const gapMs = state.token ? 2000 : 6000;   // search allows 30/min with a token, 10/min without
+	let first = true;
+
+	for ( let i = 0; i < orgLogins.length; i += 5 ) {
+
+		const group = orgLogins.slice( i, i + 5 );
+		const query = "fork:true+" + group.map( ( login ) => `org:${ login }` ).join( "+" );
+		let got = 0;
+
+		for ( let page = 1; ; page++ ) {
+
+			if ( !first ) { await sleep( gapMs ); }
+			first = false;
+
+			const result = await api( `https://api.github.com/search/repositories?q=${ query }&per_page=100&page=${ page }` );
+
+			for ( const repo of result.items ) {
+
+				const login = repo.owner.login;
+				if ( !byOrg.has( login ) ) { byOrg.set( login, [] ); }
+				byOrg.get( login ).push( orgRepoEntry( repo ) );
+
+			}
+
+			got += result.items.length;
+			if ( got >= result.total_count || result.items.length === 0 ) { break; }
+
+		}
+
+		log( `org repos (${ group.join( ", " ) }): ${ got }` );
+
+	}
+
+	return byOrg;
+
+}
+
+async function refresh () {
+
+	state.owner = document.getElementById( "inpOwner" ).value.trim();
+	state.token = document.getElementById( "inpToken" ).value.trim();
+	document.getElementById( "log" ).textContent = "";
+	setSummary( "Working…" );
+
+	// 0. pre-flight: this run needs ~40 plain API calls (checking the limit is free)
+	const limits = await api( "https://api.github.com/rate_limit" );
+	const core = limits.resources.core;
+
+	if ( core.remaining < 45 ) {
+
+		const reset = new Date( core.reset * 1000 ).toLocaleTimeString();
+		throw new Error( `Only ${ core.remaining } API calls left this hour — try again after ${ reset }, or add a token.` );
+
+	}
+
+	log( state.token ? "Using token." : "No token: public data only." );
+
+	// 1. existing data
+	const { old, curation, oldOrgs } = readOldData();
+	log( `Curation carried over: ${ [ ...curation.values() ].filter( ( c ) => c.pick ).length } picks.` );
+
+	// 2. the owner's repos — as the signed-in user with a token, so private ones are included
+	const repoUrl = state.token
+		? "https://api.github.com/user/repos?affiliation=owner"
+		: `https://api.github.com/users/${ encodeURIComponent( state.owner ) }/repos?sort=created`;
+	const repos = await apiAllPages( repoUrl );
+	log( `My repos: ${ repos.length } (${ repos.filter( ( r ) => r.private ).length } private)` );
+
+	const myRepos = repos.map( ( repo ) => repoEntry( repo, curation.get( `repo|${ repo.name }` ) ) );
+
+	// an anonymous run can't see private repos — keep the ones a token run found earlier
+	if ( !state.token ) {
+
+		const names = new Set( myRepos.map( ( r ) => r.name ) );
+
+		for ( const repo of old.repos ) {
+
+			if ( repo.private && !names.has( repo.name ) ) {
+
+				myRepos.push( repo );
+				log( `Kept private repo from previous data: ${ repo.name }` );
+
+			}
+
+		}
+
+	}
+
+	// 3. organizations, each profile with a fallback to the previous data
+	const orgLogins = ( await api( `https://api.github.com/users/${ encodeURIComponent( state.owner ) }/orgs?per_page=100` ) )
+		.map( ( org ) => org.login );
+	log( `Orgs: ${ orgLogins.length }` );
+
+	const orgs = [];
+
+	for ( const login of orgLogins ) {
+
+		try {
+
+			const org = await api( `https://api.github.com/orgs/${ encodeURIComponent( login ) }` );
+			orgs.push( orgEntry( org, curation.get( `org|${ org.login }` ) ) );
+
+		} catch ( error ) {
+
+			if ( oldOrgs.has( login ) ) {
+
+				orgs.push( oldOrgs.get( login ) );
+				log( `Org ${ login } failed — kept the previous data.`, "warn" );
+
+			} else {
+
+				log( `Org ${ login } failed and has no previous data: ${ error.message }`, "warn" );
+
+			}
+
+		}
+
+	}
+
+	// 4. every org's repo list; keep the old list for any org the search missed
+	const byOrg = await fetchOrgRepos( orgLogins );
+
+	for ( const org of orgs ) {
+
+		if ( byOrg.has( org.name ) ) {
+
+			org.repoList = byOrg.get( org.name ).sort( ( a, b ) => b.updated.localeCompare( a.updated ) );
+
+		} else if ( !org.repoList ) {
+
+			org.repoList = [];
+
+		}
+
+	}
+
+	// 5. sanity check — never hand back something worse than what's on disk
+	if ( orgs.length < oldOrgs.size ) {
+
+		throw new Error( `New data has ${ orgs.length } orgs, previous had ${ oldOrgs.size } — not saving. Nothing was changed.` );
+
+	}
+
+	const byCreated = ( a, b ) => a.created.localeCompare( b.created );
+
+	const data = {
+		meta: {
+			owner: state.owner,
+			snapshot: new Date().toISOString().slice( 0, 10 ),
+			source: "GitHub API, assembled by ta-data-refresh.html",
+		},
+		repos: myRepos.sort( byCreated ),
+		orgs: orgs.sort( byCreated ),
+	};
+
+	state.output =
+		"// Theo's GitHub material ~ generated by ta-data-refresh.html, curated by hand\n" +
+		"// Edit 'pick' and 'note' freely — refreshes preserve them. The rest is API data.\n" +
+		"const TA_DATA =\n" + JSON.stringify( data, null, 2 ) + ";\n";
+
+	const orgRepoTotal = orgs.reduce( ( sum, org ) => sum + org.repoList.length, 0 );
+	setSummary( `✅ ${ data.repos.length } repos + ${ orgs.length } orgs + ${ orgRepoTotal } org repos · snapshot ${ data.meta.snapshot } — now save it.` );
+	log( "Done.", "ok" );
+
+	document.getElementById( "btnSave" ).disabled = false;
+	document.getElementById( "btnCopy" ).disabled = false;
+
+}
+
+async function onRunClick () {
+
+	if ( state.running ) { return; }
+
+	state.running = true;
+	document.getElementById( "btnRun" ).disabled = true;
+	document.getElementById( "btnSave" ).disabled = true;
+	document.getElementById( "btnCopy" ).disabled = true;
+
+	try {
+
+		await refresh();
+
+	} catch ( error ) {
+
+		setSummary( "❌ Stopped." );
+		log( error.message, "error" );
+
+	} finally {
+
+		state.running = false;
+		document.getElementById( "btnRun" ).disabled = false;
+
+	}
+
+}
+
+// ~ Chrome's save dialog when available (pick the folder each time), else a download ~
+async function onSaveClick () {
+
+	if ( window.showSaveFilePicker ) {
+
+		try {
+
+			const handle = await window.showSaveFilePicker( {
+				suggestedName: "ta-data.js",
+				types: [ { description: "JavaScript", accept: { "text/javascript": [ ".js" ] } } ],
+			} );
+			const writable = await handle.createWritable();
+			await writable.write( state.output );
+			await writable.close();
+			log( `Saved ${ handle.name }.`, "ok" );
+			return;
+
+		} catch ( error ) {
+
+			if ( error.name === "AbortError" ) { return; }   // dialog cancelled
+
+		}
+
+	}
+
+	const link = document.createElement( "a" );
+	link.href = URL.createObjectURL( new Blob( [ state.output ], { type: "text/javascript" } ) );
+	link.download = "ta-data.js";
+	link.click();
+	URL.revokeObjectURL( link.href );
+	log( "Downloaded ta-data.js — move it into your home repo folder.", "ok" );
+
+}
+
+async function onCopyClick () {
+
+	await navigator.clipboard.writeText( state.output );
+	log( "Copied to the clipboard.", "ok" );
+
+}
+
+function init () {
+
+	const token = findAppToken();
+
+	if ( token ) {
+
+		document.getElementById( "inpToken" ).value = token;
+		document.getElementById( "tokenHint" ).textContent =
+			"Using the token you saved in the app (⚙️). Private repos will be included.";
+
+	}
+
+	if ( typeof TA_DATA === "undefined" ) {
+
+		log( "No ta-data.js next to this page — first run, no curation to keep.", "warn" );
+
+	} else {
+
+		setSummary( `Ready. Current data: snapshot ${ TA_DATA.meta.snapshot }, ${ TA_DATA.repos.length } repos, ${ TA_DATA.orgs.length } orgs.` );
+
+	}
+
+}
+
+document.getElementById( "btnRun" ).addEventListener( "click", onRunClick );
+document.getElementById( "btnSave" ).addEventListener( "click", onSaveClick );
+document.getElementById( "btnCopy" ).addEventListener( "click", onCopyClick );
+
+init();
+
+</script>
+
+</body>
+</html>

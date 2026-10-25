@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-25 03:02">
+  <meta name="revised" content="2026-10-25 04:08">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -29,7 +29,7 @@
       sourceRepoUrl: 'https://github.com/theo-armour',   // header brand icon → Theo's GitHub account
       themeColor: '#880000',
       // the hub's own plumbing and page furniture stay out of every file tree
-      hiddenFiles: [ 'tootoo.config.js', 'ta-data.js', 'update-ta-data.ps1',
+      hiddenFiles: [ 'tootoo.config.js', 'ta-data.js', 'ta-data-refresh.html',
         'theo-logo.ico', 'favicon.ico', 'dingbat.ico', 'CNAME', '404.html', 'LICENSE',
         '/index.html' ],   // root only — nested index.html files mark sub-apps, keep those
       hideDatedBackups: true,   // hide "name-2026-10-24…" style backups (dates AFTER a name; date-FIRST blog posts stay)
@@ -3591,7 +3591,7 @@ const SHELF_ORGS_ROW = '~organizations~';
 /* ── all repos + forks from ta-data.js: home repo first, then ⭐ picks, then the
    rest — each group most recently pushed first (sort is stable) ── */
 const shelfRepoList = () => {
-  const repos = TA_DATA.entries.filter( ( e ) => e.type === 'repo' || e.type === 'fork' );
+  const repos = [ ...TA_DATA.repos ];   // a copy — sorting must not reorder the shared data
   repos.sort( ( a, b ) => b.updated.localeCompare( a.updated ) );
   const rank = ( r ) => r.name === homeRepo.repo ? 0 : r.pick ? 1 : 2;
   repos.sort( ( a, b ) => rank( a ) - rank( b ) );
@@ -3648,8 +3648,8 @@ const renderRepoShelf = () => {
   // Summary line: count + year span; the fuller numbers live in the tooltip.
   const years = repos.map( ( r ) => r.created.slice( 0, 4 ) );
   const span = `${ Math.min( ...years ) }→${ Math.max( ...years ) }`;
-  const forkCount = repos.filter( ( r ) => r.type === 'fork' ).length;
-  const orgCount = TA_DATA.entries.filter( ( e ) => e.type === 'org' ).length;
+  const forkCount = repos.filter( ( r ) => r.fork ).length;
+  const orgCount = TA_DATA.orgs.length;
   const starTotal = repos.reduce( ( sum, r ) => sum + ( r.stars || 0 ), 0 );
   const shelfTip = `${ repos.length - forkCount } repos · ${ forkCount } forks · ${ orgCount } orgs · ` +
     `★ ${ starTotal } total · data as of ${ TA_DATA.meta.snapshot }`;
