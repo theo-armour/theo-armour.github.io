@@ -66,7 +66,7 @@ The refresh never makes the data worse. It keeps your picks and notes, keeps an 
 
 ## Development
 
-Changes are made and tested in the `tootoo-simple` folder of the [sandbox repo](https://github.com/theo-armour/sandbox), then copied here. This copy is maintained by hand and is not part of the TooToo sync pipeline, so it doesn't automatically pick up changes made to canonical TooToo.
+Changes are made and tested in the `tootoo-hub` folder of the [sandbox repo](https://github.com/theo-armour/sandbox), then copied here. This copy is maintained by hand and is not part of the TooToo sync pipeline, so it doesn't automatically pick up changes made to canonical TooToo.
 
 ## Changelog
 

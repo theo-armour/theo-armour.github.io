@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-25 06:27">
+  <meta name="revised" content="2026-10-25 18:14">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -17,12 +17,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.1/dist/purify.min.js"></script>
 
-  <!-- TooToo Simple — a single-user build, dedicated to theo-armour. The identity is
+  <!-- TooToo Hub — a single-user build, dedicated to theo-armour. The identity is
        baked in (no tootoo.config.js, no unknown owners). ta-data.js carries the
        agent-refreshed list of every repo and organization for the sidebar shelf. -->
   <script>
     window.TOOTOO_CONFIG = {
-      appName: 'TooToo Simple',
+      appName: 'TooToo Hub',
       subtitle: 'Theo Armour ~ every repo, one place',
       owner: 'theo-armour',
       repo: 'theo-armour.github.io',
@@ -1088,7 +1088,7 @@ body.dark-mode pre {
   margin: 1rem;
   font-size: 0.9rem;
 }
-    /* ── TooToo Simple: repo shelf (single-user build) ── */
+    /* ── TooToo Hub: repo shelf (single-user build) ── */
     :root {
       --font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
       /* selection + hover follow the baked themeColor instead of the stock blue/grey */
@@ -1222,6 +1222,12 @@ body.dark-mode pre {
     /* content header: same one-line behavior — the built-in crumb truncation
        (path shrinks, filename stays) handles narrow widths; just never wrap */
     .file-header { flex-wrap: nowrap; }
+
+    /* iframes embedded in markdown (e.g. the sphere in the README) */
+    .markdown-body iframe {
+      border: none;
+      max-width: 100%;
+    }
 
     /* the sidebar's files header matches the shelf summary above it */
     #filesPanelHeader { padding: 0.25rem 0.75rem; }
@@ -1409,7 +1415,7 @@ const hiddenFileSet = () => new Set( ( CONFIG.hiddenFiles || [] ).map( ( s ) => 
    entry hides that bare name wherever it appears, unless it starts with '/', which anchors
    it to the repo root — so '/index.html' hides only the root file, not nested ones. */
 
-/* tootoo-simple: a date AFTER a name marks a backup snapshot ("index-2026-10-24….html",
+/* tootoo-hub: a date AFTER a name marks a backup snapshot ("index-2026-10-24….html",
    "README 2026 09 18.md"); a date at the START is content ("2026-01-04-essay.md"). */
 const DATED_BACKUP_RE = /^.+20\d\d[-_ .]\d\d/;
 
@@ -1784,7 +1790,7 @@ const resolveRepoPath = ( href, currentDir ) => {
   return stack.join( '/' );
 };
 
-/* ── tootoo-simple: the live GitHub Pages addresses, so index.html runs instead of
+/* ── tootoo-hub: the live GitHub Pages addresses, so index.html runs instead of
    showing source (the app's render/source toggle covers reading code). The special
    <owner>.github.io repo serves from the domain root. One source of truth — the
    header links reuse these. ── */
@@ -1794,7 +1800,7 @@ const pagesBase = () => state.repo.toLowerCase() === `${ state.owner.toLowerCase
   : `${ ownerSiteUrl() }/${ encodeURIComponent( state.repo ) }`;
 const pagesUrl = ( path ) => `${ pagesBase() }/${ encodePath( path ) }`;
 
-/* ── tootoo-simple: URL to open in a new tab / download: the local file in drop-in
+/* ── tootoo-hub: URL to open in a new tab / download: the local file in drop-in
    mode; downloads keep the raw URL (direct save); everything else opens the live
    GitHub Pages copy. ── */
 const getNewTabUrl = ( path ) => {
@@ -1926,7 +1932,7 @@ const updateHeaderFromConfig = () => {
   // Each segment is a live link: owner → the owner's github.io home, repo → that
   // repo's live GitHub Pages site (the brand icon beside them → github.com).
   if ( state.owner && state.repo ) {
-    // tootoo-simple: owner/repo can arrive from the URL (?owner=…), so they are
+    // tootoo-hub: owner/repo can arrive from the URL (?owner=…), so they are
     // untrusted — ownerSiteUrl/pagesBase URL-encode them, and every attribute they
     // land in is HTML-escaped.
     const ownerSite = ownerSiteUrl();
@@ -1994,7 +2000,7 @@ const initHeaderControls = () => {
   document.getElementById( 'btnToken' )?.addEventListener( 'click', () => toggleInfoPanel( 'token' ) );
   document.getElementById( 'btnToggleSidebar' )?.addEventListener( 'click', toggleSidebar );
 
-  // (tootoo-simple: the title is no longer a reset-to-home link — its owner/repo
+  // (tootoo-hub: the title is no longer a reset-to-home link — its owner/repo
   // segments are live links to the github.io sites; the shelf's home row resets.)
   document.getElementById( 'headerGitHub' )?.setAttribute( 'href', CONFIG.sourceRepoUrl || '#' );
 };
@@ -2646,7 +2652,7 @@ const fetchTree = async () => {
   }
 };
 
-/* ── pick the root README on first load (tootoo-simple rules):
+/* ── pick the root README on first load (tootoo-hub rules):
    1. "README <reponame>.md" — Theo's named readmes win
    2. a plain README.md / readme.txt
    3. any other "README <words>.md" with NO digits — dated backups like
@@ -2979,7 +2985,9 @@ const buildToggleHtml = ( ext, renderedHtml, rawText, { prefix = '', renderedCla
     `<pre id="viewRaw" style="${ rawDisplay }">${ escapeHTML( rawText ) }</pre>`;
 };
 
-const MD_PURIFY = { FORBID_TAGS: [ 'style', 'form', 'button', 'textarea', 'select' ], FORBID_ATTR: [ 'style' ] };
+// tootoo-hub: iframes are allowed in markdown — the sanitizer hook in the custom
+// block forces a safe sandbox on every one before it can load.
+const MD_PURIFY = { ADD_TAGS: [ 'iframe' ], FORBID_TAGS: [ 'style', 'form', 'button', 'textarea', 'select' ], FORBID_ATTR: [ 'style' ] };
 
 const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   let renderedHtml, errorHtml = '';
@@ -2994,6 +3002,11 @@ const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   const mdBody = document.querySelector( '#contentBody > #viewRendered' );
   if ( !mdBody ) return;
   const currentDir = filePath.includes( '/' ) ? filePath.slice( 0, filePath.lastIndexOf( '/' ) ) : '';
+
+  // tootoo-hub: a relative iframe src points at this repo's published page
+  mdBody.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => {
+    frame.src = pagesUrl( resolveRepoPath( frame.dataset.repoSrc, currentDir ) );
+  } );
 
   // GitHub-style heading ids (marked v12 no longer generates them), so in-file
   // #anchor links and #path#anchor permalinks have something to scroll to.
@@ -3078,7 +3091,7 @@ const renderCode = ( text, ext ) => {
   body.appendChild( pre );
 };
 
-/* tootoo-simple: show the page RUNNING, so scripts run and relative files load.
+/* tootoo-hub: show the page RUNNING, so scripts run and relative files load.
    - Published page (GitHub Pages): sandboxed with scripts allowed but NOT same-origin.
      The page gets an opaque origin and cannot read this app's storage (where the
      GitHub token lives), even though Pages shares theo-armour.github.io.
@@ -3493,10 +3506,10 @@ const initApp = async () => {
   updateHeaderFromConfig(); // header.js — repo now known, so refresh the title (owner / repo)
   updateFooterCopyright();  // footer.js — repo owner now known, set the © line
   initSidebar();    // sidebar.js — wire filter/expand/select (tree fills next)
-  renderRepoShelf();      // tootoo-simple — the single-user repo shelf above the tree
-  fetchPrivateRepos();    // tootoo-simple — with a token, adds private repos (not awaited)
-  initShelfResizer();     // tootoo-simple — one-time wiring, independent of shelf data
-  initPanelTopButtons();  // tootoo-simple — ↑ buttons for both sidebar panels
+  renderRepoShelf();      // tootoo-hub — the single-user repo shelf above the tree
+  fetchPrivateRepos();    // tootoo-hub — with a token, adds private repos (not awaited)
+  initShelfResizer();     // tootoo-hub — one-time wiring, independent of shelf data
+  initPanelTopButtons();  // tootoo-hub — ↑ buttons for both sidebar panels
 
   if ( !state.owner || !state.repo ) {
     document.getElementById( 'contentBody' ).innerHTML =
@@ -3586,7 +3599,7 @@ const showFileAccessHelp = () => {
     </div>`;
 };
 
-/* ════ TooToo Simple — single-user repo shelf ════
+/* ════ TooToo Hub — single-user repo shelf ════
    Every repo of ONE owner, listed above the file tree from the baked ta-data.js
    (no API calls to draw the list). Clicking a repo re-points the whole app at it
    via the normal fetchTree machinery. A pinned "organizations" row renders the
@@ -3595,6 +3608,21 @@ const showFileAccessHelp = () => {
 // The baked identity lives in ONE place — the TOOTOO_CONFIG block in <head> — and
 // detectRepo captures it into canonical homeRepo before the shelf renders.
 const SHELF_ORGS_ROW = '~organizations~';
+
+/* ── iframes in markdown: whatever sandbox the author wrote is replaced by the safe one
+   (scripts yes, this app's storage no). Done INSIDE the sanitizer because a frame's
+   sandbox is fixed when it starts loading — changing it after insertion is too late.
+   https sources load as written; relative ones are held back and resolved per repo
+   by renderMarkdown; anything else (http:, data:, javascript:) is dropped. ── */
+DOMPurify.addHook( 'afterSanitizeAttributes', ( node ) => {
+  if ( node.tagName !== 'IFRAME' ) return;
+  node.setAttribute( 'sandbox', 'allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox' );
+  node.setAttribute( 'loading', 'lazy' );
+  const src = ( node.getAttribute( 'src' ) || '' ).trim();
+  if ( /^https:\/\//i.test( src ) ) return;
+  node.removeAttribute( 'src' );
+  if ( src && !/^[a-z][\w+.-]*:/i.test( src ) && !src.startsWith( '//' ) ) node.setAttribute( 'data-repo-src', src );
+} );
 
 // Private repos never go in the public ta-data.js. With a saved token they're fetched
 // live (one API call) and merged in; ⭐ for them is a "favorite" topic on GitHub.
