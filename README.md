@@ -37,7 +37,7 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 
 Click on any of the 44 repositories in the top-left menu to explore my GitHub projects.
 
-When you get tired of that, click on the [organizations](organizations/) to have a look see at even more stuff. 
+When you get tired of that, click on the [organizations](organizations.md) to have a look see at even more stuff. 
 
 ### WordPress Sites
 
