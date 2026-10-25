@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-25 02:53">
+  <meta name="revised" content="2026-10-25 03:02">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -30,7 +30,8 @@
       themeColor: '#880000',
       // the hub's own plumbing and page furniture stay out of every file tree
       hiddenFiles: [ 'tootoo.config.js', 'ta-data.js', 'update-ta-data.ps1',
-        'theo-logo.ico', 'favicon.ico', 'dingbat.ico', 'CNAME', '404.html', 'LICENSE' ],
+        'theo-logo.ico', 'favicon.ico', 'dingbat.ico', 'CNAME', '404.html', 'LICENSE',
+        '/index.html' ],   // root only — nested index.html files mark sub-apps, keep those
       hideDatedBackups: true,   // hide "name-2026-10-24…" style backups (dates AFTER a name; date-FIRST blog posts stay)
     };
   </script>
