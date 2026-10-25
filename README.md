@@ -27,7 +27,9 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * My house: https://heritageonthemarina.org/
 * tarmour at gmail dot com
 
-### WordPress
+### WordPress Sites
+
+Over the years, I've built many WordPress "starter" websites for people. Most of my similar work is now on GitHub, but I do have fond thoughts for all of these sites. Matt Mullenweg, the co-founder of WordPress, once invited me to his birthday party in SOMA, San Francisco.
 
 * https://theoa.wordpress.com/
 * https://adsomnia.wordpress.com/
@@ -52,7 +54,19 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * https://takeitbackfilm.wordpress.com/
 * https://thebarbarycoastnews.wordpress.com/
 
-## Recent posts
+### Blogger Sites
+
+Did I start with Blogger in 2004?
+
+* https://artofthenet.blogspot.com/
+* http://bbn66.blogspot.com/
+* https://bowmeowwow.blogspot.com/
+* https://caper-ws.blogspot.com/
+* https://data-home.blogspot.com/
+* https://dominique-g.blogspot.com/
+* https://try-blogger-archive.blogspot.com/
+
+## Recent blog posts
 
 * [Your Edge Is Patience, Not Genius](blog/2026-09-15-westenberg-patience.md) ~ 2026-09-15
 * [Two Chairs](blog/2026-09-14-two%20chairs.md) ~ 2026-09-14
