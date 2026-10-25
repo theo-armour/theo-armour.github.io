@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-25 18:14">
+  <meta name="revised" content="2026-10-25 18:27">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -1227,6 +1227,20 @@ body.dark-mode pre {
     .markdown-body iframe {
       border: none;
       max-width: 100%;
+    }
+
+    /* @@@ blocks wrap their iframe in a div at height=100% — give the div a real,
+       user-resizable height (inline style="height:…" is stripped by the sanitizer) */
+    .markdown-body div:has( > iframe ) {
+      border: 1px solid var(--border-color);
+      height: 60vh;
+      overflow: hidden;
+      resize: vertical;
+    }
+
+    .markdown-body div:has( > iframe ) > iframe {
+      height: 100%;
+      width: 100%;
     }
 
     /* the sidebar's files header matches the shelf summary above it */
@@ -2993,7 +3007,7 @@ const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   let renderedHtml, errorHtml = '';
   // Strip what GitHub strips: page-wide styles, inline styles (a README could cover the app
   // with a fake form) and form controls (task-list checkboxes stay).
-  try { renderedHtml = DOMPurify.sanitize( marked.parse( text ), MD_PURIFY ); }
+  try { renderedHtml = DOMPurify.sanitize( marked.parse( revealHubBlocks( text ) ), MD_PURIFY ); }   // tootoo-hub: @@@ blocks
   catch ( err ) { errorHtml = `<div class="md-error">⚠️ Markdown rendering failed: ${ escapeHTML( err.message ) }</div>`; renderedHtml = ''; }
 
   document.getElementById( 'contentBody' ).innerHTML =
@@ -3609,6 +3623,13 @@ const showFileAccessHelp = () => {
 // detectRepo captures it into canonical homeRepo before the shelf renders.
 const SHELF_ORGS_ROW = '~organizations~';
 
+/* ── @@@ blocks: content wrapped in <!--@@@ … @@@--> is an HTML comment, so github.com
+   hides it — but the hub drops the two markers and shows it (Theo's long-standing
+   convention, typically an iframe of the repo's live page). A blank line after each
+   </div> lets the caption line under it render as markdown, not raw HTML text. ── */
+const revealHubBlocks = ( text ) =>
+  text.replace( /<!--@@@([\s\S]*?)@@@-->/g, ( _, inner ) => inner.replace( /<\/div>[ \t]*\r?\n/gi, '</div>\n\n' ) );
+
 /* ── iframes in markdown: whatever sandbox the author wrote is replaced by the safe one
    (scripts yes, this app's storage no). Done INSIDE the sanitizer because a frame's
    sandbox is fixed when it starts loading — changing it after insertion is too late.
@@ -3693,7 +3714,7 @@ const showOrganizations = async () => {
     if ( !response.ok ) throw new Error( `HTTP ${ response.status }` );
     const text = await response.text();
     // same hardened sanitize profile + typography class as every repo-file render
-    body.innerHTML = `<div class="markdown-body">${ DOMPurify.sanitize( marked.parse( text ), MD_PURIFY ) }</div>`;
+    body.innerHTML = `<div class="markdown-body">${ DOMPurify.sanitize( marked.parse( revealHubBlocks( text ) ), MD_PURIFY ) }</div>`;
   } catch ( err ) {
     body.innerHTML = `<p style="padding:1rem;">Could not load <code>organizations.md</code> — ` +
       `${ escapeHTML( err.message ) }. The file must sit next to index.html.</p>`;
