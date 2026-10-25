@@ -14,6 +14,7 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 
 * About me: a work-in-progress [bio](about/theo.md)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
+
 * https://www.github.com/theo-armour
 * https://www.x.com/ta
 * https://www.instagram.com/armour.theo/
@@ -28,6 +29,7 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * https://bsky.app/profile/theo-armour.bsky.social
 * My house: https://heritageonthemarina.org/
 * tarmour at gmail dot com
+
 
 ### WordPress Sites
 
@@ -87,8 +89,12 @@ Did I start with Blogger in 2003?
 
 ## Wikipedia articles
 
-* [Theo Armour](https://en.wikipedia.org/wiki/George_Armour)
+Authoring Wikipedia articles is a skill I would be delighted to develop further. 
 
+* [George Armour](https://en.wikipedia.org/wiki/George_Armour)
+* [San Francisco Ladies Protection and Relief Society](https://en.wikipedia.org/wiki/San_Francisco_Ladies_Protection_and_Relief_Society)
+* [Julia Morgan Building](https://en.wikipedia.org/wiki/Julia_Morgan_Building)
+* [Nigel Foster](https://en.wikipedia.org/wiki/Nigel_Foster)
 
 ## Recent blog posts
 
