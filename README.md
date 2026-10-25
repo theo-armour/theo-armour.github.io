@@ -14,7 +14,7 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 
 * About me: a work-in-progress [bio](about/theo.md)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
-
+* My house: https://heritageonthemarina.org/
 
 ## Links
 
@@ -30,14 +30,14 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * https://www.threads.com/@armour.theo
 * https://www.tumblr.com/blog/ta
 * https://bsky.app/profile/theo-armour.bsky.social
-* My house: https://heritageonthemarina.org/
-
 * WhatsApp: @armour.theo
 * tarmour at gmail dot com
 
 ## GitHub Efforts
 
+Click on any of the 44 repositories in the top-left menu to explore my GitHub projects.
 
+When you get tired of that, click on the [observations](observations/) to have a look see at even more stuff. 
 
 ### WordPress Sites
 
