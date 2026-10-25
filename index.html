@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-24 21:32">
+  <meta name="revised" content="2026-10-24 23:01">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -3559,12 +3559,13 @@ const showFileAccessHelp = () => {
 // detectRepo captures it into canonical homeRepo before the shelf renders.
 const SHELF_ORGS_ROW = '~organizations~';
 
-/* ── all repos + forks from ta-data.js: home repo first, then most recently pushed ── */
+/* ── all repos + forks from ta-data.js: home repo first, then ⭐ picks, then the
+   rest — each group most recently pushed first (sort is stable) ── */
 const shelfRepoList = () => {
   const repos = TA_DATA.entries.filter( ( e ) => e.type === 'repo' || e.type === 'fork' );
   repos.sort( ( a, b ) => b.updated.localeCompare( a.updated ) );
-  const home = repos.findIndex( ( r ) => r.name === homeRepo.repo );
-  if ( home > 0 ) repos.unshift( repos.splice( home, 1 )[ 0 ] );
+  const rank = ( r ) => r.name === homeRepo.repo ? 0 : r.pick ? 1 : 2;
+  repos.sort( ( a, b ) => rank( a ) - rank( b ) );
   return repos;
 };
 
@@ -3626,7 +3627,7 @@ const renderRepoShelf = () => {
 
   const rows = repos.map( ( r ) => `
     <button type="button" class="shelf-row" data-repo="${ escapeHTML( r.name ) }" title="${ escapeHTML( r.description || '' ) }">
-      ${ r.name === homeRepo.repo ? '📘' : '📁' } ${ escapeHTML( r.name ) }
+      ${ r.name === homeRepo.repo ? '📘' : r.pick ? '⭐' : '📁' } ${ escapeHTML( r.name ) }${ r.private ? ' 🔒' : '' }
     </button>` ).join( '' );
   shelf.innerHTML = `
     <details id="shelfDetails" open>
@@ -3707,12 +3708,16 @@ const initShelfResizer = () => {
     if ( !dragging ) return;
     setHeight( Math.max( 0, Math.min( window.innerHeight * 0.7, startHeight + e.clientY - startY ) ) );
   } );
-  divider.addEventListener( 'pointerup', () => {
+  // save however the drag ends — release, cancel, or lost capture
+  const endDrag = () => {
     if ( !dragging ) return;
     dragging = false;
     try { localStorage.setItem( heightKey, String( Math.round( shelf.getBoundingClientRect().height ) ) ); }
     catch ( _ ) { /* storage off */ }
-  } );
+  };
+  divider.addEventListener( 'pointerup', endDrag );
+  divider.addEventListener( 'pointercancel', endDrag );
+  divider.addEventListener( 'lostpointercapture', endDrag );
   divider.addEventListener( 'dblclick', () => {
     shelf.style.height = '';
     shelf.style.maxHeight = '';

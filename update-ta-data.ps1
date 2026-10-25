@@ -53,15 +53,19 @@ if (Test-Path $dataPath) {
     Write-Output "Curation carried over: $(@($curation.Values | Where-Object { $_.pick }).Count) picks."
 }
 
-# ── 2. the owner's repos (paged, 100 per page) ──
+# ── 2. the owner's repos (paged, 100 per page). With GH_TOKEN this asks as the
+#       authenticated user, so PRIVATE repos are included (names only — see below) ──
 $repos = @()
 $page = 1
 do {
-    $batch = Invoke-RestMethod -Headers $headers -Uri "https://api.github.com/users/$owner/repos?per_page=100&sort=created&page=$page"
+    $uri = $env:GH_TOKEN `
+        ? "https://api.github.com/user/repos?affiliation=owner&per_page=100&page=$page" `
+        : "https://api.github.com/users/$Owner/repos?per_page=100&sort=created&page=$page"
+    $batch = Invoke-RestMethod -Headers $headers -Uri $uri
     $repos += $batch
     $page++
 } while ($batch.Count -eq 100)
-Write-Output "My repos: $($repos.Count)"
+Write-Output "My repos: $($repos.Count) ($(@($repos | Where-Object { $_.private }).Count) private)"
 
 # ── 3. the orgs: public memberships, then each org's profile ──
 $orgLogins = (Invoke-RestMethod -Headers $headers -Uri "https://api.github.com/users/$owner/orgs?per_page=100") | ForEach-Object { $_.login }
@@ -75,13 +79,27 @@ foreach ($r in $repos) {
         type        = $kind
         name        = $r.name
         url         = $r.html_url
-        description = $r.description
+        # ta-data.js is published on the public site: a private repo contributes its
+        # NAME only (its Pages URL is public anyway), never its description
+        description = if ($r.private) { '' } else { $r.description }
         homepage    = $r.homepage
+        private     = [bool]$r.private
         created     = $r.created_at.ToString('yyyy-MM-dd')
         updated     = $r.pushed_at.ToString('yyyy-MM-dd')
         stars       = $r.stargazers_count
         pick        = if ($kept) { $kept.pick } else { $false }
         note        = if ($kept) { $kept.note } else { '' }
+    }
+}
+
+# an anonymous run can't see private repos — keep the ones a token run found earlier
+if (-not $env:GH_TOKEN -and $old) {
+    $newNames = @($entries | ForEach-Object { $_.name })
+    foreach ($e in $old.entries) {
+        if ($e.type -ne 'org' -and $e.private -and $newNames -notcontains $e.name) {
+            $entries += $e
+            Write-Output "Kept private repo from previous run: $($e.name)"
+        }
     }
 }
 
