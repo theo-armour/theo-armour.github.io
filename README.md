@@ -30,6 +30,27 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 ### WordPress
 
 * https://theoa.wordpress.com/
+* https://adsomnia.wordpress.com/
+* https://artofthenet2009.wordpress.com/
+* https://bbn66.wordpress.com/
+* https://chezgeorges.wordpress.com/
+* https://dchace.wordpress.com/
+* https://dominiquegaspar128559967.wordpress.com/
+* https://fertehenri.wordpress.com/
+* https://foggus.wordpress.com/
+* https://friendsofgoldengateway.wordpress.com/
+* https://juliettehannedoucheellis.wordpress.com/
+* https://koudachev.wordpress.com/
+* https://parallelconstitution.wordpress.com/
+* https://parallelconstitutionar.wordpress.com/
+* https://pascalehery.wordpress.com/
+* https://patterphernalia.wordpress.com/
+* https://polymetrimania.wordpress.com/
+* https://rwblog.wordpress.com/
+* https://sps80.wordpress.com/
+* https://spsecomtaskforce.wordpress.com/
+* https://takeitbackfilm.wordpress.com/
+* https://thebarbarycoastnews.wordpress.com/
 
 ## Recent posts
 
