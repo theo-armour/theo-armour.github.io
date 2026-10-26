@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-25 18:27">
+  <meta name="revised" content="2026-10-26 02:44">
   <title>TooToo</title>
   <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
        (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
@@ -1231,14 +1231,14 @@ body.dark-mode pre {
 
     /* @@@ blocks wrap their iframe in a div at height=100% — give the div a real,
        user-resizable height (inline style="height:…" is stripped by the sanitizer) */
-    .markdown-body div:has( > iframe ) {
+    .markdown-body div:has( > iframe[height="100%"] ) {
       border: 1px solid var(--border-color);
       height: 60vh;
       overflow: hidden;
       resize: vertical;
     }
 
-    .markdown-body div:has( > iframe ) > iframe {
+    .markdown-body div:has( > iframe[height="100%"] ) > iframe {
       height: 100%;
       width: 100%;
     }
@@ -3001,7 +3001,7 @@ const buildToggleHtml = ( ext, renderedHtml, rawText, { prefix = '', renderedCla
 
 // tootoo-hub: iframes are allowed in markdown — the sanitizer hook in the custom
 // block forces a safe sandbox on every one before it can load.
-const MD_PURIFY = { ADD_TAGS: [ 'iframe' ], FORBID_TAGS: [ 'style', 'form', 'button', 'textarea', 'select' ], FORBID_ATTR: [ 'style' ] };
+const MD_PURIFY = { ADD_TAGS: [ 'iframe' ], ADD_ATTR: [ 'allow', 'allowfullscreen' ], FORBID_TAGS: [ 'style', 'form', 'button', 'textarea', 'select' ], FORBID_ATTR: [ 'style' ] };
 
 const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   let renderedHtml, errorHtml = '';
@@ -3017,10 +3017,8 @@ const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   if ( !mdBody ) return;
   const currentDir = filePath.includes( '/' ) ? filePath.slice( 0, filePath.lastIndexOf( '/' ) ) : '';
 
-  // tootoo-hub: a relative iframe src points at this repo's published page
-  mdBody.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => {
-    frame.src = pagesUrl( resolveRepoPath( frame.dataset.repoSrc, currentDir ) );
-  } );
+  // tootoo-hub: a relative iframe src points at this repo's own page
+  mdBody.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => setRepoFrameSrc( frame, currentDir ) );
 
   // GitHub-style heading ids (marked v12 no longer generates them), so in-file
   // #anchor links and #path#anchor permalinks have something to scroll to.
@@ -3628,22 +3626,46 @@ const SHELF_ORGS_ROW = '~organizations~';
    convention, typically an iframe of the repo's live page). A blank line after each
    </div> lets the caption line under it render as markdown, not raw HTML text. ── */
 const revealHubBlocks = ( text ) =>
-  text.replace( /<!--@@@([\s\S]*?)@@@-->/g, ( _, inner ) => inner.replace( /<\/div>[ \t]*\r?\n/gi, '</div>\n\n' ) );
+  text.replace( /<!--@@@([\s\S]*?)@@@-->/g, ( _, inner ) => inner.replace( /<\/div>[ \t]*\r?\n(?=\S)/gi, '</div>\n\n' ) );
 
-/* ── iframes in markdown: whatever sandbox the author wrote is replaced by the safe one
-   (scripts yes, this app's storage no). Done INSIDE the sanitizer because a frame's
-   sandbox is fixed when it starts loading — changing it after insertion is too late.
-   https sources load as written; relative ones are held back and resolved per repo
-   by renderMarkdown; anything else (http:, data:, javascript:) is dropped. ── */
-DOMPurify.addHook( 'afterSanitizeAttributes', ( node ) => {
+/* ── iframes in markdown: whatever sandbox the author wrote is replaced by a safe one.
+   Done INSIDE the sanitizer because a frame's sandbox is fixed when it starts loading —
+   changing it after insertion is too late. Frames on the origins where the GitHub token
+   lives (this page, the owner's github.io) get scripts but never same-origin, so they
+   can't read the token; frames from other sites (YouTube, maps…) keep their own origin,
+   which they need to work and which can't reach this app's storage anyway.
+   https sources load as written; relative ones are held back and resolved per repo by
+   renderMarkdown; anything else (http:, data:, javascript:) is dropped. ── */
+const FRAME_SANDBOX = 'allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox';
+const tokenOrigins = () => [ location.origin, `https://${ ( homeRepo.owner || CONFIG.owner ).toLowerCase() }.github.io` ];
+
+if ( window.DOMPurify ) DOMPurify.addHook( 'afterSanitizeAttributes', ( node ) => {
   if ( node.tagName !== 'IFRAME' ) return;
-  node.setAttribute( 'sandbox', 'allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox' );
+  node.setAttribute( 'sandbox', FRAME_SANDBOX );
   node.setAttribute( 'loading', 'lazy' );
   const src = ( node.getAttribute( 'src' ) || '' ).trim();
-  if ( /^https:\/\//i.test( src ) ) return;
+  if ( /^https:\/\//i.test( src ) ) {
+    let origin = '';
+    try { origin = new URL( src ).origin; } catch ( _ ) { /* malformed → stays fully sandboxed */ }
+    if ( origin && !tokenOrigins().includes( origin ) ) node.setAttribute( 'sandbox', FRAME_SANDBOX + ' allow-same-origin' );
+    return;
+  }
   node.removeAttribute( 'src' );
   if ( src && !/^[a-z][\w+.-]*:/i.test( src ) && !src.startsWith( '//' ) ) node.setAttribute( 'data-repo-src', src );
 } );
+
+/* ── give a held-back relative iframe its real address: the local file in drop-in mode
+   (unsandboxed, the same rule as renderHtml — over file:// the sandbox protects nothing
+   and blocks the page's own neighbouring files), else the repo's published page.
+   Any ?query/#hash on the original src is kept. ── */
+const setRepoFrameSrc = ( frame, currentDir ) => {
+  const raw = frame.dataset.repoSrc;
+  const suffix = raw.match( /[?#].*$/ )?.[ 0 ] || '';
+  const path = resolveRepoPath( raw, currentDir );
+  const local = localUrlFor( path );
+  if ( local ) frame.removeAttribute( 'sandbox' );
+  frame.src = ( local || pagesUrl( path ) ) + suffix;
+};
 
 // Private repos never go in the public ta-data.js. With a saved token they're fetched
 // live (one API call) and merged in; ⭐ for them is a "favorite" topic on GitHub.
@@ -3715,6 +3737,8 @@ const showOrganizations = async () => {
     const text = await response.text();
     // same hardened sanitize profile + typography class as every repo-file render
     body.innerHTML = `<div class="markdown-body">${ DOMPurify.sanitize( marked.parse( revealHubBlocks( text ) ), MD_PURIFY ) }</div>`;
+    // organizations.md sits beside this page, so its relative iframes resolve against the hub itself
+    body.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => { frame.src = frame.dataset.repoSrc; } );
   } catch ( err ) {
     body.innerHTML = `<p style="padding:1rem;">Could not load <code>organizations.md</code> — ` +
       `${ escapeHTML( err.message ) }. The file must sit next to index.html.</p>`;
