@@ -102,6 +102,16 @@ He has authored Wikipedia articles relating to his residence:
 
 Theo is currently investigating the phenomena of old people being marginalized while young people are doom-scrolling and wondering there are ways of connecting the two so that the elders remain engaged and the young become more active — all through online AI-driven open-source, non-profit intergenerational programs.
 
+## The Agenda ~ 2026-10-25
+
+Should this be first person or third person? 
+
+This text contains many broken links or links to demos that no longer work. All of these can and will be updated over time as the content is reviewed and restored - Of course, with the help of AI. 
+
+There's a ton more material to add. 
+
+It would be nice to have the names and addresses of all the places that I've lived, links to the relevant photo albums, and any other related documentation.
+
 ***
 
-<center title="hello!" ><a href=javascript:window.scrollTo(0,0); style=font-size:2ch;text-decoration:none; target="_blank"> ❦ </a></center>
+<center title="hello!" style="font-size:2ch;"> ❦</center>

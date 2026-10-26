@@ -1,6 +1,6 @@
 # Theo Armour
 
-Former architect, perpetual software developer, budding ancestor and lifelong learner.
+_Former architect, perpetual software developer, budding ancestor and lifelong learner._
 
 I'm currently working on what may be my final design: my afterlife. ;-)
 
