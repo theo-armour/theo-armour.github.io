@@ -1,6 +1,17 @@
 # Organizations
 
-Theo Armour's GitHub organizations, oldest first ~ generated 2026-10-24 from the GitHub API. Edit freely; descriptions and links are yours to improve.
+Theo Armour's GitHub organizations
+
+* oldest first ~ generated 2026-10-24 from the GitHub API. 
+* Links to the organization's website and GitHub page.
+* Descriptions where available. 
+
+Agenda
+
+* Description of each organization and its purpose.
+* Image of typical elements in the organization.
+* Tags or keywords associated with the organization.
+* Any notable projects or contributions by the organization.
 
 ## freeflightsim
 

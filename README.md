@@ -120,6 +120,14 @@ Authoring Wikipedia articles is a skill I would be delighted to develop further.
 
 ## Change Log
 
+### Agenda
+
+* Bring in blog posts and other content from the various sources.
+* Add a detailed timeline of my projects and activities.
+* Fix all the broken demos and files in all the repositories and all the organizations. With the glorious help of AI, of course 
+* Continue work on the 3D Happy Place. 
+* Add images, moving things, and demos all over the place. 
+
 ### 2026-10-25
 
 A new home page. Everything I've made on GitHub is now in one place: every repository and every organization is in the menu on the left. My favorites are at the top. Start with the bio or the blog above.
@@ -127,6 +135,8 @@ A new home page. Everything I've made on GitHub is now in one place: every repos
 This begins to cover the recent third of my life since the internet era began. Another third of my life is stuck on hard drives. And the final third is stuck on bits of paper in storage. 
 
 Added "budding ancestor" to the tagline to indicate that I very much enjoy being a father and grandfather. 
+
+See also: [2026-10-25 3D Operating System Draft](blog/2026-10-25-3D-Operating-System-draft.md)
 
 ### 2026-09-30
 
