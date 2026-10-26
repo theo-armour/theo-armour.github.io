@@ -16,6 +16,14 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
 * My house: https://heritageonthemarina.org/
 
+## Recent blog posts
+
+* [Your Edge Is Patience, Not Genius](blog/2026-09-15-westenberg-patience.md) ~ 2026-09-15
+* [Two Chairs](blog/2026-09-14-two%20chairs.md) ~ 2026-09-14
+* [Robot Basketball](blog/2026-09-14-robot-baskeball.md) ~ 2026-09-14
+* [Third Brain](blog/2026-09-13-third-brain.md) ~ 2026-09-13
+* [AI Refactor](blog/2026-09-13-ai-refactor.md) ~ 2026-09-13
+
 ## Links
 
 * https://www.github.com/theo-armour
@@ -23,12 +31,12 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 * https://www.instagram.com/armour.theo/
 * https://www.linkedin.com/in/theoa/
 * https://www.reddit.com/user/theo/
-* https://wwwsubstack.com/@theoarmour
+* https://www.substack.com/@theoarmour
 * https://www.medium.com/@ta
 * https://www.youtube.com/@theoarmour
 * https://www.t.me/theo_armour
 * https://www.threads.com/@armour.theo
-* https://www.tumblr.com/blog/ta
+* https://www.tumblr.com/ta
 * https://bsky.app/profile/theo-armour.bsky.social
 * WhatsApp: @armour.theo
 * tarmour at gmail dot com
@@ -86,7 +94,7 @@ Did I start with Blogger in 2003?
 * https://newdoublehung.blogspot.com/
 * https://putchkie.blogspot.com/
 * https://sf-wish.blogspot.com/
-* https://sps65.blogspotcom/
+* https://sps65.blogspot.com/
 * https://taniabecker.blogspot.com/
 * https://try-blogger-archive.blogspot.com/
 * https://theo-admin.blogspot.com/
@@ -104,13 +112,7 @@ Authoring Wikipedia articles is a skill I would be delighted to develop further.
 * [Julia Morgan Building](https://en.wikipedia.org/wiki/Julia_Morgan_Building)
 * [Nigel Foster](https://en.wikipedia.org/wiki/Nigel_Foster)
 
-## Recent blog posts
 
-* [Your Edge Is Patience, Not Genius](blog/2026-09-15-westenberg-patience.md) ~ 2026-09-15
-* [Two Chairs](blog/2026-09-14-two%20chairs.md) ~ 2026-09-14
-* [Robot Basketball](blog/2026-09-14-robot-baskeball.md) ~ 2026-09-14
-* [Third Brain](blog/2026-09-13-third-brain.md) ~ 2026-09-13
-* [AI Refactor](blog/2026-09-13-ai-refactor.md) ~ 2026-09-13
 
 ## Change Log
 
