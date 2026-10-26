@@ -4,6 +4,10 @@ Former architect, perpetual software developer, budding ancestor and lifelong le
 
 I'm currently working on what may be my final design: my afterlife. ;-)
 
+**44** repositories · **35** GitHub organizations holding **324** more · **22** WordPress sites · **24** Blogger blogs · **110** blog posts · **4** Wikipedia articles: 500+ things, and that's only the online third of my life.
+
+And the end game is something like figuring out the who, what, when, where, and why of all this stuff.
+
 <!--@@@
 <iframe src="https://theo-armour.github.io/2026-ta-gh-io-refactor/sphere.html" width="100%" height="600" style="border:none;"></iframe>
 @@@-->
@@ -43,7 +47,7 @@ I'm currently working on what may be my final design: my afterlife. ;-)
 
 ## GitHub Efforts
 
-Click on any of the 44 repositories in the top-left menu to explore my GitHub projects.
+Click on any of the 35 repositories in the top-left menu to explore my GitHub projects.
 
 When you get tired of that, click on the [organizations](organizations.md) to have a look see at even more stuff. 
 
