@@ -17,7 +17,7 @@ And the end game is something like figuring out the who, what, when, where, and 
 ## About
 
 * About me: a work-in-progress [bio](about/theo.md)
-* Writing: the [blog](blog/), with earlier years in the [archive](blog/archive/)
+* Writing: the [blog](blog/README.md), with earlier years in the [archive](blog/archive/)
 * My house: https://heritageonthemarina.org/
 
 ## Recent blog posts
