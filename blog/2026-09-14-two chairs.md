@@ -1,5 +1,7 @@
 # 2026-09-14 Two Chairs
 
+_My daughter recently received two chairs that I had shipped to her in Amsterdam. She asked for an explanation about the chairs._
+
 Imagine one of the most beautiful rooms in the world. What would the room be like? It would be like a library with three or four bookshelves full of beautiful, wonderful books, including the latest books and first editions. At one end of the room, there might be a fountain surrounded by tropical plants. A large door would lead to the terrace with a view of the garden. Also, facing the garden would be a large wooden desk — big enough for stacks of papers and a pile of books so that you could use it for deep research. Next to the desk, there might be a Chinese cabinet with lots of little drawers. Each drawer would contain a toy for young people to play with. There would be a space for sitting and a table for having the afternoon tea. And of course, there would be a large marble fireplace. To each side of the fireplace would be large, comfortable chairs. These are the Two Chairs.
 
 https://en.wikipedia.org/wiki/Walter_Lowrie_House_(Princeton,_New_Jersey)
