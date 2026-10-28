@@ -24,3 +24,19 @@ The new front door is here:
 Only TooToo is fully alive today. DabDab is half-born inside this very website. But for the first time in a decade, I know what each animal is for, what it is called, and where it will live.
 
 Polynesia the parrot — the one who taught the Doctor to speak the animal languages — is still in the drawer. I am saving her for the day one of these tools learns to talk.
+
+***
+
+Everything above the horizontal rule was written by AI, Claude Fable. And it's a true summary of what happened this evening. Actually, the summary is better than what happened. Jeffrey was just mumbling around and fumbling around. The summary is even better than how it happened. 
+
+Talking with Claude is like talking with a psychic. Putting it another way, what happened in the past hour or so is unbelievable. 
+
+GubGub works. It was built in seconds. 
+
+At the same time, it's kind of also suggesting that I should wrap up my writing for the day, that maybe it's time to get ready to go to bed or something. Which is actually the right and correct thing to do at this time of day. It's not what I want to do. I'd rather go on drinking and writing and so on and so forth, but Claude is right. This is what I should be doing. 
+
+I've done my walk (perhaps the last one of the day), gotten my cranberry juice, and done all the good things, ready to go to bed. Just like Claude told me to do 
+
+Anyway, here's the thought. The reason that Microsoft can think it will lay off 25% of its staff and the S&P 500 have not seen any gains in productivity Or just because of what is happening to me tonight. I'm a tech doing tech things, and I'm just knocked out and astonished and flabbergasted. There's no way that the average human in the street could begin to even think this way, let alone know the right questions, let alone the right tools or how to do it. Even if they did, how could they apply these things to the normal meat and potatoes of everyday life?
+
+
