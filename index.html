@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="revised" content="2026-10-26 02:44">
+  <meta name="revised" content="2026-11-02 13:44">
   <title>TooToo</title>
-  <!-- A real favicon.ico is assumed to sit next to index.html in every deployment
-       (assemble.ps1 generates a TT-mark placeholder when the dev folder lacks one). -->
-  <link rel="icon" href="theo-logo.ico">
+  <link rel="icon" href="favicon.ico">
 
   <!-- External deps (same as the real app). -->
   <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
@@ -17,24 +15,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.1/dist/purify.min.js"></script>
 
-  <!-- TooToo Hub — a single-user build, dedicated to theo-armour. The identity is
-       baked in (no tootoo.config.js, no unknown owners). ta-data.js carries the
-       agent-refreshed list of every repo and organization for the sidebar shelf. -->
-  <script>
-    window.TOOTOO_CONFIG = {
-      appName: 'TooToo Hub',
-      subtitle: 'Theo Armour ~ every repo, one place',
-      owner: 'theo-armour',
-      repo: 'theo-armour.github.io',
-      sourceRepoUrl: 'https://github.com/theo-armour',   // header brand icon → Theo's GitHub account
-      themeColor: '#880000',
-      // the hub's own plumbing and page furniture stay out of every file tree
-      hiddenFiles: [ 'tootoo.config.js', 'ta-data.js', 'ta-data-refresh.html',
-        'theo-logo.ico', 'favicon.ico', 'dingbat.ico', 'CNAME', '404.html', 'LICENSE' ],
-      hideDatedBackups: true,   // hide "name-2026-10-24…" style backups (dates AFTER a name; date-FIRST blog posts stay)
-    };
-  </script>
-  <script src="ta-data.js"></script>
+  <!-- Optional per-repo config: a tootoo.config.js sitting next to this file sets
+       window.TOOTOO_CONFIG, merged over CONFIG at init so a repo can rebrand (theme,
+       appName, hidden files…) without editing index.html. No file → onerror
+       swallows the 404. Loads over file:// without the file-access flag. -->
+  <script src="tootoo.config.js" onerror="void 0"></script>
 
   <style>
     /* TooToo — shared stylesheet.
@@ -122,7 +107,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* lock the shell to the viewport so the sidebar + content scroll INTERNALLY */
+  /* lock the shell to the viewport so the sidebar + content scroll INTERNALLY
+     (sidebar footer pins to the sidebar bottom; tree scroll-to-top works) */
   margin: 0;
   overflow-x: hidden;
   font-family: var(--font-family);
@@ -179,8 +165,33 @@ header {
   font-size: 1.35rem;
   text-decoration: none;
   color: var(--highlight-fg);
+  cursor: pointer;
   white-space: normal;
-  padding: 0.05rem 0;
+  padding: 0.05rem 0.35rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+/* header title segments are live links; each highlights on its own (the slash
+   between them keeps the title's click-to-reset) */
+#headerTitle a {
+  border-radius: 6px;
+  color: inherit;
+  padding: 0.05rem 0.35rem;
+  text-decoration: none;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+#headerTitle a:hover {
+  background: color-mix(in srgb, var(--highlight-color), transparent 85%);
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+/* a visible break between the two links */
+.title-sep {
+  margin: 0 0.35rem;
+  opacity: 0.5;
 }
 
 .header-subtitle {
@@ -189,6 +200,23 @@ header {
   font-size: 0.9rem;
   color: var(--highlight-fg);
   white-space: nowrap;
+  /* The one part of the header that gives way: a zero basis means it never forces a
+     wrap, and it grows into whatever room is left, so on a narrowing screen the
+     buttons slide over it (ending in …) before anything moves to a second row. */
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The right-hand buttons travel as one group: pushed right, never shrunk, and
+   wrapped to their own row only when they would otherwise cover owner / repo. */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* Keep owner and repo each on one line, so a long "owner / repo" title may break
@@ -241,6 +269,11 @@ button.secondary,
 
 /* Uniform button box: fixed height + square-ish min-width + centered content, so
    emoji and text glyphs yield the same-sized button. */
+/* .header-btn also serves anchors (the ⌂ hub link) — keep them unmistakably chip-like */
+a.header-btn {
+  text-decoration: none;
+}
+
 .header-btn,
 .file-btn {
   box-sizing: border-box;
@@ -273,10 +306,6 @@ button.secondary:active,
 .header-btn.active {
   background: var(--highlight-fg);
   color: var(--on-highlight);
-}
-
-.dark-mode-btn {
-  margin-left: auto;
 }
 
 /* Sidebar toggle (☰): hide sidebar + resizer when body.sidebar-hidden. */
@@ -328,6 +357,15 @@ main {
   padding: 0;
   overflow: hidden;
   container-type: inline-size;
+  position: relative;   /* anchors the floating #btnTreeTop over the sidebar */
+}
+
+.sidebar-scroll-area {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 @container (max-width: 220px) {
@@ -510,8 +548,7 @@ main {
 /* ── Tree list ── */
 #treeList {
   padding: 0 0.5rem;
-  flex: 1;
-  overflow-y: auto;
+  flex: 0 0 auto;
 }
 
 /* ── Resizer ── */
@@ -691,6 +728,19 @@ details {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+}
+
+/* the sidebar's ↑ shares .back-to-top's look and floats over the scroll area */
+.panel-to-top {
+  font-size: 1rem;
+  height: 1.9rem;
+  width: 1.9rem;
+}
+
+#btnTreeTop {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 0.9rem;
 }
 
 /* ── Content Viewer ── */
@@ -968,6 +1018,12 @@ body.dark-mode pre {
   .resizer {
     width: 4px;
   }
+
+  .file-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 /* Print: only the current file's content, with its name as a title. */
@@ -1088,173 +1144,6 @@ body.dark-mode pre {
   margin: 1rem;
   font-size: 0.9rem;
 }
-    /* ── TooToo Hub: repo shelf (single-user build) ── */
-    :root {
-      --font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
-      /* selection + hover follow the baked themeColor instead of the stock blue/grey */
-      --active-bg: var(--highlight-color);
-      --active-fg: #ffffff;
-      --hover-bg: color-mix(in srgb, var(--highlight-color), transparent 88%);
-    }
-
-    body.dark-mode {
-      --active-bg: var(--highlight-color);
-      --hover-bg: color-mix(in srgb, var(--highlight-color), transparent 72%);
-    }
-
-    #repoShelf {
-      border-bottom: 1px solid var(--border-color);
-      max-height: 45vh;
-      overflow-y: auto;
-    }
-
-    #repoShelf summary {
-      cursor: pointer;
-      padding: 0.4rem 0.75rem;
-      user-select: none;
-    }
-
-    .shelf-row {
-      background: none;
-      border: none;
-      color: var(--text-color);
-      cursor: pointer;
-      display: block;
-      font-family: inherit;
-      font-size: 0.85rem;
-      overflow: hidden;
-      padding: 0.25rem 0.75rem 0.25rem 1.6rem;
-      text-align: left;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 100%;
-    }
-
-    .shelf-row:hover { background: var(--hover-bg); }
-
-    .shelf-row.active {
-      background: var(--active-bg);
-      color: var(--active-fg);
-    }
-
-    #shelfResizer {
-      background: var(--border-color);
-      cursor: row-resize;
-      flex: 0 0 auto;
-      height: 5px;
-      touch-action: none;
-    }
-
-    #shelfResizer:hover { background: var(--highlight-color); }
-
-    /* header title segments are live links; each highlights on its own */
-    #headerTitle a {
-      border-radius: 6px;
-      color: inherit;
-      padding: 0.05rem 0.35rem;
-      text-decoration: none;
-      transition: color 0.15s, background-color 0.15s;
-    }
-
-    #headerTitle a:hover {
-      background: color-mix(in srgb, var(--highlight-color), transparent 85%);
-      color: var(--highlight-color);
-      text-decoration: underline;
-    }
-
-    /* a visible break between the two links */
-    .title-sep {
-      margin: 0 0.35rem;
-      opacity: 0.5;
-    }
-
-    /* the sidebar panels' ↑ buttons share .back-to-top's look; this modifier only
-       shrinks them and repositions them inside/over their panels */
-    .sidebar { position: relative; }
-
-    .panel-to-top {
-      font-size: 1rem;
-      height: 1.9rem;
-      width: 1.9rem;
-    }
-
-    /* shelf button rides inside its own scrolling panel */
-    #btnShelfTop {
-      bottom: 0.4rem;
-      margin: 0 0.5rem 0.4rem auto;
-      position: sticky;
-      right: auto;
-    }
-
-    /* tree button floats over the lower panel */
-    #btnTreeTop {
-      bottom: 0.75rem;
-      position: absolute;
-      right: 0.9rem;
-    }
-
-    /* keep the top header on ONE line, like the content header: the title shrinks
-       and truncates with an ellipsis; the icon group stays together on the right */
-    header { flex-wrap: nowrap; }
-
-    #headerTitle {
-      flex: 0 1 auto;
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    header > button,
-    header > a,
-    .branch-control,
-    .rate-limit-badge {
-      flex-shrink: 0;
-    }
-
-    .header-subtitle {
-      flex: 0 1 auto;
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* content header: same one-line behavior — the built-in crumb truncation
-       (path shrinks, filename stays) handles narrow widths; just never wrap */
-    .file-header { flex-wrap: nowrap; }
-
-    /* iframes embedded in markdown (e.g. the sphere in the README) */
-    .markdown-body iframe {
-      border: none;
-      max-width: 100%;
-    }
-
-    /* @@@ blocks wrap their iframe in a div at height=100% — give the div a real,
-       user-resizable height (inline style="height:…" is stripped by the sanitizer) */
-    .markdown-body div:has( > iframe[height="100%"] ) {
-      border: 1px solid var(--border-color);
-      height: 60vh;
-      overflow: hidden;
-      resize: vertical;
-    }
-
-    .markdown-body div:has( > iframe[height="100%"] ) > iframe {
-      height: 100%;
-      width: 100%;
-    }
-
-    /* the sidebar's files header matches the shelf summary above it */
-    #filesPanelHeader { padding: 0.25rem 0.75rem; }
-
-    /* …and all three panel headers share one text treatment
-       (h3#breadcrumbs outranks the base #breadcrumbs font rules) */
-    #repoShelf summary,
-    #filesPanelHeader h3,
-    h3#breadcrumbs {
-      color: var(--text-color);
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
   </style>
 </head>
 
@@ -1263,14 +1152,12 @@ body.dark-mode pre {
   <header>
     <button id="btnToggleSidebar" class="header-btn" title="Close sidebar (Ctrl/⌘ B)" aria-label="Toggle sidebar"
       aria-controls="sidebar" aria-expanded="true">☰</button>
-    <a id="headerGitHub" href="." title="theo-armour on GitHub" aria-label="theo-armour on GitHub">
-      <!-- App brand mark: the deployment's favicon.ico (static; the standalone
-           harness rewrites the src to ../../favicon.ico). aria-hidden: the anchor's
-           aria-label names the link. -->
-      <img id="headerBrand" src="theo-logo.ico" width="18" height="18" alt="" aria-hidden="true">
+    <a id="headerGitHub" href="." title="Back to the start" aria-label="Back to the start">
+      <!-- aria-hidden: the anchor's aria-label names the link. -->
+      <img id="headerBrand" src="favicon.ico" width="18" height="18" alt="" aria-hidden="true">
     </a>
 
-    <span id="headerTitle">TooToo</span>
+    <a id="headerTitle" href="." title="Reload" aria-label="Reload page">TooToo</a>
 
     <!-- Branch switcher: hidden in markup until branches load, then sidebar.js fills
          #branchName + the menu and unhides it (header markup, sidebar.js owns the
@@ -1285,35 +1172,42 @@ body.dark-mode pre {
       <div id="branchMenu" class="branch-menu" role="listbox" aria-label="Branches" hidden></div>
     </span>
 
+    <!-- ⌂ hub link: hidden unless CONFIG.homeUrl is set (header.js wires it at init) -->
+    <a id="headerHome" class="header-btn" hidden title="Home" aria-label="Home page">⌂</a>
+
     <span id="headerSubtitle" class="header-subtitle" hidden></span>
 
-    <button id="btnDarkMode" class="header-btn dark-mode-btn" title="Toggle Dark Mode"
-      aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
-    <button id="btnFontDec" class="header-btn" title="Decrease Font Size" aria-label="Decrease font size">A−</button>
-    <button id="btnFontInc" class="header-btn" title="Increase Font Size" aria-label="Increase font size">A+</button>
-    <button id="btnHelp" class="header-btn" title="About this app" aria-label="About this app"
-      aria-pressed="false">?</button>
-    <button id="btnToken" class="header-btn" title="GitHub API rate limit — click to set a token"
-      aria-label="Set GitHub personal access token" aria-pressed="false">⚙️</button>
-    <div id="rateBadge" class="rate-limit-badge" title="API Rate Limit" aria-live="polite"></div>
+    <!-- One group, so a narrow header moves all the buttons to a second row together
+         rather than splitting them; until then they slide over the subtitle. -->
+    <span class="header-actions">
+      <button id="btnDarkMode" class="header-btn dark-mode-btn" title="Toggle Dark Mode"
+        aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+      <button id="btnFontDec" class="header-btn" title="Decrease Font Size" aria-label="Decrease font size">A−</button>
+      <button id="btnFontInc" class="header-btn" title="Increase Font Size" aria-label="Increase font size">A+</button>
+      <button id="btnHelp" class="header-btn" title="About this app" aria-label="About this app"
+        aria-pressed="false">?</button>
+      <button id="btnToken" class="header-btn" title="GitHub API rate limit — click to set a token"
+        aria-label="Set GitHub personal access token" aria-pressed="false">⚙️</button>
+      <div id="rateBadge" class="rate-limit-badge" title="API Rate Limit" aria-live="polite"></div>
+    </span>
   </header>
 
   <main>
     <div class="sidebar" id="sidebar">
-      <div id="repoShelf"></div>
-      <div id="shelfResizer" title="Drag to resize the repo shelf · double-click to reset"></div>
-      <div class="panel-header" id="filesPanelHeader">
-        <h3 id="hFiles">Files</h3>
-        <button id="btnExpandAll" class="file-btn" style="display: none;" title="Expand all folders"
-          aria-label="Expand all folders">⊞</button>
+      <div class="sidebar-scroll-area" id="sidebarScrollArea">
+        <div class="panel-header" id="filesPanelHeader">
+          <h3 id="hFiles">Files</h3>
+          <button id="btnExpandAll" class="file-btn" style="display: none;" title="Expand all folders"
+            aria-label="Expand all folders">⊞</button>
+        </div>
+        <div class="filter-wrap">
+          <label for="treeFilter" class="sr-only">Filter files by name</label>
+          <input type="text" id="treeFilter" placeholder="Filter files…" title="Filter files by name">
+          <button id="btnFilterClear" title="Clear filter" aria-label="Clear filter">✕</button>
+        </div>
+        <div id="treeList"></div>
       </div>
-      <div class="filter-wrap">
-        <label for="treeFilter" class="sr-only">Filter files by name</label>
-        <input type="text" id="treeFilter" placeholder="Filter files…" title="Filter files by name">
-        <button id="btnFilterClear" title="Clear filter" aria-label="Clear filter">✕</button>
-      </div>
-      <div id="treeList"></div>
-      <button id="btnTreeTop" class="back-to-top panel-to-top" title="Scroll files to top" aria-label="Scroll files to top">↑</button>
+      <button id="btnTreeTop" class="back-to-top panel-to-top" title="Scroll sidebar to top" aria-label="Scroll sidebar to top">↑</button>
     </div>
     <div class="resizer" id="resizer" title="Drag to Resize Sidebar"></div>
     <div class="content-area" id="contentArea">
@@ -1327,7 +1221,7 @@ body.dark-mode pre {
       <button id="btnBackToTop" class="back-to-top" aria-label="Back to top" title="Back to Top">↑</button>
       <footer class="app-footer">
     <span class="app-footer-brand">
-      <img class="app-footer-mark" src="theo-logo.ico" width="18" height="18" alt="">
+      <img class="app-footer-mark" src="favicon.ico" width="18" height="18" alt="">
       <span id="footerCopyright"></span>
     </span>
     <a class="app-footer-license" href="https://opensource.org/licenses" target="_blank" rel="noopener">License</a>
@@ -1350,9 +1244,13 @@ const CONFIG = {
   themeColor: '',           // empty = the CSS default (blue) — and lets body.dark-mode's
   // brighter #3b82f6 win; a fork's explicit color applies to both modes
   headingFontUrl: '', headingFont: '',
+  faviconFile: '',          // supplied icon filename or URL; empty = no configured icon
   sourceRepoUrl: 'https://github.com/pushme-pullyou/tootoo',
+  homeUrl: '',               // when set, the header shows a ⌂ link to this hub page
   storagePrefix: 'tootoo',
   hiddenFolders: [], hiddenFiles: [ 'tootoo.config.js' ],
+  hideDatedBackups: true,      // hide "name-2026-10-24…" backup snapshots from the tree (date-FIRST names stay)
+  preferPagesUrls: false,      // this install's owner serves every repo on GitHub Pages → New Tab / header links use the live sites
   autoOpenFolderReadme: true,  // expanding a folder opens its own README the first time (set false to disable)
   // Footer rights line appended after "© <year> <owner>". rightsOwners scopes WHICH
   // owners it shows for: null = every repo (default), an array = only those owner logins
@@ -1429,7 +1327,7 @@ const hiddenFileSet = () => new Set( ( CONFIG.hiddenFiles || [] ).map( ( s ) => 
    entry hides that bare name wherever it appears, unless it starts with '/', which anchors
    it to the repo root — so '/index.html' hides only the root file, not nested ones. */
 
-/* tootoo-hub: a date AFTER a name marks a backup snapshot ("index-2026-10-24….html",
+/* A date AFTER a name marks a backup snapshot ("index-2026-10-24….html",
    "README 2026 09 18.md"); a date at the START is content ("2026-01-04-essay.md"). */
 const DATED_BACKUP_RE = /^.+20\d\d[-_ .]\d\d/;
 
@@ -1485,23 +1383,53 @@ const revokeAllBlobUrls = () => {
 const GITHUB_SVG_ICON =
   `<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>`;
 
-/* ── favicon: nothing is generated anymore. A real favicon.ico is assumed to sit
-   next to index.html in every deployment (the <head> link and the header/footer/
-   sidebar brand <img>s all point at it statically). assemble.ps1 creates a TT-mark
-   placeholder when the dev folder lacks one; forks ship their own. ── */
-
-/* ── optional heading typeface (reference §11): load CONFIG.headingFontUrl into
-   <head> and set --heading-font, which the h1–h6/#headerTitle CSS already consumes.
-   Omitting either knob is a no-op (the var falls back to the body font). ── */
-const applyHeadingFont = () => {
-  if ( CONFIG.headingFontUrl ) {
-    const link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.href = CONFIG.headingFontUrl;
+const applyFaviconFile = ( file = CONFIG.faviconFile ) => {
+  let link = document.querySelector( 'link[rel="icon"]' );
+  if ( file && !link ) {
+    link = document.createElement( 'link' );
+    link.rel = 'icon';
     document.head.appendChild( link );
   }
-  if ( CONFIG.headingFont ) {
-    document.documentElement.style.setProperty( '--heading-font', CONFIG.headingFont );
+  if ( link ) {
+    if ( file ) link.setAttribute( 'href', file );
+    else link.remove();
+  }
+  document.querySelectorAll( '#headerBrand, .app-footer-mark' ).forEach( ( image ) => {
+    image.hidden = !file;
+    if ( file ) image.setAttribute( 'src', file );
+    else image.removeAttribute( 'src' );
+  } );
+};
+
+/* ── optional heading typeface (reference §11): load CONFIG.headingFontUrl and set
+   --heading-font, which the h1–h6/#headerTitle CSS already consumes. The URL may be
+   a stylesheet (e.g. Google Fonts) or a font file (.woff2/.woff/.ttf/.otf); a font
+   file is registered under the first family in CONFIG.headingFont. Omitting either
+   knob is a no-op (the var falls back to the body font). ── */
+const isFontFileUrl = ( url ) => /\.(woff2?|ttf|otf)([?#]|$)/i.test( url || '' );
+// First family of a CSS font-family list, unquoted: '"Windsor", serif' → 'Windsor'.
+const firstFontFamily = ( list ) => ( list || '' ).split( ',' )[ 0 ].trim().replace( /^["']|["']$/g, '' );
+const loadedFontFiles = new Set();
+const loadFontFile = ( url, family ) => {
+  const key = `${ family }|${ url }`;
+  if ( !family || loadedFontFiles.has( key ) ) return;
+  loadedFontFiles.add( key );
+  const face = new FontFace( family, `url("${ url.replace( /"/g, '%22' ) }")` );
+  document.fonts.add( face );
+  face.load().catch( () => console.warn( `Heading font failed to load: ${ url }` ) );
+};
+const applyHeadingFont = () => {
+  const url = CONFIG.headingFontUrl;
+  const family = CONFIG.headingFont || ( isFontFileUrl( url ) ? '"TooToo Heading", serif' : '' );
+  if ( isFontFileUrl( url ) ) loadFontFile( url, firstFontFamily( family ) );
+  else if ( url ) {
+    const link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild( link );
+  }
+  if ( family ) {
+    document.documentElement.style.setProperty( '--heading-font', family );
   }
 };
 
@@ -1749,7 +1677,7 @@ const detectRepo = async () => {
     const owner = location.hostname.split( '.' )[ 0 ];
     const segs = location.pathname.split( '/' ).filter( Boolean );
     CONFIG.owner = owner;
-    CONFIG.repo = segs[ 0 ] || `${ owner }.github.io`;
+    CONFIG.repo = segs[ 0 ] && !/\.html?$/i.test( segs[ 0 ] ) ? segs[ 0 ] : `${ owner }.github.io`;
     applyRepo(); cacheRepo(); return;
   }
 
@@ -1804,25 +1732,62 @@ const resolveRepoPath = ( href, currentDir ) => {
   return stack.join( '/' );
 };
 
-/* ── tootoo-hub: the live GitHub Pages addresses, so index.html runs instead of
-   showing source (the app's render/source toggle covers reading code). The special
-   <owner>.github.io repo serves from the domain root. One source of truth — the
-   header links reuse these. ── */
+/* ── GitHub Pages addresses — so New Tab runs a page instead of showing source (the
+   Rendered/Raw toggle covers reading code). The special <owner>.github.io repo serves
+   from the domain root. Used only when Pages is a safe bet (repoHasPages). ── */
 const ownerSiteUrl = () => `https://${ encodeURIComponent( state.owner.toLowerCase() ) }.github.io`;
 const pagesBase = () => state.repo.toLowerCase() === `${ state.owner.toLowerCase() }.github.io`
   ? ownerSiteUrl()
   : `${ ownerSiteUrl() }/${ encodeURIComponent( state.repo ) }`;
 const pagesUrl = ( path ) => `${ pagesBase() }/${ encodePath( path ) }`;
 
-/* ── tootoo-hub: URL to open in a new tab / download: the local file in drop-in
-   mode; downloads keep the raw URL (direct save); everything else opens the live
-   GitHub Pages copy. ── */
+/* What GitHub's repo details said about Pages (has_pages), remembered per repo across
+   visits and pages of this install: true / false, or undefined when not yet seen. */
+const pagesStoreKey = () => `${ CONFIG.storagePrefix }:pages`;
+let pagesSeen = null;
+const readPagesSeen = () => {
+  if ( !pagesSeen ) {
+    try { pagesSeen = JSON.parse( localStorage.getItem( pagesStoreKey() ) || '{}' ) || {}; }
+    catch ( _ ) { pagesSeen = {}; }
+  }
+  return pagesSeen;
+};
+const pagesKnown = ( owner, repo ) => readPagesSeen()[ `${ owner }/${ repo }`.toLowerCase() ];
+const rememberPages = ( owner, repo, has ) => {
+  readPagesSeen()[ `${ owner }/${ repo }`.toLowerCase() ] = has;
+  try { localStorage.setItem( pagesStoreKey(), JSON.stringify( pagesSeen ) ); } catch ( _ ) { /* storage off */ }
+};
+
+/* Is the browsed repo published on Pages? Certain when the install asserts it for every
+   repo (CONFIG.preferPagesUrls — single-owner hubs) or this app is served from that
+   site; otherwise GitHub's remembered answer; failing that, assume only an
+   <owner>.github.io site repo is published. Unknown → raw, which always exists. */
+const repoHasPages = () => {
+  if ( !state.owner || !state.repo ) return false;
+  if ( CONFIG.preferPagesUrls
+    || ( location.origin + location.pathname ).toLowerCase().startsWith( pagesBase().toLowerCase() + '/' ) ) return true;
+  const known = pagesKnown( state.owner, state.repo );
+  if ( known !== undefined ) return known;
+  return state.repo.toLowerCase() === `${ state.owner.toLowerCase() }.github.io`;
+};
+
+/* Does the owner have a <owner>.github.io site? Same evidence, for the site repo. */
+const ownerHasSite = () => {
+  if ( !state.owner ) return false;
+  const site = `${ state.owner.toLowerCase() }.github.io`;
+  return !!CONFIG.preferPagesUrls || location.hostname.toLowerCase() === site
+    || pagesKnown( state.owner, site ) === true;
+};
+
+/* ── URL to open in a new tab / download: the local file in drop-in mode; downloads
+   keep the raw URL (direct save); viewable files open the live GitHub Pages copy
+   when the repo is known to have one, else the raw URL. ── */
 const getNewTabUrl = ( path ) => {
   const local = localUrlFor( path );
   if ( local ) return local;
   const ext = extOf( path );
   const willDownload = isDownloadAction( ext ) && !isTextOpenAsPlain( ext );
-  return willDownload ? rawUrl( path ) : pagesUrl( path );
+  return ( !willDownload && repoHasPages() ) ? pagesUrl( path ) : rawUrl( path );
 };
 
 const getDefaultBranch = async ( signal ) => {
@@ -1830,6 +1795,7 @@ const getDefaultBranch = async ( signal ) => {
   // Capture the repo's real last-push date so the header tooltip reflects the
   // repo being viewed (incl. drop-in mode), not this file's static build date.
   state.repoUpdated = data.pushed_at || '';
+  if ( typeof data.has_pages === 'boolean' ) rememberPages( state.owner, state.repo, data.has_pages );
   if ( isHomeRepo() ) homeRepo.defaultBranch = data.default_branch;
   return data.default_branch;
 };
@@ -1927,7 +1893,36 @@ const setHeaderTimestamp = () => {
   } else {
     when = document.querySelector( 'meta[name="revised"]' )?.content || 'unknown';
   }
-  titleEl.title = `Last updated: ${ when }`;
+  titleEl.title = `Last updated: ${ when } · click to reload`;
+};
+
+// The repo whose index.html is running: <owner>.github.io/<repo>/ from the address,
+// else the install's own repo (homeRepo, or CONFIG before detection runs).
+const hostRepoLabel = () => {
+  if ( location.hostname.endsWith( '.github.io' ) ) {
+    const owner = location.hostname.split( '.' )[ 0 ];
+    const first = location.pathname.split( '/' ).filter( Boolean )[ 0 ] || '';
+    return `${ owner } / ${ first && !/\.html?$/i.test( first ) ? first : `${ owner }.github.io` }`;
+  }
+  const owner = homeRepo.owner || CONFIG.owner;
+  const repo = homeRepo.repo || CONFIG.repo;
+  return owner && repo ? `${ owner } / ${ repo }` : '';
+};
+
+const resetToStart = () => {
+  clearCurrentFile();
+  try { localStorage.removeItem( repoCacheKey() ); } catch ( _ ) { /* storage off */ }
+  if ( location.search || location.hash ) location.replace( location.pathname );
+  else location.reload();
+};
+
+const updateBrandLink = () => {
+  const brand = document.getElementById( 'headerGitHub' );
+  if ( !brand ) return;
+  const host = hostRepoLabel();
+  const tip = host ? `Back to the start — ${ host }` : 'Back to the start';
+  brand.title = tip;
+  brand.setAttribute( 'aria-label', tip );
 };
 
 const updateHeaderFromConfig = () => {
@@ -1942,15 +1937,16 @@ const updateHeaderFromConfig = () => {
   const subtitleEl = document.getElementById( 'headerSubtitle' );
   document.title = CONFIG.subtitle ? `${ label } · ${ CONFIG.subtitle }` : label;
   // Render owner / repo as two nowrap segments so a narrow header can wrap at the
-  // slash (either side) instead of forcing one long unbreakable line.
-  // Each segment is a live link: owner → the owner's github.io home, repo → that
-  // repo's live GitHub Pages site (the brand icon beside them → github.com).
+  // slash (either side) instead of forcing one long unbreakable line. Each segment is
+  // a live link — owner/repo can arrive from the URL (?owner=…) so they are untrusted:
+  // the URL helpers percent-encode them and every attribute is HTML-escaped. Owner and
+  // repo each link to their github.io site when it's known to exist (ownerHasSite /
+  // repoHasPages), else github.com; clicking the slash or the gaps still resets to
+  // home (see initHeaderControls).
   if ( state.owner && state.repo ) {
-    // tootoo-hub: owner/repo can arrive from the URL (?owner=…), so they are
-    // untrusted — ownerSiteUrl/pagesBase URL-encode them, and every attribute they
-    // land in is HTML-escaped.
-    const ownerSite = ownerSiteUrl();
-    const repoSite = pagesBase();
+    const ownerSite = ownerHasSite() ? ownerSiteUrl() : `https://github.com/${ encodeURIComponent( state.owner ) }`;
+    const repoSite = repoHasPages() ? pagesBase()
+      : `https://github.com/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }`;
     titleEl.innerHTML =
       `<a class="title-seg" href="${ escapeHTML( ownerSite ) }" target="_blank" rel="noopener" title="${ escapeHTML( ownerSite ) }">${ escapeHTML( state.owner ) }</a>` +
       `<span class="title-sep">/</span>` +
@@ -1959,6 +1955,7 @@ const updateHeaderFromConfig = () => {
     titleEl.textContent = CONFIG.appName;
   }
   setHeaderTimestamp();
+  updateBrandLink();
   if ( subtitleEl ) {
     if ( CONFIG.subtitle ) {
       subtitleEl.textContent = '· ' + CONFIG.subtitle;
@@ -2014,9 +2011,36 @@ const initHeaderControls = () => {
   document.getElementById( 'btnToken' )?.addEventListener( 'click', () => toggleInfoPanel( 'token' ) );
   document.getElementById( 'btnToggleSidebar' )?.addEventListener( 'click', toggleSidebar );
 
-  // (tootoo-hub: the title is no longer a reset-to-home link — its owner/repo
-  // segments are live links to the github.io sites; the shelf's home row resets.)
-  document.getElementById( 'headerGitHub' )?.setAttribute( 'href', CONFIG.sourceRepoUrl || '#' );
+  // Header title → reset to the home repo: clear hash/query, cached repo, last file.
+  // The owner/repo segments are live links — their clicks pass through untouched;
+  // only the slash between them and the title's background reset.
+  document.getElementById( 'headerTitle' )?.addEventListener( 'click', ( e ) => {
+    if ( e.target.closest( 'a' ) ) return;
+    e.preventDefault();
+    resetToStart();
+  } );
+
+  // Brand icon → the same reset. The owner/repo links can wander anywhere; this is
+  // the fixed way back to the page that loaded TooToo. A plain href keeps
+  // middle-click / open-in-new-tab working.
+  const brand = document.getElementById( 'headerGitHub' );
+  if ( brand ) {
+    brand.href = location.pathname;
+    brand.addEventListener( 'click', ( e ) => {
+      if ( e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey ) return;
+      e.preventDefault();
+      resetToStart();
+    } );
+  }
+
+  // ⌂ hub link: a fork's tootoo.config.js sets homeUrl to its hub page (e.g. the
+  // owner's github.io); without one the anchor stays hidden.
+  const headerHome = document.getElementById( 'headerHome' );
+  if ( headerHome && CONFIG.homeUrl ) {
+    headerHome.href = CONFIG.homeUrl;
+    headerHome.title = `Home — ${ CONFIG.homeUrl }`;
+    headerHome.hidden = false;
+  }
 };
 
 /* ── token panel (header owns the dialog; it renders into the content area) ── */
@@ -2033,6 +2057,7 @@ const showTokenPanel = ( reasonHtml = '' ) => {
         <label for="inpToken">Token${ hasToken ? ' (currently set)' : '' }</label>
         <input id="inpToken" type="password" placeholder="${ hasToken ? '•••••••• (leave blank to keep)' : 'ghp_…' }" autocomplete="off" spellcheck="false">
         <label><input id="inpTokenShow" type="checkbox"> Show token</label>
+        <p id="tokenSaveError" class="error-panel" role="alert" hidden></p>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button id="btnTokenSave" class="primary" title="Save token and reload">Save</button>
           <button id="btnTokenClear" class="secondary" title="Clear stored token">Clear</button>
@@ -2054,9 +2079,18 @@ const showTokenPanel = ( reasonHtml = '' ) => {
   inp.focus();
   document.getElementById( 'inpTokenShow' ).addEventListener( 'change', ( e ) => { inp.type = e.target.checked ? 'text' : 'password'; } );
   const save = () => {
+    const error = document.getElementById( 'tokenSaveError' );
+    error.hidden = true;
+    error.textContent = '';
     const v = inp.value;
     if ( v === '' && hasToken ) return;   // blank = keep existing
-    try { localStorage.setItem( tokenStorageKey(), v ); } catch ( _ ) { /* storage disabled */ }
+    try {
+      localStorage.setItem( tokenStorageKey(), v );
+    } catch ( err ) {
+      error.textContent = `Unable to save token in browser storage: ${ err.message }`;
+      error.hidden = false;
+      return;
+    }
     clearFileCache();
     location.reload();
   };
@@ -2161,7 +2195,7 @@ const renderAboutPanel = () => {
       <h3>Tips</h3>
       <ul>
         <li>Use the filter input in the sidebar to search file names</li>
-        <li>Click the 📘 home row at the top of the repo shelf to return home</li>
+        <li>The owner and repo names in the header are links to their live sites; click the slash between them to reload</li>
         <li>Use <strong>A−</strong> / <strong>A+</strong> to adjust font size — helpful on phones and small screens</li>
         <li>Click <strong>🌙</strong> to toggle dark mode — your choice is saved across visits</li>
         <li>Click <strong>?</strong> or <strong>⚙️ Token</strong> again to close the panel and return to your file</li>
@@ -2212,7 +2246,7 @@ const closeInfoPanel = () => {
   else autoSelectReadme();
 };
 
-const toggleInfoPanel = async ( panel ) => {
+const toggleInfoPanel = ( panel ) => {
   // No content area to render into (e.g. the standalone header component page) →
   // the ?/⚙️ buttons are inert rather than throwing. Mirrors showTokenPanel's guard,
   // but here it also avoids leaving the button stuck pressed + a broken close path.
@@ -2223,7 +2257,7 @@ const toggleInfoPanel = async ( panel ) => {
   state.currentFilePath = '';
   activePanel = panel;
   updateInfoButtonState();
-  if ( panel === 'about' ) await renderAboutPanel();
+  if ( panel === 'about' ) renderAboutPanel();
   else showTokenPanel();
 };
 
@@ -2262,15 +2296,15 @@ const initAppearance = () => {
 
 const initHeader = () => { updateHeaderFromConfig(); initAppearance(); initHeaderControls(); };
     /* TooToo — sidebar.js  (the "what files exist & how they're shown" component).
-   Ported from reference §18-§26. Reads: state.tree, CONFIG.hidden*.
-   Writes: nothing global — display only. Hands off via Content's selectFile(path).
-   Depends on core.js helpers + globals CONFIG/state (mock-data.js).
+   Ported from reference §18-§27. Reads: CONFIG.hidden*, state.owner/repo.
+   Writes: state.tree / branch / oversized, the URL's owner/repo/branch params, and the
+   repo cache. Hands off via Content's selectFile(path). Also runs the branch switcher,
+   whose chip + menu markup sit in the header component.
+   Depends on core.js helpers + globals CONFIG/state (mock-data.js in the preview).
+   renderTree is synchronous (the reference batched huge repos with a "% rendered" status). */
 
-   NOTE: the real renderTree batches with a "% rendered" status for huge repos;
-   here it's synchronous for clarity. Re-add batching when we carve for real. */
-
-/* README matcher — shared by root auto-open, folder auto-open, and bold styling. */
-const README_RE = /^readme(\.\w+)?$/i;   // README, README.md, readme.txt — not README-2026-….md backups
+/* README matcher — shared by sorting, root/folder auto-open, and bold styling. */
+const README_RE = /^readme/i;
 
 /* ── build nested tree from the flat GitHub list ── */
 const buildNestedTree = ( flatTree ) => {
@@ -2368,9 +2402,19 @@ const findLatestPost = ( blogNode, blogPath ) => {
   return { expandPaths, postPath: posts[ 0 ].path };
 };
 
-/* ── sort entries; `mode` (blog context) picks the comparator, else default. ── */
+/* README-prefixed files lead the file group; folders keep their context order. */
 const sortedEntries = ( children, mode ) =>
-  Object.entries( children ).sort( BLOG_CMP[ mode ] || cmpDefault );
+  Object.entries( children ).sort( ( a, b ) => {
+    const compare = BLOG_CMP[ mode ] || cmpDefault;
+    const aFile = !isFolderNode( a[ 1 ] );
+    const bFile = !isFolderNode( b[ 1 ] );
+    if ( aFile && bFile ) {
+      const aReadme = README_RE.test( a[ 0 ] );
+      const bReadme = README_RE.test( b[ 0 ] );
+      if ( aReadme !== bReadme ) return aReadme ? -1 : 1;
+    }
+    return compare( a, b );
+  } );
 
 /* ── recursive folder contents (for the folder tooltip) ──
    Memoized per node: renderNode renders children before asking a parent for its stats, so
@@ -2605,15 +2649,26 @@ const showOversizedRepoPanel = () => {
       `;
 };
 
+/* A tree 404 means a private/missing repo — or just a bad branch in an accessible repo. */
+const repoIsReadable = async ( signal ) => {
+  try { await ghApi( `https://api.github.com/repos/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }`, signal ); return true; }
+  catch ( _ ) { return false; }
+};
+
 /* ── fetchTree: load the repo tree from GitHub (writes state.tree) ── */
 const fetchTree = async () => {
   const signal = newAbort( false );   // tree loading can continue while an info panel is open
   const treeList = document.getElementById( 'treeList' );
   treeList.innerHTML = '<p style="padding:0.5rem;">Loading tree…</p>';
+  // Clear the previous tree's summary so a failed or oversized load can't leave it showing.
+  const hFiles = document.getElementById( 'hFiles' );
+  hFiles.textContent = treeSummaryText = 'Files';
+  hFiles.title = '';
+  let repoReadable = false;
   try {
-    if ( !state.branch ) state.branch = await getDefaultBranch( signal );
+    if ( !state.branch ) { state.branch = await getDefaultBranch( signal ); repoReadable = true; }
     // Home repo, explicit branch, default not yet known → look it up so ?branch= can be dropped.
-    else if ( isHomeRepo() && !homeBranch() ) await getDefaultBranch( signal );
+    else if ( isHomeRepo() && !homeBranch() ) { await getDefaultBranch( signal ); repoReadable = true; }
     // Pin the repository and branch in permalinks (incl. history entries) only where they
     // differ from the page's home repo; a plain home link stays index.html#file.
     const url = new URL( location.href );
@@ -2624,8 +2679,8 @@ const fetchTree = async () => {
     pin( 'branch', state.branch, !home || state.branch !== homeBranch() );
     history.replaceState( null, '', url );
     cacheRepo();   // persist owner/repo/branch now that the branch is resolved
-    setHeaderTimestamp();   // refresh the title tooltip with this repo's last-push date
-    updateBranchControl();   // show the branch chip in the sidebar header
+    updateHeaderFromConfig();   // owner / repo links (Pages now known) + last-push tooltip
+    updateBranchControl();   // show the branch chip in the header
     const data = await ghApi( `https://api.github.com/repos/${ encodeURIComponent( state.owner ) }/${ encodeURIComponent( state.repo ) }/git/trees/${ encodeURIComponent( state.branch ) }?recursive=1`, signal );
     if ( data.truncated ) {
       state.tree = null;
@@ -2643,7 +2698,7 @@ const fetchTree = async () => {
     const folders = vis.filter( ( i ) => i.type === 'tree' ).length;
     const files = vis.filter( ( i ) => i.type === 'blob' ).length;
     const bytes = vis.reduce( ( s, i ) => s + ( i.type === 'blob' ? ( i.size || 0 ) : 0 ), 0 );
-    const h = document.getElementById( 'hFiles' );
+    const h = hFiles;
     h.textContent = `${ files.toLocaleString() } file${ files === 1 ? '' : 's' } · ${ formatFileSize( bytes ) }`;
     // Spelled-out tooltip (includes the folder count + truncated summary on a narrow sidebar).
     h.title = `${ folders.toLocaleString() } folder${ folders === 1 ? '' : 's' }, ` +
@@ -2658,6 +2713,11 @@ const fetchTree = async () => {
       return;
     }
     if ( err.status === 404 ) {
+      if ( repoReadable || await repoIsReadable( signal ) ) {
+        treeList.innerHTML = `<p style="padding:0.5rem;color:red;">Branch “${ escapeHTML( state.branch ) }” not found in ${ escapeHTML( state.owner ) }/${ escapeHTML( state.repo ) }. Pick another from the branch menu.</p>`;
+        return;
+      }
+      if ( signal.aborted ) return;
       treeList.innerHTML = `<p style="padding:0.5rem;color:red;">${ escapeHTML( PRIVATE_REPO_MESSAGE ) }</p>`;
       showTokenPanel( privateRepoReasonHtml() );
       return;
@@ -2666,18 +2726,10 @@ const fetchTree = async () => {
   }
 };
 
-/* ── pick the root README on first load (tootoo-hub rules):
-   1. "README <reponame>.md" — Theo's named readmes win
-   2. a plain README.md / readme.txt
-   3. any other "README <words>.md" with NO digits — dated backups like
-      "README 2026 09 18.md" never auto-open ── */
+/* ── pick the root README on first load ── */
 const autoSelectReadme = () => {
   if ( !state.tree ) return;
-  const roots = state.tree.filter( ( i ) => i.type === 'blob' && !i.path.includes( '/' ) );
-  const namedRe = new RegExp( `^readme[ _-]${ state.repo.replace( /[.*+?^${}()|[\]\\]/g, '\\$&' ) }\\.\\w+$`, 'i' );
-  const readme = roots.find( ( i ) => namedRe.test( i.path ) )
-    || roots.find( ( i ) => README_RE.test( i.path ) )
-    || roots.find( ( i ) => /^readme\b/i.test( i.path ) && !/\d/.test( i.path ) );
+  const readme = state.tree.find( ( i ) => i.type === 'blob' && !i.path.includes( '/' ) && README_RE.test( i.path ) );
   if ( readme ) selectFile( readme.path );
 };
 
@@ -2772,7 +2824,7 @@ const setupKeyboardNav = () => {
           const d = active.parentElement;
           if ( d.open ) d.open = false;
           else { const ps = d.parentElement?.closest( 'details' )?.querySelector( ':scope > summary' ); if ( ps ) ps.focus(); }
-        } else {
+        } else if ( !treeList.classList.contains( 'filtering' ) ) {   // folder rows aren't navigable while filtering
           const ps = active.closest( 'details' )?.querySelector( ':scope > summary' ); if ( ps ) ps.focus();
         }
         break;
@@ -2904,7 +2956,23 @@ const initSidebar = () => {
     if ( !e.target.closest( '.branch-control' ) ) closeBranchMenu();
   } );
 
-  // Resizer drag (real app does this in setupListeners; minimal version here).
+  // Show ↑ whenever the sidebar overflows so the scroll affordance is visible immediately.
+  const sidebarScrollArea = document.getElementById( 'sidebarScrollArea' );
+  const treeTop = document.getElementById( 'btnTreeTop' );
+  if ( sidebarScrollArea && treeTop ) {
+    const updateTreeTopVisibility = () => {
+      treeTop.style.display = sidebarScrollArea.scrollHeight > sidebarScrollArea.clientHeight ? 'flex' : 'none';
+    };
+    updateTreeTopVisibility();
+    new ResizeObserver( updateTreeTopVisibility ).observe( document.getElementById( 'treeList' ) );
+    window.addEventListener( 'resize', updateTreeTopVisibility );
+    treeTop.addEventListener( 'click', ( e ) => {
+      e.stopPropagation();
+      sidebarScrollArea.scrollTo( { top: 0, behavior: 'smooth' } );
+    } );
+  }
+
+  // Resizer drag; the width is saved per page and restored by the header's initAppearance.
   const resizer = document.getElementById( 'resizer' );
   if ( resizer ) {
     let dragging = false;
@@ -2999,15 +3067,53 @@ const buildToggleHtml = ( ext, renderedHtml, rawText, { prefix = '', renderedCla
     `<pre id="viewRaw" style="${ rawDisplay }">${ escapeHTML( rawText ) }</pre>`;
 };
 
-// tootoo-hub: iframes are allowed in markdown — the sanitizer hook in the custom
-// block forces a safe sandbox on every one before it can load.
 const MD_PURIFY = { ADD_TAGS: [ 'iframe' ], ADD_ATTR: [ 'allow', 'allowfullscreen' ], FORBID_TAGS: [ 'style', 'form', 'button', 'textarea', 'select' ], FORBID_ATTR: [ 'style' ] };
+
+/* ── iframes in markdown: whatever sandbox the author wrote is replaced by a safe one.
+   Done INSIDE the sanitizer because a frame's sandbox is fixed when it starts loading —
+   changing it after insertion is too late. Frames on the origins where the GitHub token
+   lives (this page, the home owner's github.io) get scripts but never same-origin, so
+   they can't read the token; frames from other sites (YouTube, maps…) keep their own
+   origin, which they need to work and which can't reach this app's storage anyway.
+   https sources load as written; relative ones are held back and resolved per repo by
+   renderMarkdown; anything else (http:, data:, javascript:) is dropped. ── */
+const FRAME_SANDBOX = 'allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox';
+const tokenOrigins = () => [ location.origin, `https://${ ( homeRepo.owner || CONFIG.owner ).toLowerCase() }.github.io` ];
+
+if ( window.DOMPurify ) DOMPurify.addHook( 'afterSanitizeAttributes', ( node ) => {
+  if ( node.tagName !== 'IFRAME' ) return;
+  node.setAttribute( 'sandbox', FRAME_SANDBOX );
+  node.setAttribute( 'loading', 'lazy' );
+  const src = ( node.getAttribute( 'src' ) || '' ).trim();
+  if ( /^https:\/\//i.test( src ) ) {
+    let origin = '';
+    try { origin = new URL( src ).origin; } catch ( _ ) { /* malformed → stays fully sandboxed */ }
+    if ( origin && !tokenOrigins().includes( origin ) ) node.setAttribute( 'sandbox', FRAME_SANDBOX + ' allow-same-origin' );
+    return;
+  }
+  node.removeAttribute( 'src' );
+  if ( src && !/^[a-z][\w+.-]*:/i.test( src ) && !src.startsWith( '//' ) ) node.setAttribute( 'data-repo-src', src );
+} );
+
+/* ── give a held-back relative iframe its real address: the local file in drop-in mode
+   (unsandboxed, the same rule as renderHtml — over file:// the sandbox protects nothing
+   and blocks the page's own neighbouring files), else the repo's published Pages copy
+   when the repo is known to have one, else the raw URL (shows source rather than nothing).
+   Any ?query/#hash on the original src is kept. ── */
+const setRepoFrameSrc = ( frame, currentDir ) => {
+  const raw = frame.dataset.repoSrc;
+  const suffix = raw.match( /[?#].*$/ )?.[ 0 ] || '';
+  const path = resolveRepoPath( raw, currentDir );
+  const local = localUrlFor( path );
+  if ( local ) frame.removeAttribute( 'sandbox' );
+  frame.src = ( local || ( repoHasPages() ? pagesUrl( path ) : rawUrl( path ) ) ) + suffix;
+};
 
 const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   let renderedHtml, errorHtml = '';
   // Strip what GitHub strips: page-wide styles, inline styles (a README could cover the app
   // with a fake form) and form controls (task-list checkboxes stay).
-  try { renderedHtml = DOMPurify.sanitize( marked.parse( revealHubBlocks( text ) ), MD_PURIFY ); }   // tootoo-hub: @@@ blocks
+  try { renderedHtml = DOMPurify.sanitize( marked.parse( text ), MD_PURIFY ); }
   catch ( err ) { errorHtml = `<div class="md-error">⚠️ Markdown rendering failed: ${ escapeHTML( err.message ) }</div>`; renderedHtml = ''; }
 
   document.getElementById( 'contentBody' ).innerHTML =
@@ -3016,9 +3122,6 @@ const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
   const mdBody = document.querySelector( '#contentBody > #viewRendered' );
   if ( !mdBody ) return;
   const currentDir = filePath.includes( '/' ) ? filePath.slice( 0, filePath.lastIndexOf( '/' ) ) : '';
-
-  // tootoo-hub: a relative iframe src points at this repo's own page
-  mdBody.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => setRepoFrameSrc( frame, currentDir ) );
 
   // GitHub-style heading ids (marked v12 no longer generates them), so in-file
   // #anchor links and #path#anchor permalinks have something to scroll to.
@@ -3086,6 +3189,9 @@ const renderMarkdown = ( text, filePath, signal, anchor = '' ) => {
     catch ( _ ) { /* repo image missing/private fetch failed — or aborted by navigation */ }
   } );
 
+  // Relative iframes the sanitizer held back: point each at its repo file.
+  mdBody.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => setRepoFrameSrc( frame, currentDir ) );
+
   mdBody.querySelectorAll( 'pre code' ).forEach( ( el ) => {
     try { hljs.highlightElement( el ); } catch ( _ ) { /* plain fallback */ }
   } );
@@ -3103,19 +3209,11 @@ const renderCode = ( text, ext ) => {
   body.appendChild( pre );
 };
 
-/* tootoo-hub: show the page RUNNING, so scripts run and relative files load.
-   - Published page (GitHub Pages): sandboxed with scripts allowed but NOT same-origin.
-     The page gets an opaque origin and cannot read this app's storage (where the
-     GitHub token lives), even though Pages shares theo-armour.github.io.
-   - Local file (drop-in mode): no sandbox. Over file:// every local page already shares
-     the app's storage, so a sandbox protects nothing — and it would stop the page
-     loading its own neighbouring files. */
-const renderHtml = ( text, ext, path ) => {
-  const local = localUrlFor( path );
-  const url = local || pagesUrl( path );
-  const sandbox = local ? '' : 'sandbox="allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox" ';
+const renderHtml = ( text, ext, path = '' ) => {
+  const direct = path && ( localUrlFor( path ) || ( repoHasPages() ? pagesUrl( path ) : '' ) );
+  const url = direct || createBlobUrl( new Blob( [ text ], { type: 'text/html' } ) );
   document.getElementById( 'contentBody' ).innerHTML =
-    buildToggleHtml( ext, `<iframe class="iframe-content" ${ sandbox }src="${ escapeHTML( url ) }"></iframe>`, text );
+    buildToggleHtml( ext, `<iframe class="iframe-content" src="${ escapeHTML( url ) }"></iframe>`, text );
 };
 
 const renderSvg = ( text, fileName = 'SVG image' ) => {
@@ -3505,6 +3603,7 @@ const initApp = async () => {
   initHeader();     // header.js  — branding + appearance controls
   initContent();    // content.js — wire Copy / view-toggle / etc.
   renderFooter();   // footer.js  — brand bar
+  applyFaviconFile(); // core.js — use the configured icon file, without generating one
   applyHeadingFont(); // core.js  — load + apply CONFIG.headingFont(Url) for headings/title
 
   await detectLocalMode();  // core.js — file:// drop-in: seed owner/repo, read files from disk
@@ -3518,10 +3617,6 @@ const initApp = async () => {
   updateHeaderFromConfig(); // header.js — repo now known, so refresh the title (owner / repo)
   updateFooterCopyright();  // footer.js — repo owner now known, set the © line
   initSidebar();    // sidebar.js — wire filter/expand/select (tree fills next)
-  renderRepoShelf();      // tootoo-hub — the single-user repo shelf above the tree
-  fetchPrivateRepos();    // tootoo-hub — with a token, adds private repos (not awaited)
-  initShelfResizer();     // tootoo-hub — one-time wiring, independent of shelf data
-  initPanelTopButtons();  // tootoo-hub — ↑ buttons for both sidebar panels
 
   if ( !state.owner || !state.repo ) {
     document.getElementById( 'contentBody' ).innerHTML =
@@ -3581,7 +3676,8 @@ const initApp = async () => {
       selectFile( hashPath, hashAnchor );
     } else {
       let last = null;
-      try { last = sessionStorage.getItem( getCurrentFileKey() ); } catch ( _ ) { /* storage off */ }
+      // An embedded copy must not resume its parent's index.html selection recursively.
+      try { if ( window.self === window.top ) last = sessionStorage.getItem( getCurrentFileKey() ); } catch ( _ ) { /* storage off */ }
       if ( last && state.tree?.some( ( i ) => i.path === last && i.type === 'blob' ) ) selectFile( last );
       else autoSelectReadme();
     }
@@ -3609,264 +3705,6 @@ const showFileAccessHelp = () => {
       </ol>
       <p style="opacity:0.7;">Or add <code>?owner=…&amp;repo=…</code> to the URL to browse a repo over the network.</p>
     </div>`;
-};
-
-/* ════ TooToo Hub — single-user repo shelf ════
-   Every repo of ONE owner, listed above the file tree from the baked ta-data.js
-   (no API calls to draw the list). Clicking a repo re-points the whole app at it
-   via the normal fetchTree machinery. A pinned "organizations" row renders the
-   local organizations.md. */
-
-// The baked identity lives in ONE place — the TOOTOO_CONFIG block in <head> — and
-// detectRepo captures it into canonical homeRepo before the shelf renders.
-const SHELF_ORGS_ROW = '~organizations~';
-
-/* ── @@@ blocks: content wrapped in <!--@@@ … @@@--> is an HTML comment, so github.com
-   hides it — but the hub drops the two markers and shows it (Theo's long-standing
-   convention, typically an iframe of the repo's live page). A blank line after each
-   </div> lets the caption line under it render as markdown, not raw HTML text. ── */
-const revealHubBlocks = ( text ) =>
-  text.replace( /<!--@@@([\s\S]*?)@@@-->/g, ( _, inner ) => inner.replace( /<\/div>[ \t]*\r?\n(?=\S)/gi, '</div>\n\n' ) );
-
-/* ── iframes in markdown: whatever sandbox the author wrote is replaced by a safe one.
-   Done INSIDE the sanitizer because a frame's sandbox is fixed when it starts loading —
-   changing it after insertion is too late. Frames on the origins where the GitHub token
-   lives (this page, the owner's github.io) get scripts but never same-origin, so they
-   can't read the token; frames from other sites (YouTube, maps…) keep their own origin,
-   which they need to work and which can't reach this app's storage anyway.
-   https sources load as written; relative ones are held back and resolved per repo by
-   renderMarkdown; anything else (http:, data:, javascript:) is dropped. ── */
-const FRAME_SANDBOX = 'allow-scripts allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox';
-const tokenOrigins = () => [ location.origin, `https://${ ( homeRepo.owner || CONFIG.owner ).toLowerCase() }.github.io` ];
-
-if ( window.DOMPurify ) DOMPurify.addHook( 'afterSanitizeAttributes', ( node ) => {
-  if ( node.tagName !== 'IFRAME' ) return;
-  node.setAttribute( 'sandbox', FRAME_SANDBOX );
-  node.setAttribute( 'loading', 'lazy' );
-  const src = ( node.getAttribute( 'src' ) || '' ).trim();
-  if ( /^https:\/\//i.test( src ) ) {
-    let origin = '';
-    try { origin = new URL( src ).origin; } catch ( _ ) { /* malformed → stays fully sandboxed */ }
-    if ( origin && !tokenOrigins().includes( origin ) ) node.setAttribute( 'sandbox', FRAME_SANDBOX + ' allow-same-origin' );
-    return;
-  }
-  node.removeAttribute( 'src' );
-  if ( src && !/^[a-z][\w+.-]*:/i.test( src ) && !src.startsWith( '//' ) ) node.setAttribute( 'data-repo-src', src );
-} );
-
-/* ── give a held-back relative iframe its real address: the local file in drop-in mode
-   (unsandboxed, the same rule as renderHtml — over file:// the sandbox protects nothing
-   and blocks the page's own neighbouring files), else the repo's published page.
-   Any ?query/#hash on the original src is kept. ── */
-const setRepoFrameSrc = ( frame, currentDir ) => {
-  const raw = frame.dataset.repoSrc;
-  const suffix = raw.match( /[?#].*$/ )?.[ 0 ] || '';
-  const path = resolveRepoPath( raw, currentDir );
-  const local = localUrlFor( path );
-  if ( local ) frame.removeAttribute( 'sandbox' );
-  frame.src = ( local || pagesUrl( path ) ) + suffix;
-};
-
-// Private repos never go in the public ta-data.js. With a saved token they're fetched
-// live (one API call) and merged in; ⭐ for them is a "favorite" topic on GitHub.
-const shelfState = { privateRepos: [] };
-
-const fetchPrivateRepos = async () => {
-  if ( !getToken() ) return;
-  try {
-    const list = await ghApi( 'https://api.github.com/user/repos?affiliation=owner&visibility=private&per_page=100' );
-    shelfState.privateRepos = list.map( ( r ) => ( {
-      name: r.name,
-      url: r.html_url,
-      description: r.description || '',   // shown only in the token holder's own browser
-      homepage: r.homepage,
-      private: true,
-      fork: !!r.fork,
-      created: ( r.created_at || '' ).slice( 0, 10 ),
-      updated: ( r.pushed_at || r.created_at || '' ).slice( 0, 10 ),
-      stars: r.stargazers_count,
-      pick: ( r.topics || [] ).includes( 'favorite' ),
-      note: '',
-    } ) );
-    renderRepoShelf();
-  } catch ( _ ) { /* bad token or offline — the public shelf stands */ }
-};
-
-/* ── all repos + forks: home repo first, then ⭐ picks, then the rest — each group
-   most recently pushed first (sort is stable) ── */
-const shelfRepoList = () => {
-  // a new array — sorting must not reorder the shared data. The private filter only
-  // matters for an older ta-data.js that still listed private repos.
-  const repos = [ ...TA_DATA.repos.filter( ( r ) => !r.private ), ...shelfState.privateRepos ];
-  repos.sort( ( a, b ) => b.updated.localeCompare( a.updated ) );
-  const rank = ( r ) => r.name === homeRepo.repo ? 0 : r.pick ? 1 : 2;
-  repos.sort( ( a, b ) => rank( a ) - rank( b ) );
-  return repos;
-};
-
-const markShelfActive = ( name ) => {
-  document.querySelectorAll( '#repoShelf .shelf-row' ).forEach( ( el ) =>
-    el.classList.toggle( 'active', el.dataset.repo === name ) );
-};
-
-/* ── point the whole app at another of the owner's repos, through the canonical
-   CONFIG → applyRepo path so the two state stores never diverge ── */
-const openShelfRepo = async ( name ) => {
-  markShelfActive( name );
-  if ( state.repo === name && state.tree ) return;
-  CONFIG.owner = homeRepo.owner;
-  CONFIG.repo = name;
-  CONFIG.branch = '';           // repos vary between main and master — let fetchTree resolve it
-  applyRepo();
-  state.currentFilePath = '';
-  // a file path from the previous repo must not route into this one (switchBranch's idiom)
-  history.replaceState( null, '', location.pathname + location.search );
-  updateHeaderFromConfig();
-  await fetchTree();
-  if ( state.tree ) { updateFooterLicense(); autoSelectReadme(); }
-};
-
-/* ── the pinned organizations row: render the local organizations.md ── */
-const showOrganizations = async () => {
-  markShelfActive( SHELF_ORGS_ROW );
-  setContentHeader( makeSimpleHeader( 'Organizations' ) );
-  const body = document.getElementById( 'contentBody' );
-  try {
-    const response = await fetch( 'organizations.md' );
-    if ( !response.ok ) throw new Error( `HTTP ${ response.status }` );
-    const text = await response.text();
-    // same hardened sanitize profile + typography class as every repo-file render
-    body.innerHTML = `<div class="markdown-body">${ DOMPurify.sanitize( marked.parse( revealHubBlocks( text ) ), MD_PURIFY ) }</div>`;
-    // organizations.md sits beside this page, so its relative iframes resolve against the hub itself
-    body.querySelectorAll( 'iframe[data-repo-src]' ).forEach( ( frame ) => { frame.src = frame.dataset.repoSrc; } );
-  } catch ( err ) {
-    body.innerHTML = `<p style="padding:1rem;">Could not load <code>organizations.md</code> — ` +
-      `${ escapeHTML( err.message ) }. The file must sit next to index.html.</p>`;
-  }
-};
-
-const renderRepoShelf = () => {
-  const shelf = document.getElementById( 'repoShelf' );
-  if ( typeof TA_DATA === 'undefined' ) {
-    shelf.innerHTML = '<p style="padding:0.5rem;">ta-data.js missing — the repo shelf needs it.</p>';
-    return;
-  }
-  const repos = shelfRepoList();
-
-  // Summary line: count + year span; the fuller numbers live in the tooltip.
-  const years = repos.map( ( r ) => r.created.slice( 0, 4 ) );
-  const span = `${ Math.min( ...years ) }→${ Math.max( ...years ) }`;
-  const forkCount = repos.filter( ( r ) => r.fork ).length;
-  const orgCount = TA_DATA.orgs.length;
-  const starTotal = repos.reduce( ( sum, r ) => sum + ( r.stars || 0 ), 0 );
-  const shelfTip = `${ repos.length - forkCount } repos · ${ forkCount } forks · ${ orgCount } orgs · ` +
-    `★ ${ starTotal } total · data as of ${ TA_DATA.meta.snapshot }`;
-
-  const rows = repos.map( ( r ) => `
-    <button type="button" class="shelf-row" data-repo="${ escapeHTML( r.name ) }" title="${ escapeHTML( r.description || '' ) }">
-      ${ r.name === homeRepo.repo ? '📘' : r.pick ? '⭐' : '📁' } ${ escapeHTML( r.name ) }${ r.private ? ' 🔒' : '' }
-    </button>` ).join( '' );
-
-  // The shelf renders twice when private repos arrive: build the frame + listeners
-  // once, then only refill the list (keeping the open/closed state).
-  if ( !document.getElementById( 'shelfList' ) ) {
-    shelf.innerHTML = `<div id="shelfList"></div>
-      <button id="btnShelfTop" class="back-to-top panel-to-top" title="Scroll repos to top" aria-label="Scroll repos to top">↑</button>`;
-    shelf.addEventListener( 'click', ( e ) => {
-      const row = e.target.closest( '.shelf-row' );
-      if ( !row ) return;
-      if ( row.dataset.repo === SHELF_ORGS_ROW ) { showOrganizations(); return; }
-      openShelfRepo( row.dataset.repo );
-    } );
-    shelf.addEventListener( 'keydown', onShelfKeydown );
-  }
-  const wasOpen = document.getElementById( 'shelfDetails' )?.open ?? true;
-  document.getElementById( 'shelfList' ).innerHTML = `
-    <details id="shelfDetails"${ wasOpen ? ' open' : '' }>
-      <summary title="${ escapeHTML( shelfTip ) }">${ repos.length } repos · ${ span }</summary>
-      <button type="button" class="shelf-row" data-repo="${ SHELF_ORGS_ROW }"
-        title="The organizations Theo belongs to — descriptions and links">🏛️ organizations</button>
-      ${ rows }
-    </details>`;
-  markShelfActive( state.repo || homeRepo.repo );
-};
-
-/* ── arrow keys on the shelf, like the file tree below: ↑/↓ move between rows,
-   → opens the focused row (Enter/Space also activate — the rows are buttons) ── */
-const onShelfKeydown = ( event ) => {
-  const row = event.target.closest( '.shelf-row' );
-  if ( !row ) return;
-  if ( event.key === 'ArrowRight' ) {
-    event.preventDefault();
-    if ( row.dataset.repo === SHELF_ORGS_ROW ) { showOrganizations(); return; }
-    openShelfRepo( row.dataset.repo );
-    return;
-  }
-  if ( event.key !== 'ArrowDown' && event.key !== 'ArrowUp' ) return;
-  event.preventDefault();
-  const rows = Array.from( document.querySelectorAll( '#repoShelf .shelf-row' ) );
-  const next = rows[ rows.indexOf( row ) + ( event.key === 'ArrowDown' ? 1 : -1 ) ];
-  if ( next ) { next.focus(); next.scrollIntoView( { block: 'nearest' } ); }
-};
-
-/* ── the two sidebar panels get the same floating ↑ as the content area ── */
-const initPanelTopButtons = () => {
-  const wire = ( scroller, btn ) => {
-    if ( !scroller || !btn ) return;
-    let shown = false;   // write style only on show/hide transitions, not every scroll frame
-    scroller.addEventListener( 'scroll', () => {
-      const want = scroller.scrollTop > 150;
-      if ( want === shown ) return;
-      shown = want;
-      btn.style.display = want ? 'flex' : 'none';
-    } );
-    btn.addEventListener( 'click', ( e ) => {
-      e.stopPropagation();
-      scroller.scrollTo( { top: 0, behavior: 'smooth' } );
-    } );
-  };
-  wire( document.getElementById( 'repoShelf' ), document.getElementById( 'btnShelfTop' ) );
-  wire( document.getElementById( 'treeList' ), document.getElementById( 'btnTreeTop' ) );
-};
-
-/* ── the horizontal bar under the shelf: drag to resize it, double-click to reset ── */
-const initShelfResizer = () => {
-  const divider = document.getElementById( 'shelfResizer' );
-  const shelf = document.getElementById( 'repoShelf' );
-  const heightKey = storageKey( 'shelfHeight' );
-  const setHeight = ( px ) => { shelf.style.maxHeight = 'none'; shelf.style.height = px + 'px'; };
-  try {
-    const saved = Number( localStorage.getItem( heightKey ) );
-    if ( saved ) setHeight( saved );
-  } catch ( _ ) { /* storage off */ }
-
-  let dragging = false, startY = 0, startHeight = 0;
-  divider.addEventListener( 'pointerdown', ( e ) => {
-    dragging = true;
-    startY = e.clientY;
-    startHeight = shelf.getBoundingClientRect().height;
-    divider.setPointerCapture( e.pointerId );
-    e.preventDefault();
-  } );
-  divider.addEventListener( 'pointermove', ( e ) => {
-    if ( !dragging ) return;
-    setHeight( Math.max( 0, Math.min( window.innerHeight * 0.7, startHeight + e.clientY - startY ) ) );
-  } );
-  // save however the drag ends — release, cancel, or lost capture
-  const endDrag = () => {
-    if ( !dragging ) return;
-    dragging = false;
-    try { localStorage.setItem( heightKey, String( Math.round( shelf.getBoundingClientRect().height ) ) ); }
-    catch ( _ ) { /* storage off */ }
-  };
-  divider.addEventListener( 'pointerup', endDrag );
-  divider.addEventListener( 'pointercancel', endDrag );
-  divider.addEventListener( 'lostpointercapture', endDrag );
-  divider.addEventListener( 'dblclick', () => {
-    shelf.style.height = '';
-    shelf.style.maxHeight = '';
-    try { localStorage.removeItem( heightKey ); } catch ( _ ) { /* storage off */ }
-  } );
 };
 
 initApp();
