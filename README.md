@@ -47,7 +47,7 @@ And the end game is something like figuring out the who, what, when, where, and 
 
 ## GitHub Efforts
 
-Click [35 repositories] (https://theo-armour.github.io/2026-ta-gh-io-refactor/) to explore my GitHub projects - in some kind of mindlese AI way.
+Click [35 repositories](https://theo-armour.github.io/2026-ta-gh-io-refactor/) to explore my GitHub projects - in some kind of mindless AI way. Also needs dates and images. Starts with oldest at top.
 
 When you get tired of that, click on the [organizations](organizations.md) to have a look see at even more stuff.
 
