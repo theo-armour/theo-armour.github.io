@@ -47,9 +47,9 @@ And the end game is something like figuring out the who, what, when, where, and 
 
 ## GitHub Efforts
 
-Click on any of the 35 repositories in the top-left menu to explore my GitHub projects.
+Click [35 repositories] (https://theo-armour.github.io/2026-ta-gh-io-refactor/) to explore my GitHub projects - in some kind of mindlese AI way.
 
-When you get tired of that, click on the [organizations](organizations.md) to have a look see at even more stuff. 
+When you get tired of that, click on the [organizations](organizations.md) to have a look see at even more stuff.
 
 ### WordPress Sites
 
@@ -109,32 +109,31 @@ Did I start with Blogger in 2003?
 
 ## Wikipedia articles
 
-Authoring Wikipedia articles is a skill I would be delighted to develop further. 
+Authoring Wikipedia articles is a skill I would be delighted to develop further.
 
 * [George Armour](https://en.wikipedia.org/wiki/George_Armour)
 * [San Francisco Ladies Protection and Relief Society](https://en.wikipedia.org/wiki/San_Francisco_Ladies_Protection_and_Relief_Society)
 * [Julia Morgan Building](https://en.wikipedia.org/wiki/Julia_Morgan_Building)
 * [Nigel Foster](https://en.wikipedia.org/wiki/Nigel_Foster)
 
-
-
 ## Change Log
 
 ### Agenda
 
+* Update the repositories app in some kind of more sensible fashion.
 * Bring in blog posts and other content from the various sources.
 * Add a detailed timeline of my projects and activities.
-* Fix all the broken demos and files in all the repositories and all the organizations. With the glorious help of AI, of course 
-* Continue work on the 3D Happy Place. 
-* Add images, moving things, and demos all over the place. 
+* Fix all the broken demos and files in all the repositories and all the organizations. With the glorious help of AI, of course
+* Continue work on the 3D Happy Place.
+* Add images, moving things, and demos all over the place - in 3D.
 
 ### 2026-10-25
 
 A new home page. Everything I've made on GitHub is now in one place: every repository and every organization is in the menu on the left. My favorites are at the top. Start with the bio or the blog above.
 
-This begins to cover the recent third of my life since the internet era began. Another third of my life is stuck on hard drives. And the final third is stuck on bits of paper in storage. 
+This begins to cover the recent third of my life since the internet era began. Another third of my life is stuck on hard drives. And the final third is stuck on bits of paper in storage.
 
-Added "budding ancestor" to the tagline to indicate that I very much enjoy being a father and grandfather. 
+Added "budding ancestor" to the tagline to indicate that I very much enjoy being a father and grandfather.
 
 See also: [2026-10-25 3D Operating System Draft](blog/2026-10-25-3D-Operating-System-draft.md)
 
