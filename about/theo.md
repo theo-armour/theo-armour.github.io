@@ -48,7 +48,7 @@ Theo lived in London from 1971 to 1981. He went there to spend his junior year a
 
 He is an architect educated at the <a href="http://www.aaschool.ac.uk/" target="_blank" title="http://www.aaschool.ac.uk/">Architectural Association School of Architecture</a> in London. He practiced architecture in London and Hong Kong. He has been a member of <a href="http://www.arb.org.uk/" target="_blank">ARCUK (now the ARB)</a>, <a href="http://www.architecture.com/" target="_blank">RIBA </a>and <a href="http://www.hkia.net/en/Home/Index.htm" target="_blank">HKIA</a>.
 
-In London he worked with RJ Lattimore and Associates and Solon Housing Association. With Lattimore, he helped design pubs for Truman Breweries, officers messes in Cyprus for the UK Ministry of Defense and a house for  Pete Townsend of The Who. With Solon he renovated a number of houses including 74 houses on Atherfold road one of which had been a residence of Sir Arthur Conan Doyle and a listed building at 168 Brixton Road. He also served on the board of directors of the organization - a tenant worker cooperative.
+In London he worked with RJ Lattimore and Associates and Solon Housing Association. With Lattimore, he helped design pubs for Truman Breweries, officers' messes in Cyprus for the UK Ministry of Defence and a house for Pete Townshend of The Who. With Solon he renovated a number of houses including 74 houses on Atherfold Road one of which had been a residence of Sir Arthur Conan Doyle and a listed building at 168 Brixton Road. He also served on the board of directors of the organization - a tenant worker cooperative.
 
 Theo was awarded the <a href="http://www.channelswimmingassociation.com/Trophy%20Recipients/The%20Van%20Audernaerde%20Tankard.html" target="_blank">English Channel Swimming Association</a>&#8217;s Van Audernaerde Prize for Best Disabled Swim in 1980.
 
@@ -68,7 +68,7 @@ In the oughts, he worked with a number of startups none of which blossomed and b
 
 In 2006 he was awarded first place for fastest disabled swimmer in the annual &#8220;Escape from Alcatraz&#8221; competition.
 
-Theo has helped a number of artists and designers with their web sites including <a href="http://lynnhershman.com/" target="_blank" title="http://lynnhershman.com">Lynn Hirshman Leeson</a> and Professor <a href="http://lessig.org/" target="_blank" title="Lessig.org">Lawrence Lessig</a> with their web sites. Theo is a collector of <a href="http://artofthenet.com/" target="_blank">web sites that are works of art.</a> He firmly believes that the great art of the future will be the art of the Internet and would be pleased to hear from artists, curators and galleries with similar intentions.
+Theo has helped a number of artists and designers with their web sites including <a href="http://lynnhershman.com/" target="_blank" title="http://lynnhershman.com">Lynn Hershman Leeson</a> and Professor <a href="http://lessig.org/" target="_blank" title="Lessig.org">Lawrence Lessig</a> with their web sites. Theo is a collector of <a href="http://artofthenet.com/" target="_blank">web sites that are works of art.</a> He firmly believes that the great art of the future will be the art of the Internet and would be pleased to hear from artists, curators and galleries with similar intentions.
 
 He has a web presence on <a href="http://twitter.com/ta" target="_blank">Twitter</a>, <a href="http://facebook.com/tarmour" target="_blank">Facebook</a>, and <a href="http://tarmour.github.com/" target="_blank">GitHub</a>. Theo is an angel investor and technical adviser helping small start-ups. These include <a href="http://hommage.com/" target="_blank">Hommage</a>, <a href="http://point65.com/" target="_blank">Point 65</a>, <a href="http://orbitec.com/" target="_blank">Orbitec</a>, <a href="http://www.norroc.com/" target="_blank">Norroc </a>and <a href="http://www.philquo.com/" target="_blank">PhilQuo Ventures</a>. He serves on the board of directors of <a href="https://www.websightdesign.com/" target="_blank">WebSight Design</a>.<br />
 
@@ -100,7 +100,7 @@ He has authored Wikipedia articles relating to his residence:
 * <a href="https://en.wikipedia.org/wiki/Julia_Morgan_Building" target="_blank">Julia Morgan Building</a>
 * <a href="https://en.wikipedia.org/wiki/Heritage_on_the_Marina" target="_blank">Heritage on the Marina</a> ~ under construction
 
-Theo is currently investigating the phenomena of old people being marginalized while young people are doom-scrolling and wondering there are ways of connecting the two so that the elders remain engaged and the young become more active — all through online AI-driven open-source, non-profit intergenerational programs.
+Theo is currently investigating the phenomenon of old people being marginalized while young people are doom-scrolling and wondering if there are ways of connecting the two so that the elders remain engaged and the young become more active — all through online AI-driven open-source, non-profit intergenerational programs.
 
 ## The Agenda ~ 2026-10-25
 
