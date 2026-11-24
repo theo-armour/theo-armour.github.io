@@ -106,8 +106,6 @@ Theo is currently investigating the phenomenon of old people being marginalized 
 
 Should this be first person or third person? 
 
-This text contains many broken links or links to demos that no longer work. All of these can and will be updated over time as the content is reviewed and restored - Of course, with the help of AI. 
-
 There's a ton more material to add. 
 
 It would be nice to have the names and addresses of all the places that I've lived, links to the relevant photo albums, and any other related documentation.
