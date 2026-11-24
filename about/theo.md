@@ -15,7 +15,7 @@ In the eighties, he founded a consulting practice CAD-Asia to help Asian organiz
 
 In the nineties, working with <a href="https://www.autodesk.com/" target="_blank">Autodesk</a>, he was one of two program managers that designed the ground-breaking release of <a href="https://www.autodesk.com/products/autocad/overview" target="_blank">AutoCAD</a> that led the transition from engineers and architects designing using paper to designing on a computer screen.
 
-In the oughts, he worked with a number of startups none of which blossomed, built numerous websites that were not particularly successful and was involved with a rather dysfunctional local community. He also served on the Board of advisors of the Peggy Guggenheim Collection in Venice and designed and built their website.
+In the oughts, he worked with a number of startups none of which blossomed, built numerous websites that were not particularly successful and was involved with a rather dysfunctional local community. He also served on the Board of Advisers of the Peggy Guggenheim Collection in Venice and designed and built their website.
 
 In the teens, he contributed to the design and promotion of the open-source JavaScript library <a href="https://threejs.org/" target="_blank">Three.js</a>, the most popular software library for interactive online 3D visualization in a web browser. He was also the creator and maintainer of the Spider <a href="https://www.gbxml.org/" target="_blank">gbXML</a> software utility for <a href="https://www.ladybug.tools/about.html#team" target="_blank">Ladybug.Tools</a> - primarily tools for engineers, architects and designers to design more energy efficient buildings. All his software efforts are free and open source.
 
@@ -62,13 +62,13 @@ In the 1990s he was Program Manager at <a href="http://autodesk.com/" target="_b
 
 ## 2001 - 2020 ~ San Francisco, Financial District
 
-From 2001 to 2008 he was a member of the Board of Advisers of the <a href="http://guggenheim-venice.it/" target="_blank" title="http://guggenheim-venice.it">Peggy Guggenheim Collection</a> in Venice and was designer and webmaster of their web site from 2001 to 2004.<br />
+From 2001 to 2009 he was a member of the Board of Advisers of the <a href="http://guggenheim-venice.it/" target="_blank" title="http://guggenheim-venice.it">Peggy Guggenheim Collection</a> in Venice and was designer and webmaster of their web site from 2001 to 2004.<br />
 
-In the oughts, he worked with a number of startups none of which blossomed and built numerous websites that were not particularly successful. He also served on the Board of advisors of the Peggy Guggenheim Collection in Venice and designed and built their website.
+In the oughts, he worked with a number of startups none of which blossomed and built numerous websites that were not particularly successful. He also served on the Board of Advisers of the Peggy Guggenheim Collection in Venice and designed and built their website.
 
 In 2006 he was awarded first place for fastest disabled swimmer in the annual &#8220;Escape from Alcatraz&#8221; competition.
 
-Theo has helped a number of artists and designers with their web sites including <a href="http://lynnhershman.com/" target="_blank" title="http://lynnhershman.com">Lynn Hershman Leeson</a> and Professor <a href="http://lessig.org/" target="_blank" title="Lessig.org">Lawrence Lessig</a> with their web sites. Theo is a collector of <a href="http://artofthenet.com/" target="_blank">web sites that are works of art.</a> He firmly believes that the great art of the future will be the art of the Internet and would be pleased to hear from artists, curators and galleries with similar intentions.
+Theo has helped a number of artists and designers with their web sites including <a href="http://lynnhershman.com/" target="_blank" title="http://lynnhershman.com">Lynn Hershman Leeson</a> and Professor <a href="http://lessig.org/" target="_blank" title="Lessig.org">Lawrence Lessig</a>. Theo is a collector of <a href="http://artofthenet.com/" target="_blank">web sites that are works of art.</a> He firmly believes that the great art of the future will be the art of the Internet and would be pleased to hear from artists, curators and galleries with similar intentions.
 
 He has a web presence on <a href="http://twitter.com/ta" target="_blank">Twitter</a>, <a href="http://facebook.com/tarmour" target="_blank">Facebook</a>, and <a href="http://tarmour.github.com/" target="_blank">GitHub</a>. Theo is an angel investor and technical adviser helping small start-ups. These include <a href="http://hommage.com/" target="_blank">Hommage</a>, <a href="http://point65.com/" target="_blank">Point 65</a>, <a href="http://orbitec.com/" target="_blank">Orbitec</a>, <a href="http://www.norroc.com/" target="_blank">Norroc </a>and <a href="http://www.philquo.com/" target="_blank">PhilQuo Ventures</a>. He serves on the board of directors of <a href="https://www.websightdesign.com/" target="_blank">WebSight Design</a>.<br />
 
