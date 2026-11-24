@@ -1,10 +1,13 @@
 <!doctype html>
+<!-- TooToo r4, built 2026-11-23. Generated from https://github.com/pushme-pullyou/tootoo. Edit only the settings block below: updates replace everything else. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TooToo</title>
-<meta name="tootoo-release" content="r3">
+<meta name="description" content="Content brought to you by TooToo, the single-file GitHub repository viewer.">
+<meta name="tootoo-release" content="r4">
+<meta name="tootoo-built" content="2026-11-23">
 
 <!-- TOOTOO-CONFIG-START: your settings. Updates carry this block forward unchanged. -->
 <script>
@@ -127,13 +130,21 @@ button.primary, .button.primary { color: var(--color-on-accent); background: var
 .header-actions { display: flex; gap: 0.3em; margin-left: auto; flex: none; }
 .sidebar-toggle { flex: none; }
 
+/* About and the GitHub token: a pop-up over the page, so it shows wherever the page has scrolled to. */
 .panel {
-  position: relative;
-  margin: var(--space);
+  position: fixed;
+  z-index: 30;
+  top: 4em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(36em, calc(100vw - 2 * var(--space)));
+  max-height: calc(100vh - 6em);
+  overflow: auto;
   padding: 0.5em var(--space);
   background: var(--color-panel);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.35), 0 8px 30px rgba(0, 0, 0, 0.4);   /* the first shadow dims the page behind */
 }
 .panel-close { position: absolute; top: 0.5em; right: 0.5em; }
 .update-notice { margin: var(--space) var(--space) 0; padding: 0.5em var(--space); border: 1px solid var(--color-accent); border-radius: var(--radius); }
@@ -146,6 +157,10 @@ button.primary, .button.primary { color: var(--color-on-accent); background: var
   font-size: 0.85em;
   color: var(--color-muted);
   border-top: 1px solid var(--color-border);
+  display: flex;   /* the rights line on the left, the install's links on the right */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25em 1em;
 }
 
 /* ── Tree: the sidebar ── */
@@ -247,6 +262,24 @@ body.dark-mode .hljs-string, body.dark-mode .hljs-attr, body.dark-mode .hljs-sym
 body.dark-mode .hljs-number, body.dark-mode .hljs-literal, body.dark-mode .hljs-variable { color: #d19a66; }
 body.dark-mode .hljs-title, body.dark-mode .hljs-section, body.dark-mode .hljs-name { color: #61afef; }
 
+/* ── Back to top: a ↑ floating at the bottom of the files and of the open file ── */
+
+/* The holder sticks to the panel's bottom edge and takes no room; the button sits just above it. */
+.to-top-holder { position: sticky; bottom: 0; height: 0; z-index: 5; }
+.to-top {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  width: 2.2em;
+  height: 2.2em;
+  padding: 0;
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
 /* ── Local: the file:// start panel ── */
 
 .start-panel { max-width: 36em; margin: 2em auto; padding: var(--space); }
@@ -286,15 +319,15 @@ body.dark-mode .hljs-title, body.dark-mode .hljs-section, body.dark-mode .hljs-n
 const Config = {
 
   defaults: Object.freeze( {
-    owner: '', repo: '', branch: '',
-    view: 'browser',
-    appName: 'TooToo', subtitle: '',
-    themeColor: '', headingFontUrl: '', headingFont: '', faviconFile: '',
-    sourceRepoUrl: 'https://github.com/pushme-pullyou/tootoo', homeUrl: '',
+    owner: '', repo: '', branch: '', startFile: '',
+    appName: 'TooToo', subtitle: '', description: '',
+    themeColor: '', headingFontUrl: '', headingFont: '', bodyFont: '', darkMode: 'auto', faviconFile: '',
+    homeUrl: '',
     storagePrefix: 'tootoo',
     hiddenFolders: Object.freeze( [] ), hiddenFiles: Object.freeze( [] ),   // the tree always hides index.bak
     hideDatedBackups: true, autoOpenFolderReadme: true,
-    rightsText: 'No rights reserved', rightsOwners: null,
+    rightsText: 'No rights reserved', rightsOwners: null, links: Object.freeze( [] ),
+    noindex: false,
     checkForUpdates: true, updateUrl: 'https://pushme-pullyou.github.io/tootoo/releases/latest.json',
   } ),
 
@@ -1369,7 +1402,15 @@ const Shell = {
     try { localStorage.setItem( Shell.key( name ), JSON.stringify( value ) ); } catch ( error ) { /* not saved */ }
   },
 
-  release: () => ( document.querySelector( 'meta[name="tootoo-release"]' ) || {} ).content || 'dev',
+  // Where TooToo itself lives: About's "source and updates" link. Not a setting: an install's own repo is in the header.
+  tootooUrl: 'https://github.com/pushme-pullyou/tootoo',
+
+  // The build date assemble.ps1 stamps, e.g. '2026-11-23'. 'dev' when src/ runs unbuilt.
+  built: () => ( document.querySelector( 'meta[name="tootoo-built"]' ) || {} ).content || 'dev',
+  builtText: ( built ) => ( /^\d{4}-\d\d-\d\d$/.test( built ) ? ` · built ${ built }` : '' ),
+
+  // The install's own description, else the one written in the page (TooToo's).
+  description: ( own = CONFIG.description ) => own || ( document.querySelector( 'meta[name="description"]' ) || {} ).content || '',
 
   // ── Mount ──
 
@@ -1380,6 +1421,8 @@ const Shell = {
     elements.header.innerHTML = Shell.headerHtml();
     elements.header.addEventListener( 'click', Shell.onClick );
     elements.panel.addEventListener( 'click', Shell.onClick );
+    document.addEventListener( 'keydown', Shell.onPanelKey );
+    document.addEventListener( 'click', Shell.onOutsideClick );
     Events.on( 'repo-changed', Shell.showRepo );
     Events.on( 'file-selected', Shell.showTitle );
     Shell.restorePrefs();
@@ -1387,6 +1430,8 @@ const Shell = {
     return () => {
       elements.header.removeEventListener( 'click', Shell.onClick );
       elements.panel.removeEventListener( 'click', Shell.onClick );
+      document.removeEventListener( 'keydown', Shell.onPanelKey );
+      document.removeEventListener( 'click', Shell.onOutsideClick );
       Events.off( 'repo-changed', Shell.showRepo );
       Events.off( 'file-selected', Shell.showTitle );
     };
@@ -1423,6 +1468,11 @@ const Shell = {
   applyBranding: () => {
     const body = document.body.style;
     if ( CONFIG.themeColor ) { body.setProperty( '--color-accent', CONFIG.themeColor ); }
+    if ( CONFIG.bodyFont ) {
+      // Headings follow the text font unless the install names a heading font of its own.
+      body.setProperty( '--font-body', CONFIG.bodyFont );
+      body.setProperty( '--font-heading', CONFIG.bodyFont );
+    }
     if ( CONFIG.headingFont ) { body.setProperty( '--font-heading', CONFIG.headingFont ); }
     const url = CONFIG.headingFontUrl;
     if ( url && /\.(woff2?|ttf|otf)([?#]|$)/i.test( url ) ) {
@@ -1437,8 +1487,19 @@ const Shell = {
     if ( CONFIG.faviconFile ) {
       document.head.insertAdjacentHTML( 'beforeend', `<link rel="icon" href="${ Shell.escape( CONFIG.faviconFile ) }">` );
     }
+    document.head.insertAdjacentHTML( 'beforeend', Shell.robotsHtml() );
+    const meta = document.querySelector( 'meta[name="description"]' );
+    if ( meta && CONFIG.description ) { meta.content = CONFIG.description; }
     document.title = CONFIG.appName;
   },
+
+  // noindex: true asks search engines not to list the site. Only crawlers that run scripts see it.
+  robotsHtml: ( config = CONFIG ) => ( config.noindex ? '<meta name="robots" content="noindex">' : '' ),
+
+  // CONFIG.links as links: [ { label, url } ]. An entry without both, or with a script address, is skipped.
+  linksHtml: ( links = CONFIG.links ) => ( Array.isArray( links ) ? links : [] )
+    .filter( ( link ) => link && link.label && link.url && ! /^\s*javascript:/i.test( link.url ) )
+    .map( ( link ) => `<a href="${ Shell.escape( link.url ) }">${ Shell.escape( link.label ) }</a>` ).join( ' · ' ),
 
   showTitle: ( { path } ) => { document.title = `${ path.split( '/' ).pop() } · ${ CONFIG.appName }`; },
 
@@ -1460,6 +1521,9 @@ const Shell = {
     const plain = ( name ) => String( name || '' ).toLowerCase().replace( /[^a-z0-9]/g, '' );
     return plain( a ) !== '' && plain( a ) === plain( b );
   },
+
+  // The header shows the app name only when the install names itself (not the default) and it isn't a repeat.
+  showsAppName: ( ownName, shownName ) => Boolean( ownName ) && ! Shell.sameName( ownName, shownName ),
 
   // The icon's link, owner / repo links (📂 first for a local folder), then the footer.
   // The app name is left out when it only repeats the name just before it.
@@ -1486,8 +1550,8 @@ const Shell = {
     }
     header.querySelector( '.repo-links' ).innerHTML = html;
     const shownName = links.pages ? state.repo : links.home ? state.owner : '';
-    header.querySelector( '.brand' ).hidden = Shell.sameName( CONFIG.appName, shownName );
-    Shell.el.footer.textContent = Shell.rightsLine( state.owner );
+    header.querySelector( '.brand' ).hidden = ! Shell.showsAppName( ( window.TOOTOO_CONFIG || {} ).appName, shownName );
+    Shell.el.footer.innerHTML = `<span>${ esc( Shell.rightsLine( state.owner ) ) }</span><span class="footer-links">${ Shell.linksHtml() }</span>`;
   },
 
   // '© 2026 owner · No rights reserved'. rightsOwners: null = every owner, a list = only those, [] = none.
@@ -1503,10 +1567,13 @@ const Shell = {
 
   restorePrefs: () => {
     const dark = Shell.load( 'darkMode' );
-    Shell.setDark( dark === null ? window.matchMedia( '(prefers-color-scheme: dark)' ).matches : dark, false );
+    Shell.setDark( dark === null ? Shell.startsDark( CONFIG.darkMode, window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) : dark, false );
     const size = Shell.load( 'fontSize' );
     if ( size ) { Shell.setFontSize( size, false ); }
   },
+
+  // Before the reader has used 🌓: darkMode 'dark' or 'light' decides; anything else follows the device.
+  startsDark: ( mode, deviceIsDark ) => mode === 'dark' || ( mode !== 'light' && deviceIsDark ),
 
   setDark: ( dark, save = true ) => {
     document.body.classList.toggle( 'dark-mode', dark );
@@ -1535,13 +1602,21 @@ const Shell = {
     }
   },
 
-  // ── Panels, shown above the file ──
+  // ── Panels: About and the GitHub token, as a pop-up over the page (SPEC §6 Pop-up panels) ──
 
   openPanel: ( name, reason = '' ) => {
     const panel = Shell.el.panel;
     panel.innerHTML = name === 'about' ? Shell.aboutHtml() : Shell.tokenHtml( reason );
     panel.dataset.open = name;
     panel.hidden = false;
+    ( panel.querySelector( '.token-input' ) || panel.querySelector( '.panel-close' ) ).focus();
+  },
+
+  // Escape closes the pop-up, and so does a click outside it (the header's own buttons toggle it themselves).
+  onPanelKey: ( event ) => { if ( event.key === 'Escape' && ! Shell.el.panel.hidden ) { Shell.closePanel(); } },
+  onOutsideClick: ( event ) => {
+    const { panel, header } = Shell.el;
+    if ( ! panel.hidden && ! panel.contains( event.target ) && ! header.contains( event.target ) ) { Shell.closePanel(); }
   },
 
   closePanel: () => {
@@ -1562,8 +1637,10 @@ const Shell = {
     return `<button type="button" class="panel-close" data-action="close" aria-label="Close">✕</button>
       <h2>${ esc( CONFIG.appName ) }</h2>
       ${ CONFIG.subtitle ? `<p>${ esc( CONFIG.subtitle ) }</p>` : '' }
+      ${ Shell.description() ? `<p class="about-description">${ esc( Shell.description() ) }</p>` : '' }
       <p>Showing ${ where }: ${ files.toLocaleString() } files.</p>
-      <p>TooToo release <strong>${ esc( Shell.release() ) }</strong> · <a href="${ esc( CONFIG.sourceRepoUrl ) }">source and updates</a></p>
+      <p>TooToo release <strong>${ esc( Update.release() ) }</strong>${ esc( Shell.builtText( Shell.built() ) ) } · <a href="${ Shell.tootooUrl }">source and updates</a></p>
+      ${ Shell.linksHtml() ? `<p>Links: ${ Shell.linksHtml() }</p>` : '' }
       <p>Keys: <kbd>/</kbd> filter · <kbd>\\</kbd> tree · arrows move · <kbd>Ctrl</kbd>+<kbd>B</kbd> files</p>
       ${ unknown.length ? `<p>Settings this release ignores: ${ unknown.map( ( key ) => `<code>${ esc( key ) }</code>` ).join( ', ' ) }</p>` : '' }`;
   },
@@ -1896,11 +1973,18 @@ const Content = {
     return () => Events.off( 'open-requested', Content.onOpenRequested );
   },
 
-  // An empty hash means the start: the root README. A heading in the open file just scrolls.
+  // The file the start opens: startFile when it names a file, or a folder with a README; else the root README.
+  startPath: ( config = CONFIG, items = state.tree || [] ) => {
+    const start = String( config.startFile || '' ).replace( /^\/+|\/+$/g, '' );
+    const isFile = start && items.some( ( item ) => item.type === 'file' && item.path === start );
+    return isFile ? start : ( start && Tree.readmeIn( start, items ) ) || Tree.readmeIn( '', items );
+  },
+
+  // An empty hash means the start (startPath). A heading in the open file just scrolls.
   onOpenRequested: ( { path, heading } ) => {
     if ( ! state.tree ) { return; }   // too early (e.g. the start panel is up): the view opens the deep link after the tree loads
     if ( path && path === state.currentPath && heading ) { Content.scrollTo( heading ); return; }
-    Content.open( path || Tree.readmeIn( '' ), heading );
+    Content.open( path || Content.startPath(), heading );
   },
 
   showMessage: ( text ) => {
@@ -2018,7 +2102,10 @@ const BrowserView = {
 
   name: 'browser',
 
-  layout: `
+  // The ↑ that floats at the bottom of a scrolling panel (SPEC §6 Back to top).
+  toTop: '<div class="to-top-holder"><button type="button" class="to-top" title="Back to top" aria-label="Back to top" hidden>↑</button></div>',
+
+  layout: () => `
     <header class="app-header"></header>
     <div class="app-body">
       <nav class="sidebar" aria-label="Files">
@@ -2027,22 +2114,32 @@ const BrowserView = {
           <span class="tree-count"></span>
         </div>
         <div class="tree"></div>
+        ${ BrowserView.toTop }
       </nav>
       <div class="resizer" role="separator" aria-orientation="vertical" title="Drag to resize"></div>
       <main class="content">
         <section class="update-notice" hidden></section>
-        <section class="panel" hidden></section>
         <div class="file-view"></div>
+        ${ BrowserView.toTop }
       </main>
     </div>
-    <footer class="app-footer"></footer>`,
+    <footer class="app-footer"></footer>
+    <section class="panel" role="dialog" aria-label="About and the GitHub token" hidden></section>`,
+
+  // The panel's ↑ shows once the panel has scrolled a little, and a click goes back to the top.
+  addToTop: ( panel ) => {
+    const button = panel.querySelector( ':scope > .to-top-holder > .to-top' );
+    panel.addEventListener( 'scroll', () => { button.hidden = panel.scrollTop < 200; } );
+    button.addEventListener( 'click', () => panel.scrollTo( { top: 0, behavior: 'smooth' } ) );
+  },
 
   // options.source and options.repo skip the choice (the tests use the mock this way).
   mount: async ( element, options = {} ) => {
     const find = ( selector ) => element.querySelector( selector );
     element.classList.add( 'browser-view' );
-    element.innerHTML = BrowserView.layout;
+    element.innerHTML = BrowserView.layout();
     BrowserView.element = element;
+    [ find( '.sidebar' ), find( '.content' ) ].forEach( BrowserView.addToTop );
     state.tree = null;   // no files until this mount's source lists them
     BrowserView.unmounts = [
       Shell.mount( { header: find( '.app-header' ), footer: find( '.app-footer' ), panel: find( '.panel' ) } ),
@@ -2098,18 +2195,15 @@ const BrowserView = {
     }
     Events.emit( 'tree-loaded', { tree: state.tree } );
     const { path, heading } = Router.current();
-    await Content.open( path || Tree.readmeIn( '' ), heading );
+    await Content.open( path || Content.startPath(), heading );
   },
 
 };
 </script>
 
 <script>
-// Startup: mount the view CONFIG.view names (v1 has 'browser' only).
-{
-  const views = { browser: BrowserView };
-  ( views[ CONFIG.view ] || BrowserView ).mount( document.getElementById( 'app' ) );
-}
+// Startup: mount the one view there is. A setting to choose returns when a second view exists.
+BrowserView.mount( document.getElementById( 'app' ) );
 </script>
 
 </body>
