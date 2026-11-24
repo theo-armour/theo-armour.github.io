@@ -12,15 +12,45 @@
 <!-- TOOTOO-CONFIG-START: your settings. Updates carry this block forward unchanged. -->
 <script>
 window.TOOTOO_CONFIG = {
-  owner: 'theo-armour',
-  repo: 'theo-armour.github.io',
-  appName: 'Theo Armour',
-  storagePrefix: 'ta-theo-armour.github.io',
-  themeColor: '#2874a6',
-  subtitle: 'home page',
-  headingFontUrl: 'https://fonts.googleapis.com/css2?family=Patua+One&display=swap',
-  headingFont: '"Patua One", serif',
-  hiddenFolders: [ 'ignore', 'Images' ],
+
+  // Which repo to show. Empty = detect from ?owner=&repo=, then the *.github.io address
+  owner: 'theo-armour',         // GitHub user or organization, e.g. 'theo-armour'
+  repo: 'theo-armour.github.io', // repository name, e.g. 'pages'
+  // branch: '',                 // empty = the repo's default branch
+  // startFile: '',              // the file to open first, e.g. '0-agenda.md' or a folder; empty = the README
+
+  // Branding
+  appName: 'Theo Armour',       // name in the header and the page title
+  subtitle: 'home page',        // short line beside the name
+  // description: '',            // a sentence about this repo, for About and search engines
+  themeColor: '#2874a6',        // highlight color, e.g. '#3a8856'; empty = the built-in color
+  headingFontUrl: 'https://fonts.googleapis.com/css2?family=Patua+One&display=swap', // stylesheet URL for a heading font, e.g. a Google Fonts link
+  headingFont: '"Patua One", serif', // CSS font-family for headings, e.g. '"Patua One", serif'
+  // bodyFont: '',               // CSS font-family for the text, e.g. 'Georgia, serif'; headings follow unless headingFont is set
+  // darkMode: 'auto',           // how the page starts: 'auto' follows the device, or 'light' or 'dark'
+  faviconFile: 'favicon.ico',   // icon file name or URL; empty = no icon
+  // homeUrl: '',                // when set, the header shows a ⌂ link to this page
+
+  storagePrefix: 'ta-theo-armour.github.io', // prefix for saved settings; give each install its own
+
+  // What the tree hides
+  hiddenFolders: [ 'ignore', 'Images' ], // folder names to hide, at any depth, e.g. [ 'Images' ]
+  // hiddenFiles: [],            // file names to hide, at any depth (index.bak is always hidden)
+  // hideDatedBackups: true,     // hide backups named like "name-2026-11-21-08-30.md"
+  // autoOpenFolderReadme: true, // opening a folder shows its README the first time
+
+  // Footer
+  // rightsText: 'No rights reserved', // shown after "© <year> <owner>"
+  // rightsOwners: null,         // null = every repo; [ 'login' ] = only these owners; [] = never
+  // links: [],                  // links in the footer and About, e.g. [ { label: 'Pages', url: 'https://example.com/' } ]
+
+  // Search engines
+  // noindex: false,             // true asks search engines not to list this site
+
+  // Updates
+  // checkForUpdates: true,      // tell the maintainer when a newer release exists (at most once a day)
+  // updateUrl: 'https://pushme-pullyou.github.io/tootoo/releases/latest.json', // where to look
+
 };
 </script>
 <!-- TOOTOO-CONFIG-END -->
