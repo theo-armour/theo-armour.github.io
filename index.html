@@ -1,13 +1,13 @@
 <!doctype html>
-<!-- TooToo r4, built 2026-11-23. Generated from https://github.com/pushme-pullyou/tootoo. Edit only the settings block below: updates replace everything else. -->
+<!-- TooToo r6, built 2026-11-26. Generated from https://github.com/pushme-pullyou/tootoo. Edit only the settings block below: updates replace everything else. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TooToo</title>
 <meta name="description" content="Content brought to you by TooToo, the single-file GitHub repository viewer.">
-<meta name="tootoo-release" content="r4">
-<meta name="tootoo-built" content="2026-11-23">
+<meta name="tootoo-release" content="r6">
+<meta name="tootoo-built" content="2026-11-26">
 
 <!-- TOOTOO-CONFIG-START: your settings. Updates carry this block forward unchanged. -->
 <script>
@@ -60,6 +60,9 @@ window.TOOTOO_CONFIG = {
 <style>/* src/styles.css */
 /* styles.css: design tokens first, then one section per part. */
 
+/* The built-in heading face. It downloads only when used: CONFIG.headingFont or bodyFont replace it. */
+@font-face { font-family: "Windsor"; src: url("https://pushme-pullyou.github.io/assets/fonts/Windsor%20Regular.ttf"); font-display: swap; }
+
 :root {
   --color-text: #222;
   --color-muted: #666;
@@ -71,9 +74,10 @@ window.TOOTOO_CONFIG = {
   --color-active: rgba(37, 99, 235, 0.12);
 
   --font-body: system-ui, sans-serif;
-  --font-heading: var(--font-body);   /* CONFIG.headingFont overrides this */
+  --font-heading: "Windsor", serif;   /* CONFIG.headingFont, else bodyFont, overrides this */
   --font-mono: ui-monospace, Consolas, monospace;
   --font-size: 16px;            /* A− / A+ change this */
+  --font-size-title: 1.4em;    /* app name and owner / repo in the header: one size, so the title doesn't jump */
 
   --space: 1rem;
   --radius: 4px;
@@ -152,7 +156,8 @@ button.primary, .button.primary { color: var(--color-on-accent); background: var
   align-items: center;
   gap: 0.4em;
   font-family: var(--font-heading);
-  font-size: 1.25em;
+  font-size: var(--font-size-title);
+  line-height: 1.2;   /* bigger text, but no taller than the header buttons */
   font-weight: bold;
   color: var(--color-accent);
   text-decoration: none;
@@ -160,7 +165,7 @@ button.primary, .button.primary { color: var(--color-on-accent); background: var
 }
 .icon-link { display: flex; flex: none; color: var(--color-text); }
 .brand-icon { width: 1.75em; height: 1.75em; }
-.repo-links { white-space: nowrap; font-weight: bold; }
+.repo-links { white-space: nowrap; font-weight: bold; font-family: var(--font-heading); font-size: var(--font-size-title); line-height: 1.2; }   /* the titles share the heading font */
 .subtitle { color: var(--color-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1 1 0; }
 .header-actions { display: flex; gap: 0.3em; margin-left: auto; flex: none; }
 .sidebar-toggle { flex: none; }
@@ -361,7 +366,7 @@ const Config = {
     storagePrefix: 'tootoo',
     hiddenFolders: Object.freeze( [] ), hiddenFiles: Object.freeze( [] ),   // the tree always hides index.bak
     hideDatedBackups: true, autoOpenFolderReadme: true,
-    rightsText: 'No rights reserved', rightsOwners: null, links: Object.freeze( [] ),
+    rightsText: '', rightsOwners: null, links: Object.freeze( [] ),
     noindex: false,
     checkForUpdates: true, updateUrl: 'https://pushme-pullyou.github.io/tootoo/releases/latest.json',
   } ),
@@ -1027,7 +1032,8 @@ const Local = {
 <script>/* src/loaders/markdown.js */
 // markdown.js: Markdown → safe HTML (marked, then DOMPurify; both load at startup).
 // Headings get GitHub-style ids, for '#file#heading' links. Relative links open the
-// file inside the app; relative images load through the source.
+// file inside the app; relative images, video and audio load through the source.
+// HTML wrapped in '<!--@@@ … @@@-->' shows only in TooToo; web-page iframes are allowed.
 
 const MarkdownLoader = {
 
@@ -1075,26 +1081,37 @@ const MarkdownLoader = {
     }
   },
 
-  fixImages: ( box, file ) => Promise.all( [ ...box.querySelectorAll( 'img[src]' ) ].map( async ( image ) => {
-    const src = image.getAttribute( 'src' );
+  // Relative images, video and audio (and a <video>'s <source>) load through the source.
+  fixMedia: ( box, file ) => Promise.all( [ ...box.querySelectorAll( 'img[src], video[src], audio[src], source[src]' ) ].map( async ( media ) => {
+    const src = media.getAttribute( 'src' );
     if ( Loaders.isExternal( src ) ) { return; }
     const path = Loaders.resolvePath( file.path, src.split( /[?#]/ )[ 0 ] );
     try {
-      image.src = await Loaders.urlFor( file.source, path );
+      media.src = await Loaders.urlFor( file.source, path );
     } catch ( error ) {
-      image.removeAttribute( 'src' );
-      image.alt = `${ image.alt } (not found: ${ path })`;
+      media.removeAttribute( 'src' );
+      if ( media.tagName === 'IMG' ) { media.alt = `${ media.alt } (not found: ${ path })`; }
     }
   } ) ),
+
+  // '<!--@@@ … @@@-->' is a comment, so GitHub hides it; TooToo drops the markers and shows what's inside.
+  unwrap: ( text ) => text.replace( /<!--@@@([\s\S]*?)@@@-->/g, '$1' ),
+
+  // An <iframe> stays only when it loads a web page (http: or https:).
+  fixFrames: ( box ) => box.querySelectorAll( 'iframe' ).forEach( ( frame ) => {
+    if ( ! /^https?:\/\//i.test( frame.getAttribute( 'src' ) || '' ) ) { frame.remove(); }
+  } ),
 
   render: async ( file, element ) => {
     // A <template> is inert: images don't start loading from the wrong place while links are fixed.
     const template = document.createElement( 'template' );
-    template.innerHTML = DOMPurify.sanitize( marked.parse( await file.source.readText( file.path ) ) );
+    const html = marked.parse( MarkdownLoader.unwrap( await file.source.readText( file.path ) ) );
+    template.innerHTML = DOMPurify.sanitize( html, { ADD_TAGS: [ 'iframe' ], ADD_ATTR: [ 'allow', 'allowfullscreen' ] } );
     const box = template.content;
+    MarkdownLoader.fixFrames( box );
     MarkdownLoader.addHeadingIds( box );
     MarkdownLoader.fixLinks( box, file );
-    await MarkdownLoader.fixImages( box, file );
+    await MarkdownLoader.fixMedia( box, file );
     const blocks = box.querySelectorAll( 'pre code' );
     if ( blocks.length ) {
       await Loaders.loadLibraries( CodeLoader.library ).catch( () => {} );   // plain code blocks if it can't load
@@ -1252,8 +1269,8 @@ const CsvLoader = {
 // Where it can, the frame loads the real page, so its own scripts, styles and images work:
 //   - on the repo's own Pages site, the published page;
 //   - on file:// with a picked folder, the file beside this page, when it's the same file.
-// Otherwise it gets a blob copy, where relative links and assets may not load.
-// The frame isn't sandboxed, so only open HTML you trust.
+// Otherwise it gets a blob copy, where relative links and assets may not load. The blob copy
+// is sandboxed, so it can't read this page's storage. The real page isn't: only open HTML you trust.
 // A TooToo page is never previewed inside TooToo, so the app can't show itself forever.
 
 const HtmlLoader = {
@@ -1262,6 +1279,8 @@ const HtmlLoader = {
   toggle: () => true,
 
   isTooToo: ( text ) => text.includes( 'TOOTOO_CONFIG' ),
+
+  sandbox: 'allow-scripts allow-forms allow-popups',   // for a blob copy: everything but this page's storage
 
   // The published page, when this app runs on the repo's own <owner>.github.io site.
   pagesUrl: ( path ) => {
@@ -1288,12 +1307,14 @@ const HtmlLoader = {
       element.innerHTML = '<p class="message">This is a TooToo page, so it isn\'t previewed inside TooToo. Use ↗ New tab, or Raw for its source.</p>';
       return;
     }
-    const url = HtmlLoader.pagesUrl( file.path ) || await HtmlLoader.localUrl( file )
-      || Loaders.track( URL.createObjectURL( new Blob( [ text ], { type: 'text/html' } ) ) );
+    const real = HtmlLoader.pagesUrl( file.path ) || await HtmlLoader.localUrl( file );
     const frame = document.createElement( 'iframe' );
     frame.className = 'html-view';
     frame.title = file.name;
-    frame.src = url;
+    // A blob copy would run as this page's own site, able to read the saved GitHub token.
+    // The sandbox (no allow-same-origin) keeps its scripts running but walled off.
+    if ( ! real ) { frame.setAttribute( 'sandbox', HtmlLoader.sandbox ); }
+    frame.src = real || Loaders.track( URL.createObjectURL( new Blob( [ text ], { type: 'text/html' } ) ) );
     element.replaceChildren( frame );
   },
 
@@ -1460,6 +1481,7 @@ const Shell = {
     document.addEventListener( 'click', Shell.onOutsideClick );
     Events.on( 'repo-changed', Shell.showRepo );
     Events.on( 'file-selected', Shell.showTitle );
+    Events.on( 'tree-loaded', Shell.showFooter );   // the License link needs the tree
     Shell.restorePrefs();
     Shell.showRepo();
     return () => {
@@ -1469,6 +1491,7 @@ const Shell = {
       document.removeEventListener( 'click', Shell.onOutsideClick );
       Events.off( 'repo-changed', Shell.showRepo );
       Events.off( 'file-selected', Shell.showTitle );
+      Events.off( 'tree-loaded', Shell.showFooter );
     };
   },
 
@@ -1560,7 +1583,7 @@ const Shell = {
   // The header shows the app name only when the install names itself (not the default) and it isn't a repeat.
   showsAppName: ( ownName, shownName ) => Boolean( ownName ) && ! Shell.sameName( ownName, shownName ),
 
-  // The icon's link, owner / repo links (📂 first for a local folder), then the footer.
+  // The icon's link, owner / repo links (a local folder without a repo: its name), then the footer.
   // The app name is left out when it only repeats the name just before it.
   showRepo: () => {
     const esc = Shell.escape;
@@ -1575,21 +1598,32 @@ const Shell = {
       iconLink.removeAttribute( 'title' );
     }
     const local = ( state.source || {} ).name === 'local';
-    const folder = local ? `<span title="A folder on this computer">📂</span> ` : '';
     let html = '';
     if ( links.home ) {
-      html = `${ folder }<a href="${ esc( links.home ) }">${ esc( state.owner ) }</a>`;
+      html = `<a href="${ esc( links.home ) }">${ esc( state.owner ) }</a>`;
       if ( links.pages ) { html += ` / <a href="${ esc( links.pages ) }">${ esc( state.repo ) }</a>`; }
     } else if ( local ) {
-      html = `${ folder }${ esc( state.source.folderName ) }`;
+      html = esc( state.source.folderName );
     }
     header.querySelector( '.repo-links' ).innerHTML = html;
     const shownName = links.pages ? state.repo : links.home ? state.owner : '';
     header.querySelector( '.brand' ).hidden = ! Shell.showsAppName( ( window.TOOTOO_CONFIG || {} ).appName, shownName );
-    Shell.el.footer.innerHTML = `<span>${ esc( Shell.rightsLine( state.owner ) ) }</span><span class="footer-links">${ Shell.linksHtml() }</span>`;
+    Shell.showFooter();
   },
 
-  // '© 2026 owner · No rights reserved'. rightsOwners: null = every owner, a list = only those, [] = none.
+  // The repo's license file at the top level (LICENSE, LICENSE.md, COPYING …), or ''.
+  licensePath: ( items = state.tree || [] ) => ( items.find( ( item ) => item.type === 'file'
+    && /^(licen[cs]e|copying)(\.\w+)?$/i.test( item.path ) ) || {} ).path || '',
+
+  // '© 2026 owner · License' (plus rightsText when set), then CONFIG.links. Drawn again once the tree is known.
+  showFooter: () => {
+    const esc = Shell.escape;
+    const license = Shell.licensePath();
+    const rights = [ esc( Shell.rightsLine( state.owner ) ), license ? `<a href="#${ esc( Router.encodePath( license ) ) }">License</a>` : '' ];
+    Shell.el.footer.innerHTML = `<span>${ rights.filter( Boolean ).join( ' · ' ) }</span><span class="footer-links">${ Shell.linksHtml() }</span>`;
+  },
+
+  // '© 2026 owner', plus ' · <rightsText>' when set. rightsOwners: null = every owner, a list = only those, [] = none.
   rightsLine: ( owner, config = CONFIG, year = new Date().getFullYear() ) => {
     if ( ! owner ) { return ''; }
     const owns = ! config.rightsOwners || config.rightsOwners.some( ( name ) => name.toLowerCase() === owner.toLowerCase() );
@@ -1869,15 +1903,15 @@ const Tree = {
     }
     Tree.openBefore = Tree.openBefore || new Set( folders.filter( ( folder ) => folder.open ).map( ( folder ) => folder.dataset.path ) );
     const items = [ ...tree.querySelectorAll( '.tree-item' ) ];
-    const hits = items.filter( ( item ) => Tree.matches( item.dataset.path.split( '/' ).pop(), query ) );
-    items.forEach( ( item ) => item.classList.toggle( 'is-hidden', ! hits.includes( item ) ) );
+    const hits = new Set( items.filter( ( item ) => Tree.matches( item.dataset.path.split( '/' ).pop(), query ) ) );   // a Set: fast on big trees
+    items.forEach( ( item ) => item.classList.toggle( 'is-hidden', ! hits.has( item ) ) );
     folders.reverse().forEach( ( folder ) => {
       const any = folder.querySelector( '.tree-item:not(.is-hidden)' );
       folder.classList.toggle( 'is-hidden', ! any );
       if ( any ) { folder.dataset.seen = 'yes'; folder.open = true; }
     } );
     tree.classList.add( 'filtering' );
-    count.textContent = `${ hits.length } match${ hits.length === 1 ? '' : 'es' }`;
+    count.textContent = `${ hits.size } match${ hits.size === 1 ? '' : 'es' }`;
   },
 
   // ── Keyboard: / filter, \ tree, arrows, Home / End, Enter / Space, Ctrl+B ──
